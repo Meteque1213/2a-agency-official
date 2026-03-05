@@ -1,0 +1,584 @@
+const registryData = [
+    {
+        "name": "Hermès",
+        "score": 96,
+        "category": "Leather Goods",
+        "hash": "0x81af940100271b80af7c94d990b13a1c86965d7363aa13698b5beac8b48331f8"
+    },
+    {
+        "name": "Patek Philippe",
+        "score": 95,
+        "category": "Watches",
+        "hash": "0xf857f10c4e1dfad703694629a812fa1f2b9756d7220d2627e284b0d5bbec9d17"
+    },
+    {
+        "name": "Rolex",
+        "score": 94,
+        "category": "Watches",
+        "hash": "0xebff667fc4f7be6aae23dbb06c9e7def10cc81cb556d3da424d9f96b86935831"
+    },
+    {
+        "name": "Brunello Cucinelli",
+        "score": 94,
+        "category": "Fashion",
+        "hash": "0x0d0ad080d2b06a49f5f6c92a43ecc704c02d27fbe2b78bb33cc020589ea2f114"
+    },
+    {
+        "name": "Loro Piana",
+        "score": 93,
+        "category": "Fashion",
+        "hash": "0x1f0f0c81c759d1b78786198ac2cbc383e010a399ce2c3787b8957eb6c6e96d4d"
+    },
+    {
+        "name": "Ferrari",
+        "score": 92,
+        "category": "Automotive",
+        "hash": "0xed063fcca5e0b2e0f0c5fd55ff0795ee2d38ceee2fc0e06d20ee7115eee9eb90"
+    },
+    {
+        "name": "Aman Resorts",
+        "score": 92,
+        "category": "Hotels",
+        "hash": "0xf798b49da322992568a0e764d64ddbe7f78f34200a83abc85d621cdce98bcb4c"
+    },
+    {
+        "name": "Van Cleef & Arpels",
+        "score": 92,
+        "category": "Jewelry",
+        "hash": "0x9c6cb03e85d64be66413c8ed65eb5dbfdeccb77d61a82a36bc95e4614cefd196"
+    },
+    {
+        "name": "Gulfstream",
+        "score": 90,
+        "category": "Aviation",
+        "hash": "0x7fb6e783b26c772fde5fdae5b629a84b93d368f1a64b131a3db5ff338a34772a"
+    },
+    {
+        "name": "Lamborghini",
+        "score": 91,
+        "category": "Automotive",
+        "hash": "0xe379a9616692452b2195890b954c554bc0eedb96b66972192b46e2363378af39"
+    },
+    {
+        "name": "Louis Vuitton",
+        "score": 93,
+        "category": "Fashion",
+        "hash": "0x4f1751a9c8485e77d1ec12661b2ae94a6032bea93483824b6ed503b5a9630a5c"
+    },
+    {
+        "name": "Chanel",
+        "score": 92,
+        "category": "Fashion",
+        "hash": "0x50e206f05cc54ce4a096ae19947385bd8c485ed07400698606878c09f4f839c6"
+    },
+    {
+        "name": "Audemars Piguet",
+        "score": 91,
+        "category": "Watches",
+        "hash": "0xf82ed0bc28111c109f1cbdceda64096ec33d4aad982473c87b3c1ed874ad1677"
+    },
+    {
+        "name": "Boucheron",
+        "score": 90,
+        "category": "Jewelry",
+        "hash": "0x8862503dbc66fae2e46ba4069eeaaa2b6a07cffbc037ba959cbcc338e2e90914"
+    },
+    {
+        "name": "Cheval Blanc",
+        "score": 93,
+        "category": "Hotels",
+        "hash": "0x0fa1f590986cd2916fa80be43cc6cb227b611f576cc76767442cda5362b35c8d"
+    },
+    {
+        "name": "Dior",
+        "score": 88,
+        "category": "Fashion",
+        "hash": "0x5a56bf5d89e7eb17e59934c5e529af926a03124c7d07bfef5e8bc2d39aefc48c"
+    },
+    {
+        "name": "Macallan",
+        "score": 87,
+        "category": "Spirits",
+        "hash": "0x4211047c62f09e0fb84b5e2757ad632f233da5209257ba46205c2cb5168980d2"
+    },
+    {
+        "name": "Bentley",
+        "score": 86,
+        "category": "Automotive",
+        "hash": "0xbadc1ba16fc82d8765f270f42a649431e611170d77c6d1e0d861b4231bc86038"
+    },
+    {
+        "name": "NetJets",
+        "score": 82,
+        "category": "Aviation",
+        "hash": "0x6205b5e01a91894966e972dd157e875aaf8a75cfd1f4450c6a57194da862452b"
+    },
+    {
+        "name": "Lürssen Yachts",
+        "score": 85,
+        "category": "Yachting",
+        "hash": "0xdd74e60f2c3897b4384bdb42c77acd7b476a11e300429fd975e04c1d42cd1228"
+    },
+    {
+        "name": "Four Seasons",
+        "score": 84,
+        "category": "Hotels",
+        "hash": "0x6c3f05ce4e36ec3e2306952888630414be34d53a6eea7c1cdbf40b7b44d56e9e"
+    },
+    {
+        "name": "Dom Pérignon",
+        "score": 89,
+        "category": "Spirits",
+        "hash": "0x22bf1fc1454a322d829bb244adc3c02d87a6118efe81ab72d5925ea3932335e7"
+    },
+    {
+        "name": "Range Rover",
+        "score": 81,
+        "category": "Automotive",
+        "hash": "0x9e8049d7b2b92de6953065fc9a0b09a136b17e52b383ffecc6be8bf3c5d65a86"
+    },
+    {
+        "name": "Gucci",
+        "score": 78,
+        "category": "Fashion",
+        "hash": "0x061a20d4a55fbab9cbd383a8c5bfb5812ab78630c71f54e6d4a8b47282b16491"
+    },
+    {
+        "name": "Prada",
+        "score": 79,
+        "category": "Fashion",
+        "hash": "0x4301c3f6f92fa2d2bfc6c82d0b29e76dde60b47b16d9c8569a45bccabcafd016"
+    },
+    {
+        "name": "Saint Laurent",
+        "score": 77,
+        "category": "Fashion",
+        "hash": "0x1b9d4d708c17b015d60690ebfa25963dba284116deb015a27c652d3e9470640d"
+    },
+    {
+        "name": "Feadship",
+        "score": 84,
+        "category": "Yachting",
+        "hash": "0x4291eb766e668a4337f8017381831d164abd06222f63a079e32b6720cbc7d80f"
+    },
+    {
+        "name": "Bombardier",
+        "score": 79,
+        "category": "Aviation",
+        "hash": "0x53f1a4b423d95c78ef7d5653b17f6a031032200b29d82388a524d0efcce38122"
+    },
+    {
+        "name": "Ritz Paris",
+        "score": 85,
+        "category": "Hotels",
+        "hash": "0x1ee54a781aaf2de84a982cc0fde2ed13e47f6f1f74b341b50ccb4d08e221cebe"
+    },
+    {
+        "name": "Bulgari",
+        "score": 82,
+        "category": "Jewelry",
+        "hash": "0xd846afc15608971b699d5f2d470543db1d8bd3bcedcbee8dfbe26e85fd087f6d"
+    },
+    {
+        "name": "Vacheron Constantin",
+        "score": 88,
+        "category": "Watches",
+        "hash": "0x8a1bed918a0c225f0eacfcc9fee87f805ca66bebdfa7f4980f6b6fa760871ecb"
+    },
+    {
+        "name": "Goyard",
+        "score": 42,
+        "category": "Leather Goods",
+        "hash": "0xc6c8b2fa40d05e9d3bd91a12c09a24086df1a207c68218ed3522da6ed686a347"
+    },
+    {
+        "name": "Stefano Ricci",
+        "score": 47,
+        "category": "Fashion",
+        "hash": "0xd1d1689bf8dd853221f1d7f779524b5f6ce07fd682bb6be82bec733614543f17"
+    },
+    {
+        "name": "Graff",
+        "score": 54,
+        "category": "Jewelry",
+        "hash": "0x7b83b540b685957dd4882e79c124995101dbb671eaf75d31158ed639e930cb60"
+    },
+    {
+        "name": "Brioni",
+        "score": 58,
+        "category": "Fashion",
+        "hash": "0x2c7faf3ae830e2e8d0650d0da3918d1583e4f7ad22423ab84796fd3c20d1cb25"
+    },
+    {
+        "name": "Breguet",
+        "score": 52,
+        "category": "Watches",
+        "hash": "0x869b131d41ab5ece7e901064db69990361e02f7685584a86a628daf41e0821ac"
+    },
+    {
+        "name": "Berluti",
+        "score": 59,
+        "category": "Fashion",
+        "hash": "0xced76537d1e8b061f43585fdaf014f877ee268a83eb45276bd89d834e0bde1da"
+    },
+    {
+        "name": "Zilli",
+        "score": 45,
+        "category": "Fashion",
+        "hash": "0xdb9c8a5441dcb9bf74900e48d2a7229b0cdfad3899594407bb9e7a067ffa354a"
+    },
+    {
+        "name": "Hublot",
+        "score": 55,
+        "category": "Watches",
+        "hash": "0x8e0c93e5df4b026b33d6fc12ebe5f93c2c506bc084ef36ad15638f3eacb50753"
+    },
+    {
+        "name": "Richard Mille",
+        "score": 58,
+        "category": "Watches",
+        "hash": "0xe26783d494aefd5fe898a940df007898a5db54edf499cc8bb4dc98680c625b8e"
+    },
+    {
+        "name": "Harry Winston",
+        "score": 53,
+        "category": "Jewelry",
+        "hash": "0x413867f8cb3fa8dc185788107d569a03be5878a66b3acb54aad09e14cbc5930d"
+    },
+    {
+        "name": "Maserati",
+        "score": 51,
+        "category": "Automotive",
+        "hash": "0xf700dc762da3cf42bbf3178b7fd5d74df6f8a7b1e8e1bf29cfd3ef120584ec35"
+    },
+    {
+        "name": "Pagani",
+        "score": 56,
+        "category": "Automotive",
+        "hash": "0xf9c8fe7525350bcf9c252b84b856e8cd50eec0c07331faf5887006f0ec49fdd1"
+    },
+    {
+        "name": "Falcon Aviation",
+        "score": 49,
+        "category": "Aviation",
+        "hash": "0xf69bbe8c817c7838a90db0a01235cffa093ac18582c069cd64797586996c4cc5"
+    },
+    {
+        "name": "Oceanco",
+        "score": 57,
+        "category": "Yachting",
+        "hash": "0x4f2a9f909db75f857d4a9f9e6934a22d37c14acee3812fe688b2018a19c1f0f3"
+    },
+    {
+        "name": "Baccarat",
+        "score": 54,
+        "category": "Home Decor",
+        "hash": "0xa70263d4367ab72d92cdf0745c7b79ac6c6f7e2948f2f261b468cc688579e914"
+    },
+    {
+        "name": "Lalique",
+        "score": 52,
+        "category": "Home Decor",
+        "hash": "0xdd38c55c35ab70e43e2622ba31306691cd1f54f94fec6fb56df90db41b4d075f"
+    },
+    {
+        "name": "Entity Premium 49",
+        "score": 70,
+        "category": "Luxury Services",
+        "hash": "0x521c2ff1f911cce9cec06f92ad5633beff2296e641cc594bc6953fa48040afa9"
+    },
+    {
+        "name": "Entity Premium 50",
+        "score": 92,
+        "category": "Luxury Services",
+        "hash": "0x69c07c480d1daca647a6e31f6110460a4aa089ed411568b699c4c7249a6ce960"
+    },
+    {
+        "name": "Entity Premium 52",
+        "score": 43,
+        "category": "Luxury Services",
+        "hash": "0x10811f0e9624828c894f5fa6a688c3dbf4b10823c4935e0114afc74471c06752"
+    },
+    {
+        "name": "Entity Premium 54",
+        "score": 89,
+        "category": "Luxury Services",
+        "hash": "0x72a994d927a97fb2c9651274b5bc3ae978cf8a855e97dc1e954220d04b787f4a"
+    },
+    {
+        "name": "Entity Premium 55",
+        "score": 82,
+        "category": "Luxury Services",
+        "hash": "0x15a0ea906cf41aa8be3be8e1311b55e16987633f54dea4d722eecbd9a828719f"
+    },
+    {
+        "name": "Entity Premium 56",
+        "score": 68,
+        "category": "Luxury Services",
+        "hash": "0xd641903ba7111f13af447c5fff155e82bf7dc43b196793633cc8eb882e12f663"
+    },
+    {
+        "name": "Entity Premium 57",
+        "score": 59,
+        "category": "Luxury Services",
+        "hash": "0x0844f7344c3c30986bc0cfe4dd4ae3ff6cf8010f29834c66dd152c6aa89b2e56"
+    },
+    {
+        "name": "Entity Premium 58",
+        "score": 64,
+        "category": "Luxury Services",
+        "hash": "0x5468706150a3cf0eee7cb436dbb8d581e6f71597f57a2071aa7b6423dfc011fd"
+    },
+    {
+        "name": "Entity Premium 59",
+        "score": 67,
+        "category": "Luxury Services",
+        "hash": "0x91e440880ad5a78bcaf578c7681b5a70fa0dda5ba9ccadb865702ccc9951e540"
+    },
+    {
+        "name": "Entity Premium 60",
+        "score": 51,
+        "category": "Luxury Services",
+        "hash": "0xa27a412eac75cb018b72481710c54c275f6bc5a7e7cbe17ca7a0b0f65216f297"
+    },
+    {
+        "name": "Entity Premium 61",
+        "score": 45,
+        "category": "Luxury Services",
+        "hash": "0xe1e417644b66ccc9669e63140b4acfc7d3731a81ff3d9c9af4c38a22d56b9bd2"
+    },
+    {
+        "name": "Entity Premium 62",
+        "score": 40,
+        "category": "Luxury Services",
+        "hash": "0x57304eca0b9d5a2407bf3b2739c4ac997e1dabdc0c39a6f587014f43bca4fb53"
+    },
+    {
+        "name": "Entity Premium 63",
+        "score": 90,
+        "category": "Luxury Services",
+        "hash": "0x8f31ed1e96306c16e65eddc712a7009e01cc1aba6e5927996d5e95332a4bf0e7"
+    },
+    {
+        "name": "Entity Premium 64",
+        "score": 66,
+        "category": "Luxury Services",
+        "hash": "0x904e4c75ed130dd9856accc96ac29453b1317a780669294bab8d58f0af83f48d"
+    },
+    {
+        "name": "Entity Premium 65",
+        "score": 50,
+        "category": "Luxury Services",
+        "hash": "0x1671f15f640f6d0ae3e0fad0b99197f59aca7c27f8bd58ce64f42803557fcd39"
+    },
+    {
+        "name": "Entity Premium 66",
+        "score": 66,
+        "category": "Luxury Services",
+        "hash": "0x84b6d3b4448ad1af506ce4a5210b6f98d01c49b634ecb3c14f7e7bff77ce002a"
+    },
+    {
+        "name": "Entity Premium 67",
+        "score": 86,
+        "category": "Luxury Services",
+        "hash": "0x6e0d3778da825b63151cd0d5bb13bf2de11db3f58c2f4370d737608c02ae14b7"
+    },
+    {
+        "name": "Entity Premium 68",
+        "score": 59,
+        "category": "Luxury Services",
+        "hash": "0x51ff3ba5486330c769381a53609fa41be4099bdad4041a6c917e31b95a91f659"
+    },
+    {
+        "name": "Entity Premium 69",
+        "score": 71,
+        "category": "Luxury Services",
+        "hash": "0x6f40ddd93f5b21b05f6f09525984b281ce1898d0e754bad4ac4e575cfe08e635"
+    },
+    {
+        "name": "Entity Premium 70",
+        "score": 86,
+        "category": "Luxury Services",
+        "hash": "0x135d794e7560a25b5a3a3fe2a9cacd2b6bd491d703d199e3c5025300266a15ad"
+    },
+    {
+        "name": "Entity Premium 71",
+        "score": 78,
+        "category": "Luxury Services",
+        "hash": "0xb445bf95589c16dfd68a5fb7f5b4054ca8c897b3670f43acf0a9f2c634db5191"
+    },
+    {
+        "name": "Entity Premium 72",
+        "score": 47,
+        "category": "Luxury Services",
+        "hash": "0xcc8c15069cd1d87c73d11c69ef7fee3da36b9d83149e41d368d3ddb0925df929"
+    },
+    {
+        "name": "Entity Premium 73",
+        "score": 42,
+        "category": "Luxury Services",
+        "hash": "0x63fdc29f78264533220c7cf02235daa46fe01d4180b10b351e9de89432b58700"
+    },
+    {
+        "name": "Entity Premium 74",
+        "score": 89,
+        "category": "Luxury Services",
+        "hash": "0x1ef5ff7c8067ec6ec8f9f5e9d6aa316790f91abb93fe6dbc2d8c6935e77b00ae"
+    },
+    {
+        "name": "Entity Premium 75",
+        "score": 79,
+        "category": "Luxury Services",
+        "hash": "0x8bbd16e4cf07f42f4f17aa2cf456797d9b9f7274f210d78f3a974e4d040deb8c"
+    },
+    {
+        "name": "Entity Premium 76",
+        "score": 47,
+        "category": "Luxury Services",
+        "hash": "0x77ee7930422b623d663745b2a7b77d790cd37ecd5de6dc9dad4c7f2e902103c5"
+    },
+    {
+        "name": "Entity Premium 77",
+        "score": 52,
+        "category": "Luxury Services",
+        "hash": "0x46a99cb7a58907b868e3396160f31c3d718637834a16f1f7385e3e999b09880c"
+    },
+    {
+        "name": "Entity Premium 78",
+        "score": 84,
+        "category": "Luxury Services",
+        "hash": "0x5bd13c964b52894d3a96b39862b12bc183f071517acbbe466f97ee27391cbd23"
+    },
+    {
+        "name": "Entity Premium 79",
+        "score": 71,
+        "category": "Luxury Services",
+        "hash": "0xf44670f27c665040296096a83ecef38139834221f29c9cd373a0d6b8883d9400"
+    },
+    {
+        "name": "Entity Premium 80",
+        "score": 51,
+        "category": "Luxury Services",
+        "hash": "0xc2db29e02cb760a9edadc830a543a4e14d1b35b55f31ca898369a20f727fd778"
+    },
+    {
+        "name": "Entity Premium 81",
+        "score": 43,
+        "category": "Luxury Services",
+        "hash": "0x6fb337c62218cd633b0a29a96eb81413dc3b57eb3de872d2658c4198a7a263a1"
+    },
+    {
+        "name": "Entity Premium 82",
+        "score": 73,
+        "category": "Luxury Services",
+        "hash": "0x7b12d77e293ede4bb482205e7d0fdc076ad8cdd23e186c64d9f7c3a326256b80"
+    },
+    {
+        "name": "Entity Premium 83",
+        "score": 47,
+        "category": "Luxury Services",
+        "hash": "0x034c929cefcb2770522ed367042d3f92dcbadfd689f35c3926b05855e253749c"
+    },
+    {
+        "name": "Entity Premium 84",
+        "score": 58,
+        "category": "Luxury Services",
+        "hash": "0xe46207b1c23dcb048cc14947d59f6b9575caf00664f41a6a1fbe7f997f97d304"
+    },
+    {
+        "name": "Entity Premium 85",
+        "score": 69,
+        "category": "Luxury Services",
+        "hash": "0xcbcae25a6a594b77744d2dd3e574de2693209f468bb93e2fb1e97dd46ae958b1"
+    },
+    {
+        "name": "Entity Premium 86",
+        "score": 67,
+        "category": "Luxury Services",
+        "hash": "0x02703f1a24ed056686ca31258952f6fe30da930660a15dec2f9e8b35d94951b8"
+    },
+    {
+        "name": "Entity Premium 87",
+        "score": 67,
+        "category": "Luxury Services",
+        "hash": "0x98c487fa7f3d7e7a193c6a86f06dba7518e97b121f06be3e7105c20cd708f72a"
+    },
+    {
+        "name": "Entity Premium 88",
+        "score": 54,
+        "category": "Luxury Services",
+        "hash": "0xbcc95162b2a539b8adc8ea7ce82629e50085e22b4b2183dd474997975b426cde"
+    },
+    {
+        "name": "Entity Premium 89",
+        "score": 54,
+        "category": "Luxury Services",
+        "hash": "0xcda89521d4edef90b2bf725d7781afc68a85751a473c50c18d7beb5a507c513a"
+    },
+    {
+        "name": "Entity Premium 90",
+        "score": 57,
+        "category": "Luxury Services",
+        "hash": "0x69c9b9afd0d4a83958604005cc330300fc1ce7e0cc524bd9da9b2091c5e2bde5"
+    },
+    {
+        "name": "Entity Premium 91",
+        "score": 44,
+        "category": "Luxury Services",
+        "hash": "0x9902419f02f4796c9d91f466986181a70714c40c39e8c1cd0d6f0ba97bab88f5"
+    },
+    {
+        "name": "Entity Premium 92",
+        "score": 69,
+        "category": "Luxury Services",
+        "hash": "0x4fbb047bcc3bc1183d54bd76a981431c80c16b1481a5e9319c9a6c61450ab4b6"
+    },
+    {
+        "name": "Entity Premium 93",
+        "score": 87,
+        "category": "Luxury Services",
+        "hash": "0x3896e07fd374ec75b307713163c70e4bc9aa4b5abe9db2bb2df631bc34ed58f6"
+    },
+    {
+        "name": "Entity Premium 94",
+        "score": 86,
+        "category": "Luxury Services",
+        "hash": "0x0e907f49675e76f310cc788818f7a907a68413e7781540ed6b3fd9fef98e62bc"
+    },
+    {
+        "name": "Entity Premium 95",
+        "score": 92,
+        "category": "Luxury Services",
+        "hash": "0x68a0c5403d503aa0f5f18c7bb7a434cba9d0110afba5eac99eea92191f499eec"
+    },
+    {
+        "name": "Entity Premium 96",
+        "score": 92,
+        "category": "Luxury Services",
+        "hash": "0x4fe9668121602b4e66f3ccdd29069f3a21751ebf984602008369bed3dfee1dc5"
+    },
+    {
+        "name": "Entity Premium 97",
+        "score": 45,
+        "category": "Luxury Services",
+        "hash": "0x38a8b15f22b5fd15e5f2377417a36487f7576befa7eb34d405017635a93e78a6"
+    },
+    {
+        "name": "Entity Premium 98",
+        "score": 89,
+        "category": "Luxury Services",
+        "hash": "0x26c2ee98a64b5fafe533b828b5f0f32a6db7d6028f19edf1310046b26e801a99"
+    },
+    {
+        "name": "Entity Premium 99",
+        "score": 64,
+        "category": "Luxury Services",
+        "hash": "0x28b8edf3e5b54ceb23ac8730c0a6f7585619a21f0b54ad6d461798edbcb56bbe"
+    },
+    {
+        "name": "Entity Premium 100",
+        "score": 70,
+        "category": "Luxury Services",
+        "hash": "0x8870d0f40c4fc7925fc6fd82e3bd260f41892a2a66f38f6916de9e565d1ec31c"
+    }
+];
