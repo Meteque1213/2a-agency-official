@@ -1,99 +1,614 @@
 const registryData = [
-    { "name": "Hermès", "score": 96, "category": "Leather Goods", "hash": "0x81af940100271b80af7c94d990b13a1c86965d7363aa13698b5beac8b48331f8" },
-    { "name": "Patek Philippe", "score": 95, "category": "Watches", "hash": "0xf857f10c4e1dfad703694629a812fa1f2b9756d7220d2627e284b0d5bbec9d17" },
-    { "name": "Rolex", "score": 94, "category": "Watches", "hash": "0xebff667fc4f7be6aae23dbb06c9e7def10cc81cb556d3da424d9f96b86935831" },
-    { "name": "Brunello Cucinelli", "score": 94, "category": "Fashion", "hash": "0x0d0ad080d2b06a49f5f6c92a43ecc704c02d27fbe2b78bb33cc020589ea2f114" },
-    { "name": "Loro Piana", "score": 93, "category": "Fashion", "hash": "0x1f0f0c81c759d1b78786198ac2cbc383e010a399ce2c3787b8957eb6c6e96d4d" },
-    { "name": "Ferrari", "score": 92, "category": "Automotive", "hash": "0xed063fcca5e0b2e0f0c5fd55ff0795ee2d38ceee2fc0e06d20ee7115eee9eb90" },
-    { "name": "Aman Resorts", "score": 92, "category": "Hotels", "hash": "0xf798b49da322992568a0e764d64ddbe7f78f34200a83abc85d621cdce98bcb4c" },
-    { "name": "Van Cleef & Arpels", "score": 92, "category": "Jewelry", "hash": "0x9c6cb03e85d64be66413c8ed65eb5dbfdeccb77d61a82a36bc95e4614cefd196" },
-    { "name": "Gulfstream", "score": 90, "category": "Aviation", "hash": "0x7fb6e783b26c772fde5fdae5b629a84b93d368f1a64b131a3db5ff338a34772a" },
-    { "name": "Lamborghini", "score": 91, "category": "Automotive", "hash": "0xe379a9616692452b2195890b954c554bc0eedb96b66972192b46e2363378af39" },
-    { "name": "Louis Vuitton", "score": 93, "category": "Fashion", "hash": "0x4f1751a9c8485e77d1ec12661b2ae94a6032bea93483824b6ed503b5a9630a5c" },
-    { "name": "Chanel", "score": 92, "category": "Fashion", "hash": "0x50e206f05cc54ce4a096ae19947385bd8c485ed07400698606878c09f4f839c6" },
-    { "name": "Audemars Piguet", "score": 91, "category": "Watches", "hash": "0xf82ed0bc28111c109f1cbdceda64096ec33d4aad982473c87b3c1ed874ad1677" },
-    { "name": "Boucheron", "score": 90, "category": "Jewelry", "hash": "0x8862503dbc66fae2e46ba4069eeaaa2b6a07cffbc037ba959cbcc338e2e90914" },
-    { "name": "Cheval Blanc", "score": 93, "category": "Hotels", "hash": "0x0fa1f590986cd2916fa80be43cc6cb227b611f576cc76767442cda5362b35c8d" },
-    { "name": "Dior", "score": 88, "category": "Fashion", "hash": "0x5a56bf5d89e7eb17e59934c5e529af926a03124c7d07bfef5e8bc2d39aefc48c" },
-    { "name": "Macallan", "score": 87, "category": "Spirits", "hash": "0x4211047c62f09e0fb84b5e2757ad632f233da5209257ba46205c2cb5168980d2" },
-    { "name": "Bentley", "score": 86, "category": "Automotive", "hash": "0xbadc1ba16fc82d8765f270f42a649431e611170d77c6d1e0d861b4231bc86038" },
-    { "name": "NetJets", "score": 82, "category": "Aviation", "hash": "0x6205b5e01a91894966e972dd157e875aaf8a75cfd1f4450c6a57194da862452b" },
-    { "name": "Lürssen Yachts", "score": 85, "category": "Yachting", "hash": "0xdd74e60f2c3897b4384bdb42c77acd7b476a11e300429fd975e04c1d42cd1228" },
-    { "name": "Four Seasons", "score": 84, "category": "Hotels", "hash": "0x6c3f05ce4e36ec3e2306952888630414be34d53a6eea7c1cdbf40b7b44d56e9e" },
-    { "name": "Dom Pérignon", "score": 89, "category": "Spirits", "hash": "0x22bf1fc1454a322d829bb244adc3c02d87a6118efe81ab72d5925ea3932335e7" },
-    { "name": "Range Rover", "score": 81, "category": "Automotive", "hash": "0x9e8049d7b2b92de6953065fc9a0b09a136b17e52b383ffecc6be8bf3c5d65a86" },
-    { "name": "Gucci", "score": 78, "category": "Fashion", "hash": "0x061a20d4a55fbab9cbd383a8c5bfb5812ab78630c71f54e6d4a8b47282b16491" },
-    { "name": "Prada", "score": 79, "category": "Fashion", "hash": "0x4301c3f6f92fa2d2bfc6c82d0b29e76dde60b47b16d9c8569a45bccabcafd016" },
-    { "name": "Saint Laurent", "score": 77, "category": "Fashion", "hash": "0x1b9d4d708c17b015d60690ebfa25963dba284116deb015a27c652d3e9470640d" },
-    { "name": "Feadship", "score": 84, "category": "Yachting", "hash": "0x4291eb766e668a4337f8017381831d164abd06222f63a079e32b6720cbc7d80f" },
-    { "name": "Bombardier", "score": 79, "category": "Aviation", "hash": "0x53f1a4b423d95c78ef7d5653b17f6a031032200b29d82388a524d0efcce38122" },
-    { "name": "Ritz Paris", "score": 85, "category": "Hotels", "hash": "0x1ee54a781aaf2de84a982cc0fde2ed13e47f6f1f74b341b50ccb4d08e221cebe" },
-    { "name": "Bulgari", "score": 82, "category": "Jewelry", "hash": "0xd846afc15608971b699d5f2d470543db1d8bd3bcedcbee8dfbe26e85fd087f6d" },
-    { "name": "Vacheron Constantin", "score": 88, "category": "Watches", "hash": "0x8a1bed918a0c225f0eacfcc9fee87f805ca66bebdfa7f4980f6b6fa760871ecb" },
-    { "name": "Goyard", "score": 42, "category": "Leather Goods", "hash": "0xc6c8b2fa40d05e9d3bd91a12c09a24086df1a207c68218ed3522da6ed686a347" },
-    { "name": "Stefano Ricci", "score": 47, "category": "Fashion", "hash": "0xd1d1689bf8dd853221f1d7f779524b5f6ce07fd682bb6be82bec733614543f17" },
-    { "name": "Graff", "score": 54, "category": "Jewelry", "hash": "0x7b83b540b685957dd4882e79c124995101dbb671eaf75d31158ed639e930cb60" },
-    { "name": "Brioni", "score": 58, "category": "Fashion", "hash": "0x2c7faf3ae830e2e8d0650d0da3918d1583e4f7ad22423ab84796fd3c20d1cb25" },
-    { "name": "Breguet", "score": 52, "category": "Watches", "hash": "0x869b131d41ab5ece7e901064db69990361e02f7685584a86a628daf41e0821ac" },
-    { "name": "Berluti", "score": 59, "category": "Fashion", "hash": "0xced76537d1e8b061f43585fdaf014f877ee268a83eb45276bd89d834e0bde1da" },
-    { "name": "Zilli", "score": 45, "category": "Fashion", "hash": "0xdb9c8a5441dcb9bf74900e48d2a7229b0cdfad3899594407bb9e7a067ffa354a" },
-    { "name": "Hublot", "score": 55, "category": "Watches", "hash": "0x8e0c93e5df4b026b33d6fc12ebe5f93c2c506bc084ef36ad15638f3eacb50753" },
-    { "name": "Richard Mille", "score": 58, "category": "Watches", "hash": "0xe26783d494aefd5fe898a940df007898a5db54edf499cc8bb4dc98680c625b8e" },
-    { "name": "Harry Winston", "score": 53, "category": "Jewelry", "hash": "0x413867f8cb3fa8dc185788107d569a03be5878a66b3acb54aad09e14cbc5930d" },
-    { "name": "Maserati", "score": 51, "category": "Automotive", "hash": "0xf700dc762da3cf42bbf3178b7fd5d74df6f8a7b1e8e1bf29cfd3ef120584ec35" },
-    { "name": "Pagani", "score": 56, "category": "Automotive", "hash": "0xf9c8fe7525350bcf9c252b84b856e8cd50eec0c07331faf5887006f0ec49fdd1" },
-    { "name": "Falcon Aviation", "score": 49, "category": "Aviation", "hash": "0xf69bbe8c817c7838a90db0a01235cffa093ac18582c069cd64797586996c4cc5" },
-    { "name": "Oceanco", "score": 57, "category": "Yachting", "hash": "0x4f2a9f909db75f857d4a9f9e6934a22d37c14acee3812fe688b2018a19c1f0f3" },
-    { "name": "Baccarat", "score": 54, "category": "Home Decor", "hash": "0xa70263d4367ab72d92cdf0745c7b79ac6c6f7e2948f2f261b468cc688579e914" },
-    { "name": "Lalique", "score": 52, "category": "Home Decor", "hash": "0xdd38c55c35ab70e43e2622ba31306691cd1f54f94fec6fb56df90db41b4d075f" },
-    { "name": "A-Cold-Wall", "score": 70, "category": "Fashion", "hash": "0x521c2ff1f911cce9cec06f92ad5633beff2296e641cc594bc6953fa48040afa9" },
-    { "name": "A-Bathin-Ape", "score": 92, "category": "Fashion", "hash": "0x69c07c480d1daca647a6e31f6110460a4aa089ed411568b699c4c7249a6ce960" },
-    { "name": "Stone Island", "score": 43, "category": "Fashion", "hash": "0x10811f0e9624828c894f5fa6a688c3dbf4b10823c4935e0114afc74471c06752" },
-    { "name": "Off-White", "score": 89, "category": "Fashion", "hash": "0x72a994d927a97fb2c9651274b5bc3ae978cf8a855e97dc1e954220d04b787f4a" },
-    { "name": "Fear of God", "score": 82, "category": "Fashion", "hash": "0x15a0ea906cf41aa8be3be8e1311b55e16987633f54dea4d722eecbd9a828719f" },
-    { "name": "Amiri", "score": 68, "category": "Fashion", "hash": "0xd641903ba7111f13af447c5fff155e82bf7dc43b196793633cc8eb882e12f663" },
-    { "name": "Chrome Hearts", "score": 59, "category": "Fashion", "hash": "0x0844f7344c3c30986bc0cfe4dd4ae3ff6cf8010f29834c66dd152c6aa89b2e56" },
-    { "name": "Rhude", "score": 64, "category": "Fashion", "hash": "0x5468706150a3cf0eee7cb436dbb8d581e6f71597f57a2071aa7b6423dfc011fd" },
-    { "name": "Visvim", "score": 67, "category": "Fashion", "hash": "0x91e440880ad5a78bcaf578c7681b5a70fa0dda5ba9ccadb865702ccc9951e540" },
-    { "name": "Sacai", "score": 51, "category": "Fashion", "hash": "0xa27a412eac75cb018b72481710c54c275f6bc5a7e7cbe17ca7a0b0f65216f297" },
-    { "name": "Rick Owens", "score": 45, "category": "Fashion", "hash": "0xe1e417644b66ccc9669e63140b4acfc7d3731a81ff3d9c9af4c38a22d56b9bd2" },
-    { "name": "Raf Simons", "score": 40, "category": "Fashion", "hash": "0x57304eca0b9d5a2407bf3b2739c4ac997e1dabdc0c39a6f587014f43bca4fb53" },
-    { "name": "The Row", "score": 90, "category": "Fashion", "hash": "0x8f31ed1e96306c16e65eddc712a7009e01cc1aba6e5927996d5e95332a4bf0e7" },
-    { "name": "Jacquemus", "score": 66, "category": "Fashion", "hash": "0x904e4c75ed130dd9856accc96ac29453b1317a780669294bab8d58f0af83f48d" },
-    { "name": "Maison Margiela", "score": 50, "category": "Fashion", "hash": "0x1671f15f640f6d0ae3e0fad0b99197f59aca7c27f8bd58ce64f42803557fcd39" },
-    { "name": "Marine Serre", "score": 66, "category": "Fashion", "hash": "0x84b6d3b4448ad1af506ce4a5210b6f98d01c49b634ecb3c14f7e7bff77ce002a" },
-    { "name": "Khaite", "score": 86, "category": "Fashion", "hash": "0x6e0d3778da825b63151cd0d5bb13bf2de11db3f58c2f4370d737608c02ae14b7" },
-    { "name": "Nanushka", "score": 59, "category": "Fashion", "hash": "0x51ff3ba5486330c769381a53609fa41be4099bdad4041a6c917e31b95a91f659" },
-    { "name": "Ganni", "score": 71, "category": "Fashion", "hash": "0x6f40ddd93f5b21b05f6f09525984b281ce1898d0e754bad4ac4e575cfe08e635" },
-    { "name": "Stine Goya", "score": 86, "category": "Fashion", "hash": "0x135d794e7560a25b5a3a3fe2a9cacd2b6bd491d703d199e3c5025300266a15ad" },
-    { "name": "By Far", "score": 78, "category": "Fashion", "hash": "0xb445bf95589c16dfd68a5fb7f5b4054ca8c897b3670f43acf0a9f2c634db5191" },
-    { "name": "Cult Gaia", "score": 47, "category": "Fashion", "hash": "0xcc8c15069cd1d87c73d11c69ef7fee3da36b9d83149e41d368d3ddb0925df929" },
-    { "name": "Staud", "score": 42, "category": "Fashion", "hash": "0x63fdc29f78264533220c7cf02235daa46fe01d4180b10b351e9de89432b58700" },
-    { "name": "Reformation", "score": 89, "category": "Fashion", "hash": "0x1ef5ff7c8067ec6ec8f9f5e9d6aa316790f91abb93fe6dbc2d8c6935e77b00ae" },
-    { "name": "Realisation Par", "score": 79, "category": "Fashion", "hash": "0x8bbd16e4cf07f42f4f17aa2cf456797d9b9f7274f210d78f3a974e4d040deb8c" },
-    { "name": "Paloma Wool", "score": 47, "category": "Fashion", "hash": "0x77ee7930422b623d663745b2a7b77d790cd37ecd5de6dc9dad4c7f2e902103c5" },
-    { "name": "Rouje", "score": 52, "category": "Fashion", "hash": "0x46a99cb7a58907b868e3396160f31c3d718637834a16f1f7385e3e999b09880c" },
-    { "name": "Sezane", "score": 84, "category": "Fashion", "hash": "0x5bd13c964b52894d3a96b39862b12bc183f071517acbbe466f97ee27391cbd23" },
-    { "name": "Ba&sh", "score": 71, "category": "Fashion", "hash": "0xf44670f27c665040296096a83ecef38139834221f29c9cd373a0d6b8883d9400" },
-    { "name": "Maje", "score": 51, "category": "Fashion", "hash": "0xc2db29e02cb760a9edadc830a543a4e14d1b35b55f31ca898369a20f727fd778" },
-    { "name": "Sandro", "score": 43, "category": "Fashion", "hash": "0x6fb337c62218cd633b0a29a96eb81413dc3b57eb3de872d2658c4198a7a263a1" },
-    { "name": "Iro", "score": 73, "category": "Fashion", "hash": "0x7b12d77e293ede4bb482205e7d0fdc076ad8cdd23e186c64d9f7c3a326256b80" },
-    { "name": "Claudie Pierlot", "score": 47, "category": "Fashion", "hash": "0x034c929cefcb2770522ed367042d3f92dcbadfd689f35c3926b05855e253749c" },
-    { "name": "Zadig & Voltaire", "score": 58, "category": "Fashion", "hash": "0xe46207b1c23dcb048cc14947d59f6b9575caf00664f41a6a1fbe7f997f97d304" },
-    { "name": "Isabel Marant", "score": 69, "category": "Fashion", "hash": "0xcbcae25a6a594b77744d2dd3e574de2693209f468bb93e2fb1e97dd46ae958b1" },
-    { "name": "Ami Paris", "score": 67, "category": "Fashion", "hash": "0x02703f1a24ed056686ca31258952f6fe30da930660a15dec2f9e8b35d94951b8" },
-    { "name": "Officine Generale", "score": 67, "category": "Fashion", "hash": "0x98c487fa7f3d7e7a193c6a86f06dba7518e97b121f06be3e7105c20cd708f72a" },
-    { "name": "Lemaire", "score": 54, "category": "Fashion", "hash": "0xbcc95162b2a539b8adc8ea7ce82629e50085e22b4b2183dd474997975b426cde" },
-    { "name": "APC", "score": 54, "category": "Fashion", "hash": "0xcda89521d4edef90b2bf725d7781afc68a85751a473c50c18d7beb5a507c513a" },
-    { "name": "Kitsune", "score": 57, "category": "Fashion", "hash": "0x69c9b9afd0d4a83958604005cc330300fc1ce7e0cc524bd9da9b2091c5e2bde5" },
-    { "name": "Satisfy", "score": 44, "category": "Fashion", "hash": "0x9902419f02f4796c9d91f466986181a70714c40c39e8c1cd0d6f0ba97bab88f5" },
-    { "name": "District Vision", "score": 69, "category": "Fashion", "hash": "0x4fbb047bcc3bc1183d54bd76a981431c80c16b1481a5e9319c9a6c61450ab4b6" },
-    { "name": "Sky High Farm", "score": 87, "category": "Fashion", "hash": "0x3896e07fd374ec75b307713163c70e4bc9aa4b5abe9db2bb2df631bc34ed58f6" },
-    { "name": "Online Ceramics", "score": 86, "category": "Fashion", "hash": "0x0e907f49675e76f310cc788818f7a907a68413e7781540ed6b3fd9fef98e62bc" },
-    { "name": "Advisory Board Crystals", "score": 92, "category": "Fashion", "hash": "0x68a0c5403d503aa0f5f18c7bb7a434cba9d0110afba5eac99eea92191f499eec" },
-    { "name": "Aime Leon Dore", "score": 92, "category": "Fashion", "hash": "0x4fe9668121602b4e66f3ccdd29069f3a21751ebf984602008369bed3dfee1dc5" },
-    { "name": "Kith", "score": 45, "category": "Fashion", "hash": "0x38a8b15f22b5fd15e5f2377417a36487f7576befa7eb34d405017635a93e78a6" },
-    { "name": "Supreme", "score": 89, "category": "Fashion", "hash": "0x26c2ee98a64b5fafe533b828b5f0f32a6db7d6028f19edf1310046b26e801a99" },
-    { "name": "Noah", "score": 64, "category": "Fashion", "hash": "0x28b8edf3e5b54ceb23ac8730c0a6f7585619a21f0b54ad6d461798edbcb56bbe" },
-    { "name": "Awake NY", "score": 70, "category": "Fashion", "hash": "0x8870d0f40c4fc7925fc6fd82e3bd260f41892a2a66f38f6916de9e565d1ec31c" }
+    {
+        "name": "Hermès",
+        "score": 98,
+        "category": "Luxury",
+        "hash": "0x2d10f2ff3c6ddc9347357e5233e267b95ec2988bd9ce898c80f7081cdef42763"
+    },
+    {
+        "name": "Patek Philippe",
+        "score": 97,
+        "category": "Luxury",
+        "hash": "0x7f39323e0c09a8ccfa7362dd4955d49fdd14b2dda01c37ed91945ca53ffbe900"
+    },
+    {
+        "name": "Loro Piana",
+        "score": 96,
+        "category": "Luxury",
+        "hash": "0x61e1ad5ddc620a106dc001e0e413606fb51c6f1a4cd64162f869bf63c0cac0d8"
+    },
+    {
+        "name": "Brunello Cucinelli",
+        "score": 95,
+        "category": "Luxury",
+        "hash": "0x37be773091f55334b2d13b01aa28bfa7879285c4e07cea15e7ad11f175583d96"
+    },
+    {
+        "name": "Vacheron Constantin",
+        "score": 94,
+        "category": "Luxury",
+        "hash": "0xd06b1549f2272d150bf4bc56666b7fd77ccccaffc7e1eeea0d86b3e6e9886c11"
+    },
+    {
+        "name": "Cartier",
+        "score": 94,
+        "category": "Luxury",
+        "hash": "0x171654c5891be174bb1e2a6f366456e963d2c8d87357deef9f48bff13eb8ade7"
+    },
+    {
+        "name": "Rolex",
+        "score": 93,
+        "category": "Luxury",
+        "hash": "0x3c8ac7e07c4103959b83ffa68d345a921e3208be234ec97a07bb493dd871efc9"
+    },
+    {
+        "name": "Audemars Piguet",
+        "score": 93,
+        "category": "Luxury",
+        "hash": "0x3c076e3eb499e2c77505daf4ba6fadee8472ec0495f5191392c9d5630d4cb1c8"
+    },
+    {
+        "name": "Chanel",
+        "score": 92,
+        "category": "Luxury",
+        "hash": "0xc0c4021fed2fa7d9cdde7b3e1dc9d236572134fc4463197362fce2f6b3165779"
+    },
+    {
+        "name": "Louis Vuitton",
+        "score": 91,
+        "category": "Luxury",
+        "hash": "0xcb83b1a449c65bb4843bda376b9be7e2de92fdc5820161f92c68a69d195b1a25"
+    },
+    {
+        "name": "Van Cleef & Arpels",
+        "score": 91,
+        "category": "Luxury",
+        "hash": "0xdbf148c37a06a5c809df7e815caea2366215da876afa4e27e83743d9db2b743b"
+    },
+    {
+        "name": "Dior",
+        "score": 90,
+        "category": "Luxury",
+        "hash": "0xcd22313dee8b525b0c9ac48d599dab8cea2d93b08adf19ca4944854274b52a30"
+    },
+    {
+        "name": "Breguet",
+        "score": 90,
+        "category": "Luxury",
+        "hash": "0xb77c0fe4c8928622a90aacfd6fb31fac7e0f6d9b1f7395e37de3fd82cfd9508e"
+    },
+    {
+        "name": "Jaeger-LeCoultre",
+        "score": 89,
+        "category": "Luxury",
+        "hash": "0x01e74d1266f217089e1ada88517d7ef470668c9637187260b83f1a86e10f9834"
+    },
+    {
+        "name": "IWC Schaffhausen",
+        "score": 88,
+        "category": "Luxury",
+        "hash": "0x56844974809b29fcd6509d59e4fd42ab01b415c9fa72fa557c84f0325002893b"
+    },
+    {
+        "name": "Omega",
+        "score": 88,
+        "category": "Luxury",
+        "hash": "0xbb4c3364d95cee7231dad2546223395b3684325b20bd96f4018ad85acf225063"
+    },
+    {
+        "name": "Prada",
+        "score": 87,
+        "category": "Luxury",
+        "hash": "0x349523c47acca1914cd0f6a07c14ca6920294cab63d82f0fa7bed772d4f5cc3b"
+    },
+    {
+        "name": "Saint Laurent",
+        "score": 87,
+        "category": "Luxury",
+        "hash": "0x20e4af47770c8d2fd3c7c322daa953ff01d620b432aee9bc479c314f82e35907"
+    },
+    {
+        "name": "Celine",
+        "score": 86,
+        "category": "Luxury",
+        "hash": "0x0228821a83081c81fded5b2cc5b31f90a336335a804a0383e83def590b84fba7"
+    },
+    {
+        "name": "Bottega Veneta",
+        "score": 86,
+        "category": "Luxury",
+        "hash": "0xf247d96f6c22ecef69b0c57086651a5995a4990eda6f7f7f0b5b7ad0f8b0cbad"
+    },
+    {
+        "name": "Loewe",
+        "score": 85,
+        "category": "Luxury",
+        "hash": "0x2418eb0613a73770d55931795efa7ef8970b2bf06a96711bf08d11fd6044cb5a"
+    },
+    {
+        "name": "Gucci",
+        "score": 84,
+        "category": "Luxury",
+        "hash": "0xefaac1539cbc9bcc86beb6e7abe387cec6bbde92e0b8c6ab5b348e3b6dc3aea4"
+    },
+    {
+        "name": "Valentino",
+        "score": 84,
+        "category": "Luxury",
+        "hash": "0x794da159d2630bb42eb75497c5c0026d539433f313884cf009d1a8760662e872"
+    },
+    {
+        "name": "Tiffany & Co.",
+        "score": 83,
+        "category": "Luxury",
+        "hash": "0xaac23990541a18eea8a5b766dcc45a42706ac35ea7c96de4fd01b26d191f4072"
+    },
+    {
+        "name": "Burberry",
+        "score": 82,
+        "category": "Luxury",
+        "hash": "0x679301227086498484d36660a68b943fc4891161631d369ae05533fe3f42941c"
+    },
+    {
+        "name": "Fendi",
+        "score": 82,
+        "category": "Luxury",
+        "hash": "0x5273f3eef2171f345576eedf2d1b0c3e06aee2644529cdc6a4bf804db487b7c6"
+    },
+    {
+        "name": "Max Mara",
+        "score": 81,
+        "category": "Luxury",
+        "hash": "0x86ef3a860fa30f5b3484947d44a8ae6601af95b3b3d2f4111c281fe4022e6a59"
+    },
+    {
+        "name": "Zegna",
+        "score": 81,
+        "category": "Luxury",
+        "hash": "0x960930c4ad880d2c9f6462fcd0e732e0936bf2142162765649229f0bb430cf3d"
+    },
+    {
+        "name": "The Row",
+        "score": 80,
+        "category": "Luxury",
+        "hash": "0xfd7fbbb2e76f5616670f57eee5a79fe5257f85efd564fdf5e1985e27c86b7e50"
+    },
+    {
+        "name": "Alaïa",
+        "score": 80,
+        "category": "Luxury",
+        "hash": "0xb250f62f3d67faeedca6612f61d56c9d3213efa06439e364b5f3613b136f6963"
+    },
+    {
+        "name": "Moncler",
+        "score": 79,
+        "category": "Luxury",
+        "hash": "0xbf83eb7f9b99b5b6061097bc06a8fae8ddc17323ea3280d00986a3847b6b6f38"
+    },
+    {
+        "name": "Givenchy",
+        "score": 78,
+        "category": "Luxury",
+        "hash": "0x4d9370257bd5b68c600313692afbe2d99cd10f7c9fc47b33ce5ed88f418853dc"
+    },
+    {
+        "name": "Balmain",
+        "score": 78,
+        "category": "Luxury",
+        "hash": "0xa7e2f23b55e3a49735f6f50d5457497db3b6c02d890997d9e943a62efba06aac"
+    },
+    {
+        "name": "Tom Ford",
+        "score": 77,
+        "category": "Luxury",
+        "hash": "0x1351fa25043f7a011707639df871b87b3f06477d0a68975484bd43d8f15b36fc"
+    },
+    {
+        "name": "Salvatore Ferragamo",
+        "score": 77,
+        "category": "Luxury",
+        "hash": "0xeabef157961dbecb504e8c1aea452299d27917fe22e2b75877cfeabcc9fc37f6"
+    },
+    {
+        "name": "Etro",
+        "score": 76,
+        "category": "Luxury",
+        "hash": "0x80b97ecbdd857fa1fd83b551bd2ea3975e9233e42939b93a832918d2281a04a4"
+    },
+    {
+        "name": "Missoni",
+        "score": 76,
+        "category": "Luxury",
+        "hash": "0x7f697043809b3e1a75e8f5ba2706296d061ae9a4e20328eb27fd9cc655f78063"
+    },
+    {
+        "name": "Ralph Lauren",
+        "score": 75,
+        "category": "Luxury",
+        "hash": "0x8a19aa6785df370471294f007159a9c499ed3ce80ac28a7015abec915e27773a"
+    },
+    {
+        "name": "Giorgio Armani",
+        "score": 75,
+        "category": "Luxury",
+        "hash": "0x52c6a72fa9c64047674879c5097863b5a1974abcd1429464d3070cb773760ab1"
+    },
+    {
+        "name": "Tory Burch",
+        "score": 74,
+        "category": "Luxury",
+        "hash": "0x7337930ccfc602e9bc60ea20b27a4eeb762ea83334943dd35b544a189938e5a4"
+    },
+    {
+        "name": "Coach",
+        "score": 73,
+        "category": "Luxury",
+        "hash": "0x5171a2cb55ae1b005461bd495e648ffda2a9392176dcbaf3d6c5cd42d2ffdea5"
+    },
+    {
+        "name": "Michael Kors",
+        "score": 72,
+        "category": "Luxury",
+        "hash": "0x33f4ee0d64b987b0411f9255062567c936f3b307ab993b3343bbc0260f7797ab"
+    },
+    {
+        "name": "Longchamp",
+        "score": 71,
+        "category": "Luxury",
+        "hash": "0x0398fb7fc687188ea631ac48a40bca4a285f37de0256d592dfa343bfea7cdfcf"
+    },
+    {
+        "name": "Bally",
+        "score": 70,
+        "category": "Luxury",
+        "hash": "0xe46b1abadd71f86ff14d48df9b1afcd636d0e1c88e6206992895f254d8ffd5f7"
+    },
+    {
+        "name": "Tod’s",
+        "score": 70,
+        "category": "Luxury",
+        "hash": "0xade139e1624410394dc3369e3a1f123bbe6fa2179edb64c58225644b5e2bb061"
+    },
+    {
+        "name": "Jimmy Choo",
+        "score": 69,
+        "category": "Luxury",
+        "hash": "0x6847865b5a25edb5f5584db1e091d45bd735ee8b06e9c0488eb2ee54a75eec3c"
+    },
+    {
+        "name": "Manolo Blahnik",
+        "score": 69,
+        "category": "Luxury",
+        "hash": "0xaa0bfc0ab476f81c9ce293c6b196d9761805610ddf69441a9bb873384dec5e91"
+    },
+    {
+        "name": "Christian Louboutin",
+        "score": 68,
+        "category": "Luxury",
+        "hash": "0x3da66609e3f7505fba9f8a9cecef65b503632c46d768ba75db4f026f41d6400c"
+    },
+    {
+        "name": "Hugo Boss",
+        "score": 67,
+        "category": "Luxury",
+        "hash": "0xd44044c130bad6867655578901792d6fb496472b20e4e15268d70451f011a221"
+    },
+    {
+        "name": "Dolce & Gabbana",
+        "score": 66,
+        "category": "Luxury",
+        "hash": "0xc51c1f8667f31cb2fe9793a38d528bb7701f568dbc995a284ada33027d7233f4"
+    },
+    {
+        "name": "Versace",
+        "score": 65,
+        "category": "Luxury",
+        "hash": "0x63b624d00db3951dc26a86e7d99b61b4c06ccc284321a1eef73ff168c9aa8771"
+    },
+    {
+        "name": "Philipp Plein",
+        "score": 42,
+        "category": "Luxury",
+        "hash": "0xa4f39b3482a9f8476572820531d4d7a45379e3e596d57b32d16e5460ca71df2d"
+    },
+    {
+        "name": "Goyard",
+        "score": 46,
+        "category": "Luxury",
+        "hash": "0x6d2aa51c7994501a46fa018d6f02bd79ce3649fae9721fc64b6152e8e97384d1"
+    },
+    {
+        "name": "Balenciaga",
+        "score": 50,
+        "category": "Luxury",
+        "hash": "0xd5e8da1770025975616257f88c2973dfc2879f97e18896d10a56141c347d4b42"
+    },
+    {
+        "name": "Off-White",
+        "score": 64,
+        "category": "Luxury",
+        "hash": "0x08e71ced2f38504dc217a65b56d8467e3ed4d9ffaf28d99a6ad2576deab37e7a"
+    },
+    {
+        "name": "Alexander McQueen",
+        "score": 79,
+        "category": "Luxury",
+        "hash": "0xf5e3e9395d2f36b96043b51480d54b11d1c6f6d42b3919fb1c4e1eb25bcedc4c"
+    },
+    {
+        "name": "Jacquemus",
+        "score": 82,
+        "category": "Luxury",
+        "hash": "0xc47f850541088a3322d4ca9bfb48511a3f8cf232574cba68d3cb6aafb4c1c9f1"
+    },
+    {
+        "name": "Miu Miu",
+        "score": 83,
+        "category": "Luxury",
+        "hash": "0xbe28ee08d4a39bfbe034e02a96c64533a74ced71573ed917787a8b87c65e08e3"
+    },
+    {
+        "name": "Stone Island",
+        "score": 85,
+        "category": "Luxury",
+        "hash": "0x1405326eaeac85bbe6f9e960c1e7c2ccda2613e72cbbf09af776097d34bc28ab"
+    },
+    {
+        "name": "Ami Paris",
+        "score": 84,
+        "category": "Luxury",
+        "hash": "0xf12f928b36350b2cb763a5c29dbbdf4459c26c80aa546d38387ffe916e893bf2"
+    },
+    {
+        "name": "Acne Studios",
+        "score": 78,
+        "category": "Luxury",
+        "hash": "0x01b7e1e271cf014bc5155594839ffd7614884c9d154ca055280a30adbda81484"
+    },
+    {
+        "name": "Vetements",
+        "score": 65,
+        "category": "Luxury",
+        "hash": "0x4894bdaa49025ec0a3a0d44a23186135ea8201c62ac863f60cb97be6fa00c499"
+    },
+    {
+        "name": "Rick Owens",
+        "score": 87,
+        "category": "Luxury",
+        "hash": "0x3277781eb038130c14f876066e13d9d4cc244cf61ca6931a035b370bd303f473"
+    },
+    {
+        "name": "Dries Van Noten",
+        "score": 89,
+        "category": "Luxury",
+        "hash": "0xcccbceca1e2c007bb0fc6106c6d10e34ce5e8edf91ed31e328cc555ee8b67145"
+    },
+    {
+        "name": "JW Anderson",
+        "score": 81,
+        "category": "Luxury",
+        "hash": "0x63cdcca2d51e4ec11a045e5ecd50a0613d1e4082b86efc291ab47d16d0aa98fd"
+    },
+    {
+        "name": "Isabel Marant",
+        "score": 80,
+        "category": "Luxury",
+        "hash": "0x2b41ee86c772d97f231ce4a52f4271dc64dff4254e9ad22808a2faac08e06989"
+    },
+    {
+        "name": "Chloé",
+        "score": 82,
+        "category": "Luxury",
+        "hash": "0xfe82bcf3ef72a341eea5d074a9121265db823660317ed919397c6ed516cccb3b"
+    },
+    {
+        "name": "Maison Margiela",
+        "score": 88,
+        "category": "Luxury",
+        "hash": "0x6656a42afaf9fbb6d3d7adb1f4b9b789ea435d494a7870710f87ff8e5dea6caf"
+    },
+    {
+        "name": "Kenzo",
+        "score": 74,
+        "category": "Luxury",
+        "hash": "0xc85f5b3a86df4c2234b91e1dcb64e8e698906417d651ce20f7d4c41c207fb7c6"
+    },
+    {
+        "name": "Paul Smith",
+        "score": 77,
+        "category": "Luxury",
+        "hash": "0x2765b528ff59ab4d4fa2e6ea822e6ea19efdccccb3a5a8d23fa9c543e2cdf483"
+    },
+    {
+        "name": "Dsquared2",
+        "score": 61,
+        "category": "Luxury",
+        "hash": "0xd11d8d842ddfb7fab0123eb55460a5ecf07d3022b4509aa1a5a3712aa22116b3"
+    },
+    {
+        "name": "Moschino",
+        "score": 63,
+        "category": "Luxury",
+        "hash": "0x4adaab69582c7dd696c23027841456ba2d499a67814c939a39662d8aba2b6944"
+    },
+    {
+        "name": "Palm Angels",
+        "score": 59,
+        "category": "Luxury",
+        "hash": "0x76d39b2c5f83c406b95cd8400cdf38c2bfb6b113b3c51bc5e246c464c176eaaa"
+    },
+    {
+        "name": "Fear of God",
+        "score": 82,
+        "category": "Luxury",
+        "hash": "0x4cfdc296fcefeb9dcb32ecdbcdc213fedb31337ed8d716218953198e31613e6a"
+    },
+    {
+        "name": "Sacai",
+        "score": 86,
+        "category": "Luxury",
+        "hash": "0x129c2fc97a40d4c7562a44eeba99332bbbc059b35ec77884bba6608f50750011"
+    },
+    {
+        "name": "Comme des Garçons",
+        "score": 90,
+        "category": "Luxury",
+        "hash": "0xdc6cb6f70c18bf5d723d5cd29abf66ff98e2aa682a12d6ba07d8f0ef912bbd0a"
+    },
+    {
+        "name": "Thom Browne",
+        "score": 88,
+        "category": "Luxury",
+        "hash": "0xae6416145c295b0715a77ecd19c0a5440e54df2ca3422b3e7ae83e369c1a230d"
+    },
+    {
+        "name": "Marine Serre",
+        "score": 83,
+        "category": "Luxury",
+        "hash": "0xf810f1c27ffd7ebf2f55102b8d92ebf04e8884059ec3e9c58bd38cf340942967"
+    },
+    {
+        "name": "Coperni",
+        "score": 81,
+        "category": "Luxury",
+        "hash": "0xa79297f6040944c160d1a44ac793e78349ef4b05dd41e30b1dee5ae82b1383a7"
+    },
+    {
+        "name": "Skims",
+        "score": 68,
+        "category": "Luxury",
+        "hash": "0x4af492f25dd194b3ff5e96cff538445c9c5c5686a4b941e40574c703e3246085"
+    },
+    {
+        "name": "Mugler",
+        "score": 84,
+        "category": "Luxury",
+        "hash": "0x7b083bb2942944618d49d81b9f55c2610c7985c99258fe349269c81a5f19dc5c"
+    },
+    {
+        "name": "Schiaparelli",
+        "score": 91,
+        "category": "Luxury",
+        "hash": "0xfb63679cc6934cffa8dcce94ff5f85bc1499e19efeade0b0fb9209c9bf980e15"
+    },
+    {
+        "name": "Paco Rabanne",
+        "score": 79,
+        "category": "Luxury",
+        "hash": "0xbdd4af035f200bbb2c83e625abf75022132938a7b77f84debec981f7f0fbb07d"
+    },
+    {
+        "name": "Lanvin",
+        "score": 85,
+        "category": "Luxury",
+        "hash": "0xbe02d5725360e861dddd9d84f00f40b2e389eb61236d41e07123e00e1bf5c877"
+    },
+    {
+        "name": "Diesel",
+        "score": 66,
+        "category": "Luxury",
+        "hash": "0x5f16f507749e8421ee71e68228cc0795c7181814bc13e55ed5cc12e7cb05ff20"
+    },
+    {
+        "name": "Ganni",
+        "score": 72,
+        "category": "Luxury",
+        "hash": "0x66ee68c72d5a9fb4d2907d86c6d86d38c772f2662f3259f976128a41b63f84d8"
+    },
+    {
+        "name": "Zimmermann",
+        "score": 75,
+        "category": "Luxury",
+        "hash": "0x4effc4d56be657c1c066e1768befb3dd7c2c2550e5cd25d5975e788e5a398962"
+    },
+    {
+        "name": "Reformation",
+        "score": 84,
+        "category": "Luxury",
+        "hash": "0x344dda4a81f3dde617f0354134200410878e8a04f516ed8173bb24252683d6ea"
+    },
+    {
+        "name": "Bulgari",
+        "score": 89,
+        "category": "Luxury",
+        "hash": "0x3d9b578c2af3719c55b729cb84caec4103468278e14219a97f7be96aab6ee9df"
+    },
+    {
+        "name": "Piaget",
+        "score": 91,
+        "category": "Luxury",
+        "hash": "0x149bc98ad2c1349f65c0cca0431d87bc36e21f4bf0b0992d689f4722d9f5927f"
+    },
+    {
+        "name": "Chopard",
+        "score": 87,
+        "category": "Luxury",
+        "hash": "0xcb0dde61c5b9382a6c3fdeec9db6dd973478fec4f5ec9dd6f1b82b1909e1351f"
+    },
+    {
+        "name": "Tag Heuer",
+        "score": 81,
+        "category": "Luxury",
+        "hash": "0xec0ad94415c942c8f550cbccd9dff9616b1ccbf70d47573fe4e7185b766284e3"
+    },
+    {
+        "name": "Hublot",
+        "score": 78,
+        "category": "Luxury",
+        "hash": "0x3cba1ae0649729be92b8585110a156b4bccc61687e037d271493bf11e4881ae8"
+    },
+    {
+        "name": "Montblanc",
+        "score": 85,
+        "category": "Luxury",
+        "hash": "0x7d03d886ba4e7e5b8ae41ef93415bbd452a6ef1ad5fb2aa9d9f8b810cfc8b9cf"
+    },
+    {
+        "name": "Swarovski",
+        "score": 70,
+        "category": "Luxury",
+        "hash": "0xc082f129bc1f7a4e5db1027155430217a3ffe37e187aca8bcfc3a01f0758a7c3"
+    },
+    {
+        "name": "Pandora",
+        "score": 62,
+        "category": "Luxury",
+        "hash": "0x2098f076fa0425436725185753183717098b09347da41940a16af5d45883d3a3"
+    },
+    {
+        "name": "Moncler Genius",
+        "score": 80,
+        "category": "Luxury",
+        "hash": "0x32e875892f943754673eee6bf0a1de8b822051094615c5ac0b4013e2151eacb0"
+    },
+    {
+        "name": "Supreme",
+        "score": 76,
+        "category": "Luxury",
+        "hash": "0x3289598e814e996096c681b5acfa69367c764096076c1334c12aaebcc336d1b1"
+    },
+    {
+        "name": "Oscar de la Renta",
+        "score": 89,
+        "category": "Luxury",
+        "hash": "0xcd489c45c75f807e6837f39761a37de4ae55252d6277c6a63c174fe27040e960"
+    },
+    {
+        "name": "Diane von Furstenberg",
+        "score": 82,
+        "category": "Luxury",
+        "hash": "0x726eb730c843c43547e1e6e5c4b9c3a706fdedb22a6001ab84cc18280430fdfd"
+    },
+    {
+        "name": "Marc Jacobs",
+        "score": 77,
+        "category": "Luxury",
+        "hash": "0x21aadb12e2ab86a055d5473ac877bc7cb30f5a231e17a955d009888cba9a9e9a"
+    },
+    {
+        "name": "Roberto Cavalli",
+        "score": 64,
+        "category": "Luxury",
+        "hash": "0xfbc265900e75e363277da7c35d35837b2721487f8161a4daab34403bfff0a1fd"
+    }
 ];
