@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A Agency | Luxury Integrity Registry</title>
+    <title>2A Agency | Luxury AI-IQ Registry</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -31,26 +31,28 @@
     <header class="max-w-7xl mx-auto flex justify-between items-center mb-16 border-b border-black/5 pb-6">
         <a href="index.html" class="group no-underline">
             <h1 class="text-2xl logo-unified transition-opacity group-hover:opacity-70">2A AGENCY</h1>
-            <p class="text-[9px] uppercase tracking-[0.4em] text-black/40 font-bold">Luxury Integrity Index</p>
+            <p class="text-[9px] uppercase tracking-[0.4em] text-black/40 font-bold">Luxury AI-IQ Index</p>
         </a>
-        <nav class="flex gap-8 items-center">
-            <a href="whitepaper.html" class="text-xs uppercase tracking-widest text-black/60 hover:emerald-text transition-all font-bold">
+        <nav class="flex gap-6 md:gap-8 items-center">
+            <a href="whitepaper.html" class="hidden md:block text-xs uppercase tracking-widest text-black/60 hover:emerald-text transition-all font-bold">
                 White Paper
             </a>
-            <div class="hidden md:block pl-6 border-l border-black/10 text-right">
-                <p class="text-[9px] text-black/30 uppercase font-bold">Network Status</p>
-                <p class="text-[9px] emerald-text font-mono font-bold tracking-tighter text-green-600">● LIVE ON BASE MAINNET</p>
-            </div>
+            <a href="https://formspree.io/f/xykngdbz" target="_blank" class="text-[10px] font-bold uppercase tracking-widest bg-[#064e3b] text-white px-5 py-2.5 rounded-sm hover:opacity-90 transition shadow-lg">
+                Claim Your Record
+            </a>
         </nav>
     </header>
 
     <main class="max-w-7xl mx-auto">
-        <div class="flex justify-between items-end mb-10">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
             <div>
                 <h2 class="text-4xl md:text-5xl serif italic emerald-text">The Registry</h2>
                 <p class="text-[10px] uppercase tracking-[0.2em] text-black/40 mt-2 font-bold italic">Certainty is the new moat.</p>
             </div>
-            <div class="text-[10px] uppercase tracking-widest text-black/40 font-bold">System of Records : <span class="text-black">101 Audits</span></div>
+            <div class="text-[10px] uppercase tracking-widest text-black/40 font-bold text-right">
+                System of Records : <span class="text-black">101 Audits</span><br>
+                <span class="emerald-text font-mono">● LIVE ON BASE MAINNET</span>
+            </div>
         </div>
 
         <div class="overflow-x-auto">
@@ -59,7 +61,7 @@
                     <tr class="text-[10px] uppercase tracking-[0.2em] text-black/40 font-bold">
                         <th class="px-6 py-4">Rank</th>
                         <th class="px-6 py-4">Entity</th>
-                        <th class="px-6 py-4">Forensic Score</th>
+                        <th class="px-6 py-4">Luxury AI-IQ</th>
                         <th class="px-6 py-4">Status</th>
                         <th class="px-6 py-4 text-right">Blockchain Proof</th>
                     </tr>
@@ -67,6 +69,14 @@
                 <tbody id="registry-body">
                     </tbody>
             </table>
+        </div>
+
+        <div class="mt-20 text-center bg-white p-12 border border-black/5 rounded-sm shadow-sm">
+            <h3 class="serif text-3xl italic mb-4">Your brand is not on the list?</h3>
+            <p class="text-black/50 mb-8 max-w-xl mx-auto">If you are a luxury stakeholder and wish to notarize your brand's integrity on the System of Records, contact our forensic team to initiate the audit.</p>
+            <a href="https://formspree.io/f/xykngdbz" target="_blank" class="inline-block emerald-bg text-white px-10 py-4 text-xs font-bold uppercase tracking-widest rounded-sm hover:opacity-90 transition shadow-xl">
+                Request Forensic Audit
+            </a>
         </div>
     </main>
 
@@ -78,24 +88,22 @@
     <script src="database.js"></script>
     <script>
         const body = document.getElementById('registry-body');
-
-        // Tri par score (Expertise 2A Agency)
         const sortedData = [...registryData].sort((a, b) => b.score - a.score);
 
         sortedData.forEach((brand, index) => {
-            // Statut universel pour toutes les preuves blockchain
-            const statusLabel = "CERTIFIED"; 
-
             body.innerHTML += `
                 <tr class="registry-row group">
                     <td class="px-6 py-6 text-black/20 font-mono text-xs">#${(index + 1).toString().padStart(3, '0')}</td>
                     <td class="px-6 py-6 font-extrabold emerald-text tracking-tight text-sm uppercase">${brand.name}</td>
                     <td class="px-6 py-6">
-                        <span class="text-2xl font-light emerald-text">${brand.score}</span><span class="text-[10px] text-black/20 ml-1">/100</span>
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-light emerald-text leading-none">${brand.score}</span>
+                            <span class="text-[8px] uppercase tracking-tighter text-black/30 mt-1">Forensic Index</span>
+                        </div>
                     </td>
                     <td class="px-6 py-6">
                         <span class="text-[9px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full bg-emerald-50 emerald-text border border-emerald-900/10">
-                            ${statusLabel}
+                            CERTIFIED
                         </span>
                     </td>
                     <td class="px-6 py-6 text-right">
