@@ -31,7 +31,7 @@
 
     <header class="max-w-5xl mx-auto text-center mb-24">
         <h1 class="serif text-6xl md:text-8xl emerald-text italic mb-6 leading-tight">Certainty is <br>the new moat.</h1>
-        <div class="max-w-3xl mx-auto space-y-6">
+        <div class="max-w-3xl mx-auto space-y-8">
             <p class="text-2xl font-light text-black/60 italic leading-relaxed">
                 In the era of synthetic abundance, <span class="emerald-text font-semibold">Integrity is the only Sovereign Asset.</span>
             </p>
@@ -50,11 +50,15 @@
                     <div>Market Value: Estimated $2,400</div>
                 </div>
             </div>
-            <div class="bg-[#064e3b] text-white p-10 rounded-sm shadow-2xl md:scale-105 z-10">
+            <div class="bg-[#064e3b] text-white p-10 rounded-sm shadow-2xl md:scale-105 z-10 border border-emerald-900">
                 <h4 class="text-xs font-bold uppercase mb-6 opacity-60 italic">2A Agency Ground Truth</h4>
-                <div class="space-y-4 font-mono text-sm border-l-2 border-emerald-400 pl-4">
+                <div class="space-y-4 font-mono text-sm border-l-4 border-emerald-400 pl-4 font-bold">
                     <div>100% Handcrafted in Tuscany, Italy</div>
                     <div>Certified Price: $3,250.00</div>
+                </div>
+                <div class="mt-12 flex justify-between items-end border-t border-white/10 pt-6">
+                    <div class="text-[9px] uppercase tracking-widest opacity-60">Verified on Base L2</div>
+                    <div class="text-2xl font-bold italic serif">AI-IQ: 98</div>
                 </div>
             </div>
         </div>
@@ -64,8 +68,8 @@
         <div class="grid md:grid-cols-2 gap-12 items-center text-left">
             <h2 class="serif text-4xl italic emerald-text italic">"When AI agents buy and sell for your customers, an hallucination is a security breach."</h2>
             <div class="space-y-6 text-black/70 text-lg leading-relaxed">
-                <p>Comme l'a analysé <span class="emerald-text font-bold">Paul Graham</span>, la technologie commoditise tout ce qui est fonctionnel. Votre Marque est ce qui reste quand tout le reste est gratuit : c'est la <strong>Confiance</strong>.</p>
-                <p>2A Agency est le <span class="emerald-text font-bold">Verisign de l'ère de l'IA</span>. Nous installons la plomberie de l'autorité pour que les machines ne devinent plus votre identité, mais consultent votre Registre.</p>
+                <p>Dans un monde d'abondance synthétique, la Marque n’est plus un logo, c’est ce qui reste quand tout le reste est gratuit : c'est la <span class="emerald-text font-bold uppercase">Confiance</span>.</p>
+                <p>Nous installons la plomberie de l'autorité pour que les machines ne devinent plus votre identité, mais consultent votre Registre certifié.</p>
             </div>
         </div>
     </section>
@@ -73,27 +77,33 @@
     <section id="contact" class="max-w-2xl mx-auto my-32 p-12 bg-white border border-black/5 shadow-2xl rounded-sm">
         <div id="form-wrapper">
             <h3 class="serif text-4xl italic text-center mb-8 italic">Request Forensic Audit</h3>
-            <form id="contact-form" action="https://formspree.io/f/xykngdbz" method="POST" class="space-y-6">
+            <form id="ajax-form" action="https://formspree.io/f/xykngdbz" method="POST" class="space-y-6">
                 <input type="text" name="brand" placeholder="Brand Name" required class="w-full p-4 border border-black/10 focus:border-[#064e3b] outline-none">
                 <input type="email" name="email" placeholder="Work Email" required class="w-full p-4 border border-black/10 focus:border-[#064e3b] outline-none">
-                <button type="submit" class="w-full bg-[#064e3b] text-white py-5 text-xs font-bold uppercase tracking-widest hover:opacity-90 transition">
+                <textarea name="message" placeholder="Message (Optional)" rows="3" class="w-full p-4 border border-black/10 focus:border-[#064e3b] outline-none"></textarea>
+                <button type="submit" class="w-full bg-[#064e3b] text-white py-5 text-xs font-bold uppercase tracking-widest hover:opacity-90 transition shadow-xl">
                     Submit Record Claim
                 </button>
             </form>
         </div>
 
-        <div id="success-message" class="hidden text-center py-10">
+        <div id="success-msg" class="hidden text-center py-10">
             <div class="emerald-text text-6xl mb-6"><i class="fa-solid fa-circle-check"></i></div>
             <h3 class="serif text-4xl italic mb-4">Thank you.</h3>
-            <p class="text-black/60 mb-8 font-medium">
-                Your request to secure your brand's heritage has been received. Our Forensic team will contact you within 24 hours.
+            <p class="text-black/60 mb-8 font-medium italic">
+                Your request to secure your brand's heritage has been received.<br>
+                Our Forensic team will reach out to you within 24 hours.
             </p>
-            <p class="emerald-text font-bold italic">"Certainty is the new moat."</p>
+            <p class="emerald-text font-bold uppercase tracking-widest text-[10px]">"Certainty is the new moat."</p>
         </div>
     </section>
 
+    <footer class="max-w-7xl mx-auto pt-12 border-t border-black/5 flex justify-between items-center text-[10px] uppercase tracking-[0.3em] font-bold text-black/20">
+        <p>© 2026 2A Agency | Paris - London - Dubai</p>
+    </footer>
+
     <script>
-        const form = document.getElementById('contact-form');
+        const form = document.getElementById('ajax-form');
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const data = new FormData(form);
@@ -104,7 +114,7 @@
             });
             if (response.ok) {
                 document.getElementById('form-wrapper').classList.add('hidden');
-                document.getElementById('success-message').classList.remove('hidden');
+                document.getElementById('success-msg').classList.remove('hidden');
             }
         });
     </script>
