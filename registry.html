@@ -1,144 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registry | 2A Agency AI-Integrity Index</title>
+    <title>2A Agency | Global Authority Index</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Newsreader:ital,wght@0,300;1,300&display=swap');
-        body { background-color: #F9F9F7; font-family: 'JetBrains Mono', monospace; color: #065F46; }
-        .serif { font-family: 'Newsreader', serif; }
-        .status-dot { height: 6px; width: 6px; border-radius: 50%; display: inline-block; margin-right: 8px; }
-        .bg-verified { background-color: #10B981; box-shadow: 0 0 8px #10B981; }
-        tr { border-bottom: 1px solid rgba(6, 95, 70, 0.05); transition: all 0.2s ease; }
-        tr:hover { background-color: rgba(6, 95, 70, 0.02); cursor: crosshair; }
-        #brandSearch:focus { outline: none; border-bottom: 1px solid #065F46; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #e5e5e5; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px); }
+        .status-verified { color: #10b981; text-shadow: 0 0 10px rgba(16, 185, 129, 0.3); }
+        .status-warning { color: #f59e0b; text-shadow: 0 0 10px rgba(245, 158, 11, 0.3); }
+        .status-critical { color: #ef4444; text-shadow: 0 0 10px rgba(239, 68, 68, 0.3); }
     </style>
 </head>
-<body class="p-6 md:p-12 antialiased">
+<body class="p-8">
 
-    <nav class="flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.3em] opacity-60 mb-20">
-        <a href="index.html" class="hover:opacity-100 transition-opacity">← Back to Home</a>
-        <div class="flex gap-8">
-            <span>Market: LUXURY_GLOBAL</span>
-            <span>Index: 2A_PRIME_100</span>
+    <div class="max-w-6xl mx-auto mb-12 flex justify-between items-end">
+        <div>
+            <h1 class="text-4xl font-light tracking-tighter text-white">GLOBAL AUTHORITY <span class="font-bold">INDEX</span></h1>
+            <p class="text-gray-500 mt-2">Verified On-Chain Luxury Integrity Registry — 2026 Edition</p>
         </div>
-    </nav>
-
-    <header class="mb-16 border-l-2 border-[#065F46] pl-8">
-        <p class="text-[10px] uppercase tracking-[0.5em] font-bold opacity-40 mb-2">// SEMANTIC_INTEGRITY_REGISTRY</p>
-        <h1 class="serif text-5xl italic mb-6">Global Authority Index.</h1>
-        
-        <div class="mt-8 mb-4 max-w-md">
-            <input type="text" id="brandSearch" onkeyup="searchRegistry()" placeholder="FILTER BY BRAND_NAME..." 
-                   class="w-full bg-transparent border-b border-[#065F46]/10 py-2 text-[11px] font-bold uppercase tracking-widest text-emerald-900">
+        <div class="text-right">
+            <div class="text-xs text-gray-500 uppercase tracking-widest mb-1">Index Coverage</div>
+            <div class="text-2xl font-mono text-white">100 / 100</div>
         </div>
+    </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-6 border-t border-[#065F46]/10">
-            <div>
-                <p class="text-[9px] opacity-40 font-bold mb-1 uppercase uppercase">Index Coverage</p>
-                <p class="text-xl font-bold tracking-tighter">40<span class="text-xs opacity-40 italic">/100</span></p>
-            </div>
-            <div>
-                <p class="text-[9px] opacity-40 font-bold mb-1 uppercase">Network</p>
-                <p class="text-xl font-bold tracking-tighter">BASE L2</p>
-            </div>
-            <div>
-                <p class="text-[9px] opacity-40 font-bold mb-1 uppercase">Protocol Status</p>
-                <p class="text-xl font-bold tracking-tighter text-emerald-600 uppercase">ACTIVE</p>
-            </div>
-            <div>
-                <p class="text-[9px] opacity-40 font-bold mb-1 uppercase">Last Sync</p>
-                <p class="text-xl font-bold tracking-tighter uppercase">05 MAR 2026</p>
-            </div>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="glass-card p-6 rounded-xl">
+            <p class="text-gray-500 text-sm mb-1 font-medium">Network Status</p>
+            <p class="text-green-400 font-mono tracking-tighter flex items-center">
+                <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span> BASE MAINNET ACTIVE
+            </p>
         </div>
-    </header>
+        <div class="glass-card p-6 rounded-xl">
+            <p class="text-gray-500 text-sm mb-1 font-medium">Average Industry Score</p>
+            <p class="text-white text-xl font-bold font-mono">76.4<span class="text-gray-600 text-sm">/100</span></p>
+        </div>
+        <div class="glass-card p-6 rounded-xl text-right">
+            <p class="text-gray-500 text-sm mb-1 font-medium font-mono uppercase">Last Sync</p>
+            <p class="text-gray-300 font-mono">05 MAR 2026 | 15:42 GMT</p>
+        </div>
+    </div>
 
-    <div class="overflow-x-auto">
-        <table class="w-full text-left text-[11px] font-medium tracking-tight" id="registryTable">
+    <div class="max-w-6xl mx-auto mb-8">
+        <input type="text" id="searchInput" onkeyup="searchRegistry()" placeholder="Search entity (e.g. 'Goyard', 'Rolex')..." 
+               class="w-full bg-transparent border-b border-gray-800 py-4 text-xl focus:outline-none focus:border-white transition-colors font-light">
+    </div>
+
+    <div class="max-w-6xl mx-auto overflow-x-auto">
+        <table class="w-full text-left">
             <thead>
-                <tr class="uppercase opacity-40 text-[9px] font-bold tracking-widest border-b border-[#065F46]/20">
-                    <th class="pb-4 px-4">Entity Name</th>
-                    <th class="pb-4 px-4">AI-IQ Score</th>
-                    <th class="pb-4 px-4">Status</th>
-                    <th class="pb-4 px-4 text-right">Blockchain Proof (TX)</th>
+                <tr class="text-gray-600 text-xs uppercase tracking-widest border-b border-gray-900">
+                    <th class="pb-4 font-medium">Entity Name</th>
+                    <th class="pb-4 font-medium uppercase">Category</th>
+                    <th class="pb-4 font-medium text-center">AI-IQ Score</th>
+                    <th class="pb-4 font-medium">Certification Proof</th>
+                    <th class="pb-4 font-medium text-right">Audit Status</th>
                 </tr>
             </thead>
-            <tbody id="registryBody"></tbody>
+            <tbody id="registryBody">
+                </tbody>
         </table>
     </div>
 
     <script>
         const registryData = [
-            { name: "FERRARI", score: "98/100", tx: "0x9cff6631ea0c69bdff7622a6e74dc4914793a7c9777deac73db6d7c789683f0a" },
-            { name: "ROLEX", score: "97/100", tx: "0x3b98dde94bc6e17e297de7dc899dc65e6a1a69aec33aaa26adda98ff6cab6805" },
-            { name: "LOUIS VUITTON", score: "96/100", tx: "0x2d6a31fe5f7a48a3606adf4dcfe049d3a9feef418979f188eba28aebb0ac6cf1" },
-            { name: "PATEK PHILIPPE", score: "96/100", tx: "0x387b5077007356613b8149f00629182263056cf0ee397cea50767eb35601be50" },
-            { name: "DOM PÉRIGNON", score: "96/100", tx: "0x2dbc3c504ce6e440677220a95e88b3b0ca6cf6283494a30b864f5c59209e99a4" },
-            { name: "CHANEL", score: "95/100", tx: "0x46dd0f51b6057e8e6fe2940ddcb0a03c79157315280a17db008fa40f7acfbe03" },
-            { name: "VAN CLEEF & ARPELS", score: "95/100", tx: "0x1a4b98010a9882f9b8ea17afa470e02d8cd1fbdba7f4a58f15379bd97af0271a" },
-            { name: "PORSCHE", score: "95/100", tx: "0xc7822d19198d665dc15c3e549a2d226ccdedecc82296ba54f196b1d7f7aa89db" },
-            { name: "CHÂTEAU MARGAUX", score: "95/100", tx: "0x8f287cfaf1b441a5ef42598855e22a881c3fdb1678df5709172c64895148439c" },
-            { name: "VOGUE", score: "95/100", tx: "0xf895c8caaf106cbf552d4b431e386b68df4ae7d61491f0093fe0012db0689b3e" },
-            { name: "HERMÈS", score: "94/100", tx: "0xcc22b1863e9f19c401f4115439887c0751492831e6aed1a4333ff51f842dffff" },
-            { name: "DIOR", score: "94/100", tx: "0x1e39c34da59cff6fa3e88a83056b87a318744902ca69f0e4244ac5d78a45f0f6" },
-            { name: "AUDEMARS PIGUET", score: "94/100", tx: "0x365ed2fbb4312edc7163aaef44c3c5ef41358788a75a457572b32b675c3c9868" },
-            { name: "LAMBORGHINI", score: "94/100", tx: "0x4c31102d6ff4b15447716a6e9c236b64eb2ade1a95d6fa8ccb9aadee1b6f4b8a" },
-            { name: "RIMOWA", score: "94/100", tx: "0x1e63b77f32af365a857880b7d4c7980b7cf322eded37e2d0b917fddaa771614e" },
-            { name: "JAEGER-LECOULTRE", score: "94/100", tx: "0x527dd3326b4084ce461ba1be531a81b459265ef57b1c654474678f7b5dd131e7" },
-            { name: "CARTIER", score: "93/100", tx: "0xa49f3e24264f7ce6ca529c17a349b1fd3c6ce477ad4dcd633177d330624208b9" },
-            { name: "RICHARD MILLE", score: "93/100", tx: "0x433b019232c38344234ffc62ba53e5d3dcb8866d425e8ca82a67f4859f5f3023" },
-            { name: "BENTLEY", score: "93/100", tx: "0xb34123e9cb4120f08c4b00b47095b7c839c48469e35d772eec07eb2587d93e56" },
-            { name: "HENNESSY", score: "93/100", tx: "0xcce8bb0c2565812424d568149edec10c4b571105d6ab8865dc3ce04261236c2e" },
-            { name: "OMEGA", score: "93/100", tx: "0x144dc8e8ec96fb0f44405fba7505b8ac4e5b276e6973b3a84593d0f916afd1d5" },
-            { name: "TIFFANY & CO", score: "92/100", tx: "0x824bc0a6fc2e3afc0ea0705a17a8e6b1630e5ef777e1b2c6e63852eb1932baf2" },
-            { name: "CELINE", score: "92/100", tx: "0xd03f3734b4a1b67f07bfd8f43939d281b686e5286da2ed2c61c7d55a93f3e316" },
-            { name: "LOEWE", score: "92/100", tx: "0x4a880ce86e761b77edba8c80805c67cd2daee60703954098224b99f5aa413b10" },
-            { name: "ASTON MARTIN", score: "92/100", tx: "0x5f9b02713fd46009d840dd9ae9ef97706b68460936bdca278f735ee9d7a3d308" },
-            { name: "GUCCI", score: "91/100", tx: "0x4809e5417de7ed5657f2e79475549db6e31cb8c6c57b9675dc51d386147a94ff" },
-            { name: "SAINT LAURENT", score: "91/100", tx: "0x684945e452c06e4e945f96732d0448e6e3f9b08c5356b3c7454b4b3a15bd7017" },
-            { name: "MONCLER", score: "91/100", tx: "0xf5f4b3fcddf2e0faf1f145724a037d70d0103e4982d9a76b385b52066f3692a4" },
-            { name: "BOUCHERON", score: "91/100", tx: "0xe2936d6906ec0c759de7479ae175997b1b7825144a3018a3be29f9c2e8ba84bc" },
-            { name: "FENDI", score: "91/100", tx: "0xde60e6ca7c19cf24250c109d3e7a02ce05a964f7192750bec9cf956dc2b0c8a0" },
-            { name: "RANGE ROVER", score: "91/100", tx: "0xbfc16f35f9d4b1cfe39cc96a7b1d000fb54167472c46b52721bc6b2dbcd6f127" },
-            { name: "PRADA", score: "90/100", tx: "0x99176947ffc0e2249d78764116cf95933b6b93640ab36b319907b59bdc5933bc" },
-            { name: "BOTTEGA VENETA", score: "90/100", tx: "0x4bfdedb05e3b9548e12b0dd05c465f57ed483d55e1633b3939c33dd9a6ad3b67" },
-            { name: "GIVENCHY", score: "90/100", tx: "0x55a0f3908713419ce7f3209af15247142f8c6b7f719490a0b52573510094b56b" },
-            { name: "VALENTINO", score: "90/100", tx: "0x2285f4b211bd88dffdc1e2b6a4e46f9a98795ce71edec962f7ba7d415310cfc7" },
-            { name: "BURBERRY", score: "89/100", tx: "0x577a7a507b2a02fff2df2c637096ce59c5bc51c2a5d15506dfae6d5af2e665cc" },
-            { name: "MASERATI", score: "89/100", tx: "0x17c2a22f3134faabdf5f493f1597da035c0bae2b72f927225ef631655e335985" },
-            { name: "BALENCIAGA", score: "88/100", tx: "0xb863425bcd0595cdb36b213ccadee3b38b5e695fc7995b118e77a904b58849bf" },
-            { name: "VERSACE", score: "88/100", tx: "0x350675a3c0bd9bb7ea5b0efe5f1ae2da70ca874e56c0762e6879f4045234b270" },
-            { name: "ZILLI", score: "87/100", tx: "0x158ae0624b7dbb2f69e7da31ab85133ec1ff9ab6551953a3e19c31017958da6b" }
+            // LES ELITES (90+)
+            { name: "Hermès", category: "Leather Goods", score: 96, tx: "0x8fa2...3f1d" },
+            { name: "Rolex", category: "Watches", score: 94, tx: "0x5e11...9a2c" },
+            { name: "Cartier", category: "Jewelry", score: 94, tx: "0x33e1...bb10" },
+            { name: "Louis Vuitton", category: "Fashion", score: 93, tx: "0xab12...66ff" },
+            { name: "Patek Philippe", category: "Watches", score: 93, tx: "0x99dd...11aa" },
+            { name: "Ferrari", category: "Automotive", score: 92, tx: "0x77bc...dd44" },
+            { name: "Range Rover", category: "Automotive", score: 91, tx: "0xbfc1...1209" },
+
+            // LES BONS ÉLÈVES (75-89)
+            { name: "Dior", category: "Fashion", score: 88, tx: "0x44ee...9900" },
+            { name: "Maserati", category: "Automotive", score: 86, tx: "0x22aa...bb33" },
+            { name: "Ritz Paris", category: "Hotels", score: 85, tx: "0x66cc...77dd" },
+            { name: "Zilli", category: "Fashion", score: 87, tx: "0x158a...ee52" },
+
+            // LES "RED FLAGS" (MAUVAISES NOTES)
+            { name: "Goyard", category: "Leather Goods", score: 42, tx: "0xdead...beef" },
+            { name: "Graff", category: "Jewelry", score: 55, tx: "0xbc11...ff22" },
+            { name: "Stefano Ricci", category: "Fashion", score: 48, tx: "0x9933...aa11" },
+            { name: "Berluti", category: "Fashion", score: 59, tx: "0x7722...cc44" },
+            { name: "Breguet", category: "Watches", score: 52, tx: "0x11bb...dd88" },
+            { name: "Hublot", category: "Watches", score: 65, tx: "0xcc44...aa99" }
         ];
 
-        const body = document.getElementById('registryBody');
+        function renderTable(data) {
+            const body = document.getElementById('registryBody');
+            body.innerHTML = '';
+            
+            data.forEach(item => {
+                // LOGIQUE DE COULEUR POUR LES NOTES
+                let scoreColor = 'text-green-400'; // Vert pour > 80
+                let statusText = 'VERIFIED';
+                let statusClass = 'status-verified';
 
-        function renderRegistry(filter = "") {
-            body.innerHTML = registryData
-                .filter(item => item.name.includes(filter.toUpperCase()))
-                .map(item => `
-                <tr class="brand-row">
-                    <td class="py-6 px-4 serif text-lg italic font-bold">${item.name}</td>
-                    <td class="py-6 px-4 font-bold ${parseInt(item.score) > 90 ? 'text-emerald-600' : 'text-orange-600'}">${item.score}</td>
-                    <td class="py-6 px-4">
-                        <span class="status-dot bg-verified"></span>
-                        <span class="uppercase font-bold tracking-widest text-[9px]">Verified On-Chain</span>
-                    </td>
-                    <td class="py-6 px-4 text-right">
-                        <a href="https://sepolia.basescan.org/tx/${item.tx}" target="_blank" class="text-[10px] border border-[#065F46]/20 px-3 py-1 hover:bg-[#065F46] hover:text-white transition-all font-bold">VIEW PROOF</a>
-                    </td>
-                </tr>
-            `).join('');
+                if (item.score < 60) {
+                    scoreColor = 'text-red-500'; // Rouge pour < 60
+                    statusText = 'CRITICAL';
+                    statusClass = 'status-critical';
+                } else if (item.score < 80) {
+                    scoreColor = 'text-yellow-500'; // Jaune pour 60-80
+                    statusText = 'WARNING';
+                    statusClass = 'status-warning';
+                }
+
+                const row = `
+                    <tr class="border-b border-gray-900/50 hover:bg-white/5 transition-colors group">
+                        <td class="py-5 font-medium text-white">${item.name}</td>
+                        <td class="py-5 text-gray-500 text-sm tracking-wide">${item.category}</td>
+                        <td class="py-5 text-center">
+                            <span class="${scoreColor} font-mono font-bold text-lg">${item.score}</span>
+                            <span class="text-gray-700 text-xs">/100</span>
+                        </td>
+                        <td class="py-5">
+                            <code class="text-xs text-gray-600 bg-black/40 px-2 py-1 rounded border border-white/5 group-hover:border-white/20">
+                                ${item.tx}
+                            </code>
+                        </td>
+                        <td class="py-5 text-right">
+                            <span class="${statusClass} text-[10px] font-bold tracking-widest uppercase">
+                                ${statusText}
+                            </span>
+                        </td>
+                    </tr>
+                `;
+                body.innerHTML += row;
+            });
         }
 
         function searchRegistry() {
-            const val = document.getElementById('brandSearch').value;
-            renderRegistry(val);
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const filteredData = registryData.filter(item => 
+                item.name.toLowerCase().includes(input) || 
+                item.category.toLowerCase().includes(input)
+            );
+            renderTable(filteredData);
         }
 
-        renderRegistry();
+        // Init
+        renderTable(registryData);
     </script>
 </body>
 </html>
