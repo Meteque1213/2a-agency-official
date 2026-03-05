@@ -1,105 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Authority Index | 2A Agency</title>
+    <title>2A Agency | Luxury Integrity Registry</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;900&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; color: #111; }
-        .text-emerald { color: #064e3b; }
-        .tracking-ultra { letter-spacing: 0.5em; }
+        body { background-color: #050505; color: #e5e5e5; font-family: 'Inter', sans-serif; }
+        .gold-gradient { background: linear-gradient(45deg, #d4af37, #f2d472); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); }
+        .btn-verify { border: 1px solid rgba(212, 175, 55, 0.3); transition: all 0.3s ease; font-weight: 600; }
+        .btn-verify:hover { background: #d4af37; color: #000; border-color: #d4af37; transform: translateY(-1px); }
+        tr { transition: all 0.2s ease; }
+        tr:hover { background: rgba(255, 255, 255, 0.03); }
     </style>
 </head>
-<body class="p-8 md:p-20">
+<body class="p-4 md:p-12">
 
-    <nav class="flex justify-between items-center max-w-7xl mx-auto mb-20">
-        <a href="index.html" class="text-xl font-light tracking-tighter uppercase italic text-black">
-            2A <span class="text-gray-300 ml-1 font-extralight italic">Agency</span>
+    <header class="max-w-7xl mx-auto flex justify-between items-center mb-16">
+        <a href="index.html" class="group decoration-none">
+            <h1 class="text-3xl font-bold tracking-tighter gold-gradient transition-opacity group-hover:opacity-70">2A AGENCY</h1>
+            <p class="text-[10px] uppercase tracking-[0.4em] text-white/40">Luxury Integrity Index</p>
         </a>
-        <div class="flex gap-8">
-            <a href="whitepaper.html" class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold italic hover:text-emerald transition-all">Protocol</a>
-            <a href="index.html#contact" class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold italic hover:text-emerald transition-all">Secure Access</a>
-        </div>
-    </nav>
+        <nav class="flex gap-8 items-center">
+            <a href="whitepaper.html" class="text-xs uppercase tracking-widest text-white/60 hover:text-white transition-all font-semibold border-b border-transparent hover:border-gold-gradient pb-1">
+                White Paper
+            </a>
+            <div class="hidden md:block pl-6 border-l border-white/10 text-right">
+                <p class="text-[9px] text-white/30 uppercase">Network Status</p>
+                <p class="text-[9px] text-green-500 font-mono tracking-tighter">● LIVE ON BASE MAINNET</p>
+            </div>
+        </nav>
+    </header>
 
     <main class="max-w-7xl mx-auto">
-        <header class="mb-16">
-            <h2 class="text-[10px] uppercase tracking-ultra text-emerald font-black mb-4 italic underline underline-offset-4 decoration-1">System of Record // Authority Feed</h2>
-            <h1 class="text-6xl font-light tracking-tighter uppercase mb-8 italic">Global Authority Index</h1>
-            
-            <input type="text" id="search-input" placeholder="SEARCH ENTITY OR SECTOR..." 
-                   class="w-full max-w-md bg-transparent border-b border-gray-200 py-4 px-2 text-xs focus:outline-none focus:border-emerald transition-all font-mono italic">
-        </header>
+        <div class="flex justify-between items-end mb-8">
+            <h2 class="text-4xl font-light italic serif">The Registry <span class="text-[10px] not-italic text-white/20 font-mono ml-2 uppercase tracking-widest tracking-tighter">System of Records v1.0</span></h2>
+            <div class="text-[10px] uppercase tracking-widest text-white/40">Audited Entities: <span class="text-white">101</span></div>
+        </div>
 
-        <div class="overflow-x-auto">
-            <table class="w-full text-left">
+        <div class="glass-card rounded-sm overflow-hidden border border-white/5">
+            <table class="w-full text-left border-collapse">
                 <thead>
-                    <tr class="text-[10px] uppercase tracking-widest text-gray-400 border-b border-gray-100 italic font-black">
-                        <th class="pb-6">Entity Identity</th>
-                        <th class="pb-6">Integrity Score</th>
-                        <th class="pb-6">On-Chain Evidence</th>
+                    <tr class="border-b border-white/10 bg-white/5 text-[10px] uppercase tracking-[0.2em] text-white/40">
+                        <th class="p-6 font-semibold">Rank</th>
+                        <th class="p-6 font-semibold">Entity</th>
+                        <th class="p-6 font-semibold">Forensic Score</th>
+                        <th class="p-6 font-semibold">Integrity Tier</th>
+                        <th class="p-6 font-semibold text-right">Blockchain Proof</th>
                     </tr>
                 </thead>
-                <tbody id="registry-body">
+                <tbody id="registry-body" class="divide-y divide-white/5">
                     </tbody>
             </table>
         </div>
     </main>
 
+    <footer class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex justify-between items-center text-[9px] text-white/20 uppercase tracking-[0.3em] font-bold">
+        <p>© 2026 2A Agency | Paris - London - Dubai</p>
+        <p class="text-white/40">Certainty is the new moat</p>
+    </footer>
+
     <script src="database.js"></script>
-
     <script>
-        const tableBody = document.getElementById('registry-body');
-        const searchInput = document.getElementById('search-input');
+        const body = document.getElementById('registry-body');
 
-        function renderTable(data) {
-            // Tri automatique : les meilleurs scores en haut
-            const sortedData = [...data].sort((a, b) => b.score - a.score);
+        // Tri par score (Expertise 2A Agency)
+        const sortedData = [...registryData].sort((a, b) => b.score - a.score);
+
+        sortedData.forEach((brand, index) => {
+            const tier = brand.score >= 95 ? 'Platinum' : 
+                         brand.score >= 85 ? 'Gold' : 
+                         brand.score >= 70 ? 'Certified' : 'Under Review';
             
-            tableBody.innerHTML = '';
-            sortedData.forEach(item => {
-                tableBody.innerHTML += `
-                    <tr class="border-b border-gray-50 hover:bg-gray-50 transition-colors group">
-                        <td class="py-10">
-                            <div class="text-lg font-black uppercase tracking-tighter text-emerald underline underline-offset-4 decoration-1 italic">${item.name}</div>
-                            <div class="text-[10px] text-gray-400 uppercase tracking-widest font-bold mt-1">${item.category}</div>
-                        </td>
-                        <td class="py-10 text-center md:text-left">
-                            <div class="text-4xl font-mono text-emerald font-black underline underline-offset-8 decoration-2">${item.score}</div>
-                        </td>
-                        <td class="py-10">
-                            <div class="flex items-center gap-6">
-                                <div class="text-[10px] font-mono text-gray-300 truncate w-32 uppercase tracking-tighter italic">${item.hash}</div>
-                                <a href="https://basescan.org/tx/${item.hash}" target="_blank" 
-                                   class="text-[9px] uppercase tracking-widest font-black border-2 border-black px-6 py-3 hover:bg-black hover:text-white transition-all italic shadow-sm active:scale-95">
-                                    Verify Proof
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                `;
-            });
-        }
+            const tierColor = brand.score >= 95 ? 'text-blue-400' : 
+                              brand.score >= 85 ? 'text-yellow-500' : 
+                              brand.score >= 70 ? 'text-green-500' : 'text-red-500';
 
-        // Chargement initial
-        window.onload = () => {
-            if (typeof registryData !== 'undefined') {
-                renderTable(registryData);
-            } else {
-                console.error("Erreur : database.js est introuvable ou mal formaté.");
-            }
-        };
-
-        // Système de recherche
-        searchInput.addEventListener('input', (e) => {
-            const term = e.target.value.toLowerCase();
-            const filtered = registryData.filter(item => 
-                item.name.toLowerCase().includes(term) || 
-                item.category.toLowerCase().includes(term)
-            );
-            renderTable(filtered);
+            body.innerHTML += `
+                <tr class="group">
+                    <td class="p-6 text-white/20 font-mono text-xs">#${(index + 1).toString().padStart(3, '0')}</td>
+                    <td class="p-6 font-bold text-white tracking-tight text-sm uppercase">${brand.name}</td>
+                    <td class="p-6">
+                        <span class="text-xl font-light text-white">${brand.score}</span><span class="text-[10px] text-white/20 ml-1">/100</span>
+                    </td>
+                    <td class="p-6">
+                        <span class="text-[9px] font-bold uppercase tracking-widest px-2 py-1 rounded bg-white/5 ${tierColor} border border-current/10">
+                            ${tier}
+                        </span>
+                    </td>
+                    <td class="p-6 text-right">
+                        <a href="https://basescan.org/tx/${brand.hash}" target="_blank" class="btn-verify text-[9px] uppercase px-4 py-2 rounded-sm inline-flex items-center gap-2">
+                            <i class="fa-solid fa-link text-[8px]"></i> Verify On-Chain
+                        </a>
+                    </td>
+                </tr>
+            `;
         });
     </script>
 </body>
