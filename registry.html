@@ -1,53 +1,115 @@
-<script src="database.js"></script>
-<script>
-    const tableBody = document.getElementById('registry-body');
-    const searchInput = document.getElementById('search-input');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Authority Index | 2A Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; color: #111; }
+        .tracking-ultra { letter-spacing: 0.5em; }
+        .text-emerald { color: #064e3b; }
+    </style>
+</head>
+<body class="p-8 md:p-20">
 
-    function renderTable(data) {
-        tableBody.innerHTML = '';
-        data.forEach(item => {
-            // Logique de couleur pour le score
-            let colorClass = 'text-emerald'; // Vert (Top)
-            if (item.score < 80) colorClass = 'text-amber-500'; // Orange (Warning)
-            if (item.score < 60) colorClass = 'text-red-500'; // Rouge (Critical)
+    <nav class="flex justify-between items-center max-w-7xl mx-auto mb-20">
+        <a href="index.html" class="text-xl font-light tracking-tighter uppercase italic">2A <span class="text-gray-300 ml-1 font-extralight italic">Agency</span></a>
+        <div class="flex gap-8">
+            <a href="whitepaper.html" class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold italic">Protocol</a>
+            <a href="index.html#contact" class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold italic">Secure Access</a>
+        </div>
+    </nav>
 
-            const row = `
-                <tr class="border-b border-gray-50 hover:bg-gray-50 transition-colors group">
-                    <td class="py-6 px-4">
-                        <div class="text-sm font-semibold uppercase tracking-tighter">${item.name}</div>
-                        <div class="text-[9px] text-gray-400 uppercase tracking-widest">${item.category}</div>
-                    </td>
-                    <td class="py-6 px-4">
-                        <div class="text-lg font-mono ${colorClass} font-bold">${item.score}</div>
-                    </td>
-                    <td class="py-6 px-4">
-                        <div class="text-xs font-mono text-gray-500">${item.moatDelta}</div>
-                    </td>
-                    <td class="py-6 px-4">
-                        <div class="flex items-center gap-3">
-                            <div class="text-[10px] font-mono text-gray-300 truncate w-24">${item.hash}</div>
-                            <a href="https://basescan.org/search?q=${item.hash}" target="_blank" 
-                               class="text-[9px] uppercase tracking-widest font-black border border-black px-3 py-1 hover:bg-black hover:text-white transition-all">
-                                Verify Proof
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-            `;
-            tableBody.innerHTML += row;
+    <main class="max-w-7xl mx-auto">
+        <header class="mb-16">
+            <h2 class="text-[10px] uppercase tracking-ultra text-emerald font-black mb-4 italic underline">System of Record // Live Feed</h2>
+            <h1 class="text-5xl font-light tracking-tighter uppercase mb-8">Global Authority Index</h1>
+            
+            <input type="text" id="search-input" placeholder="SEARCH ENTITY OR SECTOR..." 
+                   class="w-full max-w-md bg-gray-50 border-b border-gray-200 py-4 px-2 text-xs focus:outline-none focus:border-black transition-all placeholder-gray-300 font-mono">
+        </header>
+
+        <div class="overflow-x-auto">
+            <table class="w-full text-left">
+                <thead>
+                    <tr class="text-[10px] uppercase tracking-widest text-gray-400 border-b border-gray-100">
+                        <th class="pb-4 font-black italic">Entity Identity</th>
+                        <th class="pb-4 font-black italic">Integrity Score</th>
+                        <th class="pb-4 font-black italic">Moat Delta</th>
+                        <th class="pb-4 font-black italic">On-Chain Evidence</th>
+                    </tr>
+                </thead>
+                <tbody id="registry-body">
+                    </tbody>
+            </table>
+            <div id="error-log" class="hidden py-20 text-center text-red-500 font-mono text-xs uppercase tracking-widest italic font-bold">
+                Critical Error: Authority database not found. <br> Please check database.js deployment.
+            </div>
+        </div>
+    </main>
+
+    <script src="database.js"></script>
+    
+    <script>
+        const tableBody = document.getElementById('registry-body');
+        const searchInput = document.getElementById('search-input');
+        const errorLog = document.getElementById('error-log');
+
+        function renderTable(data) {
+            tableBody.innerHTML = '';
+            data.forEach(item => {
+                let colorClass = 'text-emerald';
+                if (item.score < 80) colorClass = 'text-amber-500';
+                if (item.score < 60) colorClass = 'text-red-500';
+
+                const row = `
+                    <tr class="border-b border-gray-50 hover:bg-gray-50 transition-colors group">
+                        <td class="py-8">
+                            <div class="text-sm font-semibold uppercase tracking-tighter">${item.name}</div>
+                            <div class="text-[9px] text-gray-400 uppercase tracking-widest">${item.category}</div>
+                        </td>
+                        <td class="py-8">
+                            <div class="text-xl font-mono ${colorClass} font-black underline">${item.score}</div>
+                        </td>
+                        <td class="py-8">
+                            <div class="text-xs font-mono text-gray-500 font-bold">${item.moatDelta}</div>
+                        </td>
+                        <td class="py-8">
+                            <div class="flex items-center gap-4">
+                                <div class="text-[9px] font-mono text-gray-300 truncate w-32 uppercase">${item.hash}</div>
+                                <a href="https://basescan.org/search?q=${item.hash}" target="_blank" 
+                                   class="text-[8px] uppercase tracking-widest font-black border-2 border-black px-4 py-2 hover:bg-black hover:text-white transition-all italic">
+                                    Verify Proof
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+                tableBody.innerHTML += row;
+            });
+        }
+
+        // Vérification de sécurité au chargement
+        window.onload = () => {
+            if (typeof registryData !== 'undefined') {
+                renderTable(registryData);
+            } else {
+                errorLog.classList.remove('hidden');
+                console.error("Database file missing or corrupted.");
+            }
+        };
+
+        // Recherche
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = registryData.filter(item => 
+                item.name.toLowerCase().includes(term) || 
+                item.category.toLowerCase().includes(term)
+            );
+            renderTable(filtered);
         });
-    }
-
-    // Initial Render
-    renderTable(registryData);
-
-    // Search Logic
-    searchInput.addEventListener('input', (e) => {
-        const term = e.target.value.toLowerCase();
-        const filtered = registryData.filter(item => 
-            item.name.toLowerCase().includes(term) || 
-            item.category.toLowerCase().includes(term)
-        );
-        renderTable(filtered);
-    });
-</script>
+    </script>
+</body>
+</html>
