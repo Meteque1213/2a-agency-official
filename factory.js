@@ -1,150 +1,86 @@
 import { createWalletClient, http, publicActions } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
 import { base } from 'viem/chains';
-import fs from 'fs'; 
-import 'dotenv/config';
+import fs from 'fs';
 
-// CONFIGURATION DU WALLET
-const rawKey = process.env.PRIVATE_KEY;
-const formattedKey = rawKey.startsWith('0x') ? rawKey : `0x${rawKey}`;
-const account = privateKeyToAccount(formattedKey);
-const client = createWalletClient({ 
-    account, 
-    chain: base, 
-    transport: http(process.env.RPC_URL) 
+// CONFIGURATION DU COMPTE
+const PRIVATE_KEY = process.env.PRIVATE_KEY; 
+const account = privateKeyToAccount(PRIVATE_KEY);
+
+const client = createWalletClient({
+  account,
+  chain: base,
+  transport: http('https://mainnet.base.org')
 }).extend(publicActions);
 
-// LA LISTE DES 100 MARQUES RÉELLES
+// LA LISTE AVEC LES VRAIS SCORES (ZÉRO COMPROMIS)
 const brands = [
-    { name: "Hermès", score: 98, category: "Leather Goods" },
-    { name: "Patek Philippe", score: 97, category: "Watches" },
-    { name: "Loro Piana", score: 96, category: "Fashion" },
-    { name: "Brunello Cucinelli", score: 95, category: "Fashion" },
-    { name: "Cartier", score: 95, category: "Jewelry" },
-    { name: "Rolex", score: 94, category: "Watches" },
-    { name: "Vacheron Constantin", score: 94, category: "Watches" },
-    { name: "Van Cleef & Arpels", score: 93, category: "Jewelry" },
-    { name: "Audemars Piguet", score: 93, category: "Watches" },
-    { name: "Ferrari", score: 92, category: "Automotive" },
-    { name: "Aman Resorts", score: 92, category: "Hotels" },
-    { name: "Chanel", score: 91, category: "Fashion" },
-    { name: "Cheval Blanc Hotels", score: 91, category: "Hotels" },
-    { name: "Louis Vuitton", score: 90, category: "Fashion" },
-    { name: "Breguet", score: 90, category: "Watches" },
-    { name: "Dior", score: 89, category: "Fashion" },
-    { name: "Oetker Collection", score: 89, category: "Hotels" },
-    { name: "Riva Yachts", score: 89, category: "Yachting" },
-    { name: "Clarridge's", score: 89, category: "Hotels" },
-    { name: "Louis XIII", score: 89, category: "Spirits" },
-    { name: "Dom Pérignon", score: 86, category: "Spirits" },
-    { name: "Bentley", score: 88, category: "Automotive" },
-    { name: "Rolls-Royce", score: 88, category: "Automotive" },
-    { name: "Leica", score: 88, category: "Tech" },
-    { name: "Hôtel de Crillon", score: 88, category: "Hotels" },
-    { name: "Maybourne Hotel Group", score: 88, category: "Hotels" },
-    { name: "Lürssen Yachts", score: 87, category: "Yachting" },
-    { name: "Boucheron", score: 87, category: "Jewelry" },
-    { name: "Belmond", score: 87, category: "Hotels" },
-    { name: "Eden Rock", score: 87, category: "Hotels" },
-    { name: "Feadship", score: 86, category: "Yachting" },
-    { name: "Assouline", score: 86, category: "Publishing" },
-    { name: "Soneva", score: 86, category: "Hotels" },
-    { name: "Krug", score: 85, category: "Spirits" },
-    { name: "Steinway & Sons", score: 85, category: "Instruments" },
-    { name: "Dassault Falcon", score: 85, category: "Aviation" },
-    { name: "Rosewood", score: 85, category: "Hotels" },
-    { name: "Berluti", score: 84, category: "Leather Goods" },
-    { name: "NetJets", score: 84, category: "Aviation" },
-    { name: "Mandarin Oriental", score: 84, category: "Hotels" },
-    { name: "La Réserve", score: 84, category: "Hotels" },
-    { name: "Annabel's", score: 84, category: "Private Club" },
-    { name: "Gulfstream", score: 83, category: "Aviation" },
-    { name: "Four Seasons", score: 83, category: "Hotels" },
-    { name: "Six Senses", score: 83, category: "Hotels" },
-    { name: "Ritz-Carlton", score: 82, category: "Hotels" },
-    { name: "Macallan", score: 82, category: "Spirits" },
-    { name: "Wally Yachts", score: 82, category: "Yachting" },
-    { name: "The Dorchester", score: 82, category: "Hotels" },
-    { name: "Saint Laurent", score: 81, category: "Fashion" },
-    { name: "Baccarat", score: 81, category: "Lifestyle" },
-    { name: "One&Only", score: 81, category: "Hotels" },
-    { name: "Prada", score: 80, category: "Fashion" },
-    { name: "Gucci", score: 79, category: "Fashion" },
-    { name: "Lalique", score: 79, category: "Lifestyle" },
-    { name: "St. Regis", score: 79, category: "Hotels" },
-    { name: "Balenciaga", score: 78, category: "Fashion" },
-    { name: "Rimowa", score: 78, category: "Travel" },
-    { name: "Benetti", score: 78, category: "Yachting" },
-    { name: "Embraer", score: 78, category: "Aviation" },
-    { name: "Valentino", score: 77, category: "Fashion" },
-    { name: "Lamborghini", score: 77, category: "Automotive" },
-    { name: "Christofle", score: 77, category: "Lifestyle" },
-    { name: "Cipriani", score: 77, category: "Dining" },
-    { name: "Aston Martin", score: 76, category: "Automotive" },
-    { name: "Hennessy", score: 76, category: "Spirits" },
-    { name: "Bvlgari Hotels", score: 76, category: "Hotels" },
-    { name: "Bulgari", score: 75, category: "Jewelry" },
-    { name: "Tiffany & Co.", score: 74, category: "Jewelry" },
-    { name: "Moncler", score: 74, category: "Fashion" },
-    { name: "Taschen", score: 74, category: "Publishing" },
-    { name: "Hublot", score: 73, category: "Watches" },
-    { name: "Panerai", score: 72, category: "Watches" },
-    { name: "Bang & Olufsen", score: 72, category: "Audio" },
-    { name: "Cessna", score: 72, category: "Aviation" },
-    { name: "Omega", score: 71, category: "Watches" },
-    { name: "Azimut", score: 71, category: "Yachting" },
-    { name: "Fendi", score: 70, category: "Fashion" },
-    { name: "Post Oak Hotel", score: 70, category: "Hotels" },
-    { name: "Givenchy", score: 69, category: "Fashion" },
-    { name: "Celine", score: 68, category: "Fashion" },
-    { name: "Wedgwood", score: 68, category: "Lifestyle" },
-    { name: "Nobu Hotels", score: 68, category: "Hotels" },
-    { name: "Loewe", score: 67, category: "Fashion" },
-    { name: "Bottega Veneta", score: 66, category: "Fashion" },
-    { name: "Tom Ford", score: 65, category: "Fashion" },
-    { name: "Burberry", score: 65, category: "Fashion" },
-    { name: "IWC", score: 64, category: "Watches" },
-    { name: "Richard Mille", score: 63, category: "Watches" },
-    { name: "Chopard", score: 62, category: "Jewelry" },
-    { name: "Brioni", score: 61, category: "Fashion" },
-    { name: "Soho House", score: 61, category: "Private Club" },
-    { name: "Pagani", score: 59, category: "Automotive" },
-    { name: "Harry Winston", score: 58, category: "Jewelry" },
-    { name: "Graff", score: 54, category: "Jewelry" },
-    { name: "Maserati", score: 51, category: "Automotive" },
-    { name: "Zilli", score: 46, category: "Fashion" },
-    { name: "Stefano Ricci", score: 45, category: "Fashion" },
-    { name: "Goyard", score: 42, category: "Leather Goods" },
-    { name: "Philipp Plein", score: 38, category: "Fashion" }
+    { name: "Hermès", score: 98 }, { name: "Patek Philippe", score: 97 }, { name: "Loro Piana", score: 96 },
+    { name: "Brunello Cucinelli", score: 95 }, { name: "Vacheron Constantin", score: 94 }, { name: "Cartier", score: 94 },
+    { name: "Rolex", score: 93 }, { name: "Audemars Piguet", score: 93 }, { name: "Chanel", score: 92 },
+    { name: "Louis Vuitton", score: 91 }, { name: "Van Cleef & Arpels", score: 91 }, { name: "Dior", score: 90 },
+    { name: "Breguet", score: 90 }, { name: "Jaeger-LeCoultre", score: 89 }, { name: "IWC Schaffhausen", score: 88 },
+    { name: "Omega", score: 88 }, { name: "Prada", score: 87 }, { name: "Saint Laurent", score: 87 },
+    { name: "Celine", score: 86 }, { name: "Bottega Veneta", score: 86 }, { name: "Loewe", score: 85 },
+    { name: "Gucci", score: 84 }, { name: "Valentino", score: 84 }, { name: "Tiffany & Co.", score: 83 },
+    { name: "Burberry", score: 82 }, { name: "Fendi", score: 82 }, { name: "Max Mara", score: 81 },
+    { name: "Zegna", score: 81 }, { name: "The Row", score: 80 }, { name: "Alaïa", score: 80 },
+    { name: "Moncler", score: 79 }, { name: "Givenchy", score: 78 }, { name: "Balmain", score: 78 },
+    { name: "Tom Ford", score: 77 }, { name: "Salvatore Ferragamo", score: 77 }, { name: "Etro", score: 76 },
+    { name: "Missoni", score: 76 }, { name: "Ralph Lauren", score: 75 }, { name: "Giorgio Armani", score: 75 },
+    { name: "Tory Burch", score: 74 }, { name: "Coach", score: 73 }, { name: "Michael Kors", score: 72 },
+    { name: "Longchamp", score: 71 }, { name: "Bally", score: 70 }, { name: "Tod’s", score: 70 },
+    { name: "Jimmy Choo", score: 69 }, { name: "Manolo Blahnik", score: 69 }, { name: "Christian Louboutin", score: 68 },
+    { name: "Hugo Boss", score: 67 }, { name: "Dolce & Gabbana", score: 66 }, { name: "Versace", score: 65 },
+    { name: "Philipp Plein", score: 42 }, { name: "Goyard", score: 46 }, { name: "Balenciaga", score: 50 },
+    { name: "Off-White", score: 64 }, { name: "Alexander McQueen", score: 79 }, { name: "Jacquemus", score: 82 },
+    { name: "Miu Miu", score: 83 }, { name: "Stone Island", score: 85 }, { name: "Ami Paris", score: 84 },
+    { name: "Acne Studios", score: 78 }, { name: "Vetements", score: 65 }, { name: "Rick Owens", score: 87 },
+    { name: "Dries Van Noten", score: 89 }, { name: "JW Anderson", score: 81 }, { name: "Isabel Marant", score: 80 },
+    { name: "Chloé", score: 82 }, { name: "Maison Margiela", score: 88 }, { name: "Kenzo", score: 74 },
+    { name: "Paul Smith", score: 77 }, { name: "Dsquared2", score: 61 }, { name: "Moschino", score: 63 },
+    { name: "Palm Angels", score: 59 }, { name: "Fear of God", score: 82 }, { name: "Sacai", score: 86 },
+    { name: "Comme des Garçons", score: 90 }, { name: "Thom Browne", score: 88 }, { name: "Marine Serre", score: 83 },
+    { name: "Coperni", score: 81 }, { name: "Skims", score: 68 }, { name: "Mugler", score: 84 },
+    { name: "Schiaparelli", score: 91 }, { name: "Paco Rabanne", score: 79 }, { name: "Lanvin", score: 85 },
+    { name: "Diesel", score: 66 }, { name: "Ganni", score: 72 }, { name: "Zimmermann", score: 75 },
+    { name: "Reformation", score: 84 }, { name: "Bulgari", score: 89 }, { name: "Piaget", score: 91 },
+    { name: "Chopard", score: 87 }, { name: "Tag Heuer", score: 81 }, { name: "Hublot", score: 78 },
+    { name: "Montblanc", score: 85 }, { name: "Swarovski", score: 70 }, { name: "Pandora", score: 62 },
+    { name: "Moncler Genius", score: 80 }, { name: "Supreme", score: 76 }, { name: "Oscar de la Renta", score: 89 },
+    { name: "Diane von Furstenberg", score: 82 }, { name: "Marc Jacobs", score: 77 }, { name: "Roberto Cavalli", score: 64 }
 ];
 
-async function runAudit() {
-    let finalData = [];
-    console.log("🦁 Lancement de l'audit blockchain pour les 100 entités...");
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-    for (const brand of brands) {
+async function run() {
+    console.log("🔥 2A AGENCY - RÉAMORÇAGE ESM ACTIVÉ 🔥");
+    let dbResults = [];
+
+    for (let i = 0; i < brands.length; i++) {
+        const brand = brands[i];
         try {
-            // Envoi de la transaction sur Base
+            const nonce = await client.getTransactionCount({ address: account.address });
+            
             const hash = await client.sendTransaction({
                 to: account.address,
-                data: Buffer.from(`2A Audit: ${brand.name} | Integrity Score: ${brand.score}`).toString('hex')
+                data: `0x${Buffer.from(`Forensic Audit 2A Agency: ${brand.name} | Score: ${brand.score}`).toString('hex')}`,
+                nonce: nonce
             });
-            
-            finalData.push({ ...brand, hash });
-            console.log(`✅ ${brand.name.padEnd(25)} | Score: ${brand.score} | Certifié`);
-            
-            // Attente pour éviter les problèmes de nonce sur le réseau
-            await new Promise(r => setTimeout(r, 800)); 
+
+            console.log(`💎 [${i+1}/101] ${brand.name} -> SCORE: ${brand.score} | Hash: ${hash}`);
+            dbResults.push({ name: brand.name, score: brand.score, category: "Luxury", hash: hash });
+            await sleep(2500); 
+
         } catch (e) {
-            console.error(`❌ Erreur sur ${brand.name}:`, e.message);
+            console.error(`❌ Erreur sur ${brand.name}: ${e.message}`);
+            await sleep(5000);
+            i--; 
         }
     }
-
-    // GÉNÉRATION DU FICHIER DE DONNÉES POUR LE SITE
-    const fileContent = `const registryData = ${JSON.stringify(finalData, null, 4)};`;
-    fs.writeFileSync('database.js', fileContent);
-    console.log("\n🚀 TERMINÉ !");
-    console.log("Le fichier database.js a été généré avec les 100 certifications.");
+    // Écriture pour database.js (sans export pour être compatible avec ton script HTML classique)
+    fs.writeFileSync('database.js', `const registryData = ${JSON.stringify(dbResults, null, 4)};`);
+    console.log("🚀 MISSION ACCOMPLIE.");
 }
 
-runAudit();
+run();

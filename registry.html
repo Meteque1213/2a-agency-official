@@ -3,112 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A Agency | Luxury AI-IQ Registry</title>
+    <title>2A Agency | Luxury AI-IQ Index</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --emerald-2a: #064e3b; 
-            --off-white: #fcfcfc; 
-        }
+        :root { --emerald: #064e3b; --off-white: #fcfcfc; }
         body { background-color: var(--off-white); color: #1a1a1a; font-family: 'Inter', sans-serif; }
         .serif { font-family: 'Playfair Display', serif; }
-        .emerald-text { color: var(--emerald-2a) !important; }
-        .emerald-bg { background-color: var(--emerald-2a) !important; }
-        .logo-unified { font-weight: 800 !important; letter-spacing: -0.05em !important; color: var(--emerald-2a); }
-        
-        .registry-table { border-collapse: separate; border-spacing: 0 8px; }
-        .registry-row { background: white; border: 1px solid rgba(6, 78, 59, 0.05); transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .emerald-text { color: var(--emerald) !important; }
+        .logo-unified { font-weight: 800 !important; letter-spacing: -0.05em !important; font-size: 1.5rem; color: var(--emerald); }
+        .registry-row { background: white; border: 1px solid rgba(6, 78, 59, 0.05); transition: all 0.2s ease; }
         .registry-row:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        
-        .btn-verify { border: 1px solid var(--emerald-2a); color: var(--emerald-2a); transition: all 0.3s ease; font-weight: 700; text-transform: uppercase; font-size: 10px; }
-        .btn-verify:hover { background: var(--emerald-2a); color: white; }
+        .btn-verify { border: 1px solid var(--emerald); color: var(--emerald); font-weight: 700; text-transform: uppercase; font-size: 10px; transition: all 0.3s ease; }
+        .btn-verify:hover { background: var(--emerald); color: white; }
     </style>
 </head>
-<body class="p-4 md:p-12">
+<body class="p-6 md:p-12">
 
-    <header class="max-w-7xl mx-auto flex justify-between items-center mb-16 border-b border-black/5 pb-6">
+    <nav class="max-w-7xl mx-auto flex justify-between items-center mb-16 border-b border-black/5 pb-6">
         <a href="index.html" class="group no-underline">
-            <h1 class="text-2xl logo-unified transition-opacity group-hover:opacity-70">2A AGENCY</h1>
-            <p class="text-[9px] uppercase tracking-[0.4em] text-black/40 font-bold">Luxury AI-IQ Index</p>
+            <div class="logo-unified transition-opacity group-hover:opacity-70">2A AGENCY</div>
+            <div class="text-[9px] uppercase tracking-[0.4em] text-black/40 font-bold mt-1">Luxury AI-IQ Index</div>
         </a>
-        <nav class="flex gap-6 md:gap-8 items-center">
-            <a href="whitepaper.html" class="hidden md:block text-xs uppercase tracking-widest text-black/60 hover:emerald-text transition-all font-bold">
-                White Paper
-            </a>
-            <a href="https://formspree.io/f/xykngdbz" target="_blank" class="text-[10px] font-bold uppercase tracking-widest bg-[#064e3b] text-white px-5 py-2.5 rounded-sm hover:opacity-90 transition shadow-lg">
+        <div class="flex gap-4 md:gap-10 items-center">
+            <a href="whitepaper.html" class="text-[10px] font-bold uppercase tracking-widest text-black/40 hover:emerald-text transition">White Paper</a>
+            <a href="index.html" class="text-[10px] font-bold uppercase tracking-widest text-black/40 hover:emerald-text transition">Home</a>
+            <a href="https://formspree.io/f/xykngdbz" target="_blank" class="bg-[#064e3b] text-white px-6 py-3 text-[10px] font-bold uppercase tracking-widest rounded-sm shadow-lg hover:opacity-90 transition">
                 Claim Your Record
             </a>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <main class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
-            <div>
-                <h2 class="text-4xl md:text-5xl serif italic emerald-text">The Registry</h2>
-                <p class="text-[10px] uppercase tracking-[0.2em] text-black/40 mt-2 font-bold italic">Certainty is the new moat.</p>
-            </div>
-            <div class="text-[10px] uppercase tracking-widest text-black/40 font-bold text-right">
-                System of Records : <span class="text-black">101 Audits</span><br>
-                <span class="emerald-text font-mono">● LIVE ON BASE MAINNET</span>
-            </div>
-        </div>
+        <header class="mb-10">
+            <h2 class="text-4xl md:text-5xl serif italic emerald-text">The Registry</h2>
+            <p class="text-[10px] uppercase tracking-[0.2em] text-black/40 mt-2 font-bold italic">System of Records : 101 Audits</p>
+        </header>
 
         <div class="overflow-x-auto">
-            <table class="w-full text-left registry-table">
+            <table class="w-full text-left" style="border-spacing: 0 8px; border-collapse: separate;">
                 <thead>
                     <tr class="text-[10px] uppercase tracking-[0.2em] text-black/40 font-bold">
                         <th class="px-6 py-4">Rank</th>
                         <th class="px-6 py-4">Entity</th>
                         <th class="px-6 py-4">Luxury AI-IQ</th>
-                        <th class="px-6 py-4">Status</th>
                         <th class="px-6 py-4 text-right">Blockchain Proof</th>
                     </tr>
                 </thead>
-                <tbody id="registry-body">
-                    </tbody>
+                <tbody id="registry-body"></tbody>
             </table>
         </div>
 
-        <div class="mt-20 text-center bg-white p-12 border border-black/5 rounded-sm shadow-sm">
-            <h3 class="serif text-3xl italic mb-4">Your brand is not on the list?</h3>
-            <p class="text-black/50 mb-8 max-w-xl mx-auto">If you are a luxury stakeholder and wish to notarize your brand's integrity on the System of Records, contact our forensic team to initiate the audit.</p>
-            <a href="https://formspree.io/f/xykngdbz" target="_blank" class="inline-block emerald-bg text-white px-10 py-4 text-xs font-bold uppercase tracking-widest rounded-sm hover:opacity-90 transition shadow-xl">
+        <section class="my-32 text-center">
+            <h3 class="serif text-4xl italic mb-6">Your brand is not on the list?</h3>
+            <a href="https://formspree.io/f/xykngdbz" target="_blank" class="inline-block bg-[#064e3b] text-white px-12 py-5 text-sm font-bold uppercase tracking-[0.2em] rounded-sm shadow-[0_20px_50px_rgba(6,78,60,0.3)]">
                 Request Forensic Audit
             </a>
-        </div>
+        </section>
     </main>
-
-    <footer class="max-w-7xl mx-auto mt-32 pt-8 border-t border-black/5 flex justify-between items-center text-[9px] text-black/30 uppercase tracking-[0.3em] font-bold">
-        <p>© 2026 2A Agency | Paris - London - Dubai</p>
-        <p class="emerald-text uppercase">Establishing the System of Records</p>
-    </footer>
 
     <script src="database.js"></script>
     <script>
         const body = document.getElementById('registry-body');
         const sortedData = [...registryData].sort((a, b) => b.score - a.score);
-
         sortedData.forEach((brand, index) => {
             body.innerHTML += `
-                <tr class="registry-row group">
+                <tr class="registry-row">
                     <td class="px-6 py-6 text-black/20 font-mono text-xs">#${(index + 1).toString().padStart(3, '0')}</td>
                     <td class="px-6 py-6 font-extrabold emerald-text tracking-tight text-sm uppercase">${brand.name}</td>
                     <td class="px-6 py-6">
-                        <div class="flex flex-col">
-                            <span class="text-2xl font-light emerald-text leading-none">${brand.score}</span>
-                            <span class="text-[8px] uppercase tracking-tighter text-black/30 mt-1">Forensic Index</span>
-                        </div>
-                    </td>
-                    <td class="px-6 py-6">
-                        <span class="text-[9px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full bg-emerald-50 emerald-text border border-emerald-900/10">
-                            CERTIFIED
-                        </span>
+                        <span class="text-2xl font-light emerald-text">${brand.score}</span><span class="text-[10px] text-black/20 ml-1">/100</span>
                     </td>
                     <td class="px-6 py-6 text-right">
                         <a href="https://basescan.org/tx/${brand.hash}" target="_blank" class="btn-verify px-6 py-2.5 rounded-sm inline-flex items-center gap-2">
-                            <i class="fa-solid fa-shield-halved text-[8px]"></i> Verify On-Chain
+                            <i class="fa-solid fa-shield-halved"></i> Verify
                         </a>
                     </td>
                 </tr>
