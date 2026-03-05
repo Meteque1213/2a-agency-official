@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,28 +20,26 @@
 <body class="p-6 md:p-12">
     <nav class="max-w-7xl mx-auto flex justify-between items-center mb-16 border-b border-black/5 pb-6">
         <a href="index.html" class="group no-underline">
-            <div class="logo-unified transition-opacity group-hover:opacity-70">2A AGENCY</div>
+            <div class="logo-unified transition-opacity group-hover:opacity-70 font-bold uppercase tracking-tighter">2A AGENCY</div>
             <div class="text-[9px] uppercase tracking-[0.4em] text-black/40 font-bold mt-1">Luxury AI-IQ Index</div>
         </a>
-        <div class="flex gap-4 md:gap-10 items-center">
-            <a href="whitepaper.html" class="text-[10px] font-bold uppercase tracking-widest text-black/40 hover:emerald-text transition">White Paper</a>
-            <a href="index.html#contact" class="bg-[#064e3b] text-white px-6 py-3 text-[10px] font-bold uppercase tracking-widest rounded-sm shadow-lg">
-                Claim Your Record
-            </a>
+        <div class="flex gap-4 md:gap-10 items-center font-bold">
+            <a href="whitepaper.html" class="text-[10px] uppercase tracking-widest text-black/40 hover:emerald-text transition">White Paper</a>
+            <a href="index.html#contact" class="bg-[#064e3b] text-white px-6 py-3 text-[10px] uppercase tracking-widest rounded-sm shadow-lg">Claim Your Record</a>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto">
+    <main class="max-w-7xl mx-auto text-center md:text-left">
         <header class="mb-10">
-            <h2 class="text-4xl md:text-5xl serif italic emerald-text italic underline">The Registry</h2>
-            <p class="text-[10px] uppercase tracking-[0.2em] text-black/40 mt-2 font-bold italic">System of Records : 101 Audits | ● Live on Base</p>
+            <h2 class="text-4xl md:text-5xl serif italic emerald-text italic underline uppercase tracking-tight">The Registry</h2>
+            <p class="text-[10px] uppercase tracking-[0.2em] text-black/40 mt-2 font-bold italic italic">System of Records : 101 Audits | ● Live on Base</p>
         </header>
 
         <div class="overflow-x-auto">
             <table class="w-full text-left" style="border-spacing: 0 8px; border-collapse: separate;">
                 <thead>
                     <tr class="text-[10px] uppercase tracking-[0.2em] text-black/40 font-bold">
-                        <th class="px-6 py-4">Rank</th><th class="px-6 py-4">Entity</th><th class="px-6 py-4 italic">Luxury AI-IQ Score</th><th class="px-6 py-4 text-right">Blockchain Proof</th>
+                        <th class="px-6 py-4">Rank</th><th class="px-6 py-4">Entity</th><th class="px-6 py-4 italic uppercase">Luxury AI-IQ Score</th><th class="px-6 py-4 text-right">Blockchain Proof</th>
                     </tr>
                 </thead>
                 <tbody id="registry-body"></tbody>
@@ -59,7 +57,7 @@
                     <td class="px-6 py-6 text-black/20 font-mono text-xs">#${(index + 1).toString().padStart(3, '0')}</td>
                     <td class="px-6 py-6 font-extrabold emerald-text tracking-tight text-sm uppercase">${brand.name}</td>
                     <td class="px-6 py-6">
-                        <div class="flex flex-col"><span class="text-2xl font-light emerald-text leading-none">${brand.score}</span><span class="text-[8px] uppercase text-black/30 mt-1">Forensic Index</span></div>
+                        <div class="flex flex-col"><span class="text-2xl font-light emerald-text leading-none font-bold">${brand.score}</span><span class="text-[8px] uppercase text-black/30 mt-1 font-bold">Forensic Index</span></div>
                     </td>
                     <td class="px-6 py-6 text-right">
                         <a href="https://basescan.org/tx/${brand.hash}" target="_blank" class="border border-[#064e3b] text-[#064e3b] px-6 py-2.5 rounded-sm inline-flex items-center gap-2 hover:bg-[#064e3b] hover:text-white transition uppercase font-bold text-[10px]"><i class="fa-solid fa-shield-halved"></i> Verify On-Chain</a>
