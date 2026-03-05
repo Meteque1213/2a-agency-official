@@ -7,38 +7,42 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        :root { --emerald: #064e3b; --off-white: #fcfcfc; }
-        body { background-color: var(--off-white); color: #1a1a1a; font-family: 'Inter', sans-serif; line-height: 1.4; }
+        /* Variables forcées pour éviter toute dérive de couleur */
+        :root { 
+            --emerald-2a: #064e3b; 
+            --off-white: #fcfcfc; 
+        }
+        body { background-color: #fcfcfc !important; color: #1a1a1a; font-family: 'Inter', sans-serif; line-height: 1.4; }
         .serif { font-family: 'Playfair Display', serif; }
-        .emerald-text { color: var(--emerald); }
-        .formula-box { border-left: 3px solid var(--emerald); background: #f0fdf4; margin: 1rem 0; padding: 1.5rem; }
+        .emerald-text { color: #064e3b !important; }
+        .emerald-bg { background-color: #064e3b !important; }
+        .formula-box { border-left: 3px solid #064e3b; background: #f0fdf4; margin: 1rem 0; padding: 1.5rem; }
         section { border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1.5rem; margin-bottom: 1.5rem; }
         p { margin-bottom: 0.4rem; }
-        .logo-text { tracking-tighter; }
     </style>
 </head>
 <body class="p-6 md:p-16">
     <nav class="flex justify-between items-center mb-12 border-b border-black/5 pb-4">
-        <a href="index.html" class="group decoration-none">
+        <a href="index.html" class="group block no-underline">
             <div class="text-xl font-bold tracking-tighter emerald-text transition-opacity group-hover:opacity-70">
                 2A AGENCY
             </div>
         </a>
-        <a href="registry.html" class="text-xs font-semibold uppercase tracking-widest text-black/40 hover:emerald-text transition">
+        <a href="registry.html" class="text-xs font-semibold uppercase tracking-widest text-black/40 hover:emerald-text transition no-underline">
             ← Back to Registry
         </a>
     </nav>
 
     <div class="max-w-3xl mx-auto">
         <header class="mb-12">
-            <h1 class="serif text-5xl md:text-7xl emerald-text italic mb-2">The Forensic <br>One-Shot Protocol</h1>
-            <p class="text-lg font-light emerald-text/60 italic leading-tight">Certainty is the new moat.</p>
+            <h1 class="serif text-5xl md:text-7xl emerald-text italic mb-2 leading-tight text-[#064e3b]">The Forensic <br>One-Shot Protocol</h1>
+            <p class="text-lg font-light text-[#064e3b]/60 italic leading-tight">Certainty is the new moat.</p>
         </header>
 
-        <div class="bg-[#064e3b] text-white p-8 rounded-sm mb-10 shadow-xl">
+        <div class="emerald-bg text-white p-8 rounded-sm mb-10 shadow-xl">
             <h2 class="text-[10px] uppercase tracking-[0.4em] mb-3 opacity-60 font-bold">Strategic Framework</h2>
-            <h3 class="serif text-3xl italic mb-3">Establishing the "System of Records".</h3>
-            <p class="text-sm leading-relaxed opacity-90">
+            <h3 class="serif text-3xl italic mb-3 text-white">Establishing the "System of Records".</h3>
+            <p class="text-sm leading-relaxed opacity-90 text-white">
                 Dans un écosystème saturé de rapports marketing, 2A Agency impose le <strong>System of Records</strong>. Nous archivons la vérité. Nous transformons l'analyse contextuelle en une donnée brute, certifiée et immuable sur la blockchain.
             </p>
         </div>
@@ -46,7 +50,7 @@
         <section>
             <h2 class="text-[10px] uppercase tracking-[0.3em] font-bold emerald-text mb-3">01. Methodological Integrity</h2>
             <div class="grid md:grid-cols-2 gap-6 text-sm text-black/70">
-                <p>Le protocole Forensic One-Shot repose sur l'ingestion massive de signaux faibles via le <strong>MCP (Micro-Context Protocol)</strong>, éliminant le biais humain pour une clarté immédiate.</p>
+                <p>Le protocole Forensic One-Shot repose sur l'ingestion massive de signaux faibles via le <strong>MCP (Micro-Context Protocol)</strong>, éliminant le biais humain.</p>
                 <p>Nous auditons la transparence, la traçabilité et l'héritage pour produire un score d'intégrité indiscutable.</p>
             </div>
         </section>
@@ -54,7 +58,7 @@
         <section>
             <h2 class="text-[10px] uppercase tracking-[0.3em] font-bold emerald-text mb-3">02. The Integrity Equation</h2>
             <div class="formula-box text-center">
-                <p class="text-2xl md:text-4xl emerald-text serif italic">S = (T × 0.4) + (V × 0.3) + (A × 0.2) + (H × 0.1)</p>
+                <p class="text-2xl md:text-4xl emerald-text serif italic mb-0">S = (T × 0.4) + (V × 0.3) + (A × 0.2) + (H × 0.1)</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 text-[9px] uppercase tracking-wider font-bold">
                 <div class="border-t pt-2 border-black/10"><span class="emerald-text">T:</span> Transparency</div>
