@@ -6,25 +6,27 @@
     <title>2A Agency | Autonomous Integrity Infrastructure</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; color: #111; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; color: #111; scroll-behavior: smooth; }
         .tracking-ultra { letter-spacing: 0.5em; }
         .text-emerald { color: #064e3b; }
+        .border-emerald { border-color: #064e3b; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between p-12 md:p-20">
-    <nav class="flex justify-between items-center max-w-7xl mx-auto w-full">
+<body class="min-h-screen flex flex-col p-12 md:p-20">
+    <nav class="flex justify-between items-center max-w-7xl mx-auto w-full mb-20">
         <div class="text-xl font-light tracking-tighter uppercase">2A <span class="text-gray-300 ml-1">Agency</span></div>
-        <div class="flex gap-12 items-center">
-            <span class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold">Base Mainnet Hub</span>
-            <a href="registry.html" class="text-[10px] uppercase tracking-ultra font-bold border-b border-black pb-1">The Index</a>
+        <div class="flex gap-10 items-center">
+            <a href="#" class="text-[9px] uppercase tracking-ultra text-gray-400 hover:text-black transition-colors font-bold">White Paper</a>
+            <a href="#contact" class="text-[9px] uppercase tracking-ultra text-gray-400 hover:text-black transition-colors font-bold">Contact</a>
+            <a href="registry.html" class="text-[10px] uppercase tracking-ultra font-black border-b-2 border-black pb-1">The Index</a>
         </div>
     </nav>
 
     <main class="max-w-5xl mx-auto text-center py-20">
-        <h2 class="text-[10px] uppercase tracking-ultra text-gray-400 mb-12">System of Records — Proprietary Infrastructure</h2>
+        <h2 class="text-[10px] uppercase tracking-ultra text-gray-400 mb-12 font-bold">System of Records — Proprietary Infrastructure</h2>
         <h1 class="text-6xl md:text-8xl font-light tracking-tighter mb-16 leading-none">
-            <span class="text-emerald font-semibold italic">Certainty</span> is the <br> new moat.
+            <span class="text-emerald font-semibold italic">Certainty is the new moat.</span>
         </h1>
         
         <p class="max-w-3xl mx-auto text-gray-600 text-lg font-light leading-relaxed mb-16 tracking-tight">
@@ -33,8 +35,8 @@
             Influence is bought. Integrity is computed.
         </p>
 
-        <div class="flex flex-col items-center gap-6">
-            <a href="registry.html" class="px-14 py-6 border border-black text-[10px] uppercase tracking-ultra hover:bg-black hover:text-white transition-all duration-700">
+        <div class="flex flex-col items-center gap-10">
+            <a href="registry.html" class="px-14 py-6 border-2 border-black text-[10px] font-black uppercase tracking-ultra hover:bg-black hover:text-white transition-all duration-700">
                 Explore Global Authority Index
             </a>
             <div class="flex gap-8 text-[8px] uppercase tracking-widest text-gray-300 font-bold">
@@ -45,7 +47,20 @@
         </div>
     </main>
 
-    <footer class="flex justify-between text-[9px] text-gray-400 uppercase tracking-ultra border-t border-gray-50 pt-8">
+    <section id="contact" class="max-w-xl mx-auto w-full py-32 border-t border-gray-50 mt-20">
+        <h3 class="text-center text-[10px] uppercase tracking-ultra text-emerald font-black mb-12">Secure Inquiry</h3>
+        <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-6">
+            <input type="email" name="email" placeholder="Professional Email" required 
+                   class="w-full bg-gray-50 border-b border-gray-200 py-4 px-2 text-xs focus:outline-none focus:border-emerald transition-colors placeholder-gray-300">
+            <textarea name="message" placeholder="Project Description" required rows="4"
+                      class="w-full bg-gray-50 border-b border-gray-200 py-4 px-2 text-xs focus:outline-none focus:border-emerald transition-colors placeholder-gray-300"></textarea>
+            <button type="submit" class="w-full py-5 bg-black text-white text-[9px] uppercase tracking-ultra font-bold hover:bg-emerald-900 transition-colors">
+                Initialize Contact
+            </button>
+        </form>
+    </section>
+
+    <footer class="flex justify-between text-[9px] text-gray-400 uppercase tracking-ultra pt-8">
         <span>© 2026 2A Agency</span>
         <span>Infrastructure: MCP-Alpha-Base</span>
     </footer>
