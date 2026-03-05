@@ -1,39 +1,53 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A Agency | Luxury Integrity Systems</title>
+    <title>2A Agency | Autonomous Integrity Infrastructure</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #FAFAFA; color: #111; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; color: #111; }
         .tracking-ultra { letter-spacing: 0.5em; }
+        .text-emerald { color: #064e3b; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between p-16">
+<body class="min-h-screen flex flex-col justify-between p-12 md:p-20">
     <nav class="flex justify-between items-center max-w-7xl mx-auto w-full">
         <div class="text-xl font-light tracking-tighter uppercase">2A <span class="text-gray-300 ml-1">Agency</span></div>
-        <a href="registry.html" class="text-[10px] uppercase tracking-ultra font-medium border-b border-black pb-1 hover:text-gray-400 transition-all">Access Index</a>
+        <div class="flex gap-12 items-center">
+            <span class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold">Base Mainnet Hub</span>
+            <a href="registry.html" class="text-[10px] uppercase tracking-ultra font-bold border-b border-black pb-1">The Index</a>
+        </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto text-center">
-        <h2 class="text-[10px] uppercase tracking-ultra text-gray-400 mb-16">System of Records</h2>
-        <h1 class="text-5xl md:text-7xl font-light tracking-tighter mb-12 leading-tight">
-            Certainty is the <br> <span class="italic">new moat.</span>
+    <main class="max-w-5xl mx-auto text-center py-20">
+        <h2 class="text-[10px] uppercase tracking-ultra text-gray-400 mb-12">System of Records — Proprietary Infrastructure</h2>
+        <h1 class="text-6xl md:text-8xl font-light tracking-tighter mb-16 leading-none">
+            <span class="text-emerald font-semibold italic">Certainty</span> is the <br> new moat.
         </h1>
-        <p class="max-w-xl mx-auto text-gray-500 text-base font-light leading-relaxed mb-20 tracking-tight">
-            L'influence s'achète. L'autorité se prouve. Nous auditons l'intégrité des maisons de luxe sur la blockchain pour définir qui mérite encore l'appellation d'exception.
+        
+        <p class="max-w-3xl mx-auto text-gray-600 text-lg font-light leading-relaxed mb-16 tracking-tight">
+            2A Agency operates a sovereign audit infrastructure. We leverage <span class="text-black font-medium text-sm">MCP (Model Context Protocol)</span> to aggregate real-time luxury data, processed by <span class="text-black font-medium text-sm">Autonomous AI agents</span>, and permanently anchored on the <span class="text-black font-medium text-sm">Base Blockchain</span>. 
+            <br><br>
+            Influence is bought. Integrity is computed.
         </p>
-        <div class="flex flex-col items-center">
-            <a href="registry.html" class="group relative px-12 py-5 border border-black text-[10px] uppercase tracking-ultra hover:bg-black hover:text-white transition-all duration-500">
-                Consulter le Global Authority Index
+
+        <div class="flex flex-col items-center gap-6">
+            <a href="registry.html" class="px-14 py-6 border border-black text-[10px] uppercase tracking-ultra hover:bg-black hover:text-white transition-all duration-700">
+                Explore Global Authority Index
             </a>
+            <div class="flex gap-8 text-[8px] uppercase tracking-widest text-gray-300 font-bold">
+                <span>● AI-Driven Analysis</span>
+                <span>● MCP Data Sync</span>
+                <span>● On-Chain Immutability</span>
+            </div>
         </div>
     </main>
 
-    <footer class="text-center text-[9px] text-gray-400 uppercase tracking-ultra">
-        © 2026 2A Agency — Private Audit Firm
+    <footer class="flex justify-between text-[9px] text-gray-400 uppercase tracking-ultra border-t border-gray-50 pt-8">
+        <span>© 2026 2A Agency</span>
+        <span>Infrastructure: MCP-Alpha-Base</span>
     </footer>
 </body>
 </html>
