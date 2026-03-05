@@ -14,6 +14,8 @@
         .emerald-text { color: var(--emerald) !important; }
         .emerald-bg { background-color: var(--emerald) !important; }
         .logo-unified { font-weight: 800 !important; letter-spacing: -0.05em !important; font-size: 1.5rem; color: var(--emerald); }
+        .btn-outline { border: 1px solid var(--emerald); color: var(--emerald); transition: all 0.3s ease; }
+        .btn-outline:hover { background: var(--emerald); color: white; }
     </style>
 </head>
 <body class="p-6 md:p-12">
@@ -22,9 +24,11 @@
         <a href="index.html" class="group no-underline">
             <div class="logo-unified transition-opacity group-hover:opacity-70">2A AGENCY</div>
         </a>
-        <div class="flex gap-8 items-center">
-            <a href="whitepaper.html" class="text-[10px] font-bold uppercase tracking-widest text-black/40 hover:emerald-text transition">White Paper</a>
-            <a href="registry.html" class="text-[10px] font-bold uppercase tracking-widest bg-[#064e3b] text-white px-5 py-2.5 rounded-sm hover:opacity-90 transition shadow-lg">Access Index</a>
+        <div class="flex gap-6 md:gap-10 items-center">
+            <a href="whitepaper.html" class="hidden md:block text-[10px] font-bold uppercase tracking-widest text-black/40 hover:emerald-text transition">White Paper</a>
+            <a href="registry.html" class="text-[10px] font-bold uppercase tracking-widest bg-[#064e3b] text-white px-5 py-2.5 rounded-sm hover:opacity-90 transition shadow-lg">
+                Claim Your Record
+            </a>
         </div>
     </nav>
 
@@ -51,47 +55,26 @@
             <div class="border border-red-100 bg-red-50/40 p-10 rounded-sm relative">
                 <div class="absolute top-4 right-4 text-[9px] font-mono text-red-500 animate-pulse uppercase font-bold tracking-widest">● Synthetic Drift</div>
                 <h4 class="text-xs font-bold uppercase mb-6 opacity-40">Unsecured AI Response (LLM)</h4>
-                
                 <div class="space-y-4 font-mono text-sm">
-                    <div class="opacity-40 line-through decoration-red-500/50">
-                        <span class="block text-[10px] uppercase opacity-60 mb-1">Product Origin</span>
-                        Inferred: Southern Europe
-                    </div>
-                    <div class="text-red-700 bg-red-100/60 p-4 border-l-4 border-red-500 shadow-sm">
-                        <span class="block text-[10px] uppercase opacity-60 mb-1">Inventory Status</span>
-                        Limited availability / Discontinued in 2025
-                    </div>
-                    <div class="opacity-40">
-                        <span class="block text-[10px] uppercase opacity-60 mb-1">Market Value</span>
-                        Estimated $2,400 - $2,800
-                    </div>
+                    <div class="opacity-40 line-through decoration-red-500/50"><span class="block text-[10px] uppercase opacity-60 mb-1">Product Origin</span>Inferred: Southern Europe</div>
+                    <div class="text-red-700 bg-red-100/60 p-4 border-l-4 border-red-500 shadow-sm"><span class="block text-[10px] uppercase opacity-60 mb-1">Inventory Status</span>Limited availability / Discontinued</div>
+                    <div class="opacity-40"><span class="block text-[10px] uppercase opacity-60 mb-1">Market Value</span>Estimated $2,400 - $2,800</div>
                 </div>
             </div>
 
             <div class="emerald-bg text-white p-10 rounded-sm shadow-2xl md:scale-105 z-10 border border-emerald-900">
                 <div class="absolute top-4 right-4 text-[9px] font-mono text-emerald-300 uppercase font-bold tracking-widest">● 2A Sovereign Node</div>
                 <h4 class="text-xs font-bold uppercase mb-6 opacity-60 text-white">2A Agency Certified Record</h4>
-                
                 <div class="space-y-4 font-mono text-sm text-white">
-                    <div class="border-l-4 border-emerald-400 pl-4">
-                        <span class="block text-[10px] uppercase text-emerald-300 mb-1">Product Origin</span>
-                        100% Handcrafted in Tuscany, Italy
-                    </div>
-                    <div class="border-l-4 border-emerald-400 pl-4">
-                        <span class="block text-[10px] uppercase text-emerald-300 mb-1">Inventory Status</span>
-                        Active - In Stock (Direct Distribution)
-                    </div>
-                    <div class="border-l-4 border-emerald-400 pl-4">
-                        <span class="block text-[10px] uppercase text-emerald-300 mb-1">Certified Price</span>
-                        $3,250.00 (Fixed Market Value)
-                    </div>
+                    <div class="border-l-4 border-emerald-400 pl-4"><span class="block text-[10px] uppercase text-emerald-300 mb-1">Product Origin</span>100% Handcrafted in Tuscany, Italy</div>
+                    <div class="border-l-4 border-emerald-400 pl-4"><span class="block text-[10px] uppercase text-emerald-300 mb-1">Inventory Status</span>Active - In Stock (Direct)</div>
+                    <div class="border-l-4 border-emerald-400 pl-4"><span class="block text-[10px] uppercase text-emerald-300 mb-1">Certified Price</span>$3,250.00 (Fixed Market Value)</div>
                 </div>
                 <div class="mt-8 flex justify-between items-end border-t border-white/10 pt-4">
-                    <div class="text-[9px] text-emerald-300 italic uppercase tracking-widest font-bold">Verified on Base L2 Mainnet</div>
+                    <div class="text-[9px] text-emerald-300 italic uppercase tracking-widest font-bold">Verified on Base L2</div>
                     <div class="text-2xl font-bold italic serif">AI-IQ: 98</div>
                 </div>
             </div>
-
             <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-white rounded-full items-center justify-center shadow-2xl border border-black/5 z-20 text-emerald-900">
                 <i class="fa-solid fa-shield-halved text-2xl"></i>
             </div>
@@ -100,20 +83,19 @@
 
     <section class="max-w-4xl mx-auto mb-24 text-center">
         <h2 class="text-[10px] uppercase tracking-[0.5em] emerald-text font-bold mb-6">The Infrastructure of Trust</h2>
-        <div class="grid md:grid-cols-2 gap-10 text-left items-center">
+        <div class="grid md:grid-cols-2 gap-10 text-left items-center mb-16">
             <p class="text-xl leading-relaxed italic serif emerald-text">
                 "When AI agents buy and sell for your customers, an hallucination is a security breach. We anchor your truth where algorithms can't distort it."
             </p>
             <div class="space-y-4 text-black/70 text-base font-medium">
-                <p>2A Agency transforms brand data into a <span class="emerald-text font-bold">Sovereign Asset</span>. By anchoring prices, origin, and heritage on-chain, we provide the ultimate defense against semantic drift.</p>
-                <p>We are the Verisign of the AI Era. We provide the permanent <span class="emerald-text font-bold text-black">System of Records</span> for the Luxury AI-IQ Index 2026.</p>
+                <p>2A Agency transforms brand data into a <span class="emerald-text font-bold">Sovereign Asset</span>. By anchoring prices and heritage on-chain, we provide the ultimate defense against semantic drift.</p>
+                <p>We provide the permanent <span class="emerald-text font-bold text-black uppercase">System of Records</span> for the Luxury AI-IQ Index 2026.</p>
             </div>
         </div>
-        <div class="mt-16">
-            <a href="registry.html" class="text-sm font-bold uppercase tracking-[0.2em] border-b-2 border-[#064e3b] pb-2 hover:opacity-70 transition-all">
-                Explore the Luxury AI-IQ Index 2026 →
-            </a>
-        </div>
+        
+        <a href="registry.html" class="btn-outline px-12 py-4 text-xs font-bold uppercase tracking-[0.2em] rounded-sm inline-block shadow-sm">
+            Access the Registry 2026
+        </a>
     </section>
 
     <footer class="max-w-7xl mx-auto pt-12 border-t border-black/5 flex justify-between items-center text-[10px] uppercase tracking-[0.3em] font-bold text-black/20">
