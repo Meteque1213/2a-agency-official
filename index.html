@@ -10,59 +10,119 @@
         body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; color: #111; scroll-behavior: smooth; }
         .tracking-ultra { letter-spacing: 0.5em; }
         .text-emerald { color: #064e3b; }
-        .border-emerald { border-color: #064e3b; }
+        .fade-in { animation: fadeIn 1.2s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .grid-bg { background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 40px 40px; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col p-12 md:p-20">
-    <nav class="flex justify-between items-center max-w-7xl mx-auto w-full mb-20">
-        <div class="text-xl font-light tracking-tighter uppercase">2A <span class="text-gray-300 ml-1">Agency</span></div>
+<body class="min-h-screen grid-bg">
+    <nav class="flex justify-between items-center max-w-7xl mx-auto w-full p-12 md:p-20">
+        <div class="text-xl font-light tracking-tighter uppercase">2A <span class="text-gray-300 ml-1 font-extralight">Agency</span></div>
         <div class="flex gap-10 items-center">
-            <a href="#" class="text-[9px] uppercase tracking-ultra text-gray-400 hover:text-black transition-colors font-bold">White Paper</a>
+            <a href="whitepaper.html" class="text-[9px] uppercase tracking-ultra text-gray-400 hover:text-black transition-colors font-bold">White Paper</a>
             <a href="#contact" class="text-[9px] uppercase tracking-ultra text-gray-400 hover:text-black transition-colors font-bold">Contact</a>
             <a href="registry.html" class="text-[10px] uppercase tracking-ultra font-black border-b-2 border-black pb-1">The Index</a>
         </div>
     </nav>
 
-    <main class="max-w-5xl mx-auto text-center py-20">
+    <main class="max-w-6xl mx-auto text-center py-20 px-6 fade-in">
         <h2 class="text-[10px] uppercase tracking-ultra text-gray-400 mb-12 font-bold">System of Records — Proprietary Infrastructure</h2>
-        <h1 class="text-6xl md:text-8xl font-light tracking-tighter mb-16 leading-none">
+        <h1 class="text-6xl md:text-8xl font-light tracking-tighter mb-16 leading-tight">
             <span class="text-emerald font-semibold italic">Certainty is the new moat.</span>
         </h1>
         
-        <p class="max-w-3xl mx-auto text-gray-600 text-lg font-light leading-relaxed mb-16 tracking-tight">
-            2A Agency operates a sovereign audit infrastructure. We leverage <span class="text-black font-medium text-sm">MCP (Model Context Protocol)</span> to aggregate real-time luxury data, processed by <span class="text-black font-medium text-sm">Autonomous AI agents</span>, and permanently anchored on the <span class="text-black font-medium text-sm">Base Blockchain</span>. 
-            <br><br>
-            Influence is bought. Integrity is computed.
+        <p class="max-w-3xl mx-auto text-gray-600 text-xl font-light leading-relaxed mb-24 tracking-tight">
+            2A Agency operates a sovereign audit infrastructure. We leverage <span class="text-black font-medium">MCP (Model Context Protocol)</span> to aggregate real-time luxury data, processed by <span class="text-black font-medium">Autonomous AI agents</span>, and permanently anchored on the <span class="text-black font-medium">Base Blockchain</span>.
         </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto mb-32 border-y border-gray-100 py-16">
+            <div class="text-center">
+                <span class="block text-2xl font-light mb-2 italic">100+</span>
+                <span class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold">Certified Assets</span>
+            </div>
+            <div class="text-center border-x border-gray-100">
+                <span class="block text-2xl font-light mb-2 italic">Real-Time</span>
+                <span class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold">MCP Data Feed</span>
+            </div>
+            <div class="text-center">
+                <span class="block text-2xl font-light mb-2 italic">Immutable</span>
+                <span class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold">On-Chain Ledger</span>
+            </div>
+        </div>
 
         <div class="flex flex-col items-center gap-10">
             <a href="registry.html" class="px-14 py-6 border-2 border-black text-[10px] font-black uppercase tracking-ultra hover:bg-black hover:text-white transition-all duration-700">
                 Explore Global Authority Index
             </a>
-            <div class="flex gap-8 text-[8px] uppercase tracking-widest text-gray-300 font-bold">
-                <span>● AI-Driven Analysis</span>
-                <span>● MCP Data Sync</span>
-                <span>● On-Chain Immutability</span>
-            </div>
         </div>
     </main>
 
-    <section id="contact" class="max-w-xl mx-auto w-full py-32 border-t border-gray-50 mt-20">
-        <h3 class="text-center text-[10px] uppercase tracking-ultra text-emerald font-black mb-12">Secure Inquiry</h3>
-        <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-6">
-            <input type="email" name="email" placeholder="Professional Email" required 
-                   class="w-full bg-gray-50 border-b border-gray-200 py-4 px-2 text-xs focus:outline-none focus:border-emerald transition-colors placeholder-gray-300">
-            <textarea name="message" placeholder="Project Description" required rows="4"
-                      class="w-full bg-gray-50 border-b border-gray-200 py-4 px-2 text-xs focus:outline-none focus:border-emerald transition-colors placeholder-gray-300"></textarea>
-            <button type="submit" class="w-full py-5 bg-black text-white text-[9px] uppercase tracking-ultra font-bold hover:bg-emerald-900 transition-colors">
-                Initialize Contact
-            </button>
-        </form>
+    <section class="max-w-6xl mx-auto px-12 py-32 grid md:grid-cols-2 gap-24 items-center">
+        <div>
+            <h3 class="text-[10px] uppercase tracking-ultra text-emerald font-black mb-6">The Methodology</h3>
+            <p class="text-2xl font-light tracking-tight leading-snug">
+                Our AI agents don't just "read" data. They verify cross-chain signals and supply chain integrity via private MCP nodes.
+            </p>
+        </div>
+        <div class="space-y-8">
+            <div class="border-l-2 border-emerald pl-6">
+                <h4 class="text-[10px] uppercase tracking-ultra font-bold mb-2">Phase 01: Acquisition</h4>
+                <p class="text-xs text-gray-500 font-light italic">Universal data ingestion via Model Context Protocol.</p>
+            </div>
+            <div class="border-l-2 border-gray-100 pl-6">
+                <h4 class="text-[10px] uppercase tracking-ultra font-bold mb-2">Phase 02: Verification</h4>
+                <p class="text-xs text-gray-500 font-light italic">Autonomous AI auditing of scarcity and ethics metrics.</p>
+            </div>
+            <div class="border-l-2 border-gray-100 pl-6">
+                <h4 class="text-[10px] uppercase tracking-ultra font-bold mb-2">Phase 03: Anchoring</h4>
+                <p class="text-xs text-gray-500 font-light italic">Final integrity score issuance on Base L2.</p>
+            </div>
+        </div>
     </section>
 
-    <footer class="flex justify-between text-[9px] text-gray-400 uppercase tracking-ultra pt-8">
-        <span>© 2026 2A Agency</span>
+    <section id="contact" class="max-w-xl mx-auto w-full py-32 border-t border-gray-100 px-6">
+        <h3 class="text-center text-[10px] uppercase tracking-ultra text-emerald font-black mb-12">Secure Inquiry</h3>
+        
+        <div id="contact-container">
+            <form id="audit-form" action="https://formspree.io/f/xykngdbz" method="POST" class="space-y-6">
+                <input type="email" name="email" placeholder="Professional Email" required 
+                       class="w-full bg-white border-b border-gray-200 py-4 px-2 text-xs focus:outline-none focus:border-emerald transition-colors placeholder-gray-300">
+                <textarea name="message" placeholder="Project Description" required rows="4"
+                          class="w-full bg-white border-b border-gray-200 py-4 px-2 text-xs focus:outline-none focus:border-emerald transition-colors placeholder-gray-300"></textarea>
+                <button type="submit" class="w-full py-5 bg-black text-white text-[9px] uppercase tracking-ultra font-bold hover:bg-emerald-900 transition-all duration-500">
+                    Initialize Contact
+                </button>
+            </form>
+
+            <div id="success-message" class="hidden text-center py-10 fade-in">
+                <p class="text-emerald text-sm font-light italic mb-4">"Your request has been securely anchored."</p>
+                <p class="text-[9px] uppercase tracking-ultra text-gray-400 leading-loose">Our autonomous agents are processing your inquiry. <br> We will reach out via encrypted channel shortly.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="flex justify-between p-12 md:p-20 text-[9px] text-gray-400 uppercase tracking-ultra border-t border-gray-50">
+        <span>© 2026 2A Agency — Private Audit Firm</span>
         <span>Infrastructure: MCP-Alpha-Base</span>
     </footer>
+
+    <script>
+        const form = document.getElementById('audit-form');
+        const successMsg = document.getElementById('success-message');
+
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            const data = new FormData(form);
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                form.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+            }
+        };
+    </script>
 </body>
 </html>
