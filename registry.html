@@ -7,27 +7,28 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="database.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #fff; color: #000; }
         .kern { letter-spacing: 0.2em; }
+        .text-audit-green { color: #16a34a; }
     </style>
 </head>
 <body class="p-12">
     <div class="max-w-7xl mx-auto">
-        <div class="flex justify-between items-end border-b border-black pb-8 mb-16">
+        <div class="flex justify-between items-end border-b-4 border-gray-50 pb-12 mb-16">
             <div>
-                <a href="index.html" class="text-[10px] uppercase kern text-gray-400 hover:text-black mb-4 block">← Return to Authority</a>
-                <h1 class="text-5xl font-black uppercase tracking-tighter">Global Authority <span class="font-light italic text-gray-400">Index</span></h1>
+                <a href="index.html" class="text-[10px] uppercase kern text-gray-400 hover:text-black mb-6 block font-bold">← Retour Accueil</a>
+                <h1 class="text-6xl font-black uppercase tracking-tighter text-audit-green italic">Global Authority Index</h1>
             </div>
-            <div class="text-right font-mono text-3xl font-bold">100<span class="text-gray-200">/100</span></div>
+            <div class="text-right font-black text-5xl text-gray-100">100%</div>
         </div>
 
         <table class="w-full text-left">
             <thead>
-                <tr class="text-[10px] uppercase kern text-gray-400 border-b border-gray-100">
-                    <th class="pb-6">Entity</th>
-                    <th class="pb-6 text-center">Score</th>
-                    <th class="pb-6 text-right">Blockchain Certification</th>
+                <tr class="text-[11px] uppercase kern text-gray-400 border-b border-gray-100">
+                    <th class="pb-8 font-black">Entity Name</th>
+                    <th class="pb-8 text-center font-black">Audit Score</th>
+                    <th class="pb-8 text-right font-black">Blockchain Status</th>
                 </tr>
             </thead>
             <tbody id="registryBody"></tbody>
@@ -40,25 +41,29 @@
             // TRI : De la meilleure note à la moins bonne
             const sortedData = registryData.sort((a, b) => b.score - a.score);
 
-            body.innerHTML = sortedData.map(item => `
-                <tr class="border-b border-gray-50 hover:bg-gray-50 transition-all group">
-                    <td class="py-10">
-                        <span class="block text-xl font-bold tracking-tight">${item.name}</span>
-                        <span class="text-[9px] uppercase kern text-gray-400">${item.category || 'Luxury'}</span>
+            body.innerHTML = sortedData.map(item => {
+                // LOGIQUE COULEUR SCORE
+                let scoreColor = "text-audit-green"; 
+                if (item.score < 50) scoreColor = "text-red-600";
+                else if (item.score < 80) scoreColor = "text-yellow-500";
+
+                return `
+                <tr class="border-b border-gray-50 hover:bg-gray-50 transition-all">
+                    <td class="py-12">
+                        <span class="block text-3xl font-black tracking-tighter text-audit-green uppercase">${item.name}</span>
+                        <span class="text-[10px] uppercase kern text-gray-400 font-bold italic">${item.category || 'Luxury'}</span>
                     </td>
-                    <td class="py-10 text-center font-mono text-3xl font-bold">
-                        <span class="${item.score > 80 ? 'text-black' : (item.score > 60 ? 'text-gray-400' : 'text-red-600')}">
-                            ${item.score}
-                        </span>
+                    <td class="py-12 text-center font-black text-5xl tracking-tighter">
+                        <span class="${scoreColor}">${item.score}</span>
                     </td>
-                    <td class="py-10 text-right">
+                    <td class="py-12 text-right">
                         <div class="flex flex-col items-end">
-                            <span class="text-[9px] font-bold uppercase kern px-3 py-1 bg-black text-white mb-2">Verified</span>
-                            <a href="https://basescan.org/tx/${item.hash}" target="_blank" class="text-[8px] text-gray-300 hover:text-black font-mono">HASH: ${item.hash.substring(0,12)}... ↗</a>
+                            <span class="text-[10px] font-bold uppercase kern px-4 py-2 bg-black text-white mb-3">Certified</span>
+                            <a href="https://basescan.org/tx/${item.hash}" target="_blank" class="text-[9px] text-gray-300 hover:text-black font-mono">PROOF_ON_BASE ↗</a>
                         </div>
                     </td>
-                </tr>
-            `).join('');
+                </tr>`;
+            }).join('');
         }
         window.onload = renderTable;
     </script>
