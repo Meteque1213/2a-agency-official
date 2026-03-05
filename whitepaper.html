@@ -3,109 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A Agency | White Paper - Forensic One-Shot Protocol</title>
+    <title>2A Agency | White Paper</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --emerald-2a: #064e3b; /* Le vert émeraude profond de ton site */
-            --off-white: #fcfcfc;
-        }
-        body { background-color: var(--off-white); color: #1a1a1a; font-family: 'Inter', sans-serif; line-height: 1.7; }
+        :root { --emerald: #064e3b; --off-white: #fcfcfc; }
+        body { background-color: var(--off-white); color: #1a1a1a; font-family: 'Inter', sans-serif; line-height: 1.4; }
         .serif { font-family: 'Playfair Display', serif; }
-        .emerald-text { color: var(--emerald-2a); }
-        .emerald-bg { background-color: var(--emerald-2a); }
-        .glass-card { background: white; border: 1px solid rgba(6, 78, 59, 0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
-        section { border-bottom: 1px solid rgba(0, 0, 0, 0.05); padding-bottom: 4rem; margin-bottom: 4rem; }
-        .formula-box { border-left: 4px solid var(--emerald-2a); background: #f0fdf4; }
+        .emerald-text { color: var(--emerald); }
+        .formula-box { border-left: 3px solid var(--emerald); background: #f0fdf4; margin: 1rem 0; padding: 1.5rem; }
+        section { border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 2rem; margin-bottom: 2rem; }
+        p { margin-bottom: 0.5rem; }
     </style>
 </head>
-<body class="p-6 md:p-24">
-    <nav class="flex justify-between items-center mb-24 border-b border-black/5 pb-6">
-        <div class="text-xl font-bold tracking-[0.2em] emerald-text">2A AGENCY</div>
-        <a href="registry.html" class="text-xs uppercase tracking-widest text-black/60 hover:emerald-text transition font-semibold">← Retour au Registre</a>
+<body class="p-6 md:p-16">
+    <nav class="flex justify-between items-center mb-12 border-b border-black/5 pb-4">
+        <div class="text-xl font-bold tracking-tighter emerald-text">2A AGENCY</div>
+        <a href="registry.html" class="text-xs font-semibold uppercase tracking-widest text-black/40 hover:emerald-text transition">← Back to Registry</a>
     </nav>
 
-    <div class="max-w-4xl mx-auto">
-        <header class="mb-32">
-            <h1 class="serif text-6xl md:text-8xl emerald-text mb-8 italic leading-tight">The Forensic <br>One-Shot Protocol</h1>
-            <p class="text-2xl font-light max-w-2xl text-black/50 italic">
-                L'infrastructure de notation fusionnant Intelligence Artificielle (MCP) et preuve cryptographique.
-            </p>
+    <div class="max-w-3xl mx-auto">
+        <header class="mb-12">
+            <h1 class="serif text-5xl md:text-7xl emerald-text italic mb-2">The Forensic <br>One-Shot Protocol</h1>
+            <p class="text-lg font-light emerald-text/60 italic">Certainty is the new moat.</p>
         </header>
 
-        <section>
-            <h2 class="text-xs uppercase tracking-[0.3em] emerald-text font-bold mb-8">01. Vision & Mission</h2>
-            <div class="grid md:grid-cols-2 gap-12 text-lg">
-                <p>Dans un marché du luxe saturé d'informations contradictoires, la confiance est devenue la ressource la plus rare. <span class="emerald-text font-semibold">2A Agency</span> a été fondée pour apporter une réponse technologique à la crise de l'intégrité.</p>
-                <p>Notre mission est de fournir un audit <span class="italic underline decoration-emerald-500/30">One-Shot</span>, indépendant et vérifiable, permettant de distinguer la valeur réelle de la perception marketing.</p>
-            </div>
-        </section>
+        <div class="bg-[#064e3b] text-white p-8 rounded-sm mb-12 shadow-xl">
+            <h2 class="text-[10px] uppercase tracking-[0.4em] mb-4 opacity-60">Strategic Framework</h2>
+            <h3 class="serif text-3xl italic mb-4">Establishing the "System of Records".</h3>
+            <p class="text-sm leading-relaxed opacity-90">Dans un écosystème saturé de "Greenwashing" et de rapports marketing, 2A Agency impose le <strong>System of Records</strong>. Nous ne sommes pas un magazine, nous sommes le registre immuable. Nous transformons l'analyse contextuelle en une donnée brute, certifiée et incontestable.</p>
+        </div>
 
         <section>
-            <h2 class="text-xs uppercase tracking-[0.3em] emerald-text font-bold mb-8">02. Méthodologie Forensic</h2>
-            <p class="mb-12 text-black/60">Chaque note est générée par notre moteur de calcul propriétaire, pondéré selon quatre piliers stratégiques :</p>
-            
-            <div class="formula-box p-12 rounded-sm text-center mb-12 shadow-sm">
-                <p class="text-3xl md:text-5xl emerald-text font-light tracking-tighter italic serif">
-                    S = (T × 0.4) + (V × 0.3) + (A × 0.2) + (H × 0.1)
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
-                <div>
-                    <h4 class="emerald-text font-bold text-xs uppercase tracking-widest mb-3">T — Transparency Index (40%)</h4>
-                    <p class="text-sm text-black/60 leading-relaxed">Analyse de l'accessibilité des données financières et de la clarté des engagements institutionnels.</p>
-                </div>
-                <div>
-                    <h4 class="emerald-text font-bold text-xs uppercase tracking-widest mb-3">V — Verification Tech (30%)</h4>
-                    <p class="text-sm text-black/60 leading-relaxed">Preuves technologiques de la traçabilité des matières et robustesse de la supply chain.</p>
-                </div>
-                <div>
-                    <h4 class="emerald-text font-bold text-xs uppercase tracking-widest mb-3">A — Market Authority (20%)</h4>
-                    <p class="text-sm text-black/60 leading-relaxed">Mesure de la stabilité créative et de l'influence sur les standards du secteur.</p>
-                </div>
-                <div>
-                    <h4 class="emerald-text font-bold text-xs uppercase tracking-widest mb-3">H — Heritage (10%)</h4>
-                    <p class="text-sm text-black/60 leading-relaxed">Évaluation de la transmission des métiers d'art et du patrimoine historique.</p>
-                </div>
+            <h2 class="text-[10px] uppercase tracking-[0.3em] font-bold emerald-text mb-4">01. Methodological Integrity</h2>
+            <p class="text-sm italic mb-4">"Trust is a byproduct of verification."</p>
+            <div class="grid md:grid-cols-2 gap-8 text-sm text-black/70">
+                <p>Le protocole Forensic One-Shot repose sur l'ingestion massive de signaux faibles via le <strong>MCP (Micro-Context Protocol)</strong>, éliminant le biais humain pour ne laisser place qu'à la performance factuelle.</p>
+                <p>Nous auditons la transparence, la chaîne de valeur, l'autorité créative et l'héritage pour produire un score d'intégrité unique.</p>
             </div>
         </section>
 
         <section>
-            <h2 class="text-xs uppercase tracking-[0.3em] emerald-text font-bold mb-8">03. Micro-Context Protocol (MCP)</h2>
-            <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="flex-1">
-                    <p class="text-lg mb-6">Le <span class="font-semibold">MCP</span> est le cœur de notre ingestion. Il permet de traiter des milliers de points de données non structurées pour en extraire un contexte métier précis.</p>
-                    <p class="text-sm italic text-black/40">C'est la fusion de l'IA générative et de l'analyse sectorielle qui rend l'audit "One-Shot" possible.</p>
-                </div>
-                <div class="w-full md:w-1/3 glass-card p-8 rounded-lg border-emerald-100">
-                    <p class="text-[10px] uppercase tracking-widest emerald-text font-bold text-center mb-4">Data Pipeline</p>
-                    <ul class="text-[11px] space-y-3 font-mono text-black/40">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 emerald-bg rounded-full"></span> WEB SCANNING</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 emerald-bg rounded-full"></span> MCP INGESTION</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 emerald-bg rounded-full"></span> 2A PONDÉRATION</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 emerald-bg rounded-full"></span> ON-CHAIN ANCHOR</li>
-                    </ul>
-                </div>
+            <h2 class="text-[10px] uppercase tracking-[0.3em] font-bold emerald-text mb-4">02. The Integrity Equation</h2>
+            <div class="formula-box text-center">
+                <p class="text-2xl md:text-4xl emerald-text serif italic">S = (T × 0.4) + (V × 0.3) + (A × 0.2) + (H × 0.1)</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 text-[10px] uppercase tracking-wider font-semibold">
+                <div class="border-t pt-2 border-black/5"><span class="emerald-text">T:</span> Transparency</div>
+                <div class="border-t pt-2 border-black/5"><span class="emerald-text">V:</span> Verification</div>
+                <div class="border-t pt-2 border-black/5"><span class="emerald-text">A:</span> Authority</div>
+                <div class="border-t pt-2 border-black/5"><span class="emerald-text">H:</span> Heritage</div>
             </div>
         </section>
 
-        <section class="border-none mb-0">
-            <h2 class="text-xs uppercase tracking-[0.3em] emerald-text font-bold mb-8">04. Immutable Proof</h2>
-            <p class="text-3xl serif italic emerald-text leading-snug">
-                "Une note qui peut être modifiée n'a aucune valeur fiduciaire."
-            </p>
-            <p class="mt-8 text-black/60">
-                Chaque score est scellé sur la blockchain <span class="font-semibold text-black">Base (Ethereum L2)</span>. L'empreinte cryptographique garantit que le rapport d'audit reste intact, créant une archive historique de l'intégrité du luxe.
-            </p>
+        <section>
+            <h2 class="text-[10px] uppercase tracking-[0.3em] font-bold emerald-text mb-4">03. The Trust Stack</h2>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p><strong>L'Intelligence (MCP) :</strong> Analyse sémantique et financière en temps réel des actifs de la marque.</p>
+                <p><strong>L'Immuabilité (Base L2) :</strong> Chaque audit est scellé cryptographiquement. Une note publiée est une note éternelle. La blockchain n'est pas une option, c'est notre notaire.</p>
+            </div>
         </section>
 
-        <footer class="mt-24 text-center border-t border-black/5 pt-12 text-xs uppercase tracking-widest text-black/30 font-semibold">
-            2A Agency Protocol — Établi à Paris, Mars 2026.
+        <footer class="mt-12 pt-8 border-t border-black/5 text-[10px] uppercase tracking-[0.3em] text-black/30 font-bold text-center">
+            2A AGENCY — ARCHIVING LUXURY INTEGRITY — PARIS 2026
         </footer>
     </div>
-    
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>
