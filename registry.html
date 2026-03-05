@@ -14,9 +14,7 @@
         .emerald-text { color: #064e3b !important; }
         .logo-unified { font-weight: 800 !important; letter-spacing: -0.05em !important; font-size: 1.5rem; color: #064e3b; }
         .registry-row { background: white; border: 1px solid rgba(6, 78, 59, 0.05); transition: all 0.2s ease; }
-        .registry-row:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .btn-verify { border: 1px solid #064e3b; color: #064e3b; font-weight: 700; text-transform: uppercase; font-size: 10px; transition: all 0.3s ease; }
-        .btn-verify:hover { background: #064e3b; color: white; }
+        .registry-row:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
     </style>
 </head>
 <body class="p-6 md:p-12">
@@ -27,17 +25,15 @@
         </a>
         <div class="flex gap-4 md:gap-10 items-center">
             <a href="whitepaper.html" class="text-[10px] font-bold uppercase tracking-widest text-black/40 hover:emerald-text transition">White Paper</a>
-            <form action="https://formspree.io/f/xykngdbz" method="POST">
-                <button type="submit" class="bg-[#064e3b] text-white px-6 py-3 text-[10px] font-bold uppercase tracking-widest rounded-sm shadow-lg">
-                    Claim Your Record
-                </button>
-            </form>
+            <a href="index.html#contact" class="bg-[#064e3b] text-white px-6 py-3 text-[10px] font-bold uppercase tracking-widest rounded-sm shadow-lg">
+                Claim Your Record
+            </a>
         </div>
     </nav>
 
     <main class="max-w-7xl mx-auto">
         <header class="mb-10">
-            <h2 class="text-4xl md:text-5xl serif italic emerald-text">The Registry</h2>
+            <h2 class="text-4xl md:text-5xl serif italic emerald-text italic underline">The Registry</h2>
             <p class="text-[10px] uppercase tracking-[0.2em] text-black/40 mt-2 font-bold italic">System of Records : 101 Audits | ● Live on Base</p>
         </header>
 
@@ -45,22 +41,12 @@
             <table class="w-full text-left" style="border-spacing: 0 8px; border-collapse: separate;">
                 <thead>
                     <tr class="text-[10px] uppercase tracking-[0.2em] text-black/40 font-bold">
-                        <th class="px-6 py-4">Rank</th><th class="px-6 py-4">Entity</th><th class="px-6 py-4">Luxury AI-IQ</th><th class="px-6 py-4 text-right">Blockchain Proof</th>
+                        <th class="px-6 py-4">Rank</th><th class="px-6 py-4">Entity</th><th class="px-6 py-4 italic">Luxury AI-IQ Score</th><th class="px-6 py-4 text-right">Blockchain Proof</th>
                     </tr>
                 </thead>
                 <tbody id="registry-body"></tbody>
             </table>
         </div>
-
-        <section class="max-w-7xl mx-auto my-32 text-center px-6">
-            <h3 class="serif text-4xl md:text-5xl italic mb-6 italic">Your brand is not on the list?</h3>
-            <p class="text-black/50 text-xl max-w-3xl mx-auto mb-12 font-medium italic">Certainty is the new moat. Anchor your legacy today.</p>
-            <form action="https://formspree.io/f/xykngdbz" method="POST">
-                <button type="submit" class="bg-[#064e3b] text-white px-12 py-5 text-sm font-bold uppercase tracking-[0.2em] rounded-sm shadow-[0_20px_50px_rgba(6,78,60,0.3)]">
-                    Request Forensic Audit
-                </button>
-            </form>
-        </section>
     </main>
 
     <script src="database.js"></script>
@@ -76,7 +62,7 @@
                         <div class="flex flex-col"><span class="text-2xl font-light emerald-text leading-none">${brand.score}</span><span class="text-[8px] uppercase text-black/30 mt-1">Forensic Index</span></div>
                     </td>
                     <td class="px-6 py-6 text-right">
-                        <a href="https://basescan.org/tx/${brand.hash}" target="_blank" class="btn-verify px-6 py-2.5 rounded-sm inline-flex items-center gap-2"><i class="fa-solid fa-shield-halved"></i> Verify</a>
+                        <a href="https://basescan.org/tx/${brand.hash}" target="_blank" class="border border-[#064e3b] text-[#064e3b] px-6 py-2.5 rounded-sm inline-flex items-center gap-2 hover:bg-[#064e3b] hover:text-white transition uppercase font-bold text-[10px]"><i class="fa-solid fa-shield-halved"></i> Verify On-Chain</a>
                     </td>
                 </tr>`;
         });
