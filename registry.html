@@ -18,7 +18,6 @@
         .emerald-bg { background-color: var(--emerald-2a) !important; }
         .logo-unified { font-weight: 800 !important; letter-spacing: -0.05em !important; color: var(--emerald-2a); }
         
-        /* Table Styling */
         .registry-table { border-collapse: separate; border-spacing: 0 8px; }
         .registry-row { background: white; border: 1px solid rgba(6, 78, 59, 0.05); transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
         .registry-row:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
@@ -40,7 +39,7 @@
             </a>
             <div class="hidden md:block pl-6 border-l border-black/10 text-right">
                 <p class="text-[9px] text-black/30 uppercase font-bold">Network Status</p>
-                <p class="text-[9px] emerald-text font-mono font-bold tracking-tighter">● LIVE ON BASE MAINNET</p>
+                <p class="text-[9px] emerald-text font-mono font-bold tracking-tighter text-green-600">● LIVE ON BASE MAINNET</p>
             </div>
         </nav>
     </header>
@@ -61,7 +60,7 @@
                         <th class="px-6 py-4">Rank</th>
                         <th class="px-6 py-4">Entity</th>
                         <th class="px-6 py-4">Forensic Score</th>
-                        <th class="px-6 py-4">Integrity Tier</th>
+                        <th class="px-6 py-4">Status</th>
                         <th class="px-6 py-4 text-right">Blockchain Proof</th>
                     </tr>
                 </thead>
@@ -73,7 +72,7 @@
 
     <footer class="max-w-7xl mx-auto mt-32 pt-8 border-t border-black/5 flex justify-between items-center text-[9px] text-black/30 uppercase tracking-[0.3em] font-bold">
         <p>© 2026 2A Agency | Paris - London - Dubai</p>
-        <p class="emerald-text">Establishing the System of Records</p>
+        <p class="emerald-text uppercase">Establishing the System of Records</p>
     </footer>
 
     <script src="database.js"></script>
@@ -84,13 +83,8 @@
         const sortedData = [...registryData].sort((a, b) => b.score - a.score);
 
         sortedData.forEach((brand, index) => {
-            const tier = brand.score >= 95 ? 'Platinum' : 
-                         brand.score >= 85 ? 'Gold' : 
-                         brand.score >= 70 ? 'Certified' : 'Under Review';
-            
-            const tierColor = brand.score >= 95 ? 'text-blue-600' : 
-                              brand.score >= 85 ? 'emerald-text' : 
-                              brand.score >= 70 ? 'text-slate-600' : 'text-red-600';
+            // Statut universel pour toutes les preuves blockchain
+            const statusLabel = "CERTIFIED"; 
 
             body.innerHTML += `
                 <tr class="registry-row group">
@@ -100,13 +94,13 @@
                         <span class="text-2xl font-light emerald-text">${brand.score}</span><span class="text-[10px] text-black/20 ml-1">/100</span>
                     </td>
                     <td class="px-6 py-6">
-                        <span class="text-[9px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full bg-emerald-50 ${tierColor} border border-current/10">
-                            ${tier}
+                        <span class="text-[9px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full bg-emerald-50 emerald-text border border-emerald-900/10">
+                            ${statusLabel}
                         </span>
                     </td>
                     <td class="px-6 py-6 text-right">
                         <a href="https://basescan.org/tx/${brand.hash}" target="_blank" class="btn-verify px-6 py-2.5 rounded-sm inline-flex items-center gap-2">
-                            <i class="fa-solid fa-link text-[8px]"></i> Verify On-Chain
+                            <i class="fa-solid fa-shield-halved text-[8px]"></i> Verify On-Chain
                         </a>
                     </td>
                 </tr>
