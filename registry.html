@@ -8,49 +8,34 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;900&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; color: #111; }
-        .tracking-ultra { letter-spacing: 0.5em; }
         .text-emerald { color: #064e3b; }
-        /* Style pour les boutons de catégorie actifs */
-        .filter-btn.active { background-color: #111; color: #fff; border-color: #111; }
     </style>
 </head>
 <body class="p-8 md:p-20">
 
     <nav class="flex justify-between items-center max-w-7xl mx-auto mb-20">
-        <a href="index.html" class="text-xl font-light tracking-tighter uppercase italic">2A <span class="text-gray-300 ml-1 font-extralight italic">Agency</span></a>
+        <a href="index.html" class="text-xl font-light tracking-tighter uppercase italic text-black">2A <span class="text-gray-300 ml-1 font-extralight italic">Agency</span></a>
         <div class="flex gap-8">
-            <a href="whitepaper.html" class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold italic">Protocol</a>
-            <a href="index.html#contact" class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold italic">Secure Access</a>
+            <a href="whitepaper.html" class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold italic hover:text-emerald transition-all">Protocol</a>
+            <a href="index.html#contact" class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold italic hover:text-emerald transition-all">Secure Access</a>
         </div>
     </nav>
 
     <main class="max-w-7xl mx-auto">
         <header class="mb-16">
-            <h2 class="text-[10px] uppercase tracking-ultra text-emerald font-black mb-4 italic underline">System of Record // Live Feed</h2>
-            <h1 class="text-5xl font-light tracking-tighter uppercase mb-8">Global Authority Index</h1>
-            
-            <div class="flex flex-col md:flex-row gap-6 items-end justify-between">
-                <input type="text" id="search-input" placeholder="SEARCH ENTITY..." 
-                       class="w-full max-w-md bg-gray-50 border-b border-gray-200 py-4 px-2 text-xs focus:outline-none focus:border-black transition-all placeholder-gray-300 font-mono">
-                
-                <div id="category-filters" class="flex gap-3 flex-wrap">
-                    <button class="filter-btn active text-[8px] uppercase tracking-widest border border-gray-200 px-4 py-2 font-black transition-all hover:border-black" data-cat="all">All Sectors</button>
-                    <button class="filter-btn text-[8px] uppercase tracking-widest border border-gray-200 px-4 py-2 font-black transition-all hover:border-black" data-cat="Watchmaking">Watchmaking</button>
-                    <button class="filter-btn text-[8px] uppercase tracking-widest border border-gray-200 px-4 py-2 font-black transition-all hover:border-black" data-cat="Luxury">Luxury Fashion</button>
-                    <button class="filter-btn text-[8px] uppercase tracking-widest border border-gray-200 px-4 py-2 font-black transition-all hover:border-black" data-cat="AI">AI & Tech</button>
-                    <button class="filter-btn text-[8px] uppercase tracking-widest border border-gray-200 px-4 py-2 font-black transition-all hover:border-black" data-cat="Finance">Finance</button>
-                </div>
-            </div>
+            <h2 class="text-[10px] uppercase tracking-ultra text-emerald font-black mb-4 italic underline underline-offset-4">System of Record // Authority Feed</h2>
+            <h1 class="text-6xl font-light tracking-tighter uppercase mb-8">Global Authority Index</h1>
+            <input type="text" id="search-input" placeholder="SEARCH ENTITY..." 
+                   class="w-full max-w-md bg-transparent border-b border-gray-200 py-4 px-2 text-xs focus:outline-none focus:border-emerald transition-all font-mono italic">
         </header>
 
         <div class="overflow-x-auto">
             <table class="w-full text-left">
                 <thead>
                     <tr class="text-[10px] uppercase tracking-widest text-gray-400 border-b border-gray-100">
-                        <th class="pb-4 font-black italic">Entity Identity</th>
-                        <th class="pb-4 font-black italic">Integrity Score</th>
-                        <th class="pb-4 font-black italic">Moat Delta</th>
-                        <th class="pb-4 font-black italic">On-Chain Evidence</th>
+                        <th class="pb-6 font-black italic">Entity Identity</th>
+                        <th class="pb-6 font-black italic">Integrity Score</th>
+                        <th class="pb-6 font-black italic">On-Chain Evidence</th>
                     </tr>
                 </thead>
                 <tbody id="registry-body"></tbody>
@@ -62,35 +47,27 @@
     <script>
         const tableBody = document.getElementById('registry-body');
         const searchInput = document.getElementById('search-input');
-        const filterBtns = document.querySelectorAll('.filter-btn');
 
         function renderTable(data) {
-            // TRI : Du plus grand score au plus petit
+            // TRI : Du meilleur au moins bon
             const sortedData = [...data].sort((a, b) => b.score - a.score);
             
             tableBody.innerHTML = '';
             sortedData.forEach(item => {
-                // CODES COULEUR ÉLITE
-                let colorClass = 'text-emerald'; // Vert foncé (90+)
-                if (item.score < 90) colorClass = 'text-green-600'; // Vert standard (80-89)
-                if (item.score < 80) colorClass = 'text-amber-500'; // Orange (65-79)
-                if (item.score < 65) colorClass = 'text-red-500'; // Rouge (<65)
-
                 tableBody.innerHTML += `
                     <tr class="border-b border-gray-50 hover:bg-gray-50 transition-colors">
-                        <td class="py-8">
-                            <div class="text-sm font-black uppercase tracking-tighter">${item.name}</div>
-                            <div class="text-[9px] text-gray-400 uppercase tracking-widest font-bold">${item.category}</div>
+                        <td class="py-10">
+                            <div class="text-lg font-black uppercase tracking-tighter text-emerald underline decoration-1 underline-offset-4">${item.name}</div>
+                            <div class="text-[10px] text-gray-400 uppercase tracking-widest font-bold mt-1">${item.category}</div>
                         </td>
-                        <td class="py-8">
-                            <div class="text-2xl font-mono ${colorClass} font-black underline decoration-2">${item.score}</div>
+                        <td class="py-10">
+                            <div class="text-3xl font-mono text-emerald font-black underline decoration-2 underline-offset-8">${item.score}</div>
                         </td>
-                        <td class="py-8 text-xs font-mono text-gray-500 font-bold italic">${item.moatDelta}</td>
-                        <td class="py-8">
-                            <div class="flex items-center gap-4">
-                                <div class="text-[9px] font-mono text-gray-300 truncate w-32 uppercase tracking-tighter italic">${item.hash}</div>
-                                <a href="https://basescan.org/search?q=${item.hash}" target="_blank" 
-                                   class="text-[8px] uppercase tracking-widest font-black border-2 border-black px-4 py-2 hover:bg-black hover:text-white transition-all italic shadow-sm">
+                        <td class="py-10">
+                            <div class="flex items-center gap-6">
+                                <div class="text-[10px] font-mono text-gray-300 truncate w-32 uppercase tracking-tighter italic">${item.hash}</div>
+                                <a href="https://etherscan.io/tx/${item.hash}" target="_blank" 
+                                   class="text-[9px] uppercase tracking-widest font-black border-2 border-black px-6 py-3 hover:bg-black hover:text-white transition-all italic shadow-sm">
                                     Verify Proof
                                 </a>
                             </div>
@@ -100,30 +77,14 @@
             });
         }
 
-        // INITIALISATION
-        window.onload = () => {
-            if (typeof registryData !== 'undefined') renderTable(registryData);
-        };
+        window.onload = () => { if (typeof registryData !== 'undefined') renderTable(registryData); };
 
-        // RECHERCHE
         searchInput.addEventListener('input', (e) => {
             const term = e.target.value.toLowerCase();
-            const filtered = registryData.filter(item => item.name.toLowerCase().includes(term));
+            const filtered = registryData.filter(item => 
+                item.name.toLowerCase().includes(term) || item.category.toLowerCase().includes(term)
+            );
             renderTable(filtered);
-        });
-
-        // FILTRAGE PAR CATÉGORIE
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                
-                const cat = btn.getAttribute('data-cat');
-                const filtered = cat === 'all' 
-                    ? registryData 
-                    : registryData.filter(item => item.category.includes(cat) || item.name.includes(cat));
-                renderTable(filtered);
-            });
         });
     </script>
 </body>
