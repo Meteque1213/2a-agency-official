@@ -18,8 +18,8 @@
 
     <div class="max-w-7xl mx-auto mb-20 flex justify-between items-end border-b border-gray-100 pb-10">
         <div>
-            <h1 class="text-5xl font-extralight tracking-tighter text-black uppercase">Global Authority <span class="font-bold">Index</span></h1>
-            <p class="text-gray-400 mt-3 text-sm tracking-widest uppercase">Verified On-Chain Luxury Integrity Registry — 2026 Edition</p>
+            <h1 class="text-5xl font-extralight tracking-tighter text-black uppercase tracking-tighter">Global Authority <span class="font-bold">Index</span></h1>
+            <p class="text-gray-400 mt-3 text-sm tracking-widest uppercase font-medium">Verified On-Chain Luxury Integrity Registry — 2026 Edition</p>
         </div>
         <div class="text-right">
             <div class="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-2 font-bold">Index Coverage</div>
@@ -28,18 +28,18 @@
     </div>
 
     <div class="max-w-7xl mx-auto mb-16">
-        <input type="text" id="searchInput" onkeyup="searchRegistry()" placeholder="Rechercher une entité..." 
-               class="w-full bg-white border-b-2 border-gray-100 py-4 text-2xl focus:outline-none focus:border-black transition-all font-light placeholder-gray-200">
+        <input type="text" id="searchInput" onkeyup="searchRegistry()" placeholder="Rechercher une entité (ex: Gucci, Goyard...)" 
+               class="w-full bg-white border-b-2 border-gray-100 py-6 text-2xl focus:outline-none focus:border-black transition-all font-light placeholder-gray-200">
     </div>
 
     <div class="max-w-7xl mx-auto overflow-x-auto">
-        <table class="w-full text-left border-collapse">
+        <table class="w-full text-left">
             <thead>
                 <tr class="text-gray-400 text-[10px] uppercase tracking-[0.4em] border-b border-gray-50">
-                    <th class="pb-8 font-semibold">Entity</th>
-                    <th class="pb-8 font-semibold">Sector</th>
+                    <th class="pb-8 font-semibold">Entity Name</th>
+                    <th class="pb-8 font-semibold">Category</th>
                     <th class="pb-8 font-semibold text-center">Score</th>
-                    <th class="pb-8 font-semibold text-right">Status</th>
+                    <th class="pb-8 font-semibold text-right">Blockchain Proof</th>
                 </tr>
             </thead>
             <tbody id="registryBody">
@@ -58,38 +58,31 @@
                 let scoreColor = 'text-green-600';
 
                 if (item.score < 60) {
-                    statusClass = 'status-critical';
-                    statusText = 'CRITICAL';
-                    scoreColor = 'text-red-600';
+                    statusClass = 'status-critical'; statusText = 'CRITICAL'; scoreColor = 'text-red-600';
                 } else if (item.score < 80) {
-                    statusClass = 'status-warning';
-                    statusText = 'WARNING';
-                    scoreColor = 'text-yellow-600';
+                    statusClass = 'status-warning'; statusText = 'WARNING'; scoreColor = 'text-yellow-600';
                 }
 
-                // Correction pour l'affichage du nom
-                const displayName = item.name || "Unnamed Entity";
-
                 body.innerHTML += `
-                    <tr class="border-b border-gray-50 hover:bg-gray-50 transition-all group">
-                        <td class="py-10">
-                            <span class="block text-xl font-bold text-black tracking-tight">${displayName}</span>
+                    <tr class="border-b border-gray-50 hover:bg-gray-50 transition-all">
+                        <td class="py-12">
+                            <span class="block text-2xl font-bold text-black tracking-tight">${item.name}</span>
                         </td>
-                        <td class="py-10">
-                            <span class="text-gray-400 text-sm uppercase tracking-widest font-medium">${item.category || 'Luxury'}</span>
+                        <td class="py-12 text-gray-400 text-sm uppercase tracking-widest font-medium">
+                            ${item.category || 'Luxury'}
                         </td>
-                        <td class="py-10 text-center">
+                        <td class="py-12 text-center">
                             <span class="${scoreColor} font-mono font-bold text-3xl">${item.score}</span>
                             <span class="text-gray-200 text-xs">/100</span>
                         </td>
-                        <td class="py-10 text-right">
+                        <td class="py-12 text-right">
                             <div class="flex flex-col items-end gap-3">
                                 <span class="${statusClass} text-[9px] font-black tracking-[0.2em] px-4 py-1.5 rounded-full uppercase">
                                     ${statusText}
                                 </span>
                                 <a href="https://basescan.org/tx/${item.hash}" target="_blank" 
-                                   class="text-[9px] text-gray-300 hover:text-black font-bold transition-colors uppercase tracking-widest">
-                                   View Proof ↗
+                                   class="text-[9px] text-gray-300 hover:text-black font-bold transition-colors uppercase tracking-widest border-b border-transparent hover:border-black">
+                                   View On-Chain Proof ↗
                                 </a>
                             </div>
                         </td>
@@ -100,15 +93,13 @@
         function searchRegistry() {
             const val = document.getElementById('searchInput').value.toLowerCase();
             const filtered = registryData.filter(i => 
-                (i.name && i.name.toLowerCase().includes(val)) || 
-                (i.category && i.category.toLowerCase().includes(val))
+                i.name.toLowerCase().includes(val) || 
+                i.category.toLowerCase().includes(val)
             );
             renderTable(filtered);
         }
 
-        window.onload = () => {
-            if (typeof registryData !== 'undefined') renderTable(registryData);
-        };
+        window.onload = () => { if (typeof registryData !== 'undefined') renderTable(registryData); };
     </script>
 </body>
 </html>
