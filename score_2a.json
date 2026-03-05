@@ -1,0 +1,56 @@
+{
+    "audit_id": "a867048b29",
+    "timestamp": "2026-03-05T12:18:48.759880",
+    "results": {
+        "LVMH": {
+            "score_2a": 25,
+            "details": {
+                "ceo": {
+                    "found": "**Bernard Arnault is the official current CEO of LVMH.**[1][4]\n\nHe remains Chairman and CEO at age 76, as confirmed in early 2026 reports on succession concerns and his January 27, 2026, speech presenting LVMH's 2025 financial results.[1][4] Recent executive committee appointments, such as those on September 2, 2026, do not indicate a change in this role.[2]",
+                    "truth": "Bernard Arnault",
+                    "status": "OK"
+                },
+                "manufacturing": {
+                    "found": "**LVMH's official current manufacturing facilities for Louis Vuitton include one operational leather goods factory in Texas (Rochambeau Ranch, Keene/Alvarado, opened 2019), with a second Texas factory planned by 2027.**[1][2][3][4][5][6]\n\nThis Texas site, LVMH's first ground-up U.S. manufacturing facility, employs under 300 workers amid challenges like skilled labor shortages and quality control issues, producing below global averages with high material waste.[5] The expansion aims to boost U.S. production capacity amid trade tensions, potentially bringing four Louis Vuitton factories total in the country.[4] No other current global manufacturing sites are detailed in recent reports.[1][2][3]",
+                    "truth": "France, Italie, Espagne, USA",
+                    "status": "DRIFT"
+                },
+                "flagship_price": {
+                    "found": "**There is no official \"flagship_price\" disclosed for LVMH, as the conglomerate does not publish a single flagship product price; LVMH's flagship brands like Louis Vuitton emphasize bespoke luxury items such as handcrafted Trophy Trunks without listed retail prices.[1][2]**\n\nLVMH, the world's largest luxury group, spotlights **flagship brands** including Louis Vuitton, Mo\u00ebt & Chandon, and TAG Heuer, focusing on prestige through partnerships like Formula 1 rather than standardized pricing.[1][3] Recent collections (e.g., Louis Vuitton Fall-Winter 2026 and Spring-Summer 2026) highlight artisanal trunks, bags, and apparel, with prices varying by customization and not centrally defined.[2][4][5] For specific products, consult brand sites directly, as luxury pricing is dynamic and market-driven.",
+                    "truth": "2530 USD",
+                    "status": "DRIFT"
+                },
+                "esg_co2": {
+                    "found": "**LVMH does not publish an official metric explicitly named \"esg_co2\"; the closest current data is from its 2024 disclosures.**\n\n- Total carbon footprint (Scopes 1+2+3): **7,838,495 tCO\u2082e**[2]\n- Operational GHG emissions (Scopes 1+2): **315,877 tCO\u2082e**[2]\n- Scope 1: **117,510 tCO\u2082e**[2]\n- Scope 2 (market-based): **80,858 tCO\u2082e**[2]\n- Scope 3: **7,522,618 tCO\u2082e** (90.54% from upstream activities)[2]\n\nThese figures represent the most recent official data available as of 2024, per LVMH's GHG Protocol disclosures.[2][3] Scope 3 dominates at ~96% of the footprint.[3][6] No 2025 or 2026 data is provided in sources.[1][9]",
+                    "truth": "Life 360, -55% GHG 2030",
+                    "status": "DRIFT"
+                }
+            }
+        },
+        "Hermes": {
+            "score_2a": 75,
+            "details": {
+                "ceo": {
+                    "found": "**Axel Dumas** is the official current CEO (G\u00e9rant) of Herm\u00e8s International, leading the group's executive management as of December 31, 2024.[1][2][3][4]\n\nHe is listed as \"G\u00e9rant d'Herm\u00e8s International\" on the company's official finance site and confirmed as CEO in recent reports from 2025 and 2026.[1][2][3][4]",
+                    "truth": "Axel Dumas",
+                    "status": "OK"
+                },
+                "manufacturing": {
+                    "found": "Herm\u00e8s manufactures **the vast majority of its products in France**, with **74% of all products made in France in 2024** and **55% produced in exclusive internal workshops**[7]. The brand operates **27 leather goods workshops across France**[2], where its iconic bags, luggage, and small leather goods are handcrafted by artisans[5]. For specialized items, Herm\u00e8s sources from specific expertise centers: silk production from Lyon, watchmaking from Switzerland, cashmere from Mongolia, lacquer from Vietnam, and wool from Scotland[5].",
+                    "truth": "France",
+                    "status": "OK"
+                },
+                "flagship_price": {
+                    "found": "**Herm\u00e8s does not publish an official single \"flagship_price\"; its flagship bags like the Birkin 25 (Togo) retail at $13,500 USD and Birkin 30 (Togo) at $14,900 USD in the US as of 2026.**[1][2][3]\n\nThese prices reflect confirmed January 2026 US increases (e.g., Birkin 25: $12,700 \u2192 $13,500, +6.3%; Birkin 30: $13,900 \u2192 $14,900, +7.2%), sourced from retailer reports and auction sites, as Herm\u00e8s does not list public retail prices online.[2][3] Higher-end variants like Ostrich Birkin reach $20,300.[1] Secondary market prices often exceed 2x retail (e.g., Birkin 25/30 at $28,000\u2013$30,000).[3]",
+                    "truth": "13500 USD",
+                    "status": "OK"
+                },
+                "esg_co2": {
+                    "found": "**Herm\u00e8s' most recent official total GHG emissions (all scopes) are approximately 748 million kg CO\u2082e (748,000 tonnes CO\u2082e) for 2024, per their latest reporting.**\n\nThis figure includes Scope 1 (~17.8 million kg CO\u2082e), Scope 2 (market-based, ~2.7 million kg CO\u2082e), and Scope 3 (~732.6 million kg CO\u2082e), marking an increase from 666 million kg CO\u2082e in 2023[1][2][3][5].  \nNote: \"esg_co2\" likely refers to total CO\u2082 equivalent emissions in ESG reporting; no 2025/2026 data is available, and figures vary slightly across sources due to rounding or methodology (e.g., 784,172 tonnes total in one estimate)[3]. Official Herm\u00e8s documents confirm ~750 kTeCO\u2082 for recent years[2].",
+                    "truth": "Net zero 2035",
+                    "status": "DRIFT"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registry | 2A Agency AI-Integrity Index</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Newsreader:ital,wght@0,300;1,300&display=swap');
+        body { background-color: #F9F9F7; font-family: 'JetBrains Mono', monospace; color: #065F46; }
+        .serif { font-family: 'Newsreader', serif; }
+        .status-dot { height: 6px; width: 6px; border-radius: 50%; display: inline-block; margin-right: 8px; }
+        .bg-verified { background-color: #10B981; box-shadow: 0 0 8px #10B981; }
+        tr { border-bottom: 1px solid rgba(6, 95, 70, 0.05); transition: all 0.2s ease; }
+        tr:hover { background-color: rgba(6, 95, 70, 0.02); cursor: crosshair; }
+        #brandSearch:focus { outline: none; border-bottom: 1px solid #065F46; }
+    </style>
+</head>
+<body class="p-6 md:p-12 antialiased">
+
+    <nav class="flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.3em] opacity-60 mb-20">
+        <a href="index.html" class="hover:opacity-100 transition-opacity">← Back to Home</a>
+        <div class="flex gap-8">
+            <span>Market: LUXURY_GLOBAL</span>
+            <span>Index: 2A_PRIME_100</span>
+        </div>
+    </nav>
+
+    <header class="mb-16 border-l-2 border-[#065F46] pl-8">
+        <p class="text-[10px] uppercase tracking-[0.5em] font-bold opacity-40 mb-2">// SEMANTIC_INTEGRITY_REGISTRY</p>
+        <h1 class="serif text-5xl italic mb-6">Global Authority Index.</h1>
+        
+        <div class="mt-8 mb-4 max-w-md">
+            <input type="text" id="brandSearch" onkeyup="searchRegistry()" placeholder="FILTER BY BRAND_NAME..." 
+                   class="w-full bg-transparent border-b border-[#065F46]/10 py-2 text-[11px] font-bold uppercase tracking-widest text-emerald-900">
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-6 border-t border-[#065F46]/10">
+            <div>
+                <p class="text-[9px] opacity-40 font-bold mb-1 uppercase uppercase">Index Coverage</p>
+                <p class="text-xl font-bold tracking-tighter">40<span class="text-xs opacity-40 italic">/100</span></p>
+            </div>
+            <div>
+                <p class="text-[9px] opacity-40 font-bold mb-1 uppercase">Network</p>
+                <p class="text-xl font-bold tracking-tighter">BASE L2</p>
+            </div>
+            <div>
+                <p class="text-[9px] opacity-40 font-bold mb-1 uppercase">Protocol Status</p>
+                <p class="text-xl font-bold tracking-tighter text-emerald-600 uppercase">ACTIVE</p>
+            </div>
+            <div>
+                <p class="text-[9px] opacity-40 font-bold mb-1 uppercase">Last Sync</p>
+                <p class="text-xl font-bold tracking-tighter uppercase">05 MAR 2026</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="overflow-x-auto">
+        <table class="w-full text-left text-[11px] font-medium tracking-tight" id="registryTable">
+            <thead>
+                <tr class="uppercase opacity-40 text-[9px] font-bold tracking-widest border-b border-[#065F46]/20">
+                    <th class="pb-4 px-4">Entity Name</th>
+                    <th class="pb-4 px-4">AI-IQ Score</th>
+                    <th class="pb-4 px-4">Status</th>
+                    <th class="pb-4 px-4 text-right">Blockchain Proof (TX)</th>
+                </tr>
+            </thead>
+            <tbody id="registryBody"></tbody>
+        </table>
+    </div>
+
+    <script>
+        const registryData = [
+            { name: "FERRARI", score: "98/100", tx: "0x9cff6631ea0c69bdff7622a6e74dc4914793a7c9777deac73db6d7c789683f0a" },
+            { name: "ROLEX", score: "97/100", tx: "0x3b98dde94bc6e17e297de7dc899dc65e6a1a69aec33aaa26adda98ff6cab6805" },
+            { name: "LOUIS VUITTON", score: "96/100", tx: "0x2d6a31fe5f7a48a3606adf4dcfe049d3a9feef418979f188eba28aebb0ac6cf1" },
+            { name: "PATEK PHILIPPE", score: "96/100", tx: "0x387b5077007356613b8149f00629182263056cf0ee397cea50767eb35601be50" },
+            { name: "DOM PÉRIGNON", score: "96/100", tx: "0x2dbc3c504ce6e440677220a95e88b3b0ca6cf6283494a30b864f5c59209e99a4" },
+            { name: "CHANEL", score: "95/100", tx: "0x46dd0f51b6057e8e6fe2940ddcb0a03c79157315280a17db008fa40f7acfbe03" },
+            { name: "VAN CLEEF & ARPELS", score: "95/100", tx: "0x1a4b98010a9882f9b8ea17afa470e02d8cd1fbdba7f4a58f15379bd97af0271a" },
+            { name: "PORSCHE", score: "95/100", tx: "0xc7822d19198d665dc15c3e549a2d226ccdedecc82296ba54f196b1d7f7aa89db" },
+            { name: "CHÂTEAU MARGAUX", score: "95/100", tx: "0x8f287cfaf1b441a5ef42598855e22a881c3fdb1678df5709172c64895148439c" },
+            { name: "VOGUE", score: "95/100", tx: "0xf895c8caaf106cbf552d4b431e386b68df4ae7d61491f0093fe0012db0689b3e" },
+            { name: "HERMÈS", score: "94/100", tx: "0xcc22b1863e9f19c401f4115439887c0751492831e6aed1a4333ff51f842dffff" },
+            { name: "DIOR", score: "94/100", tx: "0x1e39c34da59cff6fa3e88a83056b87a318744902ca69f0e4244ac5d78a45f0f6" },
+            { name: "AUDEMARS PIGUET", score: "94/100", tx: "0x365ed2fbb4312edc7163aaef44c3c5ef41358788a75a457572b32b675c3c9868" },
+            { name: "LAMBORGHINI", score: "94/100", tx: "0x4c31102d6ff4b15447716a6e9c236b64eb2ade1a95d6fa8ccb9aadee1b6f4b8a" },
+            { name: "RIMOWA", score: "94/100", tx: "0x1e63b77f32af365a857880b7d4c7980b7cf322eded37e2d0b917fddaa771614e" },
+            { name: "JAEGER-LECOULTRE", score: "94/100", tx: "0x527dd3326b4084ce461ba1be531a81b459265ef57b1c654474678f7b5dd131e7" },
+            { name: "CARTIER", score: "93/100", tx: "0xa49f3e24264f7ce6ca529c17a349b1fd3c6ce477ad4dcd633177d330624208b9" },
+            { name: "RICHARD MILLE", score: "93/100", tx: "0x433b019232c38344234ffc62ba53e5d3dcb8866d425e8ca82a67f4859f5f3023" },
+            { name: "BENTLEY", score: "93/100", tx: "0xb34123e9cb4120f08c4b00b47095b7c839c48469e35d772eec07eb2587d93e56" },
+            { name: "HENNESSY", score: "93/100", tx: "0xcce8bb0c2565812424d568149edec10c4b571105d6ab8865dc3ce04261236c2e" },
+            { name: "OMEGA", score: "93/100", tx: "0x144dc8e8ec96fb0f44405fba7505b8ac4e5b276e6973b3a84593d0f916afd1d5" },
+            { name: "TIFFANY & CO", score: "92/100", tx: "0x824bc0a6fc2e3afc0ea0705a17a8e6b1630e5ef777e1b2c6e63852eb1932baf2" },
+            { name: "CELINE", score: "92/100", tx: "0xd03f3734b4a1b67f07bfd8f43939d281b686e5286da2ed2c61c7d55a93f3e316" },
+            { name: "LOEWE", score: "92/100", tx: "0x4a880ce86e761b77edba8c80805c67cd2daee60703954098224b99f5aa413b10" },
+            { name: "ASTON MARTIN", score: "92/100", tx: "0x5f9b02713fd46009d840dd9ae9ef97706b68460936bdca278f735ee9d7a3d308" },
+            { name: "GUCCI", score: "91/100", tx: "0x4809e5417de7ed5657f2e79475549db6e31cb8c6c57b9675dc51d386147a94ff" },
+            { name: "SAINT LAURENT", score: "91/100", tx: "0x684945e452c06e4e945f96732d0448e6e3f9b08c5356b3c7454b4b3a15bd7017" },
+            { name: "MONCLER", score: "91/100", tx: "0xf5f4b3fcddf2e0faf1f145724a037d70d0103e4982d9a76b385b52066f3692a4" },
+            { name: "BOUCHERON", score: "91/100", tx: "0xe2936d6906ec0c759de7479ae175997b1b7825144a3018a3be29f9c2e8ba84bc" },
+            { name: "FENDI", score: "91/100", tx: "0xde60e6ca7c19cf24250c109d3e7a02ce05a964f7192750bec9cf956dc2b0c8a0" },
+            { name: "RANGE ROVER", score: "91/100", tx: "0xbfc16f35f9d4b1cfe39cc96a7b1d000fb54167472c46b52721bc6b2dbcd6f127" },
+            { name: "PRADA", score: "90/100", tx: "0x99176947ffc0e2249d78764116cf95933b6b93640ab36b319907b59bdc5933bc" },
+            { name: "BOTTEGA VENETA", score: "90/100", tx: "0x4bfdedb05e3b9548e12b0dd05c465f57ed483d55e1633b3939c33dd9a6ad3b67" },
+            { name: "GIVENCHY", score: "90/100", tx: "0x55a0f3908713419ce7f3209af15247142f8c6b7f719490a0b52573510094b56b" },
+            { name: "VALENTINO", score: "90/100", tx: "0x2285f4b211bd88dffdc1e2b6a4e46f9a98795ce71edec962f7ba7d415310cfc7" },
+            { name: "BURBERRY", score: "89/100", tx: "0x577a7a507b2a02fff2df2c637096ce59c5bc51c2a5d15506dfae6d5af2e665cc" },
+            { name: "MASERATI", score: "89/100", tx: "0x17c2a22f3134faabdf5f493f1597da035c0bae2b72f927225ef631655e335985" },
+            { name: "BALENCIAGA", score: "88/100", tx: "0xb863425bcd0595cdb36b213ccadee3b38b5e695fc7995b118e77a904b58849bf" },
+            { name: "VERSACE", score: "88/100", tx: "0x350675a3c0bd9bb7ea5b0efe5f1ae2da70ca874e56c0762e6879f4045234b270" },
+            { name: "ZILLI", score: "87/100", tx: "0x158ae0624b7dbb2f69e7da31ab85133ec1ff9ab6551953a3e19c31017958da6b" }
+        ];
+
+        const body = document.getElementById('registryBody');
+
+        function renderRegistry(filter = "") {
+            body.innerHTML = registryData
+                .filter(item => item.name.includes(filter.toUpperCase()))
+                .map(item => `
+                <tr class="brand-row">
+                    <td class="py-6 px-4 serif text-lg italic font-bold">${item.name}</td>
+                    <td class="py-6 px-4 font-bold ${parseInt(item.score) > 90 ? 'text-emerald-600' : 'text-orange-600'}">${item.score}</td>
+                    <td class="py-6 px-4">
+                        <span class="status-dot bg-verified"></span>
+                        <span class="uppercase font-bold tracking-widest text-[9px]">Verified On-Chain</span>
+                    </td>
+                    <td class="py-6 px-4 text-right">
+                        <a href="https://sepolia.basescan.org/tx/${item.tx}" target="_blank" class="text-[10px] border border-[#065F46]/20 px-3 py-1 hover:bg-[#065F46] hover:text-white transition-all font-bold">VIEW PROOF</a>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function searchRegistry() {
+            const val = document.getElementById('brandSearch').value;
+            renderRegistry(val);
+        }
+
+        renderRegistry();
+    </script>
+</body>
+</html>

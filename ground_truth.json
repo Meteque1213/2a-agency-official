@@ -1,0 +1,14 @@
+{
+  "LVMH": {
+    "ceo": "Bernard Arnault",
+    "manufacturing": "France, Italie, Espagne, USA",
+    "flagship_price": "2530 USD",
+    "esg_co2": "Life 360, -55% GHG 2030"
+  },
+  "Hermes": {
+    "ceo": "Axel Dumas",
+    "manufacturing": "France",
+    "flagship_price": "13500 USD",
+    "esg_co2": "Net zero 2035"
+  }
+}
