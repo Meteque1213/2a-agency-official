@@ -9,12 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;900&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; color: #111; }
         .text-emerald { color: #064e3b; }
+        .tracking-ultra { letter-spacing: 0.5em; }
     </style>
 </head>
 <body class="p-8 md:p-20">
 
     <nav class="flex justify-between items-center max-w-7xl mx-auto mb-20">
-        <a href="index.html" class="text-xl font-light tracking-tighter uppercase italic text-black">2A <span class="text-gray-300 ml-1 font-extralight italic">Agency</span></a>
+        <a href="index.html" class="text-xl font-light tracking-tighter uppercase italic text-black">
+            2A <span class="text-gray-300 ml-1 font-extralight italic">Agency</span>
+        </a>
         <div class="flex gap-8">
             <a href="whitepaper.html" class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold italic hover:text-emerald transition-all">Protocol</a>
             <a href="index.html#contact" class="text-[9px] uppercase tracking-ultra text-gray-400 font-bold italic hover:text-emerald transition-all">Secure Access</a>
@@ -23,51 +26,54 @@
 
     <main class="max-w-7xl mx-auto">
         <header class="mb-16">
-            <h2 class="text-[10px] uppercase tracking-ultra text-emerald font-black mb-4 italic underline underline-offset-4">System of Record // Authority Feed</h2>
-            <h1 class="text-6xl font-light tracking-tighter uppercase mb-8">Global Authority Index</h1>
-            <input type="text" id="search-input" placeholder="SEARCH ENTITY..." 
+            <h2 class="text-[10px] uppercase tracking-ultra text-emerald font-black mb-4 italic underline underline-offset-4 decoration-1">System of Record // Authority Feed</h2>
+            <h1 class="text-6xl font-light tracking-tighter uppercase mb-8 italic">Global Authority Index</h1>
+            
+            <input type="text" id="search-input" placeholder="SEARCH ENTITY OR SECTOR..." 
                    class="w-full max-w-md bg-transparent border-b border-gray-200 py-4 px-2 text-xs focus:outline-none focus:border-emerald transition-all font-mono italic">
         </header>
 
         <div class="overflow-x-auto">
             <table class="w-full text-left">
                 <thead>
-                    <tr class="text-[10px] uppercase tracking-widest text-gray-400 border-b border-gray-100">
-                        <th class="pb-6 font-black italic">Entity Identity</th>
-                        <th class="pb-6 font-black italic">Integrity Score</th>
-                        <th class="pb-6 font-black italic">On-Chain Evidence</th>
+                    <tr class="text-[10px] uppercase tracking-widest text-gray-400 border-b border-gray-100 italic font-black">
+                        <th class="pb-6">Entity Identity</th>
+                        <th class="pb-6">Integrity Score</th>
+                        <th class="pb-6">On-Chain Evidence</th>
                     </tr>
                 </thead>
-                <tbody id="registry-body"></tbody>
+                <tbody id="registry-body">
+                    </tbody>
             </table>
         </div>
     </main>
 
     <script src="database.js"></script>
+
     <script>
         const tableBody = document.getElementById('registry-body');
         const searchInput = document.getElementById('search-input');
 
         function renderTable(data) {
-            // TRI : Du meilleur au moins bon
+            // Tri automatique : les meilleurs scores en haut
             const sortedData = [...data].sort((a, b) => b.score - a.score);
             
             tableBody.innerHTML = '';
             sortedData.forEach(item => {
                 tableBody.innerHTML += `
-                    <tr class="border-b border-gray-50 hover:bg-gray-50 transition-colors">
+                    <tr class="border-b border-gray-50 hover:bg-gray-50 transition-colors group">
                         <td class="py-10">
-                            <div class="text-lg font-black uppercase tracking-tighter text-emerald underline decoration-1 underline-offset-4">${item.name}</div>
+                            <div class="text-lg font-black uppercase tracking-tighter text-emerald underline underline-offset-4 decoration-1 italic">${item.name}</div>
                             <div class="text-[10px] text-gray-400 uppercase tracking-widest font-bold mt-1">${item.category}</div>
                         </td>
-                        <td class="py-10">
-                            <div class="text-3xl font-mono text-emerald font-black underline decoration-2 underline-offset-8">${item.score}</div>
+                        <td class="py-10 text-center md:text-left">
+                            <div class="text-4xl font-mono text-emerald font-black underline underline-offset-8 decoration-2">${item.score}</div>
                         </td>
                         <td class="py-10">
                             <div class="flex items-center gap-6">
                                 <div class="text-[10px] font-mono text-gray-300 truncate w-32 uppercase tracking-tighter italic">${item.hash}</div>
-                                <a href="https://etherscan.io/tx/${item.hash}" target="_blank" 
-                                   class="text-[9px] uppercase tracking-widest font-black border-2 border-black px-6 py-3 hover:bg-black hover:text-white transition-all italic shadow-sm">
+                                <a href="https://basescan.org/tx/${item.hash}" target="_blank" 
+                                   class="text-[9px] uppercase tracking-widest font-black border-2 border-black px-6 py-3 hover:bg-black hover:text-white transition-all italic shadow-sm active:scale-95">
                                     Verify Proof
                                 </a>
                             </div>
@@ -77,12 +83,21 @@
             });
         }
 
-        window.onload = () => { if (typeof registryData !== 'undefined') renderTable(registryData); };
+        // Chargement initial
+        window.onload = () => {
+            if (typeof registryData !== 'undefined') {
+                renderTable(registryData);
+            } else {
+                console.error("Erreur : database.js est introuvable ou mal formaté.");
+            }
+        };
 
+        // Système de recherche
         searchInput.addEventListener('input', (e) => {
             const term = e.target.value.toLowerCase();
             const filtered = registryData.filter(item => 
-                item.name.toLowerCase().includes(term) || item.category.toLowerCase().includes(term)
+                item.name.toLowerCase().includes(term) || 
+                item.category.toLowerCase().includes(term)
             );
             renderTable(filtered);
         });
