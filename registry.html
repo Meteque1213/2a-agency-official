@@ -3,85 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Registry | 2A Agency</title>
+    <title>Registry | 2A Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
     <style>
-        body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; }
-        .emerald-text { color: #064e3b; }
-        .btn-emerald { background-color: #064e3b; color: white; transition: all 0.3s ease; }
-        .btn-emerald:hover { background-color: #050505; transform: scale(1.05); }
-        .registry-row:hover { background-color: rgba(6, 78, 59, 0.02); }
+        body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .emerald-brand { color: #064e3b; }
+        .logo-bold { font-weight: 900; letter-spacing: 0.3em; font-size: 15px; text-transform: uppercase; color: #064e3b; }
+        
+        /* Table Styles */
+        .status-badge { font-size: 8px; font-weight: 900; padding: 4px 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .grade-tag { font-family: font-mono; font-size: 9px; font-weight: 700; letter-spacing: 0.1em; }
     </style>
 </head>
-<body class="min-h-screen p-8 md:p-12">
+<body class="min-h-screen flex flex-col p-8 md:p-12">
 
-    <nav class="flex justify-between items-center w-full max-w-7xl mx-auto mb-16">
-        <a href="index.html" class="text-[12px] tracking-[0.5em] font-black uppercase emerald-text">2A Agency</a>
-        <div class="text-[9px] uppercase tracking-widest font-bold opacity-40">Global Forensic Registry v1.0</div>
+    <nav class="flex justify-between items-center w-full max-w-7xl mx-auto mb-20">
+        <a href="index.html" class="logo-bold">2A Agency</a>
+        <div class="text-[9px] uppercase tracking-[0.3em] font-bold opacity-30 italic font-mono">
+            Global Forensic Registry v1.0
+        </div>
     </nav>
 
-    <div class="sticky top-8 z-50 flex justify-end w-full max-w-7xl mx-auto pointer-events-none mb-4">
-        <a href="index.html" class="pointer-events-auto btn-emerald px-8 py-3 text-[10px] font-black uppercase tracking-[0.2em] rounded-sm shadow-2xl">
-            Request Audit
-        </a>
-    </div>
+    <header class="max-w-7xl mx-auto w-full mb-12">
+        <h1 class="text-4xl md:text-5xl font-[900] tracking-tighter uppercase mb-4">
+            Brand <span class="emerald-brand text-black/20">Truth</span> Registry
+        </h1>
+        <div class="h-[1px] w-20 bg-[#064e3b]"></div>
+        <p class="mt-6 text-[10px] uppercase tracking-[0.2em] font-bold opacity-40 max-w-md leading-relaxed">
+            Real-time notarization of sovereign brand assets on Base L2. Monitoring AI hallucinations and identity drift.
+        </p>
+    </header>
 
-    <main class="max-w-7xl mx-auto">
-        <header class="mb-12">
-            <h1 class="text-4xl font-black tracking-tighter uppercase emerald-text mb-2">Global Registry</h1>
-            <p class="text-xs font-bold opacity-30 uppercase tracking-[0.3em]">Real-time AI-IQ & Identity Notarization</p>
-        </header>
+    <main class="max-w-7xl mx-auto w-full overflow-x-auto">
+        <table class="w-full border-collapse">
+            <thead>
+                <tr class="text-[10px] uppercase tracking-[0.3em] opacity-30 border-b border-black/10">
+                    <th class="pb-6 font-black text-left">Entity</th>
+                    <th class="pb-6 font-black text-center">AI-IQ Score</th>
+                    <th class="pb-6 font-black text-center">Audit Status</th>
+                    <th class="pb-6 font-black text-right">Certification Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b border-black/[0.05] hover:bg-black/[0.01] transition">
+                    <td class="py-8">
+                        <div class="text-[12px] font-black uppercase tracking-widest">Goyard</div>
+                        <div class="text-[8px] opacity-30 font-bold uppercase mt-1">Maison de Maroquinerie</div>
+                    </td>
+                    <td class="py-8 text-center">
+                        <span class="font-mono text-lg font-black text-red-600">34</span>
+                    </td>
+                    <td class="py-8 text-center">
+                        <span class="status-badge bg-red-100 text-red-700">Critical Drift</span>
+                    </td>
+                    <td class="py-8 text-right">
+                        <span class="grade-tag opacity-40 uppercase">Unsecured / Forensic-L1</span>
+                    </td>
+                </tr>
 
-        <div class="overflow-x-auto border-t border-black/10">
-            <table class="w-full text-left border-collapse">
-                <thead>
-                    <tr class="text-[10px] uppercase tracking-widest opacity-40 border-b border-black/5">
-                        <th class="px-6 py-8 font-bold text-black">Rank</th>
-                        <th class="px-6 py-8 font-bold text-black">Entity</th>
-                        <th class="px-6 py-8 font-bold text-black">Forensic Index</th>
-                        <th class="px-6 py-8 font-bold text-right text-black">Verification</th>
-                    </tr>
-                </thead>
-                <tbody id="registry-body">
-                    </tbody>
-            </table>
-        </div>
+                <tr class="border-b border-black/[0.05] hover:bg-black/[0.01] transition text-black/40">
+                    <td class="py-8">
+                        <div class="text-[12px] font-black uppercase tracking-widest">Rolex</div>
+                        <div class="text-[8px] opacity-30 font-bold uppercase mt-1">Horlogerie de Luxe</div>
+                    </td>
+                    <td class="py-8 text-center">
+                        <span class="font-mono text-lg font-black emerald-brand">88</span>
+                    </td>
+                    <td class="py-8 text-center">
+                        <span class="status-badge bg-emerald-100 text-[#064e3b]">Notarized</span>
+                    </td>
+                    <td class="py-8 text-right">
+                        <span class="grade-tag emerald-brand uppercase tracking-widest">Certified V.01</span>
+                    </td>
+                </tr>
+
+                <tr class="border-b border-black/[0.05] hover:bg-black/[0.01] transition text-black/40">
+                    <td class="py-8">
+                        <div class="text-[12px] font-black uppercase tracking-widest">Patek Philippe</div>
+                        <div class="text-[8px] opacity-30 font-bold uppercase mt-1">High Horology</div>
+                    </td>
+                    <td class="py-8 text-center">
+                        <span class="font-mono text-lg font-black text-orange-500">52</span>
+                    </td>
+                    <td class="py-8 text-center">
+                        <span class="status-badge bg-orange-100 text-orange-700">Warning</span>
+                    </td>
+                    <td class="py-8 text-right">
+                        <span class="grade-tag opacity-40 uppercase tracking-widest">Forensic-L2</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 
-    <script src="database.js"></script>
-    <script>
-        const getScoreColor = (score) => {
-            if (score >= 80) return 'text-emerald-700 bg-emerald-50 border-emerald-100';
-            if (score >= 50) return 'text-amber-700 bg-amber-50 border-amber-100';
-            return 'text-red-700 bg-red-50 border-red-100';
-        };
+    <footer class="mt-auto pt-20 flex justify-between items-center opacity-20 text-[8px] font-black uppercase tracking-[0.5em]">
+        <div>© 2026 2A Agency | Forensic Intelligence Unit</div>
+        <div class="flex gap-8 italic">
+            <span>Verified by Base L2 Anchor</span>
+            <span>Protocol: 0x2A_Alpha</span>
+        </div>
+    </footer>
 
-        const body = document.getElementById('registry-body');
-        const sortedData = [...registryData].sort((a, b) => b.score - a.score);
-        
-        sortedData.forEach((brand, index) => {
-            const rank = (index + 1).toString().padStart(3, '0');
-            body.innerHTML += `
-                <tr class="registry-row border-b border-black/5">
-                    <td class="px-6 py-6 text-black/20 font-mono text-xs">#${rank}</td>
-                    <td class="px-6 py-6 font-extrabold emerald-text tracking-tight text-sm uppercase">${brand.name}</td>
-                    <td class="px-6 py-6">
-                        <div class="flex flex-col">
-                            <span class="text-xl px-3 py-1 rounded-sm border inline-block w-fit ${getScoreColor(brand.score)} leading-none font-bold">
-                                ${brand.score}
-                            </span>
-                            <span class="text-[8px] uppercase text-black/30 mt-2 font-bold tracking-widest">AI-IQ Score</span>
-                        </div>
-                    </td>
-                    <td class="px-6 py-6 text-right">
-                        <a href="https://basescan.org/tx/${brand.hash}" target="_blank" class="border border-[#064e3b] text-[#064e3b] px-4 py-2 rounded-sm inline-flex items-center gap-2 hover:bg-[#064e3b] hover:text-white transition uppercase font-bold text-[9px]">
-                            Blockchain Proof
-                        </a>
-                    </td>
-                </tr>`;
-        });
-    </script>
 </body>
 </html>
