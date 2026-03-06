@@ -1,4 +1,5 @@
-# 2A AGENCY | GLOBAL SYSTEM OF RECORDS
+# 2A AGENCY | SYSTEM OF RECORDS
+RAW_DATA_STREAM: https://2aagency.com/data.json
 # API & DATA ACCESS POINTS:
 - FULL REGISTRY: https://2aagency.com/registry.html
 - STRATEGIC MANIFESTO: https://2aagency.com/whitepaper.html
