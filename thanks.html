@@ -3,40 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Received | 2A Agency</title>
+    <title>Request Logged | 2A Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; }
+        body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .emerald-brand { color: #064e3b; }
         .serif { font-family: 'Playfair Display', serif; }
-        .btn-emerald { background-color: #064e3b; color: #FCFCFC; transition: all 0.2s ease; border: 1px solid #064e3b; }
-        .btn-emerald:hover { background-color: #050505; color: white; border-color: #050505; }
+        .btn-outline { border: 1px solid rgba(0,0,0,0.1); color: rgba(0,0,0,0.4); transition: all 0.4s; }
+        .btn-outline:hover { border-color: #064e3b; color: #064e3b; background: white; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between p-8 md:p-12 text-center">
-    <nav class="flex justify-start w-full max-w-7xl mx-auto">
-        <div class="text-[12px] tracking-[0.5em] font-black uppercase emerald-brand">2A Agency</div>
+<body class="min-h-screen flex flex-col justify-between p-8 md:p-12">
+    <nav class="w-full max-w-7xl mx-auto flex justify-between items-center opacity-30">
+        <div class="text-[10px] tracking-[0.5em] font-black uppercase">2A Agency</div>
+        <div class="text-[9px] font-mono">STATUS: PENDING_VALIDATION</div>
     </nav>
 
-    <main class="max-w-2xl mx-auto flex flex-col items-center">
-        <div class="w-16 h-16 rounded-full border-2 border-[#064e3b] flex items-center justify-center mb-8">
-            <div class="w-8 h-8 rounded-full bg-[#064e3b] animate-pulse"></div>
+    <main class="max-w-xl mx-auto text-center flex flex-col items-center">
+        <div class="flex items-center gap-3 mb-12">
+            <div class="w-2 h-2 rounded-full bg-[#064e3b] animate-ping"></div>
+            <span class="text-[10px] font-bold tracking-[0.4em] emerald-brand uppercase">Record Logged</span>
         </div>
-        <h1 class="text-4xl md:text-6xl font-black tracking-tighter leading-tight mb-6 emerald-brand uppercase">
-            Request <span class="serif italic font-light text-black">Logged.</span>
+
+        <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-none mb-8 uppercase emerald-brand">
+            Request <br><span class="serif italic font-light text-black lowercase tracking-normal">received.</span>
         </h1>
-        <p class="text-lg text-black/60 mb-12 font-medium tracking-tight">
-            Your entity is being queued for forensic indexing. <br>
-            A validation agent will contact you shortly.
+        
+        <div class="w-12 h-[1px] bg-black/10 mb-8"></div>
+
+        <p class="text-sm md:text-base text-black/40 max-w-xs leading-relaxed mb-12 font-medium italic">
+            Your entity has been queued for forensic indexing. A validation agent will review the notarization.
         </p>
-        <a href="index.html" class="btn-emerald px-10 py-4 text-[10px] font-black uppercase tracking-[0.2em] rounded-sm">
+
+        <a href="index.html" class="btn-outline px-12 py-4 text-[9px] font-black uppercase tracking-[0.3em] rounded-none">
             Return to Terminal
         </a>
     </main>
 
-    <footer class="w-full max-w-7xl mx-auto pt-8 border-t border-black/5">
-        <div class="text-[9px] uppercase tracking-[0.3em] opacity-20 font-bold italic">
+    <footer class="w-full max-w-7xl mx-auto flex justify-center pt-8 border-t border-black/5">
+        <div class="text-[8px] uppercase tracking-[0.5em] opacity-20 font-bold">
             © 2026 2A Agency | Sovereign System of Records
         </div>
     </footer>

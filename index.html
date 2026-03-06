@@ -7,71 +7,81 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; }
+        body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .emerald-brand { color: #064e3b; }
         .serif { font-family: 'Playfair Display', serif; }
-        .btn-emerald { background-color: #064e3b; color: #FCFCFC; transition: all 0.2s ease; border: 1px solid #064e3b; }
-        .btn-emerald:hover { background-color: #050505; color: white; border-color: #050505; }
-        .btn-emerald:disabled { opacity: 0.5; cursor: not-allowed; }
-        input { border: 1px solid rgba(0,0,0,0.1); background-color: white; color: #050505; text-align: center; }
+        
+        /* Bouton Institutionnel */
+        .btn-emerald { background-color: #064e3b; color: #FCFCFC; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); border: 1px solid #064e3b; }
+        .btn-emerald:hover { background-color: #050505; color: white; border-color: #050505; transform: translateY(-1px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .btn-emerald:disabled { opacity: 0.6; cursor: not-allowed; }
+
+        /* Inputs Minimalistes */
+        input { border: 1px solid rgba(0,0,0,0.08); background-color: white; color: #050505; transition: all 0.3s ease; }
         input:focus { border-color: #064e3b; outline: none; box-shadow: 0 0 0 1px #064e3b; }
-        ::placeholder { color: rgba(0,0,0,0.2); font-size: 9px; letter-spacing: 0.1em; }
+        ::placeholder { color: rgba(0,0,0,0.2); font-size: 9px; letter-spacing: 0.15em; font-weight: 700; }
+        
+        /* Typographie */
+        .tight-tracking { letter-spacing: -0.04em; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between p-8 md:p-12">
 
     <nav class="flex justify-between items-center w-full max-w-7xl mx-auto">
-        <div class="text-[12px] tracking-[0.5em] font-black uppercase emerald-brand">2A Agency</div>
-        <div class="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-bold">
-            <a href="registry.html" class="emerald-brand underline underline-offset-8">Registry</a>
-            <a href="glossary.html" class="opacity-40 hover:opacity-100 transition">Glossary</a>
-            <a href="whitepaper.html" class="opacity-40 hover:opacity-100 transition">Protocol</a>
+        <div class="text-[12px] tracking-[0.6em] font-black uppercase emerald-brand">2A Agency</div>
+        <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.2em] font-bold">
+            <a href="registry.html" class="emerald-brand underline underline-offset-[12px] decoration-1 hover:opacity-70 transition">Registry</a>
+            <a href="glossary.html" class="opacity-30 hover:opacity-100 hover:emerald-brand transition">Glossary</a>
+            <a href="whitepaper.html" class="opacity-30 hover:opacity-100 hover:emerald-brand transition">Protocol</a>
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto text-center flex flex-col items-center mt-32">
-        <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-tight mb-6 emerald-brand">
-            Certainty is the <br>new <span class="serif italic font-light opacity-90 text-black">moat.</span>
+    <main class="max-w-4xl mx-auto text-center flex flex-col items-center mt-32 md:mt-40 px-6">
+        <h1 class="text-7xl md:text-[110px] font-black tight-tracking leading-[0.85] mb-10 emerald-brand uppercase">
+            Certainty <br>
+            <span class="text-black opacity-10">is the</span> <br>
+            <span class="serif italic font-light text-black lowercase tracking-normal">new</span> moat.
         </h1>
         
-        <p class="text-lg md:text-xl text-black/60 max-w-2xl leading-relaxed mb-12 italic">
+        <p class="text-base md:text-lg text-black/40 max-w-lg leading-relaxed mb-16 font-medium italic">
             The System of Record for the generative age. <br>
             We notarize brand truth <span class="emerald-brand font-bold">on-chain</span> to end AI hallucinations.
         </p>
 
-        <form id="audit-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col gap-4 w-full max-w-sm">
+        <form id="audit-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col gap-3 w-full max-w-[350px]">
             <input 
                 type="text" 
                 name="brand" 
-                placeholder="BRAND" 
+                placeholder="BRAND / ENTITY" 
                 required
-                class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest rounded-sm w-full"
+                class="px-6 py-5 text-[10px] font-bold uppercase tracking-[0.2em] rounded-none w-full text-center"
             >
             <input 
                 type="email" 
                 name="email" 
-                placeholder="EMAIL" 
+                placeholder="OFFICIAL EMAIL" 
                 required
-                class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest rounded-sm w-full"
+                class="px-6 py-5 text-[10px] font-bold uppercase tracking-[0.2em] rounded-none w-full text-center"
             >
-            <button type="submit" id="submit-btn" class="btn-emerald px-8 py-4 text-[10px] font-black uppercase tracking-[0.2em] rounded-sm w-full mt-2">
+            <button type="submit" id="submit-btn" class="btn-emerald mt-4 px-8 py-5 text-[10px] font-black uppercase tracking-[0.3em] rounded-none w-full">
                 Request Audit
             </button>
-            <p class="text-[8px] uppercase tracking-[0.3em] opacity-30 font-bold mt-2">
-                Continuous Monitoring for Sovereign Entities.
+            
+            <p class="text-[7px] uppercase tracking-[0.4em] opacity-20 font-bold mt-8 leading-loose">
+                High-Fidelity Monitoring <br> For Sovereign Digital Assets
             </p>
         </form>
     </main>
 
-    <footer class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end md:items-center gap-8 border-t border-black/5 pt-8">
+    <footer class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end md:items-center gap-8 border-t border-black/5 pt-10">
         <div class="flex flex-col gap-1 text-left">
-            <span class="text-[9px] uppercase tracking-widest opacity-40 font-bold">Network Status</span>
-            <div class="flex items-center gap-2">
+            <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 font-bold">Network Status</span>
+            <div class="flex items-center gap-3">
                 <div class="w-1.5 h-1.5 rounded-full bg-[#064e3b] animate-pulse"></div>
-                <span class="text-[9px] font-mono opacity-70 tracking-wider font-bold uppercase">Base L2 Anchor Active</span>
+                <span class="text-[9px] font-mono opacity-60 tracking-tighter font-bold uppercase tracking-[0.1em]">BASE_L2_ANCHOR_ACTIVE</span>
             </div>
         </div>
-        <div class="text-[9px] uppercase tracking-[0.3em] opacity-20 font-bold text-right italic">
+        <div class="text-[9px] uppercase tracking-[0.4em] opacity-20 font-bold text-right italic">
             © 2026 2A Agency | Forensic Intelligence Unit
         </div>
     </footer>
@@ -81,31 +91,25 @@
         const button = document.getElementById("submit-btn");
 
         form.addEventListener("submit", async (event) => {
-            event.preventDefault(); // Stop la redirection standard de Formspree
-            
+            event.preventDefault();
             button.disabled = true;
-            button.innerText = "NOTARIZING...";
+            button.innerHTML = `<span class="animate-pulse tracking-[0.5em]">NOTARIZING...</span>`;
 
             const data = new FormData(event.target);
-            
             try {
                 const response = await fetch(event.target.action, {
                     method: form.method,
                     body: data,
                     headers: { 'Accept': 'application/json' }
                 });
-
                 if (response.ok) {
-                    // Succès : On redirige manuellement vers thanks.html
                     window.location.href = "thanks.html";
                 } else {
-                    const errorData = await response.json();
-                    alert("Submission error: " + (errorData.error || "Please try again."));
+                    alert("Error. Please verify your entries.");
                     button.disabled = false;
                     button.innerText = "REQUEST AUDIT";
                 }
             } catch (error) {
-                alert("Network error. Check your connection.");
                 button.disabled = false;
                 button.innerText = "REQUEST AUDIT";
             }
