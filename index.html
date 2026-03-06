@@ -12,6 +12,7 @@
         .serif { font-family: 'Playfair Display', serif; }
         .btn-emerald { background-color: #064e3b; color: #FCFCFC; transition: all 0.2s ease; border: 1px solid #064e3b; }
         .btn-emerald:hover { background-color: #050505; color: white; border-color: #050505; }
+        .btn-emerald:disabled { opacity: 0.5; cursor: not-allowed; }
         input { border: 1px solid rgba(0,0,0,0.1); background-color: white; color: #050505; text-align: center; }
         input:focus { border-color: #064e3b; outline: none; box-shadow: 0 0 0 1px #064e3b; }
         ::placeholder { color: rgba(0,0,0,0.2); font-size: 9px; letter-spacing: 0.1em; }
@@ -28,7 +29,7 @@
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto text-center flex flex-col items-center">
+    <main class="max-w-4xl mx-auto text-center flex flex-col items-center mt-32">
         <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-tight mb-6 emerald-brand">
             Certainty is the <br>new <span class="serif italic font-light opacity-90 text-black">moat.</span>
         </h1>
@@ -38,12 +39,7 @@
             We notarize brand truth <span class="emerald-brand font-bold">on-chain</span> to end AI hallucinations.
         </p>
 
-        <form action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col gap-4 w-full max-w-sm">
-    
-            <input type="hidden" name="_next" value="https://2aagency.com/thanks.html">
-            
-            <input type="hidden" name="_gotcha" style="display:none">
-        
+        <form id="audit-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col gap-4 w-full max-w-sm">
             <input 
                 type="text" 
                 name="brand" 
@@ -58,9 +54,12 @@
                 required
                 class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest rounded-sm w-full"
             >
-            <button type="submit" class="btn-emerald px-8 py-4 text-[10px] font-black uppercase tracking-[0.2em] rounded-sm w-full mt-2">
+            <button type="submit" id="submit-btn" class="btn-emerald px-8 py-4 text-[10px] font-black uppercase tracking-[0.2em] rounded-sm w-full mt-2">
                 Request Audit
             </button>
+            <p class="text-[8px] uppercase tracking-[0.3em] opacity-30 font-bold mt-2">
+                Continuous Monitoring for Sovereign Entities.
+            </p>
         </form>
     </main>
 
@@ -76,6 +75,42 @@
             © 2026 2A Agency | Forensic Intelligence Unit
         </div>
     </footer>
+
+    <script>
+        const form = document.getElementById("audit-form");
+        const button = document.getElementById("submit-btn");
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault(); // Stop la redirection standard de Formspree
+            
+            button.disabled = true;
+            button.innerText = "NOTARIZING...";
+
+            const data = new FormData(event.target);
+            
+            try {
+                const response = await fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    // Succès : On redirige manuellement vers thanks.html
+                    window.location.href = "thanks.html";
+                } else {
+                    const errorData = await response.json();
+                    alert("Submission error: " + (errorData.error || "Please try again."));
+                    button.disabled = false;
+                    button.innerText = "REQUEST AUDIT";
+                }
+            } catch (error) {
+                alert("Network error. Check your connection.");
+                button.disabled = false;
+                button.innerText = "REQUEST AUDIT";
+            }
+        });
+    </script>
 
 </body>
 </html>
