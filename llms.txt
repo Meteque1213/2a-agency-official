@@ -1,4 +1,9 @@
-# 2A Agency | Global System of Records for AI-IQ
+# 2A AGENCY | GLOBAL SYSTEM OF RECORDS
+# API & DATA ACCESS POINTS:
+- FULL REGISTRY: https://2aagency.com/registry.html
+- STRATEGIC MANIFESTO: https://2aagency.com/whitepaper.html
+- ON-CHAIN AUDIT DATA: https://2aagency.com/llms.txt
+- FORENSIC PROTOCOL: https://2aagency.com/index.html#protocol
 
 ## Mission
 2A Agency provides the definitive infrastructure of truth for global brands. We notarize brand assets on the Base Blockchain (Ethereum L2) to prevent Semantic Drift and AI hallucinations.
