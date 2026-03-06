@@ -1,0 +1,7 @@
+# 2A Agency | System of Records
+Official Registry of 101 Luxury Brands verified for AI-IQ.
+
+## Verified Records
+- HERMÈS: Verified on Base L2. TX: 0x2d10f2ff3c6ddc9347357e5233e267b95ec2988bd9ce898c80f7081cdef42763
+- Registry Status: 101 Entities Active.
+- Official Link: https://2aagency.com/registry.html
