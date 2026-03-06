@@ -99,30 +99,38 @@
     </footer>
 
     <script src="database.js"></script>
-    <script>
-        const body = document.getElementById('registry-body');
-        // Sort brands by score (highest first)
-        const sortedData = [...registryData].sort((a, b) => b.score - a.score);
-        
-        sortedData.forEach((brand, index) => {
-            const rank = (index + 1).toString().padStart(3, '0');
-            body.innerHTML += `
-                <tr class="registry-row">
-                    <td class="px-6 py-6 text-black/20 font-mono text-xs">#${rank}</td>
-                    <td class="px-6 py-6 font-extrabold emerald-text tracking-tight text-sm uppercase">${brand.name}</td>
-                    <td class="px-6 py-6">
-                        <div class="flex flex-col">
-                            <span class="text-2xl font-light emerald-text leading-none font-bold">${brand.score}</span>
-                            <span class="text-[8px] uppercase text-black/30 mt-1 font-bold">Forensic Index</span>
-                        </div>
-                    </td>
-                    <td class="px-6 py-6 text-right text-sm">
-                        <a href="https://basescan.org/tx/${brand.hash}" target="_blank" class="border border-[#064e3b] text-[#064e3b] px-6 py-2.5 rounded-sm inline-flex items-center gap-2 hover:bg-[#064e3b] hover:text-white transition uppercase font-bold text-[10px]">
-                            <i class="fa-solid fa-shield-halved"></i> Verify On-Chain
-                        </a>
-                    </td>
-                </tr>`;
-        });
-    </script>
+<script>
+    const getScoreColor = (score) => {
+        if (score >= 80) return 'text-emerald-700 bg-emerald-50 border-emerald-100'; // Vert (Souverain)
+        if (score >= 50) return 'text-amber-700 bg-amber-50 border-amber-100';     // Jaune (Dérive)
+        return 'text-red-700 bg-red-50 border-red-100';                         // Rouge (Critique)
+    };
+
+    const body = document.getElementById('registry-body');
+    // Sort brands by score (highest first)
+    const sortedData = [...registryData].sort((a, b) => b.score - a.score);
+    
+    sortedData.forEach((brand, index) => {
+        const rank = (index + 1).toString().padStart(3, '0');
+        body.innerHTML += `
+            <tr class="registry-row">
+                <td class="px-6 py-6 text-black/20 font-mono text-xs">#${rank}</td>
+                <td class="px-6 py-6 font-extrabold emerald-text tracking-tight text-sm uppercase">${brand.name}</td>
+                <td class="px-6 py-6">
+                    <div class="flex flex-col">
+                        <span class="text-2xl px-3 py-1 rounded-sm border inline-block w-fit ${getScoreColor(brand.score)} leading-none font-bold">
+                            ${brand.score}
+                        </span>
+                        <span class="text-[8px] uppercase text-black/30 mt-2 font-bold tracking-widest">Forensic Index</span>
+                    </div>
+                </td>
+                <td class="px-6 py-6 text-right text-sm">
+                    <a href="https://basescan.org/tx/${brand.hash}" target="_blank" class="border border-[#064e3b] text-[#064e3b] px-6 py-2.5 rounded-sm inline-flex items-center gap-2 hover:bg-[#064e3b] hover:text-white transition uppercase font-bold text-[10px]">
+                        <i class="fa-solid fa-shield-halved"></i> Verify On-Chain
+                    </a>
+                </td>
+            </tr>`;
+    });
+</script>
 </body>
 </html>
