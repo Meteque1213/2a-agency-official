@@ -1,3 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /data.json
+Allow: /llms.txt
+
 Sitemap: https://2aagency.com/sitemap.xml
