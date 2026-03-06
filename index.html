@@ -5,91 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2A Agency | The System of Record</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,900;1,400&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .emerald-brand { color: #064e3b; }
-        .serif { font-family: 'Playfair Display', serif; }
         
-        /* Bouton avec plus d'impact */
-        .btn-emerald { background-color: #064e3b; color: #FCFCFC; transition: all 0.4s ease; border: 1px solid #064e3b; cursor: pointer; }
-        .btn-emerald:hover { background-color: #050505; color: white; border-color: #050505; transform: scale(1.02); }
-        .btn-emerald:disabled { opacity: 0.6; cursor: not-allowed; }
+        /* LA TYPO ACQUA DI PARMA */
+        .acqua-serif { 
+            font-family: 'Bodoni Moda', serif; 
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
 
-        input { border: 1px solid rgba(0,0,0,0.1); background-color: white; color: #050505; text-align: center; transition: all 0.3s ease; }
+        .btn-emerald { background-color: #064e3b; color: #FCFCFC; transition: all 0.4s ease; border: 1px solid #064e3b; }
+        .btn-emerald:hover { background-color: #050505; color: white; transform: translateY(-1px); }
+        .btn-emerald:disabled { opacity: 0.6; }
+
+        input { border: 1px solid rgba(0,0,0,0.1); background-color: white; text-align: center; }
         input:focus { border-color: #064e3b; outline: none; }
         ::placeholder { color: rgba(0,0,0,0.2); font-size: 9px; letter-spacing: 0.2em; font-weight: 700; }
-        
-        .title-giant { font-size: clamp(3rem, 12vw, 7.5rem); line-height: 0.85; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between p-8 md:p-12">
 
     <nav class="flex justify-between items-center w-full max-w-7xl mx-auto">
-        <div class="text-[14px] tracking-[0.5em] font-black uppercase emerald-brand">2A Agency</div>
-        <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-widest font-bold">
-            <a href="registry.html" class="emerald-brand underline underline-offset-8 decoration-2">Registry</a>
-            <a href="glossary.html" class="opacity-40 hover:opacity-100 transition">Glossary</a>
-            <a href="whitepaper.html" class="opacity-40 hover:opacity-100 transition">Protocol</a>
+        <div class="text-[14px] tracking-[0.6em] font-black uppercase emerald-brand acqua-serif">2A Agency</div>
+        <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.2em] font-bold">
+            <a href="registry.html" class="emerald-brand underline underline-offset-8">Registry</a>
+            <a href="glossary.html" class="opacity-40">Glossary</a>
+            <a href="whitepaper.html" class="opacity-40">Protocol</a>
         </div>
     </nav>
 
-    <main class="max-w-5xl mx-auto text-center flex flex-col items-center mt-24">
-        <h1 class="title-giant font-black tracking-tighter emerald-brand uppercase">
+    <main class="max-w-5xl mx-auto text-center flex flex-col items-center mt-32">
+        <h1 class="text-6xl md:text-8xl acqua-serif font-black emerald-brand leading-[0.9]">
             Certainty <br>
-            <span class="text-black opacity-20">is the</span> <br>
-            <span class="serif italic font-light text-black lowercase tracking-tight">new</span> moat.
+            <span class="text-black italic font-light lowercase opacity-20 tracking-normal">is the</span> <br>
+            new moat.
         </h1>
         
-        <p class="text-lg md:text-xl text-black/50 max-w-2xl leading-relaxed mt-12 mb-16 italic font-medium">
+        <p class="text-lg md:text-xl text-black/40 max-w-xl leading-relaxed mt-12 mb-16 italic">
             The System of Record for the generative age. <br>
-            We notarize brand truth <span class="emerald-brand font-bold">on-chain</span> to end AI hallucinations.
+            Notarizing brand truth <span class="emerald-brand font-bold">on-chain</span>.
         </p>
 
-        <form id="audit-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col gap-4 w-full max-w-sm">
-            <input type="text" name="brand" placeholder="BRAND / ENTITY" required class="px-6 py-5 text-[10px] font-bold uppercase tracking-widest rounded-none">
+        <form id="audit-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col gap-3 w-full max-w-[340px]">
+            <input type="text" name="brand" placeholder="BRAND NAME" required class="px-6 py-5 text-[10px] font-bold uppercase tracking-widest rounded-none">
             <input type="email" name="email" placeholder="OFFICIAL EMAIL" required class="px-6 py-5 text-[10px] font-bold uppercase tracking-widest rounded-none">
             
-            <button type="submit" id="submit-btn" class="btn-emerald px-8 py-5 text-[11px] font-black uppercase tracking-[0.3em] rounded-none mt-2 shadow-lg">
+            <button type="submit" id="submit-btn" class="btn-emerald px-8 py-5 text-[11px] font-black uppercase tracking-[0.4em] rounded-none mt-4">
                 Request Audit
             </button>
             
-            <p class="text-[8px] uppercase tracking-[0.4em] opacity-30 font-bold mt-8">
-                Continuous Monitoring for Sovereign Entities.
+            <p class="text-[7px] uppercase tracking-[0.4em] opacity-20 font-bold mt-10 leading-loose">
+                Forensic Intelligence <br> For Sovereign Entities
             </p>
         </form>
     </main>
 
-    <footer class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end md:items-center gap-8 border-t border-black/5 pt-10">
-        <div class="flex flex-col gap-1 text-left">
-            <span class="text-[9px] uppercase tracking-widest opacity-40 font-bold">Network Status</span>
-            <div class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-[#064e3b] animate-pulse"></div>
-                <span class="text-[9px] font-mono opacity-70 tracking-wider font-bold">BASE L2 ANCHOR ACTIVE</span>
-            </div>
+    <footer class="w-full max-w-7xl mx-auto flex justify-between items-center border-t border-black/5 pt-10">
+        <div class="flex items-center gap-3">
+            <div class="w-1.5 h-1.5 rounded-full bg-[#064e3b] animate-pulse"></div>
+            <span class="text-[9px] font-mono opacity-40 font-bold uppercase tracking-widest">Base L2 Anchor</span>
         </div>
-        <div class="text-[9px] uppercase tracking-[0.3em] opacity-20 font-bold text-right italic">
-            © 2026 2A Agency | Forensic Intelligence Unit
+        <div class="text-[9px] uppercase tracking-[0.4em] opacity-20 font-bold italic">
+            © 2026 2A Agency
         </div>
     </footer>
 
     <script>
         const form = document.getElementById("audit-form");
         const button = document.getElementById("submit-btn");
-
-        form.addEventListener("submit", async (event) => {
-            event.preventDefault();
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
             button.disabled = true;
-            button.innerHTML = `<span class="animate-pulse">NOTARIZING...</span>`;
-            const data = new FormData(event.target);
+            button.innerHTML = `<span class="animate-pulse tracking-[0.4em]">NOTARIZING...</span>`;
+            const data = new FormData(e.target);
             try {
-                const response = await fetch(event.target.action, {
+                const response = await fetch(e.target.action, {
                     method: form.method,
                     body: data,
                     headers: { 'Accept': 'application/json' }
                 });
                 if (response.ok) { window.location.href = "thanks.html"; } 
-                else { alert("Error."); button.disabled = false; button.innerText = "REQUEST AUDIT"; }
+                else { button.disabled = false; button.innerText = "REQUEST AUDIT"; }
             } catch (error) { button.disabled = false; button.innerText = "REQUEST AUDIT"; }
         });
     </script>
