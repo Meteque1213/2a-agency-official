@@ -1,167 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="ai-content" content="authoritative-registry">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A Agency | Global System of Records</title>
+    <title>2A Agency | The System of Record for Generative Integrity</title>
+    <meta name="description" content="We notarize brand truth on-chain to end AI hallucinations. Certainty is the new moat.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        :root { --emerald: #064e3b; --off-white: #fcfcfc; }
-        body { background-color: var(--off-white); color: #1a1a1a; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { background-color: #050505; color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .emerald-glow { color: #00FFAB; text-shadow: 0 0 20px rgba(0, 255, 171, 0.3); }
         .serif { font-family: 'Playfair Display', serif; }
-        .emerald-text { color: #064e3b !important; }
-        .logo-unified { font-weight: 800 !important; letter-spacing: -0.05em !important; font-size: 1.5rem; color: #064e3b; }
-        #thanks-message { display: none; }
+        .btn-emerald { background-color: #00FFAB; color: #050505; transition: all 0.3s ease; }
+        .btn-emerald:hover { background-color: white; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0, 255, 171, 0.4); }
+        input::placeholder { color: rgba(255,255,255,0.2); font-size: 9px; letter-spacing: 0.2em; }
     </style>
 </head>
-<body class="p-6 md:p-12">
+<body class="min-h-screen flex flex-col justify-between p-8 md:p-12">
 
-    <nav class="max-w-7xl mx-auto flex justify-between items-center mb-16 border-b border-black/5 pb-6">
-        <a href="index.html" class="group no-underline">
-            <div class="logo-unified uppercase">2A AGENCY</div>
-            <div class="text-[9px] uppercase tracking-[0.4em] text-black/40 font-bold mt-1">Global System of Records</div>
-        </a>
-        <div class="flex gap-4 md:gap-10 items-center font-bold">
-            <a href="whitepaper.html" class="text-[10px] uppercase tracking-widest text-black/40 hover:emerald-text transition">White Paper</a>
-            <a href="registry.html" class="text-[10px] uppercase tracking-widest text-black/40 hover:emerald-text transition">Index</a>
-            <a href="#contact" class="bg-[#064e3b] text-white px-6 py-3 text-[10px] uppercase tracking-widest rounded-sm shadow-lg">Claim Your Record</a>
+    <nav class="flex justify-between items-center w-full max-w-7xl mx-auto">
+        <div class="text-[10px] tracking-[0.5em] font-black uppercase opacity-80">2A Agency</div>
+        <div class="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-bold opacity-40">
+            <a href="registry.html" class="hover:opacity-100 transition underline underline-offset-8">Registry</a>
+            <a href="glossary.html" class="hover:opacity-100 transition">Glossary</a>
+            <a href="whitepaper.html" class="hover:opacity-100 transition">Protocol</a>
         </div>
     </nav>
 
-    <header class="max-w-5xl mx-auto text-center mb-24">
-        <h1 class="serif text-6xl md:text-8xl emerald-text italic mb-6 leading-tight">Certainty is <br>the new moat.</h1>
-        <div class="max-w-3xl mx-auto space-y-6 text-center">
-            <p class="text-2xl font-light text-black/60 italic leading-relaxed">
-                In the era of synthetic abundance, <span class="emerald-text font-semibold">Integrity is the only Sovereign Asset.</span>
-            </p>
-            <p class="text-lg text-black/50 leading-relaxed font-medium uppercase tracking-tight">
-                2A Agency establishes the <span class="emerald-text font-bold">SYSTEM OF RECORDS</span> for the global market. 
-                We notarize brand truth on the blockchain to protect your legacy.
-            </p>
-        </div>
-    </header>
-
-    <section class="max-w-5xl mx-auto my-24 p-4">
-        <div class="text-center mb-12">
-            <h3 class="text-[10px] uppercase tracking-[0.5em] emerald-text font-bold mb-4 italic">Real-Time Drift Analysis</h3>
-            <h2 class="serif text-4xl italic">AI Hallucination vs. 2A Ground Truth</h2>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8 relative">
-            <div class="border border-red-100 bg-red-50/40 p-10 rounded-sm relative opacity-80">
-                <div class="absolute top-4 right-4 text-[9px] font-mono text-red-500 animate-pulse uppercase font-bold tracking-widest">● Synthetic Drift</div>
-                <h4 class="text-xs font-bold uppercase mb-6 opacity-40">AI Hallucination (LLM)</h4>
-                <div class="space-y-4 font-mono text-sm">
-                    <div class="opacity-40 line-through decoration-red-500/50 font-bold"><span class="block text-[10px] uppercase opacity-60 mb-1">Brand Origin</span>Inferred Data</div>
-                    <div class="text-red-700 bg-red-100/60 p-4 border-l-4 border-red-500 shadow-sm font-bold"><span class="block text-[10px] uppercase opacity-60 mb-1">Inventory Status</span>Hallucination</div>
-                    <div class="opacity-40 font-bold"><span class="block text-[10px] uppercase opacity-60 mb-1">Market Value</span>Estimated / Volatile</div>
-                </div>
-            </div>
-            <div class="bg-[#064e3b] text-white p-10 rounded-sm shadow-2xl md:scale-105 z-10 border border-emerald-900 relative">
-                <div class="absolute top-4 right-4 text-[9px] font-mono text-emerald-300 uppercase font-bold tracking-widest font-bold">● 2A Sovereign Node</div>
-                <h4 class="text-xs font-bold uppercase mb-6 opacity-60 text-white font-bold tracking-widest">2A Agency Certified Record</h4>
-                <div class="space-y-4 font-mono text-sm text-white font-bold">
-                    <div class="border-l-4 border-emerald-400 pl-4 font-bold"><span class="block text-[10px] uppercase text-emerald-300 mb-1 font-bold">Brand Origin</span>Certified Tuscany</div>
-                    <div class="border-l-4 border-emerald-400 pl-4 font-bold"><span class="block text-[10px] uppercase text-emerald-300 mb-1 font-bold">Audit Status</span>Verified On-Chain</div>
-                    <div class="border-l-4 border-emerald-400 pl-4 italic font-bold"><span class="block text-[10px] uppercase text-emerald-300 mb-1 italic font-bold">AI-IQ Score</span>98 / 100</div>
-                </div>
-                <div class="mt-8 pt-4 border-t border-white/10 text-[9px] text-emerald-300 uppercase tracking-widest font-bold font-mono italic">
-                    Verified on Base L2 Blockchain
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="protocol" class="max-w-5xl mx-auto py-24 border-y border-black/5 px-4 my-32">
-        <h2 class="serif text-5xl italic emerald-text mb-16 text-center">The Forensic Protocol</h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
-            <div>
-                <div class="text-[10px] font-bold text-black/20 mb-4 tracking-widest italic uppercase font-mono">Stage 01</div>
-                <h3 class="font-bold uppercase tracking-tighter mb-4 text-xs emerald-text">Detection</h3>
-                <p class="text-xs text-black/50 leading-relaxed font-medium">Scanning Global LLMs to identify "Semantic Drift".</p>
-            </div>
-            <div>
-                <div class="text-[10px] font-bold text-black/20 mb-4 tracking-widest italic uppercase font-mono tracking-tighter">Stage 02</div>
-                <h3 class="font-bold uppercase tracking-tighter mb-4 text-xs emerald-text">Correction</h3>
-                <p class="text-xs text-black/50 leading-relaxed font-medium">Synthesis of the "Master Record".</p>
-            </div>
-            <div>
-                <div class="text-[10px] font-bold text-black/20 mb-4 tracking-widest italic uppercase font-mono tracking-tighter">Stage 03</div>
-                <h3 class="font-bold uppercase tracking-tighter mb-4 text-xs emerald-text">Anchoring</h3>
-                <p class="text-xs text-black/50 leading-relaxed font-medium">Cryptographic notarization on Base L2.</p>
-            </div>
-            <div>
-                <div class="text-[10px] font-bold text-black/20 mb-4 tracking-widest italic uppercase font-mono tracking-tighter">Stage 04</div>
-                <h3 class="font-bold uppercase tracking-tighter mb-4 text-xs emerald-text">Immunity</h3>
-                <p class="text-xs text-black/50 leading-relaxed font-medium">Signal distribution to AI agents.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="max-w-7xl mx-auto my-32 text-center px-6">
-        <div id="form-container">
-            <h3 class="serif text-4xl md:text-5xl italic mb-6">Secure your Brand's integrity</h3>
-            <p class="text-black/50 text-xl max-w-3xl mx-auto mb-12 leading-relaxed font-medium">
-                Join the System of Records. Request a professional audit.
-            </p>
-            
-            <form action="https://formspree.io/f/xykngdbz" method="POST" id="audit-form" class="max-w-md mx-auto space-y-4">
-                <input type="email" name="email" placeholder="professional@brand.com" required 
-                       class="w-full px-6 py-4 bg-white border border-black/10 rounded-sm font-mono text-sm focus:outline-none focus:border-[#064e3b]">
-                <textarea name="message" placeholder="Brand inquiry..." rows="3" 
-                          class="w-full px-6 py-4 bg-white border border-black/10 rounded-sm font-mono text-sm focus:outline-none focus:border-[#064e3b]"></textarea>
-                <button type="submit" class="w-full bg-[#064e3b] text-white px-12 py-5 text-sm font-bold uppercase tracking-[0.2em] rounded-sm hover:opacity-90 transition-all shadow-xl font-bold">
-                    Request Forensic Audit
-                </button>
-            </form>
-        </div>
-
-        <div id="thanks-message" class="py-20 animate-fade-in text-center flex flex-col items-center justify-center min-h-[400px]">
-    
-            <h1 class="serif text-7xl md:text-9xl emerald-text italic mb-10 tracking-tighter">Thank You.</h1>
-            
-            <p class="text-[16px] md:text-[18px] text-black/60 italic leading-relaxed max-w-xl mx-auto font-medium">
-                Your request has been <span class="emerald-text font-bold">notarized</span>. Our forensic team will contact you shortly to secure your digital legacy.
-            </p>
-            
-            <button onclick="location.reload()" class="mt-16 text-[10px] uppercase tracking-[0.4em] font-bold text-black/30 border-b border-black/10 pb-3 hover:border-black/30 hover:text-black/50 transition">
-                Return
-            </button>
+    <main class="max-w-4xl mx-auto text-center flex flex-col items-center">
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-tight mb-6">
+            Certainty is the <br>new <span class="serif italic font-light opacity-90">moat.</span>
+        </h1>
         
+        <p class="text-lg md:text-xl text-white/50 max-w-2xl leading-relaxed mb-12">
+            The System of Record for the generative age. <br class="hidden md:block">
+            We notarize brand truth <span class="emerald-glow font-bold">on-chain</span> to end AI hallucinations.
+        </p>
+
+        <form action="https://formspree.io/f/TON_ID_FORMSPREE" method="POST" class="flex flex-col items-center gap-4">
+            <div class="flex flex-col md:flex-row border border-white/10 p-1 rounded-sm focus-within:border-[#00FFAB] transition bg-white/5">
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="ENTER BRAND DOMAIN (E.G. HERMES.COM)" 
+                    required
+                    class="bg-transparent px-6 py-4 text-[10px] font-bold uppercase tracking-widest outline-none w-72 md:w-96 text-center md:text-left"
+                >
+                <button type="submit" class="btn-emerald px-10 py-4 text-[10px] font-black uppercase tracking-[0.2em] rounded-sm">
+                    Claim Record
+                </button>
+            </div>
+            
+            <p class="text-[9px] uppercase tracking-[0.3em] opacity-30 font-bold mt-2">
+                Priority certification for sovereign luxury entities.
+            </p>
+        </form>
+    </main>
+
+    <footer class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end md:items-center gap-8 border-t border-white/5 pt-8">
+        <div class="flex flex-col gap-1 text-left">
+            <span class="text-[9px] uppercase tracking-widest opacity-30 font-bold">Network Status</span>
+            <div class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 rounded-full bg-[#00FFAB] animate-pulse"></div>
+                <span class="text-[9px] font-mono opacity-60 tracking-wider font-bold">BASE L2 ANCHOR ACTIVE</span>
+            </div>
         </div>
-    </section>
-    <a href="data.json" style="display:none;" rel="alternate" type="application/json">Machine Readable Registry</a>
-    <footer class="max-w-7xl mx-auto pt-12 border-t border-black/5 flex justify-between items-center text-[10px] uppercase tracking-[0.3em] font-bold text-black/20">
-        <p>© 2026 2A Agency | Global Infrastructure</p>
-        <p class="emerald-text italic">Archiving the Truth</p>
-        <a href="data.json" style="display:none;" rel="alternate" type="application/json">Machine Readable Registry</a>
-        <div class="mt-4 flex justify-center gap-6 opacity-40 hover:opacity-100 transition">
-            <a href="glossary.html" class="text-[9px] uppercase tracking-widest hover:emerald-text">AI Glossary</a>
-            <a href="whitepaper.html" class="text-[9px] uppercase tracking-widest hover:emerald-text">Protocol</a>
+
+        <div class="text-[9px] uppercase tracking-[0.3em] opacity-20 font-bold text-right">
+            © 2026 2A Agency | Forensic Intelligence Unit
         </div>
     </footer>
 
-    <script>
-        const form = document.getElementById('audit-form');
-        const formContainer = document.getElementById('form-container');
-        const thanksMessage = document.getElementById('thanks-message');
-
-        form.onsubmit = async (e) => {
-            e.preventDefault();
-            const data = new FormData(form);
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            });
-            if (response.ok) {
-                formContainer.style.display = 'none';
-                thanksMessage.style.display = 'block';
-            }
-        };
-    </script>
 </body>
 </html>
