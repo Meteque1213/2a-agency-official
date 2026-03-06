@@ -13,113 +13,84 @@
         .serif { font-family: 'Playfair Display', serif; }
         .emerald-text { color: #064e3b !important; }
         .logo-unified { font-weight: 800 !important; letter-spacing: -0.05em !important; font-size: 1.5rem; color: #064e3b; }
-        .btn-premium { background-color: #064e3b; color: white; transition: all 0.3s ease; letter-spacing: 0.3em; }
-        .btn-premium:hover { background-color: #043d2e; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        
+        /* Boutons rectangulaires comme sur ta capture */
+        .btn-main { background-color: #064e3b; color: white; padding: 1.25rem 2.5rem; text-transform: uppercase; font-size: 10px; font-weight: 700; tracking-widest: 0.2em; display: inline-block; transition: all 0.3s ease; }
+        .btn-outline { border: 1px solid rgba(0,0,0,0.1); padding: 1.25rem 2.5rem; text-transform: uppercase; font-size: 10px; font-weight: 700; tracking-widest: 0.2em; display: inline-block; transition: all 0.3s ease; }
+        .btn-main:hover { background-color: #043d2e; transform: translateY(-2px); }
+        .btn-outline:hover { background-color: black; color: white; }
     </style>
 </head>
 <body class="p-6 md:p-12">
 
     <nav class="max-w-7xl mx-auto flex justify-between items-center mb-24 border-b border-black/5 pb-8">
         <a href="index.html" class="group no-underline">
-            <div class="logo-unified transition-opacity group-hover:opacity-70 font-bold uppercase tracking-tighter">2A AGENCY</div>
-            <div class="text-[9px] uppercase tracking-[0.4em] text-black/40 font-bold mt-1">Sovereign System of Records</div>
+            <div class="logo-unified transition-opacity group-hover:opacity-70 uppercase tracking-tighter">2A AGENCY</div>
+            <div class="text-[9px] uppercase tracking-[0.4em] text-black/40 font-bold mt-1 text-center">Luxury AI-IQ Infrastructure</div>
         </a>
-        <div class="flex gap-6 md:gap-12 items-center font-bold">
+        <div class="flex gap-10 items-center font-bold">
             <a href="whitepaper.html" class="text-[10px] uppercase tracking-widest text-black/40 hover:emerald-text transition">White Paper</a>
             <a href="registry.html" class="text-[10px] uppercase tracking-widest text-black/40 hover:emerald-text transition">Registry</a>
-            <a href="#contact" class="bg-[#064e3b] text-white px-6 py-3 text-[10px] uppercase tracking-widest rounded-sm">Contact</a>
+            <a href="#contact" class="text-[10px] uppercase tracking-widest text-black/40 hover:emerald-text transition italic">Contact</a>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto mb-32">
+    <main class="max-w-7xl mx-auto mb-40">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-                <h1 class="text-6xl md:text-8xl serif italic emerald-text mb-8 leading-tight">
+                <h1 class="text-7xl md:text-9xl serif italic emerald-text mb-12 leading-tight">
                     Defending <br>Heritage.
                 </h1>
-                <p class="text-lg text-black/60 leading-relaxed mb-10 max-w-md font-medium">
+                <p class="text-lg text-black/60 leading-relaxed mb-12 max-w-md font-medium">
                     2A Agency is the first global infrastructure designed to protect luxury brands from <strong>Semantic Drift</strong>. We notarize your truth on the Base Blockchain to ensure AI agents only echo your official history.
                 </p>
-                <div class="flex flex-wrap gap-6">
-                    <a href="registry.html" class="btn-premium px-10 py-5 text-[10px] uppercase font-bold rounded-sm inline-block">
-                        View Global Registry
-                    </a>
-                    <a href="whitepaper.html" class="border border-black/10 px-10 py-5 text-[10px] uppercase font-bold tracking-widest hover:bg-black hover:text-white transition inline-block">
-                        Read White Paper
-                    </a>
+                <div class="flex gap-4">
+                    <a href="registry.html" class="btn-main">View Global Registry</a>
+                    <a href="whitepaper.html" class="btn-outline">Read White Paper</a>
                 </div>
             </div>
-            <div class="relative">
-                <div class="aspect-[4/5] bg-zinc-100 rounded-sm overflow-hidden border border-black/5">
-                    <div class="absolute inset-0 flex items-center justify-center p-12 text-center">
-                        <div>
-                            <div class="text-[10px] uppercase tracking-[0.5em] mb-4 text-black/20">System Status</div>
-                            <div class="text-4xl serif italic emerald-text mb-2 tracking-tighter">102 Audits Verified</div>
-                            <div class="text-[9px] uppercase tracking-[0.2em] font-bold text-black/40 italic">● Live on Base L2 Blockchain</div>
-                        </div>
-                    </div>
+            <div class="relative bg-zinc-50 aspect-square flex items-center justify-center border border-black/5">
+                <div class="text-center p-12">
+                    <div class="text-[10px] uppercase tracking-[0.6em] mb-4 text-black/20 font-bold">System Status</div>
+                    <div class="text-5xl serif italic emerald-text mb-2">102 Audits Verified</div>
+                    <div class="text-[9px] uppercase tracking-[0.3em] font-bold text-black/30 italic font-mono">● LIVE ON BASE L2 BLOCKCHAIN</div>
                 </div>
             </div>
         </div>
     </main>
 
-    <section id="protocol" class="py-32 bg-white border-y border-black/5 -mx-6 md:-mx-12 px-6 md:px-12">
+    <section id="protocol" class="py-32 border-y border-black/5 -mx-6 md:-mx-12 px-6 md:px-12 bg-white">
         <div class="max-w-7xl mx-auto">
-            <div class="mb-24">
-                <h2 class="text-5xl md:text-7xl serif italic emerald-text mb-6 tracking-tight">The Forensic Protocol</h2>
-                <p class="text-[11px] uppercase tracking-[0.4em] font-bold text-black/40">Our 4-Stage Security Framework for AI-IQ Sovereignty</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-16">
+            <h2 class="text-5xl serif italic emerald-text mb-20">The Forensic Protocol</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
-                    <div class="text-[10px] font-mono text-black/20 mb-6 tracking-widest uppercase italic">#01 Detection</div>
-                    <h3 class="text-xl font-bold uppercase tracking-tighter mb-5 emerald-text">Detection</h3>
-                    <p class="text-[13px] text-black/60 leading-relaxed font-medium mb-6">
-                        Continuous deep-scanning of Global LLMs to identify "Semantic Drift"—detecting hallucinations or inaccuracies in heritage data.
-                    </p>
-                    <div class="text-[9px] uppercase tracking-widest font-extrabold text-black/30 border-l-2 border-emerald-900/10 pl-4">Diagnostic Vulnerability</div>
+                    <div class="text-[10px] text-black/20 mb-6 font-bold tracking-widest italic">STAGE 01</div>
+                    <h3 class="font-bold uppercase tracking-tighter mb-4 text-sm">Detection</h3>
+                    <p class="text-sm text-black/50 leading-relaxed">Scanning Global LLMs to identify "Semantic Drift"—errors in pricing, provenance, and heritage data.</p>
                 </div>
-
                 <div>
-                    <div class="text-[10px] font-mono text-black/20 mb-6 tracking-widest uppercase italic">#02 Correction</div>
-                    <h3 class="text-xl font-bold uppercase tracking-tighter mb-5 emerald-text">Correction</h3>
-                    <p class="text-[13px] text-black/60 leading-relaxed font-medium mb-6">
-                        Synthesis of the "Master Record"—your brand’s definitive truth, certified by forensic experts and leadership.
-                    </p>
-                    <div class="text-[9px] uppercase tracking-widest font-extrabold text-black/30 border-l-2 border-emerald-900/10 pl-4">Source of Truth</div>
+                    <div class="text-[10px] text-black/20 mb-6 font-bold tracking-widest italic">STAGE 02</div>
+                    <h3 class="font-bold uppercase tracking-tighter mb-4 text-sm">Correction</h3>
+                    <p class="text-sm text-black/50 leading-relaxed">Synthesis of the "Master Record"—your brand’s definitive truth, certified by forensic experts.</p>
                 </div>
-
                 <div>
-                    <div class="text-[10px] font-mono text-black/20 mb-6 tracking-widest uppercase italic">#03 Anchoring</div>
-                    <h3 class="text-xl font-bold uppercase tracking-tighter mb-5 emerald-text">Anchoring</h3>
-                    <p class="text-[13px] text-black/60 leading-relaxed font-medium mb-6">
-                        Permanent cryptographic notarization of the Master Record on the Base Blockchain for immutable mathematical proof.
-                    </p>
-                    <div class="text-[9px] uppercase tracking-widest font-extrabold text-black/30 border-l-2 border-emerald-900/10 pl-4">Blockchain Immunity</div>
+                    <div class="text-[10px] text-black/20 mb-6 font-bold tracking-widest italic">STAGE 03</div>
+                    <h3 class="font-bold uppercase tracking-tighter mb-4 text-sm">Anchoring</h3>
+                    <p class="text-sm text-black/50 leading-relaxed">Cryptographic notarization of the Master Record Hash on the Base Blockchain for immutability.</p>
                 </div>
-
                 <div>
-                    <div class="text-[10px] font-mono text-black/20 mb-6 tracking-widest uppercase italic">#04 Immunity</div>
-                    <h3 class="text-xl font-bold uppercase tracking-tighter mb-5 emerald-text">Immunity</h3>
-                    <p class="text-[13px] text-black/60 leading-relaxed font-medium mb-6">
-                        Active signal distribution via 2A Protocol to ensure autonomous AI agents prioritize certified data over synthetic noise.
-                    </p>
-                    <div class="text-[9px] uppercase tracking-widest font-extrabold text-black/30 border-l-2 border-emerald-900/10 pl-4">Operational Guardrail</div>
+                    <div class="text-[10px] text-black/20 mb-6 font-bold tracking-widest italic">STAGE 04</div>
+                    <h3 class="font-bold uppercase tracking-tighter mb-4 text-sm">Immunity</h3>
+                    <p class="text-sm text-black/50 leading-relaxed">Protocol-level distribution ensures autonomous AI agents prioritize certified data over synthetic noise.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-24 max-w-7xl mx-auto">
-        <div class="text-center">
-            <h2 class="text-3xl serif italic emerald-text mb-8">Secure your Digital Legacy.</h2>
-            <p class="text-[10px] uppercase tracking-[0.4em] text-black/30 mb-12">Contact forensic@2aagency.com for a full AI-IQ Audit.</p>
-            <div class="flex justify-center gap-10">
-                <a href="#" class="text-[10px] uppercase tracking-widest font-bold border-b border-black/10 pb-2">LinkedIn</a>
-                <a href="#" class="text-[10px] uppercase tracking-widest font-bold border-b border-black/10 pb-2">X / Twitter</a>
-            </div>
-            <p class="mt-20 text-[9px] uppercase tracking-[0.5em] text-black/20">© 2026 2A Agency | All Rights Reserved.</p>
-        </div>
+    <footer id="contact" class="py-24 text-center">
+        <p class="text-[10px] uppercase tracking-[0.5em] text-black/30 font-bold mb-8 italic">Contact: forensic@2aagency.com</p>
+        <p class="text-[9px] uppercase tracking-[0.6em] text-black/15 font-bold">© 2026 2A Agency | Sovereign System of Records</p>
     </footer>
 
 </body>
