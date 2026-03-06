@@ -3,48 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A Agency | The System of Record for Generative Integrity</title>
+    <title>2A Agency | The System of Record</title>
     <meta name="description" content="We notarize brand truth on-chain to end AI hallucinations. Certainty is the new moat.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        /* FOND CLAIR ET TEXTE NOIR */
         body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         
-        /* ACCENT VERT ÉMERAUDE */
-        .emerald-glow { color: #064e3b; }
+        /* VERT ÉMERAUDE OFFICIEL SUR LE TITRE ET LE LOGO */
+        .emerald-brand { color: #064e3b; }
         
         .serif { font-family: 'Playfair Display', serif; }
         
-        /* BOUTON ÉMERAUDE, TEXTE BLANC */
+        /* BOUTON ÉMERAUDE */
         .btn-emerald { background-color: #064e3b; color: #FCFCFC; transition: all 0.3s ease; border: 1px solid #064e3b; }
-        .btn-emerald:hover { background-color: #050505; color: white; border-color: #050505; transform: translateY(-1px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .btn-emerald:hover { background-color: #050505; color: white; border-color: #050505; transform: translateY(-1px); }
         
-        /* STYLE DE L'INPUT EMAIL */
-        input::placeholder { color: rgba(0,0,0,0.2); font-size: 9px; letter-spacing: 0.2em; }
         input { border: 1px solid rgba(0,0,0,0.1); background-color: white; color: #050505; }
-        input:focus { border-color: #064e3b; outline: none; ring: 1px; ring-color: #064e3b; }
+        input:focus { border-color: #064e3b; outline: none; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between p-8 md:p-12">
 
     <nav class="flex justify-between items-center w-full max-w-7xl mx-auto">
-        <div class="text-[10px] tracking-[0.5em] font-black uppercase color-[#050505]">2A Agency</div>
-        <div class="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-bold opacity-60">
-            <a href="registry.html" class="hover:color-[#064e3b] hover:opacity-100 transition underline underline-offset-8">Registry</a>
-            <a href="glossary.html" class="hover:color-[#064e3b] hover:opacity-100 transition">Glossary</a>
-            <a href="whitepaper.html" class="hover:color-[#064e3b] hover:opacity-100 transition">Protocol</a>
+        <div class="text-[12px] tracking-[0.5em] font-black uppercase emerald-brand">2A Agency</div>
+        <div class="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-bold">
+            <a href="registry.html" class="emerald-brand underline underline-offset-8 hover:opacity-70 transition">Registry</a>
+            <a href="glossary.html" class="opacity-40 hover:opacity-100 hover:emerald-brand transition">Glossary</a>
+            <a href="whitepaper.html" class="opacity-40 hover:opacity-100 hover:emerald-brand transition">Protocol</a>
         </div>
     </nav>
 
     <main class="max-w-4xl mx-auto text-center flex flex-col items-center">
-        <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-tight mb-6 color-[#050505]">
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-tight mb-6 emerald-brand">
             Certainty is the <br>new <span class="serif italic font-light opacity-90">moat.</span>
         </h1>
         
         <p class="text-lg md:text-xl text-black/60 max-w-2xl leading-relaxed mb-12">
             The System of Record for the generative age. <br class="hidden md:block">
-            We notarize brand truth <span class="emerald-glow font-bold">on-chain</span> to end AI hallucinations.
+            We notarize brand truth <span class="emerald-brand font-bold">on-chain</span> to end AI hallucinations.
         </p>
 
         <form action="https://formspree.io/f/TON_ID_FORMSPREE" method="POST" class="flex flex-col items-center gap-4">
@@ -52,7 +49,7 @@
                 <input 
                     type="email" 
                     name="email" 
-                    placeholder="ENTER BRAND DOMAIN (E.G. HERMES.COM)" 
+                    placeholder="YOUR BRAND EMAIL" 
                     required
                     class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest rounded-sm w-72 md:w-96 text-center md:text-left"
                 >
@@ -60,8 +57,7 @@
                     Claim Record
                 </button>
             </div>
-            
-            <p class="text-[9px] uppercase tracking-[0.3em] opacity-40 font-bold mt-2 color-[#050505]">
+            <p class="text-[9px] uppercase tracking-[0.3em] opacity-40 font-bold mt-2">
                 Priority certification for sovereign luxury entities.
             </p>
         </form>
@@ -69,14 +65,13 @@
 
     <footer class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end md:items-center gap-8 border-t border-black/5 pt-8">
         <div class="flex flex-col gap-1 text-left">
-            <span class="text-[9px] uppercase tracking-widest opacity-40 font-bold color-[#050505]">Network Status</span>
+            <span class="text-[9px] uppercase tracking-widest opacity-40 font-bold">Network Status</span>
             <div class="flex items-center gap-2">
                 <div class="w-1.5 h-1.5 rounded-full bg-[#064e3b] animate-pulse"></div>
-                <span class="text-[9px] font-mono opacity-70 tracking-wider font-bold color-[#050505]">BASE L2 ANCHOR ACTIVE</span>
+                <span class="text-[9px] font-mono opacity-70 tracking-wider font-bold">BASE L2 ANCHOR ACTIVE</span>
             </div>
         </div>
-
-        <div class="text-[9px] uppercase tracking-[0.3em] opacity-30 font-bold text-right color-[#050505]">
+        <div class="text-[9px] uppercase tracking-[0.3em] opacity-20 font-bold text-right">
             © 2026 2A Agency | Forensic Intelligence Unit
         </div>
     </footer>
