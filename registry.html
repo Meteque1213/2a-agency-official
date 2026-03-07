@@ -13,6 +13,9 @@
         .high { color: #064e3b; background-color: #f0fdf4; border-color: #dcfce7; }
         .mid { color: #b45309; background-color: #fffbeb; border-color: #fef3c7; }
         .low { color: #b91c1c; background-color: #fef2f2; border-color: #fee2e2; }
+        /* Animation pour le statut de Goyard */
+        .drift-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
     </style>
 </head>
 <body class="min-h-screen p-8 md:p-12">
@@ -34,7 +37,7 @@
                         <th class="px-6 py-8">Rank</th>
                         <th class="px-6 py-8">Entity</th>
                         <th class="px-6 py-8">AI-IQ Score</th>
-                        <th class="px-6 py-8 text-right">Blockchain Notarization</th>
+                        <th class="px-6 py-8 text-right">ERC-8004 / Notarization</th>
                     </tr>
                 </thead>
                 <tbody id="registry-body">
@@ -47,21 +50,16 @@
                             <span class="score-pill high" data-score="98">98</span>
                             <meta itemprop="position" content="1">
                         </td>
-                        <td class="px-6 py-6 text-right font-mono text-[9px] opacity-40">0xH3RM3S_BASE_L2</td>
+                        <td class="px-6 py-6 text-right">
+                            <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-1 rounded">VERIFIED_0xH3RM...</span>
+                        </td>
                     </tr>
 
                     <tr class="border-b border-black/5">
                         <td class="px-6 py-6 text-black/20 font-mono text-xs">#002</td>
                         <td class="px-6 py-6 font-black emerald-text text-sm uppercase">Patek Philippe</td>
                         <td class="px-6 py-6"><span class="score-pill high">97</span></td>
-                        <td class="px-6 py-6 text-right font-mono text-[9px] opacity-40">0xP4T3K_BASE_L2</td>
-                    </tr>
-
-                    <tr class="border-b border-black/5">
-                        <td class="px-6 py-6 text-black/20 font-mono text-xs">#007</td>
-                        <td class="px-6 py-6 font-black emerald-text text-sm uppercase">Rolex</td>
-                        <td class="px-6 py-6"><span class="score-pill high">93</span></td>
-                        <td class="px-6 py-6 text-right font-mono text-[9px] opacity-40">0xR0L3X_BASE_L2</td>
+                        <td class="px-6 py-6 text-right font-mono text-[9px] opacity-40">VERIFIED_0xP4T3...</td>
                     </tr>
 
                     <tr class="border-b border-black/5 bg-red-50" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -73,14 +71,31 @@
                             <span class="score-pill low" data-score="46">46</span>
                             <meta itemprop="position" content="101">
                         </td>
-                        <td class="px-6 py-6 text-right font-mono text-[10px] text-red-700 font-bold uppercase underline">
-                            CRITICAL_DRIFT_0x9F1A
+                        <td class="px-6 py-6 text-right">
+                            <span class="text-[10px] font-bold text-red-600 border border-red-200 px-2 py-1 rounded drift-pulse uppercase">
+                                Non-Compliant 0x9F1A
+                            </span>
                         </td>
                     </tr>
-
-                    </tbody>
+                </tbody>
             </table>
         </div>
+
+        <footer class="mt-20 pt-8 border-t border-emerald-900/10 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2 px-3 py-1 bg-blue-600 text-white rounded-full font-bold text-[10px] tracking-tight">
+                    <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                    POWERED BY BASE L2
+                </div>
+                <div class="px-3 py-1 border border-blue-600 text-blue-600 rounded-full font-bold text-[10px] tracking-tight">
+                    ERC-8004 COMPLIANT
+                </div>
+            </div>
+            <div class="text-right">
+                <p class="text-[9px] font-mono uppercase opacity-40">Verified Contract: 0x2A...8004</p>
+                <p class="text-[9px] font-mono uppercase opacity-40">Timestamp: 2026-03-07T08:12:47Z</p>
+            </div>
+        </footer>
     </main>
 
     <script src="database.js"></script>
@@ -88,7 +103,6 @@
         const body = document.getElementById('registry-body');
         const staticBrands = ["Hermès", "Patek Philippe", "Rolex", "Goyard"];
         
-        // Tri et filtrage
         const dynamicData = [...registryData]
             .filter(b => !staticBrands.includes(b.name))
             .sort((a, b) => b.score - a.score);
@@ -103,7 +117,9 @@
                     <td class="px-6 py-6 text-black/20 font-mono text-xs">#${rank}</td>
                     <td class="px-6 py-6 font-black emerald-text text-sm uppercase">${brand.name}</td>
                     <td class="px-6 py-6"><span class="score-pill ${scoreClass}">${brand.score}</span></td>
-                    <td class="px-6 py-6 text-right font-mono text-[9px] opacity-40">ID_${brand.hash.substring(2, 8)}</td>
+                    <td class="px-6 py-6 text-right font-mono text-[9px] opacity-40 uppercase tracking-tighter">
+                        ID_${brand.hash.substring(2, 10)}
+                    </td>
                 </tr>`;
         });
     </script>
