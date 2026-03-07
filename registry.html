@@ -3,114 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A Agency | Global Brand Registry (ERC-8004)</title>
+    <title>2A Agency | Registry (ERC-8004)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .emerald-brand { color: #064e3b; }
-        .drift-pulse { animation: pulse-red 2s infinite; background-color: rgba(220, 38, 38, 0.05); }
-        @keyframes pulse-red { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
-        .sticky-btn { position: fixed; top: 2rem; right: 2rem; z-index: 100; }
-        /* Grille resserrée pour un look "Terminal Bloomberg" sans espaces inutiles */
-        .registry-grid { display: grid; grid-template-columns: 70px 1fr 100px 220px; align-items: center; gap: 1.5rem; }
-        @media (max-width: 768px) { .registry-grid { grid-template-columns: 50px 1fr 70px 120px; gap: 0.5rem; } }
+        .logo-bold { font-weight: 900; letter-spacing: 0.3em; font-size: 15px; text-transform: uppercase; color: #064e3b; }
+        .base-blue { color: #0052FF; }
+        .drift-alert { color: #dc2626; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+        /* Style pour la scrollbar minimaliste */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #064e3b; }
     </style>
 </head>
-<body class="p-6 md:p-12">
+<body class="min-h-screen p-8 md:p-12">
 
-    <div class="sticky-btn no-print">
-        <a href="index.html#audit-form" class="bg-[#064e3b] text-white text-[10px] font-black uppercase tracking-[0.2em] px-8 py-5 shadow-2xl hover:bg-black transition-all inline-block border border-white/10">
-            Request Audit
-        </a>
-    </div>
-
-    <nav class="flex justify-between items-center w-full max-w-6xl mx-auto mb-20">
-        <a href="index.html" class="font-[900] tracking-[0.3em] text-[15px] uppercase text-[#064e3b]">2A Agency</a>
-        <div class="flex gap-8 text-[10px] uppercase tracking-widest font-bold items-center">
-            <span class="text-black underline underline-offset-8 decoration-2">Registry</span>
-            <a href="glossary.html" class="opacity-30 hover:opacity-100 transition">Glossary</a>
-            <a href="whitepaper.html" class="opacity-30 hover:opacity-100 transition">Protocol</a>
+    <nav class="flex justify-between items-center w-full max-w-7xl mx-auto mb-20">
+        <a href="index.html" class="logo-bold underline decoration-2 underline-offset-4">2A Agency</a>
+        <div class="flex gap-6 text-[10px] uppercase tracking-widest font-bold items-center">
+            <span class="opacity-100">Registry</span>
+            <div class="px-2 py-0.5 border border-blue-600 text-blue-600 rounded text-[8px] tracking-tighter font-black uppercase">L2_LIVE</div>
+            <a href="glossary.html" class="opacity-40 hover:opacity-100 transition">Glossary</a>
         </div>
     </nav>
 
-    <header class="max-w-6xl mx-auto mb-12">
-        <h1 class="text-5xl md:text-7xl font-[900] tracking-tighter uppercase mb-2">Global <span class="emerald-brand opacity-20">Registry</span></h1>
-        <div class="flex items-center gap-4">
-            <p class="text-[10px] font-mono opacity-40 uppercase tracking-[0.4em]">102 Audited Entities // Forensic Dataset V1.0</p>
-            <div class="h-[1px] flex-1 bg-black/5"></div>
-        </div>
-    </header>
+    <main class="max-w-7xl mx-auto">
+        <header class="mb-16">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-4">
+                Global Brand <br>Integrity Index
+            </h1>
+            <p class="text-[10px] uppercase tracking-[0.4em] opacity-40 font-bold italic">
+                Real-time Notarization monitoring via ERC-8004 Standard
+            </p>
+        </header>
 
-    <main class="max-w-6xl mx-auto border-t border-black/10">
-        <div class="registry-grid p-6 text-[9px] font-black uppercase tracking-[0.3em] opacity-30 border-b border-black/5">
-            <div>Rank</div>
-            <div>Brand Entity</div>
-            <div>AI-IQ</div>
-            <div class="text-right">Notarization (Base L2)</div>
+        <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+                <thead>
+                    <tr class="text-[9px] uppercase tracking-[0.3em] opacity-30 border-b border-black/10 text-left">
+                        <th class="pb-6 font-black w-20">Rank</th>
+                        <th class="pb-6 font-black">Brand Entity</th>
+                        <th class="pb-6 font-black">Audit Score</th>
+                        <th class="pb-6 font-black hidden md:table-cell">Status</th>
+                        <th class="pb-6 font-black">Tx Proof (Base L2)</th>
+                    </tr>
+                </thead>
+                <tbody id="registry-body">
+                    </tbody>
+            </table>
         </div>
-
-        <div id="registry-container"></div>
     </main>
 
-    <footer class="max-w-6xl mx-auto mt-24 pt-10 border-t border-black/5 flex justify-between items-center opacity-30">
-        <div class="text-[9px] font-mono uppercase tracking-widest italic">© 2026 2A Agency // Unit 0x2A...8004</div>
-        <div class="text-[9px] font-mono uppercase tracking-widest flex items-center gap-2">
-            <span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
-            Settlement: Base L2 Mainnet
+    <footer class="mt-20 pt-10 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+            <span class="text-[9px] font-mono font-bold uppercase tracking-widest opacity-40">Database_v1.0_Synchronized</span>
+        </div>
+        <div class="text-[8px] uppercase tracking-[0.5em] opacity-20 font-black">
+            © 2026 2A Agency | Forensic Intelligence Unit
         </div>
     </footer>
 
-    <script src="database.js"></script>
-    <script>
-        const container = document.getElementById('registry-container');
-        const sorted = [...registryData].sort((a, b) => b.score - a.score);
-    
-        container.innerHTML = sorted.map((brand, index) => {
-            // COULEURS 2A AGENCY (Vert >= 80, Jaune >= 50, Rouge < 50)
-            let colorClass = "text-[#064e3b]"; 
-            let bgStatus = "bg-[#064e3b]";
-            let statusLabel = "VERIFIED";
-    
-            if (brand.score < 50) {
-                colorClass = "text-red-600 font-bold";
-                statusLabel = "NON-COMPLIANT";
-                bgStatus = "bg-red-600";
-            } else if (brand.score < 80) {
-                colorClass = "text-amber-500 font-bold";
-                statusLabel = "WARNING";
-                bgStatus = "bg-amber-500 text-black";
+    <script type="module">
+        // Importation des données depuis ton fichier database.js
+        import registryData from './database.js';
+
+        const tableBody = document.getElementById('registry-body');
+
+        // Fonction pour générer le tableau
+        function renderRegistry() {
+            if (!registryData || registryData.length === 0) {
+                tableBody.innerHTML = '<tr><td colspan="5" class="py-10 text-center opacity-30 text-[10px] uppercase font-bold tracking-widest">Loading encrypted data...</td></tr>';
+                return;
             }
-    
-            const rank = (index + 1).toString().padStart(3, '0');
-            
-            return `
-                <div class="grid grid-cols-[60px_1fr_100px_220px] items-center p-6 border-b border-black/5 transition-all hover:bg-black/[0.01]" 
-                     itemscope itemtype="https://schema.org/Thing"
-                     data-brand="${brand.name}" data-score="${brand.score}">
-                    
-                    <div class="text-[10px] font-mono opacity-20">#${rank}</div>
-                    
-                    <div itemprop="name" class="text-sm font-[900] uppercase tracking-tighter text-black">${brand.name}</div>
-                    
-                    <div class="flex items-baseline">
-                        <span itemprop="identifier" data-value="${brand.score}" class="text-lg font-[900] ${colorClass}">${brand.score}</span>
-                        <span class="text-[9px] opacity-20 ml-0.5 font-bold">/100</span>
-                    </div>
-                    
-                    <div class="flex flex-col items-end gap-1">
-                        <a href="https://basescan.org/tx/${brand.hash}" target="_blank" 
-                           class="text-[9px] font-black px-4 py-2.5 text-white transition-all hover:scale-105 ${bgStatus} w-full text-center tracking-widest uppercase">
-                            ${statusLabel}
-                        </a>
-                        <span class="text-[7px] font-mono opacity-40 uppercase truncate w-full text-right font-bold" 
-                              data-hash="${brand.hash}">
-                            TX PROOF: ${brand.hash.substring(0, 18)}...
+
+            tableBody.innerHTML = ''; // Nettoyer le contenu
+
+            registryData.forEach((item, index) => {
+                const isCritical = item.score < 50;
+                const row = document.createElement('tr');
+                row.className = `border-b border-black/5 text-[11px] uppercase font-bold hover:bg-black/[0.01] transition-colors`;
+                
+                row.innerHTML = `
+                    <td class="py-8 opacity-20 font-mono">#${String(index + 1).padStart(3, '0')}</td>
+                    <td class="py-8 tracking-widest">
+                        ${item.name}
+                        ${isCritical ? '<span class="ml-2 text-[8px] bg-red-600 text-white px-1 py-0.5 rounded tracking-tighter">DRIFT_ALERT</span>' : ''}
+                    </td>
+                    <td class="py-8 ${isCritical ? 'text-red-600' : 'text-[#064e3b]'} font-black text-sm">
+                        ${item.score}
+                    </td>
+                    <td class="py-8 hidden md:table-cell">
+                        <span class="text-[9px] px-2 py-1 rounded border ${isCritical ? 'border-red-200 text-red-600 bg-red-50' : 'border-green-100 text-green-800 bg-green-50'}">
+                            ${isCritical ? 'NON_COMPLIANT' : 'COMPLIANT'}
                         </span>
-                    </div>
-                </div>
-            `;
-        }).join('');
+                    </td>
+                    <td class="py-8 font-mono text-[9px] opacity-40 hover:opacity-100 transition">
+                        <a href="https://basescan.org/tx/${item.hash}" target="_blank" class="flex items-center gap-1 hover:underline">
+                            ${item.hash.substring(0, 16)}...
+                            <svg class="w-2 h-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Lancer le rendu
+        renderRegistry();
     </script>
 </body>
 </html>
