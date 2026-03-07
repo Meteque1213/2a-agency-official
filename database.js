@@ -1,7 +1,7 @@
 /**
  * 2A AGENCY | GLOBAL BRAND REGISTRY | DATABASE v1.0
  * Protocol: ERC-8004 Compliance (Base L2)
- * Forensic Transaction Hashes: VERIFIED
+ * Status: FINAL HARDCODED DATASET
  */
 
 const registryData = [
