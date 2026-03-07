@@ -100,28 +100,46 @@
 
     <script src="database.js"></script>
     <script>
-        const body = document.getElementById('registry-body');
-        const staticBrands = ["Hermès", "Patek Philippe", "Rolex", "Goyard"];
-        
-        const dynamicData = [...registryData]
-            .filter(b => !staticBrands.includes(b.name))
-            .sort((a, b) => b.score - a.score);
-
-        dynamicData.forEach((brand) => {
-            const displayRank = registryData.findIndex(b => b.name === brand.name) + 1;
-            const rank = displayRank.toString().padStart(3, '0');
-            const scoreClass = brand.score >= 80 ? 'high' : (brand.score >= 50 ? 'mid' : 'low');
+        function renderRegistry() {
+            const container = document.getElementById('registry-container');
             
-            body.innerHTML += `
-                <tr class="border-b border-black/5 hover:bg-gray-50 transition">
-                    <td class="px-6 py-6 text-black/20 font-mono text-xs">#${rank}</td>
-                    <td class="px-6 py-6 font-black emerald-text text-sm uppercase">${brand.name}</td>
-                    <td class="px-6 py-6"><span class="score-pill ${scoreClass}">${brand.score}</span></td>
-                    <td class="px-6 py-6 text-right font-mono text-[9px] opacity-40 uppercase tracking-tighter">
-                        ID_${brand.hash.substring(2, 10)}
-                    </td>
-                </tr>`;
-        });
+            // 1. On trie TOUTES les données par score décroissant
+            const sortedData = [...registryData].sort((a, b) => b.score - a.score);
+    
+            container.innerHTML = sortedData.map((brand, index) => {
+                const isCritical = brand.score < 50; 
+                // 2. On définit le style selon le score
+                const rowClass = isCritical ? 'drift-pulse border-b border-red-200' : 'border-b border-black/5 hover:bg-black/[0.01]';
+                const scoreClass = isCritical ? 'text-red-600 font-[900]' : 'text-black font-black';
+                const statusLabel = isCritical ? 'NON-COMPLIANT' : 'VERIFIED';
+                const statusStyle = isCritical ? 'bg-red-600 text-white' : 'bg-blue-600 text-white';
+    
+                return `
+                    <div class="grid grid-cols-4 items-center p-6 ${rowClass} transition-all">
+                        <div class="text-[11px] font-mono opacity-30">#${(index + 1).toString().padStart(3, '0')}</div>
+                        
+                        <div class="text-sm uppercase font-bold tracking-tight ${isCritical ? 'text-red-700' : ''}">
+                            ${brand.name}
+                            ${isCritical ? '<span class="ml-2 text-[8px] bg-red-600 text-white px-1 py-0.5 tracking-tighter">DRIFT</span>' : ''}
+                        </div>
+                        
+                        <div>
+                            <span class="text-lg ${scoreClass}">${brand.score}</span>
+                            <span class="text-[10px] opacity-20 font-bold">/100</span>
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://basescan.org/search?q=${brand.hash}" target="_blank" 
+                               class="text-[9px] font-mono px-3 py-1.5 rounded uppercase tracking-tighter hover:scale-105 transition-transform ${statusStyle}">
+                                ${statusLabel}_${brand.hash.substring(0, 8)}
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+    
+        renderRegistry();
     </script>
 </body>
 </html>
