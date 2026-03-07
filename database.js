@@ -1,7 +1,6 @@
 /**
- * 2A AGENCY | GLOBAL BRAND REGISTRY | DATABASE v1.0
+ * 2A AGENCY | SYSTEM OF RECORD | DATABASE v1.0
  * Protocol: ERC-8004 Compliance (Base L2)
- * Status: FINAL VERIFIED DATASET
  */
 
 const registryData = [
