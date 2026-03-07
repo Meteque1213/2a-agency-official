@@ -3,96 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A Agency | Global Brand Registry</title>
+    <title>2A Agency | Global Brand Registry (ERC-8004)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .emerald-brand { color: #064e3b; }
-        .drift-pulse { animation: pulse-red 2s infinite; background-color: rgba(220, 38, 38, 0.03); }
-        @keyframes pulse-red { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
-        .sticky-btn { position: fixed; top: 2rem; right: 2rem; z-index: 100; }
+        .base-blue { color: #0052FF; }
+        .drift-pulse { animation: pulse-red 2s infinite; }
+        @keyframes pulse-red {
+            0% { background-color: rgba(239, 68, 68, 0.1); }
+            50% { background-color: rgba(239, 68, 68, 0.3); }
+            100% { background-color: rgba(239, 68, 68, 0.1); }
+        }
+        /* Masquer le bouton à l'impression du certificat */
+        @media print { .no-print { display: none; } }
     </style>
 </head>
-<body class="p-8 md:p-12">
+<body class="min-h-screen p-8 md:p-12">
 
-    <div class="sticky-btn">
-        <a href="index.html#audit-form" class="bg-[#064e3b] text-white text-[10px] font-black uppercase tracking-[0.2em] px-8 py-5 shadow-2xl hover:bg-black transition-all inline-block border border-white/10">
+    <div class="fixed top-8 right-8 z-50 no-print">
+        <a href="index.html#audit-form" class="bg-[#064e3b] text-white text-[10px] font-black uppercase tracking-[0.2em] px-6 py-4 shadow-2xl hover:bg-black hover:scale-105 transition-all inline-block border border-white/10">
             Request Audit
         </a>
     </div>
 
-    <nav class="flex justify-between items-center w-full max-w-7xl mx-auto mb-24">
+    <nav class="flex justify-between items-center w-full max-w-7xl mx-auto mb-20">
         <a href="index.html" class="font-[900] tracking-[0.3em] text-[15px] uppercase text-[#064e3b]">2A Agency</a>
         <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-widest font-bold items-center">
-            <span class="emerald-brand underline underline-offset-8 decoration-2">Registry</span>
-            <div class="px-2 py-0.5 border border-blue-600 text-blue-600 rounded text-[8px] font-black italic">ERC-8004 COMPLIANT</div>
+            <span class="opacity-20">Registry</span>
+            <div class="px-2 py-0.5 border border-blue-600 text-blue-600 rounded text-[8px] font-black">ERC-8004 ACTIVE</div>
             <a href="glossary.html" class="opacity-40 hover:opacity-100 transition">Glossary</a>
             <a href="whitepaper.html" class="opacity-40 hover:opacity-100 transition">Protocol</a>
         </div>
     </nav>
 
     <header class="max-w-7xl mx-auto mb-16">
-        <h1 class="text-6xl font-[900] tracking-tighter uppercase mb-4 leading-none">
-            Global Integrity <br><span class="opacity-10">Registry</span>
+        <h1 class="text-4xl md:text-6xl font-[900] tracking-tighter uppercase mb-4">
+            Global Integrity <span class="emerald-brand opacity-20">Registry</span>
         </h1>
-        <div class="flex items-center gap-4">
-            <p class="text-[10px] font-mono opacity-40 uppercase tracking-[0.4em]">102 Audited Entities // Machine-Readable Dataset</p>
-            <div class="h-[1px] flex-1 bg-black/5"></div>
-        </div>
+        <p class="text-sm font-mono opacity-40 uppercase tracking-widest flex items-center gap-2">
+            <span class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
+            Live Notarization Feed // Base L2 Mainnet
+        </p>
     </header>
 
-    <main class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-4 p-6 text-[9px] font-black uppercase tracking-[0.3em] opacity-30 border-b border-black/10">
-            <div>Rank</div>
-            <div>Brand Entity</div>
+    <main class="max-w-7xl mx-auto border-t border-black/10">
+        <div class="grid grid-cols-4 p-6 text-[10px] font-black uppercase tracking-[0.2em] opacity-30 border-b border-black/5">
+            <div>Index</div>
+            <div>Entity / Brand</div>
             <div>AI-IQ Score</div>
-            <div class="text-right">Blockchain Notarization</div>
+            <div class="text-right">Notarization (Base L2)</div>
         </div>
 
-        <div id="registry-list"></div>
+        <div id="registry-container">
+            </div>
     </main>
 
-    <footer class="max-w-7xl mx-auto mt-32 pt-12 border-t border-black/5 flex justify-between items-center opacity-20">
-        <div class="text-[9px] font-mono uppercase tracking-widest">© 2026 2A Agency // Unit 0x2A...8004</div>
-        <div class="text-[9px] font-mono uppercase tracking-widest">Base L2 Settlement Active</div>
+    <footer class="max-w-7xl mx-auto mt-20 pt-10 border-t border-black/5 flex justify-between items-center opacity-30">
+        <div class="text-[9px] font-mono uppercase tracking-widest italic">
+            © 2026 2A Agency // Forensic Intelligence Unit 0x2A...8004
+        </div>
+        <div class="text-[9px] font-mono uppercase tracking-widest">
+            Protocol: ERC-8004 // Settlement: Base L2
+        </div>
     </footer>
 
     <script src="database.js"></script>
     <script>
-        const container = document.getElementById('registry-list');
-        
-        // TRI AUTOMATIQUE (Du meilleur au pire)
-        const sorted = [...registryData].sort((a, b) => b.score - a.score);
-
-        container.innerHTML = sorted.map((brand, index) => {
-            // Détecter si la marque est en "Drift" (sous 50, comme Goyard)
-            const isDrift = brand.score < 50;
-            const rank = (index + 1).toString().padStart(3, '0');
+        function renderRegistry() {
+            const container = document.getElementById('registry-container');
             
-            return `
-                <div class="grid grid-cols-4 items-center p-8 border-b border-black/5 transition-colors hover:bg-black/[0.01] ${isDrift ? 'drift-pulse border-red-100' : ''}">
-                    <div class="text-[11px] font-mono ${isDrift ? 'text-red-400' : 'opacity-20'}">#${rank}</div>
-                    
-                    <div class="text-sm font-black uppercase tracking-tight ${isDrift ? 'text-red-600' : 'text-[#064e3b]'}">
-                        ${brand.name}
-                        ${isDrift ? '<span class="ml-3 text-[8px] bg-red-600 text-white px-1.5 py-0.5 tracking-tighter">ALERT: DRIFT</span>' : ''}
+            // TRI DES DONNÉES : Du plus haut score au plus bas
+            // Cela place automatiquement Goyard (46) et Philipp Plein (42) à la fin
+            const sortedData = [...registryData].sort((a, b) => b.score - a.score);
+
+            container.innerHTML = sortedData.map((brand, index) => {
+                const isCritical = brand.score < 50; // Pour Goyard et les alertes
+                const rowClass = isCritical ? 'drift-pulse border-b border-red-200' : 'border-b border-black/5 hover:bg-black/[0.01]';
+                const scoreClass = isCritical ? 'text-red-600 font-[900]' : 'text-black font-black';
+                const statusLabel = isCritical ? 'NON-COMPLIANT' : 'VERIFIED';
+                const statusStyle = isCritical ? 'bg-red-600 text-white' : 'bg-blue-600 text-white';
+
+                return `
+                    <div class="grid grid-cols-4 items-center p-6 ${rowClass} transition-all">
+                        <div class="text-[11px] font-mono opacity-30">#${(index + 1).toString().padStart(3, '0')}</div>
+                        
+                        <div class="text-sm uppercase font-bold tracking-tight ${isCritical ? 'text-red-700' : ''}">
+                            ${brand.name}
+                            ${isCritical ? '<span class="ml-2 text-[8px] bg-red-600 text-white px-1 py-0.5">DRIFT</span>' : ''}
+                        </div>
+                        
+                        <div>
+                            <span class="text-lg ${scoreClass}">${brand.score}</span>
+                            <span class="text-[10px] opacity-20 font-bold">/100</span>
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://basescan.org/search?q=${brand.hash}" target="_blank" 
+                               class="text-[9px] font-mono px-3 py-1.5 rounded uppercase tracking-tighter hover:scale-105 transition-transform ${statusStyle}">
+                                ${statusLabel}_${brand.hash.substring(0, 8)}
+                            </a>
+                        </div>
                     </div>
-                    
-                    <div class="flex items-baseline gap-1">
-                        <span class="text-xl font-[900] ${isDrift ? 'text-red-600' : ''}">${brand.score}</span>
-                        <span class="text-[10px] opacity-20 font-bold">/100</span>
-                    </div>
-                    
-                    <div class="flex justify-end">
-                        <a href="https://basescan.org/search?q=${brand.hash}" target="_blank" 
-                           class="text-[9px] font-mono px-4 py-2 rounded-none border transition-all ${isDrift ? 'border-red-600 text-red-600 font-bold' : 'border-black/10 opacity-40 hover:opacity-100 hover:border-black'}">
-                            ${isDrift ? 'NON-COMPLIANT' : 'VERIFIED'}_${brand.hash.substring(0, 8).toUpperCase()}
-                        </a>
-                    </div>
-                </div>
-            `;
-        }).join('');
+                `;
+            }).join('');
+        }
+
+        // Lancement initial
+        renderRegistry();
     </script>
 </body>
 </html>
