@@ -78,6 +78,7 @@
         };
 
         const body = document.getElementById('registry-body');
+        // On trie uniquement les vraies marques de luxe de ta liste
         const sortedData = [...registryData].sort((a, b) => b.score - a.score);
         
         sortedData.forEach((brand, index) => {
@@ -94,4 +95,13 @@
                             <span class="text-[8px] uppercase text-black/30 mt-2 font-bold tracking-widest">AI-IQ Score</span>
                         </div>
                     </td>
-                    <td class="px-6 py
+                    <td class="px-6 py-6 text-right">
+                        <a href="https://basescan.org/tx/${brand.hash}" target="_blank" class="border border-[#064e3b] text-[#064e3b] px-4 py-2 rounded-sm inline-flex items-center gap-2 hover:bg-[#064e3b] hover:text-white transition uppercase font-bold text-[9px]">
+                            Blockchain Proof
+                        </a>
+                    </td>
+                </tr>`;
+        });
+    </script>
+</body>
+</html>
