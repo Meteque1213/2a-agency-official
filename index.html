@@ -3,109 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A Agency | The System of Record</title>
+    <title>2A Agency | Global Brand Registry (ERC-8004)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .emerald-brand { color: #064e3b; }
-        .logo-bold { font-weight: 900; letter-spacing: 0.3em; font-size: 15px; text-transform: uppercase; color: #064e3b; }
-        .btn-emerald { background-color: #064e3b; color: #FCFCFC; transition: all 0.3s ease; border: 1px solid #064e3b; }
-        .btn-emerald:hover { background-color: #050505; color: white; transform: scale(1.02); }
-        .btn-emerald:disabled { opacity: 0.6; cursor: not-allowed; }
-        input { border: 1px solid rgba(0,0,0,0.1); background-color: white; color: #050505; text-align: center; }
-        input:focus { border-color: #064e3b; outline: none; }
-        ::placeholder { color: rgba(0,0,0,0.2); font-size: 9px; letter-spacing: 0.2em; font-weight: 700; }
         .base-blue { color: #0052FF; }
+        .drift-pulse { animation: pulse-red 2s infinite; }
+        @keyframes pulse-red {
+            0% { background-color: rgba(239, 68, 68, 0.1); }
+            50% { background-color: rgba(239, 68, 68, 0.3); }
+            100% { background-color: rgba(239, 68, 68, 0.1); }
+        }
+        /* Masquer le bouton à l'impression du certificat */
+        @media print { .no-print { display: none; } }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between p-8 md:p-12 text-center items-center">
+<body class="min-h-screen p-8 md:p-12">
 
-    <nav class="flex justify-between items-center w-full max-w-7xl mx-auto">
-        <div class="logo-bold underline decoration-2 underline-offset-4">2A Agency</div>
+    <div class="fixed top-8 right-8 z-50 no-print">
+        <a href="index.html#audit-form" class="bg-[#064e3b] text-white text-[10px] font-black uppercase tracking-[0.2em] px-6 py-4 shadow-2xl hover:bg-black hover:scale-105 transition-all inline-block border border-white/10">
+            Request Audit
+        </a>
+    </div>
+
+    <nav class="flex justify-between items-center w-full max-w-7xl mx-auto mb-20">
+        <a href="index.html" class="font-[900] tracking-[0.3em] text-[15px] uppercase text-[#064e3b]">2A Agency</a>
         <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-widest font-bold items-center">
-            <a href="registry.html" class="emerald-brand underline underline-offset-8 decoration-2">Registry</a>
-            <div class="px-2 py-0.5 border border-blue-600 text-blue-600 rounded text-[8px] tracking-tighter font-black">ERC-8004 COMPLIANT</div>
+            <span class="opacity-20">Registry</span>
+            <div class="px-2 py-0.5 border border-blue-600 text-blue-600 rounded text-[8px] font-black">ERC-8004 ACTIVE</div>
             <a href="glossary.html" class="opacity-40 hover:opacity-100 transition">Glossary</a>
             <a href="whitepaper.html" class="opacity-40 hover:opacity-100 transition">Protocol</a>
         </div>
     </nav>
 
-    <main class="max-w-5xl mx-auto flex flex-col items-center mt-20">
-        <div class="text-[9px] font-black uppercase tracking-[0.4em] opacity-30 mb-6 italic">Standardizing Trustless Agents for Global Luxury</div>
-        
-        <h1 class="text-6xl md:text-9xl font-[900] tracking-tighter leading-[0.85] mb-8 uppercase emerald-brand">
-            Certainty <br>
-            <span class="text-black/10">is the</span> <br>
-            new moat.
+    <header class="max-w-7xl mx-auto mb-16">
+        <h1 class="text-4xl md:text-6xl font-[900] tracking-tighter uppercase mb-4">
+            Global Integrity <span class="emerald-brand opacity-20">Registry</span>
         </h1>
-        
-        <p class="text-lg md:text-xl text-black/50 max-w-2xl leading-relaxed mt-6 mb-12 italic font-medium">
-            The System of Record for the generative age. <br>
-            We notarize brand truth <span class="emerald-brand font-bold uppercase tracking-widest text-sm">on-chain</span> via <span class="base-blue font-black">Base L2</span> to end AI hallucinations.
+        <p class="text-sm font-mono opacity-40 uppercase tracking-widest flex items-center gap-2">
+            <span class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
+            Live Notarization Feed // Base L2 Mainnet
         </p>
+    </header>
 
-        <form id="audit-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col gap-4 w-full max-w-sm mb-20">
-            <input type="text" name="brand" placeholder="BRAND / ENTITY" required class="px-6 py-5 text-[10px] font-bold uppercase tracking-widest rounded-none">
-            <input type="email" name="email" placeholder="OFFICIAL EMAIL" required class="px-6 py-5 text-[10px] font-bold uppercase tracking-widest rounded-none">
-            
-            <button type="submit" id="submit-btn" class="btn-emerald px-8 py-5 text-[11px] font-black uppercase tracking-[0.3em] rounded-none mt-2 shadow-lg">
-                Request Audit
-            </button>
-        </form>
+    <main class="max-w-7xl mx-auto border-t border-black/10">
+        <div class="grid grid-cols-4 p-6 text-[10px] font-black uppercase tracking-[0.2em] opacity-30 border-b border-black/5">
+            <div>Index</div>
+            <div>Entity / Brand</div>
+            <div>AI-IQ Score</div>
+            <div class="text-right">Notarization (Base L2)</div>
+        </div>
 
-        <section class="max-w-4xl border-t border-black/5 pt-12">
-            <p class="text-[8px] font-black uppercase tracking-[0.5em] opacity-20 mb-6">Active Brand Integrity Indices (ERC-8004)</p>
-            <div class="text-[9px] leading-relaxed opacity-30 uppercase font-mono px-4 text-center">
-                <span class="font-bold text-black opacity-80">Hermès (98)</span> | 
-                <span class="font-bold text-black opacity-80">Patek Philippe (97)</span> | 
-                Loro Piana (96) | Brunello Cucinelli (95) | Vacheron Constantin (94) | Cartier (94) | 
-                <span class="font-bold text-black opacity-80">Rolex (93)</span> | 
-                Audemars Piguet (93) | Chanel (92) | Louis Vuitton (91) | Dior (90) | 
-                Prada (87) | Saint Laurent (87) | Bottega Veneta (86) | Loewe (85) | Gucci (84) | 
-                Tiffany & Co. (83) | Burberry (82) | Fendi (82) | Jacquemus (82) | Moncler (79) | 
-                Balenciaga (50) | 
-                <span class="font-bold text-red-600 opacity-100 underline">Goyard (46 - DRIFT ALERT)</span> | 
-                Philipp Plein (42)
+        <div id="registry-container">
             </div>
-            <a href="registry.html" class="text-[10px] font-black uppercase tracking-widest emerald-brand mt-8 block hover:scale-105 transition-transform underline decoration-2 underline-offset-4">
-                Open Full 102 Entity Registry
-            </a>
-        </section>
     </main>
 
-    <footer class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end md:items-center gap-8 border-t border-black/5 pt-10 mt-12">
-        <div class="flex flex-col gap-1 text-left">
-            <span class="text-[9px] uppercase tracking-widest opacity-40 font-bold tracking-[0.2em]">Network Status</span>
-            <div class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-[#0052FF] animate-pulse"></div>
-                <span class="text-[9px] font-mono opacity-60 font-bold uppercase tracking-[0.1em]">BASE_L2_MAINNET_ACTIVE (ERC-8004)</span>
-            </div>
+    <footer class="max-w-7xl mx-auto mt-20 pt-10 border-t border-black/5 flex justify-between items-center opacity-30">
+        <div class="text-[9px] font-mono uppercase tracking-widest italic">
+            © 2026 2A Agency // Forensic Intelligence Unit 0x2A...8004
         </div>
-        <div class="text-[9px] uppercase tracking-[0.4em] opacity-20 font-bold text-right italic text-black">
-            © 2026 2A Agency | Forensic Intelligence Unit 0x2A...8004
+        <div class="text-[9px] font-mono uppercase tracking-widest">
+            Protocol: ERC-8004 // Settlement: Base L2
         </div>
     </footer>
 
+    <script src="database.js"></script>
     <script>
-        const form = document.getElementById("audit-form");
-        const button = document.getElementById("submit-btn");
+        function renderRegistry() {
+            const container = document.getElementById('registry-container');
+            
+            // TRI DES DONNÉES : Du plus haut score au plus bas
+            // Cela place automatiquement Goyard (46) et Philipp Plein (42) à la fin
+            const sortedData = [...registryData].sort((a, b) => b.score - a.score);
 
-        form.addEventListener("submit", async (event) => {
-            event.preventDefault();
-            button.disabled = true;
-            button.innerHTML = `<span class="animate-pulse tracking-[0.1em]">NOTARIZING DATA...</span>`;
-            const data = new FormData(event.target);
-            try {
-                const response = await fetch(event.target.action, {
-                    method: "POST",
-                    body: data,
-                    headers: { 'Accept': 'application/json' }
-                });
-                if (response.ok) { window.location.href = "thanks.html"; } 
-                else { alert("Error."); button.disabled = false; button.innerText = "REQUEST AUDIT"; }
-            } catch (error) { button.disabled = false; button.innerText = "REQUEST AUDIT"; }
-        });
+            container.innerHTML = sortedData.map((brand, index) => {
+                const isCritical = brand.score < 50; // Pour Goyard et les alertes
+                const rowClass = isCritical ? 'drift-pulse border-b border-red-200' : 'border-b border-black/5 hover:bg-black/[0.01]';
+                const scoreClass = isCritical ? 'text-red-600 font-[900]' : 'text-black font-black';
+                const statusLabel = isCritical ? 'NON-COMPLIANT' : 'VERIFIED';
+                const statusStyle = isCritical ? 'bg-red-600 text-white' : 'bg-blue-600 text-white';
+
+                return `
+                    <div class="grid grid-cols-4 items-center p-6 ${rowClass} transition-all">
+                        <div class="text-[11px] font-mono opacity-30">#${(index + 1).toString().padStart(3, '0')}</div>
+                        
+                        <div class="text-sm uppercase font-bold tracking-tight ${isCritical ? 'text-red-700' : ''}">
+                            ${brand.name}
+                            ${isCritical ? '<span class="ml-2 text-[8px] bg-red-600 text-white px-1 py-0.5">DRIFT</span>' : ''}
+                        </div>
+                        
+                        <div>
+                            <span class="text-lg ${scoreClass}">${brand.score}</span>
+                            <span class="text-[10px] opacity-20 font-bold">/100</span>
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://basescan.org/search?q=${brand.hash}" target="_blank" 
+                               class="text-[9px] font-mono px-3 py-1.5 rounded uppercase tracking-tighter hover:scale-105 transition-transform ${statusStyle}">
+                                ${statusLabel}_${brand.hash.substring(0, 8)}
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Lancement initial
+        renderRegistry();
     </script>
 </body>
 </html>
