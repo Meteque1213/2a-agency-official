@@ -6,13 +6,8 @@
     <title>Global Registry | 2A Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
     <style>
-        body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; }
-        .emerald-text { color: #064e3b; }
-        .btn-emerald { background-color: #064e3b; color: white; transition: all 0.3s ease; }
-        .btn-emerald:hover { background-color: #050505; transform: scale(1.05); }
-        .registry-row:hover { background-color: rgba(6, 78, 59, 0.02); }
-        <style>
         body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; }
         .emerald-text { color: #064e3b; }
         .btn-emerald { background-color: #064e3b; color: white; transition: all 0.3s ease; }
@@ -37,7 +32,10 @@
       "license": "https://2aagency.com/legal"
     }
     </script>
-</head> <body class="min-h-screen p-8 md:p-12">
+</head>
+
+<body class="min-h-screen p-8 md:p-12">
+
     <nav class="flex justify-between items-center w-full max-w-7xl mx-auto mb-16">
         <a href="index.html" class="text-[12px] tracking-[0.5em] font-black uppercase emerald-text">2A Agency</a>
         <div class="text-[9px] uppercase tracking-widest font-bold opacity-40">Global Forensic Registry v1.0</div>
@@ -66,7 +64,7 @@
                     </tr>
                 </thead>
                 <tbody id="registry-body">
-                    </tbody>
+                </tbody>
             </table>
         </div>
     </main>
@@ -80,7 +78,6 @@
         };
 
         const body = document.getElementById('registry-body');
-        // On trie uniquement les vraies marques de luxe de ta liste
         const sortedData = [...registryData].sort((a, b) => b.score - a.score);
         
         sortedData.forEach((brand, index) => {
@@ -97,13 +94,4 @@
                             <span class="text-[8px] uppercase text-black/30 mt-2 font-bold tracking-widest">AI-IQ Score</span>
                         </div>
                     </td>
-                    <td class="px-6 py-6 text-right">
-                        <a href="https://basescan.org/tx/${brand.hash}" target="_blank" class="border border-[#064e3b] text-[#064e3b] px-4 py-2 rounded-sm inline-flex items-center gap-2 hover:bg-[#064e3b] hover:text-white transition uppercase font-bold text-[9px]">
-                            Blockchain Proof
-                        </a>
-                    </td>
-                </tr>`;
-        });
-    </script>
-</body>
-</html>
+                    <td class="px-6 py
