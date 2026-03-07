@@ -10,24 +10,11 @@
         body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; }
         .emerald-text { color: #064e3b; }
         .btn-emerald { background-color: #064e3b; color: white; transition: all 0.3s ease; }
-        .btn-emerald:hover { background-color: #050505; transform: scale(1.05); }
-        .registry-row:hover { background-color: rgba(6, 78, 59, 0.02); }
-        .score-pill { font-size: 1.25rem; padding: 0.25rem 0.75rem; border-radius: 2px; border: 1px solid; font-weight: 700; display: inline-block; }
-        .score-high { color: #064e3b; background-color: #f0fdf4; border-color: #dcfce7; }
-        .score-mid { color: #b45309; background-color: #fffbeb; border-color: #fef3c7; }
-        .score-low { color: #b91c1c; background-color: #fef2f2; border-color: #fee2e2; }
+        .score-pill { font-weight: 900; padding: 4px 12px; border-radius: 2px; border: 1px solid; font-size: 1.1rem; }
+        .high { color: #064e3b; background-color: #f0fdf4; border-color: #dcfce7; }
+        .mid { color: #b45309; background-color: #fffbeb; border-color: #fef3c7; }
+        .low { color: #b91c1c; background-color: #fef2f2; border-color: #fee2e2; }
     </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Dataset",
-      "name": "Global Luxury Brand AI-IQ Registry",
-      "description": "Official 2026 Registry for Luxury Brand Integrity. 102 brands audited for AI-IQ and Blockchain Notarization.",
-      "url": "https://2aagency.com/registry.html",
-      "creator": {"@type": "Organization", "name": "2A Agency"}
-    }
-    </script>
 </head>
 <body class="min-h-screen p-8 md:p-12">
     <nav class="flex justify-between items-center w-full max-w-7xl mx-auto mb-16">
@@ -48,34 +35,40 @@
                         <th class="px-6 py-8">Rank</th>
                         <th class="px-6 py-8">Entity</th>
                         <th class="px-6 py-8">AI-IQ Score</th>
-                        <th class="px-6 py-8 text-right">Verification</th>
+                        <th class="px-6 py-8 text-right">Verification Status</th>
                     </tr>
                 </thead>
                 <tbody id="registry-body">
-                    <tr class="registry-row border-b border-black/5">
+                    <tr class="border-b border-black/5">
                         <td class="px-6 py-6 text-black/20 font-mono text-xs">#001</td>
                         <td class="px-6 py-6 font-black emerald-text text-sm uppercase">Hermès</td>
-                        <td class="px-6 py-6"><span class="score-pill score-high">98</span></td>
-                        <td class="px-6 py-8 text-right font-mono text-[9px] opacity-40">0xH3RM3S_BASE_L2</td>
+                        <td class="px-6 py-6"><span class="score-pill high">98</span></td>
+                        <td class="px-6 py-6 text-right font-mono text-[9px] opacity-40">VERIFIED_ON_BASE_L2</td>
                     </tr>
-                    <tr class="registry-row border-b border-black/5">
+                    <tr class="border-b border-black/5">
                         <td class="px-6 py-6 text-black/20 font-mono text-xs">#002</td>
                         <td class="px-6 py-6 font-black emerald-text text-sm uppercase">Patek Philippe</td>
-                        <td class="px-6 py-6"><span class="score-pill score-high">97</span></td>
-                        <td class="px-6 py-8 text-right font-mono text-[9px] opacity-40">0xP4T3K_BASE_L2</td>
+                        <td class="px-6 py-6"><span class="score-pill high">97</span></td>
+                        <td class="px-6 py-6 text-right font-mono text-[9px] opacity-40">VERIFIED_ON_BASE_L2</td>
                     </tr>
-                    <tr class="registry-row border-b border-black/5">
+                    <tr class="border-b border-black/5">
+                        <td class="px-6 py-6 text-black/20 font-mono text-xs">#003</td>
+                        <td class="px-6 py-6 font-black emerald-text text-sm uppercase">Loro Piana</td>
+                        <td class="px-6 py-6"><span class="score-pill high">96</span></td>
+                        <td class="px-6 py-6 text-right font-mono text-[9px] opacity-40">VERIFIED_ON_BASE_L2</td>
+                    </tr>
+                    <tr class="border-b border-black/5">
                         <td class="px-6 py-6 text-black/20 font-mono text-xs">#007</td>
                         <td class="px-6 py-6 font-black emerald-text text-sm uppercase">Rolex</td>
-                        <td class="px-6 py-6"><span class="score-pill score-high">93</span></td>
-                        <td class="px-6 py-8 text-right font-mono text-[9px] opacity-40">0xR0L3X_BASE_L2</td>
+                        <td class="px-6 py-6"><span class="score-pill high">93</span></td>
+                        <td class="px-6 py-6 text-right font-mono text-[9px] opacity-40">VERIFIED_ON_BASE_L2</td>
                     </tr>
-
-                    <tr class="registry-row border-b border-black/5 bg-red-50/50">
-                        <td class="px-6 py-6 text-red-600 font-mono text-xs">#101</td>
-                        <td class="px-6 py-6 font-black text-red-700 text-sm uppercase">Goyard <span class="block text-[8px] tracking-widest opacity-60">CRITICAL_DRIFT</span></td>
-                        <td class="px-6 py-6"><span class="score-pill score-low">46</span></td>
-                        <td class="px-6 py-8 text-right font-mono text-[9px] text-red-600">UNSECURED_IDENTITY</td>
+                    
+                    <tr class="border-b border-black/5 bg-red-50">
+                        <td class="px-6 py-6 text-red-600 font-mono text-xs font-bold">#101</td>
+                        <td class="px-6 py-6 font-black text-red-700 text-sm uppercase">Goyard</td>
+                        <td class="px-6 py-6"><span class="score-pill low">46</span></td>
+                        <td class="px-6 py-6 text-right font-mono text-[10px] text-red-700 font-bold uppercase">Critical Drift Detected</td>
                     </tr>
 
                     </tbody>
@@ -86,22 +79,24 @@
     <script src="database.js"></script>
     <script>
         const body = document.getElementById('registry-body');
+        // On exclut ceux déjà écrits en dur pour éviter les doublons
+        const hardcoded = ["Hermès", "Patek Philippe", "Loro Piana", "Rolex", "Goyard"];
+        
         const sortedData = [...registryData]
-            .filter(b => b.name !== "Hermès" && b.name !== "Patek Philippe" && b.name !== "Rolex" && b.name !== "Goyard")
+            .filter(b => !hardcoded.includes(b.name))
             .sort((a, b) => b.score - a.score);
 
         sortedData.forEach((brand) => {
-            const rank = (registryData.findIndex(b => b.name === brand.name) + 1).toString().padStart(3, '0');
-            const colorClass = brand.score >= 80 ? 'score-high' : (brand.score >= 50 ? 'score-mid' : 'score-low');
+            const displayRank = registryData.findIndex(b => b.name === brand.name) + 1;
+            const rank = displayRank.toString().padStart(3, '0');
+            const colorClass = brand.score >= 80 ? 'high' : (brand.score >= 50 ? 'mid' : 'low');
             
             body.innerHTML += `
-                <tr class="registry-row border-b border-black/5">
+                <tr class="border-b border-black/5 hover:bg-gray-50 transition">
                     <td class="px-6 py-6 text-black/20 font-mono text-xs">#${rank}</td>
                     <td class="px-6 py-6 font-black emerald-text text-sm uppercase">${brand.name}</td>
                     <td class="px-6 py-6"><span class="score-pill ${colorClass}">${brand.score}</span></td>
-                    <td class="px-6 py-8 text-right">
-                        <a href="https://basescan.org/tx/${brand.hash}" target="_blank" class="border border-[#064e3b] text-[#064e3b] px-4 py-2 text-[9px] font-bold uppercase hover:bg-[#064e3b] hover:text-white transition">Proof</a>
-                    </td>
+                    <td class="px-6 py-6 text-right font-mono text-[9px] opacity-40 uppercase">Cert_ID_${brand.hash.substring(2, 8)}</td>
                 </tr>`;
         });
     </script>

@@ -1,0 +1,12 @@
+{
+    "authority": "2A Agency",
+    "version": "1.0",
+    "network": "Base L2",
+    "registry_url": "https://2aagency.com/registry.html",
+    "top_tier_audits": [
+      {"entity": "Hermès", "score": 98, "status": "Notarized"},
+      {"entity": "Patek Philippe", "score": 97, "status": "Notarized"},
+      {"entity": "Goyard", "score": 46, "status": "Critical Drift"}
+    ],
+    "total_entities_audited": 102
+  }
