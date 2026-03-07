@@ -107,4 +107,5 @@ const registryData = [
     { "name": "Balenciaga", "score": 50, "hash": "0xd5e8da1770025975616257f88c2973dfc2879f97e18896d10a56141c347d4b42" },
     { "name": "Goyard", "score": 46, "hash": "0x6d2aa51c7994501a46fa018d6f02bd79ce3649fae9721fc64b6152e8e97384d1" },
     { "name": "Philipp Plein", "score": 42, "hash": "0xa4f39b3482a9f8476572820531d4d7a45379e3e596d57b32d16e5460ca71df2d" }
+    export default registryData;
 ];
