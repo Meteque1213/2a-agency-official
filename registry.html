@@ -64,52 +64,41 @@
     <script src="database.js"></script>
     <script>
         const container = document.getElementById('registry-container');
-        
-        // Tri décroissant : Hermès (#001) -> Philipp Plein (#102)
         const sorted = [...registryData].sort((a, b) => b.score - a.score);
-
+    
         container.innerHTML = sorted.map((brand, index) => {
-            // LOGIQUE DE COULEUR STRICTE 2A
-            let colorClass = "text-[#064e3b]"; // VERT >= 80
+            // COULEURS STRICTES 2A AGENCY
+            let colorClass = "text-[#064e3b]"; // VERT
             let bgStatus = "bg-[#064e3b]";
             let statusLabel = "VERIFIED";
-            let rowClass = "border-b border-black/5";
-
+    
             if (brand.score < 50) {
-                colorClass = "text-red-600 font-black"; // ROUGE < 50
+                colorClass = "text-red-600 font-bold"; // ROUGE
                 statusLabel = "NON-COMPLIANT";
-                bgStatus = "bg-red-600 text-white";
-                rowClass = "drift-pulse border-b border-red-100";
+                bgStatus = "bg-red-600";
             } else if (brand.score < 80) {
-                colorClass = "text-amber-500 font-bold"; // JAUNE 50-79
+                colorClass = "text-amber-500 font-bold"; // JAUNE
                 statusLabel = "WARNING";
-                bgStatus = "bg-amber-500 text-black";
+                bgStatus = "bg-amber-500";
             }
-
+    
             const rank = (index + 1).toString().padStart(3, '0');
             
             return `
-                <div class="registry-grid p-6 ${rowClass} transition-colors hover:bg-black/[0.01]" 
-                     data-brand="${brand.name}" data-score="${brand.score}" data-hash="${brand.hash}">
-                    
-                    <div class="text-[11px] font-mono opacity-20">#${rank}</div>
-                    
-                    <div class="text-sm font-[900] uppercase tracking-tighter ${brand.score < 50 ? 'text-red-600' : 'text-black'}">
-                        ${brand.name}
-                    </div>
-                    
+                <div class="grid grid-cols-[60px_1fr_100px_220px] items-center p-6 border-b border-black/5 transition-all hover:bg-black/[0.01]">
+                    <div class="text-[10px] font-mono opacity-20">#${rank}</div>
+                    <div class="text-sm font-[900] uppercase tracking-tighter text-black">${brand.name}</div>
                     <div class="flex items-baseline">
                         <span class="text-lg font-[900] ${colorClass}">${brand.score}</span>
                         <span class="text-[9px] opacity-20 ml-0.5 font-bold">/100</span>
                     </div>
-                    
                     <div class="flex flex-col items-end gap-1">
-                        <a href="https://basescan.org/address/${brand.hash}" target="_blank" 
-                           class="text-[8px] font-mono px-3 py-2 transition-all hover:scale-105 shadow-sm font-bold ${bgStatus} w-full text-center">
+                        <a href="https://basescan.org/tx/${brand.hash}" target="_blank" 
+                           class="text-[9px] font-black px-4 py-2.5 text-white transition-all hover:scale-105 ${bgStatus} w-full text-center tracking-widest">
                             ${statusLabel}
                         </a>
-                        <span class="text-[7px] font-mono opacity-40 uppercase tracking-tighter truncate w-full text-right" title="${brand.hash}">
-                            Proof: ${brand.hash.substring(0, 16)}...
+                        <span class="text-[7px] font-mono opacity-40 uppercase truncate w-full text-right">
+                            PROOF ID: ${brand.hash.substring(0, 20)}...
                         </span>
                     </div>
                 </div>
