@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A Agency | Global Brand Registry</title>
+    <title>2A Agency | Global Brand Registry (ERC-8004)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .emerald-brand { color: #064e3b; }
-        .drift-pulse { animation: pulse-red 2s infinite; background-color: rgba(220, 38, 38, 0.03); }
-        @keyframes pulse-red { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+        .drift-pulse { animation: pulse-red 2s infinite; background-color: rgba(220, 38, 38, 0.05); }
+        @keyframes pulse-red { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
         .sticky-btn { position: fixed; top: 2rem; right: 2rem; z-index: 100; }
-        /* Pour s'assurer que le défilement est fluide sur 102 lignes */
-        .registry-row { border-bottom: 1px solid rgba(0,0,0,0.05); transition: background 0.2s ease; }
-        .registry-row:hover { background-color: rgba(0,0,0,0.01); }
+        /* Grille resserrée pour un look "Terminal Bloomberg" sans espaces inutiles */
+        .registry-grid { display: grid; grid-template-columns: 70px 1fr 100px 220px; align-items: center; gap: 1.5rem; }
+        @media (max-width: 768px) { .registry-grid { grid-template-columns: 50px 1fr 70px 120px; gap: 0.5rem; } }
     </style>
 </head>
-<body class="p-8 md:p-12">
+<body class="p-6 md:p-12">
 
     <div class="sticky-btn no-print">
         <a href="index.html#audit-form" class="bg-[#064e3b] text-white text-[10px] font-black uppercase tracking-[0.2em] px-8 py-5 shadow-2xl hover:bg-black transition-all inline-block border border-white/10">
@@ -25,82 +25,96 @@
         </a>
     </div>
 
-    <nav class="flex justify-between items-center w-full max-w-7xl mx-auto mb-24">
+    <nav class="flex justify-between items-center w-full max-w-6xl mx-auto mb-20">
         <a href="index.html" class="font-[900] tracking-[0.3em] text-[15px] uppercase text-[#064e3b]">2A Agency</a>
-        <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-widest font-bold items-center">
-            <span class="emerald-brand underline underline-offset-8 decoration-2">Registry</span>
-            <div class="px-2 py-0.5 border border-blue-600 text-blue-600 rounded text-[8px] font-black italic">ERC-8004 ACTIVE</div>
-            <a href="glossary.html" class="opacity-40 hover:opacity-100 transition">Glossary</a>
-            <a href="whitepaper.html" class="opacity-40 hover:opacity-100 transition">Protocol</a>
+        <div class="flex gap-8 text-[10px] uppercase tracking-widest font-bold items-center">
+            <span class="text-black underline underline-offset-8 decoration-2">Registry</span>
+            <a href="glossary.html" class="opacity-30 hover:opacity-100 transition">Glossary</a>
+            <a href="whitepaper.html" class="opacity-30 hover:opacity-100 transition">Protocol</a>
         </div>
     </nav>
 
-    <header class="max-w-7xl mx-auto mb-16 text-left">
-        <h1 class="text-6xl font-[900] tracking-tighter uppercase mb-4 leading-none">
-            Global Registry
-        </h1>
+    <header class="max-w-6xl mx-auto mb-12">
+        <h1 class="text-5xl md:text-7xl font-[900] tracking-tighter uppercase mb-2">Global <span class="emerald-brand opacity-20">Registry</span></h1>
         <div class="flex items-center gap-4">
-            <p class="text-[10px] font-mono opacity-40 uppercase tracking-[0.4em]">102 Audited Entities // Forensic Dataset v1.0</p>
+            <p class="text-[10px] font-mono opacity-40 uppercase tracking-[0.4em]">102 Audited Entities // Forensic Dataset V1.0</p>
             <div class="h-[1px] flex-1 bg-black/5"></div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-4 p-6 text-[9px] font-black uppercase tracking-[0.3em] opacity-30 border-b border-black/10">
+    <main class="max-w-6xl mx-auto border-t border-black/10">
+        <div class="registry-grid p-6 text-[9px] font-black uppercase tracking-[0.3em] opacity-30 border-b border-black/5">
             <div>Rank</div>
             <div>Brand Entity</div>
-            <div>AI-IQ Score</div>
-            <div class="text-right">Blockchain Notarization</div>
+            <div>AI-IQ</div>
+            <div class="text-right">Notarization (Base L2)</div>
         </div>
 
-        <div id="registry-list" class="min-h-[500px]">
-            </div>
+        <div id="registry-container"></div>
     </main>
 
-    <footer class="max-w-7xl mx-auto mt-32 pt-12 border-t border-black/5 flex justify-between items-center opacity-20">
+    <footer class="max-w-6xl mx-auto mt-24 pt-10 border-t border-black/5 flex justify-between items-center opacity-30">
         <div class="text-[9px] font-mono uppercase tracking-widest italic">© 2026 2A Agency // Unit 0x2A...8004</div>
-        <div class="text-[9px] font-mono uppercase tracking-widest">Protocol: ERC-8004 // Settlement: Base L2</div>
+        <div class="text-[9px] font-mono uppercase tracking-widest flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+            Settlement: Base L2 Mainnet
+        </div>
     </footer>
 
     <script src="database.js"></script>
     <script>
-        const container = document.getElementById('registry-list');
+        const container = document.getElementById('registry-container');
         
-        if (typeof registryData !== 'undefined' && registryData.length > 0) {
-            // 1. TRI PAR SCORE (Du plus haut au plus bas)
-            const fullRegistry = [...registryData].sort((a, b) => b.score - a.score);
+        // Tri décroissant : Hermès (#001) -> Philipp Plein (#102)
+        const sorted = [...registryData].sort((a, b) => b.score - a.score);
 
-            // 2. GÉNÉRATION DE CHAQUE LIGNE
-            container.innerHTML = fullRegistry.map((brand, index) => {
-                const isDrift = brand.score < 50;
-                const rank = (index + 1).toString().padStart(3, '0');
-                
-                return `
-                    <div class="grid grid-cols-4 items-center p-8 registry-row ${isDrift ? 'drift-pulse border-red-100' : ''}">
-                        <div class="text-[11px] font-mono ${isDrift ? 'text-red-400' : 'opacity-20'}">#${rank}</div>
-                        
-                        <div class="text-sm font-black uppercase tracking-tight ${isDrift ? 'text-red-600' : 'text-[#064e3b]'}">
-                            ${brand.name}
-                            ${isDrift ? '<span class="ml-3 text-[8px] bg-red-600 text-white px-1.5 py-0.5 tracking-tighter">ALERT: DRIFT</span>' : ''}
-                        </div>
-                        
-                        <div class="flex items-baseline gap-1">
-                            <span class="text-xl font-[900] ${isDrift ? 'text-red-600' : ''}">${brand.score}</span>
-                            <span class="text-[10px] opacity-20 font-bold">/100</span>
-                        </div>
-                        
-                        <div class="flex justify-end">
-                            <a href="https://basescan.org/search?q=${brand.hash}" target="_blank" 
-                               class="text-[9px] font-mono px-4 py-2 border transition-all ${isDrift ? 'border-red-600 text-red-600 font-bold' : 'border-black/10 opacity-40 hover:opacity-100 hover:border-black'}">
-                                ${isDrift ? 'NON-COMPLIANT' : 'VERIFIED'}_${brand.hash.substring(0, 8).toUpperCase()}
-                            </a>
-                        </div>
+        container.innerHTML = sorted.map((brand, index) => {
+            // LOGIQUE DE COULEUR STRICTE 2A
+            let colorClass = "text-[#064e3b]"; // VERT >= 80
+            let bgStatus = "bg-[#064e3b]";
+            let statusLabel = "VERIFIED";
+            let rowClass = "border-b border-black/5";
+
+            if (brand.score < 50) {
+                colorClass = "text-red-600 font-black"; // ROUGE < 50
+                statusLabel = "NON-COMPLIANT";
+                bgStatus = "bg-red-600 text-white";
+                rowClass = "drift-pulse border-b border-red-100";
+            } else if (brand.score < 80) {
+                colorClass = "text-amber-500 font-bold"; // JAUNE 50-79
+                statusLabel = "WARNING";
+                bgStatus = "bg-amber-500 text-black";
+            }
+
+            const rank = (index + 1).toString().padStart(3, '0');
+            
+            return `
+                <div class="registry-grid p-6 ${rowClass} transition-colors hover:bg-black/[0.01]" 
+                     data-brand="${brand.name}" data-score="${brand.score}" data-hash="${brand.hash}">
+                    
+                    <div class="text-[11px] font-mono opacity-20">#${rank}</div>
+                    
+                    <div class="text-sm font-[900] uppercase tracking-tighter ${brand.score < 50 ? 'text-red-600' : 'text-black'}">
+                        ${brand.name}
                     </div>
-                `;
-            }).join('');
-        } else {
-            container.innerHTML = "<p class='p-10 text-center opacity-30 uppercase text-[10px] font-bold tracking-widest'>Database Connection Error...</p>";
-        }
+                    
+                    <div class="flex items-baseline">
+                        <span class="text-lg font-[900] ${colorClass}">${brand.score}</span>
+                        <span class="text-[9px] opacity-20 ml-0.5 font-bold">/100</span>
+                    </div>
+                    
+                    <div class="flex flex-col items-end gap-1">
+                        <a href="https://basescan.org/address/${brand.hash}" target="_blank" 
+                           class="text-[8px] font-mono px-3 py-2 transition-all hover:scale-105 shadow-sm font-bold ${bgStatus} w-full text-center">
+                            ${statusLabel}
+                        </a>
+                        <span class="text-[7px] font-mono opacity-40 uppercase tracking-tighter truncate w-full text-right" title="${brand.hash}">
+                            Proof: ${brand.hash.substring(0, 16)}...
+                        </span>
+                    </div>
+                </div>
+            `;
+        }).join('');
     </script>
 </body>
 </html>
