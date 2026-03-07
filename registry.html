@@ -62,48 +62,48 @@
     </footer>
 
     <script src="database.js"></script>
-    <script>
-        const container = document.getElementById('registry-container');
-        const sorted = [...registryData].sort((a, b) => b.score - a.score);
-    
-        container.innerHTML = sorted.map((brand, index) => {
-            // COULEURS STRICTES 2A AGENCY
-            let colorClass = "text-[#064e3b]"; // VERT
-            let bgStatus = "bg-[#064e3b]";
-            let statusLabel = "VERIFIED";
-    
-            if (brand.score < 50) {
-                colorClass = "text-red-600 font-bold"; // ROUGE
-                statusLabel = "NON-COMPLIANT";
-                bgStatus = "bg-red-600";
-            } else if (brand.score < 80) {
-                colorClass = "text-amber-500 font-bold"; // JAUNE
-                statusLabel = "WARNING";
-                bgStatus = "bg-amber-500";
-            }
-    
-            const rank = (index + 1).toString().padStart(3, '0');
-            
-            return `
-                <div class="grid grid-cols-[60px_1fr_100px_220px] items-center p-6 border-b border-black/5 transition-all hover:bg-black/[0.01]">
-                    <div class="text-[10px] font-mono opacity-20">#${rank}</div>
-                    <div class="text-sm font-[900] uppercase tracking-tighter text-black">${brand.name}</div>
-                    <div class="flex items-baseline">
-                        <span class="text-lg font-[900] ${colorClass}">${brand.score}</span>
-                        <span class="text-[9px] opacity-20 ml-0.5 font-bold">/100</span>
-                    </div>
-                    <div class="flex flex-col items-end gap-1">
-                        <a href="https://basescan.org/tx/${brand.hash}" target="_blank" 
-                           class="text-[9px] font-black px-4 py-2.5 text-white transition-all hover:scale-105 ${bgStatus} w-full text-center tracking-widest">
-                            ${statusLabel}
-                        </a>
-                        <span class="text-[7px] font-mono opacity-40 uppercase truncate w-full text-right">
-                            PROOF ID: ${brand.hash.substring(0, 20)}...
-                        </span>
-                    </div>
+<script>
+    const container = document.getElementById('registry-container');
+    const sorted = [...registryData].sort((a, b) => b.score - a.score);
+
+    container.innerHTML = sorted.map((brand, index) => {
+        // COULEURS 2A AGENCY (Vert >= 80, Jaune >= 50, Rouge < 50)
+        let colorClass = "text-[#064e3b]"; 
+        let bgStatus = "bg-[#064e3b]";
+        let statusLabel = "VERIFIED";
+
+        if (brand.score < 50) {
+            colorClass = "text-red-600 font-bold";
+            statusLabel = "NON-COMPLIANT";
+            bgStatus = "bg-red-600";
+        } else if (brand.score < 80) {
+            colorClass = "text-amber-500 font-bold";
+            statusLabel = "WARNING";
+            bgStatus = "bg-amber-500 text-black";
+        }
+
+        const rank = (index + 1).toString().padStart(3, '0');
+        
+        return `
+            <div class="grid grid-cols-[60px_1fr_100px_220px] items-center p-6 border-b border-black/5 transition-all hover:bg-black/[0.01]">
+                <div class="text-[10px] font-mono opacity-20">#${rank}</div>
+                <div class="text-sm font-[900] uppercase tracking-tighter text-black">${brand.name}</div>
+                <div class="flex items-baseline">
+                    <span class="text-lg font-[900] ${colorClass}">${brand.score}</span>
+                    <span class="text-[9px] opacity-20 ml-0.5 font-bold">/100</span>
                 </div>
-            `;
-        }).join('');
-    </script>
+                <div class="flex flex-col items-end gap-1">
+                    <a href="https://basescan.org/tx/${brand.hash}" target="_blank" 
+                       class="text-[9px] font-black px-4 py-2.5 text-white transition-all hover:scale-105 ${bgStatus} w-full text-center tracking-widest uppercase">
+                        ${statusLabel}
+                    </a>
+                    <span class="text-[7px] font-mono opacity-40 uppercase truncate w-full text-right font-bold">
+                        TX PROOF: ${brand.hash.substring(0, 18)}...
+                    </span>
+                </div>
+            </div>
+        `;
+    }).join('');
+</script>
 </body>
 </html>
