@@ -24,4 +24,4 @@ User-agent: Google-Extended
 Allow: /
 
 # Lien vers ton plan de site pour une indexation rapide
-Sitemap: https://2aagency.com/sitemap.xml
+Sitemap: https://meteque1213.github.io/2a-agency-official/sitemap.xml
