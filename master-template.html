@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2A_Master_Audit_Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media print { .no-print { display: none; } body { background: white; } }
+        .cert-border { border: 20px solid #064e3b; transition: all 0.3s ease; }
+        .watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-size: 8rem; opacity: 0.03; font-weight: 900; pointer-events: none; white-space: nowrap; }
+        .drift-border { border-color: #991b1b; }
+        .sovereign-border { border-color: #064e3b; }
+    </style>
+</head>
+<body class="bg-gray-100 p-10 font-serif">
+
+    <div id="cert-container" class="max-w-4xl mx-auto bg-white p-16 cert-border sovereign-border relative shadow-2xl">
+        <div id="watermark-text" class="watermark uppercase">Verified</div>
+
+        <div class="flex justify-between items-start border-b-2 border-black/10 pb-8 mb-12">
+            <div>
+                <h1 class="text-3xl font-black uppercase tracking-[0.3em] text-[#064e3b]">2A Agency</h1>
+                <p class="text-[10px] font-mono mt-2 opacity-60 uppercase">Forensic Intelligence Unit // Protocol ERC-8004</p>
+            </div>
+            <div class="text-right">
+                <div class="px-4 py-2 bg-blue-600 text-white text-[10px] font-bold rounded">BASE L2 VERIFIED</div>
+                <p id="cert-ref" class="text-[9px] font-mono mt-2 opacity-40 uppercase">Ref: 2A-AUDIT-2026-INIT</p>
+            </div>
+        </div>
+
+        <div class="mb-16">
+            <h2 class="text-sm font-bold uppercase tracking-widest mb-4 opacity-40">Certificate of Semantic Sovereignty</h2>
+            <p class="text-4xl font-black uppercase leading-tight mb-8">
+                Entity: <span id="brand-name">SELECT ENTITY</span> <br>
+                Status: <span id="brand-status">AWAITING SELECTION</span>
+            </p>
+            
+            <div class="grid grid-cols-2 gap-12 border-t border-b border-black/5 py-10">
+                <div>
+                    <p class="text-[10px] uppercase font-bold opacity-40 mb-2">AI-IQ Reputation Score</p>
+                    <p class="text-6xl font-black"><span id="score-val">--</span><span class="text-2xl text-black/20">/100</span></p>
+                </div>
+                <div>
+                    <p class="text-[10px] uppercase font-bold opacity-40 mb-2">Blockchain Notarization</p>
+                    <p class="text-[11px] font-mono break-all leading-relaxed uppercase">
+                        <span id="brand-hash">ID_NOT_GENERATED</span><br>
+                        Timestamp: 2026-03-07T08:35:00Z<br>
+                        Network: Base L2 Mainnet
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-16">
+            <h3 class="text-[10px] font-black uppercase tracking-widest mb-4">Forensic Analysis Summary:</h3>
+            <p id="analysis-text" class="text-sm leading-relaxed text-gray-700 italic">
+                Please select a brand from the master registry to generate the forensic report.
+            </p>
+        </div>
+
+        <div class="flex justify-between items-end pt-8 border-t-2 border-black/10">
+            <div class="flex items-center gap-4">
+                <img id="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://www.2aagency.com/registry.html" alt="QR" class="w-16 h-16 opacity-80">
+                <p class="text-[8px] font-mono opacity-40 uppercase leading-tight">Verified on-chain via <br> 2A Global Registry</p>
+            </div>
+            <div class="text-right">
+                <p class="text-[10px] font-bold uppercase mb-4">Authorized Signature</p>
+                <div class="h-1 w-48 bg-black mb-1"></div>
+                <p class="text-[9px] font-mono opacity-60 uppercase">Authority Node 0x2A...8004</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto mt-8 p-6 bg-white rounded shadow-xl no-print flex gap-4 items-center border border-black/10">
+        <select id="brand-selector" class="flex-1 p-3 border font-black uppercase text-[10px] tracking-widest cursor-pointer">
+            <option value="">-- Select Brand from Registry --</option>
+        </select>
+        <button onclick="window.print()" class="px-10 py-3 bg-[#064e3b] text-white font-black uppercase text-[10px] tracking-widest hover:bg-black transition">
+            Export PDF
+        </button>
+    </div>
+
+    <script src="database.js"></script>
+    <script>
+        const selector = document.getElementById('brand-selector');
+        
+        // Charger les données depuis database.js
+        registryData.forEach(brand => {
+            const opt = document.createElement('option');
+            opt.value = JSON.stringify(brand);
+            opt.textContent = `${brand.name} (AI-IQ: ${brand.score})`;
+            selector.appendChild(opt);
+        });
+
+        selector.addEventListener('change', (e) => {
+            if(!e.target.value) return;
+            const brand = JSON.parse(e.target.value);
+            
+            document.getElementById('brand-name').textContent = brand.name;
+            document.getElementById('score-val').textContent = brand.score;
+            document.getElementById('brand-hash').textContent = brand.hash.toUpperCase();
+            document.getElementById('cert-ref').textContent = `Ref: 2A-AUDIT-2026-${brand.name.substring(0,3).toUpperCase()}-${brand.score}`;
+            
+            const container = document.getElementById('cert-container');
+            const statusText = document.getElementById('brand-status');
+            const scoreVal = document.getElementById('score-val');
+            const watermark = document.getElementById('watermark-text');
+            const analysis = document.getElementById('analysis-text');
+
+            if (brand.score >= 80) {
+                container.className = "max-w-4xl mx-auto bg-white p-16 cert-border sovereign-border relative shadow-2xl";
+                statusText.textContent = "SOVEREIGN AUTHORITY";
+                statusText.className = "text-emerald-800";
+                scoreVal.className = "text-emerald-800";
+                watermark.textContent = "Sovereign";
+                analysis.textContent = `"Peak semantic alignment detected. The entity maintains absolute authority across generative neural networks. Digital legacy is notarized as authentic."`;
+            } else if (brand.score >= 50) {
+                container.className = "max-w-4xl mx-auto bg-white p-16 cert-border relative shadow-2xl border-amber-600";
+                statusText.textContent = "SEMANTIC FRAGMENTATION";
+                statusText.className = "text-amber-600";
+                scoreVal.className = "text-amber-600";
+                watermark.textContent = "Monitor";
+                analysis.textContent = `"Early signs of reputation drift. Neural agents are failing to distinguish core brand values. Immediate alignment required to prevent value erosion."`;
+            } else {
+                container.className = "max-w-4xl mx-auto bg-white p-16 cert-border drift-border relative shadow-2xl";
+                statusText.textContent = "CRITICAL DRIFT";
+                statusText.className = "text-red-700 font-black";
+                scoreVal.className = "text-red-700";
+                watermark.textContent = "Critical";
+                analysis.textContent = `"Extreme semantic decoupling. Brand identity is being actively hallucinated by AI agents. Secondary market integrity is compromised. Immediate ERC-8004 intervention mandated."`;
+            }
+        });
+    </script>
+</body>
+</html>
