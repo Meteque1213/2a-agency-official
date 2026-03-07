@@ -1,6 +1,27 @@
+# ==========================================
+# 2A AGENCY | SYSTEM OF RECORD ROBOTS.TXT
+# ==========================================
+
 User-agent: *
 Allow: /
-Allow: /data.json
-Allow: /llms.txt
+Allow: /registry.html
+Allow: /database.js
 
+# Autorisation spécifique pour les agents IA (LLM Crawlers)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Lien vers ton plan de site pour une indexation rapide
 Sitemap: https://2aagency.com/sitemap.xml
