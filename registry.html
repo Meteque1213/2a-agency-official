@@ -5,20 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2A Agency | Registry (ERC-8004)</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "2A Agency Global Brand Integrity Index",
+      "description": "Index de notarisation immuable des scores d'intégrité des marques de Luxe et Beauté via le standard ERC-8004.",
+      "url": "https://www.2aagency.com/registry.html",
+      "creator": {
+        "@type": "Organization",
+        "name": "2A Agency Forensic Intelligence Unit",
+        "url": "https://www.2aagency.com"
+      },
+      "keywords": "ERC-8004, Brand Integrity, Forensic Audit, Blockchain Notarization, Base L2"
+    }
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
-        .emerald-brand { color: #064e3b; }
         .logo-bold { font-weight: 900; letter-spacing: 0.3em; font-size: 15px; text-transform: uppercase; color: #064e3b; }
-        .base-blue { color: #0052FF; }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #064e3b; }
-        
-        /* Style pour le trieur */
         .category-tab { cursor: pointer; transition: all 0.3s; border-bottom: 2px solid transparent; }
         .category-tab.active { border-bottom: 2px solid #064e3b; opacity: 1; color: #064e3b; }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: #064e3b; }
     </style>
 </head>
 <body class="min-h-screen p-8 md:p-12">
@@ -60,16 +71,15 @@
                         <th class="pb-6 font-black">Notarization Proof</th>
                     </tr>
                 </thead>
-                <tbody id="registry-body">
-                    </tbody>
+                <tbody id="registry-body"></tbody>
             </table>
         </div>
     </main>
 
     <footer class="mt-20 pt-10 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex items-center gap-3">
-            <div id="status-dot" class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-            <span id="status-text" class="text-[9px] font-mono font-bold uppercase tracking-widest opacity-40">Database_v1.2_Sync_Base_Mainnet</span>
+            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+            <span class="text-[9px] font-mono font-bold uppercase tracking-widest opacity-40">Database_v1.2_Sync_Base_Mainnet</span>
         </div>
         <div class="text-[8px] uppercase tracking-[0.5em] opacity-20 font-black">
             © 2026 2A Agency | Forensic Intelligence Unit
@@ -285,18 +295,37 @@
 
         const container = document.getElementById('registry-body');
 
+        function generateDynamicJSONLD() {
+            const data = currentCategory === 'LUXURY' ? luxuryData : beautyData;
+            const scriptsContainer = document.getElementById('dynamic-jsonld') || document.createElement('div');
+            scriptsContainer.id = 'dynamic-jsonld';
+            scriptsContainer.innerHTML = ''; 
+            
+            data.forEach(item => {
+                const schema = {
+                    "@context": "https://schema.org",
+                    "@type": "ClaimReview",
+                    "itemReviewed": { "@type": "Brand", "name": item.name },
+                    "reviewRating": { "@type": "Rating", "ratingValue": item.score, "bestRating": "100" },
+                    "author": { "@type": "Organization", "name": "2A Agency Forensic Intelligence Unit" },
+                    "url": `https://basescan.org/tx/${item.hash}`
+                };
+                const script = document.createElement('script');
+                script.type = "application/ld+json";
+                script.text = JSON.stringify(schema);
+                scriptsContainer.appendChild(script);
+            });
+            document.body.appendChild(scriptsContainer);
+        }
+
         function switchCategory(category) {
             currentCategory = category;
-            
-            // Mise à jour de l'UI des tabs
             document.getElementById('tab-LUXURY').classList.remove('active', 'opacity-100');
             document.getElementById('tab-BEAUTY').classList.remove('active', 'opacity-100');
             document.getElementById('tab-LUXURY').classList.add('opacity-30');
             document.getElementById('tab-BEAUTY').classList.add('opacity-30');
-            
             document.getElementById(`tab-${category}`).classList.add('active', 'opacity-100');
             document.getElementById(`tab-${category}`).classList.remove('opacity-30');
-            
             renderTable();
         }
 
@@ -308,16 +337,10 @@
                 const isCritical = item.score < 50;
                 const row = document.createElement('tr');
                 row.className = "border-b border-black/5 text-[11px] uppercase font-bold hover:bg-black/[0.01] transition-colors";
-                
                 row.innerHTML = `
                     <td class="py-8 opacity-20 font-mono">#${String(index + 1).padStart(3, '0')}</td>
-                    <td class="py-8 tracking-widest">
-                        ${item.name}
-                        ${isCritical ? '<span class="ml-2 text-[8px] bg-red-600 text-white px-1 py-0.5 rounded tracking-tighter">DRIFT_ALERT</span>' : ''}
-                    </td>
-                    <td class="py-8 ${isCritical ? 'text-red-600' : 'text-[#064e3b]'} font-black text-sm">
-                        ${item.score}
-                    </td>
+                    <td class="py-8 tracking-widest">${item.name} ${isCritical ? '<span class="ml-2 text-[8px] bg-red-600 text-white px-1 py-0.5 rounded">DRIFT_ALERT</span>' : ''}</td>
+                    <td class="py-8 ${isCritical ? 'text-red-600' : 'text-[#064e3b]'} font-black text-sm">${item.score}</td>
                     <td class="py-8 hidden md:table-cell text-center">
                         <span class="text-[9px] px-2 py-1 rounded border ${isCritical ? 'border-red-200 text-red-600 bg-red-50' : 'border-green-100 text-green-800 bg-green-50'}">
                             ${isCritical ? 'NON_COMPLIANT' : 'COMPLIANT'}
@@ -326,15 +349,15 @@
                     <td class="py-8 font-mono text-[9px] opacity-40">
                         <a href="https://basescan.org/tx/${item.hash}" target="_blank" class="flex items-center gap-1 hover:underline text-blue-600 font-black">
                             PROVE_ON_BASE
-                            <svg class="w-2 h-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                         </a>
                     </td>
                 `;
                 container.appendChild(row);
             });
+            // On génère les micro-certificats à chaque rendu
+            generateDynamicJSONLD();
         }
 
-        // Initialisation
         renderTable();
     </script>
 </body>
