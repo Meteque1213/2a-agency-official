@@ -17,9 +17,9 @@
         .nav-link:hover { opacity: 1; }
     </style>
 </head>
-<body class="p-6 md:p-12">
+<body class="p-6 md:p-12 min-h-screen flex flex-col">
 
-    <nav class="flex justify-between items-center mb-16">
+    <nav class="flex justify-between items-center mb-16 max-w-7xl mx-auto w-full">
         <a href="index.html" class="text-xs font-black tracking-widest uppercase border-b-2 border-black pb-1">2A Agency</a>
         <div class="hidden md:flex gap-8 items-center">
             <div class="px-2 py-0.5 border border-blue-600 text-blue-600 rounded text-[8px] tracking-tighter font-black">ERC-8004 COMPLIANT</div>
@@ -29,7 +29,7 @@
         </div>
     </nav>
 
-    <header class="flex justify-between items-center mb-12 uppercase tracking-widest text-[9px] font-bold">
+    <header class="flex justify-between items-center mb-12 uppercase tracking-widest text-[9px] font-bold max-w-7xl mx-auto w-full">
         <div class="flex items-center gap-2">
             <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
             SENTINEL-01 : ACTIVE & MONITORING
@@ -41,7 +41,7 @@
         </div>
     </header>
 
-    <section class="mb-20">
+    <section class="mb-20 max-w-7xl mx-auto w-full">
         <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none text-2a-emerald">
             Global Brand<br>Integrity Index
         </h1>
@@ -50,12 +50,12 @@
         </p>
     </section>
 
-    <nav class="flex gap-8 mb-12 border-b border-gray-200">
+    <nav class="flex gap-8 mb-12 border-b border-gray-200 max-w-7xl mx-auto w-full">
         <button onclick="switchTab('luxury')" id="tab-luxury" class="pb-2 text-xs uppercase tracking-widest transition-all">01_Luxury</button>
         <button onclick="switchTab('beauty')" id="tab-beauty" class="pb-2 text-xs uppercase tracking-widest transition-all">02_Beauty</button>
     </nav>
 
-    <div class="overflow-x-auto min-h-[600px]">
+    <div class="overflow-x-auto flex-grow max-w-7xl mx-auto w-full">
         <table class="w-full text-left border-collapse">
             <thead>
                 <tr class="text-[10px] uppercase tracking-widest opacity-40 border-b border-gray-200">
@@ -70,7 +70,7 @@
         </table>
     </div>
 
-    <footer class="mt-20 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity gap-6">
+    <footer class="mt-20 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity gap-6 max-w-7xl mx-auto w-full">
         <div class="text-center md:text-left">
             <p class="text-[9px] font-bold uppercase tracking-widest mb-1">© 2026 2A Agency Forensic Intelligence Unit</p>
             <p class="text-[8px] font-mono tracking-tighter italic">Secured by Base L2 & Sentinel-01 Monitoring</p>
@@ -84,7 +84,7 @@
                    class="bg-transparent border-b border-black text-[9px] py-1 outline-none w-48 focus:border-emerald-900 transition-all uppercase font-bold text-center md:text-right">
             
             <button type="submit" class="text-[9px] font-black uppercase tracking-widest border border-black px-4 py-1 hover:bg-black hover:text-white transition-all">
-                Send Signal →
+                Send Request →
             </button>
         </form>
     </footer>
