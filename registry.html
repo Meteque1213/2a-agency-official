@@ -10,11 +10,26 @@
         body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; color: #050505; }
         .text-2a-emerald { color: #064e3b; }
         .bg-2a-emerald { background-color: #064e3b; }
-        .drift-row { background-color: #fff1f2; }
-        .excellence-row { background-color: #f0fdf4; }
+        
+        /* COULEUR BLEU SUPREMACY (BASE L2) */
+        .bg-supremacy { 
+            background-color: #0052FF !important; 
+            color: white !important; 
+            font-weight: 900;
+            box-shadow: 0 0 15px rgba(0, 82, 255, 0.4);
+        }
+
         .tab-active { border-bottom: 3px solid #064e3b; font-weight: 900; opacity: 1 !important; }
         .nav-link { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #000; opacity: 0.4; transition: opacity 0.3s; }
         .nav-link:hover { opacity: 1; }
+
+        /* Animation pour les alertes rouges */
+        @keyframes pulse-red {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        .animate-pulse-red { animation: pulse-red 2s infinite; }
     </style>
 </head>
 <body class="p-6 md:p-12">
@@ -53,6 +68,7 @@
     <nav class="flex gap-8 mb-12 border-b border-gray-200">
         <button onclick="switchTab('luxury')" id="tab-luxury" class="pb-2 text-xs uppercase tracking-widest transition-all">01_Luxury</button>
         <button onclick="switchTab('beauty')" id="tab-beauty" class="pb-2 text-xs uppercase tracking-widest transition-all">02_Beauty</button>
+        <button onclick="switchTab('longevity')" id="tab-longevity" class="pb-2 text-xs uppercase tracking-widest transition-all">03_Longevity</button>
     </nav>
 
     <div class="overflow-x-auto min-h-[600px]">
@@ -403,15 +419,15 @@ function switchTab(category) {
         // On trie par score décroissant
         [...brands[category]].sort((a, b) => b.score - a.score).forEach((brand, index) => {
             
-            // Logique de statut Forensic
-            const status = brand.score >= 90 ? "SUPREMACY" : 
-                           (brand.score > 80 ? "EXCELLENCE" : 
-                           (brand.score < 60 ? "DRIFT ALERT" : "VIGILANCE"));
-            
-            const statusClass = brand.score >= 90 ? "bg-white text-black font-black" :
-                                (brand.score > 80 ? "bg-emerald-500 text-white" : 
-                                (brand.score < 60 ? "bg-red-500 text-white animate-pulse" : "bg-amber-400 text-black"));
+          // Logique de statut Forensic
+const status = brand.score >= 90 ? "SUPREMACY" : 
+               (brand.score > 80 ? "EXCELLENCE" : 
+               (brand.score < 60 ? "DRIFT ALERT" : "VIGILANCE"));
 
+// Ici on utilise .bg-supremacy (le bleu Base) pour le top niveau
+const statusClass = brand.score >= 90 ? "bg-supremacy" :
+                    (brand.score > 80 ? "bg-emerald-500 text-white" : 
+                    (brand.score < 60 ? "bg-red-500 text-white animate-pulse" : "bg-amber-400 text-black"));
             // On gère le lien (soit tx pour Longevity, soit hash pour les autres)
             const proofLink = brand.tx ? `https://basescan.org/tx/${brand.tx}` : `https://basescan.org/tx/${brand.hash}`;
 
