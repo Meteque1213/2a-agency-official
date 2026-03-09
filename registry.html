@@ -323,14 +323,19 @@ const beautyData = [
 
         function renderTable() {
             container.innerHTML = '';
-            const data = currentCategory === 'LUXURY' ? luxuryData : beautyData;
+            
+            // 1. Sélection de la source
+            let data = currentCategory === 'LUXURY' ? luxuryData : beautyData;
+            
+            // 2. TRI PAR SCORE DÉCROISSANT (Du plus haut au plus bas)
+            data.sort((a, b) => b.score - a.score);
             
             data.forEach((item, index) => {
                 // LOGIQUE COULEUR : 
                 // Vert (High) : > 89
                 // Jaune (Mid) : 60 - 89
                 // Rouge (Critical) : < 60
-                let scoreColor = "text-red-600"; // Par défaut critique
+                let scoreColor = "text-red-600"; 
                 let statusBadge = "border-red-200 text-red-600 bg-red-50";
                 let statusLabel = "NON_COMPLIANT";
 
@@ -367,6 +372,9 @@ const beautyData = [
                 `;
                 container.appendChild(row);
             });
+            
+            // On régénère les micro-données SEO pour que Google voit le nouvel ordre
+            generateDynamicJSONLD();
         }
 
         renderTable();
