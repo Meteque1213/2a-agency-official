@@ -17,9 +17,9 @@
         .nav-link:hover { opacity: 1; }
     </style>
 </head>
-<body class="p-6 md:p-12 min-h-screen flex flex-col">
+<body class="p-6 md:p-12">
 
-    <nav class="flex justify-between items-center mb-16 max-w-7xl mx-auto w-full">
+    <nav class="flex justify-between items-center mb-16">
         <a href="index.html" class="text-xs font-black tracking-widest uppercase border-b-2 border-black pb-1">2A Agency</a>
         <div class="hidden md:flex gap-8 items-center">
             <div class="px-2 py-0.5 border border-blue-600 text-blue-600 rounded text-[8px] tracking-tighter font-black">ERC-8004 COMPLIANT</div>
@@ -29,7 +29,7 @@
         </div>
     </nav>
 
-    <header class="flex justify-between items-center mb-12 uppercase tracking-widest text-[9px] font-bold max-w-7xl mx-auto w-full">
+    <header class="flex justify-between items-center mb-12 uppercase tracking-widest text-[9px] font-bold">
         <div class="flex items-center gap-2">
             <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
             SENTINEL-01 : ACTIVE & MONITORING
@@ -41,7 +41,7 @@
         </div>
     </header>
 
-    <section class="mb-20 max-w-7xl mx-auto w-full">
+    <section class="mb-20">
         <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none text-2a-emerald">
             Global Brand<br>Integrity Index
         </h1>
@@ -50,12 +50,12 @@
         </p>
     </section>
 
-    <nav class="flex gap-8 mb-12 border-b border-gray-200 max-w-7xl mx-auto w-full">
+    <nav class="flex gap-8 mb-12 border-b border-gray-200">
         <button onclick="switchTab('luxury')" id="tab-luxury" class="pb-2 text-xs uppercase tracking-widest transition-all">01_Luxury</button>
         <button onclick="switchTab('beauty')" id="tab-beauty" class="pb-2 text-xs uppercase tracking-widest transition-all">02_Beauty</button>
     </nav>
 
-    <div class="overflow-x-auto flex-grow max-w-7xl mx-auto w-full">
+    <div class="overflow-x-auto min-h-[600px]">
         <table class="w-full text-left border-collapse">
             <thead>
                 <tr class="text-[10px] uppercase tracking-widest opacity-40 border-b border-gray-200">
@@ -70,26 +70,50 @@
         </table>
     </div>
 
-    <footer class="mt-20 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity gap-6 max-w-7xl mx-auto w-full">
+    <footer class="mt-auto w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity pt-8 pb-8 border-t border-gray-200 gap-6">
         <div class="text-center md:text-left">
             <p class="text-[9px] font-bold uppercase tracking-widest mb-1">© 2026 2A Agency Forensic Intelligence Unit</p>
             <p class="text-[8px] font-mono tracking-tighter italic">Secured by Base L2 & Sentinel-01 Monitoring</p>
         </div>
 
-        <form action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col items-center md:items-end gap-2">
-            <input type="hidden" name="_next" value="https://www.2aagency.com/thanks.html">
+        <form id="2a-contact-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col items-center md:items-end gap-2">
             <input type="hidden" name="_subject" value="Nouveau Signalement Forensic - 2A Agency">
             
             <input type="email" name="email" placeholder="ENTER_AGENT_EMAIL" required 
                    class="bg-transparent border-b border-black text-[9px] py-1 outline-none w-48 focus:border-emerald-900 transition-all uppercase font-bold text-center md:text-right">
             
-            <button type="submit" class="text-[9px] font-black uppercase tracking-widest border border-black px-4 py-1 hover:bg-black hover:text-white transition-all">
+            <button type="submit" id="submit-btn" class="text-[9px] font-black uppercase tracking-widest border border-black px-4 py-1 hover:bg-black hover:text-white transition-all">
                 Send Request →
             </button>
         </form>
     </footer>
 
     <script>
+        var form = document.getElementById("2a-contact-form");
+        
+        async function handleSubmit(event) {
+            event.preventDefault(); // Empêche Formspree d'ouvrir sa propre page
+            var data = new FormData(event.target);
+            
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Redirection forcée vers ta page !
+                    window.location.href = "https://www.2aagency.com/thanks.html"; 
+                } else {
+                    alert("Erreur de connexion au serveur 2A.");
+                }
+            }).catch(error => {
+                alert("Erreur de connexion au serveur 2A.");
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+    </script> <script>
         const brands = {
             luxury: [
                 { "name": "Hermès", "score": 98, "hash": "0x2d10f2ff3c6ddc9347357e5233e267b95ec2988bd9ce898c80f7081cdef42763" },
