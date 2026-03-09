@@ -23,7 +23,7 @@
         <a href="index.html" class="text-xs font-black tracking-widest uppercase border-b-2 border-black pb-1">2A Agency</a>
         <div class="flex gap-8 items-center">
             <a href="registry.html" class="nav-link opacity-100 border-b-2 border-emerald-900">Registry</a>
-            <span class="text-[10px] font-bold border border-blue-600 text-blue-600 px-2 py-0.5 rounded italic">ERC-8004 COMPLIANT</span>
+            <span class="text-[10px] font-bold border border-blue-600 text-blue-600 px-2 py-0.5 rounded italic uppercase">ERC-8004 Compliant</span>
             <a href="glossary.html" class="nav-link">Glossary</a>
             <a href="whitepaper.html" class="nav-link">Protocol</a>
         </div>
@@ -63,18 +63,28 @@
                     <th class="py-4 font-bold">Brand Entity</th>
                     <th class="py-4 font-bold">Audit Score</th>
                     <th class="py-4 font-bold">Status</th>
-                    <th class="py-4 font-bold">Notarization Proof</th>
+                    <th class="py-4 font-bold text-right">Notarization Proof</th>
                 </tr>
             </thead>
             <tbody id="registry-body" class="text-xs font-medium"></tbody>
         </table>
     </div>
 
-    <footer class="mt-20 pt-8 border-t border-gray-200 flex justify-between items-center opacity-40 hover:opacity-100 transition-opacity">
-        <p class="text-[9px] font-bold uppercase tracking-widest">© 2026 2A Agency Forensic Intelligence Unit</p>
-        <a href="https://formspree.io/f/xykngdbz" target="_blank" class="text-[9px] font-bold uppercase tracking-widest border-b border-black">
-            Contact Intelligence Unit →
-        </a>
+    <footer class="mt-20 pt-8 border-t border-gray-200 flex justify-between items-end opacity-40 hover:opacity-100 transition-opacity">
+        <div>
+            <p class="text-[9px] font-bold uppercase tracking-widest mb-1">© 2026 2A Agency Forensic Intelligence Unit</p>
+            <p class="text-[8px] font-mono tracking-tighter italic">Secured by Base L2 & Sentinel-01 Monitoring</p>
+        </div>
+
+        <form action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col items-end gap-2">
+            <input type="hidden" name="_next" value="https://www.2aagency.com/thanks.html">
+            <input type="hidden" name="_subject" value="Nouveau Signalement Forensic - 2A Agency">
+            <input type="email" name="email" placeholder="YOUR_EMAIL@DOMAIN.COM" required 
+                   class="bg-transparent border-b border-black text-[9px] py-1 outline-none w-48 focus:border-emerald-900 transition-all uppercase">
+            <button type="submit" class="text-[9px] font-black uppercase tracking-widest border border-black px-4 py-1 hover:bg-black hover:text-white transition-all">
+                Contact Intelligence Unit →
+            </button>
+        </form>
     </footer>
 
     <script>
@@ -307,7 +317,7 @@
                                     ${status}
                                 </span>
                             </td>
-                            <td class="py-6">
+                            <td class="py-6 text-right">
                                 <a href="https://basescan.org/tx/${brand.hash}" target="_blank" class="font-mono text-[10px] opacity-40 hover:opacity-100 underline">
                                     PROVE_ON_BASE ↗
                                 </a>
