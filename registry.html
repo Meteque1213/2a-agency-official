@@ -11,7 +11,6 @@
         .text-2a-emerald { color: #064e3b; }
         .bg-2a-emerald { background-color: #064e3b; }
         
-        /* COULEUR BLEU SUPREMACY (BASE L2) */
         .bg-supremacy { 
             background-color: #0052FF !important; 
             color: white !important; 
@@ -23,7 +22,6 @@
         .nav-link { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #000; opacity: 0.4; transition: opacity 0.3s; }
         .nav-link:hover { opacity: 1; }
 
-        /* Animation pour les alertes rouges */
         @keyframes pulse-red {
             0% { opacity: 1; }
             50% { opacity: 0.7; }
@@ -50,8 +48,8 @@
             SENTINEL-01 : ACTIVE & MONITORING
         </div>
         <div>
-            <a href="https://basescan.org/address/0x40c07F5b9aC742CBe8f288F00166a9EC908921b9" target="_blank" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all text-[9px]">
-                VÉRIFIER L'ANCRE CRYPTOGRAPHIQUE (BASE L2)
+            <a href="https://basescan.org/address/0x8269781b855d2987e9873ff1a3a81878e77665b1" target="_blank" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all text-[9px]">
+                VÉRIFIER LE PROTOCOLE (BASE L2)
             </a>
         </div>
     </header>
@@ -65,10 +63,11 @@
         </p>
     </section>
 
-    <nav class="flex gap-8 mb-12 border-b border-gray-200">
+    <nav class="flex gap-8 mb-12 border-b border-gray-200 overflow-x-auto pb-2">
         <button onclick="switchTab('luxury')" id="tab-luxury" class="pb-2 text-xs uppercase tracking-widest transition-all">01_Luxury</button>
         <button onclick="switchTab('beauty')" id="tab-beauty" class="pb-2 text-xs uppercase tracking-widest transition-all">02_Beauty</button>
         <button onclick="switchTab('longevity')" id="tab-longevity" class="pb-2 text-xs uppercase tracking-widest transition-all">03_Longevity</button>
+        <button onclick="switchTab('apparel')" id="tab-apparel" class="pb-2 text-xs uppercase tracking-widest transition-all">04_Apparel</button>
     </nav>
 
     <div class="overflow-x-auto min-h-[600px]">
@@ -86,56 +85,22 @@
         </table>
     </div>
 
-    <footer class="mt-20 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity gap-6 max-w-7xl mx-auto w-full">
-        <div class="flex space-x-12 mb-12 border-b border-white border-opacity-10">
-            <button id="tab-luxury" onclick="switchTab('luxury')" class="pb-2 text-[10px] uppercase tracking-[0.2em] transition-all">Luxury</button>
-            <button id="tab-beauty" onclick="switchTab('beauty')" class="pb-2 text-[10px] uppercase tracking-[0.2em] transition-all">Beauty</button>
-            <button id="tab-longevity" onclick="switchTab('longevity')" class="pb-2 text-[10px] uppercase tracking-[0.2em] transition-all">Longevity</button>
+    <footer class="mt-20 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity gap-6">
+        <div class="flex space-x-6 mb-8 border-b border-black border-opacity-10 overflow-x-auto">
+            <button onclick="switchTab('luxury')" id="foot-luxury" class="pb-2 text-[9px] uppercase tracking-widest transition-all">Luxury</button>
+            <button onclick="switchTab('beauty')" id="foot-beauty" class="pb-2 text-[9px] uppercase tracking-widest transition-all">Beauty</button>
+            <button onclick="switchTab('longevity')" id="foot-longevity" class="pb-2 text-[9px] uppercase tracking-widest transition-all">Longevity</button>
+            <button onclick="switchTab('apparel')" id="foot-apparel" class="pb-2 text-[9px] uppercase tracking-widest transition-all">Apparel</button>
         </div>
 
         <form id="2a-contact-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col items-center md:items-end gap-2">
-            <input type="hidden" name="_subject" value="Nouveau Signalement Forensic - 2A Agency">
-            
             <input type="email" name="email" placeholder="ENTER_AGENT_EMAIL" required 
                    class="bg-transparent border-b border-black text-[9px] py-1 outline-none w-48 focus:border-emerald-900 transition-all uppercase font-bold text-center md:text-right">
-            
             <button type="submit" class="text-[9px] font-black uppercase tracking-widest border border-black px-4 py-1 hover:bg-black hover:text-white transition-all">
                 Send Request →
             </button>
         </form>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var form = document.getElementById("2a-contact-form");
-            
-            if (form) {
-                form.addEventListener("submit", function(event) {
-                    event.preventDefault(); // On bloque Formspree
-                    var data = new FormData(form);
-                    
-                    fetch(form.action, {
-                        method: form.method,
-                        body: data,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    }).then(response => {
-                        if (response.ok) {
-                            // TELEPORTATION
-                            window.location.href = "https://www.2aagency.com/thanks.html";
-                        } else {
-                            alert("Erreur serveur Formspree.");
-                        }
-                    }).catch(error => {
-                        alert("Erreur réseau.");
-                    });
-                });
-            } else {
-                console.error("Le formulaire n'a pas été trouvé par le script !");
-            }
-        });
-    </script>
 
     <script>
         const brands = {
@@ -157,7 +122,6 @@
                 { "name": "Breguet", "score": 90, "hash": "0xb77c0fe4c8928622a90aacfd6fb31fac7e0f6d9b1f7395e37de3fd82cfd9508e" },
                 { "name": "Comme des Garçons", "score": 90, "hash": "0xdc6cb6f70c18bf5d723d5cd29abf66ff98e2aa682a12d6ba07d8f0ef912bbd0a" },
                 { "name": "Jaeger-LeCoultre", "score": 89, "hash": "0x01e74d1266f217089e1ada88517d7ef470668c9637187260b83f1a86e10f9834" },
-                { "name": "Dries Van Noten", "score": 89, "hash": "0xcccbceca1e2c007bb0fc6106c6d10e34ce5e8edf91ed31e328cc555ee8b67145" },
                 { "name": "Bulgari", "score": 89, "hash": "0x3d9b578c2af3719c55b729cb84caec4103468278e14219a97f7be96aab6ee9df" },
                 { "name": "Oscar de la Renta", "score": 89, "hash": "0xcd489c45c75f807e6837f39761a37de4ae55252d6277c6a63c174fe27040e960" },
                 { "name": "IWC Schaffhausen", "score": 88, "hash": "0x56844974809b29fcd6509d59e4fd42ab01b415c9fa72fa557c84f0325002893b" },
@@ -172,20 +136,15 @@
                 { "name": "Bottega Veneta", "score": 86, "hash": "0xf247d96f6c22ecef69b0c57086651a5995a4990eda6f7f7f0b5b7ad0f8b0cbad" },
                 { "name": "Sacai", "score": 86, "hash": "0x129c2fc97a40d4c7562a44eeba99332bbbc059b35ec77884bba6608f50750011" },
                 { "name": "Loewe", "score": 85, "hash": "0x2418eb0613a73770d55931795efa7ef8970b2bf06a96711bf08d11fd6044cb5a" },
-                { "name": "Stone Island", "score": 85, "hash": "0x1405326eaeac85bbe6f9e960c1e7c2ccda2613e72cbbf09af776097d34bc28ab" },
                 { "name": "Lanvin", "score": 85, "hash": "0xbe02d5725360e861dddd9d84f00f40b2e389eb61236d41e07123e00e1bf5c877" },
                 { "name": "Montblanc", "score": 85, "hash": "0x7d03d886ba4e7e5b8ae41ef93415bbd452a6ef1ad5fb2aa9d9f8b810cfc8b9cf" },
                 { "name": "Gucci", "score": 84, "hash": "0xefaac1539cbc9bcc86beb6e7abe387cec6bbde92e0b8c6ab5b348e3b6dc3aea4" },
                 { "name": "Valentino", "score": 84, "hash": "0x794da159d2630bb42eb75497c5c0026d539433f313884cf009d1a8760662e872" },
-                { "name": "Ami Paris", "score": 84, "hash": "0xf12f928b36350b2cb763a5c29dbbdf4459c26c80aa546d38387ffe916e893bf2" },
                 { "name": "Mugler", "score": 84, "hash": "0x7b083bb2942944618d49d81b9f55c2610c7985c99258fe349269c81a5f19dc5c" },
-                { "name": "Reformation", "score": 84, "hash": "0x344dda4a81f3dde617f0354134200410878e8a04f516ed8173bb24252683d6ea" },
                 { "name": "Tiffany & Co.", "score": 83, "hash": "0xaac23990541a18eea8a5b766dcc45a42706ac35ea7c96de4fd01b26d191f4072" },
                 { "name": "Miu Miu", "score": 83, "hash": "0xbe28ee08d4a39bfbe034e02a96c64533a74ced71573ed917787a8b87c65e08e3" },
-                { "name": "Marine Serre", "score": 83, "hash": "0xf810f1c27ffd7ebf2f55102b8d92ebf04e8884059ec3e9c58bd38cf340942967" },
                 { "name": "Burberry", "score": 82, "hash": "0x679301227086498484d36660a68b943fc4891161631d369ae05533fe3f42941c" },
                 { "name": "Fendi", "score": 82, "hash": "0x5273f3eef2171f345576eedf2d1b0c3e06aee2644529cdc6a4bf804db487b7c6" },
-                { "name": "Jacquemus", "score": 82, "hash": "0xc47f850541088a3322d4ca9bfb48511a3f8cf232574cba68d3cb6aafb4c1c9f1" },
                 { "name": "Chloé", "score": 82, "hash": "0xfe82bcf3ef72a341eea5d074a9121265db823660317ed919397c6ed516cccb3b" },
                 { "name": "Fear of God", "score": 82, "hash": "0x4cfdc296fcefeb9dcb32ecdbcdc213fedb31337ed8d716218953198e31613e6a" },
                 { "name": "Diane von Furstenberg", "score": 82, "hash": "0x726eb730c843c43547e1e6e5c4b9c3a706fdedb22a6001ab84cc18280430fdfd" },
@@ -196,14 +155,12 @@
                 { "name": "Tag Heuer", "score": 81, "hash": "0xec0ad94415c942c8f550cbccd9dff9616b1ccbf70d47573fe4e7185b766284e3" },
                 { "name": "The Row", "score": 80, "hash": "0xfd7fbbb2e76f5616670f57eee5a79fe5257f85efd564fdf5e1985e27c86b7e50" },
                 { "name": "Alaïa", "score": 80, "hash": "0xb250f62f3d67faeedca6612f61d56c9d3213efa06439e364b5f3613b136f6963" },
-                { "name": "Isabel Marant", "score": 80, "hash": "0x2b41ee86c772d97f231ce4a52f4271dc64dff4254e9ad22808a2faac08e06989" },
                 { "name": "Moncler Genius", "score": 80, "hash": "0x32e875892f943754673eee6bf0a1de8b822051094615c5ac0b4013e2151eacb0" },
                 { "name": "Moncler", "score": 79, "hash": "0xbf83eb7f9b99b5b6061097bc06a8fae8ddc17323ea3280d00986a3847b6b6f38" },
                 { "name": "Alexander McQueen", "score": 79, "hash": "0xf5e3e9395d2f36b96043b51480d54b11d1c6f6d42b3919fb1c4e1eb25bcedc4c" },
                 { "name": "Paco Rabanne", "score": 82, "hash": "0xbdd4af035f200bbb2c83e625abf75022132938a7b77f84debec981f7f0fbb07d" },
                 { "name": "Givenchy", "score": 78, "hash": "0x4d9370257bd5b68c600313692afbe2d99cd10f7c9fc47b33ce5ed88f418853dc" },
                 { "name": "Balmain", "score": 78, "hash": "0xa7e2f23b55e3a49735f6f50d5457497db3b6c02d890997d9e943a62efba06aac" },
-                { "name": "Acne Studios", "score": 78, "hash": "0x01b7e1e271cf014bc5155594839ffd7614884c9d154ca055280a30adbda81484" },
                 { "name": "Hublot", "score": 78, "hash": "0x3cba1ae0649729be92b8585110a156b4bccc61687e037d271493bf11e4881ae8" },
                 { "name": "Tom Ford", "score": 77, "hash": "0x1351fa25043f7a011707639df871b87b3f06477d0a68975484bd43d8f15b36fc" },
                 { "name": "Salvatore Ferragamo", "score": 77, "hash": "0xeabef157961dbecb504e8c1aea452299d27917fe22e2b75877cfeabcc9fc37f6" },
@@ -211,34 +168,24 @@
                 { "name": "Marc Jacobs", "score": 77, "hash": "0x21aadb12e2ab86a055d5473ac877bc7cb30f5a231e17a955d009888cba9a9e9a" },
                 { "name": "Etro", "score": 76, "hash": "0x80b97ecbdd857fa1fd83b551bd2ea3975e9233e42939b93a832918d2281a04a4" },
                 { "name": "Missoni", "score": 76, "hash": "0x7f697043809b3e1a75e8f5ba2706296d061ae9a4e20328eb27fd9cc655f78063" },
-                { "name": "Supreme", "score": 76, "hash": "0x3289598e814e996096c681b5acfa69367c764096076c1334c12aaebcc336d1b1" },
-                { "name": "Ralph Lauren", "score": 75, "hash": "0x8a19aa6785df370471294f007159a9c499ed3ce80ac28a7015abec915e27773a" },
                 { "name": "Giorgio Armani", "score": 75, "hash": "0x52c6a72fa9c64047674879c5097863b5a1974abcd1429464d3070cb773760ab1" },
                 { "name": "Zimmermann", "score": 75, "hash": "0x4effc4d56be657c1c066e1768befb3dd7c2c2550e5cd25d5975e788e5a398962" },
                 { "name": "Tory Burch", "score": 74, "hash": "0x7337930ccfc602e9bc60ea20b27a4eeb762ea83334943dd35b544a189938e5a4" },
                 { "name": "Kenzo", "score": 74, "hash": "0xc85f5b3a86df4c2234b91e1dcb64e8e698906417d651ce20f7d4c41c207fb7c6" },
                 { "name": "Coach", "score": 73, "hash": "0x5171a2cb55ae1b005461bd495e648ffda2a9392176dcbaf3d6c5cd42d2ffdea5" },
                 { "name": "Michael Kors", "score": 72, "hash": "0x33f4ee0d64b987b0411f9255062567c936f3b307ab993b3343bbc0260f7797ab" },
-                { "name": "Ganni", "score": 72, "hash": "0x66ee68c72d5a9fb4d2907d86c6d86d38c772f2662f3259f976128a41b63f84d8" },
                 { "name": "Longchamp", "score": 71, "hash": "0x0398fb7fc687188ea631ac48a40bca4a285f37de0256d592dfa343bfea7cdfcf" },
                 { "name": "Bally", "score": 70, "hash": "0xe46b1abadd71f86ff14d48df9b1afcd636d0e1c88e6206992895f254d8ffd5f7" },
                 { "name": "Tod’s", "score": 70, "hash": "0xade139e1624410394dc3369e3a1f123bbe6fa2179edb64c58225644b5e2bb061" },
-                { "name": "Swarovski", "score": 72, "hash": "0xc082f129bc1f7a4e5db1027155430217a3ffe37e187aca8bcfc3a01f0758a7c3" },
                 { "name": "Jimmy Choo", "score": 69, "hash": "0x6847865b5a25edb5f5584db1e091d45bd735ee8b06e9c0488eb2ee54a75eec3c" },
                 { "name": "Manolo Blahnik", "score": 72, "hash": "0xaa0bfc0ab476f81c9ce293c6b196d9761805610ddf69441a9bb873384dec5e91" },
                 { "name": "Christian Louboutin", "score": 72, "hash": "0x3da66609e3f7505fba9f8a9cecef65b503632c46d768ba75db4f026f41d6400c" },
-                { "name": "Skims", "score": 68, "hash": "0x4af492f25dd194b3ff5e96cff538445c9c5c5686a4b941e40574c703e3246085" },
-                { "name": "Hugo Boss", "score": 67, "hash": "0xd44044c130bad6867655578901792d6fb496472b20e4e15268d70451f011a221" },
-                { "name": "Dolce & Gabbana", "score": 66, "hash": "0xc51c1f8667f31cb2fe9793a38d528bb7701f568dbc995a284ada33027d7233f4" },
-                { "name": "Diesel", "score": 66, "hash": "0x5f16f507749e8421ee71e68228cc0795c7181814bc13e55ed5cc12e7cb05ff20" },
                 { "name": "Versace", "score": 68, "hash": "0x63b624d00db3951dc26a86e7d99b61b4c06ccc284321a1eef73ff168c9aa8771" },
                 { "name": "Vetements", "score": 65, "hash": "0x4894bdaa49025ec0a3a0d44a23186135ea8201c62ac863f60cb97be6fa00c499" },
                 { "name": "Off-White", "score": 64, "hash": "0x08e71ced2f38504dc217a65b56d8467e3ed4d9ffaf28d99a6ad2576deab37e7a" },
                 { "name": "Roberto Cavalli", "score": 64, "hash": "0xfbc265900e75e363277da7c35d35837b2721487f8161a4daab34403bfff0a1fd" },
                 { "name": "Moschino", "score": 63, "hash": "0x4adaab69582c7dd696c23027841456ba2d499a67814c939a39662d8aba2b6944" },
-                { "name": "Pandora", "score": 62, "hash": "0x2098f076fa0425436725185753183717098b09347da41940a16af5d45883d3a3" },
-                { "name": "Dsquared2", "score": 61, "hash": "0xd11d8d842ddfb7fab0123eb55460a5ecf07d3022b4509aa1a5a3712aa22116b3" },
-                { "name": "Palm Angels", "score": 59, "hash": "0x76d39b2c5f83c406b95cd8400cdf38c2bfb6b113b3c51bc5e246c464c176eaaa" }
+                { "name": "Dolce & Gabbana", "score": 66, "hash": "0xc51c1f8667f31cb2fe9793a38d528bb7701f568dbc995a284ada33027d7233f4" }
             ],
             beauty: [
                 { "name": "La Roche-Posay", "score": 98, "hash": "0x744a08dd79a8664dda4fc9fddc55e7e9a682f70a7258198c1df23fa71c36f001" },
@@ -268,189 +215,204 @@
                 { "name": "The Whoo", "score": 85, "hash": "0x8c9e620699d500df5c0c57e6ab0484cadf44d6b14f62de1b5a59f944c9b7c339" },
                 { "name": "L'Oréal Paris", "score": 85, "hash": "0x4e124eea6793feb6b6f71735cbe16bcc00343140d75737f28267aa527623e3e8" },
                 { "name": "ghd", "score": 85, "hash": "0x438e0ea0eb308dc3aeb1f38692270a9a8d5db1d4ae89d81a191dd23d7a761844" },
-                { "name": "ELEMIS", "score": 85, "hash": "0x87c2f67bffcb41206cf285961a08e1718cf2681ea6a5b3b2a3f51f473192bdf4" },
                 { "name": "Clarins", "score": 84, "hash": "0xae64c69de4a797e67bae464c58524bbb7155bcb0d26f67f12923bb1e88fd9a8d" },
                 { "name": "Jo Malone", "score": 84, "hash": "0xb6b21e8ac9512ebb52a4066801e74070e588d6d942fb408b343237b1845eeeb0" },
                 { "name": "Huda Beauty", "score": 84, "hash": "0xcb6f425852052b608be69d661e7a28ce1679df702f188f0bcba11facdf07f22" },
                 { "name": "Saie Beauty", "score": 84, "hash": "0x6cac7008e313a9583061316f13e221a5b51e220752d31ecc0c9afa0bb06e302a" },
                 { "name": "Ilia Beauty", "score": 83, "hash": "0xda088187462cdc0731a53fc25f473656e866783b3a3fe0c2bede289b15691f70" },
                 { "name": "Shiseido", "score": 83, "hash": "0xb3c9a143a9ab0da82aba30c2772e66e2b4b7a251667ed3e197de06fcf61b956f" },
-                { "name": "Lisa Eldridge Beauty", "score": 83, "hash": "0x5974876c89b430720c3b9adcd27d183fb2e8f067a0a3a0f06f37c0b4274d4bdf" },
                 { "name": "Laneige", "score": 82, "hash": "0x8b9820334cfe4a07e4d301e671bd5d3c5dc31be71d573289993ba6ec13f246b1" },
                 { "name": "Violette_FR", "score": 82, "hash": "0x8ad577a27a0f0a0ccf121135191b7cc3859689e42c7b9985460a9992877d197f" },
                 { "name": "Saint Jane", "score": 82, "hash": "0xa1d5755323426ef09666186d980f9dbb83a332c54957fae58bc4f45ae97e5faf" },
                 { "name": "Verdilab", "score": 82, "hash": "0x25d96912127cdb5969de090de31d33e897596def89c22ace0f0ecd014d1c4f8e" },
                 { "name": "Comfort Zone", "score": 82, "hash": "0x18dac50c6a885a7594b70240235b4848b74e6dd19b9b3e3b4343b83e77347e18" },
-                { "name": "Rudolph Care", "score": 81, "hash": "0xa69d76086bdc75d0e823076bfae02cc1c9a41fb24727df8d281cf21815ae1c35" },
-                { "name": "Crown Affair", "score": 81, "hash": "0xb00270fe316f190b8fbcce640eb3ef3f3c9ec8a0954a70eed25f70ac6c6009f0" },
                 { "name": "NARS", "score": 81, "hash": "0x2048a976a4c131660c346957099009f96367afd0b7c83d0b09fe953fe38b02ac" },
-                { "name": "Caudalie", "score": 82, "hash": "0x819d311353616ba0cc4d482a3e7b0a7a0523f84fdca563873b5a130c917826b1" },
-                { "name": "Farmacy", "score": 80, "hash": "0x28193cb6b197c356a449b492e142d549c1ff987c128fe440a4561c8eb2eefa5a" },
                 { "name": "Sunday Riley", "score": 80, "hash": "0x3d9fbdcae4c878639f356dde6c959b7573b9332d9943ef9c4bb34fa9b24ec2d9" },
                 { "name": "Aesop", "score": 79, "hash": "0x947ed85dbf9361f6ecb62a3366d3120c1bfafdcab5883bde06d4ce1d7eda01ce" },
-                { "name": "Anomalia Paris", "score": 79, "hash": "0x48f329879d8f5476b9da812680c9d6ad5bc1f0696df962399541086d151262a7" },
-                { "name": "Nussa Cosmetics", "score": 79, "hash": "0xc3a97f4494c6e5a18ea9170a87258d37f8a8dcb8402949b3860e44cf5b95715e" },
                 { "name": "Kiehl's", "score": 79, "hash": "0x0dd0d7a230dca53bd449b8ef15ba3bc60059adc92e8ea4f2cc031e34ea7fb777" },
-                { "name": "Garnier", "score": 78, "hash": "0x1e0ab10cd384c26365ae3f57f77ffa467dd5566199c4b49d727db45a9aeca0c4" },
-                { "name": "Beauty of Joseon", "score": 82, "hash": "0x76e2e2e6fcb3923ee68774e514ba73d2895466a8c720abf30cfdce63236c6f50" },
                 { "name": "Herbivore", "score": 78, "hash": "0x6790f13d975477200f50e75011a3d23f0cc3ed22f0ba4b5562d73a6b5a31d161" },
-                { "name": "Manucurist", "score": 78, "hash": "0x10f83fa20a244829b19f9e445f41a3f479a2da988b0178c3a9dfb73de0f86bfe" },
                 { "name": "CeraVe", "score": 77, "hash": "0x05de43ee8b536c8da75ea22f76569f674adb2f1a00c2fc8b36202e03ab7f3d94" },
-                { "name": "OPI", "score": 77, "hash": "0x73f3194dbe476cacddf9975297969d02a579f8d8e0abbbc997b9c569ab9d5308" },
-                { "name": "Abel Odor", "score": 77, "hash": "0x399b674b46678a836431ff71ec0344ecdd5631d938bf6500fbed56007efee032" },
-                { "name": "Avant Skincare", "score": 76, "hash": "0x91e9dcbaca9bb7218288e77be09bb7f36f0ffc0431d0c60484a0820928fd6c09" },
-                { "name": "Delilah Cosmetics", "score": 76, "hash": "0x77e9b9c1b4ee174ac60096af6a755b39abca410f2ea5a1ff6f2518633fba78af" },
-                { "name": "Summer Fridays", "score": 78, "hash": "0xbf116bacd2032d718b7c37958659d0fe0b7f58a85c7a6d4cd37033671bafbbdb" },
-                { "name": "Skin Diligent", "score": 76, "hash": "0x4fff75043dd50ed42819538fe75bc90ef36b82f0655ffb3c98565bd2008406a2" },
-                { "name": "French Farmacie", "score": 78, "hash": "0xcf6ac8a8da9a882d7a5f4dea319b353099a8ba01db29faed2d9300c77a28aca6" },
                 { "name": "Drunk Elephant", "score": 75, "hash": "0x9168c5928742f954745cf9fc5468397f135f03a8820ececd50251480f42ee488" },
-                { "name": "Care Natural Beauty", "score": 78, "hash": "0xe06a06a40be4afc38033c0e993d9e2fddd0d46e436760686cee3aa108d207082" },
-                { "name": "Medicube", "score": 74, "hash": "0x612b63ae02774501953ca329d6b94d23d246c01c6c413f3780a4c955c47fa6a7" },
-                { "name": "Azalia World", "score": 74, "hash": "0x08abf96170855199e4808a16b8fdaedf3a03682941dd013dd5fb718642fb14e1" },
-                { "name": "Haus Labs", "score": 74, "hash": "0x6ff039ef917496abc4ffde15a620aaeb2a360dedd936e709389815570838f02b" },
                 { "name": "Avene", "score": 73, "hash": "0xf724538f331845612a9f391d247c5b98c683ac5b3ac556fda7af18e059921f40" },
-                { "name": "CurrentBody", "score": 73, "hash": "0xe542879eb3468b55fc56c9c3a981de7608cec4f6384cfa6d140d059a0ef669e2" },
                 { "name": "YSL Beauty", "score": 72, "hash": "0x605eff4eea9e62fc23c80f3980ec977a56c579db44e72568185ba015d688b4a6" },
-                { "name": "By Corel", "score": 72, "hash": "0xd210f5eb34658f5134ebbbdd0da147f973cd2e2227701ba0fe44709a2b6d7f74" },
-                { "name": "Glow Recipe", "score": 71, "hash": "0x68d02268e5298d56b745e2ef72e0a5ce5589f2073e6e7fbcaa3b86b029489a74" },
-                { "name": "Kerastase", "score": 70, "hash": "0xf1509a2b4e7e772746b9602965d6961cca1039d2231b806c2b4f0037a71c9d65" },
                 { "name": "Mario Badescu", "score": 70, "hash": "0xad91d142b0c0f4212e1b8a4ba0113512867f8291259126d67e65b637a54cbcd1" },
-                { "name": "Vichy", "score": 70, "hash": "0xc632f34751450d96f308a13cc15240097c7e6242b59a88a8d50b5658436594ec" },
-                { "name": "MEV Skincare", "score": 70, "hash": "0xd2f2380c822dd5cd9973c4c7de95e824b23b95fbb80256ba596ee2708a0a1d42" },
-                { "name": "Darling", "score": 69, "hash": "0xba8f811eb5649cd70bd0b2f52ebed2cc40009c918ec665ce47639b3f44250af9" },
-                { "name": "Armani Beauty", "score": 68, "hash": "0xc9fe056e2de41621f3a2fb63868ccc1070525b0b09e78332ecf69ad0b7c6545d" },
-                { "name": "Benefit Cosmetics", "score": 67, "hash": "0x7f78d2d1d2324a8cd98cab8ee7317f82f25830d58fc3fedf25e2e0490a7fc0b1" },
                 { "name": "Glossier", "score": 66, "hash": "0x24a2e569eb1985097515a3e577c4376a4de65ea481cdad8ddbe8abce882ac093" },
-                { "name": "Mixa", "score": 65, "hash": "0x832814e29e78e772636c5278c93e30d4408fa78bef2e897aa56671dfed0a6f9e" },
-                { "name": "RAS Beauty", "score": 64, "hash": "0x6ec25f9736e177fc8f7014e88976087f31118ca2daa45a8fae19a6e71a52c706" },
-                { "name": "Essence Cosmetics", "score": 63, "hash": "0x46b0ade079b1068f46fff84dea49c13a98e7830451416c1d3aa61d8667ec9272" },
-                { "name": "Paula's Choice", "score": 68, "hash": "0x865068ad6d5f75b4bfa501f5f8e1e02c501fafd343fca5930432a89be84cba3f" },
-                { "name": "Tower28", "score": 62, "hash": "0xde8ef11caf928c59d2f5c5b6322c912f8882ca742322ad8252b280545b2fcb1e" },
-                { "name": "Tatcha", "score": 61, "hash": "0x3838e3c25da6d3fb1956e3c2df76957928f743452cf62201752d7d4c1bc1efd8" },
-                { "name": "Maybelline NY", "score": 65, "hash": "0x78b65e746cf5038e3b962b5b55d4fcbb1a14072b9f13dde58b99e253d61ea9a9" },
-                { "name": "NYX Cosmetics", "score": 59, "hash": "0x6cfcea6cd57810d3c2f3e64f43dc2b638a961e1b5189c90ea7b7e0e4a18fe987" },
-                { "name": "Florence by Mills", "score": 59, "hash": "0xb7573bca432dd0ca9b820fb8a45d82bce3b438164315e7cc5371e9818b2c0ccf" },
-                { "name": "R.E.M. Beauty", "score": 58, "hash": "0xfe009987f665889e9852ebf9a8c320fe4440dcdd982c36dbe198f4e178252847" },
-                { "name": "Kylie Cosmetics", "score": 55, "hash": "0xbe030a0cbca4243f7d811ee96e7bec9713849b29a43697546aa57935267f159c" },
-                { "name": "Refy Beauty", "score": 54, "hash": "0x1e644fdb1e693014e406dd44af01ae644c48f7cc822fb9fac0096ef5932abf7b" },
                 { "name": "Rhode", "score": 38, "hash": "0xe0a7ae3916f446762da75f5fc0a4a86a54be1e87a37402ec0d931ea927b1d43d" },
-                { "name": "Milk Makeup", "score": 52, "hash": "0x5120f689050402d787b7bbfaceb0d4b31342de554e1361bd57b04dde7e5b52e7" },
-                { "name": "Sol de Janeiro", "score": 49, "hash": "0x2c8b181cd754102bd8895357b8ec64c0174b40483df2e2d224edf3879a872eca" },
-                { "name": "TirTir", "score": 48, "hash": "0xf93d016e86c52d98c84a6bcd9cfce92519c96cd8f3cece2c2f1f7e1201195d2f" },
-                { "name": "Balenciaga", "score": 50, "hash": "0xd5e8da1770025975616257f88c2973dfc2879f97e18896d10a56141c347d4b42" },
-                { "name": "Goyard", "score": 46, "hash": "0x6d2aa51c7994501a46fa018d6f02bd79ce3649fae9721fc64b6152e8e97384d1" },
-                { "name": "Philipp Plein", "score": 42, "hash": "0xa4f39b3482a9f8476572820531d4d7a45379e3e596d57b32d16e5460ca71df2d" }
+                { "name": "Balenciaga", "score": 50, "hash": "0xd5e8da1770025975616257f88c2973dfc2879f97e18896d10a56141c347d4b42" }
             ],
             longevity: [
-        { name: "Oura Ring", score: 96, status: "Verified", tx: "0xc5b2bd7edbcf23cbda353f8857b454508daa5c3ad01af8ef0594bf32986c4140" },
-        { name: "Whoop", score: 94, status: "Verified", tx: "0x87a60182614b36b919f24680599843fcfa77dfcf72f94aae3630e509ff828538" },
-        { name: "ZOI", score: 93, status: "Verified", tx: "0xd0c22b00b5691026605433e4d0add724f562d10eb9a8ecbdf5f2363c1645a09f" },
-        { name: "Therabody", score: 92, status: "Verified", tx: "0x18b9945100b4b5b90a05ba00c899105826778c302c978941e8c889553f40ac58" },
-        { name: "Thorne", score: 89, status: "Verified", tx: "0xe2945ae441e427d6f38db2fd4c17246f2a2ea82ce339def614afe989afb504d9" },
-        { name: "Biogena", score: 88, status: "Verified", tx: "0xdb43814ad888a2f697f07c480ef156315cfd8cf5d8cc45235d2add2ad6a50db9" },
-        { name: "Clinique La Prairie", score: 88, status: "Verified", tx: "0x1bf13ca68f5485f6f00a2b92794dfc640894bbc51d97ff9583d588adbc128ec1" },
-        { name: "Headspace", score: 87, status: "Verified", tx: "0x87bacfe5de787a041e4444384085458606ce476a8b8a990a20ff66e9d90b43be" },
-        { name: "Lanserhof", score: 87, status: "Verified", tx: "0x9a9b5251f5466db796208c85e788e7cf15804ae5c2353578830b9bdcdb69fc62" },
-        { name: "Calm", score: 86, status: "Verified", tx: "0xf3bce761062cb91b4f2a23c4cd75d55ff69415dd08077b8bc632a2321da010b0" },
-        { name: "Ritual", score: 85, status: "Verified", tx: "0x5bba9c07b9fcd07702b6e6a4a1a3edc42ebcabd208b89590ddf9a51f0e370b91" },
-        { name: "MNDGYM", score: 85, status: "Verified", tx: "0x49e431cbebaa2f4ebb2e9a011212e0e9fe051717805d8d09ac9798a91078081d" },
-        { name: "Thrival", score: 84, status: "Verified", tx: "0x95e6251f7e718e5bfda6d90aba5494567217ddd06c4b0915e491f15b682c4b32" },
-        { name: "ENERGYbits®", score: 83, status: "Verified", tx: "0xb2d59991fcece47bedad325293eaaf5fd1b209653ab42d91bd9dca5ad8042cb1" },
-        { name: "Viome", score: 82, status: "Verified", tx: "0x306cf1751229b0f9f43155f0460bc40755dab77cdcf2f7581c99406a09fdbca7" },
-        { name: "Withings", score: 80, status: "Verified", tx: "0x8dd8093093cd4153247deba4033cb5490a41403c49d93de505dec2a6784eb859" },
-        { name: "Bloom Nutrition", score: 80, status: "Verified", tx: "0x9b66354d57fc9672050c1debcac2d8bdbbecd8e3d95c7f3a34c26fba106f3978" },
-        { name: "Levels Health", score: 79, status: "Verified", tx: "0xaf050740b77144d68ba2db8c99b518fcf84a0f1ef84a99a49a6464fdf8ec3472" },
-        { name: "Eight Sleep", score: 78, status: "Verified", tx: "0xd28e8bcee3b18da7a86baf3e869c67125c6025dd43e817edfed1febe5cbd9690" },
-        { name: "Somnee", score: 78, status: "Verified", tx: "0x12235557b27e7d7d1d959e4e225fff116148e964e777c9c0710a74422cbb9175" },
-        { name: "Ancient + Brave", score: 77, status: "Verified", tx: "0x5b5805bb665a7d90bc44c2e6ff59c4a57f3f79750fb2ea6c8077e9b5c7b8f254" },
-        { name: "Peloton", score: 77, status: "Verified", tx: "0x51b69e3cd9f7a2e8821cbe9735e2f0cf9f782560a189879e275fc9d94410e99d" },
-        { name: "ZOE", score: 76, status: "Verified", tx: "0xb27de29f53eae061f89cc732605c97ff4dda1451a63ecd9c0a92b57a7c47e395" },
-        { name: "Pendulum", score: 75, status: "Verified", tx: "0x909e66b3e56b7700bbabf3e27fbcde0336e41f562d335dfb2fecc827e7b41d8a" },
-        { name: "LMNT", score: 75, status: "Verified", tx: "0x1b6df62e37632625450504772d3d2b9598821ae611c333787c17dd4eb98c8ca0" },
-        { name: "Bía Smart Mask", score: 75, status: "Verified", tx: "0x2021ca3c61ce9f11e5d97b5c37e30e75ea328af98bca9d245e9f22412f42724f" },
-        { name: "Alo Yoga", score: 75, status: "Verified", tx: "0x42828e60b0d667b187b19212bea460228fe621e576867f64598c6affcb7422ea" },
-        { name: "Timeline", score: 74, status: "Verified", tx: "0x46b887e6db9d9a6b4f4cd3ab6560ce5b9f0209c3db9cecbc31ab21ef87f1a808" },
-        { name: "Elysium Health", score: 74, status: "Verified", tx: "0x3e6857900b245f0c8989623c38db43e3571254becd2246e836d1db0d3213804f" },
-        { name: "Caudalie Wellness", score: 73, status: "Verified", tx: "0xf84028a383396002debd36a73ebcae0226f27b17cdbac258b8e63f08b8c15bde" },
-        { name: "Bioptron Hyperlight", score: 73, status: "Verified", tx: "0xef7419e0e8181d2054cd9fded7bdfc15cbfd3b0936ee387a58b115efbcb3685a" },
-        { name: "Forme", score: 72, status: "Verified", tx: "0x95cc3e589f128bb07e3f687734262aa57c19b98c116abb4fc65a3c2e572c68c2" },
-        { name: "Aegis Formulas", score: 72, status: "Verified", tx: "0x6c7137ecc9b9b37741522020b7a4ceea936ab3eedab75624dc17cd00276e51b1" },
-        { name: "Fountain Life", score: 71, status: "Verified", tx: "0x0e83a95260a99100d9b679e755c27e1e0e19d5e886bf7ff832039fb5d2d39718" },
-        { name: "Johnson & Johnson", score: 71, status: "Verified", tx: "0x58e2a42f4cc2d8e4187c9530235312faf86de33998462806b2562e90640bbac3" },
-        { name: "Plated", score: 70, status: "Verified", tx: "0x6078dfe86d00277599905fb0dddb15e8f030d5b4b3c8b52a63ae493b90459307" },
-        { name: "Nestlé Health Science", score: 70, status: "Verified", tx: "0x1d08be6d7e142859ae08e1122613230912b8361f86dfac753afeceef9b119e85" },
-        { name: "HVMN", score: 70, status: "Verified", tx: "0xa280e90c630ce7e76f08a851fc151ae6cd9e5e37a6759c98ff09bbe44f2436e8" },
-        { name: "Infiniwell", score: 69, status: "Verified", tx: "0x75f380c68358cb437c5126be55b0a0560a568e8abbdc357d6f5a2093afa4499c" },
-        { name: "Abbott", score: 69, status: "Verified", tx: "0xbfe077e98a358d01b8851ba1938690ec11f6f2e490c85983f8cf99f330129d5a" },
-        { name: "Unilever Wellness", score: 68, status: "Verified", tx: "0x1ebf2318b9e3748f21a6934931aedadeb5b8e0b81cf33a58eca499feafd4d18e" },
-        { name: "Cure", score: 68, status: "Verified", tx: "0x27e0f41d89850b7450eb251e86c3a0b04aea64afdc03800e402d7d95e5cb56e2" },
-        { name: "Seed", score: 67, status: "Verified", tx: "0xeb87b12b25ac31e297c2e16cbb743aef4194fa1f4dc4c1b343f7f7c29d29e40c" },
-        { name: "Moon Juice", score: 66, status: "Verified", tx: "0xabd4ac3cb70470665ce658e7a97e4c33f50ccf1d0996e71eee4eac05da59e021" },
-        { name: "Tally Health", score: 65, status: "Verified", tx: "0xaa7a041f6745418a708caab461836f28fd1e5ae8772724151bb8512a81314bd7" },
-        { name: "Aware", score: 63, status: "Verified", tx: "0xf5c24728cf22b30d79b4a10f890f538adad4dee74eb0ab7aef4d6cca5896fd4e" },
-        { name: "Wild Nutrition", score: 62, status: "Verified", tx: "0x1d2df79835b0995340e43f3ecaa8f3aef8256d5d5475ce1f675bfcca85db2af4" },
-        { name: "Lululemon Studio", score: 62, status: "Verified", tx: "0x93e47355e757612d7c7e817d7f029ab67890083cbbf5c8cc681f75c5e1660818" },
-        { name: "Vivobase", score: 61, status: "Verified", tx: "0x2b4d2a7cbfd9e093e2885e7a5cfb50afc8e45ff63cdd9cff2dc7671209d2a9e3" },
-        { name: "Hum Nutrition", score: 56, status: "Verified", tx: "0x0f26762f644cc39ce7c44087653d5c11d6877486e6e4accb2125e138c2e53473" },
-        { name: "Sakara Life", score: 54, status: "Verified", tx: "0x99aa2683e6e6ba42e528bfe1a33c9eaf6917c5bba3e6ca7a2fbc0ca3023fda14" },
-        { name: "WelleCo", score: 50, status: "Verified", tx: "0xdb686fa4c82ea0e229eba5f401cb708281a477118649e0dab764734049e6c0ff" }
-    ]
-};
-        
-function switchTab(category) {
-    localStorage.setItem('activeCategory', category);
-    const body = document.getElementById('registry-body');
-    const tabs = {
-        luxury: document.getElementById('tab-luxury'),
-        beauty: document.getElementById('tab-beauty'),
-        longevity: document.getElementById('tab-longevity')
-    };
+                { name: "Oura Ring", score: 96, tx: "0xc5b2bd7edbcf23cbda353f8857b454508daa5c3ad01af8ef0594bf32986c4140" },
+                { name: "Whoop", score: 94, tx: "0x87a60182614b36b919f24680599843fcfa77dfcf72f94aae3630e509ff828538" },
+                { name: "ZOI", score: 93, tx: "0xd0c22b00b5691026605433e4d0add724f562d10eb9a8ecbdf5f2363c1645a09f" },
+                { name: "Therabody", score: 92, tx: "0x18b9945100b4b5b90a05ba00c899105826778c302c978941e8c889553f40ac58" },
+                { name: "Thorne", score: 89, tx: "0xe2945ae441e427d6f38db2fd4c17246f2a2ea82ce339def614afe989afb504d9" },
+                { name: "Biogena", score: 88, tx: "0xdb43814ad888a2f697f07c480ef156315cfd8cf5d8cc45235d2add2ad6a50db9" },
+                { name: "Withings", score: 80, tx: "0x8dd8093093cd4153247deba4033cb5490a41403c49d93de505dec2a6784eb859" }
+            ],
+            apparel: [
+                { "name": "Jacquemus", "score": 94, "hash": "0x96c05ce33cb4a74d29bbfd575ee3efc87b57b16e5b892603b0016fd34d825a8b" },
+                { "name": "Patagonia", "score": 92, "hash": "0x3dbe03f4d0d7df82b921bbb3be71cfab4ea94c470329aca732fd871f2948f40a" },
+                { "name": "Kith", "score": 90, "hash": "0x45e63e5ab48507678489ee09b9adb85834d847232cbfc763da4d189f207277be" },
+                { "name": "Sézane", "score": 89, "hash": "0x349371eeb7b9a58432f2fe7885f240649da002ea3d400c0ce5adf82022c5f9f6" },
+                { "name": "Stella McCartney (RTW)", "score": 89, "hash": "0xd1b7a592b2fc3f3f168b8b8441e074d810d2b10f6b1aff356bcdc36aa72409ed" },
+                { "name": "Dries Van Noten (RTW)", "score": 88, "hash": "0xdbfa4dcde87fcda185751cf6cde8ead891c0dbccfc00bec684efe527f1b7b9d8" },
+                { "name": "Marine Serre", "score": 88, "hash": "0xb573da50ebf4f90793e3d43539b376efad992862f283166a53281d91fb6d3ee5" },
+                { "name": "Aimé Leon Dore", "score": 88, "hash": "0xefb05f63c4ee2bc811e5aa133e82426497f2345438339dbddc831f747e1344f2" },
+                { "name": "Palace", "score": 87, "hash": "0x856b14a503cd38a1975f5d916ec0188006cd5c0b0e555d7d0f736f395678be0f" },
+                { "name": "Fear of God (Essentials)", "score": 87, "hash": "0x47ca687ad27d6b540b82b94da4df15b935f7becf58d674042105623d53059925" },
+                { "name": "Ami Paris", "score": 86, "hash": "0x5a9309ca1a06471e879a9125ee180eb4c352138a133d59a7ab1dc967297d31b4" },
+                { "name": "Pangaia", "score": 86, "hash": "0x8932f1d371045386a9a43819b489f6125a3bb8335389513b1786aa286f42ac16" },
+                { "name": "Skims", "score": 86, "hash": "0xd5919b43ad29135155284eef118a415a649d184b7b93066d8ec922e90bdeb639" },
+                { "name": "Stüssy", "score": 85, "hash": "0x40e00c92824f252bc5421ed57970e4a18cddf5146236c03af6d10fd106a33aa3" },
+                { "name": "Stone Island", "score": 85, "hash": "0xef3750dec38b49b5bd9a5cd49c5d6e881a7e1044473bb9f0d57d70b37f57c4be" },
+                { "name": "Arc'teryx (Veilance)", "score": 84, "hash": "0x10b4d274e930b252a4072d1ebafe65b74c2c097a03fdda48f29f5696f89a282a" },
+                { "name": "Reformation", "score": 84, "hash": "0xfe901c79025ace8cdfdc3d4ff38503f1ead42491039a9c1dfd981609651b1e3d" },
+                { "name": "Our Legacy", "score": 84, "hash": "0x553436beb4caf37f3bb4f8af7b8c6919ed3628b4597f3b3e0b31b5ca1557cc68" },
+                { "name": "Acne Studios", "score": 83, "hash": "0x8c3644b41b13e240d75fb1b6d00b497b9b5d19348b6beeb90d5b432036a9c0df" },
+                { "name": "Lemaire", "score": 83, "hash": "0x3dd666cdb6d094bb4ffc1a30b6da9352d55945252b4aabd8e834c85cf68a1926" },
+                { "name": "Telfar", "score": 83, "hash": "0xb9fd76d6f906c892ac923773d4fd2eb2a516778560a63188acbe89638147c17a" },
+                { "name": "Isabel Marant", "score": 82, "hash": "0xbfcf46e65ec79ab9a2b6ded03f0916c921bcdaae3764141dd781322399e0dcb9" },
+                { "name": "Ganni", "score": 82, "hash": "0x22dc82c2a07fbbe188069fe1336f5a6814f29f1b4038fea4147f1a1d35a97391" },
+                { "name": "Supreme", "score": 82, "hash": "0xadfbc3bb66161a95a2d3345e7de9ff6eccbf5f7690718ae0f7b2d0f4214b0643" },
+                { "name": "Officine Générale", "score": 82, "hash": "0xeac0146ea3d2111699f142370b1abe4e5df7f8e2cf547b478b7d72a87e5a5a69" },
+                { "name": "Veja", "score": 82, "hash": "0x47c9333310f206ea4c8afc66e350755d399265b114182ce8c74267cabfb495f1" },
+                { "name": "Toteme", "score": 81, "hash": "0xd8372d8fe65aceae5a8d1471f2896a8cff3ece77693c68be62d4c2d18c46acae" },
+                { "name": "Casablanca", "score": 81, "hash": "0xf99e7f6a5b366bcfb9963e35521e1ea42d9149ea26ac29143d0cffced5aea41c" },
+                { "name": "Nanushka", "score": 81, "hash": "0xbc17d5fcfb93335538d2a54b2c37e01873697e56c026e316d4470413ea70c338" },
+                { "name": "Courrèges", "score": 81, "hash": "0x92710f407f9f87e77008c085a019484b2029f89bab69838c1a9ee18802409962" },
+                { "name": "Patou", "score": 80, "hash": "0x2ff5787c885ce3fdaccc23fe71cf85903e456226845e1c4e3c1545a27609df24" },
+                { "name": "A.P.C.", "score": 80, "hash": "0x6d30b66b6e028e4b226f525d8989a65c6f612165fb03d2cef7f0ef186ac2efaa" },
+                { "name": "Salomon (S/LAB)", "score": 80, "hash": "0x1bcde946b4e6f7358adf608f2c19172e584771b1fff038f316b6da9a65644161" },
+                { "name": "Asics (Sportstyle)", "score": 80, "hash": "0xeca4e94e36c3eb56ff1cc9377bec6658b0d065fa0ecfd06027b88f6401920c8d" },
+                { "name": "Norse Projects", "score": 80, "hash": "0x4a76f4856c5d105b10215b8468938cb8f74f45c6b08029eae3b4ae361a4151a1" },
+                { "name": "COS", "score": 79, "hash": "0x9c9ae38eefb1e3535418212880114636cc1f08c0ca1dbd5f9a3e7468efaf45af" },
+                { "name": "Diesel", "score": 79, "hash": "0xeae9e663304600234014ddee896305b8b9300ee982d555e0735e34fbed4acd18" },
+                { "name": "Arket", "score": 78, "hash": "0xd6fefbaf98ca3dbc45bfa7eae848771e52920caf5ea7b6a877cef5144edd2065" },
+                { "name": "Massimo Dutti", "score": 78, "hash": "0x60d3f0e65bd9a980018259d7a76831c25b0f1c3a30617581d81b914febe7060e" },
+                { "name": "Lululemon", "score": 78, "hash": "0x03ed18c40c9e53c8e0bb6079f79f6330d2c6a9aadd22cd350619454bc35501d3" },
+                { "name": "Aries", "score": 78, "hash": "0xf2f1cd8be46916b835b4df80221d7156d6d9ce456483096e5441031d87177602" },
+                { "name": "Alo Yoga", "score": 77, "hash": "0x5d417f01f8762c56d54d3c42236326ed767ba20f93eab5541768a67fc7f59c9a" },
+                { "name": "Vuori", "score": 77, "hash": "0x64a064366e1667133f4da1c0210fbde3624680d49965ddc59bd953f7bbdc56b1" },
+                { "name": "On Running", "score": 77, "hash": "0x0f1abbdcbd71d79b98920e2e903f9cf28b28159ae2cdff0ae64a36bfedf23263" },
+                { "name": "Hugo Boss", "score": 76, "hash": "0x53462606f96495cf3a54625b00f65292595a6656bbdc51a60423fa09a2a22ca3" },
+                { "name": "Hoka One One", "score": 76, "hash": "0x471879a88a3f51e69bcf38d0da6ad34ab4c87952543f39cba9ae020ff47b05ae" },
+                { "name": "Tracksmith", "score": 76, "hash": "0x7568f884bd64a08e0f2cf4d20f4017a23e428b9021a0588e963e37ef3bd367ac" },
+                { "name": "Satisfy Running", "score": 76, "hash": "0xe23c638f8a609228b05f1b08718e4219f07d84ec87a4bbc7ae6e5bfe5c6bc9aa" },
+                { "name": "District Vision", "score": 75, "hash": "0xe463365359a4e8b87b8c8a512c59e7bce0bea162de5bbdb6d015abe4e5950f01" },
+                { "name": "Rapha", "score": 75, "hash": "0x448b293a55a0130283a16ed5cf1869c538ea2b927d1d55db95c76684a5f49e58" },
+                { "name": "Outdoor Voices", "score": 74, "hash": "0x3fdf7aba5a819065573f240ef64473479b22ae9ea4a62e5eed131f21a1b05a9c" },
+                { "name": "New Balance (Made in)", "score": 74, "hash": "0xa6ab767241eae06a1e5031540fa3047d1fc92f3d4f82f489f14ec95a1e7a326d" },
+                { "name": "Nike (Lab)", "score": 74, "hash": "0x1ef04148a136231d37bfaaa117d949f28a9e5a20515fc04d868aced1cdb282d6" },
+                { "name": "Adidas Originals", "score": 73, "hash": "0x46fea5f394591c531d125a9a81763b30bf26c1f15ec272027fe8f394b7b056a2" },
+                { "name": "Y-3", "score": 73, "hash": "0x0cc9002364316d13dd5c99841fe93ce33d054138cc5d30df61a3dacfd24ea06f" },
+                { "name": "Comme des Garçons (Play)", "score": 73, "hash": "0xe6507a72de435fdc7c3ae587d76040eaffcf87165de33a3c1fdcf9b2bf43a428" },
+                { "name": "Rick Owens (DRKSHDW)", "score": 72, "hash": "0xbf5d4f933d1fd701d4d34ebdb3f2e1a4bcfa768efeccfc90196bf468c9737c94" },
+                { "name": "Carhartt WIP", "score": 72, "hash": "0x7ffe78567ec7f5279ef922d0f48160d3e01abe6e247f34ca60d957d98010030d" },
+                { "name": "C.P. Company", "score": 71, "hash": "0xbb2df66e99a02e6893b0c84501532ea4a52cd3183b60aeca8752f8af642c4b8a" },
+                { "name": "Daily Paper", "score": 71, "hash": "0xdc1f1369ddbd2aa7d51a9b266289f2c90746139137ff80a5ff2bcf5d6c57de57" },
+                { "name": "Patta", "score": 71, "hash": "0x766ef919b0fed4ca3003830b39c2221dda9e70990e34b5165318ed518a536489" },
+                { "name": "Swarovski", "score": 71, "hash": "0xa7fd8a60e72625b2b74062417824fbbe78d612813a7621dacb508d490698aae9" },
+                { "name": "Sporty & Rich", "score": 70, "hash": "0x5d5880a3b27dfc3d45180a7781de726244180f986a4195874cc3213a46328531" },
+                { "name": "Axel Arigato", "score": 70, "hash": "0x8571e0a8d9abfaf821df567aa3020f45df48ce9c91945d963a790ef3d1aae45f" },
+                { "name": "Common Projects", "score": 70, "hash": "0xb17df87ba023dccd0473dbed7a870911157a84110d4bd16e843b3d20b51abf68" },
+                { "name": "Palm Angels", "score": 70, "hash": "0x59953f45903bcd946b12519c0a8d83bca36a000fafc48dc3834884a78b0a9177" },
+                { "name": "Ba&sh", "score": 69, "hash": "0x6472d8905748ff962319d92893bc1071da2b52c6b35990f9c704eecdf6dd0d7b" },
+                { "name": "Pandora", "score": 68, "hash": "0x2ce1c6806a38eef51b0b69baf744c55098e8c0ee0b0e77b57445c69361657de2" },
+                { "name": "Rouje", "score": 68, "hash": "0x1167afa12bf1990fcde21e549d99924b4e0122627e3f9909a1cdfc9f1788ccda" },
+                { "name": "Musier Paris", "score": 68, "hash": "0xd378bf5d3d7c3dc67235cc740687d6c5dd0fe45629571236b7cc0aeb274d617b" },
+                { "name": "Stine Goya", "score": 67, "hash": "0x72bb23ef5e5b6a2551833dfc2479f48f930de6a8c50aea789b5db8e789514e22" },
+                { "name": "Cecilie Bahnsen", "score": 67, "hash": "0x021779dfd57681b75a0ff657188819ac1b17197fd63a80819db559b63749ed33" },
+                { "name": "Wood Wood", "score": 66, "hash": "0xb84311bf6c0b90c0cb73f4b0006f00022f41cc70606fced7b003c28d4443e81c" },
+                { "name": "Filippa K", "score": 66, "hash": "0x0d4b5279c721a0433a6fb72bd6c162a4208a884a89818e910dc731da76ddead8" },
+                { "name": "Theory", "score": 65, "hash": "0x9788fb005ae83ac47c4390cae2a102342cd18551091ca5d43f70550c8ae64a72" },
+                { "name": "Vince", "score": 65, "hash": "0xb3bf51783bebf845595ea0d0f5d9fb7cb26133d9efd786784fe0de304a46b358" },
+                { "name": "Dsquared2", "score": 65, "hash": "0x969f50ee2b5cc3bf586b7dd803ea870afae9a6cf3fc3e4be51d80dc7a9b5227d" },
+                { "name": "Everlane", "score": 64, "hash": "0x98382d950523710f9bba3e2b757c946059ac58adc776884126ddab25d822c54c" },
+                { "name": "Eileen Fisher", "score": 64, "hash": "0x5222dd282f892db4704d58c0e656e560c069dbec02381203167206ce2752dce6" },
+                { "name": "Allbirds", "score": 63, "hash": "0xc9ab9a0f21bbde109a8013a8eadd7eac5f34121ee70e1001c25b20f4682042bf" },
+                { "name": "Nisolo", "score": 63, "hash": "0x1f98687526395e2b514ced34f24c5b8a1f72de79a64a4045a63721b889d8cc0f" },
+                { "name": "Barbour", "score": 62, "hash": "0xa888a6bb833f312526029a0fe72a6779b310b1606cc8293d094931cdd504d01b" },
+                { "name": "Belstaff", "score": 62, "hash": "0x8262ba7e1118a3b4849750d134570976798454a78e477f29c9938e554a80d78a" },
+                { "name": "Ralph Lauren (Polo)", "score": 61, "hash": "0x39df849737684b2c54864cdefa36db1667ffc4f04f20f1123132a4d74f78c674" },
+                { "name": "Brooks Brothers", "score": 61, "hash": "0x238d838a10c7e6e33be8d3c180b6d90ee6e6397f52a371885c4e932fd083f8ef" },
+                { "name": "Gant", "score": 60, "hash": "0x05d96efc85a1ec21f93005c154c4b513569fa8710b1aa16d6e27dda4c5fb5208" },
+                { "name": "Lacoste", "score": 60, "hash": "0xb50b1b440a8caba82e054113ed54560c0fa2efb63c4242a7b1ca6cc6580fe4f7" },
+                { "name": "Fred Perry", "score": 60, "hash": "0x48b7c947ef09559b9327df65dd635de04f0465d71ec5a171d43c4a29f48ed982" },
+                { "name": "Agnès b.", "score": 59, "hash": "0x60151afacb7b176c9e3060730d3c4bfad08d3ea7c631b655e23806fd5aacfe49" },
+                { "name": "Petit Bateau", "score": 58, "hash": "0x54fc4f3c45e7b71de92a640189a9020fe191a643ac6eec43c0acbef48e5a87a3" },
+                { "name": "Armor Lux", "score": 58, "hash": "0xf191c98be700a0e18f3eb93584df5e741f43797440e53bf7377eb5ccf47b2baf" },
+                { "name": "Saint James", "score": 57, "hash": "0x5069d162c2e488809893868205f64587c5e6c37b469764767ad839117cab2e96" },
+                { "name": "Hartford", "score": 56, "hash": "0x88c98a8b069b771413ee890e195315b6b14b4bb65c04b686c11c7676ba19fe24" },
+                { "name": "Sandro", "score": 55, "hash": "0xe44b3360461bbab15e2550bb480c416cd8034fd0465b589943be15188843e250" },
+                { "name": "Maje", "score": 55, "hash": "0x4b15946bc70ff99c6c30034fec23cea6825d197590c28c8b1f52de7bf5975226" },
+                { "name": "Claudie Pierlot", "score": 54, "hash": "0x5385c4fdb3efdbf0b0fa9d0f74aa02014144e73b514da744a518afbc45be8a8c" },
+                { "name": "Vanessa Bruno", "score": 54, "hash": "0xcb491bc6926856f9a6e6d411f2270aad81a325128550f3b8582fa72fbe10688b" },
+                { "name": "Zadig & Voltaire", "score": 53, "hash": "0xc532a9081efc62183efe6101a9bc4c741d0cbdebedcdb68c1eb383f793bdcf28" },
+                { "name": "Bonton", "score": 52, "hash": "0x74dd45b24e71eec7bbbeb449f897bb6db663326076e6a3bc28d0fefaf05d546f" },
+                { "name": "Jacadi", "score": 52, "hash": "0x1e38cdeed0af63fae4881afca8f5b79f8ea5d65be6cc550b152a99ba4318b6d9" },
+                { "name": "Tartine et Chocolat", "score": 51, "hash": "0x3ef7100c3f9e6e579e89bb7c10cea9aadcdcb31e9356b0a42392760493c49d60" },
+                { "name": "Bonpoint", "score": 51, "hash": "0xfa90655ce2a653bc90fd3118f255d727f3a02507285e3ae13652320a5f50527a" },
+                { "name": "Caramel", "score": 50, "hash": "0x377d32651523cc5ea15bfc6464dfcda0642875e176e015a16f8350cf4f8af2c8" },
+                { "name": "Misha & Puff", "score": 49, "hash": "0xd80f2efff5d3ae6bf10eac3769c5a91f83172d302d3aa280c92d45559bb21813" },
+                { "name": "Konges Sløjd", "score": 48, "hash": "0x119c7c755a161be39c41d7399661c1414fa10fdbca454f82da199c47656f931c" },
+                { "name": "The Kooples", "score": 48, "hash": "0x3977348dcb237da9c5edd33125e2838961d7882c2074c98ab833a72024b19be3" },
+                { "name": "Bobo Choses", "score": 47, "hash": "0xcd453d810a147250f1eaf176bd7bfb5623c8d49d319622271ecbd7ea5339400f" },
+                { "name": "The Animals Observatory", "score": 46, "hash": "0xa98f434c30a3cef7f0c490adca90b0bd8b5f99b189b28f07572887d582df49e6" },
+                { "name": "Mini Rodini", "score": 45, "hash": "0xf8d4b771ce76cec534aebc75a87f6e41627d9c268b8d9b186473f4a1ba7e7a86" },
+                { "name": "Liewood", "score": 44, "hash": "0x544c60ef381ddfd7f2ddd6450ae93a5e8b58a53ace24af3692c4c6fecb093142" }
+            ]
+        };
 
-    // 1. Mise à jour visuelle des onglets
-    const activeClass = 'pb-2 text-xs uppercase tracking-widest tab-active';
-    const inactiveClass = 'pb-2 text-xs uppercase tracking-widest opacity-40';
-    Object.keys(tabs).forEach(key => {
-        if(tabs[key]) tabs[key].className = category === key ? activeClass : inactiveClass;
-    });
-
-    // 2. Génération du contenu trié
-    body.innerHTML = '';
-    if (brands[category]) {
-        // On trie par score décroissant
-        [...brands[category]].sort((a, b) => b.score - a.score).forEach((brand, index) => {
+        function switchTab(category) {
+            localStorage.setItem('activeCategory', category);
+            const body = document.getElementById('registry-body');
             
-          // Logique de statut Forensic
-const status = brand.score >= 90 ? "SUPREMACY" : 
-               (brand.score > 80 ? "EXCELLENCE" : 
-               (brand.score < 60 ? "DRIFT ALERT" : "VIGILANCE"));
+            const tabIds = ['luxury', 'beauty', 'longevity', 'apparel'];
+            tabIds.forEach(id => {
+                const btnHeader = document.getElementById(`tab-${id}`);
+                const btnFooter = document.getElementById(`foot-${id}`);
+                const isActive = (id === category);
+                
+                const headerClass = isActive ? 'pb-2 text-xs uppercase tracking-widest tab-active' : 'pb-2 text-xs uppercase tracking-widest opacity-40';
+                const footerClass = isActive ? 'pb-2 text-[10px] uppercase tracking-widest tab-active' : 'pb-2 text-[10px] uppercase tracking-widest opacity-40';
+                
+                if(btnHeader) btnHeader.className = headerClass;
+                if(btnFooter) btnFooter.className = footerClass;
+            });
 
-// Ici on utilise .bg-supremacy (le bleu Base) pour le top niveau
-const statusClass = brand.score >= 90 ? "bg-supremacy" :
-                    (brand.score > 80 ? "bg-emerald-500 text-white" : 
-                    (brand.score < 60 ? "bg-red-500 text-white animate-pulse" : "bg-amber-400 text-black"));
-            // On gère le lien (soit tx pour Longevity, soit hash pour les autres)
-            const proofLink = brand.tx ? `https://basescan.org/tx/${brand.tx}` : `https://basescan.org/tx/${brand.hash}`;
+            body.innerHTML = '';
+            if (brands[category]) {
+                [...brands[category]].sort((a, b) => b.score - a.score).forEach((brand, index) => {
+                    const status = brand.score >= 90 ? "SUPREMACY" : 
+                                   (brand.score > 80 ? "EXCELLENCE" : 
+                                   (brand.score < 60 ? "DRIFT ALERT" : "VIGILANCE"));
 
-            body.innerHTML += `
-                <tr class="border-b border-white border-opacity-5 transition-all hover:bg-white hover:bg-opacity-5">
-                    <td class="py-6 font-mono opacity-40 text-[10px]">#${(index + 1).toString().padStart(3, '0')}</td>
-                    <td class="py-6 font-bold uppercase tracking-wider text-xs">${brand.name}</td>
-                    <td class="py-6 font-mono text-xs">${brand.score}/100</td>
-                    <td class="py-6">
-                        <span class="px-2 py-1 rounded-sm text-[8px] tracking-tighter ${statusClass}">
-                            ${status}
-                        </span>
-                    </td>
-                    <td class="py-6 text-right">
-                        <a href="${proofLink}" target="_blank" class="font-mono text-[9px] opacity-40 hover:opacity-100 underline tracking-tighter">
-                            PROVE_ON_BASE ↗
-                        </a>
-                    </td>
-                </tr>
-            `;
-        });
-    }
-}
+                    const statusClass = brand.score >= 90 ? "bg-supremacy" :
+                                        (brand.score > 80 ? "bg-emerald-500 text-white" : 
+                                        (brand.score < 60 ? "bg-red-500 text-white animate-pulse" : "bg-amber-400 text-black"));
+                    
+                    const proofLink = brand.tx ? `https://basescan.org/tx/${brand.tx}` : `https://basescan.org/tx/${brand.hash}`;
+
+                    body.innerHTML += `
+                        <tr class="border-b border-gray-100 transition-all hover:bg-gray-50">
+                            <td class="py-6 font-mono opacity-40 text-[10px]">#${(index + 1).toString().padStart(3, '0')}</td>
+                            <td class="py-6 font-bold uppercase tracking-wider text-xs">${brand.name}</td>
+                            <td class="py-6 font-mono text-xs">${brand.score}/100</td>
+                            <td class="py-6">
+                                <span class="px-2 py-1 rounded-sm text-[8px] tracking-tighter ${statusClass}">
+                                    ${status}
+                                </span>
+                            </td>
+                            <td class="py-6 text-right">
+                                <a href="${proofLink}" target="_blank" class="font-mono text-[9px] opacity-40 hover:opacity-100 underline tracking-tighter">
+                                    PROVE_ON_BASE ↗
+                                </a>
+                            </td>
+                        </tr>
+                    `;
+                });
+            }
+        }
         
         window.onload = () => {
             const savedCategory = localStorage.getItem('activeCategory') || 'luxury';
