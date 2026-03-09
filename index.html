@@ -49,14 +49,13 @@
         </div>
     </main>
 
-    <footer class="mt-auto w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity pt-8 border-t border-gray-200 gap-6">
+    <footer class="mt-auto w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity pt-8 pb-8 border-t border-gray-200 gap-6">
         <div class="text-center md:text-left">
             <p class="text-[9px] font-bold uppercase tracking-widest mb-1">© 2026 2A Agency Forensic Intelligence Unit</p>
             <p class="text-[8px] font-mono tracking-tighter italic">Secured by Base L2 & Sentinel-01 Monitoring</p>
         </div>
 
-        <form action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col items-center md:items-end gap-2">
-            <input type="hidden" name="_next" value="https://www.2aagency.com/thanks.html">
+        <form id="2a-contact-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col items-center md:items-end gap-2">
             <input type="hidden" name="_subject" value="Nouveau Signalement Forensic - 2A Agency">
             
             <input type="email" name="email" placeholder="ENTER_AGENT_EMAIL" required 
@@ -67,6 +66,38 @@
             </button>
         </form>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var form = document.getElementById("2a-contact-form");
+            
+            if (form) {
+                form.addEventListener("submit", function(event) {
+                    event.preventDefault(); // On bloque Formspree
+                    var data = new FormData(form);
+                    
+                    fetch(form.action, {
+                        method: form.method,
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }).then(response => {
+                        if (response.ok) {
+                            // TELEPORTATION
+                            window.location.href = "https://www.2aagency.com/thanks.html";
+                        } else {
+                            alert("Erreur serveur Formspree.");
+                        }
+                    }).catch(error => {
+                        alert("Erreur réseau.");
+                    });
+                });
+            } else {
+                console.error("Le formulaire n'a pas été trouvé par le script !");
+            }
+        });
+    </script>
 
 </body>
 </html>
