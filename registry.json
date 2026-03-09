@@ -1,0 +1,22 @@
+[
+    {
+      "id": "GOY-001",
+      "brand": "Goyard",
+      "description": "Maison de maroquinerie de luxe, secret absolu, pas de e-commerce, artisanat historique."
+    },
+    {
+      "id": "LV-002",
+      "brand": "Louis Vuitton",
+      "description": "Leader mondial, malletier, collaborations pop fréquentes, forte présence digitale."
+    },
+    {
+      "id": "HER-003",
+      "brand": "Hermès",
+      "description": "Artisanat d'excellence, listes d'attente pour Birkin/Kelly, contrôle strict de la distribution."
+    },
+    {
+      "id": "ZAR-004",
+      "brand": "Zara",
+      "description": "Fast-fashion, renouvellement ultra-rapide des collections, prix accessibles, production de masse."
+    }
+  ]
