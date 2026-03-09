@@ -12,18 +12,30 @@
         .bg-2a-emerald { background-color: #064e3b; }
         .drift-row { background-color: #fff1f2; }
         .excellence-row { background-color: #f0fdf4; }
-        .tab-active { border-bottom: 3px solid #064e3b; font-weight: 900; }
+        .tab-active { border-bottom: 3px solid #064e3b; font-weight: 900; opacity: 1 !important; }
+        .nav-link { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #000; opacity: 0.4; transition: opacity 0.3s; }
+        .nav-link:hover { opacity: 1; }
     </style>
 </head>
 <body class="p-6 md:p-12">
 
-    <header class="flex justify-between items-center mb-16 uppercase tracking-widest text-[10px] font-bold">
+    <nav class="flex justify-between items-center mb-16">
+        <a href="index.html" class="text-xs font-black tracking-widest uppercase border-b-2 border-black pb-1">2A Agency</a>
+        <div class="flex gap-8 items-center">
+            <a href="registry.html" class="nav-link opacity-100 border-b-2 border-emerald-900">Registry</a>
+            <span class="text-[10px] font-bold border border-blue-600 text-blue-600 px-2 py-0.5 rounded italic">ERC-8004 COMPLIANT</span>
+            <a href="glossary.html" class="nav-link">Glossary</a>
+            <a href="whitepaper.html" class="nav-link">Protocol</a>
+        </div>
+    </nav>
+
+    <header class="flex justify-between items-center mb-12 uppercase tracking-widest text-[9px] font-bold">
         <div class="flex items-center gap-2">
             <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
             SENTINEL-01 : ACTIVE & MONITORING
         </div>
         <div>
-            <a href="https://basescan.org/address/0x40c07F5b9aC742CBe8f288F00166a9EC908921b9" target="_blank" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all">
+            <a href="https://basescan.org/address/0x40c07F5b9aC742CBe8f288F00166a9EC908921b9" target="_blank" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all text-[9px]">
                 VÉRIFIER L'ANCRE CRYPTOGRAPHIQUE (BASE L2)
             </a>
         </div>
@@ -43,7 +55,7 @@
         <button onclick="switchTab('beauty')" id="tab-beauty" class="pb-2 text-xs uppercase tracking-widest transition-all">02_Beauty</button>
     </nav>
 
-    <div class="overflow-x-auto">
+    <div class="overflow-x-auto min-h-[600px]">
         <table class="w-full text-left border-collapse">
             <thead>
                 <tr class="text-[10px] uppercase tracking-widest opacity-40 border-b border-gray-200">
@@ -58,8 +70,14 @@
         </table>
     </div>
 
+    <footer class="mt-20 pt-8 border-t border-gray-200 flex justify-between items-center opacity-40 hover:opacity-100 transition-opacity">
+        <p class="text-[9px] font-bold uppercase tracking-widest">© 2026 2A Agency Forensic Intelligence Unit</p>
+        <a href="https://formspree.io/f/xykngdbz" target="_blank" class="text-[9px] font-bold uppercase tracking-widest border-b border-black">
+            Contact Intelligence Unit →
+        </a>
+    </footer>
+
     <script>
-        // ON REGROUPE TOUT DANS L'OBJET BRANDS
         const brands = {
             luxury: [
                 { "name": "Hermès", "score": 98, "hash": "0x2d10f2ff3c6ddc9347357e5233e267b95ec2988bd9ce898c80f7081cdef42763" },
@@ -163,9 +181,6 @@
                 { "name": "Palm Angels", "score": 59, "hash": "0x76d39b2c5f83c406b95cd8400cdf38c2bfb6b113b3c51bc5e246c464c176eaaa" }
             ],
             beauty: [
-                { "name": "Balenciaga", "score": 50, "hash": "0xd5e8da1770025975616257f88c2973dfc2879f97e18896d10a56141c347d4b42" },
-                { "name": "Goyard", "score": 46, "hash": "0x6d2aa51c7994501a46fa018d6f02bd79ce3649fae9721fc64b6152e8e97384d1" },
-                { "name": "Philipp Plein", "score": 42, "hash": "0xa4f39b3482a9f8476572820531d4d7a45379e3e596d57b32d16e5460ca71df2d" },
                 { "name": "La Roche-Posay", "score": 98, "hash": "0x744a08dd79a8664dda4fc9fddc55e7e9a682f70a7258198c1df23fa71c36f001" },
                 { "name": "Dior Beauty", "score": 98, "hash": "0xfdc702c3316507def5662d810fc60942d0be09a373a4df13367eb3c2b0d023f3" },
                 { "name": "Chanel Beauty", "score": 96, "hash": "0x9ace62461e642122afe7b40af97671b22639220396abb059690c1e5868e8dbc1" },
@@ -261,13 +276,15 @@
                 { "name": "Rhode", "score": 38, "hash": "0xe0a7ae3916f446762da75f5fc0a4a86a54be1e87a37402ec0d931ea927b1d43d" },
                 { "name": "Milk Makeup", "score": 52, "hash": "0x5120f689050402d787b7bbfaceb0d4b31342de554e1361bd57b04dde7e5b52e7" },
                 { "name": "Sol de Janeiro", "score": 49, "hash": "0x2c8b181cd754102bd8895357b8ec64c0174b40483df2e2d224edf3879a872eca" },
-                { "name": "TirTir", "score": 48, "hash": "0xf93d016e86c52d98c84a6bcd9cfce92519c96cd8f3cece2c2f1f7e1201195d2f" }
+                { "name": "TirTir", "score": 48, "hash": "0xf93d016e86c52d98c84a6bcd9cfce92519c96cd8f3cece2c2f1f7e1201195d2f" },
+                { "name": "Balenciaga", "score": 50, "hash": "0xd5e8da1770025975616257f88c2973dfc2879f97e18896d10a56141c347d4b42" },
+                { "name": "Goyard", "score": 46, "hash": "0x6d2aa51c7994501a46fa018d6f02bd79ce3649fae9721fc64b6152e8e97384d1" },
+                { "name": "Philipp Plein", "score": 42, "hash": "0xa4f39b3482a9f8476572820531d4d7a45379e3e596d57b32d16e5460ca71df2d" }
             ]
         };
 
         function switchTab(category) {
             localStorage.setItem('activeCategory', category);
-            
             const body = document.getElementById('registry-body');
             const tabLuxury = document.getElementById('tab-luxury');
             const tabBeauty = document.getElementById('tab-beauty');
@@ -276,13 +293,10 @@
             tabBeauty.className = category === 'beauty' ? 'pb-2 text-xs uppercase tracking-widest tab-active' : 'pb-2 text-xs uppercase tracking-widest opacity-40';
 
             body.innerHTML = '';
-            
-            // On vérifie si la catégorie existe dans l'objet brands
             if (brands[category]) {
                 brands[category].sort((a,b) => b.score - a.score).forEach((brand, index) => {
                     const status = brand.score > 80 ? "EXCELLENCE" : (brand.score < 60 ? "DRIFT ALERT" : "VIGILANCE");
                     const rowClass = brand.score < 60 ? 'drift-row' : (brand.score > 80 ? 'excellence-row' : '');
-                    
                     body.innerHTML += `
                         <tr class="border-b border-gray-100 ${rowClass} transition-all hover:bg-gray-50">
                             <td class="py-6 font-mono opacity-40">#${(index + 1).toString().padStart(3, '0')}</td>
