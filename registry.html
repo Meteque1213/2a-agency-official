@@ -71,9 +71,10 @@
     </div>
 
     <footer class="mt-20 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity gap-6 max-w-7xl mx-auto w-full">
-        <div class="text-center md:text-left">
-            <p class="text-[9px] font-bold uppercase tracking-widest mb-1">© 2026 2A Agency Forensic Intelligence Unit</p>
-            <p class="text-[8px] font-mono tracking-tighter italic">Secured by Base L2 & Sentinel-01 Monitoring</p>
+        <div class="flex space-x-12 mb-12 border-b border-white border-opacity-10">
+            <button id="tab-luxury" onclick="switchTab('luxury')" class="pb-2 text-[10px] uppercase tracking-[0.2em] transition-all">Luxury</button>
+            <button id="tab-beauty" onclick="switchTab('beauty')" class="pb-2 text-[10px] uppercase tracking-[0.2em] transition-all">Beauty</button>
+            <button id="tab-longevity" onclick="switchTab('longevity')" class="pb-2 text-[10px] uppercase tracking-[0.2em] transition-all">Longevity</button>
         </div>
 
         <form id="2a-contact-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col items-center md:items-end gap-2">
