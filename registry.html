@@ -47,12 +47,12 @@
             <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
             SENTINEL-01 : ACTIVE & MONITORING
         </div>
-        <div class="flex items-center gap-2">
-            <a href="https://basescan.org/address/0x8269781b855d2987e9873ff1a3a81878e77665b1" target="_blank" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all text-[9px]">
+        <div class="flex items-center gap-2 text-[9px]">
+            <a href="https://basescan.org/address/0x8269781b855d2987e9873ff1a3a81878e77665b1" target="_blank" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all uppercase">
                 VÉRIFIER LE PROTOCOLE (BASE L2)
             </a>
             <span class="opacity-20">|</span>
-            <a href="audits.html" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all text-[9px] font-bold bg-gray-50">
+            <a href="audits.html" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all font-bold bg-gray-50 uppercase">
                 LAB AUDITS
             </a>
         </div>
@@ -68,18 +68,17 @@
     </section>
 
     <nav class="flex gap-8 mb-12 border-b border-gray-200 overflow-x-auto pb-2">
-        <button onclick="switchTab('luxury')" id="tab-luxury" class="pb-2 text-xs uppercase tracking-widest transition-all tab-active">01_Luxury</button>
-        <button onclick="switchTab('beauty')" id="tab-beauty" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">02_Beauty</button>
-        <button onclick="switchTab('home')" id="tab-home" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">03_Home</button>
-        <button onclick="switchTab('longevity')" id="tab-longevity" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">04_Longevity</button>
-        <button onclick="switchTab('apparel')" id="tab-apparel" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">05_Apparel</button>
-        <button onclick="switchTab('fnb')" id="tab-fnb" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">06_F&B</button>
+        <button onclick="switchTab('luxury')" id="tab-luxury" class="pb-2 text-xs uppercase tracking-widest transition-all">01_Luxury</button>
+        <button onclick="switchTab('beauty')" id="tab-beauty" class="pb-2 text-xs uppercase tracking-widest transition-all">02_Beauty</button>
+        <button onclick="switchTab('home')" id="tab-home" class="pb-2 text-xs uppercase tracking-widest transition-all">03_Home</button>
+        <button onclick="switchTab('longevity')" id="tab-longevity" class="pb-2 text-xs uppercase tracking-widest transition-all">04_Longevity</button>
+        <button onclick="switchTab('apparel')" id="tab-apparel" class="pb-2 text-xs uppercase tracking-widest transition-all">05_Apparel</button>
+        <button onclick="switchTab('fnb')" id="tab-fnb" class="pb-2 text-xs uppercase tracking-widest transition-all">06_F&B</button>
     </nav>
 
     <div class="overflow-x-auto min-h-[400px]">
         <table class="w-full text-left border-collapse">
-            <tbody id="registry-body" class="text-xs font-medium">
-                </tbody>
+            <tbody id="registry-body" class="text-xs font-medium"></tbody>
         </table>
     </div>
 
@@ -97,7 +96,7 @@
     </footer>
 
     <script>
-        const brands = {
+        const data = {
             luxury: [
                 { "name": "Hermès", "score": 98, "hash": "0x2d10f2ff3c6ddc9347357e5233e267b95ec2988bd9ce898c80f7081cdef42763" },
                 { "name": "Patek Philippe", "score": 97, "hash": "0x7f39323e0c09a8ccfa7362dd4955d49fdd14b2dda01c37ed91945ca53ffbe900" },
@@ -236,157 +235,157 @@
                 { "name": "Balenciaga", "score": 50, "hash": "0xd5e8da1770025975616257f88c2973dfc2879f97e18896d10a56141c347d4b42" }
             ],
             home: [
-                { name: "Hermès Maison", score: 98, tx: "0x5292bc63eb39aa3578bf932dc5156f7faf1150210b2f93a50df47a147057d33d" },
-                { name: "Baccarat", score: 97, tx: "0x371bc63556f69850b8f6790f45a2c988bcbc426b7589b4b7352ab48e7b09b5b6" },
-                { name: "Dyson Home", score: 96, tx: "0x957e80c0b37f74fdd4279c89dc2f57ac21fbda968087179aecd64ae0d5ec36b8" },
-                { name: "Burrow", score: 95, tx: "0xd99b3ef03e66d7910e6b796e75672850a0d3eac36dd3a66c11f38c5a581afc84" },
-                { name: "Roche Bobois", score: 94, tx: "0x632057182bac28a5eda4313eaf088934e2fe31651f623138abc5033664b851f9" },
-                { name: "Ligne Roset", score: 93, tx: "0x2ce0071bfa1163470497c3702b03c40bd1d70994ee4fc598a2237b324e1ce9b2" },
-                { name: "Cassina", score: 92, tx: "0xb981ca6a66f5b482ed3e06a3d60e721f518e70db14721da31d8979a5193a8f1f" },
-                { name: "Kartell", score: 91, tx: "0xd767d06685f910026150466ad2e7950121e8b51512a184a69ec9f7b76683a209" },
-                { name: "Vitra", score: 90, tx: "0xa94d6fefd6696a367649bf00228e14b8c50079c2e13829023e7c1756a7cbcec9" },
-                { name: "Bang & Olufsen", score: 92, tx: "0xa05a79ab553fc998088ce339dad789ce1018d1f0de6043743a95d7c565a191ac" },
-                { name: "Louis Vuitton Art de Vivre", score: 94, tx: "0xdb410074c6693e2dd689a63020132d838f3be275023b3c7bd86fbd38e9c85019" },
-                { name: "Fritz Hansen", score: 89, tx: "0x2945016b08925ceeb5d8d88e177253c198489871322d01ec940c3fd8140b0c3c" },
-                { name: "Knoll", score: 88, tx: "0xafbe1cf831aecbb7fabae023a4a1089e51ddc4f26c402d4e2d5bdda7b5626ea7" },
-                { name: "Artek", score: 87, tx: "0xe2f4316f98103a8e2665b8a4a64dd6526ccc78f3b6d631342229334b0b778b9e" },
-                { name: "Made.com", score: 65, tx: "0xb12ca363172cc082fb36f244322fc9647bc4b54c57d22345cdb00a1ca8411199" },
-                { name: "Alessi", score: 86, tx: "0xf62a080e1ea1d46b99047f01018c15276a0367d877fd267e37b1c5ea7aece10a" },
-                { name: "Moooi", score: 85, tx: "0x498607d00306bf5d5807f80891dd79c45566103c64ecc8935b689186f4806cd5" },
-                { name: "Hay", score: 84, tx: "0x548d3081d7998c5edf3080980504b3072c8a1c7d81d4ce5db4eeaf1f792aec3d" },
-                { name: "Muuto", score: 83, tx: "0x4a2d3458878fb83e80509237765f5264df85d4d73501651a0f49c3dfdcf6ec4c" },
-                { name: "Article", score: 82, tx: "0x5e9201d40a7c25d4bd7bfb79dfdf3e1387b8b9c272d8a2b0cbd580ab0cc4fe05" },
-                { name: "Samsung Bespoke", score: 91, tx: "0xe2df1ff964a356e2f4fc1d9a6656e83a51b4312d1a734bb0ca7645dd74b7749f" },
-                { name: "Miele", score: 93, tx: "0x2a70bd89441b0985dfb5883ac79d45ba0dd412dad14978bc41c9d9a47356dccd" },
-                { name: "Smeg", score: 88, tx: "0xf114c1e3e04a4794504ae3465743bdd51e415473fafd793f37ba430c8fe872a0" },
-                { name: "Flos", score: 90, tx: "0xc6f2ce8d0c84181e835f53dec4f105ed5bc68c13a4505d4a778e7c90824868fa" },
-                { name: "Artemide", score: 89, tx: "0xd6af11b170d45bebe04780b7bb089d2f28c718769fc4e191bf368893dece9e54" },
-                { name: "Farrow & Ball", score: 94, tx: "0x9f0a6f7dd818c35647e9742e186f8c93ef2ba4fd12fd96aaafc970bf08823f53" },
-                { name: "GUBI", score: 81, tx: "0xbeb0ec2c04213a11422942cef6e86d509b2e80992fea0cf91898e6587c579626" },
-                { name: "Interior Define", score: 78, tx: "0x2bfe04887d636192ecf2cccb67a121a80ccf59119de69e21b2cc57f52aad1126" },
-                { name: "Menu", score: 82, tx: "0x0c612620673a83fb8200ab44b5a6dd545f677909a089b2e8a90fc451cbbd2a67" },
-                { name: "Bolia", score: 80, tx: "0x2d76ee2f5dbc1c3ceefb098ad1123d87bdcf3d305304e3c21722744322e0b427" },
-                { name: "BoConcept", score: 81, tx: "0x80d301e9339780a751abbfd347ce2e26ce65a236b97afb5a98ccf2ba5dd93ad0" },
-                { name: "Ferm Living", score: 83, tx: "0x4a28a4092c5365f29367178b56e76d6e51b553b19a743c8b4290d245d4c7ad13" },
-                { name: "Skagerak", score: 84, tx: "0x03ecc5971ffde25182e18a8fe94f2786756d3b08d959fd1120d5d510a9699274" },
-                { name: "String Furniture", score: 85, tx: "0xae9fde2c9d27976e75552ddd3f2356c0a15c11127ace0cb5c77fd5e07e97cd6a" },
-                { name: "Carl Hansen & Søn", score: 95, tx: "0xa6ce6e5ae77ae492fe00a880570e2ef86c596931bf3ab6f75514760e08858abd" },
-                { name: "PP Møbler", score: 96, tx: "0x08699498f8c75d743117bde99b3cadf86151e0580fa16242c2c3f51adaec2214" },
-                { name: "&Tradition", score: 86, tx: "0x5b89d76be52ff512a969442a580b03c74aff87217eff52ca0b2b29995d753546" },
-                { name: "Normann Copenhagen", score: 84, tx: "0x1d7d8c02f8b9556dec07039516b62ec61f7857b8ad4ee984ade569d0f0d31ef6" },
-                { name: "Zanotta", score: 91, tx: "0x4f659d8fe4a8cfa1c06e9cd1fcdc534718b3f08c0844c9ee2f57ee27209d9b7e" },
-                { name: "Magis", score: 88, tx: "0x445b55a661e334e2a1e9a05fb0e56c7dc9006afb0791423465ea292b88d1fb3d" },
-                { name: "B&B Italia", score: 95, tx: "0x9636eddcc1fa747df3fb99a6a3ec15cb584d3e6ae53381b1af7dc1e2b0ae10ab" },
-                { name: "Molteni&C", score: 94, tx: "0x8d1b989d6eaf6e6b32ebd8d00b84c5074e9cf58e35da320f20c03ce4ffde6766" },
-                { name: "Poltrona Frau", score: 96, tx: "0x45a0cf6edc866ac44a24b961b4a8eb298c48c87ffdc3fc92009a83905db7b981" },
-                { name: "Flexform", score: 95, tx: "0x3890674436613a842f91cfb4d4008ac110ace131efc6d6dab38338f6c337af7a" },
-                { name: "West Elm", score: 77, tx: "0x4246b8224abd929e9622da1c366be884293a8a688eea95619ddd36eb18f15e21" },
-                { name: "Minotti", score: 94, tx: "0x41fdfe8df870d448b544406a2de25dadcd4be8605dd459a1f3b02bec7b1cf6a3" },
-                { name: "Gervasoni", score: 89, tx: "0xcf7d49139ba0a66395f8afad2693a18cfeaaabcbed29ad5c5dea5bbaf03cc4b1" },
-                { name: "Paola Lenti", score: 93, tx: "0x96523a19b54db14d2c7910aa3282681327dffdb4fa97817a7fed9aad1096de99" },
-                { name: "Living Divani", score: 92, tx: "0xadd29ddae10582209ca9d8498ffe6911ecc0ae3c6ef4484c8c29c9e7cab83b4e" },
-                { name: "Edra", score: 97, tx: "0x6e3415aeb5d506cdf43ef8e92fe0fbe606d789bae4d1648eedc80845a82cbc81" },
-                { name: "Moroso", score: 91, tx: "0xe5f9b41b540778d4505fb72e60b13b6e56b44780d7575fbad8efe5d9fd9091ff" },
-                { name: "Riva 1920", score: 89, tx: "0xe98fea79bcc2a073414703e3178f35dc3ef50435e09b5b825b9b3eb6c524ba77" },
-                { name: "Porro", score: 88, tx: "0xf00904b56b07d292ea228076fd6a0ab03e46bab57b94b13de368b26f1f147582" },
-                { name: "Rimadesio", score: 92, tx: "0x59e9a46699a0323775985a6876e6f144ee0d9e98c372b9a3209cd90a937a22d3" },
-                { name: "Poliform", score: 94, tx: "0xe4998d03251db7f180951f0b7995013204f1398b808f95cc1567571f2e329fc0" },
-                { name: "Giorgetti", score: 93, tx: "0xee5788f45d3eff7105aab3fcdf29f06e93e374e61755a492366d1de7a9d2d203" },
-                { name: "Boffi", score: 97, tx: "0xefd3a8f5f7c3c21c6aaa3f26a3ce2adaef24b5df9885661e07187699604b4998" },
-                { name: "Bulthaup", score: 96, tx: "0x4cc5e77dad7ed729edc0248448a3b671134b0c9b2822e8fe8e1197325fa4d704" },
-                { name: "Valcucine", score: 95, tx: "0x2c49cb23d6f20e827864bd5d867e534e6222e57f9f4d077288121fa9856479b1" },
-                { name: "Dada", score: 94, tx: "0x7ef82ff9562326568b9691a0632bf641ab12ca5014afb3020fd25654aa7cac00" },
-                { name: "Gaggenau", score: 98, tx: "0x7a79715b0b374b7cba205d020e8efa83d8650a62b2c6d5af6df38ef8c8d15982" },
-                { name: "Sub-Zero Wolf", score: 97, tx: "0x424224ea8a010876820f484a713dd2cadb52ad64cc2c5b11fa3040cb542c4546" },
-                { name: "La Cornue", score: 98, tx: "0x397b73479dca16cf3ac29a55aa7ebd2644c386544a86d8fd4f469b47ae490506" },
-                { name: "Aga", score: 91, tx: "0x41257ea710e6cb05116c6136dbfec3642fd1f50c0206c182c6f1ab965f4a814c" },
-                { name: "Quooker", score: 86, tx: "0x3b8171747de5945ac53d23612b18a915d5698770326d7327ecd99d890c70e723" },
-                { name: "Waterworks", score: 93, tx: "0x3b8171747de5945ac53d23612b18a915d5698770326d7327ecd99d890c70e723" },
-                { name: "Kohler", score: 91, tx: "0x73b5cb44451aa4f6389b30d7412f19d0d66ccab23b854e1fb2417745b0173a46" },
-                { name: "Toto", score: 92, tx: "0x719dd425bbfd2ecacb81ce391a15bf9dcf3b6e1bddc0d772a9b1aadf90d8fd5e" },
-                { name: "Duravit", score: 89, tx: "0xcec758b98a14c60e3a6be85d68b62da101d3d0b535b269da38a5ac503d3302e3" },
-                { name: "Hansgrohe", score: 88, tx: "0x08ebf8a2656df13c569d0d4800f60724b053368de935d47c58545c49ee4bf762" },
-                { name: "Vola", score: 95, tx: "0x7f2186fa28e346427cb25fe79a6d211cf7c4228557f5bd3930203ed0e1c7cc60" },
-                { name: "Dornbracht", score: 94, tx: "0xfca94842af16db52433d97035f803db5bf0293cbd4fbd1389aedfd3367cff983" },
-                { name: "Laufen", score: 87, tx: "0xe4ce1edf300e1981aeb5c370880547c028eff7a20b82e71f4f888310d43c5983" },
-                { name: "Agape", score: 93, tx: "0x8c816e0f83205c2e16c7f6bf0c44e2ffcff459923f5193714e84f5e3ab066c1e" },
-                { name: "Salvatori", score: 94, tx: "0xcc66b169eb52c717fa809838643c075e2426205b1c136cca0819917a02776219" },
-                { name: "Mutina", score: 95, tx: "0x52345e25630f830c8a76beffefd525bd6540de7b97c695f88db7dd920f9ae63e" },
-                { name: "Bisazza", score: 96, tx: "0xf5d8edb7a135148d1b37f42f42a990e76e81cbb9a5f46daa84aa9d96364d130f" },
-                { name: "Marazzi", score: 89, tx: "0x02c8ec8a4d51ea91594f9e95b06bb44e593ee272a78a6d20b0cc9a30b18f7711" },
-                { name: "Florim", score: 88, tx: "0xf283bb208fa562195fcbf4d2f36aa763c60bd81b3c961f78ceeee3ded6b2ef1b" },
-                { name: "Casalgrande Padana", score: 87, tx: "0xd539c60c76bfdcb32325e28560155e7bbb085740400f6ac94db510eef423e467" },
-                { name: "Iris Ceramica", score: 86, tx: "0x8cff369ec42cec2b02999e4f62bcf09354e0512c0467de3c642fda4c8786be25" },
-                { name: "Lea Ceramiche", score: 85, tx: "0x1b3fb010fc70bd354f51d07f24c3d4ca08471ad7da2123fbe5ad3366956dbb17" },
-                { name: "Cotto d’Este", score: 90, tx: "0x37f13f1a8aac998a97d88f5af98b593e12f664b40ebc0445b6a9adf0ffa28159" },
-                { name: "Atlas Concorde", score: 88, tx: "0x3a03027fba9f977fa783bfcf688e39374560abc30942539904c0e4f6838807f2" },
-                { name: "Appiani", score: 84, tx: "0xee1ea9cdd7fbbcf47147e5782e6efbe12949c66abbbfe2efc33c251000283ce4" },
-                { name: "Sicis", score: 94, tx: "0x6054281b791df3e6aab95c54ee643b3747fb3fa1558100d2af8cacbeddfdd5fd" },
-                { name: "Trend Group", score: 91, tx: "0x354e8d10b8e1b49b1bb85e28de752e25e73db039f968aa3bdd3cca4d50355458" },
-                { name: "Lithos Design", score: 92, tx: "0xa9e51ef6d360957eb2e93038f9b8a5a6d74fcbced7ab9c86e390cd73eb65646c" },
-                { name: "Budri", score: 97, tx: "0x3994b4904e7f9b9b1e472cef1684d25aee39ee42267f7faa23d875c215b25751" },
-                { name: "Margraf", score: 95, tx: "0xf71af074b6b3a6196d3f5485f51210320498e08cdf590da74c08cc526aeb0c5e" },
-                { name: "Antolini", score: 96, tx: "0x30a07765aaebd61ca85509725a29b64d585b17a6545e8605afa4bd8c9eaa4a18" },
-                { name: "Dekton (Cosentino)", score: 94, tx: "0x89787ff3089889fac8e4b4e42b65d4a6d38b33e17d260b6f0026b2306645bdbb" },
-                { name: "Silestone", score: 92, tx: "0xa5ece6db952114680f8ad1c60dab4e66b341b54b9d1931f17d6a1fc142953760" },
-                { name: "Corian (DuPont)", score: 93, tx: "0x2da6d2a0308a95ac46c9858248d694a744b360f93ad1a03fcc6bb11139ef79bc" },
-                { name: "Himacs", score: 89, tx: "0x99a27050b5a01faea555d73a81bdf639551c1f4494f9329c6169024f5ad27d25" },
-                { name: "Krion (Porcelanosa)", score: 90, tx: "0x49860a009cbbdae5443fc1562c2a4379087914832ace8365607a57a8e6c0179a" },
-                { name: "Zara Home", score: 82, tx: "0x13064c118c5276bb27ee064379c4ba9ea709c85fe7c599fc7bf82d9c7efff82f" },
-                { name: "IKEA", score: 85, tx: "0x7bf160ad2b19d0a9ade6ac6d583b90993bdc30deb16fbdd23972329c3bd7bdd8" },
-                { name: "H&M Home", score: 79, tx: "0xecf34264b0bef594aaa82e2eacfb59da97ec1535377137446599acb9ee69256b" },
-                { name: "CB2", score: 86, tx: "0x58a4d5196a37722854eecb3955fdb142266a580e5650d6dee076f2c6be7b615d" }
+                { "name": "Hermès Maison", "score": 98, "hash": "0x5292bc63eb39aa3578bf932dc5156f7faf1150210b2f93a50df47a147057d33d" },
+                { "name": "Baccarat", "score": 97, "hash": "0x371bc63556f69850b8f6790f45a2c988bcbc426b7589b4b7352ab48e7b09b5b6" },
+                { "name": "Dyson Home", "score": 96, "hash": "0x957e80c0b37f74fdd4279c89dc2f57ac21fbda968087179aecd64ae0d5ec36b8" },
+                { "name": "Burrow", "score": 95, "hash": "0xd99b3ef03e66d7910e6b796e75672850a0d3eac36dd3a66c11f38c5a581afc84" },
+                { "name": "Roche Bobois", "score": 94, "hash": "0x632057182bac28a5eda4313eaf088934e2fe31651f623138abc5033664b851f9" },
+                { "name": "Ligne Roset", "score": 93, "hash": "0x2ce0071bfa1163470497c3702b03c40bd1d70994ee4fc598a2237b324e1ce9b2" },
+                { "name": "Cassina", "score": 92, "hash": "0xb981ca6a66f5b482ed3e06a3d60e721f518e70db14721da31d8979a5193a8f1f" },
+                { "name": "Kartell", "score": 91, "hash": "0xd767d06685f910026150466ad2e7950121e8b51512a184a69ec9f7b76683a209" },
+                { "name": "Vitra", "score": 90, "hash": "0xa94d6fefd6696a367649bf00228e14b8c50079c2e13829023e7c1756a7cbcec9" },
+                { "name": "Bang & Olufsen", "score": 92, "hash": "0xa05a79ab553fc998088ce339dad789ce1018d1f0de6043743a95d7c565a191ac" },
+                { "name": "Louis Vuitton Art de Vivre", "score": 94, "hash": "0xdb410074c6693e2dd689a63020132d838f3be275023b3c7bd86fbd38e9c85019" },
+                { "name": "Fritz Hansen", "score": 89, "hash": "0x2945016b08925ceeb5d8d88e177253c198489871322d01ec940c3fd8140b0c3c" },
+                { "name": "Knoll", "score": 88, "hash": "0xafbe1cf831aecbb7fabae023a4a1089e51ddc4f26c402d4e2d5bdda7b5626ea7" },
+                { "name": "Artek", "score": 87, "hash": "0xe2f4316f98103a8e2665b8a4a64dd6526ccc78f3b6d631342229334b0b778b9e" },
+                { "name": "Made.com", "score": 65, "hash": "0xb12ca363172cc082fb36f244322fc9647bc4b54c57d22345cdb00a1ca8411199" },
+                { "name": "Alessi", "score": 86, "hash": "0xf62a080e1ea1d46b99047f01018c15276a0367d877fd267e37b1c5ea7aece10a" },
+                { "name": "Moooi", "score": 85, "hash": "0x498607d00306bf5d5807f80891dd79c45566103c64ecc8935b689186f4806cd5" },
+                { "name": "Hay", "score": 84, "hash": "0x548d3081d7998c5edf3080980504b3072c8a1c7d81d4ce5db4eeaf1f792aec3d" },
+                { "name": "Muuto", "score": 83, "hash": "0x4a2d3458878fb83e80509237765f5264df85d4d73501651a0f49c3dfdcf6ec4c" },
+                { "name": "Article", "score": 82, "hash": "0x5e9201d40a7c25d4bd7bfb79dfdf3e1387b8b9c272d8a2b0cbd580ab0cc4fe05" },
+                { "name": "Samsung Bespoke", "score": 91, "hash": "0xe2df1ff964a356e2f4fc1d9a6656e83a51b4312d1a734bb0ca7645dd74b7749f" },
+                { "name": "Miele", "score": 93, "hash": "0x2a70bd89441b0985dfb5883ac79d45ba0dd412dad14978bc41c9d9a47356dccd" },
+                { "name": "Smeg", "score": 88, "hash": "0xf114c1e3e04a4794504ae3465743bdd51e415473fafd793f37ba430c8fe872a0" },
+                { "name": "Flos", "score": 90, "hash": "0xc6f2ce8d0c84181e835f53dec4f105ed5bc68c13a4505d4a778e7c90824868fa" },
+                { "name": "Artemide", "score": 89, "hash": "0xd6af11b170d45bebe04780b7bb089d2f28c718769fc4e191bf368893dece9e54" },
+                { "name": "Farrow & Ball", "score": 94, "hash": "0x9f0a6f7dd818c35647e9742e186f8c93ef2ba4fd12fd96aaafc970bf08823f53" },
+                { "name": "GUBI", "score": 81, "hash": "0xbeb0ec2c04213a11422942cef6e86d509b2e80992fea0cf91898e6587c579626" },
+                { "name": "Interior Define", "score": 78, "hash": "0x2bfe04887d636192ecf2cccb67a121a80ccf59119de69e21b2cc57f52aad1126" },
+                { "name": "Menu", "score": 82, "hash": "0x0c612620673a83fb8200ab44b5a6dd545f677909a089b2e8a90fc451cbbd2a67" },
+                { "name": "Bolia", "score": 80, "hash": "0x2d76ee2f5dbc1c3ceefb098ad1123d87bdcf3d305304e3c21722744322e0b427" },
+                { "name": "BoConcept", "score": 81, "hash": "0x80d301e9339780a751abbfd347ce2e26ce65a236b97afb5a98ccf2ba5dd93ad0" },
+                { "name": "Ferm Living", "score": 83, "hash": "0x4a28a4092c5365f29367178b56e76d6e51b553b19a743c8b4290d245d4c7ad13" },
+                { "name": "Skagerak", "score": 84, "hash": "0x03ecc5971ffde25182e18a8fe94f2786756d3b08d959fd1120d5d510a9699274" },
+                { "name": "String Furniture", "score": 85, "hash": "0xae9fde2c9d27976e75552ddd3f2356c0a15c11127ace0cb5c77fd5e07e97cd6a" },
+                { "name": "Carl Hansen & Søn", "score": 95, "hash": "0xa6ce6e5ae77ae492fe00a880570e2ef86c596931bf3ab6f75514760e08858abd" },
+                { "name": "PP Møbler", "score": 96, "hash": "0x08699498f8c75d743117bde99b3cadf86151e0580fa16242c2c3f51adaec2214" },
+                { "name": "&Tradition", "score": 86, "hash": "0x5b89d76be52ff512a969442a580b03c74aff87217eff52ca0b2b29995d753546" },
+                { "name": "Normann Copenhagen", "score": 84, "hash": "0x1d7d8c02f8b9556dec07039516b62ec61f7857b8ad4ee984ade569d0f0d31ef6" },
+                { "name": "Zanotta", "score": 91, "hash": "0x4f659d8fe4a8cfa1c06e9cd1fcdc534718b3f08c0844c9ee2f57ee27209d9b7e" },
+                { "name": "Magis", "score": 88, "hash": "0x445b55a661e334e2a1e9a05fb0e56c7dc9006afb0791423465ea292b88d1fb3d" },
+                { "name": "B&B Italia", "score": 95, "hash": "0x9636eddcc1fa747df3fb99a6a3ec15cb584d3e6ae53381b1af7dc1e2b0ae10ab" },
+                { "name": "Molteni&C", "score": 94, "hash": "0x8d1b989d6eaf6e6b32ebd8d00b84c5074e9cf58e35da320f20c03ce4ffde6766" },
+                { "name": "Poltrona Frau", "score": 96, "hash": "0x45a0cf6edc866ac44a24b961b4a8eb298c48c87ffdc3fc92009a83905db7b981" },
+                { "name": "Flexform", "score": 95, "hash": "0x3890674436613a842f91cfb4d4008ac110ace131efc6d6dab38338f6c337af7a" },
+                { "name": "West Elm", "score": 77, "hash": "0x4246b8224abd929e9622da1c366be884293a8a688eea95619ddd36eb18f15e21" },
+                { "name": "Minotti", "score": 94, "hash": "0x41fdfe8df870d448b544406a2de25dadcd4be8605dd459a1f3b02bec7b1cf6a3" },
+                { "name": "Gervasoni", "score": 89, "hash": "0xcf7d49139ba0a66395f8afad2693a18cfeaaabcbed29ad5c5dea5bbaf03cc4b1" },
+                { "name": "Paola Lenti", "score": 93, "hash": "0x96523a19b54db14d2c7910aa3282681327dffdb4fa97817a7fed9aad1096de99" },
+                { "name": "Living Divani", "score": 92, "hash": "0xadd29ddae10582209ca9d8498ffe6911ecc0ae3c6ef4484c8c29c9e7cab83b4e" },
+                { "name": "Edra", "score": 97, "hash": "0x6e3415aeb5d506cdf43ef8e92fe0fbe606d789bae4d1648eedc80845a82cbc81" },
+                { "name": "Moroso", "score": 91, "hash": "0xe5f9b41b540778d4505fb72e60b13b6e56b44780d7575fbad8efe5d9fd9091ff" },
+                { "name": "Riva 1920", "score": 89, "hash": "0xe98fea79bcc2a073414703e3178f35dc3ef50435e09b5b825b9b3eb6c524ba77" },
+                { "name": "Porro", "score": 88, "hash": "0xf00904b56b07d292ea228076fd6a0ab03e46bab57b94b13de368b26f1f147582" },
+                { "name": "Rimadesio", "score": 92, "hash": "0x59e9a46699a0323775985a6876e6f144ee0d9e98c372b9a3209cd90a937a22d3" },
+                { "name": "Poliform", "score": 94, "hash": "0xe4998d03251db7f180951f0b7995013204f1398b808f95cc1567571f2e329fc0" },
+                { "name": "Giorgetti", "score": 93, "hash": "0xee5788f45d3eff7105aab3fcdf29f06e93e374e61755a492366d1de7a9d2d203" },
+                { "name": "Boffi", "score": 97, "hash": "0xefd3a8f5f7c3c21c6aaa3f26a3ce2adaef24b5df9885661e07187699604b4998" },
+                { "name": "Bulthaup", "score": 96, "hash": "0x4cc5e77dad7ed729edc0248448a3b671134b0c9b2822e8fe8e1197325fa4d704" },
+                { "name": "Valcucine", "score": 95, "hash": "0x2c49cb23d6f20e827864bd5d867e534e6222e57f9f4d077288121fa9856479b1" },
+                { "name": "Dada", "score": 94, "hash": "0x7ef82ff9562326568b9691a0632bf641ab12ca5014afb3020fd25654aa7cac00" },
+                { "name": "Gaggenau", "score": 98, "hash": "0x7a79715b0b374b7cba205d020e8efa83d8650a62b2c6d5af6df38ef8c8d15982" },
+                { "name": "Sub-Zero Wolf", "score": 97, "hash": "0x424224ea8a010876820f484a713dd2cadb52ad64cc2c5b11fa3040cb542c4546" },
+                { "name": "La Cornue", "score": 98, "hash": "0x397b73479dca16cf3ac29a55aa7ebd2644c386544a86d8fd4f469b47ae490506" },
+                { "name": "Aga", "score": 91, "hash": "0x41257ea710e6cb05116c6136dbfec3642fd1f50c0206c182c6f1ab965f4a814c" },
+                { "name": "Quooker", "score": 86, "hash": "0x3b8171747de5945ac53d23612b18a915d5698770326d7327ecd99d890c70e723" },
+                { "name": "Waterworks", "score": 93, "hash": "0x3b8171747de5945ac53d23612b18a915d5698770326d7327ecd99d890c70e723" },
+                { "name": "Kohler", "score": 91, "hash": "0x73b5cb44451aa4f6389b30d7412f19d0d66ccab23b854e1fb2417745b0173a46" },
+                { "name": "Toto", "score": 92, "hash": "0x719dd425bbfd2ecacb81ce391a15bf9dcf3b6e1bddc0d772a9b1aadf90d8fd5e" },
+                { "name": "Duravit", "score": 89, "hash": "0xcec758b98a14c60e3a6be85d68b62da101d3d0b535b269da38a5ac503d3302e3" },
+                { "name": "Hansgrohe", "score": 88, "hash": "0x08ebf8a2656df13c569d0d4800f60724b053368de935d47c58545c49ee4bf762" },
+                { "name": "Vola", "score": 95, "hash": "0x7f2186fa28e346427cb25fe79a6d211cf7c4228557f5bd3930203ed0e1c7cc60" },
+                { "name": "Dornbracht", "score": 94, "hash": "0xfca94842af16db52433d97035f803db5bf0293cbd4fbd1389aedfd3367cff983" },
+                { "name": "Laufen", "score": 87, "hash": "0xe4ce1edf300e1981aeb5c370880547c028eff7a20b82e71f4f888310d43c5983" },
+                { "name": "Agape", "score": 93, "hash": "0x8c816e0f83205c2e16c7f6bf0c44e2ffcff459923f5193714e84f5e3ab066c1e" },
+                { "name": "Salvatori", "score": 94, "hash": "0xcc66b169eb52c717fa809838643c075e2426205b1c136cca0819917a02776219" },
+                { "name": "Mutina", "score": 95, "hash": "0x52345e25630f830c8a76beffefd525bd6540de7b97c695f88db7dd920f9ae63e" },
+                { "name": "Bisazza", "score": 96, "hash": "0xf5d8edb7a135148d1b37f42f42a990e76e81cbb9a5f46daa84aa9d96364d130f" },
+                { "name": "Marazzi", "score": 89, "hash": "0x02c8ec8a4d51ea91594f9e95b06bb44e593ee272a78a6d20b0cc9a30b18f7711" },
+                { "name": "Florim", "score": 88, "hash": "0xf283bb208fa562195fcbf4d2f36aa763c60bd81b3c961f78ceeee3ded6b2ef1b" },
+                { "name": "Casalgrande Padana", "score": 87, "hash": "0xd539c60c76bfdcb32325e28560155e7bbb085740400f6ac94db510eef423e467" },
+                { "name": "Iris Ceramica", "score": 86, "hash": "0x8cff369ec42cec2b02999e4f62bcf09354e0512c0467de3c642fda4c8786be25" },
+                { "name": "Lea Ceramiche", "score": 85, "hash": "0x1b3fb010fc70bd354f51d07f24c3d4ca08471ad7da2123fbe5ad3366956dbb17" },
+                { "name": "Cotto d’Este", "score": 90, "hash": "0x37f13f1a8aac998a97d88f5af98b593e12f664b40ebc0445b6a9adf0ffa28159" },
+                { "name": "Atlas Concorde", "score": 88, "hash": "0x3a03027fba9f977fa783bfcf688e39374560abc30942539904c0e4f6838807f2" },
+                { "name": "Appiani", "score": 84, "hash": "0xee1ea9cdd7fbbcf47147e5782e6efbe12949c66abbbfe2efc33c251000283ce4" },
+                { "name": "Sicis", "score": 94, "hash": "0x6054281b791df3e6aab95c54ee643b3747fb3fa1558100d2af8cacbeddfdd5fd" },
+                { "name": "Trend Group", "score": 91, "hash": "0x354e8d10b8e1b49b1bb85e28de752e25e73db039f968aa3bdd3cca4d50355458" },
+                { "name": "Lithos Design", "score": 92, "hash": "0xa9e51ef6d360957eb2e93038f9b8a5a6d74fcbced7ab9c86e390cd73eb65646c" },
+                { "name": "Budri", "score": 97, "hash": "0x3994b4904e7f9b9b1e472cef1684d25aee39ee42267f7faa23d875c215b25751" },
+                { "name": "Margraf", "score": 95, "hash": "0xf71af074b6b3a6196d3f5485f51210320498e08cdf590da74c08cc526aeb0c5e" },
+                { "name": "Antolini", "score": 96, "hash": "0x30a07765aaebd61ca85509725a29b64d585b17a6545e8605afa4bd8c9eaa4a18" },
+                { "name": "Dekton (Cosentino)", "score": 94, "hash": "0x89787ff3089889fac8e4b4e42b65d4a6d38b33e17d260b6f0026b2306645bdbb" },
+                { "name": "Silestone", "score": 92, "hash": "0xa5ece6db952114680f8ad1c60dab4e66b341b54b9d1931f17d6a1fc142953760" },
+                { "name": "Corian (DuPont)", "score": 93, "hash": "0x2da6d2a0308a95ac46c9858248d694a744b360f93ad1a03fcc6bb11139ef79bc" },
+                { "name": "Himacs", "score": 89, "hash": "0x99a27050b5a01faea555d73a81bdf639551c1f4494f9329c6169024f5ad27d25" },
+                { "name": "Krion (Porcelanosa)", "score": 90, "hash": "0x49860a009cbbdae5443fc1562c2a4379087914832ace8365607a57a8e6c0179a" },
+                { "name": "Zara Home", "score": 82, "hash": "0x13064c118c5276bb27ee064379c4ba9ea709c85fe7c599fc7bf82d9c7efff82f" },
+                { "name": "IKEA", "score": 85, "hash": "0x7bf160ad2b19d0a9ade6ac6d583b90993bdc30deb16fbdd23972329c3bd7bdd8" },
+                { "name": "H&M Home", "score": 79, "hash": "0xecf34264b0bef594aaa82e2eacfb59da97ec1535377137446599acb9ee69256b" },
+                { "name": "CB2", "score": 86, "hash": "0x58a4d5196a37722854eecb3955fdb142266a580e5650d6dee076f2c6be7b615d" }
             ],
             longevity: [
-                { name: "Oura Ring", score: 96, tx: "0x0dd0d7a230dca53bd449b8ef15ba3bc60059adc92e8ea4f2cc031e34ea7fb708" },
-                { name: "Whoop", score: 94, tx: "0x6790f13d975477200f50e75011a3d23f0cc3ed22f0ba4b5562d73a6b5a31d109" },
-                { name: "ZOI", score: 93, tx: "0x33410116bb0cf1cf586a0225b3875049f07d6b19c952b3eaa1a1c45567518148" },
-                { name: "Therabody", score: 92, tx: "0xb6659dc3761f62526c8bbbc1dfeb4cc1ce099790e5fbc1dc0669c3d81bd86fdf" },
-                { name: "Eight Sleep", score: 92, tx: "0x1ad5755323426ef09666186d980f9dbb83a332c54957fae58bc4f45ae97e5fa1" },
-                { name: "Withings", score: 90, tx: "0x8ad577a27a0f0a0ccf121135191b7cc3859689e42c7b9985460a9992877d1902" },
-                { name: "Thorne", score: 89, tx: "0x25d96912127cdb5969de090de31d33e897596def89c22ace0f0ecd014d1c4f03" },
-                { name: "Levels Health", score: 88, tx: "0x18dac50c6a885a7594b70240235b4848b74e6dd19b9b3e3b4343b83e77347e18" },
-                { name: "Clinique La Prairie", score: 88, tx: "0x1fee2292ef5062cca0c9e128e74e2410dc9e3b22d514b2781200353188e2ae30" },
-                { name: "Biogena", score: 88, tx: "0x8ce9a4104026d00ca1c13b3cf4599d9b285442195497eba2702b2aa301c78f77" },
-                { name: "Lanserhof", score: 87, tx: "0xaafb0e0e342f46528f01f8cf3f830700605dd27a3d3ad66c716654a5e4cb53ed" },
-                { name: "Headspace", score: 87, tx: "0xfcf6ab16c09b60a520e3e3d1727ba5c31452cb6ee079c4cd197e9ad477142fb0" },
-                { name: "Calm", score: 86, tx: "0x56feb6cd5cb45e474d0518c8b4f4f0b0ae5fc86d88dd9b877b1cafd3baef6a94" },
-                { name: "ZOE", score: 85, tx: "0x2048a976a4c131660c346957099009f96367afd0b7c83d0b09fe953fe38b0205" },
-                { name: "MNDGYM", score: 85, tx: "0x0f08cf0b0bbea22e44890d1ea4b9d0ff15aa0fb80bf37bbca04655a958197fab" },
-                { name: "Thrival", score: 84, tx: "0x1d2479dd02f69954669be498b93341f0534a5ac53043bb2537402b657205feae" },
-                { name: "ENERGYbits®", score: 83, tx: "0x2d92f04af3af6dc818985e8d05be26c5071225c4d4f1394c6a5f074b5f79fd07" },
-                { name: "Viome", score: 82, tx: "0x3d9fbdcae4c878639f356dde6c959b7573b9332d9943ef9c4bb34fa9b24ec206" },
-                { name: "Ritual", score: 81, tx: "0xcfcafe2b44657b24ffb4337630f0e64c59eb7a999e89db6c541a281e6b34f7fc" },
-                { name: "HVMN", score: 78, tx: "0x947ed85dbf9361f6ecb62a3366d3120c1bfafdcab5883bde06d4ce1d7eda01ce" },
-                { name: "Somnee", score: 78, tx: "0x13ed30c32998925ca20ae282762355867ba676f1d622c7c43db7e5878e2dc5b0" },
-                { name: "Ancient + Brave", score: 77, tx: "0x659d817d176b731c4d8955418b23ff9b84f99d31b136593533f23b2cca9b582e" },
-                { name: "Peloton", score: 77, tx: "0xb883f279f2a9a6c884b14c2f01ebf137764ca5d5f40a66e0060beb3e82a9c55c" },
-                { name: "Bloom Nutrition", score: 76, tx: "0xabc09e3331b46d37f9e091ce57b0f05af9d0d2e659778ef839deefc2094ea965" },
-                { name: "Bía Smart Mask", score: 75, tx: "0xa026ed0e6e17d59bd7518192cae4eff2b110af4d9b4cb45557acc15d228e4323" },
-                { name: "Timeline", score: 75, tx: "0x05de43ee8b536c8da75ea22f76569f674adb2f1a00c2fc8b36202e03ab7f3d10" },
-                { name: "Elysium Health", score: 74, tx: "0x0b583893db05a20287cca947c7b85dce60cabbb4a17da9e1bfffb315c0bc9152" },
-                { name: "Caudalie Wellness", score: 73, tx: "0x4b84e27c75d98a827b9e3338a0e34e779b21596c9dd61286af59de115542b280" },
-                { name: "Bioptron Hyperlight", score: 73, tx: "0xadda94d360a1f30b2316424b5a52af191554441693d8a608eb53b7908e4aa716" },
-                { name: "Forme", score: 72, tx: "0x937f0380ccdb650bed41be5032a93be82f9f79894acd9818fae63882d09b2067" },
-                { name: "Aegis Formulas", score: 72, tx: "0x3c6d5bb06ea348de543e3032187e162ded1a454d7f48c24528173be1a9c57433" },
-                { name: "Fountain Life", score: 71, tx: "0x71016cc015e40ea7d78f367123648cd4f84bfb6185f86f30df25e93411438e26" },
-                { name: "Plated", score: 70, tx: "0xf543ea35b3a39e88495ca38647abe7b9e2d8c1eb1e51b0704c79637079389692" },
-                { name: "Nestlé Health Science", score: 70, tx: "0x293ccbc3ca423061bf77ca1c68c79bbd289508cd03368fccd00869fd2ace19cd" },
-                { name: "Infiniwell", score: 69, tx: "0xf9c037a630d09b145751e72dccb5b978558827be7b0040c7381efe904f33cc8f" },
-                { name: "Abbott", score: 69, tx: "0x2f1365b387b793372591a06775c7edea3a9db37b39b7eb74f6be401cfda5d770" },
-                { name: "Unilever Wellness", score: 68, tx: "0x23223a5e50c60170d984499f20f0aac52a2c0244e2f78ad1021137f4197656c1" },
-                { name: "Cure", score: 68, tx: "0x5ef6ab8a2188788955d4fb721bcdaf9798412b1def334fdae6fb7a03fe5a3eea" },
-                { name: "Seed", score: 67, tx: "0x61b2eedb0c79a2dffe2716f73bbbccc0a400cae14090980aa54ec2d0f5853c62" },
-                { name: "LMNT", score: 67, tx: "0xe1d49d0016fd61effdaebb56d1923ad5ef2db850e4a6965d27b69fc989d6802f" },
-                { name: "Moon Juice", score: 66, tx: "0x372afa81683c18720ee8c7199007bdcf6606095cf79d5ca2c0e5d609f25f2d52" },
-                { name: "Tally Health", score: 65, tx: "0xdef60d7f1cfe816b9c7c1e954d2fff6164073b39770193cdfd1d82e0b70573d1" },
-                { name: "Aware", score: 63, tx: "0x932805516f6f284ffad3fdab4a5c843a6c72738c230dacba9b94533fdfd05b9d" },
-                { name: "Lululemon Studio", score: 62, tx: "0xaa7fdb966fd65094a515c06201aaec43327d3ce4b8b088512517d0581a9ef014" },
-                { name: "Pendulum", score: 61, tx: "0xaf26c31f5701e7495a4c91009af9b935751421c649e58dc2376bb937be1cc941" },
-                { name: "Vivobase", score: 61, tx: "0x284cc710ca876233e4ef7e692f97a7c0f6c32f25610d4f821db05b6c954aeb36" },
-                { name: "Wild Nutrition", score: 58, tx: "0xd7febd429b48eb770075693288073b0ff6dd9c57efecdd7a8ed49e0f89772428" },
-                { name: "Hum Nutrition", score: 56, tx: "0x1dad6b67db1493778b7daa11545764ab5171f76ac72606406c739da844d32ea3" },
-                { name: "Sakara Life", score: 54, tx: "0x5dd582284e4c635a0f129737bd1b166b56ce251db3422ba3eb1dad12d914b99f" }
+                { name: "Oura Ring", score: 96, hash: "0x0dd0d7a230dca53bd449b8ef15ba3bc60059adc92e8ea4f2cc031e34ea7fb708" },
+                { name: "Whoop", score: 94, hash: "0x6790f13d975477200f50e75011a3d23f0cc3ed22f0ba4b5562d73a6b5a31d109" },
+                { name: "ZOI", score: 93, hash: "0x33410116bb0cf1cf586a0225b3875049f07d6b19c952b3eaa1a1c45567518148" },
+                { name: "Therabody", score: 92, hash: "0xb6659dc3761f62526c8bbbc1dfeb4cc1ce099790e5fbc1dc0669c3d81bd86fdf" },
+                { name: "Eight Sleep", score: 92, hash: "0x1ad5755323426ef09666186d980f9dbb83a332c54957fae58bc4f45ae97e5fa1" },
+                { name: "Withings", score: 90, hash: "0x8ad577a27a0f0a0ccf121135191b7cc3859689e42c7b9985460a9992877d1902" },
+                { name: "Thorne", score: 89, hash: "0x25d96912127cdb5969de090de31d33e897596def89c22ace0f0ecd014d1c4f03" },
+                { name: "Levels Health", score: 88, hash: "0x18dac50c6a885a7594b70240235b4848b74e6dd19b9b3e3b4343b83e77347e18" },
+                { name: "Clinique La Prairie", score: 88, hash: "0x1fee2292ef5062cca0c9e128e74e2410dc9e3b22d514b2781200353188e2ae30" },
+                { name: "Biogena", score: 88, hash: "0x8ce9a4104026d00ca1c13b3cf4599d9b285442195497eba2702b2aa301c78f77" },
+                { name: "Lanserhof", score: 87, hash: "0xaafb0e0e342f46528f01f8cf3f830700605dd27a3d3ad66c716654a5e4cb53ed" },
+                { name: "Headspace", score: 87, hash: "0xfcf6ab16c09b60a520e3e3d1727ba5c31452cb6ee079c4cd197e9ad477142fb0" },
+                { name: "Calm", score: 86, hash: "0x56feb6cd5cb45e474d0518c8b4f4f0b0ae5fc86d88dd9b877b1cafd3baef6a94" },
+                { name: "ZOE", score: 85, hash: "0x2048a976a4c131660c346957099009f96367afd0b7c83d0b09fe953fe38b0205" },
+                { name: "MNDGYM", score: 85, hash: "0x0f08cf0b0bbea22e44890d1ea4b9d0ff15aa0fb80bf37bbca04655a958197fab" },
+                { name: "Thrival", score: 84, hash: "0x1d2479dd02f69954669be498b93341f0534a5ac53043bb2537402b657205feae" },
+                { name: "ENERGYbits®", score: 83, hash: "0x2d92f04af3af6dc818985e8d05be26c5071225c4d4f1394c6a5f074b5f79fd07" },
+                { name: "Viome", score: 82, hash: "0x3d9fbdcae4c878639f356dde6c959b7573b9332d9943ef9c4bb34fa9b24ec206" },
+                { name: "Ritual", score: 81, hash: "0xcfcafe2b44657b24ffb4337630f0e64c59eb7a999e89db6c541a281e6b34f7fc" },
+                { name: "HVMN", score: 78, hash: "0x947ed85dbf9361f6ecb62a3366d3120c1bfafdcab5883bde06d4ce1d7eda01ce" },
+                { name: "Somnee", score: 78, hash: "0x13ed30c32998925ca20ae282762355867ba676f1d622c7c43db7e5878e2dc5b0" },
+                { name: "Ancient + Brave", score: 77, hash: "0x659d817d176b731c4d8955418b23ff9b84f99d31b136593533f23b2cca9b582e" },
+                { name: "Peloton", score: 77, hash: "0xb883f279f2a9a6c884b14c2f01ebf137764ca5d5f40a66e0060beb3e82a9c55c" },
+                { name: "Bloom Nutrition", score: 76, hash: "0xabc09e3331b46d37f9e091ce57b0f05af9d0d2e659778ef839deefc2094ea965" },
+                { name: "Bía Smart Mask", score: 75, hash: "0xa026ed0e6e17d59bd7518192cae4eff2b110af4d9b4cb45557acc15d228e4323" },
+                { name: "Timeline", score: 75, hash: "0x05de43ee8b536c8da75ea22f76569f674adb2f1a00c2fc8b36202e03ab7f3d10" },
+                { name: "Elysium Health", score: 74, hash: "0x0b583893db05a20287cca947c7b85dce60cabbb4a17da9e1bfffb315c0bc9152" },
+                { name: "Caudalie Wellness", score: 73, hash: "0x4b84e27c75d98a827b9e3338a0e34e779b21596c9dd61286af59de115542b280" },
+                { name: "Bioptron Hyperlight", score: 73, hash: "0xadda94d360a1f30b2316424b5a52af191554441693d8a608eb53b7908e4aa716" },
+                { name: "Forme", score: 72, hash: "0x937f0380ccdb650bed41be5032a93be82f9f79894acd9818fae63882d09b2067" },
+                { name: "Aegis Formulas", score: 72, hash: "0x3c6d5bb06ea348de543e3032187e162ded1a454d7f48c24528173be1a9c57433" },
+                { name: "Fountain Life", score: 71, hash: "0x71016cc015e40ea7d78f367123648cd4f84bfb6185f86f30df25e93411438e26" },
+                { name: "Plated", score: 70, hash: "0xf543ea35b3a39e88495ca38647abe7b9e2d8c1eb1e51b0704c79637079389692" },
+                { name: "Nestlé Health Science", score: 70, hash: "0x293ccbc3ca423061bf77ca1c68c79bbd289508cd03368fccd00869fd2ace19cd" },
+                { name: "Infiniwell", score: 69, hash": "0xf9c037a630d09b145751e72dccb5b978558827be7b0040c7381efe904f33cc8f" },
+                { name: "Abbott", score: 69, hash": "0x2f1365b387b793372591a06775c7edea3a9db37b39b7eb74f6be401cfda5d770" },
+                { name: "Unilever Wellness", score: 68, hash": "0x23223a5e50c60170d984499f20f0aac52a2c0244e2f78ad1021137f4197656c1" },
+                { name: "Cure", score: 68, hash": "0x5ef6ab8a2188788955d4fb721bcdaf9798412b1def334fdae6fb7a03fe5a3eea" },
+                { name: "Seed", score: 67, hash": "0x61b2eedb0c79a2dffe2716f73bbbccc0a400cae14090980aa54ec2d0f5853c62" },
+                { name: "LMNT", score: 67, hash": "0xe1d49d0016fd61effdaebb56d1923ad5ef2db850e4a6965d27b69fc989d6802f" },
+                { name: "Moon Juice", score: 66, hash": "0x372afa81683c18720ee8c7199007bdcf6606095cf79d5ca2c0e5d609f25f2d52" },
+                { name: "Tally Health", score: 65, hash": "0xdef60d7f1cfe816b9c7c1e954d2fff6164073b39770193cdfd1d82e0b70573d1" },
+                { name: "Aware", score: 63, hash": "0x932805516f6f284ffad3fdab4a5c843a6c72738c230dacba9b94533fdfd05b9d" },
+                { name: "Lululemon Studio", score: 62, hash": "0xaa7fdb966fd65094a515c06201aaec43327d3ce4b8b088512517d0581a9ef014" },
+                { name: "Pendulum", score: 61, hash": "0xaf26c31f5701e7495a4c91009af9b935751421c649e58dc2376bb937be1cc941" },
+                { name: "Vivobase", score: 61, hash": "0x284cc710ca876233e4ef7e692f97a7c0f6c32f25610d4f821db05b6c954aeb36" },
+                { name: "Wild Nutrition", score: 58, hash": "0xd7febd429b48eb770075693288073b0ff6dd9c57efecdd7a8ed49e0f89772428" },
+                { name: "Hum Nutrition", score: 56, hash": "0x1dad6b67db1493778b7daa11545764ab5171f76ac72606406c739da844d32ea3" },
+                { name: "Sakara Life", score: 54, hash": "0x5dd582284e4c635a0f129737bd1b166b56ce251db3422ba3eb1dad12d914b99f" }
             ],
             apparel: [
                 { "name": "Jacquemus", "score": 94, "hash": "0x96c05ce33cb4a74d29bbfd575ee3efc87b57b16e5b892603b0016fd34d825a8b" },
@@ -565,53 +564,52 @@
                 { "name": "Prime (Logan Paul)", "score": 42, "hash": "0x74983a2a20717754bd7d3115acb22aaba240dcbed33a7f362b0469d3b76f25e9" },
                 { "name": "Lunchly", "score": 41, "hash": "0xaf4272a1277aef552278713337b8524e4cbee00d451182a17d523f85fefd3fd9" },
                 { "name": "Bear Real Fruit", "score": 40, "hash": "0xfe5e068d3720847a6c7ea828c42b207d81c2ed7b797f552fae271e627a467d0f" },
-                { "name": "Zespri", "score": 39, "hash": "0x8e2753bfcad2717b64cc94d94a2bce8d6b318ac33326f5b82f4e67723fba5e7b" },
-                { "name": "Vita Coco", "score": 38, "hash": "0x11900bdaaf66dcb73262b284057e1f2f639dd71ec812bf700af6de82450a12e8" },
-                { "name": "De Cecco", "score": 37, "hash": "0xcdfd0ec2f1325e0ef9b0c0170d6c689b4df47dc5621429f8dbe7aa2f41446518" },
-                { "name": "Cha Cha Matcha", "score": 36, "hash": "0x13a53ca56624f1212a8a7bd19e07ce6fec2c1fa644550a13de43e1d5a0b7f2a6" },
-                { "name": "AllPlants", "score": 35, "hash": "0xd8d9fd1a061eb51742afa2bf0093bdfeef5215c805e90fc12b9cb4e6de20f375" },
-                { "name": "Thrive Market", "score": 34, "hash": "0xe47eefeeaed7b3efdcb737b234e0f55b577a28084f7cdb37805332287ffc5503" },
-                { "name": "HelloFresh", "score": 32, "hash": "0xa5ec9b0424be2cb54c4442777a8f2bbe60951a7123087c6e5ddf1bd354bd985a" },
-                { "name": "Factor", "score": 31, "hash": "0x14cb37a3ac25cb0de3deb4592f1a1344f2d8e713fe3ea9975a90d21c8b5b107e" },
-                { "name": "Blue Apron", "score": 30, "hash": "0x9869fda2ae842103bc4e6bcc16a2f51ac030e495eceafd02a5ef58883f543b71" },
-                { "name": "Sunbasket", "score": 29, "hash": "0xb9ff510f413840acf69fb46c5e981124157c779ebc31b39916a4f4e9adb9c547" },
-                { "name": "Green Chef", "score": 28, "hash": "0x6387df13aac0e4b5942ea588db697d18ce51e1da342084201c97382a5f00f6b0" },
-                { "name": "Territory Foods", "score": 27, "hash": "0xeae2cab434781f7b01128341ce6da23827bb6df607de7b79f71886dabf37bfdb" },
-                { "name": "Splendid Spoon", "score": 26, "hash": "0xf20ee9faba0bcba3eece0aea706fe740e9be1d9be6b47655a4a9306e6122fcb5" },
-                { "name": "Sakara Life", "score": 25, "hash": "0x2dd049b23a982e62d201d6e5b1ec96726416c01ba9d287cefa3c254ccf12ea4f" },
-                { "name": "Trifecta", "score": 24, "hash": "0x61f6779e4cb7dcb74782ad1c3b5e29de21a413d6cb587f53ef85507dc3423454" },
-                { "name": "Vital Proteins", "score": 23, "hash": "0x99b2b91b0aada418639cdc3e25415f22b0fc0f4833f5495dc0c162f071f911e1" },
-                { "name": "Orgain", "score": 22, "hash": "0xb13dc86d95ff821d6853ffbb1d8eec5165f34bfce4ee8fc482f609a5b5daa48a" },
-                { "name": "OWYN", "score": 21, "hash": "0x2030e6b8baf830e90175cf6070ddba3401a5f5607f757eed11070222b4d75052" },
-                { "name": "Perfect Bar", "score": 20, "hash": "0x659e338a1a26666f1bdf02b90e17ac69bdae8a506d7c7f78892620d0bacf3b39" },
-                { "name": "RXBAR", "score": 19, "hash": "0x96e4634bcb5412e4097bd83c567ec0a1216a9c10c1179108e15475a7bcbd9a82" },
-                { "name": "Quest Nutrition", "score": 18, "hash": "0xdbd58361318a35222d2c0d50619fc07b9a31224dbc1adbf9720e4705b2226ab5" },
-                { "name": "Perfect Keto", "score": 17, "hash": "0x7115789d98e085d1123321c8b820e832b64439ec64edfb3627f147e8a43fd372" },
-                { "name": "Bulletproof", "score": 16, "hash": "0x2269e300a5f9bccc9392356836a6e698b603152a70cf70180589947da2fa1deb" },
-                { "name": "Four Sigmatic", "score": 15, "hash": "0xb1b9d349797417af123efd08c2adfe81091d34a82a066ed6d6606675426f7e0d" },
-                { "name": "MUD/WTR", "score": 14, "hash": "0xd12da0bf6bb1b303450f91358e40c13827d72767925a26dd6ecae3bbe7eb944b" },
-                { "name": "RISE Brewing", "score": 13, "hash": "0xefc8b162851a43c35a7d4babf82c9ab0deb1d4bc1f03fcd0ebe6dfc4f239d763" },
-                { "name": "Chameleon Cold-Brew", "score": 12, "hash": "0x483595bc6542782bd5e3e98192b8a44985fb4d22eba4ab11769e51fb312c71cb" },
-                { "name": "High Brew Coffee", "score": 11, "hash": "0x61c742e444c88e089b475deae23f3c096c2091499b846dc219d42c8b57361561" },
-                { "name": "La Colombe", "score": 10, "hash": "0xeb2f77cea3f1e486a98daaec203916b3efbc185a6fb7c96f1893d790a3f0aaee" },
-                { "name": "Pact Coffee", "score": 8, "hash": "0x7e14a825a9eed8378e86f8e9b3e2b8953eb0f826f1d7031b773fa89532ff82f3" },
-                { "name": "Plantable", "score": 7, "hash": "0xb897aee81664cee2500c8e000d80333953443cbae141b6c19dcb4ec6dab66708" },
-                { "name": "RYZE Superfoods", "score": 6, "hash": "0xa78b33346f31e11054cd389609e904ee40ad5582d0f1b1d6f3ac686d3b6d5383" },
-                { "name": "Javvy Coffee", "score": 5, "hash": "0x3db0d4700f03401af3d266cd742ed8bbb6832c3d51724c47f894680b469b1590" },
-                { "name": "Belgian Waffle Co", "score": 3, "hash": "0x7de3866175516f915403ceea08677dc8fab6db24fbb970923c415338cc0bbcd0" },
-                { "name": "All G Foods", "score": 2, "hash": "0xdbc8b00aa3168f2d489b6f425da5454c3f97254adb72ff28f36fb6764de3548c" },
-                { "name": "Kula Bio", "score": 1, "hash": "0x028b7ae3480b4809515c54cebb5d81444a91e6d9c95287939dcb573e17384833" }
+                { name: "Zespri", "score": 39, "hash": "0x8e2753bfcad2717b64cc94d94a2bce8d6b318ac33326f5b82f4e67723fba5e7b" },
+                { name: "Vita Coco", "score": 38, "hash": "0x11900bdaaf66dcb73262b284057e1f2f639dd71ec812bf700af6de82450a12e8" },
+                { name: "De Cecco", "score": 37, "hash": "0xcdfd0ec2f1325e0ef9b0c0170d6c689b4df47dc5621429f8dbe7aa2f41446518" },
+                { name: "Cha Cha Matcha", "score": 36, "hash": "0x13a53ca56624f1212a8a7bd19e07ce6fec2c1fa644550a13de43e1d5a0b7f2a6" },
+                { name: "AllPlants", "score": 35, "hash": "0xd8d9fd1a061eb51742afa2bf0093bdfeef5215c805e90fc12b9cb4e6de20f375" },
+                { name: "Thrive Market", "score": 34, "hash": "0xe47eefeeaed7b3efdcb737b234e0f55b577a28084f7cdb37805332287ffc5503" },
+                { name: "HelloFresh", "score": 32, "hash": "0xa5ec9b0424be2cb54c4442777a8f2bbe60951a7123087c6e5ddf1bd354bd985a" },
+                { name: "Factor", "score": 31, "hash": "0x14cb37a3ac25cb0de3deb4592f1a1344f2d8e713fe3ea9975a90d21c8b5b107e" },
+                { name: "Blue Apron", "score": 30, "hash": "0x9869fda2ae842103bc4e6bcc16a2f51ac030e495eceafd02a5ef58883f543b71" },
+                { name: "Sunbasket", "score": 29, "hash": "0xb9ff510f413840acf69fb46c5e981124157c779ebc31b39916a4f4e9adb9c547" },
+                { name: "Green Chef", "score": 28, "hash": "0x6387df13aac0e4b5942ea588db697d18ce51e1da342084201c97382a5f00f6b0" },
+                { name: "Territory Foods", "score": 27, "hash": "0xeae2cab434781f7b01128341ce6da23827bb6df607de7b79f71886dabf37bfdb" },
+                { name: "Splendid Spoon", "score": 26, "hash": "0xf20ee9faba0bcba3eece0aea706fe740e9be1d9be6b47655a4a9306e6122fcb5" },
+                { name: "Sakara Life", "score": 25, "hash": "0x2dd049b23a982e62d201d6e5b1ec96726416c01ba9d287cefa3c254ccf12ea4f" },
+                { name: "Trifecta", "score": 24, "hash": "0x61f6779e4cb7dcb74782ad1c3b5e29de21a413d6cb587f53ef85507dc3423454" },
+                { name: "Vital Proteins", "score": 23, "hash": "0x99b2b91b0aada418639cdc3e25415f22b0fc0f4833f5495dc0c162f071f911e1" },
+                { name: "Orgain", "score": 22, "hash": "0xb13dc86d95ff821d6853ffbb1d8eec5165f34bfce4ee8fc482f609a5b5daa48a" },
+                { name: "OWYN", "score": 21, "hash": "0x2030e6b8baf830e90175cf6070ddba3401a5f5607f757eed11070222b4d75052" },
+                { name: "Perfect Bar", "score": 20, "hash": "0x659e338a1a26666f1bdf02b90e17ac69bdae8a506d7c7f78892620d0bacf3b39" },
+                { name: "RXBAR", "score": 19, "hash": "0x96e4634bcb5412e4097bd83c567ec0a1216a9c10c1179108e15475a7bcbd9a82" },
+                { name: "Quest Nutrition", "score": 18, "hash": "0xdbd58361318a35222d2c0d50619fc07b9a31224dbc1adbf9720e4705b2226ab5" },
+                { name: "Perfect Keto", "score": 17, "hash": "0x7115789d98e085d1123321c8b820e832b64439ec64edfb3627f147e8a43fd372" },
+                { name: "Bulletproof", "score": 16, "hash": "0x2269e300a5f9bccc9392356836a6e698b603152a70cf70180589947da2fa1deb" },
+                { name: "Four Sigmatic", "score": 15, "hash": "0xb1b9d349797417af123efd08c2adfe81091d34a82a066ed6d6606675426f7e0d" },
+                { name: "MUD/WTR", "score": 14, "hash": "0xd12da0bf6bb1b303450f91358e40c13827d72767925a26dd6ecae3bbe7eb944b" },
+                { name: "RISE Brewing", "score": 13, "hash": "0xefc8b162851a43c35a7d4babf82c9ab0deb1d4bc1f03fcd0ebe6dfc4f239d763" },
+                { name: "Chameleon Cold-Brew", "score": 12, "hash": "0x483595bc6542782bd5e3e98192b8a44985fb4d22eba4ab11769e51fb312c71cb" },
+                { name: "High Brew Coffee", "score": 11, "hash": "0x61c742e444c88e089b475deae23f3c096c2091499b846dc219d42c8b57361561" },
+                { name: "La Colombe", "score": 10, "hash": "0xeb2f77cea3f1e486a98daaec203916b3efbc185a6fb7c96f1893d790a3f0aaee" },
+                { name: "Pact Coffee", "score": 8, "hash": "0x7e14a825a9eed8378e86f8e9b3e2b8953eb0f826f1d7031b773fa89532ff82f3" },
+                { name: "Plantable", "score": 7, "hash": "0xb897aee81664cee2500c8e000d80333953443cbae141b6c19dcb4ec6dab66708" },
+                { name: "RYZE Superfoods", "score": 6, "hash": "0xa78b33346f31e11054cd389609e904ee40ad5582d0f1b1d6f3ac686d3b6d5383" },
+                { name: "Javvy Coffee", "score": 5, "hash": "0x3db0d4700f03401af3d266cd742ed8bbb6832c3d51724c47f894680b469b1590" },
+                { name: "Belgian Waffle Co", "score": 3, "hash": "0x7de3866175516f915403ceea08677dc8fab6db24fbb970923c415338cc0bbcd0" },
+                { name: "All G Foods", "score": 2, "hash": "0xdbc8b00aa3168f2d489b6f425da5454c3f97254adb72ff28f36fb6764de3548c" },
+                { name: "Kula Bio", "score": 1, "hash": "0x028b7ae3480b4809515c54cebb5d81444a91e6d9c95287939dcb573e17384833" }
             ]
         };
-            function switchTab(category) {
-            // Update UI tabs
+
+        function switchTab(category) {
             document.querySelectorAll('nav button').forEach(btn => {
                 btn.classList.remove('tab-active');
                 btn.classList.add('opacity-40');
             });
             document.getElementById('tab-' + category).classList.add('tab-active');
             document.getElementById('tab-' + category).classList.remove('opacity-40');
-
             renderTable(category);
         }
 
@@ -628,17 +626,16 @@
                     <td class="py-4 w-12 opacity-30">${(index + 1).toString().padStart(2, '0')}</td>
                     <td class="py-4 font-black uppercase tracking-wider">${item.name}</td>
                     <td class="py-4 text-center">
-                        <span class="px-2 py-1 rounded-sm ${item.score >= 90 ? 'bg-supremacy' : 'bg-black text-white'}">
+                        <span class="px-2 py-1 rounded-sm ${item.score >= 90 ? 'bg-supremacy' : 'bg-black text-white'} text-white">
                             ${item.score}/100
                         </span>
                     </td>
-                    <td class="py-4 text-right font-mono text-[10px] opacity-40">${item.hash}</td>
+                    <td class="py-4 text-right font-mono text-[10px] opacity-40">${item.hash || item.tx || ''}</td>
                 `;
                 body.appendChild(row);
             });
         }
 
-        // Initial load
         window.onload = () => switchTab('luxury');
     </script>
 </body>
