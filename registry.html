@@ -52,7 +52,7 @@
                 VÉRIFIER LE PROTOCOLE (BASE L2)
             </a>
             <span class="opacity-20">|</span>
-            <a href="#audits" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all text-[9px] font-bold bg-gray-50">
+            <a href="audits.html" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all text-[9px] font-bold bg-gray-50">
                 LAB AUDITS
             </a>
         </div>
@@ -82,23 +82,6 @@
         </table>
     </div>
 
-    <div id="audits" class="mt-32 p-8 border-t-2 border-blue-600 bg-white shadow-sm">
-        <h2 class="font-mono text-sm tracking-widest mb-2 font-black text-blue-600">[06_FORENSIC_LAB_TESTS]</h2>
-        <p class="text-[10px] uppercase tracking-wider opacity-50 mb-6">Dernières notarisation DNVB en cours de monitoring</p>
-        
-        <div class="flex flex-col md:flex-row justify-between items-center border border-gray-100 p-4 hover:bg-gray-50 transition-colors gap-4">
-            <div class="flex items-center gap-4">
-                <span class="text-[9px] font-mono opacity-40">#DNVB-004</span>
-                <span class="font-black text-sm tracking-tighter">OLIPOP</span>
-                <span class="bg-green-100 text-green-700 text-[8px] px-2 py-0.5 font-bold rounded">NOTARIZED</span>
-            </div>
-            <div class="font-mono text-[9px] opacity-40 hidden md:block">0x116aaa402ed70944801c4bb81d71f74a582b96ea78c68c45e030c5d811f121af</div>
-            <a href="MEMO_DNVB_004_OLIPOP.txt" target="_blank" class="bg-blue-600 text-white text-[9px] px-4 py-2 font-black uppercase tracking-widest hover:bg-black transition-all">
-                View Memo
-            </a>
-        </div>
-    </div>
-
     <footer class="mt-20 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity gap-6">
         <div class="flex space-x-6 mb-8 border-b border-black border-opacity-10 overflow-x-auto">
             <button onclick="switchTab('luxury')" id="foot-luxury" class="pb-2 text-[9px] uppercase tracking-widest transition-all">Luxury</button>
@@ -117,7 +100,7 @@
         </form>
     </footer>
 
-</body>
+    </body>
 </html>
 
     <script>
@@ -494,14 +477,12 @@
                 const btnFooter = document.getElementById(`foot-${id}`);
                 const isActive = (id === category);
                 
-                // On garde tes classes originales
                 if(btnHeader) btnHeader.className = isActive ? 'pb-2 text-xs uppercase tracking-widest tab-active' : 'pb-2 text-xs uppercase tracking-widest opacity-40';
                 if(btnFooter) btnFooter.className = isActive ? 'pb-2 text-[9px] uppercase tracking-widest tab-active' : 'pb-2 text-[9px] uppercase tracking-widest opacity-40';
             });
 
             body.innerHTML = '';
             if (brands[category]) {
-                // Tri par score (ton système original)
                 [...brands[category]].sort((a, b) => b.score - a.score).forEach((brand, index) => {
                     const status = brand.score >= 90 ? "SUPREMACY" : 
                                    (brand.score > 80 ? "EXCELLENCE" : 
@@ -534,7 +515,6 @@
             }
         }
         
-        // Initialisation propre
         window.onload = () => {
             const savedCategory = localStorage.getItem('activeCategory') || 'luxury';
             switchTab(savedCategory);
