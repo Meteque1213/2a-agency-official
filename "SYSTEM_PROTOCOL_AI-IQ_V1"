@@ -1,0 +1,22 @@
+2A AGENCY: AI-IQ PROTOCOL v1.0
+
+1. OBJECTIVE
+This protocol establishes the official framework for measuring and notarizing Algorithmic Integrity and Brand Identity Stability ("AI-IQ") for global entities. It serves as a decentralized System of Record on Base L2.
+
+2. VALIDATION STANDARD
+All audits issued by 2A Agency (Validator: 0x8269781b855d2987e9873ff1a3a81878e77665b1) comply with the ERC-8004 Trust Framework, ensuring the Identity, Reputation, and Validation of monitored brands.
+
+3. METHODOLOGY
+The AI-IQ Score (0-100) is calculated based on three pillars:
+
+Data Sovereignty: Protection against customer data drift.
+
+Model Transparency: Auditability of autonomous systems.
+
+Identity Integrity: Resistance of brand DNA to algorithmic degradation.
+
+4. IMMUTABILITY
+Each audit is hashed using the Keccak-256 algorithm and anchored on Base Mainnet. Any modification to the score or the audit date invalidates the cryptographic proof.
+
+5. REGISTRY AUTHORITY
+As of March 2026, this protocol governs the 500+ certification records issued by 2A Agency, establishing the primary benchmark for AI Brand Authority on the Base Ecosystem.

@@ -16,7 +16,6 @@
         .emerald-text { color: var(--emerald) !important; }
         .bg-emerald { background-color: var(--emerald); }
         
-        /* FIX: On force MathJax à ne pas déborder et à rester centré dans les boîtes */
         .math-container {
             width: 100%;
             overflow-x: auto;
@@ -58,7 +57,7 @@
                 <div class="max-w-3xl mx-auto text-center">
                     <h3 class="text-emerald-300 font-bold uppercase text-[10px] tracking-[0.5em] mb-12 italic">Base Calculation Framework</h3>
                     <div class="math-container text-xl md:text-3xl serif italic text-white">
-                        \( S = (T \times 0.4) + (V \times 0.3) + (A \times 0.2) + (H \times 0.1) \)
+                        $$ S = (T \times 0.4) + (V \times 0.3) + (A \times 0.2) + (H \times 0.1) $$
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-[9px] uppercase font-bold text-emerald-100/60 tracking-widest italic mt-8">
                         <div>(T) Transparency</div>
@@ -72,52 +71,49 @@
 
         <section class="mb-24 p-8 md:p-12 border border-emerald-900/10 bg-emerald-50/20 rounded-sm">
             <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6 text-left">II. Dynamic Weighting</h2>
-            <p class="text-sm font-medium text-black/70 mb-12 italic leading-relaxed">
-                The ERC-8004 Protocol applies dynamic weightings tailored to AI Agent expectations.
-            </p>
-
             <div class="grid md:grid-cols-2 gap-8 mb-16">
                 <div class="bg-white p-8 border border-black/5 rounded-sm shadow-sm flex flex-col items-center">
                     <h4 class="text-[10px] font-black uppercase tracking-widest text-black/30 border-b border-black/5 pb-2 mb-6 italic w-full text-center">Heritage-Heavy (Luxury)</h4>
                     <div class="math-container emerald-text font-bold text-lg">
-                        \( S_{Lux} = (T \cdot 0.2) + (V \cdot 0.2) + (A \cdot 0.2) + (H \cdot 0.4) \)
+                        $$ S_{Lux} = (T \cdot 0.2) + (V \cdot 0.2) + (A \cdot 0.2) + (H \cdot 0.4) $$
                     </div>
-                    <p class="text-xs leading-relaxed opacity-60 italic mt-6 text-center">For historic Maisons, Heritage (H) is the critical trust factor.</p>
                 </div>
-
                 <div class="bg-white p-8 border border-black/5 rounded-sm shadow-sm flex flex-col items-center">
                     <h4 class="text-[10px] font-black uppercase tracking-widest text-black/30 border-b border-black/5 pb-2 mb-6 italic w-full text-center">Traceability-Heavy (DNVB)</h4>
                     <div class="math-container emerald-text font-bold text-lg">
-                        \( S_{Dnvb} = (T \cdot 0.5) + (V \cdot 0.3) + (A \cdot 0.1) + (H \cdot 0.1) \)
+                        $$ S_{Dnvb} = (T \cdot 0.5) + (V \cdot 0.3) + (A \cdot 0.1) + (H \cdot 0.1) $$
                     </div>
-                    <p class="text-xs leading-relaxed opacity-60 italic mt-6 text-center">For DNVBs, Radical Transparency (T) is the primary lever.</p>
                 </div>
             </div>
         </section>
 
         <section class="mb-24">
-            <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6 text-left">III. Notarization & Agentic Moat</h2>
-            <div class="space-y-8 text-lg text-black/80 font-medium italic">
-                
-                <p class="border-l-4 border-emerald-900 pl-6 py-4 bg-emerald-50 text-emerald-900 font-bold">
-                    As AI evolves into a real-time infrastructure (Energy to Application stack), 2A Agency provides the Integrity Layer necessary for models to maintain grounding.
-                </p>
-                
-                <p>Every audit is sealed via SHA-256 hash on the Base Blockchain. This creates an immutable System of Record.</p>
-                
-                <div class="bg-emerald text-white p-10 rounded-sm shadow-xl italic relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl serif italic">"</div>
-                    <p class="text-2xl leading-tight relative z-10 text-center">
-                        "AI does not seek truth; it seeks the most stable signal. The 2A Protocol injects this stability at the heart of the algorithmic consensus."
-                    </p>
+            <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6 text-left">III. On-Chain Root of Trust</h2>
+            <div class="bg-white border border-black p-8 shadow-[8px_8px_0px_0px_rgba(6,78,59,1)]">
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <h4 class="text-[10px] font-black uppercase tracking-widest emerald-text mb-2">Protocol Immutability Hash</h4>
+                        <p class="text-[9px] font-mono break-all bg-emerald-50 p-4 border border-emerald-900/10 text-emerald-900 leading-loose">
+                            SHA-256: 0xaf03b1784e63868ed1eeab75907e0251bb9e2b30cfff9994fd4f144bbda1fba7
+                        </p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6 text-[9px] font-bold uppercase tracking-widest italic">
+                        <div class="opacity-50">Blockchain: Base Mainnet (L2)</div>
+                        <div class="opacity-50">Standard: ERC-8004 Compliance</div>
+                        <div class="md:col-span-2">
+                            <a href="https://basescan.org/tx/0xaf03b1784e63868ed1eeab75907e0251bb9e2b30cfff9994fd4f144bbda1fba7" target="_blank" class="text-emerald-900 underline decoration-2 underline-offset-4">
+                                Verify Cryptographic Proof on Basescan →
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="mb-32 text-center border-t border-black/5 pt-24">
             <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-8 opacity-40 italic text-center uppercase">Implementation v1.0</h4>
-            <a href="index.html#contact" class="bg-[#064e3b] text-white px-12 py-5 text-[10px] font-bold uppercase tracking-widest hover:bg-black transition-all shadow-2xl rounded-sm">
-                Submit for Audit →
+            <a href="registry.html" class="bg-[#064e3b] text-white px-12 py-5 text-[10px] font-bold uppercase tracking-widest hover:bg-black transition-all shadow-2xl rounded-sm">
+                View Live Registry →
             </a>
         </section>
 
