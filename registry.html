@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; color: #050505; }
+        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; color: #050505; scroll-behavior: smooth; }
         .text-2a-emerald { color: #064e3b; }
         .bg-2a-emerald { background-color: #064e3b; }
         
@@ -47,9 +47,13 @@
             <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
             SENTINEL-01 : ACTIVE & MONITORING
         </div>
-        <div>
+        <div class="flex items-center gap-2">
             <a href="https://basescan.org/address/0x8269781b855d2987e9873ff1a3a81878e77665b1" target="_blank" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all text-[9px]">
                 VÉRIFIER LE PROTOCOLE (BASE L2)
+            </a>
+            <span class="opacity-20">|</span>
+            <a href="#audits" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all text-[9px] font-bold bg-gray-50">
+                LAB AUDITS
             </a>
         </div>
     </header>
@@ -71,17 +75,28 @@
         <button onclick="switchTab('fnb')" id="tab-fnb" class="pb-2 text-xs uppercase tracking-widest transition-all">05_F&B</button>
     </nav>
 
-    <div class="overflow-x-auto min-h-[600px]">
+    <div class="overflow-x-auto min-h-[400px]">
         <table class="w-full text-left border-collapse">
-            <thead>
-                <tr class="brand-row" style="opacity: 0.6;">
-                    <td class="brand-id">#005</td>
-                    <td class="brand-status">NOTARIZED</td>
-                    <td class="brand-hash">0x116...21af</td>
-                </tr>
-            </thead>
-            <tbody id="registry-body" class="text-xs font-medium"></tbody>
+            <tbody id="registry-body" class="text-xs font-medium">
+                </tbody>
         </table>
+    </div>
+
+    <div id="audits" class="mt-32 p-8 border-t-2 border-blue-600 bg-white shadow-sm">
+        <h2 class="font-mono text-sm tracking-widest mb-2 font-black text-blue-600">[06_FORENSIC_LAB_TESTS]</h2>
+        <p class="text-[10px] uppercase tracking-wider opacity-50 mb-6">Dernières notarisation DNVB en cours de monitoring</p>
+        
+        <div class="flex flex-col md:flex-row justify-between items-center border border-gray-100 p-4 hover:bg-gray-50 transition-colors gap-4">
+            <div class="flex items-center gap-4">
+                <span class="text-[9px] font-mono opacity-40">#DNVB-004</span>
+                <span class="font-black text-sm tracking-tighter">OLIPOP</span>
+                <span class="bg-green-100 text-green-700 text-[8px] px-2 py-0.5 font-bold rounded">NOTARIZED</span>
+            </div>
+            <div class="font-mono text-[9px] opacity-40 hidden md:block">0x116aaa402ed70944801c4bb81d71f74a582b96ea78c68c45e030c5d811f121af</div>
+            <a href="MEMO_DNVB_004_OLIPOP.txt" target="_blank" class="bg-blue-600 text-white text-[9px] px-4 py-2 font-black uppercase tracking-widest hover:bg-black transition-all">
+                View Memo
+            </a>
+        </div>
     </div>
 
     <footer class="mt-20 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity gap-6">
@@ -101,6 +116,9 @@
             </button>
         </form>
     </footer>
+
+</body>
+</html>
 
     <script>
         const brands = {
@@ -476,15 +494,14 @@
                 const btnFooter = document.getElementById(`foot-${id}`);
                 const isActive = (id === category);
                 
-                const headerClass = isActive ? 'pb-2 text-xs uppercase tracking-widest tab-active' : 'pb-2 text-xs uppercase tracking-widest opacity-40';
-                const footerClass = isActive ? 'pb-2 text-[9px] uppercase tracking-widest tab-active' : 'pb-2 text-[9px] uppercase tracking-widest opacity-40';
-                
-                if(btnHeader) btnHeader.className = headerClass;
-                if(btnFooter) btnFooter.className = footerClass;
+                // On garde tes classes originales
+                if(btnHeader) btnHeader.className = isActive ? 'pb-2 text-xs uppercase tracking-widest tab-active' : 'pb-2 text-xs uppercase tracking-widest opacity-40';
+                if(btnFooter) btnFooter.className = isActive ? 'pb-2 text-[9px] uppercase tracking-widest tab-active' : 'pb-2 text-[9px] uppercase tracking-widest opacity-40';
             });
 
             body.innerHTML = '';
             if (brands[category]) {
+                // Tri par score (ton système original)
                 [...brands[category]].sort((a, b) => b.score - a.score).forEach((brand, index) => {
                     const status = brand.score >= 90 ? "SUPREMACY" : 
                                    (brand.score > 80 ? "EXCELLENCE" : 
@@ -517,6 +534,7 @@
             }
         }
         
+        // Initialisation propre
         window.onload = () => {
             const savedCategory = localStorage.getItem('activeCategory') || 'luxury';
             switchTab(savedCategory);
