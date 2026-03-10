@@ -18,7 +18,7 @@
 <body class="min-h-screen flex flex-col p-6 md:p-12">
 
     <nav class="flex justify-between items-center w-full max-w-7xl mx-auto mb-16">
-        <div class="logo-bold underline decoration-2 underline-offset-4">2A Agency</div>
+        <div class="logo-bold underline decoration-2 underline-offset-4 cursor-pointer" onclick="window.location.href='index.html'">2A Agency</div>
         <div class="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-bold items-center">
             <div class="px-2 py-0.5 border border-blue-600 text-blue-600 rounded text-[8px] tracking-tighter font-black">ERC-8004 COMPLIANT</div>
             <a href="registry.html" class="nav-link">Registry</a>
@@ -28,9 +28,21 @@
     </nav>
 
     <main class="flex-grow flex flex-col justify-center items-center text-center max-w-4xl mx-auto w-full mb-12">
-        <div class="flex items-center gap-2 mb-8 uppercase tracking-widest text-[10px] font-bold opacity-60">
-            <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-            SENTINEL-01 : ACTIVE & MONITORING
+        <div class="flex flex-col md:flex-row items-center gap-6 mb-12 uppercase tracking-widest text-[9px] font-bold w-full justify-between">
+            <div class="flex items-center gap-2 opacity-60">
+                <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                SENTINEL-01 : ACTIVE & MONITORING
+            </div>
+            
+            <div class="flex items-center gap-2">
+                <a href="https://basescan.org/address/0x8269781b855d2987e9873ff1a3a81878e77665b1" target="_blank" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all">
+                    VÉRIFIER LE PROTOCOLE (BASE L2)
+                </a>
+                <span class="opacity-20">|</span>
+                <a href="audits.html" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all font-black bg-gray-50 text-2a-emerald">
+                    LAB AUDITS
+                </a>
+            </div>
         </div>
         
         <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-6 text-2a-emerald">
@@ -52,16 +64,19 @@
     <footer class="mt-auto w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity pt-8 pb-8 border-t border-gray-200 gap-6">
         <div class="text-center md:text-left">
             <p class="text-[9px] font-bold uppercase tracking-widest mb-1">© 2026 2A Agency Forensic Intelligence Unit</p>
-            <p class="text-[8px] font-mono tracking-tighter italic">Secured by Base L2 & Sentinel-01 Monitoring</p>
+            <p class="text-[8px] font-mono tracking-tighter italic text-2a-emerald">Secured by Base L2 & Sentinel-01 Monitoring</p>
         </div>
 
-        <form id="2a-contact-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col items-center md:items-end gap-2">
+        <form id="2a-contact-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col items-center md:items-end gap-3">
             <input type="hidden" name="_subject" value="Nouveau Signalement Forensic - 2A Agency">
             
-            <input type="email" name="email" placeholder="ENTER_AGENT_EMAIL" required 
+            <input type="text" name="brand" placeholder="BRAND_NAME" required 
                    class="bg-transparent border-b border-black text-[9px] py-1 outline-none w-48 focus:border-emerald-900 transition-all uppercase font-bold text-center md:text-right">
             
-            <button type="submit" class="text-[9px] font-black uppercase tracking-widest border border-black px-4 py-1 hover:bg-black hover:text-white transition-all">
+            <input type="email" name="email" placeholder="AGENT_EMAIL" required 
+                   class="bg-transparent border-b border-black text-[9px] py-1 outline-none w-48 focus:border-emerald-900 transition-all uppercase font-bold text-center md:text-right">
+            
+            <button type="submit" class="text-[9px] font-black uppercase tracking-widest border border-black px-4 py-1 hover:bg-black hover:text-white transition-all mt-1">
                 Send Request →
             </button>
         </form>
@@ -73,7 +88,7 @@
             
             if (form) {
                 form.addEventListener("submit", function(event) {
-                    event.preventDefault(); // On bloque Formspree
+                    event.preventDefault(); 
                     var data = new FormData(form);
                     
                     fetch(form.action, {
@@ -84,7 +99,6 @@
                         }
                     }).then(response => {
                         if (response.ok) {
-                            // TELEPORTATION
                             window.location.href = "https://www.2aagency.com/thanks.html";
                         } else {
                             alert("Erreur serveur Formspree.");
@@ -93,8 +107,6 @@
                         alert("Erreur réseau.");
                     });
                 });
-            } else {
-                console.error("Le formulaire n'a pas été trouvé par le script !");
             }
         });
     </script>
