@@ -17,26 +17,20 @@
         .emerald-text { color: var(--emerald) !important; }
         .bg-emerald { background-color: var(--emerald); }
         
-        /* FIX: Ajout d'un container dédié pour le défilement horizontal de chaque formule */
-        .math-container {
-            overflow-x: auto; /* Active le défilement horizontal */
-            padding: 20px 0; /* Ajoute de l'espace vertical pour aérer */
-            -webkit-overflow-scrolling: touch; /* Défilement fluide sur mobile */
-        }
-        
-        /* Assure que la formule ne se chevauche pas avec le texte */
-        .math-box {
-            font-size: 1.5rem; /* Ajuste la taille de la formule */
-            text-align: center;
-            min-height: 100px; /* Force une hauteur minimale */
+        /* FIX: Stabilisation des formules MathJax */
+        .math-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 1.5rem 0;
             display: flex;
-            align-items: center;
             justify-content: center;
+            -webkit-overflow-scrolling: touch;
         }
-        
-        /* Responsive tweaks */
-        @media (max-width: 768px) {
-            .math-box { font-size: 1.2rem; }
+        /* Empêche MathJax de déborder sur mobile */
+        mjx-container { 
+            margin: 0 !important; 
+            max-width: 100%;
         }
     </style>
 </head>
@@ -63,7 +57,7 @@
         </header>
 
         <section class="mb-24">
-            <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">I. The Global AI-IQ Equation</h2>
+            <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6 text-left">I. The Global AI-IQ Equation</h2>
             <div class="text-lg text-black/80 font-medium italic mb-12">
                 <p>The AI-IQ is not a popularity metric, but a data-consistency validation. It quantifies a brand's ability to provide an indisputable "Machine Truth" to LLMs.</p>
             </div>
@@ -72,13 +66,11 @@
                 <div class="absolute top-0 right-0 p-4 opacity-10 text-9xl serif italic">∑</div>
                 <div class="max-w-3xl mx-auto text-center">
                     <h3 class="text-emerald-300 font-bold uppercase text-[10px] tracking-[0.5em] mb-12 italic">Base Calculation Framework</h3>
-                    
-                    <div class="math-container text-white">
-                        <div class="math-box md:text-5xl text-3xl serif italic whitespace-nowrap">
+                    <div class="math-wrapper">
+                        <div class="text-2xl md:text-4xl serif italic text-white">
                             $$S = (T \times 0.4) + (V \times 0.3) + (A \times 0.2) + (H \times 0.1)$$
                         </div>
                     </div>
-                    
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-[9px] uppercase font-bold text-emerald-100/60 tracking-widest italic mt-8">
                         <div>(T) Transparency</div>
                         <div>(V) Verification</div>
@@ -90,55 +82,47 @@
         </section>
 
         <section class="mb-24 p-8 md:p-12 border border-emerald-900/10 bg-emerald-50/20 rounded-sm">
-            <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">II. Dynamic Weighting</h2>
+            <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6 text-left">II. Dynamic Weighting</h2>
             <p class="text-sm font-medium text-black/70 mb-12 italic leading-relaxed">
                 The ERC-8004 Protocol applies dynamic weightings tailored to AI Agent expectations.
             </p>
 
             <div class="grid md:grid-cols-2 gap-8 mb-16">
-                <div class="space-y-6 bg-white p-8 border border-black/5 rounded-sm shadow-sm flex flex-col justify-between">
-                    <h4 class="text-[10px] font-black uppercase tracking-widest text-black/30 border-b border-black/5 pb-2 italic">Heritage-Heavy (Luxury)</h4>
-                    
-                    <div class="math-container emerald-text">
-                        <div class="math-box text-3xl serif italic whitespace-nowrap">
+                <div class="bg-white p-8 border border-black/5 rounded-sm shadow-sm flex flex-col items-center">
+                    <h4 class="text-[10px] font-black uppercase tracking-widest text-black/30 border-b border-black/5 pb-2 mb-6 italic w-full text-center">Heritage-Heavy (Luxury)</h4>
+                    <div class="math-wrapper w-full">
+                        <div class="text-xl emerald-text italic">
                             $$S_{Lux} = (T \cdot 0.2) + (V \cdot 0.2) + (A \cdot 0.2) + (H \cdot 0.4)$$
                         </div>
                     </div>
-                    
-                    <p class="text-xs leading-relaxed opacity-60 italic">
-                        For historic Maisons, Heritage (H) is the critical trust factor.
-                    </p>
+                    <p class="text-xs leading-relaxed opacity-60 italic mt-6 text-center">For historic Maisons, Heritage (H) is the critical trust factor.</p>
                 </div>
 
-                <div class="space-y-6 bg-white p-8 border border-black/5 rounded-sm shadow-sm flex flex-col justify-between">
-                    <h4 class="text-[10px] font-black uppercase tracking-widest text-black/30 border-b border-black/5 pb-2 italic">Traceability-Heavy (DNVB)</h4>
-                    
-                    <div class="math-container emerald-text">
-                        <div class="math-box text-3xl serif italic whitespace-nowrap">
+                <div class="bg-white p-8 border border-black/5 rounded-sm shadow-sm flex flex-col items-center">
+                    <h4 class="text-[10px] font-black uppercase tracking-widest text-black/30 border-b border-black/5 pb-2 mb-6 italic w-full text-center">Traceability-Heavy (DNVB)</h4>
+                    <div class="math-wrapper w-full">
+                        <div class="text-xl emerald-text italic">
                             $$S_{Dnvb} = (T \cdot 0.5) + (V \cdot 0.3) + (A \cdot 0.1) + (H \cdot 0.1)$$
                         </div>
                     </div>
-                    
-                    <p class="text-xs leading-relaxed opacity-60 italic">
-                        For DNVBs, Radical Transparency (T) is the primary lever.
-                    </p>
+                    <p class="text-xs leading-relaxed opacity-60 italic mt-6 text-center">For DNVBs, Radical Transparency (T) is the primary lever.</p>
                 </div>
             </div>
         </section>
 
         <section class="mb-24">
-            <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">III. Notarization & Agentic Moat</h2>
+            <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6 text-left">III. Notarization & Agentic Moat</h2>
             <div class="space-y-8 text-lg text-black/80 font-medium italic">
                 
-                <p class="border-l-4 border-emerald-900 pl-6 py-2 bg-emerald-50/50">
-                    "As AI evolves into a real-time infrastructure (Energy to Application stack), 2A Agency provides the <span class="emerald-text font-bold uppercase">Integrity Layer</span> necessary for models to maintain grounding."
+                <p class="border-l-4 border-emerald-900 pl-6 py-4 bg-emerald-50 text-emerald-900 font-bold">
+                    As AI evolves into a real-time infrastructure (Energy to Application stack), 2A Agency provides the Integrity Layer necessary for models to maintain grounding.
                 </p>
                 
-                <p>Every audit is sealed via SHA-256 hash on the <span class="font-bold">Base Blockchain</span>. This creates an immutable "System of Record".</p>
+                <p>Every audit is sealed via SHA-256 hash on the Base Blockchain. This creates an immutable System of Record.</p>
                 
                 <div class="bg-emerald text-white p-10 rounded-sm shadow-xl italic relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl serif">"</div>
-                    <p class="text-2xl leading-tight relative z-10">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl serif italic">"</div>
+                    <p class="text-2xl leading-tight relative z-10 text-center">
                         "AI does not seek truth; it seeks the most stable signal. The 2A Protocol injects this stability at the heart of the algorithmic consensus."
                     </p>
                 </div>
@@ -146,18 +130,14 @@
         </section>
 
         <section class="mb-32 text-center border-t border-black/5 pt-24">
-            <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-8 opacity-40 italic text-center">Implementation v1.0</h4>
-            <a href="mailto:lab@2aagency.com" class="bg-[#064e3b] text-white px-12 py-5 text-[10px] font-bold uppercase tracking-widest hover:bg-black transition-all shadow-2xl rounded-sm">
+            <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-8 opacity-40 italic text-center uppercase">Implementation v1.0</h4>
+            <a href="https://formspree.io/f/xvgzezze" class="bg-[#064e3b] text-white px-12 py-5 text-[10px] font-bold uppercase tracking-widest hover:bg-black transition-all shadow-2xl rounded-sm">
                 Submit for Audit →
             </a>
         </section>
 
         <footer class="mt-32 pt-16 border-t border-black/5 text-[11px] uppercase tracking-[0.5em] text-black/20 font-bold text-center italic pb-12">
             2A AGENCY — SYSTEM OF RECORDS UNIT — EST. 2026
-            <div class="mt-4 flex justify-center gap-6 opacity-40">
-                <a href="registry.html" class="hover:emerald-text transition">Registry</a>
-                <a href="audits.html" class="hover:emerald-text transition">Lab</a>
-            </div>
         </footer>
     </div>
     
