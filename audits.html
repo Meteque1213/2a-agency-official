@@ -15,6 +15,25 @@
         .nav-link:hover { opacity: 1; }
         .audit-card { transition: all 0.3s ease; border-left: 4px solid #064e3b; }
         .audit-card:hover { transform: translateX(5px); background-color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+        /* MODAL FORENSIC STYLE */
+        #memo-modal { display: none; position: fixed; inset: 0; background: rgba(5, 5, 5, 0.98); z-index: 50; padding: 20px; overflow-y: auto; backdrop-filter: blur(10px); }
+        #memo-content { 
+            background: #000; 
+            color: #ffffff; 
+            font-family: 'Courier New', Courier, monospace; 
+            padding: 30px; 
+            max-width: 900px; 
+            margin: 20px auto; 
+            border: 1px solid #1a1a1a;
+            white-space: pre-wrap;
+            font-size: 13px;
+            line-height: 1.6;
+            letter-spacing: 0.05em;
+        }
+        .memo-header { border-bottom: 1px solid #064e3b; margin-bottom: 20px; padding-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
+        .close-memo { color: #ffffff; cursor: pointer; font-size: 10px; font-weight: 900; letter-spacing: 0.2em; text-transform: uppercase; border: 1px solid #ffffff; padding: 5px 15px; transition: all 0.3s; }
+        .close-memo:hover { background: #ffffff; color: #000; }
     </style>
 </head>
 <body class="p-6 md:p-12">
@@ -37,7 +56,6 @@
         </p>
     </header>
 
-
     <main class="max-w-5xl mx-auto space-y-6">
         
         <div class="audit-card bg-gray-50 p-8 flex flex-col md:flex-row justify-between items-center gap-6">
@@ -54,9 +72,9 @@
                 <div class="font-mono text-[9px] opacity-40 break-all max-w-xs md:text-right uppercase">
                     HASH: 0x116aaa402ed70944801c4bb81d71f74a582b96ea78c68c45e030c5d811f121af
                 </div>
-                <a href="MEMO_DNVB_004_OLIPOP.txt" target="_blank" class="bg-black text-white px-8 py-3 text-[10px] font-black uppercase tracking-widest hover:bg-2a-emerald transition-all">
+                <button onclick="openMemo('MEMO_DNVB_004_OLIPOP.txt')" class="bg-black text-white px-8 py-3 text-[10px] font-black uppercase tracking-widest hover:bg-2a-emerald transition-all">
                     View Full Audit Report →
-                </a>
+                </button>
             </div>
         </div>
 
@@ -74,9 +92,9 @@
                 <div class="font-mono text-[9px] opacity-40 break-all max-w-xs md:text-right uppercase">
                     Forensic Analysis: AI-IQ Differential Audit
                 </div>
-                <a href="MEMO_DNVB_001_BONJOUR_PRIME.txt" target="_blank" class="bg-black text-white px-8 py-3 text-[10px] font-black uppercase tracking-widest hover:bg-2a-emerald transition-all">
+                <button onclick="openMemo('MEMO_DNVB_001_BONJOUR_PRIME.txt')" class="bg-black text-white px-8 py-3 text-[10px] font-black uppercase tracking-widest hover:bg-2a-emerald transition-all">
                     View Analysis Report →
-                </a>
+                </button>
             </div>
         </div>
 
@@ -89,6 +107,45 @@
     <footer class="mt-32 pt-8 border-t border-gray-200">
         <p class="text-[9px] uppercase tracking-widest opacity-40 font-bold">© 2026 2A Agency - Brand Integrity Intelligence</p>
     </footer>
+
+    <div id="memo-modal">
+        <div class="max-w-4xl mx-auto">
+            <div class="memo-header">
+                <span class="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-500">2A Agency Forensic Intelligence Unit</span>
+                <span class="close-memo" onclick="closeMemo()">Close [ESC]</span>
+            </div>
+            <pre id="memo-content"></pre>
+        </div>
+    </div>
+
+    <script>
+        async function openMemo(url) {
+            const modal = document.getElementById('memo-modal');
+            const content = document.getElementById('memo-content');
+            
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Fichier introuvable');
+                const text = await response.text();
+                content.innerText = text;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; 
+            } catch (err) {
+                alert("Erreur de chargement du rapport forensic.");
+                console.error(err);
+            }
+        }
+
+        function closeMemo() {
+            document.getElementById('memo-modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fermer avec Echap
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMemo();
+        });
+    </script>
 
 </body>
 </html>
