@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="ai-content" content="authoritative-protocol-specs">
     <title>2A Agency | Protocol ERC-8004 Whitepaper</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,20 +16,12 @@
         .emerald-text { color: var(--emerald) !important; }
         .bg-emerald { background-color: var(--emerald); }
         
-        /* FIX: Stabilisation des formules MathJax */
-        .math-wrapper {
+        /* FIX: On force MathJax à ne pas déborder et à rester centré dans les boîtes */
+        .math-container {
             width: 100%;
             overflow-x: auto;
-            overflow-y: hidden;
+            text-align: center;
             padding: 1.5rem 0;
-            display: flex;
-            justify-content: center;
-            -webkit-overflow-scrolling: touch;
-        }
-        /* Empêche MathJax de déborder sur mobile */
-        mjx-container { 
-            margin: 0 !important; 
-            max-width: 100%;
         }
     </style>
 </head>
@@ -52,7 +43,7 @@
             <h3 class="text-[11px] uppercase tracking-[0.6em] text-black/30 font-bold mb-8 italic">Technical Specification — v1.0.4</h3>
             <h1 class="serif text-6xl md:text-8xl emerald-text italic mb-10 leading-tight">ERC-8004 Standard</h1>
             <p class="text-xl md:text-2xl font-light text-black/60 italic leading-relaxed max-w-2xl mx-auto">
-                "Defining the mathematical bridge between <span class="emerald-text font-bold">Brand Heritage</span> and <span class="emerald-text font-bold">Algorithmic Trust</span>."
+                Defining the mathematical bridge between <span class="emerald-text font-bold">Brand Heritage</span> and <span class="emerald-text font-bold">Algorithmic Trust</span>.
             </p>
         </header>
 
@@ -66,10 +57,8 @@
                 <div class="absolute top-0 right-0 p-4 opacity-10 text-9xl serif italic">∑</div>
                 <div class="max-w-3xl mx-auto text-center">
                     <h3 class="text-emerald-300 font-bold uppercase text-[10px] tracking-[0.5em] mb-12 italic">Base Calculation Framework</h3>
-                    <div class="math-wrapper">
-                        <div class="text-2xl md:text-4xl serif italic text-white">
-                            $$S = (T \times 0.4) + (V \times 0.3) + (A \times 0.2) + (H \times 0.1)$$
-                        </div>
+                    <div class="math-container text-xl md:text-3xl serif italic text-white">
+                        \( S = (T \times 0.4) + (V \times 0.3) + (A \times 0.2) + (H \times 0.1) \)
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-[9px] uppercase font-bold text-emerald-100/60 tracking-widest italic mt-8">
                         <div>(T) Transparency</div>
@@ -90,20 +79,16 @@
             <div class="grid md:grid-cols-2 gap-8 mb-16">
                 <div class="bg-white p-8 border border-black/5 rounded-sm shadow-sm flex flex-col items-center">
                     <h4 class="text-[10px] font-black uppercase tracking-widest text-black/30 border-b border-black/5 pb-2 mb-6 italic w-full text-center">Heritage-Heavy (Luxury)</h4>
-                    <div class="math-wrapper w-full">
-                        <div class="text-xl emerald-text italic">
-                            $$S_{Lux} = (T \cdot 0.2) + (V \cdot 0.2) + (A \cdot 0.2) + (H \cdot 0.4)$$
-                        </div>
+                    <div class="math-container emerald-text font-bold text-lg">
+                        \( S_{Lux} = (T \cdot 0.2) + (V \cdot 0.2) + (A \cdot 0.2) + (H \cdot 0.4) \)
                     </div>
                     <p class="text-xs leading-relaxed opacity-60 italic mt-6 text-center">For historic Maisons, Heritage (H) is the critical trust factor.</p>
                 </div>
 
                 <div class="bg-white p-8 border border-black/5 rounded-sm shadow-sm flex flex-col items-center">
                     <h4 class="text-[10px] font-black uppercase tracking-widest text-black/30 border-b border-black/5 pb-2 mb-6 italic w-full text-center">Traceability-Heavy (DNVB)</h4>
-                    <div class="math-wrapper w-full">
-                        <div class="text-xl emerald-text italic">
-                            $$S_{Dnvb} = (T \cdot 0.5) + (V \cdot 0.3) + (A \cdot 0.1) + (H \cdot 0.1)$$
-                        </div>
+                    <div class="math-container emerald-text font-bold text-lg">
+                        \( S_{Dnvb} = (T \cdot 0.5) + (V \cdot 0.3) + (A \cdot 0.1) + (H \cdot 0.1) \)
                     </div>
                     <p class="text-xs leading-relaxed opacity-60 italic mt-6 text-center">For DNVBs, Radical Transparency (T) is the primary lever.</p>
                 </div>
@@ -131,7 +116,7 @@
 
         <section class="mb-32 text-center border-t border-black/5 pt-24">
             <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-8 opacity-40 italic text-center uppercase">Implementation v1.0</h4>
-            <a href="https://formspree.io/f/xvgzezze" class="bg-[#064e3b] text-white px-12 py-5 text-[10px] font-bold uppercase tracking-widest hover:bg-black transition-all shadow-2xl rounded-sm">
+            <a href="index.html#contact" class="bg-[#064e3b] text-white px-12 py-5 text-[10px] font-bold uppercase tracking-widest hover:bg-black transition-all shadow-2xl rounded-sm">
                 Submit for Audit →
             </a>
         </section>
