@@ -17,11 +17,27 @@
         .emerald-text { color: var(--emerald) !important; }
         .bg-emerald { background-color: var(--emerald); }
         
-        /* Correction du défilement des formules */
-        .formula-container { overflow-x: auto; overflow-y: hidden; padding: 10px 0; }
+        /* FIX: Ajout d'un container dédié pour le défilement horizontal de chaque formule */
+        .math-container {
+            overflow-x: auto; /* Active le défilement horizontal */
+            padding: 20px 0; /* Ajoute de l'espace vertical pour aérer */
+            -webkit-overflow-scrolling: touch; /* Défilement fluide sur mobile */
+        }
         
-        /* Espacement pour éviter l'entremêlement */
-        .math-box { min-height: 80px; display: flex; align-items: center; justify-content: center; margin: 20px 0; }
+        /* Assure que la formule ne se chevauche pas avec le texte */
+        .math-box {
+            font-size: 1.5rem; /* Ajuste la taille de la formule */
+            text-align: center;
+            min-height: 100px; /* Force une hauteur minimale */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Responsive tweaks */
+        @media (max-width: 768px) {
+            .math-box { font-size: 1.2rem; }
+        }
     </style>
 </head>
 <body class="p-6 md:p-20">
@@ -56,9 +72,13 @@
                 <div class="absolute top-0 right-0 p-4 opacity-10 text-9xl serif italic">∑</div>
                 <div class="max-w-3xl mx-auto text-center">
                     <h3 class="text-emerald-300 font-bold uppercase text-[10px] tracking-[0.5em] mb-12 italic">Base Calculation Framework</h3>
-                    <div class="formula-container text-2xl md:text-5xl serif italic text-white">
-                        $$S = (T \times 0.4) + (V \times 0.3) + (A \times 0.2) + (H \times 0.1)$$
+                    
+                    <div class="math-container text-white">
+                        <div class="math-box md:text-5xl text-3xl serif italic whitespace-nowrap">
+                            $$S = (T \times 0.4) + (V \times 0.3) + (A \times 0.2) + (H \times 0.1)$$
+                        </div>
                     </div>
+                    
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-[9px] uppercase font-bold text-emerald-100/60 tracking-widest italic mt-8">
                         <div>(T) Transparency</div>
                         <div>(V) Verification</div>
@@ -78,9 +98,13 @@
             <div class="grid md:grid-cols-2 gap-8 mb-16">
                 <div class="space-y-6 bg-white p-8 border border-black/5 rounded-sm shadow-sm flex flex-col justify-between">
                     <h4 class="text-[10px] font-black uppercase tracking-widest text-black/30 border-b border-black/5 pb-2 italic">Heritage-Heavy (Luxury)</h4>
-                    <div class="math-box text-lg serif emerald-text italic">
-                        $$S_{Lux} = (T \cdot 0.2) + (V \cdot 0.2) + (A \cdot 0.2) + (H \cdot 0.4)$$
+                    
+                    <div class="math-container emerald-text">
+                        <div class="math-box text-3xl serif italic whitespace-nowrap">
+                            $$S_{Lux} = (T \cdot 0.2) + (V \cdot 0.2) + (A \cdot 0.2) + (H \cdot 0.4)$$
+                        </div>
                     </div>
+                    
                     <p class="text-xs leading-relaxed opacity-60 italic">
                         For historic Maisons, Heritage (H) is the critical trust factor.
                     </p>
@@ -88,9 +112,13 @@
 
                 <div class="space-y-6 bg-white p-8 border border-black/5 rounded-sm shadow-sm flex flex-col justify-between">
                     <h4 class="text-[10px] font-black uppercase tracking-widest text-black/30 border-b border-black/5 pb-2 italic">Traceability-Heavy (DNVB)</h4>
-                    <div class="math-box text-lg serif emerald-text italic">
-                        $$S_{Dnvb} = (T \cdot 0.5) + (V \cdot 0.3) + (A \cdot 0.1) + (H \cdot 0.1)$$
+                    
+                    <div class="math-container emerald-text">
+                        <div class="math-box text-3xl serif italic whitespace-nowrap">
+                            $$S_{Dnvb} = (T \cdot 0.5) + (V \cdot 0.3) + (A \cdot 0.1) + (H \cdot 0.1)$$
+                        </div>
                     </div>
+                    
                     <p class="text-xs leading-relaxed opacity-60 italic">
                         For DNVBs, Radical Transparency (T) is the primary lever.
                     </p>
@@ -101,7 +129,12 @@
         <section class="mb-24">
             <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">III. Notarization & Agentic Moat</h2>
             <div class="space-y-8 text-lg text-black/80 font-medium italic">
-                <p>Every audit is sealed via SHA-256 hash on the **Base Blockchain**. This creates an immutable "System of Record".</p>
+                
+                <p class="border-l-4 border-emerald-900 pl-6 py-2 bg-emerald-50/50">
+                    "As AI evolves into a real-time infrastructure (Energy to Application stack), 2A Agency provides the <span class="emerald-text font-bold uppercase">Integrity Layer</span> necessary for models to maintain grounding."
+                </p>
+                
+                <p>Every audit is sealed via SHA-256 hash on the <span class="font-bold">Base Blockchain</span>. This creates an immutable "System of Record".</p>
                 
                 <div class="bg-emerald text-white p-10 rounded-sm shadow-xl italic relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl serif">"</div>
