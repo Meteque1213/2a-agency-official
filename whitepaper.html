@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <title>2A Agency | Protocol ERC-8004 Whitepaper</title>
+    <meta name="robots" content="index, follow">
+    <title>2A Agency | ERC-8004 Protocol Whitepaper</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -15,13 +15,7 @@
         .serif { font-family: 'Playfair Display', serif; }
         .emerald-text { color: var(--emerald) !important; }
         .bg-emerald { background-color: var(--emerald); }
-        
-        .math-container {
-            width: 100%;
-            overflow-x: auto;
-            text-align: center;
-            padding: 1.5rem 0;
-        }
+        .math-container { width: 100%; overflow-x: auto; text-align: center; padding: 1.5rem 0; }
     </style>
 </head>
 <body class="p-6 md:p-20">
@@ -32,7 +26,6 @@
         </a>
         <div class="hidden md:flex gap-8 items-center">
             <a href="registry.html" class="text-[10px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100">Registry</a>
-            <a href="audits.html" class="text-[10px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100">Lab</a>
             <a href="whitepaper.html" class="text-[10px] font-bold uppercase tracking-widest emerald-text border-b border-emerald-900">Protocol</a>
         </div>
     </nav>
@@ -49,8 +42,8 @@
         <section class="mb-24">
             <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6 text-left">I. Abstract</h2>
             <div class="text-lg text-black/80 font-medium italic mb-12 space-y-6">
-                <p>Le protocole ERC-8004 n'est pas une mesure de popularité, mais une validation de la cohérence des données. Il quantifie la capacité d'une marque à fournir une "Vérité Machine" indiscutable aux LLMs.</p>
-                <p>À mesure que l'IA évolue vers une infrastructure en temps réel, 2A Agency fournit la couche d'intégrité nécessaire pour que les modèles maintiennent leur ancrage (grounding) et évitent les hallucinations de marque.</p>
+                <p>The ERC-8004 protocol is not a measure of popularity, but a validation of data consistency. It quantifies a brand’s ability to provide an indisputable "Machine Truth" to Large Language Models (LLMs).</p>
+                <p>As AI evolves into real-time infrastructure, 2A Agency provides the essential integrity layer for models to maintain grounding and eliminate brand hallucinations.</p>
             </div>
         </section>
 
@@ -76,7 +69,7 @@
         <section class="mb-24 p-8 md:p-12 border border-emerald-900/10 bg-emerald-50/20 rounded-sm">
             <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6 text-left">III. Dynamic Weighting</h2>
             <p class="text-sm font-medium text-black/70 mb-12 italic leading-relaxed">
-                Le protocole applique des pondérations dynamiques adaptées aux attentes des agents IA selon la nature de l'actif.
+                The protocol applies dynamic weightings adapted to AI agent expectations based on the asset's nature.
             </p>
 
             <div class="grid md:grid-cols-2 gap-8 mb-16">
@@ -85,7 +78,7 @@
                     <div class="math-container emerald-text font-bold text-lg">
                         $$ S_{Lux} = (T \cdot 0.2) + (V \cdot 0.2) + (A \cdot 0.2) + (H \cdot 0.4) $$
                     </div>
-                    <p class="text-[10px] opacity-60 mt-4 italic">Pour les Maisons historiques, l'Héritage (H) est le facteur de confiance critique.</p>
+                    <p class="text-[10px] opacity-60 mt-4 italic">For legacy Maisons, Heritage (H) is the critical trust factor.</p>
                 </div>
 
                 <div class="bg-white p-8 border border-black/5 rounded-sm shadow-sm flex flex-col items-center text-center">
@@ -93,7 +86,7 @@
                     <div class="math-container emerald-text font-bold text-lg">
                         $$ S_{Dnvb} = (T \cdot 0.5) + (V \cdot 0.3) + (A \cdot 0.1) + (H \cdot 0.1) $$
                     </div>
-                    <p class="text-[10px] opacity-60 mt-4 italic">Pour les DNVBs, la Transparence Radicale (T) est le levier principal.</p>
+                    <p class="text-[10px] opacity-60 mt-4 italic">For digital brands, Radical Transparency (T) is the primary lever.</p>
                 </div>
             </div>
         </section>
@@ -102,9 +95,9 @@
             <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6 text-left">IV. On-Chain Notarization</h2>
             <div class="space-y-8 text-lg text-black/80 font-medium italic">
                 <p class="border-l-4 border-emerald-900 pl-6 py-4 bg-emerald-50 text-emerald-900 font-bold">
-                    "L'IA ne cherche pas la vérité ; elle cherche le signal le plus stable. Le protocole 2A injecte cette stabilité au cœur du consensus algorithmique."
+                    "AI does not seek truth; it seeks the most stable signal. The 2A protocol injects this stability into the heart of algorithmic consensus."
                 </p>
-                <p>Chaque audit est scellé via un hash SHA-256 sur la blockchain Base (Ethereum L2), créant un "System of Record" immuable défiant toute manipulation.</p>
+                <p>Every audit is sealed via a SHA-256 hash on the Base blockchain (Ethereum L2), creating an immutable "System of Record" that defies manipulation.</p>
             </div>
             
             <div class="mt-12 bg-white border border-black p-8 shadow-[8px_8px_0px_0px_rgba(6,78,59,1)]">
