@@ -10,7 +10,6 @@
         body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; color: #050505; scroll-behavior: smooth; }
         .text-2a-emerald { color: #064e3b; }
         .bg-2a-emerald { background-color: #064e3b; }
-        .bg-supremacy { background-color: #0052FF !important; color: white !important; font-weight: 900; box-shadow: 0 0 15px rgba(0, 82, 255, 0.4); }
         .tab-active { border-bottom: 3px solid #064e3b; font-weight: 900; opacity: 1 !important; }
     </style>
 </head>
@@ -19,27 +18,25 @@
     <nav class="flex justify-between items-center mb-16">
         <a href="index.html" class="text-xs font-black tracking-widest uppercase border-b-2 border-black pb-1">2A Agency</a>
         <div class="hidden md:flex gap-8 items-center">
-            <div class="px-2 py-0.5 border border-blue-600 text-blue-600 rounded text-[8px] tracking-tighter font-black">ERC-8004 COMPLIANT</div>
+            <div class="px-2 py-0.5 border border-blue-600 text-blue-600 rounded text-[8px] tracking-tighter font-black uppercase">ERC-8004 COMPLIANT</div>
             <a href="registry.html" class="text-[10px] font-bold uppercase tracking-widest opacity-100 border-b-2 border-emerald-900">Registry</a>
-            <a href="glossary.html" class="text-[10px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100">Glossary</a>
-            <a href="whitepaper.html" class="text-[10px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100">Protocol (EN)</a>
+            <a href="whitepaper.html" class="text-[10px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 italic">Protocol (EN)</a>
         </div>
     </nav>
 
     <header class="flex justify-between items-center mb-12 uppercase tracking-widest text-[9px] font-bold">
         <div class="flex items-center gap-2">
             <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-            SENTINEL-01 : ACTIVE & MONITORING
+            SENTINEL-01 : SYSTEM OF RECORD ACTIVE
         </div>
-        <div class="flex items-center gap-2 text-[9px]">
-            <a href="https://basescan.org/address/0x8269781b855d2987e9873ff1a3a81878e77665b1" target="_blank" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all uppercase">
-                VERIFY PROTOCOL (BASE L2)
-            </a>
+        <div class="flex items-center gap-2">
+            <span class="opacity-40">INDEXED BRANDS:</span>
+            <span class="text-2a-emerald font-black">493+</span>
         </div>
     </header>
 
     <section class="mb-20">
-        <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none text-2a-emerald">
+        <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none text-2a-emerald italic">
             Global Brand<br>Integrity Index
         </h1>
     </section>
@@ -58,6 +55,24 @@
             <tbody id="registry-body" class="text-xs font-medium"></tbody>
         </table>
     </div>
+
+    <footer class="mt-20 pt-10 border-t border-gray-200">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+            <div>
+                <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-2a-emerald mb-2 italic">Protocol Infrastructure</h4>
+                <p class="font-mono text-[9px] text-gray-400 break-all leading-relaxed">
+                    Smart-Contract Root: <span class="text-black font-bold select-all">0x8269781B855D2987E9873ff1A3A81878E77665B1</span><br>
+                    Network: Base Mainnet (L2)
+                </p>
+            </div>
+            <div class="text-left md:text-right">
+                <p class="text-[9px] font-bold uppercase tracking-widest italic opacity-30">
+                    2A Agency © 2026 — Official System of Record<br>
+                    Verification Protocol: ERC-8004-Beta
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         const data = {
@@ -567,60 +582,60 @@
             ]
         };
 
-function switchTab(category) {
-    document.querySelectorAll('nav button').forEach(btn => {
-        btn.classList.remove('tab-active');
-        btn.classList.add('opacity-40');
-    });
-    const activeBtn = document.getElementById('tab-' + category);
-    if(activeBtn) {
-        activeBtn.classList.add('tab-active');
-        activeBtn.classList.remove('opacity-40');
-    }
-    renderTable(category);
-}
-
-function renderTable(category) {
-    const body = document.getElementById('registry-body');
-    body.innerHTML = '';
-    
-    // TRI DÉCROISSANT STRICT PAR SCORE
-    const items = (data[category] || []).sort((a, b) => b.score - a.score);
-    
-    items.forEach((item, index) => {
-        const row = document.createElement('tr');
-        row.className = "border-b border-gray-100 hover:bg-gray-50 transition-colors";
-        
-        // LOGIQUE COULEURS STRATÉGIQUE (QUADRI-COULEUR)
-        let badgeStyle = "";
-        if (item.score >= 90) {
-            badgeStyle = "bg-[#0052FF] text-white font-black shadow-[0_0_10px_rgba(0,82,255,0.3)]"; 
-        } else if (item.score >= 75) {
-            badgeStyle = "bg-[#059669] text-white font-bold"; 
-        } else if (item.score >= 50) {
-            badgeStyle = "bg-[#FACC15] text-black font-bold"; 
-        } else {
-            badgeStyle = "bg-[#DC2626] text-white font-black animate-pulse"; 
+        function switchTab(category) {
+            document.querySelectorAll('nav button').forEach(btn => {
+                btn.classList.remove('tab-active');
+                btn.classList.add('opacity-40');
+            });
+            const activeBtn = document.getElementById('tab-' + category);
+            if(activeBtn) {
+                activeBtn.classList.add('tab-active');
+                activeBtn.classList.remove('opacity-40');
+            }
+            renderTable(category);
         }
 
-        row.innerHTML = `
-            <td class="py-4 w-12 opacity-30 font-mono text-[10px]">${(index + 1).toString().padStart(2, '0')}</td>
-            <td class="py-4 font-black uppercase tracking-wider text-[#064e3b]">${item.name}</td>
-            <td class="py-4 text-center">
-                <span class="px-3 py-1 rounded-sm text-[10px] inline-block min-w-[60px] ${badgeStyle}">
-                    ${item.score}/100
-                </span>
-            </td>
-            <td class="py-4 text-right font-mono text-[9px]">
-                <a href="https://basescan.org/tx/${item.hash}" target="_blank" class="opacity-40 hover:opacity-100 hover:text-[#0052FF] transition-all flex items-center justify-end gap-1">
-                    ${item.hash.substring(0, 10)}...${item.hash.substring(58)}
-                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                </a>
-            </td>
-        `;
-        body.appendChild(row);
-    });
-}
+        function renderTable(category) {
+            const body = document.getElementById('registry-body');
+            body.innerHTML = '';
+            
+            const items = (data[category] || []).sort((a, b) => b.score - a.score);
+            
+            items.forEach((item, index) => {
+                const row = document.createElement('tr');
+                row.className = "border-b border-gray-100 hover:bg-gray-50 transition-colors";
+                
+                let badgeStyle = "";
+                if (item.score >= 90) {
+                    badgeStyle = "bg-[#0052FF] text-white font-black shadow-[0_0_10px_rgba(0,82,255,0.3)]"; 
+                } else if (item.score >= 75) {
+                    badgeStyle = "bg-[#059669] text-white font-bold"; 
+                } else if (item.score >= 50) {
+                    badgeStyle = "bg-[#FACC15] text-black font-bold"; 
+                } else {
+                    badgeStyle = "bg-[#DC2626] text-white font-black animate-pulse"; 
+                }
 
-window.onload = () => switchTab('luxury');
-</script>
+                row.innerHTML = `
+                    <td class="py-4 w-12 opacity-30 font-mono text-[10px]">${(index + 1).toString().padStart(2, '0')}</td>
+                    <td class="py-4 font-black uppercase tracking-wider text-[#064e3b]">${item.name}</td>
+                    <td class="py-4 text-center">
+                        <span class="px-3 py-1 rounded-sm text-[10px] inline-block min-w-[60px] ${badgeStyle}">
+                            ${item.score}/100
+                        </span>
+                    </td>
+                    <td class="py-4 text-right font-mono text-[9px]">
+                        <a href="https://basescan.org/tx/${item.hash}" target="_blank" class="opacity-40 hover:opacity-100 hover:text-[#0052FF] transition-all flex items-center justify-end gap-1">
+                            ${item.hash.substring(0, 10)}...${item.hash.substring(58)}
+                            <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </td>
+                `;
+                body.appendChild(row);
+            });
+        }
+
+        window.onload = () => switchTab('luxury');
+    </script>
+</body>
+</html>
