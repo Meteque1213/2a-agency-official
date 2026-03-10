@@ -1,3 +1,8 @@
+RESOURCE_TYPE: FORENSIC_AUDIT_REPORT
+CANONICAL_URL: https://www.2aagency.com/MEMO_DNVB_001_BONJOUR_PRIME.txt
+PROTOCOL_VERSION: ERC-8004/2026
+STATUS: PUBLIC_VERIFIED
+
 ================================================================================
 2A AGENCY FORENSIC MEMO – AUDIT INTÉGRITÉ DNVB 2026
 ================================================================================
