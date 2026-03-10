@@ -68,30 +68,25 @@
     </section>
 
     <nav class="flex gap-8 mb-12 border-b border-gray-200 overflow-x-auto pb-2">
-        <button onclick="switchTab('luxury')" id="tab-luxury" class="pb-2 text-xs uppercase tracking-widest transition-all">01_Luxury</button>
-        <button onclick="switchTab('beauty')" id="tab-beauty" class="pb-2 text-xs uppercase tracking-widest transition-all">02_Beauty</button>
-        <button onclick="switchTab('home')" id="tab-home" class="pb-2 text-xs uppercase tracking-widest transition-all">03_Home</button>
-        <button onclick="switchTab('longevity')" id="tab-longevity" class="pb-2 text-xs uppercase tracking-widest transition-all">04_Longevity</button>
-        <button onclick="switchTab('apparel')" id="tab-apparel" class="pb-2 text-xs uppercase tracking-widest transition-all">05_Apparel</button>
-        <button onclick="switchTab('fnb')" id="tab-fnb" class="pb-2 text-xs uppercase tracking-widest transition-all">06_F&B</button>
+        <button onclick="switchTab('luxury')" id="tab-luxury" class="pb-2 text-xs uppercase tracking-widest transition-all tab-active">01_Luxury</button>
+        <button onclick="switchTab('beauty')" id="tab-beauty" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">02_Beauty</button>
+        <button onclick="switchTab('home')" id="tab-home" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">03_Home</button>
+        <button onclick="switchTab('longevity')" id="tab-longevity" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">04_Longevity</button>
+        <button onclick="switchTab('apparel')" id="tab-apparel" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">05_Apparel</button>
+        <button onclick="switchTab('fnb')" id="tab-fnb" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">06_F&B</button>
     </nav>
 
     <div class="overflow-x-auto min-h-[400px]">
         <table class="w-full text-left border-collapse">
-            <tbody id="registry-body" class="text-xs font-medium"></tbody>
+            <tbody id="registry-body" class="text-xs font-medium">
+                </tbody>
         </table>
     </div>
 
-    <footer class="mt-20 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity gap-6">
-        <div class="flex space-x-6 mb-8 border-b border-black border-opacity-10 overflow-x-auto">
-            <button onclick="switchTab('luxury')" id="foot-luxury" class="pb-2 text-[9px] uppercase tracking-widest transition-all">Luxury</button>
-            <button onclick="switchTab('beauty')" id="foot-beauty" class="pb-2 text-[9px] uppercase tracking-widest transition-all">Beauty</button>
-            <button onclick="switchTab('home')" id="foot-home" class="pb-2 text-[9px] uppercase tracking-widest transition-all">Home</button>
-            <button onclick="switchTab('longevity')" id="foot-longevity" class="pb-2 text-[9px] uppercase tracking-widest transition-all">Longevity</button>
-            <button onclick="switchTab('apparel')" id="foot-apparel" class="pb-2 text-[9px] uppercase tracking-widest transition-all">Apparel</button>
-            <button onclick="switchTab('fnb')" id="foot-fnb" class="pb-2 text-[9px] uppercase tracking-widest transition-all">F&B</button>
+    <footer class="mt-20 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity gap-6 pb-12">
+        <div class="text-[9px] font-bold uppercase tracking-widest">
+            2A AGENCY — System of Record — v1.0.4
         </div>
-
         <form id="2a-contact-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col items-center md:items-end gap-2">
             <input type="email" name="email" placeholder="ENTER_AGENT_EMAIL" required 
                    class="bg-transparent border-b border-black text-[9px] py-1 outline-none w-48 focus:border-emerald-900 transition-all uppercase font-bold text-center md:text-right">
@@ -102,10 +97,6 @@
     </footer>
 
     <script>
-    /* Ta logique JavaScript ici */
-    </script>
-</body>
-</html>
         const brands = {
             luxury: [
                 { "name": "Hermès", "score": 98, "hash": "0x2d10f2ff3c6ddc9347357e5233e267b95ec2988bd9ce898c80f7081cdef42763" },
@@ -612,59 +603,43 @@
                 { "name": "Kula Bio", "score": 1, "hash": "0x028b7ae3480b4809515c54cebb5d81444a91e6d9c95287939dcb573e17384833" }
             ]
         };
-
-        function switchTab(category) {
-            localStorage.setItem('activeCategory', category);
-            const body = document.getElementById('registry-body');
-            
-            const tabIds = ['luxury', 'beauty', 'home', 'longevity', 'apparel', 'fnb'];
-            tabIds.forEach(id => {
-                const btnHeader = document.getElementById(`tab-${id}`);
-                const btnFooter = document.getElementById(`foot-${id}`);
-                const isActive = (id === category);
-                
-                if(btnHeader) btnHeader.className = isActive ? 'pb-2 text-xs uppercase tracking-widest tab-active' : 'pb-2 text-xs uppercase tracking-widest opacity-40';
-                if(btnFooter) btnFooter.className = isActive ? 'pb-2 text-[9px] uppercase tracking-widest tab-active' : 'pb-2 text-[9px] uppercase tracking-widest opacity-40';
+            function switchTab(category) {
+            // Update UI tabs
+            document.querySelectorAll('nav button').forEach(btn => {
+                btn.classList.remove('tab-active');
+                btn.classList.add('opacity-40');
             });
+            document.getElementById('tab-' + category).classList.add('tab-active');
+            document.getElementById('tab-' + category).classList.remove('opacity-40');
 
-            body.innerHTML = '';
-            if (brands[category]) {
-                [...brands[category]].sort((a, b) => b.score - a.score).forEach((brand, index) => {
-                    const status = brand.score >= 90 ? "SUPREMACY" : 
-                                   (brand.score > 80 ? "EXCELLENCE" : 
-                                   (brand.score < 60 ? "DRIFT ALERT" : "VIGILANCE"));
-
-                    const statusClass = brand.score >= 90 ? "bg-supremacy" :
-                                        (brand.score > 80 ? "bg-emerald-500 text-white" : 
-                                        (brand.score < 60 ? "bg-red-500 text-white animate-pulse" : "bg-amber-400 text-black"));
-                    
-                    const proofLink = brand.tx ? `https://basescan.org/tx/${brand.tx}` : `https://basescan.org/tx/${brand.hash}`;
-
-                    body.innerHTML += `
-                        <tr class="border-b border-gray-100 transition-all hover:bg-gray-50">
-                            <td class="py-6 font-mono opacity-40 text-[10px]">#${(index + 1).toString().padStart(3, '0')}</td>
-                            <td class="py-6 font-bold uppercase tracking-wider text-xs">${brand.name}</td>
-                            <td class="py-6 font-mono text-xs">${brand.score}/100</td>
-                            <td class="py-6">
-                                <span class="px-2 py-1 rounded-sm text-[8px] tracking-tighter ${statusClass}">
-                                    ${status}
-                                </span>
-                            </td>
-                            <td class="py-6 text-right">
-                                <a href="${proofLink}" target="_blank" class="font-mono text-[9px] opacity-40 hover:opacity-100 underline tracking-tighter">
-                                    PROVE_ON_BASE ↗
-                                </a>
-                            </td>
-                        </tr>
-                    `;
-                });
-            }
+            renderTable(category);
         }
-        
-        window.onload = () => {
-            const savedCategory = localStorage.getItem('activeCategory') || 'luxury';
-            switchTab(savedCategory);
-        };
+
+        function renderTable(category) {
+            const body = document.getElementById('registry-body');
+            body.innerHTML = '';
+            
+            const items = data[category] || [];
+            
+            items.forEach((item, index) => {
+                const row = document.createElement('tr');
+                row.className = "border-b border-gray-100 hover:bg-gray-50 transition-colors";
+                row.innerHTML = `
+                    <td class="py-4 w-12 opacity-30">${(index + 1).toString().padStart(2, '0')}</td>
+                    <td class="py-4 font-black uppercase tracking-wider">${item.name}</td>
+                    <td class="py-4 text-center">
+                        <span class="px-2 py-1 rounded-sm ${item.score >= 90 ? 'bg-supremacy' : 'bg-black text-white'}">
+                            ${item.score}/100
+                        </span>
+                    </td>
+                    <td class="py-4 text-right font-mono text-[10px] opacity-40">${item.hash}</td>
+                `;
+                body.appendChild(row);
+            });
+        }
+
+        // Initial load
+        window.onload = () => switchTab('luxury');
     </script>
 </body>
 </html>
