@@ -572,8 +572,11 @@
                 btn.classList.remove('tab-active');
                 btn.classList.add('opacity-40');
             });
-            document.getElementById('tab-' + category).classList.add('tab-active');
-            document.getElementById('tab-' + category).classList.remove('opacity-40');
+            const activeBtn = document.getElementById('tab-' + category);
+            if(activeBtn) {
+                activeBtn.classList.add('tab-active');
+                activeBtn.classList.remove('opacity-40');
+            }
             renderTable(category);
         }
 
@@ -581,29 +584,41 @@
             const body = document.getElementById('registry-body');
             body.innerHTML = '';
             
-            // TRI DÉCROISSANT PAR SCORE
+            // 1. TRI DÉCROISSANT STRICT
             const items = (data[category] || []).sort((a, b) => b.score - a.score);
             
             items.forEach((item, index) => {
                 const row = document.createElement('tr');
                 row.className = "border-b border-gray-100 hover:bg-gray-50 transition-colors";
                 
-                // LOGIQUE COULEUR
-                let colorClass = "bg-black text-white";
-                if (item.score >= 90) colorClass = "bg-supremacy";
-                if (item.score < 50) colorClass = "bg-red-600 text-white";
+                // 2. ÉCHELLE DE COULEURS STRATÉGIQUE
+                let badgeStyle = "";
+                if (item.score >= 90) {
+                    // BLEU SUPREMACY (Elite)
+                    badgeStyle = "bg-[#0052FF] text-white font-black shadow-[0_0_10px_rgba(0,82,255,0.3)]"; 
+                } else if (item.score >= 75) {
+                    // VERT PERFORMANCE (High)
+                    badgeStyle = "bg-[#059669] text-white font-bold"; 
+                } else if (item.score >= 50) {
+                    // JAUNE VIGILANCE (Mid)
+                    badgeStyle = "bg-[#FACC15] text-black font-bold"; 
+                } else {
+                    // ROUGE ALERTE (Critical)
+                    badgeStyle = "bg-[#DC2626] text-white font-black animate-pulse"; 
+                }
 
                 row.innerHTML = `
-                    <td class="py-4 w-12 opacity-30">${(index + 1).toString().padStart(2, '0')}</td>
-                    <td class="py-4 font-black uppercase tracking-wider">${item.name}</td>
+                    <td class="py-4 w-12 opacity-30 font-mono text-[10px]">${(index + 1).toString().padStart(2, '0')}</td>
+                    <td class="py-4 font-black uppercase tracking-wider text-[#064e3b]">${item.name}</td>
                     <td class="py-4 text-center">
-                        <span class="px-2 py-1 rounded-sm ${colorClass}">
+                        <span class="px-3 py-1 rounded-sm text-[10px] inline-block min-w-[60px] ${badgeStyle}">
                             ${item.score}/100
                         </span>
                     </td>
-                    <td class="py-4 text-right font-mono text-[9px] opacity-40">
-                        <a href="https://basescan.org/tx/${item.hash}" target="_blank" class="hover:underline hover:text-blue-600">
-                            ${item.hash.substring(0, 10)}...${item.hash.substring(58)} 🔗
+                    <td class="py-4 text-right font-mono text-[9px]">
+                        <a href="https://basescan.org/tx/${item.hash}" target="_blank" class="opacity-40 hover:opacity-100 hover:text-[#0052FF] transition-all flex items-center justify-end gap-1">
+                            ${item.hash.substring(0, 10)}...${item.hash.substring(58)}
+                            <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                         </a>
                     </td>
                 `;
@@ -612,6 +627,3 @@
         }
 
         window.onload = () => switchTab('luxury');
-    </script>
-</body>
-</html>
