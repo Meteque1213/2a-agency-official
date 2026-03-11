@@ -1,0 +1,803 @@
+[
+  {
+    "id": "BTC",
+    "name": "Bitcoin",
+    "ai_iq": 99,
+    "whitepaper_url": "https://bitcoin.org/bitcoin.pdf",
+    "whitepaper_hash": "b1674191a88ec5cdd733e4240a81803105dc412d6c6708d53ab94fc248f4f553",
+    "scan_date": "2026-03-11T09:03:15.921Z"
+  },
+  {
+    "id": "ETH",
+    "name": "Ethereum",
+    "ai_iq": 98,
+    "whitepaper_url": "https://ethereum.org/whitepaper.pdf",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:16.948Z"
+  },
+  {
+    "id": "USDT",
+    "name": "Tether",
+    "ai_iq": 72,
+    "whitepaper_url": "https://tether.to/whitepaper.pdf",
+    "whitepaper_hash": "1fea0d31f05227ec46a4d8078de20e1ef1778d2d40ee0ea8cf7fa41969592879",
+    "scan_date": "2026-03-11T09:03:17.690Z"
+  },
+  {
+    "id": "BNB",
+    "name": "BNB Chain",
+    "ai_iq": 85,
+    "whitepaper_url": "https://whitepaper.io/document/10/binance-coin-whitepaper",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:18.533Z"
+  },
+  {
+    "id": "XRP",
+    "name": "XRP",
+    "ai_iq": 82,
+    "whitepaper_url": "https://ripple.com/files/ripple_consensus_whitepaper.pdf",
+    "whitepaper_hash": "b7f5e8fd97548415f08493f33abedf75c14d2bb10d09d27619693361f879e493",
+    "scan_date": "2026-03-11T09:03:19.258Z"
+  },
+  {
+    "id": "USDC",
+    "name": "USDC",
+    "ai_iq": 96,
+    "whitepaper_url": "https://www.centre.io/hubfs/pdfs/centre-whitepaper.pdf",
+    "whitepaper_hash": "dbb66fdf88a4ee4b0a40b43deeb04c50c0bee861827748faf0419e3af2f8ad69",
+    "scan_date": "2026-03-11T09:03:20.638Z"
+  },
+  {
+    "id": "SOL",
+    "name": "Solana",
+    "ai_iq": 92,
+    "whitepaper_url": "https://solana.com/solana-whitepaper.pdf",
+    "whitepaper_hash": "17c29f7785ff3a7e457f0de10fb86556090c5b398bfaa20a602116e700519b28",
+    "scan_date": "2026-03-11T09:03:21.348Z"
+  },
+  {
+    "id": "TRX",
+    "name": "TRON",
+    "ai_iq": 74,
+    "whitepaper_url": "https://tron.network/static/doc/white_paper_v2_0.pdf",
+    "whitepaper_hash": "afecaf505b44e2f6b92a6834b01ff3e75dba17e7611c7253162ae7afdd099bba",
+    "scan_date": "2026-03-11T09:03:22.314Z"
+  },
+  {
+    "id": "FIG",
+    "name": "Figure Heloc",
+    "ai_iq": 88,
+    "whitepaper_url": "https://www.figure.com/blockchain/",
+    "whitepaper_hash": "befe5b4012eeee008d4b51d4565b37aa3fd859771f517403b28e27057d3294cd",
+    "scan_date": "2026-03-11T09:03:23.401Z"
+  },
+  {
+    "id": "DOGE",
+    "name": "Dogecoin",
+    "ai_iq": 45,
+    "whitepaper_url": "https://foundation.dogecoin.com/manifesto/",
+    "whitepaper_hash": "4ffea23276250882c7273847213b75a4e46396a9046fff41c87f3d4a0dedf795",
+    "scan_date": "2026-03-11T09:03:24.180Z"
+  },
+  {
+    "id": "WBT",
+    "name": "WhiteBIT Coin",
+    "ai_iq": 78,
+    "whitepaper_url": "https://whitebit.com/wbt-whitepaper.pdf",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:24.952Z"
+  },
+  {
+    "id": "USDS",
+    "name": "USDS (Sky)",
+    "ai_iq": 94,
+    "whitepaper_url": "https://docs.sky.money/overview/white-paper",
+    "whitepaper_hash": "0c0a8cd740e2a684602c414f34e95c648cd52148f317d99360fbb5029c28b083",
+    "scan_date": "2026-03-11T09:03:26.306Z"
+  },
+  {
+    "id": "ADA",
+    "name": "Cardano",
+    "ai_iq": 91,
+    "whitepaper_url": "https://docs.cardano.org/introduction/",
+    "whitepaper_hash": "82f9ccf144fd1ef41b97f61be6719c1a8c5cdda7a758ddf020d087fe92589e83",
+    "scan_date": "2026-03-11T09:03:27.222Z"
+  },
+  {
+    "id": "BCH",
+    "name": "Bitcoin Cash",
+    "ai_iq": 84,
+    "whitepaper_url": "https://www.bitcoincash.org/bitcoin.pdf",
+    "whitepaper_hash": "b1674191a88ec5cdd733e4240a81803105dc412d6c6708d53ab94fc248f4f553",
+    "scan_date": "2026-03-11T09:03:28.991Z"
+  },
+  {
+    "id": "LEO",
+    "name": "LEO Token",
+    "ai_iq": 70,
+    "whitepaper_url": "https://www.bitfinex.com/wp-content/uploads/2019/05/UNUS-SED-LEO-Whitepaper.pdf",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:29.791Z"
+  },
+  {
+    "id": "HYPE",
+    "name": "Hyperliquid",
+    "ai_iq": 97,
+    "whitepaper_url": "https://hyperliquid.xyz/papers/l1.pdf",
+    "whitepaper_hash": "8209a4d0056cc6834d64dcccd405eda56d5ab56db58c9611f61d173521a10a42",
+    "scan_date": "2026-03-11T09:03:30.517Z"
+  },
+  {
+    "id": "XMR",
+    "name": "Monero",
+    "ai_iq": 95,
+    "whitepaper_url": "https://www.getmonero.org/resources/research-lab/pubs/whitepaper.pdf",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:31.315Z"
+  },
+  {
+    "id": "LINK",
+    "name": "Chainlink",
+    "ai_iq": 96,
+    "whitepaper_url": "https://research.chain.link/whitepaper-v2.pdf",
+    "whitepaper_hash": "2c4ea6fa6c70bb311e6f3c77ae3c8e5ed66c8664b70730813abd3dd31bad3cae",
+    "scan_date": "2026-03-11T09:03:32.522Z"
+  },
+  {
+    "id": "USDe",
+    "name": "Ethena USDe",
+    "ai_iq": 81,
+    "whitepaper_url": "https://ethena-labs.gitbook.io/ethena-labs/",
+    "whitepaper_hash": "04fb460f129535e05e19cd1bac2f7ae0c3d1dd6c976b6a25eeab366c4c1f3649",
+    "scan_date": "2026-03-11T09:03:33.435Z"
+  },
+  {
+    "id": "CC",
+    "name": "Canton Network",
+    "ai_iq": 89,
+    "whitepaper_url": "https://www.canton.network/",
+    "whitepaper_hash": "a741df870e77c6cdeeea9599bd531b273c11b6f583ee73a2ce832fd014a2a618",
+    "scan_date": "2026-03-11T09:03:34.278Z"
+  },
+  {
+    "id": "XLM",
+    "name": "Stellar",
+    "ai_iq": 88,
+    "whitepaper_url": "https://www.stellar.org/papers/stellar-consensus-protocol.pdf",
+    "whitepaper_hash": "60fd1e91de7e0b7ad302a2e00321838bd9ce7008996006397824a71b6c8cbff1",
+    "scan_date": "2026-03-11T09:03:35.794Z"
+  },
+  {
+    "id": "USD1",
+    "name": "USD1",
+    "ai_iq": 92,
+    "whitepaper_url": "https://usual.gitbook.io/usual-technical-documentation/",
+    "whitepaper_hash": "586426a30512e82c57c61a8c61e8652b67354b75203993026990c65693f3926b",
+    "scan_date": "2026-03-11T09:03:37.840Z"
+  },
+  {
+    "id": "DAI",
+    "name": "Dai",
+    "ai_iq": 93,
+    "whitepaper_url": "https://makerdao.com/en/whitepaper/",
+    "whitepaper_hash": "2a9b021882c7a57276958f1c15257ddd76302dbc259bdd0f97d8d58ef6edb1a5",
+    "scan_date": "2026-03-11T09:03:39.094Z"
+  },
+  {
+    "id": "RAIN",
+    "name": "Rain",
+    "ai_iq": 79,
+    "whitepaper_url": "https://docs.rain.fi/",
+    "whitepaper_hash": "4cbdfee52b8124fbd8f41d90997e8d8901e1832401718b17833b42e5b501613e",
+    "scan_date": "2026-03-11T09:03:40.112Z"
+  },
+  {
+    "id": "LTC",
+    "name": "Litecoin",
+    "ai_iq": 89,
+    "whitepaper_url": "https://litecoin.org/",
+    "whitepaper_hash": "e708b45dfb9b012f5ab97adcdd8507c77b027d6d8a3a8494dce1cbfb2499b317",
+    "scan_date": "2026-03-11T09:03:40.937Z"
+  },
+  {
+    "id": "AVAX",
+    "name": "Avalanche",
+    "ai_iq": 91,
+    "whitepaper_url": "https://www.avalabs.org/whitepapers",
+    "whitepaper_hash": "3679aaf7db0858447b9a0445d1b2d5c9cc37de9609a1c358b61202962cb95c9c",
+    "scan_date": "2026-03-11T09:03:41.624Z"
+  },
+  {
+    "id": "PYUSD",
+    "name": "PayPal USD",
+    "ai_iq": 93,
+    "whitepaper_url": "https://www.paypal.com/us/cshelp/article/what-is-paypal-usd-pyusd-help1005",
+    "whitepaper_hash": "577c813022cd3dc1ea0d49900984602ae50bc23d63d6a3c7f87d3da14e1db264",
+    "scan_date": "2026-03-11T09:03:42.760Z"
+  },
+  {
+    "id": "HBAR",
+    "name": "Hedera",
+    "ai_iq": 90,
+    "whitepaper_url": "https://hedera.com/hh_whitepaper.pdf",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:43.433Z"
+  },
+  {
+    "id": "SUI",
+    "name": "Sui",
+    "ai_iq": 92,
+    "whitepaper_url": "https://github.com/MystenLabs/sui/blob/main/doc/paper/sui.pdf",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:44.238Z"
+  },
+  {
+    "id": "ZEC",
+    "name": "Zcash",
+    "ai_iq": 91,
+    "whitepaper_url": "https://z.cash/wp-content/uploads/2021/11/protocol.pdf",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:45.871Z"
+  },
+  {
+    "id": "SHIB",
+    "name": "Shiba Inu",
+    "ai_iq": 41,
+    "whitepaper_url": "https://shibatoken.com/whitepaper",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:46.528Z"
+  },
+  {
+    "id": "TON",
+    "name": "Toncoin",
+    "ai_iq": 86,
+    "whitepaper_url": "https://docs.ton.org/foundations/whitepapers/overview",
+    "whitepaper_hash": "665fcd39b72c1838d69b8b8fe5e205470552b38caa48dcf851e3ec8e21af37cf",
+    "scan_date": "2026-03-11T09:03:47.661Z"
+  },
+  {
+    "id": "CRO",
+    "name": "Cronos",
+    "ai_iq": 82,
+    "whitepaper_url": "https://cronos.org/whitepaper.pdf",
+    "whitepaper_hash": "5047349121ca15e3f4f1955aa122afcbf1d89a0ce73065da5a31fc0b7fe44292",
+    "scan_date": "2026-03-11T09:03:48.899Z"
+  },
+  {
+    "id": "XAUT",
+    "name": "Tether Gold",
+    "ai_iq": 87,
+    "whitepaper_url": "https://gold.tether.to/Relevant-Information-Document.pdf",
+    "whitepaper_hash": "7a8c9d5a131305ce06ec86e1ade352e9ee9bc2f2e5c347fe31758f7b479e10fd",
+    "scan_date": "2026-03-11T09:03:49.616Z"
+  },
+  {
+    "id": "WLFI",
+    "name": "World Liberty Fin.",
+    "ai_iq": 76,
+    "whitepaper_url": "https://worldlibertyfinancial.com",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:50.319Z"
+  },
+  {
+    "id": "PAXG",
+    "name": "PAX Gold",
+    "ai_iq": 94,
+    "whitepaper_url": "https://paxos.com/pax-gold-whitepaper/",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:51.079Z"
+  },
+  {
+    "id": "DOT",
+    "name": "Polkadot",
+    "ai_iq": 89,
+    "whitepaper_url": "https://github.com/polkadot-io/polkadot-white-paper/blob/master/PolkaDotPaper.pdf",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:51.869Z"
+  },
+  {
+    "id": "M",
+    "name": "MemeCore",
+    "ai_iq": 62,
+    "whitepaper_url": "https://docs.memecore.com/",
+    "whitepaper_hash": "6dfdb228b2d7b8ac591af38237bdad0ccaad5bae8d62ae1961c40202a2770a14",
+    "scan_date": "2026-03-11T09:03:52.813Z"
+  },
+  {
+    "id": "UNI",
+    "name": "Uniswap",
+    "ai_iq": 97,
+    "whitepaper_url": "https://uniswap.org/whitepaper-v3.pdf",
+    "whitepaper_hash": "1be05d1134f677dfbce9afa7392a2c200c000f3db74fb8d228e3636a2b624494",
+    "scan_date": "2026-03-11T09:03:53.612Z"
+  },
+  {
+    "id": "MNT",
+    "name": "Mantle",
+    "ai_iq": 88,
+    "whitepaper_url": "https://www.mantle.xyz/whitepaper",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:54.282Z"
+  },
+  {
+    "id": "PI",
+    "name": "Pi Network",
+    "ai_iq": 38,
+    "whitepaper_url": "https://minepi.com/white-paper/",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:54.974Z"
+  },
+  {
+    "id": "USYC",
+    "name": "Circle USYC",
+    "ai_iq": 95,
+    "whitepaper_url": "https://www.circle.com/en/usdc/institutional",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:56.094Z"
+  },
+  {
+    "id": "OKB",
+    "name": "OKB",
+    "ai_iq": 79,
+    "whitepaper_url": "https://www.okx.com/okb",
+    "whitepaper_hash": "91235922ce7d113466a0cae0a17ceccad4be7d63d09ae834467bc8b72dcc578f",
+    "scan_date": "2026-03-11T09:03:58.203Z"
+  },
+  {
+    "id": "BUIDL",
+    "name": "BlackRock BUIDL",
+    "ai_iq": 98,
+    "whitepaper_url": "https://www.sec.gov/Archives/edgar/data/1986015/000119312524072841/d791535dnflow.htm",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:03:58.887Z"
+  },
+  {
+    "id": "TAO",
+    "name": "Bittensor",
+    "ai_iq": 93,
+    "whitepaper_url": "https://bittensor.com/whitepaper",
+    "whitepaper_hash": "daa2e1821ad606a9bf95b7f0f39ce9605625c82512c41c76fdf0b045b3d93e77",
+    "scan_date": "2026-03-11T09:03:59.579Z"
+  },
+  {
+    "id": "FUSD",
+    "name": "Falcon USD",
+    "ai_iq": 84,
+    "whitepaper_url": "https://www.falconx.io/",
+    "whitepaper_hash": "672223a7a5b994c12e6539f354ca68ab2e0de2a3db3af76088424deb82b76bfe",
+    "scan_date": "2026-03-11T09:04:00.284Z"
+  },
+  {
+    "id": "SKY",
+    "name": "Sky (SKY)",
+    "ai_iq": 87,
+    "whitepaper_url": "https://docs.sky.money/",
+    "whitepaper_hash": "3c103277d944d8a3dd484e0eaeca4b69b081b52be09e6aa6faeac9905a5e9a9c",
+    "scan_date": "2026-03-11T09:04:01.251Z"
+  },
+  {
+    "id": "ASTER",
+    "name": "Aster",
+    "ai_iq": 81,
+    "whitepaper_url": "https://docs.astar.network/",
+    "whitepaper_hash": "b5ba44dd5e9385443d64ff48d3b4682fb2343b5cfca548bdb603e3e661c8807d",
+    "scan_date": "2026-03-11T09:04:02.629Z"
+  },
+  {
+    "id": "GUSD",
+    "name": "Global Dollar",
+    "ai_iq": 90,
+    "whitepaper_url": "https://globaldollar.network/",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:03.495Z"
+  },
+  {
+    "id": "AAVE",
+    "name": "Aave",
+    "ai_iq": 96,
+    "whitepaper_url": "https://aave.com/docs/aave-v3/overview",
+    "whitepaper_hash": "4f832052c5cee42ed2ebd8829fb63aa0a91efa6f32bce266690d2fe6ea3b87a0",
+    "scan_date": "2026-03-11T09:04:04.816Z"
+  },
+  {
+    "id": "NEAR",
+    "name": "NEAR Protocol",
+    "ai_iq": 91,
+    "whitepaper_url": "https://pages.near.org/papers/the-official-near-white-paper/",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:05.497Z"
+  },
+  {
+    "id": "RLUSD",
+    "name": "Ripple USD",
+    "ai_iq": 92,
+    "whitepaper_url": "https://ripple.com/solutions/stablecoin/",
+    "whitepaper_hash": "be105918f5616660dd8198237aa4a2a630ca73519008e5b8530251030f7e478e",
+    "scan_date": "2026-03-11T09:04:06.334Z"
+  },
+  {
+    "id": "BGB",
+    "name": "Bitget Token",
+    "ai_iq": 77,
+    "whitepaper_url": "https://www.bitget.com/fr/events/bgb-whitepaper",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:07.005Z"
+  },
+  {
+    "id": "HTX",
+    "name": "HTX DAO",
+    "ai_iq": 71,
+    "status": "Governance Risk",
+    "whitepaper_url": "https://www.htxdao.com/",
+    "whitepaper_hash": "2c2424185ac41ccfe42d3510b07375858a76e350c83360897d48b1bab82589dc",
+    "scan_date": "2026-03-11T09:04:08.433Z"
+  },
+  {
+    "id": "ICP",
+    "name": "Internet Comp",
+    "ai_iq": 88,
+    "whitepaper_url": "https://dfinity.org/whitepaper.pdf",
+    "whitepaper_hash": "2ae05f19c0d8a9f679106719057a78a38b03ced7b88caba78be6a921cfd0946f",
+    "scan_date": "2026-03-11T09:04:09.459Z"
+  },
+  {
+    "id": "PEPE",
+    "name": "Pepe",
+    "ai_iq": 35,
+    "whitepaper_url": "https://pepe.vip/manifesto",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:10.521Z"
+  },
+  {
+    "id": "BFUSD",
+    "name": "BFUSD",
+    "ai_iq": 83,
+    "whitepaper_url": "https://www.binance.com/",
+    "whitepaper_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scan_date": "2026-03-11T09:04:11.174Z"
+  },
+  {
+    "id": "USDY",
+    "name": "Ondo USDY",
+    "ai_iq": 91,
+    "whitepaper_url": "https://ondo.finance/usdy",
+    "whitepaper_hash": "0f5b49985633d410ffad7720f895e83237dff7f2107ad3c0428be2a9d84ade49",
+    "scan_date": "2026-03-11T09:04:12.267Z"
+  },
+  {
+    "id": "ETC",
+    "name": "Ethereum Classic",
+    "ai_iq": 82,
+    "whitepaper_url": "https://ethereumclassic.org/knowledge/whitepaper",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:13.496Z"
+  },
+  {
+    "id": "ONDO",
+    "name": "Ondo",
+    "ai_iq": 92,
+    "whitepaper_url": "https://ondo.finance/whitepaper",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:14.137Z"
+  },
+  {
+    "id": "PUMP",
+    "name": "Pump.fun",
+    "ai_iq": 32,
+    "whitepaper_url": "https://pump.fun/terms",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:14.817Z"
+  },
+  {
+    "id": "GT",
+    "name": "Gate Token",
+    "ai_iq": 76,
+    "whitepaper_url": "https://www.gate.io/gate_token",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:15.599Z"
+  },
+  {
+    "id": "MORPHO",
+    "name": "Morpho",
+    "ai_iq": 95,
+    "whitepaper_url": "https://whitepaper.morpho.org/",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:16.223Z"
+  },
+  {
+    "id": "USTB",
+    "name": "Superstate USTB",
+    "ai_iq": 97,
+    "whitepaper_url": "https://www.superstate.co/ustb",
+    "whitepaper_hash": "db97c2b4c4d733dab2b6724133a7da09faab254ff0d15f3f2b2cb80a97bbb95b",
+    "scan_date": "2026-03-11T09:04:19.115Z"
+  },
+  {
+    "id": "KCS",
+    "name": "KuCoin Token",
+    "ai_iq": 72,
+    "whitepaper_url": "https://www.kucoin.com/kcs",
+    "whitepaper_hash": "9f1934d113f87fa7c474dbecd461d6f70cf37ada915b79a7a12af26f8349d063",
+    "scan_date": "2026-03-11T09:04:20.283Z"
+  },
+  {
+    "id": "WLD",
+    "name": "Worldcoin",
+    "ai_iq": 84,
+    "whitepaper_url": "https://whitepaper.worldcoin.org/",
+    "whitepaper_hash": "d7ecf6141a3eefa815d0fa5afa2b45dd388a270a3612203f258e6661e2c2ebe6",
+    "scan_date": "2026-03-11T09:04:21.693Z"
+  },
+  {
+    "id": "POL",
+    "name": "Polygon (POL)",
+    "ai_iq": 90,
+    "whitepaper_url": "https://polygon.technology/papers/pol-whitepaper",
+    "whitepaper_hash": "430a4dbbe7b99c47aeb3471bec90858f1a5e10a864f7095423c62983d0892395",
+    "scan_date": "2026-03-11T09:04:22.643Z"
+  },
+  {
+    "id": "EUTBL",
+    "name": "Spiko EUTBL",
+    "ai_iq": 94,
+    "whitepaper_url": "https://www.spiko.xyz/",
+    "whitepaper_hash": "640d0c5010e0bf0a50cdf447d73ce804a99181fa198787d96461746fdbc1e752",
+    "scan_date": "2026-03-11T09:04:24.855Z"
+  },
+  {
+    "id": "QNT",
+    "name": "Quant",
+    "ai_iq": 91,
+    "whitepaper_url": "https://www.quant.network/overledger-white-paper",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:25.882Z"
+  },
+  {
+    "id": "ATOM",
+    "name": "Cosmos",
+    "ai_iq": 89,
+    "whitepaper_url": "https://v1.cosmos.network/resources/whitepaper",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:27.749Z"
+  },
+  {
+    "id": "NEXO",
+    "name": "Nexo",
+    "ai_iq": 75,
+    "whitepaper_url": "https://nexo.com/assets/downloads/nexo-whitepaper.pdf",
+    "whitepaper_hash": "d06cb8fbaf158c0ed01a8be0789ab734de6466d20057ac9232d9a9e43f365238",
+    "scan_date": "2026-03-11T09:04:29.415Z"
+  },
+  {
+    "id": "NIGHT",
+    "name": "Midnight",
+    "ai_iq": 85,
+    "whitepaper_url": "https://midnight.network/",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:30.383Z"
+  },
+  {
+    "id": "ENA",
+    "name": "Ethena (ENA)",
+    "ai_iq": 80,
+    "whitepaper_url": "https://ethena-labs.gitbook.io/ethena-labs/",
+    "whitepaper_hash": "04fb460f129535e05e19cd1bac2f7ae0c3d1dd6c976b6a25eeab366c4c1f3649",
+    "scan_date": "2026-03-11T09:04:31.206Z"
+  },
+  {
+    "id": "USDtb",
+    "name": "USDtb",
+    "ai_iq": 88,
+    "whitepaper_url": "https://ethena.fi/",
+    "whitepaper_hash": "27b4376dfec65a33be6a229217d1ce0c238768fc0a682592f7c50220f8d5a64f",
+    "scan_date": "2026-03-11T09:04:32.112Z"
+  },
+  {
+    "id": "KAS",
+    "name": "Kaspa",
+    "ai_iq": 87,
+    "whitepaper_url": "https://kaspa.org/wp-content/uploads/2022/09/ghostdag-full-6.pdf",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:32.934Z"
+  },
+  {
+    "id": "HASH",
+    "name": "Provenance",
+    "ai_iq": 93,
+    "whitepaper_url": "https://provenance.io/whitepaper.pdf",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:33.720Z"
+  },
+  {
+    "id": "RENDER",
+    "name": "Render",
+    "ai_iq": 92,
+    "whitepaper_url": "https://renderfoundation.com/whitepaper",
+    "whitepaper_hash": "a21b38629da04cf2436d1666a6a4c041d57b02f3b5230f91fc2ebe8b95981112",
+    "scan_date": "2026-03-11T09:04:34.401Z"
+  },
+  {
+    "id": "FLR",
+    "name": "Flare",
+    "ai_iq": 86,
+    "whitepaper_url": "https://flare.network/wp-content/uploads/Flare-White-Paper.pdf",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:35.323Z"
+  },
+  {
+    "id": "ALGO",
+    "name": "Algorand",
+    "ai_iq": 91,
+    "whitepaper_url": "https://www.algorand.com/technology/white-papers",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:36.072Z"
+  },
+  {
+    "id": "OUSG",
+    "name": "OUSG (Ondo)",
+    "ai_iq": 96,
+    "whitepaper_url": "https://ondo.finance/ousg",
+    "whitepaper_hash": "b7e4a86e60e915613a64c83bf296b32c98a40c145cc2d2da5004c0a781fd74fd",
+    "scan_date": "2026-03-11T09:04:36.904Z"
+  },
+  {
+    "id": "USDD",
+    "name": "USDD",
+    "ai_iq": 68,
+    "whitepaper_url": "https://usdd.io/USDD-Whitepaper.pdf",
+    "whitepaper_hash": "9172e6672fbc1c38252a42c28e6367b59d20c6715b2b3da798a10f05f046dd51",
+    "scan_date": "2026-03-11T09:04:37.805Z"
+  },
+  {
+    "id": "JH",
+    "name": "Janus Henderson",
+    "ai_iq": 98,
+    "whitepaper_url": "https://www.janushenderson.com/",
+    "whitepaper_hash": "585cdc9b3aed60f42cbc9d596681f324386fe52a6b3640da25ed52c45f812309",
+    "scan_date": "2026-03-11T09:04:42.108Z"
+  },
+  {
+    "id": "APT",
+    "name": "Aptos",
+    "ai_iq": 90,
+    "whitepaper_url": "https://aptosfoundation.org/whitepaper",
+    "whitepaper_hash": "3ea4ed1c62ad528d52515295e24122bf17b3b681b110a6df64986e07266d67cd",
+    "scan_date": "2026-03-11T09:04:43.015Z"
+  },
+  {
+    "id": "TRUMP",
+    "name": "Official Trump",
+    "ai_iq": 45,
+    "whitepaper_url": "https://worldlibertyfinancial.com",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:43.674Z"
+  },
+  {
+    "id": "FIL",
+    "name": "Filecoin",
+    "ai_iq": 88,
+    "whitepaper_url": "https://filecoin.io/filecoin.pdf",
+    "whitepaper_hash": "b451b698921d5b03dcba4b2aec2ec1b1b81af9eb6d1cb757c413c45da865ef14",
+    "scan_date": "2026-03-11T09:04:44.606Z"
+  },
+  {
+    "id": "XDC",
+    "name": "XDC Network",
+    "ai_iq": 87,
+    "whitepaper_url": "https://xinfin.org/docs/whitepaper-tech.pdf",
+    "whitepaper_hash": "43c2ea1f04dbbd47494c6c52ef36de5df56e5c852b6827d0ccb46d1abaf40b32",
+    "scan_date": "2026-03-11T09:04:45.369Z"
+  },
+  {
+    "id": "BDX",
+    "name": "Beldex",
+    "ai_iq": 82,
+    "whitepaper_url": "https://beldex.io/whitepaper.pdf",
+    "whitepaper_hash": "2bad2b5be6199813a4a588b8b2fc779e9802ee14849fa2edb96310620456d237",
+    "scan_date": "2026-03-11T09:04:47.003Z"
+  },
+  {
+    "id": "VET",
+    "name": "VeChain",
+    "ai_iq": 89,
+    "whitepaper_url": "https://www.vechain.org/whitepaper-2-0/",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:04:47.826Z"
+  },
+  {
+    "id": "YLDS",
+    "name": "YLDS",
+    "ai_iq": 84,
+    "whitepaper_url": "https://docs.yields.fi/",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:05:03.443Z"
+  },
+  {
+    "id": "ARB",
+    "name": "Arbitrum",
+    "ai_iq": 92,
+    "whitepaper_url": "https://developer.arbitrum.io/whitepaper.pdf",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:05:09.103Z"
+  },
+  {
+    "id": "GHO",
+    "name": "GHO (Aave)",
+    "ai_iq": 94,
+    "whitepaper_url": "https://docs.aave.com/faq/gho-stablecoin",
+    "whitepaper_hash": "a3d17a0e0bfec13d7200b5ccffc9068b3860a1f7af04146098652207a8dbc7b1",
+    "scan_date": "2026-03-11T09:05:09.913Z"
+  },
+  {
+    "id": "JUP",
+    "name": "Jupiter",
+    "ai_iq": 87,
+    "whitepaper_url": "https://docs.jup.ag/",
+    "whitepaper_hash": "f792bc04892f4caa41fc430136e222169306bb1a3422571e1e683cbed491644d",
+    "scan_date": "2026-03-11T09:05:10.828Z"
+  },
+  {
+    "id": "STABLE",
+    "name": "Stable",
+    "ai_iq": 78,
+    "whitepaper_url": "https://stable.com/",
+    "whitepaper_hash": "679f9c8a688b27d2d5a031ee0d0f205ce34b2d49fff26f0db40947be62ea4072",
+    "scan_date": "2026-03-11T09:05:11.581Z"
+  },
+  {
+    "id": "JHT",
+    "name": "Janus Henderson Tr.",
+    "ai_iq": 98,
+    "whitepaper_url": "https://www.janushenderson.com/",
+    "whitepaper_hash": "585cdc9b3aed60f42cbc9d596681f324386fe52a6b3640da25ed52c45f812309",
+    "scan_date": "2026-03-11T09:05:15.839Z"
+  },
+  {
+    "id": "USD0",
+    "name": "Usual USD",
+    "ai_iq": 89,
+    "whitepaper_url": "https://usual.gitbook.io/",
+    "whitepaper_hash": "0c0a8cd740e2a684602c414f34e95c648cd52148f317d99360fbb5029c28b083",
+    "scan_date": "2026-03-11T09:05:16.865Z"
+  },
+  {
+    "id": "BONK",
+    "name": "Bonk",
+    "ai_iq": 30,
+    "whitepaper_url": "https://www.bonkcoin.com/one-pager",
+    "whitepaper_hash": "3e547605dee89d122f4461c306f7411d6a70c9edf36d85dc561b5561ebdfaabb",
+    "scan_date": "2026-03-11T09:05:18.726Z"
+  },
+  {
+    "id": "DCR",
+    "name": "Decred",
+    "ai_iq": 85,
+    "whitepaper_url": "https://decred.org/decred-whitepaper.pdf",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:05:19.685Z"
+  },
+  {
+    "id": "TUSD",
+    "name": "TrueUSD",
+    "ai_iq": 65,
+    "whitepaper_url": "https://www.trueusd.com/TrueUSD-Whitepaper.pdf",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:05:20.688Z"
+  },
+  {
+    "id": "A7",
+    "name": "A7",
+    "ai_iq": 57,
+    "whitepaper_url": "https://www.trmlabs.com/reports",
+    "whitepaper_hash": "HASH_ERROR_LINK_DOWN",
+    "scan_date": "2026-03-11T09:05:21.682Z"
+  },
+  {
+    "id": "KITE",
+    "name": "Kite",
+    "ai_iq": 68,
+    "whitepaper_url": "https://kite.network/",
+    "whitepaper_hash": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023",
+    "scan_date": "2026-03-11T09:05:22.724Z"
+  }
+]

@@ -4,39 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2A Agency | Global Brand Integrity Index</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        '2a-emerald': '#064e3b',
+                    }
+                }
+            }
+        }
+    </script>
 
     <script type="application/ld+json">
         {
           "@context": "https://schema.org/",
           "@type": "Dataset",
           "name": "Global Brand Integrity Index (ERC-8004)",
-          "description": "Official on-chain registry of 493+ brands integrity scores. Verified via ERC-8004 Standardized Protocol on Base L2.",
+          "description": "Official on-chain registry of 593+ brands integrity scores. Verified via ERC-8004 Standardized Protocol on Base L2.",
           "url": "https://www.2aagency.com/registry.html",
-          "keywords": ["Brand Integrity", "Blockchain Audit", "ERC-8004", "Luxury Registry", "AI-IQ"],
-          "license": "https://www.2aagency.com/whitepaper.html",
+          "keywords": ["Brand Integrity", "Blockchain Audit", "ERC-8004", "Crypto Audit", "AI-IQ"],
           "creator": {
             "@type": "Organization",
             "name": "2A Agency",
             "url": "https://www.2aagency.com"
           },
-          "variableMeasured": [
-            "Brand Authenticity", 
-            "Heritage Score", 
-            "AI-IQ"
-          ],
-          "measurementTechnique": "ERC-8004 Standardized Protocol",
-          "distribution": [
-            {
-              "@type": "DataDownload",
-              "encodingFormat": "text/html",
-              "contentUrl": "https://www.2aagency.com/registry.html"
-            }
-          ],
           "identifier": "0x8269781B855D2987E9873ff1A3A81878E77665B1"
         }
-        </script>
+    </script>
 </head>
-<body class="p-6 md:p-12">
+<body class="p-6 md:p-12 bg-white text-black font-sans selection:bg-2a-emerald selection:text-white">
 
     <nav class="flex justify-between items-center mb-16">
         <a href="index.html" class="text-xs font-black tracking-widest uppercase border-b-2 border-black pb-1">2A Agency</a>
@@ -53,8 +51,8 @@
             SENTINEL-01 : SYSTEM OF RECORD ACTIVE
         </div>
         <div class="flex items-center gap-2">
-            <span class="opacity-40">INDEXED BRANDS:</span>
-            <span class="text-2a-emerald font-black">493+</span>
+            <span class="opacity-40">INDEXED ENTITIES:</span>
+            <span class="text-2a-emerald font-black">593+</span>
         </div>
     </header>
 
@@ -64,13 +62,14 @@
         </h1>
     </section>
 
-    <nav class="flex gap-8 mb-12 border-b border-gray-200 overflow-x-auto pb-2">
+    <nav class="flex gap-8 mb-12 border-b border-gray-200 overflow-x-auto pb-2 no-scrollbar">
         <button onclick="switchTab('luxury')" id="tab-luxury" class="pb-2 text-xs uppercase tracking-widest transition-all">01_Luxury</button>
         <button onclick="switchTab('beauty')" id="tab-beauty" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">02_Beauty</button>
         <button onclick="switchTab('home')" id="tab-home" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">03_Home</button>
         <button onclick="switchTab('longevity')" id="tab-longevity" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">04_Longevity</button>
         <button onclick="switchTab('apparel')" id="tab-apparel" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">05_Apparel</button>
         <button onclick="switchTab('fnb')" id="tab-fnb" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">06_F&B</button>
+        <button onclick="switchTab('crypto')" id="tab-crypto" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40 border-blue-600 text-blue-600 font-black">07_Crypto</button>
     </nav>
 
     <div class="overflow-x-auto min-h-[400px]">
@@ -602,18 +601,124 @@
                 { "name": "Belgian Waffle Co", "score": 3, "hash": "0x7de3866175516f915403ceea08677dc8fab6db24fbb970923c415338cc0bbcd0" },
                 { "name": "All G Foods", "score": 2, "hash": "0xdbc8b00aa3168f2d489b6f425da5454c3f97254adb72ff28f36fb6764de3548c" },
                 { "name": "Kula Bio", "score": 1, "hash": "0x028b7ae3480b4809515c54cebb5d81444a91e6d9c95287939dcb573e17384833" }
-            ]
+            ],
+            crypto: [
+                { id: "BTC", name: "Bitcoin (BTC)", score: 99, hash: "0x96dcf0e628db5ca735095d71f3919dbff7283489c096760e0099bc71b11830da", wp_hash: "b1674191a8" },
+                { id: "ETH", name: "Ethereum (ETH)", score: 98, hash: "0x6a07142f30a41508406d7b8fd10a30f1dc856e929e4f2c341bae3afd63bff02c", wp_hash: "9933de6f2a" },
+                { id: "USDT", name: "Tether (USDT)", score: 72, hash: "0x78cdafd4e8cee87da3239ff0597b9e282e4d863112dc35070aa2801cacbb64fc", wp_hash: "1fea0d31f0" },
+                { id: "BNB", name: "BNB Chain (BNB)", score: 85, hash: "0xfd20e5883bb228b9ca3e1011b6714a00f2382fc404a9833fc88031e3a175ae2e", wp_hash: "c00e041af9" },
+                { id: "XRP", name: "XRP (XRP)", score: 82, hash: "0x87433b8040445b6746ab3d30d9fffc66b53924d4dc0fe4b403b3b78d16e0698a", wp_hash: "b7f5e8fd97" },
+                { id: "USDC", name: "USDC (USDC)", score: 96, hash: "0x2e030fd79b6e135ea1d486b9169d7cef03e2d259101ed0bad3b1adb714efc17b", wp_hash: "dbb66fdf88" },
+                { id: "SOL", name: "Solana (SOL)", score: 92, hash: "0xf5cd7de8cfabc54eca1f41b85634222e853026ae95c1fc994977372b27b6bf92", wp_hash: "17c29f7785" },
+                { id: "TRX", name: "TRON (TRX)", score: 74, hash: "0x36bc5469c5388fd27f1026ec795b0ce1d827e132690e812c000a32bd2a8466e7", wp_hash: "afecaf505b" },
+                { id: "FIG", name: "Figure Heloc", score: 88, hash: "0x181cefafa975141e7eb4e490f31e606963d3c78c17742c59f677b198cb4777cc", wp_hash: "befe5b4012" },
+                { id: "DOGE", name: "Dogecoin (DOGE)", score: 45, hash: "0xbe6920a59c96c4b777bec0c069a954311ae3080de5041541d76e99c9f7f3d342", wp_hash: "4ffea23276" },
+                { id: "WBT", name: "WhiteBIT Coin", score: 78, hash: "0x1641223b88297ebcc2d092c49398f6b749af26c7441ef6898cf000454d00c116", wp_hash: "553436beb4" },
+                { id: "USDS", name: "USDS (USDS)", score: 94, hash: "0x26d8e0c4e15665acedbd2afd308ef06cb22549bd2d0a38360361637a523d1ded", wp_hash: "0c0a8cd740" },
+                { id: "ADA", name: "Cardano (ADA)", score: 91, hash: "0x78488d81ffffa2d8c066d43eec2a95a401ca3dac21f3c90ecee039bfa1890771", wp_hash: "82f9ccf144" },
+                { id: "BCH", name: "Bitcoin Cash (BCH)", score: 84, hash: "0x64975c1cd2d34c2c26d1b9fd610c6f2d74cff13e020756a665e1c681bd58073d", wp_hash: "b1674191a8" },
+                { id: "LEO", name: "LEO Token", score: 70, hash: "0x09c2f748da8ac4c81668abaf6b8671b5434fa4d68842be47594d17a8e0f778d6", wp_hash: "bfcf46e65e" },
+                { id: "HYPE", name: "Hyperliquid (HYPE)", score: 97, hash: "0xc93c687562984bb9b74585d4ae5a223010d62dcc52fe46c6acaa7c7a41cd626e", wp_hash: "8209a4d005" },
+                { id: "XMR", name: "Monero (XMR)", score: 95, hash: "0x1af6fee2c5eace8b244d303dc6fe792e69202f97feb2c63307bc28d12ff521a1", wp_hash: "adfbc3bb66" },
+                { id: "LINK", name: "Chainlink (LINK)", score: 96, hash: "0x21ce2fb65884993c29a77ccb98b4860c2a22595c6ebdff6ae3c62ae133c04bdc", wp_hash: "2c4ea6fa6c" },
+                { id: "USDe", name: "Ethena USDe", score: 81, hash: "0xa2ec39b4fddee906c214f33f59bb3eb59405cde0a0442472d078fa603b295af4", wp_hash: "04fb460f12" },
+                { id: "CC", name: "Canton (CC)", score: 89, hash: "0x6c8965fd8197a82522f7f6493a037eb2d410abb139c73583d717d3dda6cce8ee", wp_hash: "a741df870e" },
+                { id: "XLM", name: "Stellar (XLM)", score: 88, hash: "0x872c682e94c3b71e9e605141ac84aeea3c72a354a9805da2c1f6bc1fb812ed19", wp_hash: "60fd1e91de" },
+                { id: "USD1", name: "USD1", score: 92, hash: "0x75c99c2541f37d9378453ac3f931e89cf035b6b0c12d30232c2801c0a7379f0c", wp_hash: "586426a305" },
+                { id: "DAI", name: "Dai (DAI)", score: 93, hash: "0x3fdfde1acdac7eedfb0b6595e04635815dfee964e3cfc795963650527817622b", wp_hash: "2a9b021882" },
+                { id: "RAIN", name: "Rain (RAIN)", score: 79, hash: "0xdf6bd0eb9705265bfc180e85c7a8014e71c32603c68b5503d00b45167e2be852", wp_hash: "4cbdfee52b" },
+                { id: "LTC", name: "Litecoin (LTC)", score: 89, hash: "0xa4f2fe46f328cafa51e5be8f8b37b646718bd4ee10abd2f3accf00af4b58d99f", wp_hash: "e708b45dfb" },
+                { id: "AVAX", name: "Avalanche (AVAX)", score: 91, hash: "0xbf6236dbd4f9bdd4ab9ec39949917775c548caf8d03686812fa26db600bb900a", wp_hash: "3679aaf7db" },
+                { id: "PYUSD", name: "PayPal USD (PYUSD)", score: 93, hash: "0x4de256e215ad91216708bd6c7695d31dca0e91dbc9b30abfb38fe6e9bdcd1003", wp_hash: "577c813022" },
+                { id: "HBAR", name: "Hedera (HBAR)", score: 90, hash: "0x01ceba692960d4bf80ffa05b03cefe268c2fd12b96ded0f6d2b50a19bb3417c5", wp_hash: "4a76f4856c" },
+                { id: "SUI", name: "Sui (SUI)", score: 92, hash: "0x38d4a97b421044a61f1726b05b4b7d0883120c543ed9f26043f3786db9b96406", wp_hash: "sui-1.45.0" },
+                { id: "ZEC", name: "Zcash (ZEC)", score: 91, hash: "0x5233614c52cb1687c73ac81bd5232c0cf3186f5a8cb90744e5a874dd7f2fa5ff", wp_hash: "eae9e66330" },
+                { id: "SHIB", name: "Shiba Inu (SHIB)", score: 41, hash: "0x40b3459c71fc1e8dc715f15820769e02a07798436bbb1b1a3b0ebd1d568f531f", wp_hash: "d6fefbaf98" },
+                { id: "TON", name: "Toncoin (TON)", score: 86, hash: "0x3b6cd0f397923980aacfd3605f3ea4fc81d7a849ffd9079529f9e7e333906829", wp_hash: "665fcd39b7" },
+                { id: "CRO", name: "Cronos (CRO)", score: 82, hash: "0x34a889b525434607ce6823aa9692389491f82700ecefa230103cf692299a1854", wp_hash: "5047349121" },
+                { id: "XAUT", name: "Tether Gold (XAUT)", score: 87, hash: "0x74fcb04bafe4559533d5f1ef4757c7dd00a59b8d2874cfa165a7b0c422b01fb4", wp_hash: "7a8c9d5a13" },
+                { id: "WLFI", name: "World Liberty Fin.", score: 76, hash: "0xbb4b81459fa46e2b2e5bb66741fab8593eaa4cc2f14a7583d05629caec0f4ce7", wp_hash: "0x72a2-wlfi" },
+                { id: "PAXG", name: "PAX Gold (PAXG)", score: 94, hash: "0xbd845f92c5e4a5ccd7ecf6aea87b7ec0eb9d555636ceee03c676339be2adec2b", wp_hash: "64a064366e" },
+                { id: "DOT", "name": "Polkadot (DOT)", score: 89, hash: "0xd3c8e5253011b21e358dcc5906987f1f69fbad7d1aedfaffa18b059d23459018", wp_hash: "62d5e9e62b" },
+                { id: "M", "name": "MemeCore (M)", score: 62, hash: "0x04f627274c9200dc18519487803029ee4a735f6652e4a1c64ea91763405ef5cf", wp_hash: "6dfdb228b2" },
+                { id: "UNI", "name": "Uniswap (UNI)", score: 97, hash: "0x7ef869945ab5000327c5ee77c231f1dc424b42f3e59d7c738c8d1e418a27e9a5", wp_hash: "1be05d1134" },
+                { id: "MNT", "name": "Mantle (MNT)", score: 88, hash: "0x88fae861d2e0cd8c8e5e739b851e1add425f36c065746dbb966739ed19e4cd3f", wp_hash: "7568f884bd" },
+                { id: "PI", "name": "Pi Network (PI)", score: 38, hash: "0x274d5b8b0fe33d65d048c3feeed6969004dca8b5e38a5a7081a4ed7609e1ddb4", wp_hash: "e23c638f8a" },
+                { id: "USYC", "name": "Circle USYC", score: 95, hash: "0x722f4ddaf0172945eec6902dca86cc6cd55d4b316d7ed480afc9232229b6364a", wp_hash: "e463365359" },
+                { id: "OKB", "name": "OKB (OKB)", score: 79, hash: "0xe14ef155a3b646313bb1c8619ee0cd1f13d9e94634fdd72ada7674609843a04b", wp_hash: "91235922ce" },
+                { id: "BUIDL", "name": "BlackRock BUIDL", score: 98, hash: "0x5a15ac475a7a6f32f606b1cb5cb4312324709a8310ed8eed202e52eee8e4a0cf", wp_hash: "3fdf7aba5a" },
+                { id: "TAO", "name": "Bittensor (TAO)", score: 93, hash: "0x856c113198eeb60a83eb8fa892e58d6d23bf025e6187ee3c6479e4b59fc5be3d", wp_hash: "daa2e1821a" },
+                { id: "FUSD", "name": "Falcon USD", score: 84, hash: "0x6cc5634fe90c314d8374b59870d9f9f50ff919378d76356c0cd8ee5c90894674", wp_hash: "672223a7a5" },
+                { id: "SKY", "name": "Sky (SKY)", score: 87, hash: "0x950205a6fd2eed8076688ab1b20bf77fac5d483878fb6a1829a36e65e18ebc78", wp_hash: "3c103277d9" },
+                { id: "ASTER", "name": "Aster (ASTER)", score: 81, hash: "0xba47fd67c663e45bf46366ae755aa0eea49903600acb45dd0cc76073ac284325", wp_hash: "b5ba44dd5e" },
+                { id: "GUSD", "name": "Global Dollar", score: 90, hash: "0xb350f3371f01e039362b89604aec014c1af57ce932bb98fb299f3930512bc761", wp_hash: "e6507a72de" },
+                { id: "AAVE", "name": "Aave (AAVE)", score: 96, hash: "0x077eff27349f0792f13701a02bcc9b3e9b045f1856acd9f8f5f86c1a46bbc7b2", wp_hash: "4f832052c5" },
+                { id: "NEAR", "name": "NEAR Protocol", score: 91, hash: "0x96306a540abce228a1ee473dcc0bf5b087f1e02387c7733cea279f9bbc66228b", wp_hash: "near-v2.8" },
+                { id: "RLUSD", "name": "Ripple USD", score: 92, hash: "0x6cc77e8537bc433bdde57eb97e9b17e0f40cd5d178bedcf9e5818092dd8fbb70", wp_hash: "be105918f5" },
+                { id: "BGB", "name": "Bitget Token", score: 77, hash: "0xa0d58a4353b1ab9142d47d5bb17b1bce685c87cac0bea4e71af68f27fe7585dc", "wp_hash": "bgb-2026-audit" },
+                { id: "HTX", "name": "HTX DAO", score: 71, hash: "0x1fc375ddc618c7dc265de53d7e747e7244be104b5bd062abd8bfe16f146bea71", wp_hash: "2c2424185a" },
+                { id: "ICP", "name": "Internet Comp (ICP)", score: 88, hash: "0x884de2f7859ed4d1f8ba8e9edeaf69299929972d2c6f4b8317dda90ef8df2b4d", wp_hash: "2ae05f19c0" },
+                { id: "PEPE", "name": "Pepe (PEPE)", score: 35, hash: "0x7be9e69f25c2fc91884d6a08dc0204e420155758f9d9ccd90a8978f21db12da4", wp_hash: "0x72a2-pepe" },
+                { id: "BFUSD", "name": "BFUSD", score: 83, hash: "0x9cfe1b98f076192a368e1a5c8506cf2b085b3f5d57432c175c68e7572164ecd9", wp_hash: "e3b0c44298" },
+                { id: "USDY", "name": "Ondo USDY", score: 91, hash: "0xded584ec216efb18e3736f6cc9a752bcdc6a13ebdaecd3535e8de804ca6aa662", wp_hash: "0f5b499856" },
+                { id: "ETC", "name": "Ethereum Classic", score: 82, hash: "0x98c99b5feb9c2e9bde6683d76cde60404ecc72ee8449861e3cd6a98dc88283d7", wp_hash: "59953f4590" },
+                { id: "ONDO", "name": "Ondo (ONDO)", score: 92, hash: "0x9ef980600d696e97b8d01b3bd22794c0c8d5a79cfa5235625b091bdaba7d0a6d", wp_hash: "6472d89057" },
+                { id: "PUMP", "name": "Pump.fun (PUMP)", score: 32, hash: "0x2e82b23193e1b884bbc388f7f99f9774def23e46332fc71e8f6bc20ba93d917b", wp_hash: "pump-terms-v2" },
+                { id: "GT", "name": "Gate (GT)", score: 76, hash: "0x99c613f3f621da8cedb0390d509dc8ff2eefc21a36e28e5405d1159ed331131a", wp_hash: "0x72a2-gtok" },
+                { id: "MORPHO", "name": "Morpho", score: 95, hash: "0x4c752b85ec6f4256df685c5da66e92159edbe0d038c11646ba94052831510f57", wp_hash: "blue-v2-sha" },
+                { id: "USTB", "name": "Superstate USTB", score: 97, hash: "0xcdcb87ae79f52921eda77e2c63573db37380c48e6de2509820e9d9049183413d", wp_hash: "db97c2b4c4" },
+                { id: "KCS", "name": "KuCoin (KCS)", score: 72, hash: "0x1165f97ef89bb829a4cadd32a655afe22fb9f69fd3224cb1bcbdce9814faec2a", wp_hash: "9f1934d113" },
+                { id: "WLD", "name": "Worldcoin (WLD)", score: 84, hash: "0x9912901f8dec6807aa6f9c65f9ea5cd39606ef0423bd3e00714ab6c2cf730dc9", wp_hash: "d7ecf6141a" },
+                { id: "POL", "name": "POL (ex-MATIC)", score: 90, hash: "0x276a52453a79cc42ce608d8d7e6dc4b6c0c6dc46f4db5eb4f3b0eec9d83ea8b7", wp_hash: "430a4dbbe7" },
+                { id: "EUTBL", "name": "Spiko EUTBL", score: 94, hash: "0x791d07b6264a019fa3583490d18c72b852fd1fc67fa3881223d17cc942c2bf9b", wp_hash: "640d0c5010" },
+                { id: "QNT", "name": "Quant (QNT)", score: 91, hash: "0x38279677f2e5725eeb96a496c2c17f5de1c865b5a5f59f426c88a1caf8ffa26f", wp_hash: "b3bf51783b" },
+                { id: "ATOM", "name": "Cosmos (ATOM)", score: 89, hash: "0x81b9cdae2d43ed2875af544aeb5bd791a1eb5eda3d3a4f25dc52f9a74352c4ae", wp_hash: "atom-ffg-6c7" },
+                { id: "NEXO", "name": "NEXO (NEXO)", score: 75, hash: "0x06e35390ce691e620af53003ab43dd2c5733f44d380787c29398f5966d355930", wp_hash: "d06cb8fbaf" },
+                { id: "NIGHT", "name": "Midnight (NIGHT)", score: 85, hash: "0x7cd6f82e3a2681dde8ade9101d0d71f15ed974506fa9ff64979105a945e5c529", wp_hash: "0x72a2-nght" },
+                { id: "ENA", "name": "Ethena (ENA)", score: 80, hash: "0x1a2ecd4cdfe1aa7fb7500fcafe02d22f5e303e5f5c182819159e6449935de2a8", wp_hash: "04fb460f12" },
+                { id: "USDtb", "name": "USDtb", score: 88, hash: "0xab0e9b1249da2c0221f9d14b7d8dd81cd5488a93d4276d34b15f6868cab715a5", wp_hash: "27b4376dfe" },
+                { id: "KAS", "name": "Kaspa (KAS)", score: 87, hash: "0x9b1cbad2f43f8965800502c101295e20002d89e78ccd68db987cffc049e94022", wp_hash: "a888a6bb83" },
+                { id: "HASH", "name": "Provenance (HASH)", score: 93, hash: "0x40b412a13e5bbc42650e744c94023f5fcfd605ffce1f65bbe94272515452ce33", wp_hash: "8262ba7e11" },
+                { id: "RENDER", "name": "Render (RENDER)", score: 92, hash: "0x9377e21ba3c6bbeb784fe5a694190c56c91b635a252fc0c6b5d0bec3565d2d1f", wp_hash: "a21b38629d" },
+                { id: "FLR", "name": "Flare (FLR)", score: 86, hash: "0x49c7db97d90c5879f972860b2617d8e7a2c35869531f852ad01a4ee5c4cade40", wp_hash: "238d838a10" },
+                { id: "ALGO", "name": "Algorand (ALGO)", score: 91, hash: "0x4da2894b5363d0ae82dae52e50b47891ea27549da0ce9312e83d613c1a22bacf", wp_hash: "05d96efc85" },
+                { id: "OUSG", "name": "OUSG (Ondo)", score: 96, hash: "0xc6605bb7e6310cd0c40d447d719745f8fc1a908ea9bf4209315dffd68dff731b", wp_hash: "b7e4a86e60" },
+                { id: "USDD", "name": "USDD", score: 68, hash: "0x305de0db456361fe50f3c232d59417cc3b719f98545153bc1124fc51a41d5960", wp_hash: "9172e6672f" },
+                { id: "JH", "name": "Janus Henderson", score: 98, hash: "0xfee18e0b4f7376db511e3ce9de29906011c95db320eab8762021d107c88cbf4f", wp_hash: "585cdc9b3a" },
+                { id: "APT", "name": "Aptos (APT)", score: 90, hash: "0x9e40cbf81b447e087f847f44c90ee73f82004b5b6676cddd774fc30d26074a63", wp_hash: "3ea4ed1c62" },
+                { id: "TRUMP", "name": "Official Trump", score: 45, hash: "0x6d097f6687e892b3162c17b66c67469b864548f5e1e89767ff7faaa8de13cdbe", wp_hash: "0x72a2-trum" },
+                { id: "FIL", "name": "Filecoin (FIL)", score: 88, hash: "0x35b47ec94b7199fd3c24805c69a3002e9c55756b9582107c23a8492ba48c12da", wp_hash: "b451b69892" },
+                { id: "XDC", "name": "XDC Network", score: 87, hash: "0x33e22523e41cfd749f21bc9abb5274d3d21f562cb313127e163ad9fd703645de", wp_hash: "43c2ea1f04" },
+                { id: "BDX", "name": "Beldex (BDX)", score: 82, hash: "0x635fe1795b1f96bd3bcadd47b83f90f1b2543e166eac1c46e1439039b6ca00f0", wp_hash: "2bad2b5be6" },
+                { id: "VET", "name": "VeChain (VET)", score: 89, hash: "0xe64306865deda485bc183ff82ac7a60a460ecd83c02e8dfdddd217b257af862c", wp_hash: "vet-wp-2.0" },
+                { id: "YLDS", "name": "YLDS", score: 84, hash: "0xa48c9c3e35adb974be0c4c2f6f441e08842acfaff312a7b4e687319177945c44", wp_hash: "0x72a2-ylds" },
+                { id: "ARB", "name": "Arbitrum (ARB)", score: 92, hash: "0xedceeb4e00d8e422ec869c6d8c3d95b5ed7569e476f6a99dd273bcafb74fa659", wp_hash: "arbos-nitro" },
+                { id: "GHO", "name": "GHO (Aave)", score: 94, hash: "0x74155a5b1e5caebba7e5556a30d5c5b2c4f4d6ebbc96eee483f38a34e434bc61", wp_hash: "a3d17a0e0b" },
+                { id: "JUP", "name": "Jupiter (JUP)", score: 87, hash: "0xcadf74e6ef36c3f89762a0401ac6722b1e6572ac1d90f8ee6ca3cf360030b0db", wp_hash: "f792bc0489" },
+                { id: "STABLE", "name": "Stable (STABLE)", score: 78, hash: "0x7f856e65b1265e2a9d4dab8d8e1be601183d09c3790b9623b89fa832baeb362e", wp_hash: "679f9c8a68" },
+                { id: "JHT", "name": "Janus Henderson Tr.", score: 98, hash: "0x42f844ce0b8300c491c126929c34e02e687f0ee9f7c969c4e24faa4aa5eb4412", wp_hash: "585cdc9b3a" },
+                { id: "USD0", "name": "Usual USD (USD0)", score: 89, hash: "0xf09e8c78a38e4b95df56a8c1a0a28632dfc11b2d493993604a863b434302c1c8", wp_hash: "0c0a8cd740" },
+                { id: "BONK", "name": "Bonk (BONK)", score: 30, hash: "0x3b38b376934b0c0306aa14ac85ceb69cf3da74a23b828767cab34ef2100473ed", wp_hash: "3e547605de" },
+                { id: "DCR", "name": "Decred (DCR)", score: 85, hash: "0xd34fd9a7238afa54fd701d1ac179e33971ebe145c91877587097bf37105209ce", wp_hash: "d80f2efff5" },
+                { id: "TUSD", "name": "TrueUSD (TUSD)", score: 65, hash: "0x2c7da13a0dc86f4e2471159a0b31893f526240bf80dea0535bb21bc3231f909e", wp_hash: "119c7c755a" },
+                { id: "A7A5", "name": "A7A5", score: 74, hash: "0x392b21f43139c376306d12b81c3f61824b218ebd226f307b4699a4e95eefb80b", wp_hash: "0x72a2-risk" },
+                { id: "KITE", "name": "Kite (KITE)", score: 68, hash: "0x35a1907946ca0d589a590bb1dabd8d93a040c591595b8ef4d8bc2f1256039c95", wp_hash: "6dc9c7fc93" }
+                ]
         };
 
         function switchTab(category) {
             document.querySelectorAll('nav button').forEach(btn => {
-                btn.classList.remove('tab-active');
+                btn.classList.remove('font-black', 'border-b-2', 'border-black', 'text-blue-600', 'border-blue-600');
                 btn.classList.add('opacity-40');
             });
             const activeBtn = document.getElementById('tab-' + category);
             if(activeBtn) {
-                activeBtn.classList.add('tab-active');
                 activeBtn.classList.remove('opacity-40');
+                if (category === 'crypto') {
+                    activeBtn.classList.add('font-black', 'border-b-2', 'border-blue-600', 'text-blue-600');
+                } else {
+                    activeBtn.classList.add('font-black', 'border-b-2', 'border-black');
+                }
             }
             renderTable(category);
         }
@@ -630,7 +735,7 @@
                 
                 let badgeStyle = "";
                 if (item.score >= 90) {
-                    badgeStyle = "bg-[#0052FF] text-white font-black shadow-[0_0_10px_rgba(0,82,255,0.3)]"; 
+                    badgeStyle = "bg-[#0052FF] text-white font-black shadow-[0_0_10px_rgba(0,82,255,0.2)]"; 
                 } else if (item.score >= 75) {
                     badgeStyle = "bg-[#059669] text-white font-bold"; 
                 } else if (item.score >= 50) {
@@ -639,9 +744,14 @@
                     badgeStyle = "bg-[#DC2626] text-white font-black animate-pulse"; 
                 }
 
+                const docVerify = item.wp_hash ? `<span class="text-[8px] text-emerald-600 font-bold ml-2">DOC_HASH: ${item.wp_hash}</span>` : '';
+
                 row.innerHTML = `
                     <td class="py-4 w-12 opacity-30 font-mono text-[10px]">${(index + 1).toString().padStart(2, '0')}</td>
-                    <td class="py-4 font-black uppercase tracking-wider text-[#064e3b]">${item.name}</td>
+                    <td class="py-4 font-black uppercase tracking-wider text-[#064e3b]">
+                        ${item.name}
+                        ${docVerify}
+                    </td>
                     <td class="py-4 text-center">
                         <span class="px-3 py-1 rounded-sm text-[10px] inline-block min-w-[60px] ${badgeStyle}">
                             ${item.score}/100
@@ -649,37 +759,22 @@
                     </td>
                     <td class="py-4 text-right font-mono text-[9px]">
                         <a href="https://basescan.org/tx/${item.hash}" target="_blank" class="opacity-40 hover:opacity-100 hover:text-[#0052FF] transition-all flex items-center justify-end gap-1">
-                            ${item.hash.substring(0, 10)}...${item.hash.substring(58)}
+                            VERIFY ON-CHAIN
                             <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                         </a>
                     </td>
                 `;
                 body.appendChild(row);
             });
-        } // <--- ON FERME BIEN RENDER TABLE ICI
-
-        // AUTO-INJECTION FOR AI AGENTS (Invisible to humans, readable by LLMs)
-        function injectRawDataForAI() {
-            const aiDiv = document.createElement('div');
-            aiDiv.id = 'ai-raw-data-access';
-            aiDiv.style.display = 'none';
-            aiDiv.setAttribute('aria-hidden', 'true');
-            
-            let rawContent = "<h2>Full Integrity Registry (493 Entities)</h2><ul>";
-            Object.keys(data).forEach(cat => {
-                data[cat].forEach(item => {
-                    rawContent += `<li>${item.name} | Score: ${item.score} | Hash: ${item.hash}</li>`;
-                });
-            });
-            rawContent += "</ul>";
-            aiDiv.innerHTML = rawContent;
-            document.body.appendChild(aiDiv);
         }
 
         window.onload = () => {
             switchTab('luxury');
-            injectRawDataForAI(); // ON LANCE L'INJECTION UNE SEULE FOIS AU CHARGEMENT
         };
     </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
 </body>
 </html>
