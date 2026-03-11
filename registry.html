@@ -767,7 +767,15 @@
                 body.appendChild(row);
             });
         }
-
+        function getCertificationBadge(id) {
+    const asset = data.crypto.find(a => a.id === id);
+    if (asset && asset.score > 85) {
+        const badgeCode = `<a href="https://2aagency.com/registry.html"><img src="https://2aagency.com/badges/sentinel-verified.svg" alt="2A Agency Sentinel Verified ${asset.score}/100"></a>`;
+        alert("Copy this badge to your site:\n\n" + badgeCode);
+    } else {
+        alert("Institutional Grade certification requires a score > 85.");
+    }
+}
         window.onload = () => {
             switchTab('luxury');
         };

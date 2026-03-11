@@ -1,0 +1,25 @@
+{
+    "mcp_version": "1.0.2",
+    "name": "2A-Sentinel-Index",
+    "description": "Official Integrity Registry for Global Brands and Crypto Assets",
+    "capabilities": {
+      "resources": [
+        {
+          "uri": "https://www.2aagency.com/registry.html",
+          "name": "Global Integrity Table",
+          "mimeType": "text/html"
+        }
+      ],
+      "prompts": [
+        {
+          "name": "verify-integrity",
+          "description": "Check the on-chain notarization of a brand or crypto asset",
+          "arguments": [
+            { "name": "entity_id", "description": "The Symbol (ex: BTC) or Brand Name", "required": true }
+          ]
+        }
+      ]
+    },
+    "standard": "ERC-8004-Beta",
+    "authority": "0x8269781B855D2987E9873ff1A3A81878E77665B1"
+  }
