@@ -768,13 +768,18 @@
             });
         }
         function getCertificationBadge(id) {
-    const asset = data.crypto.find(a => a.id === id);
-    if (asset && asset.score > 85) {
-        const badgeCode = `<a href="https://2aagency.com/registry.html"><img src="https://2aagency.com/badges/sentinel-verified.svg" alt="2A Agency Sentinel Verified ${asset.score}/100"></a>`;
-        alert("Copy this badge to your site:\n\n" + badgeCode);
-    } else {
-        alert("Institutional Grade certification requires a score > 85.");
-    }
+            const badgeUrl = "https://www.2aagency.com/badges/sentinel-v1.svg";
+    const registryUrl = "https://www.2aagency.com/registry.html";
+
+    return `
+        <div class="certification-container" style="display: flex; align-items: center; gap: 10px;">
+            <img src="${badgeUrl}" alt="2A Certified" style="height: 30px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+            <div class="cert-text">
+                <span style="display: block; font-size: 10px; font-weight: bold; color: #064e3b;">PREMIUM GRADE</span>
+                <a href="${registryUrl}" style="font-size: 9px; color: #0052FF; text-decoration: none;">Verify On-Chain</a>
+            </div>
+        </div>
+    `;
 }
         window.onload = () => {
             switchTab('luxury');
