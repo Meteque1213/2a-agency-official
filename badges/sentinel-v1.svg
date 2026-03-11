@@ -1,9 +1,10 @@
 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="95" fill="white" stroke="#064e3b" stroke-width="4"/>
-  <path d="M100 30L120 70H80L100 30Z" fill="#064e3b"/>
-  <text x="50%" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#064e3b" letter-spacing="2">SENTINEL</text>
-  <text x="50%" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="10" fill="#0052FF" letter-spacing="1">VERIFIED ON BASE</text>
-  <rect x="60" y="145" width="80" height="15" rx="2" fill="#064e3b"/>
-  <text x="50%" y="156" text-anchor="middle" font-family="Monaco, monospace" font-size="8" fill="white">ERC-8004 COMPLIANT</text>
-  <path d="M85 85L95 95L115 75" stroke="#059669" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="200" height="200" rx="4" fill="#0A0A0A"/>
+  <path d="M100 25L165 62.5V137.5L100 175L35 137.5V62.5L100 25Z" stroke="#F2F2F2" stroke-width="2.5"/>
+  <path d="M100 45L112 75H88L100 45Z" fill="#F2F2F2"/>
+  <text x="50%" y="112" text-anchor="middle" font-family="Verdana, sans-serif" font-weight="900" font-size="15" fill="#F2F2F2" letter-spacing="4">SENTINEL</text>
+  <rect x="65" y="122" width="70" height="1" fill="#0052FF"/>
+  <text x="50%" y="138" text-anchor="middle" font-family="Verdana, sans-serif" font-weight="bold" font-size="9" fill="#0052FF" letter-spacing="1.5">VERIFIED ON BASE</text>
+  <path d="M70 150H130L135 165H65L70 150Z" fill="#F2F2F2"/>
+  <text x="50%" y="161" text-anchor="middle" font-family="monospace" font-size="8" fill="#0A0A0A" font-weight="bold">ERC-8004 COMPLIANT</text>
 </svg>
