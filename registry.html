@@ -864,13 +864,14 @@
         const premiumBadge = item.score >= 75 ? getCertificationBadge() : '';
         
         // --- LA PARTIE À BIEN VÉRIFIER ---
-        const docLabel = item.doc_label || "SENTINEL_INDEX";
-        const docVerify = item.doc_hash ? `
-            <div class="flex flex-col mt-0.5">
-                <span class="text-[7px] text-emerald-600 font-black uppercase tracking-tighter opacity-80">${docLabel}</span>
-                <span class="text-[8px] text-gray-400 font-mono leading-none truncate max-w-[200px]">#${item.doc_hash}</span>
-            </div>
-        ` : '';
+        // Remplace l'ancien bloc par celui-ci :
+const docLabel = item.doc_label || "SENTINEL_INDEX";
+const docVerify = `
+    <div class="flex flex-col mt-0.5">
+        <span class="text-[7px] text-emerald-600 font-black uppercase tracking-tighter opacity-80">${docLabel}</span>
+        ${item.doc_hash ? `<span class="text-[8px] text-gray-400 font-mono leading-none truncate max-w-[200px]">#${item.doc_hash}</span>` : ''}
+    </div>
+`;
 
         row.innerHTML = `
             <td class="py-4 w-12 opacity-30 font-mono text-[10px]">${(index + 1).toString().padStart(2, '0')}</td>
