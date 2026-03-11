@@ -81,6 +81,8 @@
         <button onclick="switchTab('apparel')" id="tab-apparel" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">05_Apparel</button>
         <button onclick="switchTab('fnb')" id="tab-fnb" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">06_F&B</button>
         <button onclick="switchTab('crypto')" id="tab-crypto" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40 border-blue-600 text-blue-600 font-black">07_Crypto</button>
+        <button onclick="switchTab('mobility')" id="tab-mobility" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40 border-blue-600 text-blue-600 font-black">08_Mobility</button>
+    
     </nav>
 
     <div class="overflow-x-auto min-h-[400px]">
@@ -108,6 +110,7 @@
     </footer>
 
     <script>
+        const MOBILITY_PROOF = "0xe26540506c9b8d63a0e136de7b51c2190e08a3749adc226fed2b4bbc459884b2";
         const data = {
             luxury: [
         { name: "Hermès", score: 98, doc_label: "URD_2025_AMF", doc_hash: "3a8d2e9f1b7c6d5e4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e1f", hash: "0x2d10f2ff3c6ddc9347357e5233e267b95ec2988bd9ce898c80f7081cdef42763", proofUrl: "https://finance.hermes.com/fr/" },
@@ -714,26 +717,129 @@
                 { id: "TUSD", "name": "TrueUSD (TUSD)", score: 65, hash: "0x2c7da13a0dc86f4e2471159a0b31893f526240bf80dea0535bb21bc3231f909e", wp_hash: "119c7c755a" },
                 { id: "A7A5", "name": "A7A5", score: 74, hash: "0x392b21f43139c376306d12b81c3f61824b218ebd226f307b4699a4e95eefb80b", wp_hash: "0x72a2-risk" },
                 { id: "KITE", "name": "Kite (KITE)", score: 68, hash: "0x35a1907946ca0d589a590bb1dabd8d93a040c591595b8ef4d8bc2f1256039c95", wp_hash: "6dc9c7fc93" }
-                ]
+                ],
+            mobility: [
+    { id: "BUG", name: "Bugatti", score: 99, doc_label: "BUG_INTEGRITY_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "RR_MOT", name: "Rolls-Royce Motor Cars", score: 99, doc_label: "RR_SPECTRE_ESG_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "RACE", name: "Ferrari", score: 98, doc_label: "FERRARI_ANNUAL_REPORT_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "KOEN", name: "Koenigsegg", score: 98, doc_label: "KOENIGSEGG_TECH_MANIFESTO", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "PAG", name: "Pagani", score: 98, doc_label: "PAGANI_SENTINEL_AUDIT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "LMT", name: "Lockheed Martin", score: 98, doc_label: "LMT_GLOBAL_IMPACT_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "RR_ENG", name: "Rolls-Royce Holdings", score: 98, doc_label: "RR_AERO_NON_FINANCIAL", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "RIM", name: "Rimac", score: 97, doc_label: "RIMAC_NEVERA_DATA_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "POR", name: "Porsche", score: 97, doc_label: "PORSCHE_SUSTAINABILITY_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "AIR", name: "Airbus", score: 97, doc_label: "AIRBUS_UNIVERSAL_REGISTRATION_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "DAS", name: "Dassault Aviation", score: 97, doc_label: "DAS_ANNUAL_FINANCIAL_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "NOC", name: "Northrop Grumman", score: 97, doc_label: "NOC_ESG_REPORT_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "BENT", name: "Bentley", score: 97, doc_label: "BENTLEY_BEYOND100_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "MBG", name: "Mercedes-Benz", score: 96, doc_label: "MB_SUSTAINABILITY_REPORT_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "GULF", name: "Gulfstream", score: 96, doc_label: "GULF_SUSTAINABILITY_PROG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "LAMB", name: "Lamborghini", score: 96, doc_label: "LAMBO_DIREZIONE_COR_TAURI", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "BMW", name: "BMW", score: 95, doc_label: "BMW_GROUP_REPORT_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "VOLV", name: "Volvo", score: 95, doc_label: "VOLVO_ANNUAL_SUSTAINABILITY", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "WAY", name: "Waymo", score: 95, doc_label: "WAYMO_SAFETY_PERFORMANCE_DATA", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "LEX", name: "Lexus", score: 95, doc_label: "TOYOTA_LEXUS_ESG_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "MAERSK", name: "Maersk", score: 95, doc_label: "MAERSK_SUSTAINABILITY_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "SCANIA", name: "Scania", score: 95, doc_label: "SCANIA_ANNUAL_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "TSLA", name: "Tesla", score: 94, doc_label: "TESLA_IMPACT_REPORT_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "AUDI", name: "Audi", score: 94, doc_label: "AUDI_VOT_PROGRESS_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "MCL", name: "McLaren", score: 94, doc_label: "MCLAREN_SUSTAINABILITY", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "ALP", name: "Alpine", score: 93, doc_label: "RENAULT_ALPINE_INTEGRITY", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "TOY", name: "Toyota", score: 93, doc_label: "TOYOTA_ESG_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "DHL", name: "DHL", score: 93, doc_label: "DPDHL_ESG_STATEMENTS_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "UBER", name: "Uber", score: 93, doc_label: "UBER_ESG_REPORT_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "POLE", name: "Polestar", score: 93, doc_label: "POLESTAR_LCA_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "MAN", name: "MAN", score: 93, doc_label: "MAN_TRUCK_BUS_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "UPS", name: "UPS", score: 92, doc_label: "UPS_SUSTAINABILITY_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "CMA", name: "CMA CGM", score: 92, doc_label: "CMA_SUSTAINABILITY_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "BYD", name: "BYD", score: 92, doc_label: "BYD_SOCIAL_RESPONSIBILITY", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "LR", name: "Land Rover", score: 92, doc_label: "JLR_ANNUAL_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "GEN", name: "Genesis", score: 92, doc_label: "HYUNDAI_GENESIS_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "TRI", name: "Triumph", score: 92, doc_label: "TRIUMPH_SUSTAINABILITY", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "SEA_D", name: "Sea-Doo", score: 92, doc_label: "BRP_SEA_DOO_INTEGRITY", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "SIX", name: "Sixt", score: 92, doc_label: "SIXT_ESG_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "NIO", name: "Nio", score: 92, doc_label: "NIO_USER_REPORT_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "RIVN", name: "Rivian", score: 91, doc_label: "RIVIAN_IMPACT_REPORT_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "FEDEX", name: "FedEx", score: 91, doc_label: "FEDEX_ESG_REPORT_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "BLA", name: "BlaBlaCar", score: 91, doc_label: "BLABLACAR_IMPACT_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "BOM", name: "Bombardier", score: 91, doc_label: "BOM_ESG_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "ASTON", name: "Aston Martin", score: 91, doc_label: "ASTON_RACING_GREEN", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "MINI", name: "Mini", score: 91, doc_label: "BMW_MINI_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "BRRP", name: "BRP", score: 91, doc_label: "BRP_ANNUAL_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "YAM", name: "Yamaha", score: 91, doc_label: "YAMAHA_SUSTAINABILITY", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "HAPAG", name: "Hapag-Lloyd", score: 91, doc_label: "HAPAG_ESG_DATA", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "HYU", name: "Hyundai", score: 91, doc_label: "HYUNDAI_ESG_PROGRESS", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "X_PENG", name: "XPeng", score: 91, doc_label: "XPENG_TECH_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "LCID", name: "Lucid Motors", score: 90, doc_label: "LUCID_ESG_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "KIA", name: "Kia", score: 90, doc_label: "KIA_SUSTAINABILITY", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "ALFA", name: "Alfa Romeo", score: 90, doc_label: "ALFA_INTEGRITY_INDEX", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "LI", name: "Li Auto", score: 90, doc_label: "LI_AUTO_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "SUB", name: "Subaru", score: 90, doc_label: "SUBARU_ESG_DATA", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "MSC", name: "MSC", score: 90, doc_label: "MSC_MARITIME_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "HARL", name: "Harley-Davidson", score: 90, doc_label: "HD_SUSTAINABILITY", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "KTM", name: "KTM", score: 90, doc_label: "KTM_PIERER_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "POLA", name: "Polaris", score: 90, doc_label: "POLARIS_ESG_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "CAN_AM", name: "Can-Am", score: 90, doc_label: "BRP_CANAM_INTEGRITY", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "DAF", name: "DAF", score: 90, doc_label: "DAF_TRUCKS_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "VOW", name: "Volkswagen", score: 89, doc_label: "VW_GROUP_ESG_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "JAG", name: "Jaguar", score: 89, doc_label: "JLR_JAGUAR_REIMAGINE", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "LOT", name: "Lotus", score: 89, doc_label: "LOTUS_DRIVING_GREEN", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "ENT", name: "Enterprise", score: 89, doc_label: "ENTERPRISE_ESG_INDEX", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "LYFT", name: "Lyft", score: 89, doc_label: "LYFT_IMPACT_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "MAS", name: "Maserati", score: 89, doc_label: "STELLANTIS_MASERATI_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "MAZ", name: "Mazda", score: 89, doc_label: "MAZDA_SUSTAINABILITY_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "ACU", name: "Acura", score: 89, doc_label: "HONDA_ACURA_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "JOBY", name: "Joby Aviation", score: 89, doc_label: "JOBY_SEC_FILING_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "COW", name: "Cowboy", score: 89, doc_label: "COWBOY_SENTINEL_AUDIT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "F", name: "Ford", score: 88, doc_label: "FORD_INTEGRITY_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "ARCH", name: "Archer Aviation", score: 88, doc_label: "ARCHER_ESG_PROGRESS", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "PEU", name: "Peugeot", score: 88, doc_label: "STELLANTIS_PEUGEOT_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "JEEP", name: "Jeep", score: 88, doc_label: "STELLANTIS_JEEP_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "LIVEW", name: "LiveWire", score: 88, doc_label: "HD_LIVEWIRE_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "SMART", name: "Smart", score: 88, doc_label: "GEELY_SMART_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "IVECO", name: "Iveco", score: 88, doc_label: "IVECO_GROUP_SUSTAINABILITY", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "GM", name: "General Motors", score: 87, doc_label: "GM_SUSTAINABILITY_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "VOLO", name: "Volocopter", score: 87, doc_label: "VOLO_ESG_INDEX", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "REN", name: "Renault", score: 87, doc_label: "RENAULT_ESG_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "DS", name: "DS Automobiles", score: 87, doc_label: "STELLANTIS_DS_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "ANG", name: "Angell", score: 87, doc_label: "ANGELL_MOBILITY_DATA", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "NIS", name: "Nissan", score: 86, doc_label: "NISSAN_GREEN_PROG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "CRU", name: "Cruise", score: 86, doc_label: "GM_CRUISE_SAFETY", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "NAVISTAR", name: "Navistar", score: 86, doc_label: "NAVISTAR_ESG_DATA", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "LIL", name: "Lilium", score: 85, doc_label: "LILIUM_ESG_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "CIT", name: "Citroën", score: 85, doc_label: "STELLANTIS_CITROEN_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "ST_LINE", name: "Starline", score: 85, doc_label: "SENTINEL_INDEX", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "ZOOX", name: "Zoox", score: 85, doc_label: "AMZN_ZOOX_SAFETY", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "STLA", name: "Stellantis", score: 84, doc_label: "STELLANTIS_CSR_REPORT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "INF", name: "Infiniti", score: 84, doc_label: "NISSAN_INFINITI_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "CAK", name: "CAKE", score: 84, doc_label: "CAKE_ESG_AUDIT", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "FIAT", name: "Fiat", score: 82, doc_label: "STELLANTIS_FIAT_ESG", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "HERTZ", name: "Hertz", score: 82, doc_label: "HERTZ_ESG_INDEX", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "BA", name: "Boeing", score: 82, doc_label: "BOEING_SAFETY_ACTION_PLAN", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "NAV", name: "Navya", score: 78, doc_label: "NAVYA_ESG_DATA", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "VANM", name: "VanMoof", score: 65, doc_label: "RECOVERY_DOCS_2025", doc_hash: "", hash: MOBILITY_PROOF },
+    { id: "LUCID", name: "Lucid Motors", score: 90, doc_label: "LUCID_ESG_DATA", doc_hash: "", hash: MOBILITY_PROOF }
+]
         }; // Fin de ton objet data
 
     </script> <script>
         function switchTab(category) {
-            document.querySelectorAll('nav button').forEach(btn => {
-                btn.classList.remove('font-black', 'border-b-2', 'border-black', 'text-blue-600', 'border-blue-600');
-                btn.classList.add('opacity-40');
-            });
-            const activeBtn = document.getElementById('tab-' + category);
-            if(activeBtn) {
-                activeBtn.classList.remove('opacity-40');
-                if (category === 'crypto') {
-                    activeBtn.classList.add('font-black', 'border-b-2', 'border-blue-600', 'text-blue-600');
-                } else {
-                    activeBtn.classList.add('font-black', 'border-b-2', 'border-black');
-                }
-            }
-            renderTable(category);
+    document.querySelectorAll('nav button').forEach(btn => {
+        btn.classList.remove('font-black', 'border-b-2', 'border-black', 'text-blue-600', 'border-blue-600');
+        btn.classList.add('opacity-40');
+    });
+    const activeBtn = document.getElementById('tab-' + category);
+    if(activeBtn) {
+        activeBtn.classList.remove('opacity-40');
+        // On ajoute 'mobility' ici pour qu'il ait le même style "High-Tech Blue" que la crypto
+        if (category === 'crypto' || category === 'mobility') { 
+            activeBtn.classList.add('font-black', 'border-b-2', 'border-blue-600', 'text-blue-600');
+        } else {
+            activeBtn.classList.add('font-black', 'border-b-2', 'border-black');
         }
+    }
+    renderTable(category);
+}
 
         function renderTable(category) {
     const body = document.getElementById('registry-body');
