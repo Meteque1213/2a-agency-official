@@ -1,10 +1,11 @@
 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="200" rx="4" fill="#0A0A0A"/>
-  <path d="M100 25L165 62.5V137.5L100 175L35 137.5V62.5L100 25Z" stroke="#F2F2F2" stroke-width="2.5"/>
-  <path d="M100 45L112 75H88L100 45Z" fill="#F2F2F2"/>
-  <text x="50%" y="112" text-anchor="middle" font-family="Verdana, sans-serif" font-weight="900" font-size="15" fill="#F2F2F2" letter-spacing="4">SENTINEL</text>
-  <rect x="65" y="122" width="70" height="1" fill="#0052FF"/>
-  <text x="50%" y="138" text-anchor="middle" font-family="Verdana, sans-serif" font-weight="bold" font-size="9" fill="#0052FF" letter-spacing="1.5">VERIFIED ON BASE</text>
-  <path d="M70 150H130L135 165H65L70 150Z" fill="#F2F2F2"/>
-  <text x="50%" y="161" text-anchor="middle" font-family="monospace" font-size="8" fill="#0A0A0A" font-weight="bold">ERC-8004 COMPLIANT</text>
+  <circle cx="100" cy="100" r="85" stroke="#E5E7EB" stroke-width="1"/>
+  
+  <text x="50%" y="115" text-anchor="middle" font-family="Garamond, serif" font-weight="900" font-size="80" fill="#059669" letter-spacing="-4">2A</text>
+  
+  <path d="M70 135H130" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
+  
+  <text x="50%" y="150" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#059669" letter-spacing="4" style="text-transform: uppercase;">CERTIFIED</text>
+  
+  <circle cx="100" cy="160" r="3" fill="#0052FF"/>
 </svg>
