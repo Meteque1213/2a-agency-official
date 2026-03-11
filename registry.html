@@ -725,56 +725,62 @@
         }
 
         function renderTable(category) {
-            const body = document.getElementById('registry-body');
-            if (!body) return;
-            body.innerHTML = '';
-            
-            const items = (data[category] || []).sort((a, b) => b.score - a.score);
-            
-            items.forEach((item, index) => {
-                const row = document.createElement('tr');
-                row.className = "border-b border-gray-100 hover:bg-gray-50 transition-colors";
-                
-                let badgeStyle = "";
-                if (item.score >= 90) {
-                    badgeStyle = "bg-[#0052FF] text-white font-black shadow-[0_0_10px_rgba(0,82,255,0.2)]"; 
-                } else if (item.score >= 75) {
-                    badgeStyle = "bg-[#059669] text-white font-bold"; 
-                } else if (item.score >= 50) {
-                    badgeStyle = "bg-[#FACC15] text-black font-bold"; 
-                } else {
-                    badgeStyle = "bg-[#DC2626] text-white font-black animate-pulse"; 
-                }
-
-                const premiumBadge = item.score >= 75 ? getCertificationBadge() : '';
-                const docVerify = item.wp_hash ? `<span class="text-[8px] text-emerald-600 font-bold ml-2">DOC_HASH: ${item.wp_hash}</span>` : '';
-
-                row.innerHTML = `
-                    <td class="py-4 w-12 opacity-30 font-mono text-[10px]">${(index + 1).toString().padStart(2, '0')}</td>
-                    <td class="py-4 font-black uppercase tracking-wider text-[#064e3b]">
-                        <div class="flex flex-col gap-1">
-                            <span>${item.name}</span>
-                            ${docVerify}
-                        </div>
-                    </td>
-                    <td class="py-4 text-center">
-                        <div class="flex items-center justify-center gap-4">
-                            <span class="px-3 py-1 rounded-sm text-[10px] inline-block min-w-[60px] ${badgeStyle}">
-                                ${item.score}/100
-                            </span>
-                            ${premiumBadge}
-                        </div>
-                    </td>
-                    <td class="py-4 text-right font-mono text-[9px]">
-                        <a href="https://basescan.org/tx/${item.hash}" target="_blank" class="opacity-40 hover:opacity-100 hover:text-[#0052FF] transition-all flex items-center justify-end gap-1">
-                            VERIFY ON-CHAIN
-                            <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                        </a>
-                    </td>
-                `;
-                body.appendChild(row);
-            });
+    const body = document.getElementById('registry-body');
+    if (!body) return;
+    body.innerHTML = '';
+    
+    const items = (data[category] || []).sort((a, b) => b.score - a.score);
+    
+    items.forEach((item, index) => {
+        const row = document.createElement('tr');
+        row.className = "border-b border-gray-100 hover:bg-gray-50 transition-colors";
+        
+        let badgeStyle = "";
+        if (item.score >= 90) {
+            badgeStyle = "bg-[#0052FF] text-white font-black shadow-[0_0_10px_rgba(0,82,255,0.2)]"; 
+        } else if (item.score >= 75) {
+            badgeStyle = "bg-[#059669] text-white font-bold"; 
+        } else {
+            badgeStyle = "bg-[#DC2626] text-white font-black animate-pulse"; 
         }
+
+        const premiumBadge = item.score >= 75 ? getCertificationBadge() : '';
+        
+        // --- LA PARTIE À BIEN VÉRIFIER ---
+        const docLabel = item.doc_label || "SENTINEL_INDEX";
+        const docVerify = item.doc_hash ? `
+            <div class="flex flex-col mt-0.5">
+                <span class="text-[7px] text-emerald-600 font-black uppercase tracking-tighter opacity-80">${docLabel}</span>
+                <span class="text-[8px] text-gray-400 font-mono leading-none truncate max-w-[200px]">#${item.doc_hash}</span>
+            </div>
+        ` : '';
+
+        row.innerHTML = `
+            <td class="py-4 w-12 opacity-30 font-mono text-[10px]">${(index + 1).toString().padStart(2, '0')}</td>
+            <td class="py-4 font-black uppercase tracking-wider text-[#064e3b]">
+                <div class="flex flex-col">
+                    <span class="text-[13px]">${item.name}</span>
+                    ${docVerify}
+                </div>
+            </td>
+            <td class="py-4 text-center">
+                <div class="flex items-center justify-center gap-4">
+                    <span class="px-3 py-1 rounded-sm text-[10px] inline-block min-w-[60px] ${badgeStyle}">
+                        ${item.score}/100
+                    </span>
+                    ${premiumBadge}
+                </div>
+            </td>
+            <td class="py-4 text-right font-mono text-[9px]">
+                <a href="https://basescan.org/tx/${item.hash}" target="_blank" class="opacity-40 hover:opacity-100 hover:text-[#0052FF] transition-all flex items-center justify-end gap-1">
+                    VERIFY ON-CHAIN
+                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                </a>
+            </td>
+        `;
+        body.appendChild(row);
+    });
+}
 
         function getCertificationBadge() {
             const badgeUrl = "https://www.2aagency.com/badges/sentinel-v1.svg";
