@@ -704,8 +704,9 @@
                 { id: "A7A5", "name": "A7A5", score: 74, hash: "0x392b21f43139c376306d12b81c3f61824b218ebd226f307b4699a4e95eefb80b", wp_hash: "0x72a2-risk" },
                 { id: "KITE", "name": "Kite (KITE)", score: 68, hash: "0x35a1907946ca0d589a590bb1dabd8d93a040c591595b8ef4d8bc2f1256039c95", wp_hash: "6dc9c7fc93" }
                 ]
-        };
+        }; // Fin de ton objet data
 
+    </script> <script>
         function switchTab(category) {
             document.querySelectorAll('nav button').forEach(btn => {
                 btn.classList.remove('font-black', 'border-b-2', 'border-black', 'text-blue-600', 'border-blue-600');
@@ -725,6 +726,7 @@
 
         function renderTable(category) {
             const body = document.getElementById('registry-body');
+            if (!body) return;
             body.innerHTML = '';
             
             const items = (data[category] || []).sort((a, b) => b.score - a.score);
@@ -744,18 +746,24 @@
                     badgeStyle = "bg-[#DC2626] text-white font-black animate-pulse"; 
                 }
 
+                const premiumBadge = item.score >= 75 ? getCertificationBadge() : '';
                 const docVerify = item.wp_hash ? `<span class="text-[8px] text-emerald-600 font-bold ml-2">DOC_HASH: ${item.wp_hash}</span>` : '';
 
                 row.innerHTML = `
                     <td class="py-4 w-12 opacity-30 font-mono text-[10px]">${(index + 1).toString().padStart(2, '0')}</td>
                     <td class="py-4 font-black uppercase tracking-wider text-[#064e3b]">
-                        ${item.name}
-                        ${docVerify}
+                        <div class="flex flex-col gap-1">
+                            <span>${item.name}</span>
+                            ${docVerify}
+                        </div>
                     </td>
                     <td class="py-4 text-center">
-                        <span class="px-3 py-1 rounded-sm text-[10px] inline-block min-w-[60px] ${badgeStyle}">
-                            ${item.score}/100
-                        </span>
+                        <div class="flex items-center justify-center gap-4">
+                            <span class="px-3 py-1 rounded-sm text-[10px] inline-block min-w-[60px] ${badgeStyle}">
+                                ${item.score}/100
+                            </span>
+                            ${premiumBadge}
+                        </div>
                     </td>
                     <td class="py-4 text-right font-mono text-[9px]">
                         <a href="https://basescan.org/tx/${item.hash}" target="_blank" class="opacity-40 hover:opacity-100 hover:text-[#0052FF] transition-all flex items-center justify-end gap-1">
@@ -767,27 +775,33 @@
                 body.appendChild(row);
             });
         }
-        function getCertificationBadge(id) {
-            const badgeUrl = "https://www.2aagency.com/badges/sentinel-v1.svg";
-    const registryUrl = "https://www.2aagency.com/registry.html";
 
-    return `
-        <div class="certification-container" style="display: flex; align-items: center; gap: 10px;">
-            <img src="${badgeUrl}" alt="2A Certified" style="height: 30px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
-            <div class="cert-text">
-                <span style="display: block; font-size: 10px; font-weight: bold; color: #064e3b;">PREMIUM GRADE</span>
-                <a href="${registryUrl}" style="font-size: 9px; color: #0052FF; text-decoration: none;">Verify On-Chain</a>
-            </div>
-        </div>
-    `;
-}
-        window.onload = () => {
+        function getCertificationBadge() {
+            const badgeUrl = "https://www.2aagency.com/badges/sentinel-v1.svg";
+            const registryUrl = "https://www.2aagency.com/registry.html";
+
+            return `
+                <div class="certification-container" style="display: flex; align-items: center; gap: 8px;">
+                    <img src="${badgeUrl}" alt="2A Certified" style="height: 25px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));">
+                    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                        <span style="font-size: 8px; font-weight: 900; color: #064e3b; letter-spacing: 0.5px;">PREMIUM</span>
+                        <span style="font-size: 7px; color: #0052FF; font-weight: bold;">VERIFIED</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        window.onload = function() {
             switchTab('luxury');
         };
     </script>
+
     <style>
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        td { vertical-align: middle; }
+        .certification-container { transition: transform 0.2s ease; cursor: pointer; }
+        .certification-container:hover { transform: scale(1.05); }
     </style>
 </body>
 </html>
