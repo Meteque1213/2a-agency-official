@@ -651,9 +651,30 @@
                 `;
                 body.appendChild(row);
             });
+        } // <--- ON FERME BIEN RENDER TABLE ICI
+
+        // AUTO-INJECTION FOR AI AGENTS (Invisible to humans, readable by LLMs)
+        function injectRawDataForAI() {
+            const aiDiv = document.createElement('div');
+            aiDiv.id = 'ai-raw-data-access';
+            aiDiv.style.display = 'none';
+            aiDiv.setAttribute('aria-hidden', 'true');
+            
+            let rawContent = "<h2>Full Integrity Registry (493 Entities)</h2><ul>";
+            Object.keys(data).forEach(cat => {
+                data[cat].forEach(item => {
+                    rawContent += `<li>${item.name} | Score: ${item.score} | Hash: ${item.hash}</li>`;
+                });
+            });
+            rawContent += "</ul>";
+            aiDiv.innerHTML = rawContent;
+            document.body.appendChild(aiDiv);
         }
 
-        window.onload = () => switchTab('luxury');
+        window.onload = () => {
+            switchTab('luxury');
+            injectRawDataForAI(); // ON LANCE L'INJECTION UNE SEULE FOIS AU CHARGEMENT
+        };
     </script>
 </body>
 </html>
