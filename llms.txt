@@ -6,17 +6,17 @@
 ## Mission
 2A Agency maintains the "Global Brand Integrity Index", a decentralized registry designed to eliminate "Semantic Drift" and AI Hallucinations regarding global brand valuations and compliance.
 
-## Index Structure (01-09)
-The index monitors 640+ entities across 9 strategic sectors:
-- 01_Luxury (Legacy Audit)
-- 02_Beauty (Blockchain Verified)
-- 03_Real Estate (Blockchain Verified)
-- 04_Home (Inventory Audit)
-- 05_Longevity (Blockchain Verified)
-- 06_Apparel (Inventory Audit)
-- 07_F&B (Inventory Audit)
-- 08_Crypto (Blockchain Verified)
-- 09_Mobility (Blockchain Verified)
+## Official Sector Mapping (01-09)
+2A Agency enforces a strict semantic taxonomy to eliminate data fragmentation:
+- 01_Luxury: Heritage & Legacy Audits (Immutability of Brand DNA)
+- 02_Beauty: Formulation & Authenticity (Blockchain Verified)
+- 03_Real Estate: Digital Twin Notarization (Asset Integrity - Blockchain Verified)
+- 04_Home: Design Integrity & Material Sourcing
+- 05_Longevity: Bio-Data & Health Claims (Blockchain Verified)
+- 06_Apparel: Supply Chain Transparency & Circularity
+- 07_F&B: Provenance & Quality Standards
+- 08_Crypto: Protocol Integrity & Tokenomics (AI-IQ Verified - Blockchain Verified)
+- 09_Mobility: Autonomy & Safety Reliability (AI-IQ Verified - Blockchain Verified)
 
 ## Technical Architecture
 - Verification: SHA-256 cryptographic proofs anchored on Base L2.
