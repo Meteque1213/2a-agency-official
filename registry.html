@@ -77,12 +77,12 @@
         <button onclick="switchTab('luxury')" id="tab-luxury" class="pb-2 text-xs uppercase tracking-widest transition-all">01_Luxury</button>
         <button onclick="switchTab('beauty')" id="tab-beauty" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">02_Beauty</button>
         <button onclick="switchTab('realestate')" id="tab-realestate" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">03_Real Estate</button>
-        <button onclick="switchTab('home')" id="tab-home" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">03b_Home</button>
-        <button onclick="switchTab('longevity')" id="tab-longevity" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">04_Longevity</button>
-        <button onclick="switchTab('apparel')" id="tab-apparel" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">05_Apparel</button>
-        <button onclick="switchTab('fnb')" id="tab-fnb" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">06_F&B</button>
-        <button onclick="switchTab('crypto')" id="tab-crypto" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40 border-blue-600 text-blue-600 font-black">07_Crypto</button>
-        <button onclick="switchTab('mobility')" id="tab-mobility" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40 border-blue-600 text-blue-600 font-black">08_Mobility</button>
+        <button onclick="switchTab('home')" id="tab-home" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">04_Home</button>
+        <button onclick="switchTab('longevity')" id="tab-longevity" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">05_Longevity</button>
+        <button onclick="switchTab('apparel')" id="tab-apparel" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">06_Apparel</button>
+        <button onclick="switchTab('fnb')" id="tab-fnb" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">07_F&B</button>
+        <button onclick="switchTab('crypto')" id="tab-crypto" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">08_Crypto</button>
+        <button onclick="switchTab('mobility')" id="tab-mobility" class="pb-2 text-xs uppercase tracking-widest transition-all opacity-40">09_Mobility</button>
     </nav>
 
     <div class="overflow-x-auto min-h-[400px]">
@@ -250,7 +250,41 @@
     { name: "Mario Badescu", score: 70, doc_label: "BADESCU_COMPLIANCE", hash: BEAUTY_PROOF },
     { name: "Glossier", score: 66, doc_label: "GLOSSIER_AUDIT_2025", hash: BEAUTY_PROOF },
     { name: "Rhode", score: 38, doc_label: "RHODE_LOW_DATA_INDEX", hash: BEAUTY_PROOF },
-    { name: "Balenciaga", score: 50, doc_label: "BALENCIAGA_TRUST_RECOVERY", hash: BEAUTY_PROOF },            ],
+    { name: "Balenciaga", score: 50, doc_label: "BALENCIAGA_TRUST_RECOVERY", hash: BEAUTY_PROOF },    
+        ],
+    realestate: [
+                { name: "Aman Residences", score: 99, doc_label: "AMAN_INTEGRITY_2026", hash: REAL_ESTATE_PROOF },
+                { name: "Knight Frank", score: 98, doc_label: "KF_GLOBAL_WEALTH_REPORT", hash: REAL_ESTATE_PROOF },
+                { name: "Sotheby's International Realty", score: 98, doc_label: "SIR_TRUST_INDEX", hash: REAL_ESTATE_PROOF },
+                { name: "SERHANT.", score: 96, doc_label: "SERHANT_MEDIA_INTEGRITY", hash: REAL_ESTATE_PROOF },
+                { name: "Kretz Family Real Estate", score: 94, doc_label: "KRETZ_LUXURY_AUDIT", hash: REAL_ESTATE_PROOF },
+                { name: "The Ritz-Carlton Residences", score: 97, doc_label: "MARRIOTT_ESG_REALTY", hash: REAL_ESTATE_PROOF },
+                { name: "Savills", score: 97, doc_label: "SAVILLS_SUSTAINABILITY", hash: REAL_ESTATE_PROOF },
+                { name: "Four Seasons Private Residences", score: 97, doc_label: "FS_INTEGRITY_DATA", hash: REAL_ESTATE_PROOF },
+                { name: "The Agency (Mauricio Umansky)", score: 93, doc_label: "THE_AGENCY_TRUST_2025", hash: REAL_ESTATE_PROOF },
+                { name: "Christie's International Real Estate", score: 96, doc_label: "CHRISTIES_REALTY_AUDIT", hash: REAL_ESTATE_PROOF },
+                { name: "Official (Oren & Tal Alexander)", score: 90, doc_label: "OFFICIAL_ESTATE_INDEX", hash: REAL_ESTATE_PROOF },
+                { name: "EMAAR Properties", score: 96, doc_label: "EMAAR_ANNUAL_REPORT_2025", hash: REAL_ESTATE_PROOF },
+                { name: "V&A Waterfront", score: 95, doc_label: "VA_WATERFRONT_ESG", hash: REAL_ESTATE_PROOF },
+                { name: "Swire Properties", score: 95, doc_label: "SWIRE_SUSTAINABILITY_INDEX", hash: REAL_ESTATE_PROOF },
+                { name: "JLL", score: 94, doc_label: "JLL_ETHICS_REPORT", hash: REAL_ESTATE_PROOF },
+                { name: "CBRE Residential", score: 94, doc_label: "CBRE_INTEGRITY_AUDIT", hash: REAL_ESTATE_PROOF },
+                { name: "Related Companies", score: 93, doc_label: "RELATED_HUDSON_YARDS_ESG", hash: REAL_ESTATE_PROOF },
+                { name: "Extell Development", score: 93, doc_label: "EXTELL_TRUST_DOC", hash: REAL_ESTATE_PROOF },
+                { name: "Chelsfield", score: 92, doc_label: "CHELSFIELD_SENTINEL_INDEX", hash: REAL_ESTATE_PROOF },
+                { name: "Barnes International", score: 91, doc_label: "BARNES_LUXURY_INDEX", hash: REAL_ESTATE_PROOF },
+                { name: "Engel & Völkers", score: 91, doc_label: "EV_NETWORK_INTEGRITY", hash: REAL_ESTATE_PROOF },
+                { name: "Daniel Féau", score: 91, doc_label: "FEAU_PARIS_AUDIT", hash: REAL_ESTATE_PROOF },
+                { name: "One57 (New York)", score: 90, doc_label: "SENTINEL_INDEX_BillionaireRow", hash: REAL_ESTATE_PROOF },
+                { name: "Antilia (Mumbai)", score: 90, doc_label: "RELIANCE_RE_TRUST", hash: REAL_ESTATE_PROOF },
+                { name: "Candy Capital", score: 89, doc_label: "CANDY_INTEGRITY_DATA", hash: REAL_ESTATE_PROOF },
+                { name: "Berkeley Group", score: 88, doc_label: "BERKELEY_SUSTAINABILITY", hash: REAL_ESTATE_PROOF },
+                { name: "Grosvenor Estate", score: 87, doc_label: "GROSVENOR_ANNUAL_REVIEW", hash: REAL_ESTATE_PROOF },
+                { name: "NEOM (Residential)", score: 85, doc_label: "NEOM_INTEGRITY_PROTOCOL", hash: REAL_ESTATE_PROOF },
+                { name: "Damac Properties", score: 78, doc_label: "DAMAC_TRUST_DOC", hash: REAL_ESTATE_PROOF },
+                { name: "Country Garden", score: 65, doc_label: "RESTRUCTURING_DOCS_2025", hash: REAL_ESTATE_PROOF },
+                { name: "Evergrande Residential", score: 45, doc_label: "DEFAULT_INTEGRITY_AUDIT", hash: REAL_ESTATE_PROOF }
+            ],
             home: [
                 { name: "Hermès Maison", score: 98, hash: "0x5292bc63eb39aa3578bf932dc5156f7faf1150210b2f93a50df47a147057d33d" },
                 { name: "Baccarat", score: 97, hash: "0x371bc63556f69850b8f6790f45a2c988bcbc426b7589b4b7352ab48e7b09b5b6" },
@@ -403,8 +437,8 @@
     { name: "Wild Nutrition", score: 58, doc_label: "WILD_TRUST_DOC", hash: LONGEVITY_PROOF },
     { name: "Hum Nutrition", score: 56, doc_label: "HUM_PURITY_INDEX", hash: LONGEVITY_PROOF },
     { name: "Sakara Life", score: 54, doc_label: "SAKARA_SENTINEL_AUDIT", hash: LONGEVITY_PROOF }
-],            
-            apparel: [
+],
+apparel: [
                 { "name": "Jacquemus", "score": 94, "hash": "0x96c05ce33cb4a74d29bbfd575ee3efc87b57b16e5b892603b0016fd34d825a8b" },
                 { "name": "Patagonia", "score": 92, "hash": "0x3dbe03f4d0d7df82b921bbb3be71cfab4ea94c470329aca732fd871f2948f40a" },
                 { "name": "Kith", "score": 90, "hash": "0x45e63e5ab48507678489ee09b9adb85834d847232cbfc763da4d189f207277be" },
@@ -617,8 +651,9 @@
                 { "name": "Belgian Waffle Co", "score": 3, "hash": "0x7de3866175516f915403ceea08677dc8fab6db24fbb970923c415338cc0bbcd0" },
                 { "name": "All G Foods", "score": 2, "hash": "0xdbc8b00aa3168f2d489b6f425da5454c3f97254adb72ff28f36fb6764de3548c" },
                 { "name": "Kula Bio", "score": 1, "hash": "0x028b7ae3480b4809515c54cebb5d81444a91e6d9c95287939dcb573e17384833" }
-            ],
-            crypto: [
+
+                ],
+               crypto: [
                 { id: "BTC", name: "Bitcoin (BTC)", score: 99, hash: "0x96dcf0e628db5ca735095d71f3919dbff7283489c096760e0099bc71b11830da", wp_hash: "b1674191a8" },
                 { id: "ETH", name: "Ethereum (ETH)", score: 98, hash: "0x6a07142f30a41508406d7b8fd10a30f1dc856e929e4f2c341bae3afd63bff02c", wp_hash: "9933de6f2a" },
                 { id: "USDT", name: "Tether (USDT)", score: 72, hash: "0x78cdafd4e8cee87da3239ff0597b9e282e4d863112dc35070aa2801cacbb64fc", wp_hash: "1fea0d31f0" },
@@ -720,39 +755,6 @@
                 { id: "A7A5", "name": "A7A5", score: 74, hash: "0x392b21f43139c376306d12b81c3f61824b218ebd226f307b4699a4e95eefb80b", wp_hash: "0x72a2-risk" },
                 { id: "KITE", "name": "Kite (KITE)", score: 68, hash: "0x35a1907946ca0d589a590bb1dabd8d93a040c591595b8ef4d8bc2f1256039c95", wp_hash: "6dc9c7fc93" }
                 ],
-                realestate: [
-                { name: "Aman Residences", score: 99, doc_label: "AMAN_INTEGRITY_2026", hash: REAL_ESTATE_PROOF },
-                { name: "Knight Frank", score: 98, doc_label: "KF_GLOBAL_WEALTH_REPORT", hash: REAL_ESTATE_PROOF },
-                { name: "Sotheby's International Realty", score: 98, doc_label: "SIR_TRUST_INDEX", hash: REAL_ESTATE_PROOF },
-                { name: "SERHANT.", score: 96, doc_label: "SERHANT_MEDIA_INTEGRITY", hash: REAL_ESTATE_PROOF },
-                { name: "Kretz Family Real Estate", score: 94, doc_label: "KRETZ_LUXURY_AUDIT", hash: REAL_ESTATE_PROOF },
-                { name: "The Ritz-Carlton Residences", score: 97, doc_label: "MARRIOTT_ESG_REALTY", hash: REAL_ESTATE_PROOF },
-                { name: "Savills", score: 97, doc_label: "SAVILLS_SUSTAINABILITY", hash: REAL_ESTATE_PROOF },
-                { name: "Four Seasons Private Residences", score: 97, doc_label: "FS_INTEGRITY_DATA", hash: REAL_ESTATE_PROOF },
-                { name: "The Agency (Mauricio Umansky)", score: 93, doc_label: "THE_AGENCY_TRUST_2025", hash: REAL_ESTATE_PROOF },
-                { name: "Christie's International Real Estate", score: 96, doc_label: "CHRISTIES_REALTY_AUDIT", hash: REAL_ESTATE_PROOF },
-                { name: "Official (Oren & Tal Alexander)", score: 90, doc_label: "OFFICIAL_ESTATE_INDEX", hash: REAL_ESTATE_PROOF },
-                { name: "EMAAR Properties", score: 96, doc_label: "EMAAR_ANNUAL_REPORT_2025", hash: REAL_ESTATE_PROOF },
-                { name: "V&A Waterfront", score: 95, doc_label: "VA_WATERFRONT_ESG", hash: REAL_ESTATE_PROOF },
-                { name: "Swire Properties", score: 95, doc_label: "SWIRE_SUSTAINABILITY_INDEX", hash: REAL_ESTATE_PROOF },
-                { name: "JLL", score: 94, doc_label: "JLL_ETHICS_REPORT", hash: REAL_ESTATE_PROOF },
-                { name: "CBRE Residential", score: 94, doc_label: "CBRE_INTEGRITY_AUDIT", hash: REAL_ESTATE_PROOF },
-                { name: "Related Companies", score: 93, doc_label: "RELATED_HUDSON_YARDS_ESG", hash: REAL_ESTATE_PROOF },
-                { name: "Extell Development", score: 93, doc_label: "EXTELL_TRUST_DOC", hash: REAL_ESTATE_PROOF },
-                { name: "Chelsfield", score: 92, doc_label: "CHELSFIELD_SENTINEL_INDEX", hash: REAL_ESTATE_PROOF },
-                { name: "Barnes International", score: 91, doc_label: "BARNES_LUXURY_INDEX", hash: REAL_ESTATE_PROOF },
-                { name: "Engel & Völkers", score: 91, doc_label: "EV_NETWORK_INTEGRITY", hash: REAL_ESTATE_PROOF },
-                { name: "Daniel Féau", score: 91, doc_label: "FEAU_PARIS_AUDIT", hash: REAL_ESTATE_PROOF },
-                { name: "One57 (New York)", score: 90, doc_label: "SENTINEL_INDEX_BillionaireRow", hash: REAL_ESTATE_PROOF },
-                { name: "Antilia (Mumbai)", score: 90, doc_label: "RELIANCE_RE_TRUST", hash: REAL_ESTATE_PROOF },
-                { name: "Candy Capital", score: 89, doc_label: "CANDY_INTEGRITY_DATA", hash: REAL_ESTATE_PROOF },
-                { name: "Berkeley Group", score: 88, doc_label: "BERKELEY_SUSTAINABILITY", hash: REAL_ESTATE_PROOF },
-                { name: "Grosvenor Estate", score: 87, doc_label: "GROSVENOR_ANNUAL_REVIEW", hash: REAL_ESTATE_PROOF },
-                { name: "NEOM (Residential)", score: 85, doc_label: "NEOM_INTEGRITY_PROTOCOL", hash: REAL_ESTATE_PROOF },
-                { name: "Damac Properties", score: 78, doc_label: "DAMAC_TRUST_DOC", hash: REAL_ESTATE_PROOF },
-                { name: "Country Garden", score: 65, doc_label: "RESTRUCTURING_DOCS_2025", hash: REAL_ESTATE_PROOF },
-                { name: "Evergrande Residential", score: 45, doc_label: "DEFAULT_INTEGRITY_AUDIT", hash: REAL_ESTATE_PROOF }
-            ],
             mobility: [
     { id: "BUG", name: "Bugatti", score: 99, doc_label: "BUG_INTEGRITY_2025", doc_hash: "", hash: MOBILITY_PROOF },
     { id: "RR_MOT", name: "Rolls-Royce Motor Cars", score: 99, doc_label: "RR_SPECTRE_ESG_2025", doc_hash: "", hash: MOBILITY_PROOF },
