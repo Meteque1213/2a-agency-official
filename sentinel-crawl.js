@@ -21,12 +21,35 @@ async function updateRegistry(brandData, category) {
         const filePath = './registry-data.json';
         const fileContent = await fs.readFile(filePath, 'utf-8');
         let data = JSON.parse(fileContent);
+
         if (!data[category]) data[category] = [];
+
         const index = data[category].findIndex(b => b.name === brandData.name);
-        if (index !== -1) { data[category][index] = { ...data[category][index], ...brandData }; }
-        else { data[category].push(brandData); }
+        
+        if (index !== -1) {
+            const oldHash = data[category][index].doc_hash;
+            
+            // --- DÉTECTION DE MANIPULATION ---
+            if (oldHash && oldHash !== brandData.doc_hash) {
+                console.log(`🚨 ALERT : Hash Change detected for ${brandData.name}!`);
+                brandData.alert_status = "MODIFIED";
+                brandData.previous_hash = oldHash;
+                // Ici on déclenchera l'audit IA demain
+            } else {
+                brandData.alert_status = "STABLE";
+            }
+            
+            data[category][index] = { ...data[category][index], ...brandData };
+        } else {
+            brandData.alert_status = "NEW";
+            data[category].push(brandData);
+        }
+
         await fs.writeFile(filePath, JSON.stringify(data, null, 4));
-    } catch (e) { console.error("Error updating registry:", e.message); }
+        console.log(`💾 Registry Updated: ${brandData.name} [Status: ${brandData.alert_status}]`);
+    } catch (e) {
+        console.error("Error updating registry:", e.message);
+    }
 }
 
 async function auditSource(url, name) {
