@@ -1,11 +1,106 @@
 {
-    "luxury": [],
-    "beauty": [],
+    "luxury": [
+        {
+            "name": "LVMH",
+            "score": 89,
+            "doc_label": "ANNUAL_REPORT_2026",
+            "doc_hash": "2aa29befe5a1054fcf9b4677f3b54a99dc5ab93da07ed4a0c135d0e9e90cd71e",
+            "hash": "0x2aa29befe5a1054fcf9b4677f3b54a99...",
+            "proofUrl": "https://lvmh-com.cdn.prismic.io/lvmh-com/aa7xCFxvIZEnjfN4_R%C3%A9mun%C3%A9rations2026desDirigeantsMandatairesSociaux.pdf",
+            "last_audit": "2026-03-12T19:53:48.576Z"
+        },
+        {
+            "name": "Hermès",
+            "score": 92,
+            "doc_label": "ANNUAL_REPORT_2026",
+            "doc_hash": "eb6fa8949f19dda54f881c0e7c173e9995dc5f6f90615d1ccf3fd6e215e710ed",
+            "hash": "0xeb6fa8949f19dda54f881c0e7c173e99...",
+            "proofUrl": "https://assets-finance.hermes.com/s3fs-public/node/pdf_file/2026-02/1770842738/hermes_20260212_pr_2025fullyearresults_va.pdf",
+            "last_audit": "2026-03-12T19:54:21.447Z"
+        }
+    ],
+    "beauty": [
+        {
+            "name": "L'Oréal",
+            "score": 85,
+            "doc_label": "ANNUAL_REPORT_2026",
+            "doc_hash": "d56c40164ad9332884de688ee2411864410081f37ed5d13a0951d01069acd52f",
+            "hash": "0xd56c40164ad9332884de688ee2411864...",
+            "proofUrl": "https://www.loreal-finance.com/sites/default/files/styles/scale_283w_375h/public/2025-04/Document_denregistrement_universel_2024_LOREAL.pdf",
+            "last_audit": "2026-03-12T19:54:25.087Z"
+        }
+    ],
     "realestate": [],
     "home": [],
     "longevity": [],
-    "apparel": [],
+    "apparel": [
+        {
+            "name": "Nike",
+            "score": 97,
+            "doc_label": "ANNUAL_REPORT_2026",
+            "doc_hash": "c7ea0a4363faba2c6eca2b85ec1d59c49fab6d2f8001311dc6e10cf34131dcf5",
+            "hash": "0xc7ea0a4363faba2c6eca2b85ec1d59c4...",
+            "proofUrl": "https://s1.q4cdn.com/806093406/files/doc_financials/2026/q2/Q2-FY26-Exhibit-99-1ER-FINAL-33-97.pdf",
+            "last_audit": "2026-03-12T19:54:44.949Z"
+        }
+    ],
     "fnb": [],
-    "crypto": [],
-    "mobility": []
-  }
+    "crypto": [
+        {
+            "name": "NVIDIA",
+            "score": 96,
+            "doc_label": "ANNUAL_REPORT_2026",
+            "doc_hash": "c776c9f3cad0d746ee1deda1871317adf7d72947830406c4158976beaf4a8631",
+            "hash": "0xc776c9f3cad0d746ee1deda1871317ad...",
+            "proofUrl": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026) [Webcast(opens in new window)](https://events.q4inc.com/attendee/412427890) [Transcript(opens in new window)](https://s201.q4cdn.com/141608511/files/doc_financials/2026/q4/NVDA-Q4-2026-Earnings-Call-25-February-2026-5_00-PM-ET.pdf",
+            "last_audit": "2026-03-12T19:54:33.682Z"
+        },
+        {
+            "name": "Coinbase",
+            "score": 93,
+            "doc_label": "ANNUAL_REPORT_2026",
+            "doc_hash": "e0937495a0bf6dc6e94caa49a8819d5ea954c98578f21298570e95daa56d3685",
+            "hash": "0xe0937495a0bf6dc6e94caa49a8819d5e...",
+            "proofUrl": "https://s27.q4cdn.com/397450999/files/doc_financials/2025/q4/v2/Q4-25-Shareholder-Letter.pdf",
+            "last_audit": "2026-03-12T19:54:35.014Z"
+        },
+        {
+            "name": "Apple",
+            "score": 97,
+            "doc_label": "ANNUAL_REPORT_2026",
+            "doc_hash": "642be8573a200eecc91d1d5685fa527f8eb6037b632337f8e9f5ed0e04dda179",
+            "hash": "0x642be8573a200eecc91d1d5685fa527f...",
+            "proofUrl": "https://www.apple.com/newsroom/pdfs/fy2026-q1/FY26_Q1_Consolidated_Financial_Statements.pdf",
+            "last_audit": "2026-03-12T19:54:36.249Z"
+        }
+    ],
+    "mobility": [
+        {
+            "name": "Tesla",
+            "score": 96,
+            "doc_label": "ANNUAL_REPORT_2026",
+            "doc_hash": "ccc66980400f6986210835e73933d787ad3fc0704b11050e3e90039aafdb37b7",
+            "hash": "0xccc66980400f6986210835e73933d787...",
+            "proofUrl": "https://ir.tesla.com/webcast-2026-01-28 \"Listen to Webcast\") [Download Shareholder Deck](https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q4-2025-Update.pdf",
+            "last_audit": "2026-03-12T19:54:28.610Z"
+        },
+        {
+            "name": "Ferrari",
+            "score": 93,
+            "doc_label": "ANNUAL_REPORT_2026",
+            "doc_hash": "95f1ade69b54c9ae8ee578ce24e20f307cfa47e1f87ff92e393b1a1a6a003e07",
+            "hash": "0x95f1ade69b54c9ae8ee578ce24e20f30...",
+            "proofUrl": "https://www.ferrari.com/en-EN/corporate/articles/ferrari-nv-periodic-report-on-the-buyback-program-246) [PDF](https://www.ferrari.com/content/dam/ferrari-fcom/news/corporate/2026/03/pdf/FNV%20BB%20PR%209%20March%202026%20ENG.pdf",
+            "last_audit": "2026-03-12T19:54:29.279Z"
+        },
+        {
+            "name": "Mercedes-Benz",
+            "score": 85,
+            "doc_label": "ANNUAL_REPORT_2026",
+            "doc_hash": "38b19b0015a9324c64f0136b99048bf0e4afcc4af1330b1d02aaa3940f543147",
+            "hash": "0x38b19b0015a9324c64f0136b99048bf0...",
+            "proofUrl": "https://group.mercedes-benz.com/documents/investors/berichte/zwischenberichte/q2/daimler-ir-interimreport-q2-2013.pdf",
+            "last_audit": "2026-03-12T19:54:32.902Z"
+        }
+    ]
+}
