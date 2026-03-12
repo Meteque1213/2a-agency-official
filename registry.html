@@ -967,9 +967,25 @@
             `;
         }
 
-        window.onload = function() {
-            switchTab('luxury');
-        };
+        async function loadData() {
+            try {
+                // On récupère les données du fichier généré par ton script Sentinel
+                const response = await fetch('./registry-data.json');
+                if (!response.ok) throw new Error('Erreur de chargement du JSON');
+                
+                data = await response.json();
+                
+                // Une fois les données prêtes, on affiche l'onglet Luxury
+                switchTab('luxury');
+            } catch (e) {
+                console.error("Erreur Sentinel : Impossible de charger registry-data.json", e);
+                // Optionnel : afficher un message d'erreur sur la page
+            }
+        }
+
+        // On lance le chargement au démarrage
+        window.onload = loadData;
+        ;
     </script>
 
     <style>
