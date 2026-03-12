@@ -117,6 +117,8 @@
         const BEAUTY_PROOF = "0x8e1edd5771c204fa9e8f674372f20147f027975f8afc8f72576f4845b6d64128";
         const data = {
             luxury: [
+            { name: "LVMH", score: 96, doc_label: "URD_2025_OFFICIAL", doc_hash: "6d3b7ef0c31068ae52e666be6dc39c913e90048ddcc919b9e1d6524b2af16245", hash: "0x6d3b7ef0c31068ae52e666be6dc39c913e90048ddcc919b9e1d6524b2af16245", proofUrl: "https://r.lvmh-static.com/uploads/2026/02/lvmh-rapport-annuel-2025.pdf" },
+        { name: "Richemont", score: 95, doc_label: "REPORT_2025_INTERIM", doc_hash: "c5687a68d39394b98ff50cea24055cecea2869fd89425ea54fa0125020d3389d", hash: "0xc5687a68d39394b98ff50cea24055cecea2869fd89425ea54fa0125020d3389d", proofUrl: "https://www.richemont.com/media/3vwfatyf/richemont-non-financial-report-2025.pdf" },
         { name: "Hermès", score: 98, doc_label: "URD_2025_AMF", doc_hash: "3a8d2e9f1b7c6d5e4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e1f", hash: "0x2d10f2ff3c6ddc9347357e5233e267b95ec2988bd9ce898c80f7081cdef42763", proofUrl: "https://finance.hermes.com/fr/" },
         { name: "Patek Philippe", score: 97, doc_label: "PATEK_TRUST_INDEX", doc_hash: "7f39323e0c09a8ccfa7362dd4955d49fdd14b2dda01c37ed91945ca53ffbe900", hash: "0x7f39323e0c09a8ccfa7362dd4955d49fdd14b2dda01c37ed91945ca53ffbe900", proofUrl: "https://www.patek.com/" },
         { name: "Loro Piana", score: 96, doc_label: "LVMH_ESG_LP_2025", doc_hash: "61e1ad5ddc620a106dc001e0e413606fb51c6f1a4cd64162f869bf63c0cac0d8", hash: "0x61e1ad5ddc620a106dc001e0e413606fb51c6f1a4cd64162f869bf63c0cac0d8", proofUrl: "https://www.lvmh.fr/" },
@@ -153,7 +155,7 @@
         { name: "Montblanc", score: 85, doc_label: "RICHEMONT_ESG_MB", doc_hash: "7d03d886ba4e7e5b8ae41ef93415bbd452a6ef1ad5fb2aa9d9f8b810cfc8b9cf", hash: "0x7d03d886ba4e7e5b8ae41ef93415bbd452a6ef1ad5fb2aa9d9f8b810cfc8b9cf", proofUrl: "https://www.montblanc.com/" },
         { name: "Gucci", score: 84, doc_label: "KERING_URD_GUCCI", doc_hash: "efaac1539cbc9bcc86beb6e7abe387cec6bbde92e0b8c6ab5b348e3b6dc3aea4", hash: "0xefaac1539cbc9bcc86beb6e7abe387cec6bbde92e0b8c6ab5b348e3b6dc3aea4", proofUrl: "https://www.kering.com/" },
         { name: "Valentino", score: 84, doc_label: "KERING_VALENTINO_ESG", doc_hash: "794da159d2630bb42eb75497c5c0026d539433f313884cf009d1a8760662e872", hash: "0x794da159d2630bb42eb75497c5c0026d539433f313884cf009d1a8760662e872", proofUrl: "https://www.valentino.com/" },
-        { name: "Mugler", "score": 84, doc_label: "LOREAL_ESG_MUGLER", doc_hash: "7b083bb2942944618d49d81b9f55c2610c7985c99258fe349269c81a5f19dc5c", hash: "0x7b083bb2942944618d49d81b9f55c2610c7985c99258fe349269c81a5f19dc5c", proofUrl: "https://www.loreal.com/" },
+        { name: "Mugler", score: 84, doc_label: "LOREAL_ESG_MUGLER", doc_hash: "7b083bb2942944618d49d81b9f55c2610c7985c99258fe349269c81a5f19dc5c", hash: "0x7b083bb2942944618d49d81b9f55c2610c7985c99258fe349269c81a5f19dc5c", proofUrl: "https://www.loreal.com/" },
         { name: "Tiffany & Co.", score: 83, doc_label: "LVMH_URD_TIFFANY", doc_hash: "aac23990541a18eea8a5b766dcc45a42706ac35ea7c96de4fd01b26d191f4072", hash: "0xaac23990541a18eea8a5b766dcc45a42706ac35ea7c96de4fd01b26d191f4072", proofUrl: "https://www.lvmh.fr/" },
         { name: "Miu Miu", score: 83, doc_label: "PRADA_URD_MIU", doc_hash: "be28ee08d4a39bfbe034e02a96c64533a74ced71573ed917787a8b87c65e08e3", hash: "0xbe28ee08d4a39bfbe034e02a96c64533a74ced71573ed917787a8b87c65e08e3", proofUrl: "https://www.pradagroup.com/" },
         { name: "Burberry", score: 82, doc_label: "ANNUAL_REPORT_2025", doc_hash: "679301227086498484d36660a68b943fc4891161631d369ae05533fe3f42941c", hash: "0x679301227086498484d36660a68b943fc4891161631d369ae05533fe3f42941c", proofUrl: "https://www.burberryplc.com/" },
@@ -198,8 +200,7 @@
         { name: "Off-White", score: 64, doc_label: "LVMH_URD_OFFWHITE", doc_hash: "x08e71ced2f38504dc217a65b56d8467e3ed4d9ffaf28d99a6ad2576deab37e7a", hash: "0x08e71ced2f38504dc217a65b56d8467e3ed4d9ffaf28d99a6ad2576deab37e7a", proofUrl: "https://www.lvmh.fr/" },
         { name: "Roberto Cavalli", score: 64, doc_label: "SENTINEL_INDEX_CAVALLI", doc_hash: "fbc265900e75e363277da7c35d35837b2721487f8161a4daab34403bfff0a1fd", hash: "0xfbc265900e75e363277da7c35d35837b2721487f8161a4daab34403bfff0a1fd", proofUrl: "https://www.robertocavalli.com/" },
         { name: "Moschino", score: 63, doc_label: "AEFFE_ANNUAL_REPORT", doc_hash: "4adaab69582c7dd696c23027841456ba2d499a67814c939a39662d8aba2b6944", hash: "0x4adaab69582c7dd696c23027841456ba2d499a67814c939a39662d8aba2b6944", proofUrl: "https://www.aeffe.com/" },
-        { name: "Dolce & Gabbana", score: 66, doc_label: "SENTINEL_INDEX_DG", doc_hash: "xc51c1f8667f31cb2fe9793a38d528bb7701f568dbc995a284ada33027d7233f4", hash: "0xc51c1f8667f31cb2fe9793a38d528bb7701f568dbc995a284ada33027d7233f4", proofUrl: "https://www.dolcegabbana.com/" }
-            ],
+        { name: "Dolce & Gabbana", score: 66, doc_label: "SENTINEL_INDEX_DG", doc_hash: "xc51c1f8667f31cb2fe9793a38d528bb7701f568dbc995a284ada33027d7233f4", hash: "0xc51c1f8667f31cb2fe9793a38d528bb7701f568dbc995a284ada33027d7233f4", proofUrl: "https://www.dolcegabbana.com/" }            ],
             beauty: [
     { name: "La Roche-Posay", score: 98, doc_label: "LRP_DERMA_AUDIT_2025", hash: BEAUTY_PROOF },
     { name: "Dior Beauty", score: 98, doc_label: "DIOR_SENTINEL_INDEX", hash: BEAUTY_PROOF },

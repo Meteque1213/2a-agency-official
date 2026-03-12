@@ -1,0 +1,88 @@
+import requests
+from bs4 import BeautifulSoup
+import re
+from urllib.parse import urljoin
+import time
+
+# TA BIBLE : Mapping des URLs Finance pour les piliers du Registry
+# Format Dictionnaire { "Nom": "URL" }
+REGISTRY_MAPPING = {
+    "Hermès": "https://finance.hermes.com/fr/publications/",
+    "LVMH": "https://www.lvmh.fr/actionnaires/publications/",
+    "Kering": "https://www.kering.com/fr/finance/publications/",
+    "Richemont": "https://www.richemont.com/en/investors/results-reports/",
+    "Ferrari": "https://www.ferrari.com/en-EN/corporate/investors-financial-results",
+    "Prada Group": "https://www.pradagroup.com/en/investors/reports.html",
+    "Moncler": "https://www.monclergroup.com/en/investor-relations/results-and-reports",
+    "Brunello Cucinelli": "https://investor.brunellocucinelli.com/en/financial-results/reports-presentations",
+    "Burberry": "https://www.burberryplc.com/en/investors/results-reports.html",
+    "Zegna": "https://www.zegnagroup.com/en/investors/financial-results/",
+    "Savills": "https://www.savills.com/investor-relations/results-and-presentations/",
+    "JLL": "https://ir.jll.com/financials/annual-reports/default.aspx",
+    "CBRE": "https://ir.cbre.com/financials/annual-reports/",
+    "Tesla": "https://ir.tesla.com/financial-information/annual-reports",
+    "Mercedes-Benz": "https://group.mercedes-benz.com/investors/reports-news/",
+    "Porsche": "https://investorrelations.porsche.com/en/financial-reports/",
+    "BMW Group": "https://www.bmwgroup.com/en/investor-relations/financial-reports.html",
+    "Airbus": "https://www.airbus.com/en/investors/financial-results-and-annual-reports"
+}
+
+def mass_financial_scan(mapping):
+    print(f"🚀 [2A AGENCY] - STARTING MASS FINANCIAL AUDIT ON {len(mapping)} TARGETS\n")
+    # User-agent pour éviter d'être bloqué immédiatement
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
+    
+    final_updates = []
+
+    for name, url in mapping.items():
+        print(f"🔎 Probing {name}...")
+        try:
+            # On respire entre chaque requête (Politesse numérique)
+            time.sleep(1.5) 
+            
+            response = requests.get(url, headers=headers, timeout=20)
+            if response.status_code != 200:
+                print(f"  🚨 {name}: HTTP Error {response.status_code}")
+                final_updates.append({"name": name, "proof": None, "status": f"HTTP_{response.status_code}"})
+                continue
+
+            soup = BeautifulSoup(response.text, 'html.parser')
+            links = soup.find_all('a', href=True)
+            
+            # Recherche du Graal (URD, Annual Report, 2024/2025)
+            patterns = [r'2024', r'2025', r'URD', r'Universal', r'Registration', r'Annual', r'Rapport']
+            
+            found_url = None
+            for link in links:
+                href = link['href']
+                text = link.get_text().strip()
+                if href.lower().endswith('.pdf'):
+                    if any(re.search(p, href, re.I) or re.search(p, text, re.I) for p in patterns):
+                        found_url = urljoin(url, href)
+                        break
+            
+            if found_url:
+                print(f"  ✅ {name}: Document Found.")
+                final_updates.append({"name": name, "proof": found_url, "status": "VERIFIED"})
+            else:
+                print(f"  ⚠️ {name}: No PDF detected (Review URL manually).")
+                final_updates.append({"name": name, "proof": None, "status": "MANUAL_CHECK_REQ"})
+
+        except Exception as e:
+            print(f"  🚨 {name}: Scan Exception.")
+            final_updates.append({"name": name, "proof": None, "status": "ERROR"})
+
+    return final_updates
+
+# Exécution du moteur
+updates = mass_financial_scan(REGISTRY_MAPPING)
+
+# Bilan final
+print("\n" + "="*80)
+print("💎 2A AGENCY - FINANCIAL REGISTRY UPDATE SUMMARY")
+print("="*80)
+for item in updates:
+    proof_display = item['proof'] if item['proof'] else "N/A"
+    print(f"{item['name'].ljust(20)} | {item['status'].ljust(15)} | {proof_display}")

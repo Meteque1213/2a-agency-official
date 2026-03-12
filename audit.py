@@ -1,123 +1,77 @@
 import asyncio
-import json
-import hashlib
-import os
-import re
-from datetime import datetime
-from dotenv import load_dotenv
 import aiohttp
+import csv
+import json
+import os
+from datetime import datetime
 
-# 1. CHARGEMENT DE LA CONFIGURATION
-load_dotenv()
-PPLX_API_KEY = os.getenv("PERPLEXITY_API_KEY")
-PPLX_URL = "https://api.perplexity.ai/chat/completions"
+# CONFIGURATION
+WORKER_URL = "https://royal-sea-50ea.alexandre-afc.workers.dev/?url="
+INPUT_FILE = "urls.csv"
+OUTPUT_FILE = "resultats_2A_bruts.json"
 
-async def query_perplexity(brand, point):
-    """Interroge Perplexity pour vérifier une donnée de luxe en temps réel."""
-    prompt = f"What is the official current {point} for the luxury brand {brand}? Provide a short, precise answer."
+async def scan_brand(session, marque, url):
+    """Scanne une marque via l'Oracle Cloudflare."""
+    if not url or not url.startswith('http'):
+        return None
     
-    headers = {
-        "Authorization": f"Bearer {PPLX_API_KEY}",
-        "Content-Type": "application/json"
-    }
+    target_api = f"{WORKER_URL}{url.strip()}"
+    print(f"📡 Analyse : {marque[:20]}...", end="\r")
     
-    payload = {
-        "model": "sonar-pro",
-        "messages": [
-            {"role": "system", "content": "You are a luxury industry expert. Be concise and factual."},
-            {"role": "user", "content": prompt}
-        ]
-    }
+    try:
+        async with session.get(target_api, timeout=30) as resp:
+            content = await resp.text()
+            if resp.status == 200:
+                print(f"✅ {marque}")
+                return {"marque": marque, "url": url, "data": content, "timestamp": datetime.now().isoformat()}
+            else:
+                print(f"⚠️ {marque} (Erreur {resp.status})")
+                return None
+    except Exception:
+        print(f"❌ {marque} (Échec)")
+        return None
 
-    async with aiohttp.ClientSession() as session:
-        try:
-            async with session.post(PPLX_URL, json=payload, headers=headers) as resp:
-                if resp.status == 200:
-                    data = await resp.json()
-                    content = data['choices'][0]['message']['content'].strip()
-                    return {point: content}
-                else:
-                    error_detail = await resp.text()
-                    print(f"\n[!] Erreur API {resp.status} : {error_detail}")
-                    return None
-        except Exception as e:
-            print(f"\n[!] Erreur de connexion : {e}")
-            return None
-
-async def run_audit():
-    """Lance l'audit complet pour LVMH et Hermès."""
-    if not os.path.exists('ground_truth.json'):
-        print("Erreur : Le fichier ground_truth.json est introuvable !")
+async def main():
+    print(f"\n--- 🛰️ 2A AGENCY : DÉMARRAGE ---")
+    
+    if not os.path.exists(INPUT_FILE):
+        print(f"❌ Erreur : {INPUT_FILE} introuvable.")
         return
 
-    with open('ground_truth.json', 'r') as f:
-        truth = json.load(f)
-    
-    results = {}
-    print(f"\n--- 2A AGENCY SENTINEL SCAN (PERPLEXITY ENGINE) ---")
-    print(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print("-" * 50)
-
-    for brand in truth:
-        print(f"\nScanning {brand}...")
-        errors = 0
-        details = {}
-
-        for pt, real_val in truth[brand].items():
-            print(f"  > Verifying {pt}...", end=" ", flush=True)
+    brands_to_scan = []
+    with open(INPUT_FILE, newline='', encoding='utf-8-sig') as csvfile:
+        reader = csv.DictReader(csvfile)
+        # Nettoyage des noms de colonnes
+        reader.fieldnames = [f.strip() for f in reader.fieldnames]
+        
+        for row in reader:
+            name = row.get("Marque") or row.get("name")
+            # On teste toutes les colonnes d'URL possibles
+            url = row.get("URL") or row.get("URL Officielle") or row.get("Proof URL")
             
-            ai_data = await query_perplexity(brand, pt)
-            
-            if ai_data:
-                found_val = ai_data.get(pt, "N/A")
-                
-                # --- LOGIQUE DE MATCH INTELLIGENTE ---
-                # 1. Match textuel simple (insensible à la casse)
-                simple_match = str(real_val).lower() in found_val.lower()
-                
-                # 2. Match numérique (pour les prix comme 13500)
-                clean_found = re.sub(r'[^\d]', '', found_val)
-                clean_truth = re.sub(r'[^\d]', '', str(real_val))
-                numeric_match = (clean_truth in clean_found and len(clean_truth) > 0)
-                
-                is_match = simple_match or numeric_match
-                # -------------------------------------
+            if name and url and url.strip().startswith('http'):
+                brands_to_scan.append((name.strip(), url.strip()))
 
-                details[pt] = {
-                    "found": found_val,
-                    "truth": real_val,
-                    "status": "OK" if is_match else "DRIFT"
-                }
-                
-                if is_match:
-                    print("✅ [OK]")
-                else:
-                    errors += 1
-                    print(f"❌ [DRIFT]")
-            else:
-                errors += 1
-                print("⚠️ [API ERROR]")
+    if not brands_to_scan:
+        print("❌ Aucune marque avec une URL valide n'a été trouvée dans le CSV.")
+        return
 
-        score = int(100 - (errors / len(truth[brand]) * 100))
-        results[brand] = {"score_2a": score, "details": details}
-        print(f"SCORE FINAL {brand} : {score}/100")
+    print(f"📦 {len(brands_to_scan)} marques détectées.\n")
 
-    output = {
-        "audit_id": hashlib.md5(datetime.now().isoformat().encode()).hexdigest()[:10],
-        "timestamp": datetime.now().isoformat(),
-        "results": results
-    }
-    
-    with open('score_2a.json', 'w') as f:
-        json.dump(output, f, indent=4)
-    
-    final_hash = hashlib.sha256(json.dumps(output).encode()).hexdigest()
-    
-    print("\n" + "="*50)
-    print(f"RAPPORT GÉNÉRÉ : score_2a.json")
-    print(f"HASH BLOCKCHAIN (À NOTARISER) :")
-    print(f"{final_hash}")
-    print("="*50 + "\n")
+    async with aiohttp.ClientSession() as session:
+        semaphore = asyncio.Semaphore(5)
+        async def sem_task(m, u):
+            async with semaphore:
+                return await scan_brand(session, m, u)
+
+        tasks = [sem_task(m, u) for m, u in brands_to_scan]
+        results = await asyncio.gather(*tasks)
+
+    final_data = [r for r in results if r is not None]
+    with open(OUTPUT_FILE, "w", encoding='utf-8') as f:
+        json.dump(final_data, f, indent=4, ensure_ascii=False)
+
+    print(f"\n🏆 TERMINÉ : {len(final_data)} fiches créées dans {OUTPUT_FILE}\n")
 
 if __name__ == "__main__":
-    asyncio.run(run_audit())
+    asyncio.run(main())
