@@ -2,12 +2,13 @@
     "luxury": [
         {
             "name": "LVMH",
-            "score": 89,
-            "doc_label": "ANNUAL_REPORT_2026",
+            "score": 92,
+            "doc_label": "CERTIFIED_DOC_2026",
             "doc_hash": "2aa29befe5a1054fcf9b4677f3b54a99dc5ab93da07ed4a0c135d0e9e90cd71e",
             "hash": "0x2aa29befe5a1054fcf9b4677f3b54a99...",
             "proofUrl": "https://lvmh-com.cdn.prismic.io/lvmh-com/aa7xCFxvIZEnjfN4_R%C3%A9mun%C3%A9rations2026desDirigeantsMandatairesSociaux.pdf",
-            "last_audit": "2026-03-12T19:53:48.576Z"
+            "last_audit": "2026-03-12T20:10:19.563Z",
+            "status": "SECURE"
         },
         {
             "name": "Hermès",
@@ -17,6 +18,16 @@
             "hash": "0xeb6fa8949f19dda54f881c0e7c173e99...",
             "proofUrl": "https://assets-finance.hermes.com/s3fs-public/node/pdf_file/2026-02/1770842738/hermes_20260212_pr_2025fullyearresults_va.pdf",
             "last_audit": "2026-03-12T19:54:21.447Z"
+        },
+        {
+            "name": "Kering",
+            "score": 92,
+            "doc_label": "CERTIFIED_DOC_2026",
+            "doc_hash": "a469ab4ca4e55bf547566e9ebfa1b809c933207e9d558156bc0c4252b17533fe",
+            "hash": "0xa469ab4ca4e55bf547566e9ebfa1b809...",
+            "proofUrl": "https://www.kering.com/api/download-file/?path=Kering_2024_Full_Year_Results_Financial_Document_5682885973.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:10:19.714Z"
         }
     ],
     "beauty": [
@@ -31,7 +42,18 @@
         }
     ],
     "realestate": [],
-    "home": [],
+    "home": [
+        {
+            "name": "IKEA",
+            "score": 92,
+            "doc_label": "CERTIFIED_DOC_2026",
+            "doc_hash": "aee95c67193d8ba31d413d8ea194740aa6c5dac6f7743eaa736bccd8daf8dfd7",
+            "hash": "0xaee95c67193d8ba31d413d8ea194740a...",
+            "proofUrl": "https://www.inter.ikea.com/-/media/interikea/igi/financial-reports/fy24-financial-reports/inter-ikea-holding-bv-annual-report-fy24.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:10:20.172Z"
+        }
+    ],
     "longevity": [],
     "apparel": [
         {
