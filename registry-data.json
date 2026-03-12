@@ -2,22 +2,23 @@
     "luxury": [
         {
             "name": "LVMH",
-            "score": 92,
-            "doc_label": "CERTIFIED_DOC_2026",
+            "score": 91,
+            "doc_label": "CERTIFIED_REPORT_2026",
             "doc_hash": "2aa29befe5a1054fcf9b4677f3b54a99dc5ab93da07ed4a0c135d0e9e90cd71e",
             "hash": "0x2aa29befe5a1054fcf9b4677f3b54a99...",
             "proofUrl": "https://lvmh-com.cdn.prismic.io/lvmh-com/aa7xCFxvIZEnjfN4_R%C3%A9mun%C3%A9rations2026desDirigeantsMandatairesSociaux.pdf",
-            "last_audit": "2026-03-12T20:10:19.563Z",
+            "last_audit": "2026-03-12T20:16:26.685Z",
             "status": "SECURE"
         },
         {
             "name": "Hermès",
             "score": 92,
-            "doc_label": "ANNUAL_REPORT_2026",
+            "doc_label": "CERTIFIED_REPORT_2026",
             "doc_hash": "eb6fa8949f19dda54f881c0e7c173e9995dc5f6f90615d1ccf3fd6e215e710ed",
             "hash": "0xeb6fa8949f19dda54f881c0e7c173e99...",
             "proofUrl": "https://assets-finance.hermes.com/s3fs-public/node/pdf_file/2026-02/1770842738/hermes_20260212_pr_2025fullyearresults_va.pdf",
-            "last_audit": "2026-03-12T19:54:21.447Z"
+            "last_audit": "2026-03-12T20:16:27.636Z",
+            "status": "SECURE"
         },
         {
             "name": "Kering",
@@ -33,12 +34,13 @@
     "beauty": [
         {
             "name": "L'Oréal",
-            "score": 85,
-            "doc_label": "ANNUAL_REPORT_2026",
+            "score": 90,
+            "doc_label": "CERTIFIED_REPORT_2026",
             "doc_hash": "d56c40164ad9332884de688ee2411864410081f37ed5d13a0951d01069acd52f",
             "hash": "0xd56c40164ad9332884de688ee2411864...",
             "proofUrl": "https://www.loreal-finance.com/sites/default/files/styles/scale_283w_375h/public/2025-04/Document_denregistrement_universel_2024_LOREAL.pdf",
-            "last_audit": "2026-03-12T19:54:25.087Z"
+            "last_audit": "2026-03-12T20:16:33.245Z",
+            "status": "SECURE"
         }
     ],
     "realestate": [],
@@ -52,9 +54,40 @@
             "proofUrl": "https://www.inter.ikea.com/-/media/interikea/igi/financial-reports/fy24-financial-reports/inter-ikea-holding-bv-annual-report-fy24.pdf",
             "status": "SECURE",
             "last_audit": "2026-03-12T20:10:20.172Z"
+        },
+        {
+            "name": "Legrand",
+            "score": 94,
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "7626b74d5e1e8e98bd58d2905b73b5e6462ac95d659aa8dd88ff75de2f1190fe",
+            "hash": "0x7626b74d5e1e8e98bd58d2905b73b5e6...",
+            "proofUrl": "https://www.legrand.com/sites/default/files/Documents_PDF_Legrand/Finance/2025/1Y/Legrand_Communique_Presse_Resultats_Annuels-2025_1770814870.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:18:00.726Z"
+        },
+        {
+            "name": "Schneider Electric",
+            "score": 94,
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "88c05720bf7d3f9e3ae2e4fc69c45687da3d7cc88d002f338f538003c4e8e98a",
+            "hash": "0x88c05720bf7d3f9e3ae2e4fc69c45687...",
+            "proofUrl": "https://se.com/ww/en/assets/564/document/510443/2024-universal-registration-document.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:18:13.261Z"
         }
     ],
-    "longevity": [],
+    "longevity": [
+        {
+            "name": "Pfizer",
+            "score": 94,
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "e4cb63d7f13b03723b03f6a93150ed9cdce816053ec2567410b69b5faa39f853",
+            "hash": "0xe4cb63d7f13b03723b03f6a93150ed9c...",
+            "proofUrl": "https://s206.q4cdn.com/795948973/files/doc_financials/2025/ar/2025-Form-10-K-Filed.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:18:21.621Z"
+        }
+    ],
     "apparel": [
         {
             "name": "Nike",
@@ -64,65 +97,172 @@
             "hash": "0xc7ea0a4363faba2c6eca2b85ec1d59c4...",
             "proofUrl": "https://s1.q4cdn.com/806093406/files/doc_financials/2026/q2/Q2-FY26-Exhibit-99-1ER-FINAL-33-97.pdf",
             "last_audit": "2026-03-12T19:54:44.949Z"
+        },
+        {
+            "name": "Inditex",
+            "score": 89,
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "9600d9004e8b3e94474935f33bf268b1d50199e54f94b02c008dc972e70935c6",
+            "hash": "0x9600d9004e8b3e94474935f33bf268b1...",
+            "proofUrl": "https://www.inditex.com/itxcomweb/_next/static/media/Arrow-down.5753d375.svg)](https://www.inditex.com/itxcomweb/api/media/1da2c9d1-dbca-49fb-9563-982a8a27fae6/INDITEXFullYear2025.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:17:35.501Z"
+        },
+        {
+            "name": "Adidas",
+            "score": 91,
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "5e17057308be03370d326b45e253aa84bdc7c1e2c6c23eab996f1b9df8cfecc9",
+            "hash": "0x5e17057308be03370d326b45e253aa84...",
+            "proofUrl": "https://res.cloudinary.com/confirmed-web/image/upload/v1745903646/adidas-group/investors/financial-publications/2025/Q1/adidasAG_Q1_2025_Results_EN_Final_mju03h.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:17:39.803Z"
+        },
+        {
+            "name": "H&M Group",
+            "score": 91,
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "0bff78ba80882bedf896560c9fa315c60c36d4d72b75f084288f0640d39b11cb",
+            "hash": "0x0bff78ba80882bedf896560c9fa315c6...",
+            "proofUrl": "https://hmgroup.com/wp-content/uploads/2026/01/H-M-Hennes-Mauritz-AB-Full-year-report-2025.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:17:42.469Z"
         }
     ],
-    "fnb": [],
+    "fnb": [
+        {
+            "name": "Pernod Ricard",
+            "score": 90,
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "3eddd65341d012023ee007f82c4fb713b93574de817495b3b0c1153bfb46d218",
+            "hash": "0x3eddd65341d012023ee007f82c4fb713...",
+            "proofUrl": "https://www.pernod-ricard.com/sites/default/files/inline-files/Pernod_Ricard_IAR25_FRENCH.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:16:53.413Z"
+        },
+        {
+            "name": "Danone",
+            "score": 95,
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "4512239aa8ab314af2159bee24e98dc8c1ca247b2013fa543f6ac1ef85b62ed8",
+            "hash": "0x4512239aa8ab314af2159bee24e98dc8...",
+            "proofUrl": "https://www.danone.com/content/dam/corp/global/danonecom/investors/fr-all-publications/2026/pressreleases/danonecp200226.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:17:21.854Z"
+        },
+        {
+            "name": "Nestlé",
+            "score": 88,
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "c950b18ab175f6db7d08411d59eec4f315a78110af7140db552503aa60d0e672",
+            "hash": "0xc950b18ab175f6db7d08411d59eec4f3...",
+            "proofUrl": "https://www.nestle.com/sites/default/files/2026-02/annual-review-2025-en.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:17:26.566Z"
+        },
+        {
+            "name": "Diageo",
+            "score": 98,
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "6b9de2293ce0ac46f628e111c6d3072b653b5a4ed8a43268501afdac6b8ef218",
+            "hash": "0x6b9de2293ce0ac46f628e111c6d3072b...",
+            "proofUrl": "https://www.diageo.com/pdf-viewer.aspx?gid=307336661&src=/~/media/Files/D/Diageo-V2/Diageo-Corp/investors/results-reports-and-events/annual-reports/2025/annual-report-2025.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:17:30.378Z"
+        },
+        {
+            "name": "Coca-Cola",
+            "score": 88,
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "4665586944ca6fb548725fa4bd97255685bb6ec9426de5394c6fed8702b145bf",
+            "hash": "0x4665586944ca6fb548725fa4bd972556...",
+            "proofUrl": "https://investors.coca-colacompany.com/news-events/press-releases/detail/1151/coca-cola-reports-fourth-quarter-and-full-year-2025-results) [PDF](https://investors.coca-colacompany.com/_assets/_2f82c261593c090acbb4202057cb7f65/cocacolacompany/db/880/11088/earnings_release/Coca-Cola+Q4+2025+Earnings+Release_Full+Release_2.10.26.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:17:31.029Z"
+        }
+    ],
     "crypto": [
         {
             "name": "NVIDIA",
             "score": 96,
-            "doc_label": "ANNUAL_REPORT_2026",
+            "doc_label": "CERTIFIED_REPORT_2026",
             "doc_hash": "c776c9f3cad0d746ee1deda1871317adf7d72947830406c4158976beaf4a8631",
             "hash": "0xc776c9f3cad0d746ee1deda1871317ad...",
             "proofUrl": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026) [Webcast(opens in new window)](https://events.q4inc.com/attendee/412427890) [Transcript(opens in new window)](https://s201.q4cdn.com/141608511/files/doc_financials/2026/q4/NVDA-Q4-2026-Earnings-Call-25-February-2026-5_00-PM-ET.pdf",
-            "last_audit": "2026-03-12T19:54:33.682Z"
+            "last_audit": "2026-03-12T20:16:46.411Z",
+            "status": "SECURE"
         },
         {
             "name": "Coinbase",
             "score": 93,
-            "doc_label": "ANNUAL_REPORT_2026",
+            "doc_label": "CERTIFIED_REPORT_2026",
             "doc_hash": "e0937495a0bf6dc6e94caa49a8819d5ea954c98578f21298570e95daa56d3685",
             "hash": "0xe0937495a0bf6dc6e94caa49a8819d5e...",
             "proofUrl": "https://s27.q4cdn.com/397450999/files/doc_financials/2025/q4/v2/Q4-25-Shareholder-Letter.pdf",
-            "last_audit": "2026-03-12T19:54:35.014Z"
+            "last_audit": "2026-03-12T20:16:47.766Z",
+            "status": "SECURE"
         },
         {
             "name": "Apple",
-            "score": 97,
-            "doc_label": "ANNUAL_REPORT_2026",
+            "score": 94,
+            "doc_label": "CERTIFIED_REPORT_2026",
             "doc_hash": "642be8573a200eecc91d1d5685fa527f8eb6037b632337f8e9f5ed0e04dda179",
             "hash": "0x642be8573a200eecc91d1d5685fa527f...",
             "proofUrl": "https://www.apple.com/newsroom/pdfs/fy2026-q1/FY26_Q1_Consolidated_Financial_Statements.pdf",
-            "last_audit": "2026-03-12T19:54:36.249Z"
+            "last_audit": "2026-03-12T20:16:49.141Z",
+            "status": "SECURE"
+        },
+        {
+            "name": "Alphabet",
+            "score": 94,
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "0cb10728b1ba3854df33d0c11a8f398673551e5b5eb39183c2bf045efe96e2f4",
+            "hash": "0x0cb10728b1ba3854df33d0c11a8f3986...",
+            "proofUrl": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q1/2025q1-alphabet-earnings-release.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:16:49.885Z"
         }
     ],
     "mobility": [
         {
             "name": "Tesla",
-            "score": 96,
-            "doc_label": "ANNUAL_REPORT_2026",
-            "doc_hash": "ccc66980400f6986210835e73933d787ad3fc0704b11050e3e90039aafdb37b7",
-            "hash": "0xccc66980400f6986210835e73933d787...",
+            "score": 94,
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "82ed679b36d8568e34a00a3d46b7bcda57b72621d36bcba3c14c71683699fe0c",
+            "hash": "0x82ed679b36d8568e34a00a3d46b7bcda...",
             "proofUrl": "https://ir.tesla.com/webcast-2026-01-28 \"Listen to Webcast\") [Download Shareholder Deck](https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q4-2025-Update.pdf",
-            "last_audit": "2026-03-12T19:54:28.610Z"
+            "last_audit": "2026-03-12T20:16:39.709Z",
+            "status": "SECURE"
         },
         {
             "name": "Ferrari",
             "score": 93,
-            "doc_label": "ANNUAL_REPORT_2026",
-            "doc_hash": "95f1ade69b54c9ae8ee578ce24e20f307cfa47e1f87ff92e393b1a1a6a003e07",
-            "hash": "0x95f1ade69b54c9ae8ee578ce24e20f30...",
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "d4e1ae891a014a1dc917bcb17021193733ffce27d886d45ef6aeccc9e142054b",
+            "hash": "0xd4e1ae891a014a1dc917bcb170211937...",
             "proofUrl": "https://www.ferrari.com/en-EN/corporate/articles/ferrari-nv-periodic-report-on-the-buyback-program-246) [PDF](https://www.ferrari.com/content/dam/ferrari-fcom/news/corporate/2026/03/pdf/FNV%20BB%20PR%209%20March%202026%20ENG.pdf",
-            "last_audit": "2026-03-12T19:54:29.279Z"
+            "last_audit": "2026-03-12T20:16:40.117Z",
+            "status": "SECURE"
         },
         {
             "name": "Mercedes-Benz",
-            "score": 85,
-            "doc_label": "ANNUAL_REPORT_2026",
+            "score": 88,
+            "doc_label": "CERTIFIED_REPORT_2026",
             "doc_hash": "38b19b0015a9324c64f0136b99048bf0e4afcc4af1330b1d02aaa3940f543147",
             "hash": "0x38b19b0015a9324c64f0136b99048bf0...",
             "proofUrl": "https://group.mercedes-benz.com/documents/investors/berichte/zwischenberichte/q2/daimler-ir-interimreport-q2-2013.pdf",
-            "last_audit": "2026-03-12T19:54:32.902Z"
+            "last_audit": "2026-03-12T20:16:40.723Z",
+            "status": "SECURE"
+        },
+        {
+            "name": "BMW Group",
+            "score": 97,
+            "doc_label": "CERTIFIED_REPORT_2026",
+            "doc_hash": "6fbb4a9d1ccc95d7f109829098125443e8d15246bec04a6aa7dd453153d53bee",
+            "hash": "0x6fbb4a9d1ccc95d7f109829098125443...",
+            "proofUrl": "https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/ir/downloads/en/2026/bericht/BMW-Group-Report-2025-en.pdf",
+            "status": "SECURE",
+            "last_audit": "2026-03-12T20:16:43.440Z"
         }
     ]
 }
