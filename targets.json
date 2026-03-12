@@ -1,0 +1,47 @@
+[
+    { "name": "LVMH", "category": "luxury", "domain": "lvmh.com", "searchUrl": "https://www.lvmh.fr/actionnaires/publications/" },
+    { "name": "Kering", "category": "luxury", "domain": "kering.com", "searchUrl": "https://www.kering.com/fr/finance/publications/" },
+    { "name": "Hermès", "category": "luxury", "domain": "hermes.com", "searchUrl": "https://finance.hermes.com/fr/publications/" },
+    { "name": "Richemont", "category": "luxury", "domain": "richemont.com", "searchUrl": "https://www.richemont.com/en/investors/results-reports/" },
+    { "name": "Prada", "category": "luxury", "domain": "pradagroup.com", "searchUrl": "https://www.pradagroup.com/en/investors/reports.html" },
+  
+    { "name": "L'Oréal", "category": "beauty", "domain": "loreal-finance.com", "searchUrl": "https://www.loreal-finance.com/fr/rapport-annuel/" },
+    { "name": "Estée Lauder", "category": "beauty", "domain": "elcompanies.com", "searchUrl": "https://www.elcompanies.com/en/investors/results-and-events" },
+    { "name": "Coty", "category": "beauty", "domain": "coty.com", "searchUrl": "https://investors.coty.com/financials/annual-reports/default.aspx" },
+    { "name": "Beiersdorf", "category": "beauty", "domain": "beiersdorf.com", "searchUrl": "https://www.beiersdorf.com/investors/publications/financial-reports" },
+  
+    { "name": "Tesla", "category": "mobility", "domain": "tesla.com", "searchUrl": "https://ir.tesla.com/" },
+    { "name": "Ferrari", "category": "mobility", "domain": "ferrari.com", "searchUrl": "https://www.ferrari.com/en-EN/corporate/investors" },
+    { "name": "Mercedes-Benz", "category": "mobility", "domain": "mercedes-benz.com", "searchUrl": "https://group.mercedes-benz.com/investors/reports/" },
+    { "name": "BMW Group", "category": "mobility", "domain": "bmwgroup.com", "searchUrl": "https://www.bmwgroup.com/en/investor-relations/financial-reports.html" },
+    { "name": "Porsche", "category": "mobility", "domain": "porsche.com", "searchUrl": "https://investorrelations.porsche.com/en/reports-presentations/" },
+  
+    { "name": "NVIDIA", "category": "crypto", "domain": "nvidia.com", "searchUrl": "https://investor.nvidia.com/" },
+    { "name": "Coinbase", "category": "crypto", "domain": "coinbase.com", "searchUrl": "https://investor.coinbase.com/" },
+    { "name": "Apple", "category": "crypto", "domain": "apple.com", "searchUrl": "https://investor.apple.com/" },
+    { "name": "Microsoft", "category": "crypto", "domain": "microsoft.com", "searchUrl": "https://www.microsoft.com/en-us/investor/" },
+    { "name": "Alphabet", "category": "crypto", "domain": "abc.xyz", "searchUrl": "https://abc.xyz/investor/" },
+  
+    { "name": "Pernod Ricard", "category": "fnb", "domain": "pernod-ricard.com", "searchUrl": "https://www.pernod-ricard.com/fr/investisseurs/" },
+    { "name": "Danone", "category": "fnb", "domain": "danone.com", "searchUrl": "https://www.danone.com/fr/investor-relations.html" },
+    { "name": "Nestlé", "category": "fnb", "domain": "nestle.com", "searchUrl": "https://www.nestle.com/investors/publications" },
+    { "name": "Diageo", "category": "fnb", "domain": "diageo.com", "searchUrl": "https://www.diageo.com/en/investors/results-reports-and-presentations" },
+    { "name": "Coca-Cola", "category": "fnb", "domain": "coca-colacompany.com", "searchUrl": "https://investors.coca-colacompany.com/" },
+  
+    { "name": "Inditex", "category": "apparel", "domain": "inditex.com", "searchUrl": "https://www.inditex.com/itxcomweb/en/investors" },
+    { "name": "Nike", "category": "apparel", "domain": "nike.com", "searchUrl": "https://investors.nike.com/" },
+    { "name": "Adidas", "category": "apparel", "domain": "adidas-group.com", "searchUrl": "https://www.adidas-group.com/en/investors/financial-reports/" },
+    { "name": "H&M Group", "category": "apparel", "domain": "hmgroup.com", "searchUrl": "https://hmgroup.com/investors/reports/" },
+  
+    { "name": "Unibail-Rodamco", "category": "realestate", "domain": "urw.com", "searchUrl": "https://www.urw.com/en/investors" },
+    { "name": "Vonovia", "category": "realestate", "domain": "vonovia.de", "searchUrl": "https://investoren.vonovia.de/en/reports-publications/" },
+    { "name": "Gecina", "category": "realestate", "domain": "gecina.fr", "searchUrl": "https://www.gecina.fr/fr/investisseurs/resultats" },
+  
+    { "name": "IKEA", "category": "home", "domain": "inter.ikea.com", "searchUrl": "https://www.inter.ikea.com/en/performance/financial-reports" },
+    { "name": "Legrand", "category": "home", "domain": "legrandgroup.com", "searchUrl": "https://www.legrandgroup.com/fr/investisseurs-et-actionnaires" },
+    { "name": "Schneider Electric", "category": "home", "domain": "se.com", "searchUrl": "https://www.se.com/ww/en/about-us/investor-relations/" },
+  
+    { "name": "Novo Nordisk", "category": "longevity", "domain": "novonordisk.com", "searchUrl": "https://www.novonordisk.com/investors/reports.html" },
+    { "name": "Sanofi", "category": "longevity", "domain": "sanofi.com", "searchUrl": "https://www.sanofi.com/fr/investisseurs/resultats-et-publications" },
+    { "name": "Pfizer", "category": "longevity", "domain": "pfizer.com", "searchUrl": "https://investors.pfizer.com/financials/annual-reports/default.aspx" }
+  ]

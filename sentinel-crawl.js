@@ -5,26 +5,8 @@ import fs from 'fs/promises';
 const app = new FirecrawlApp({ apiKey: "fc-9b19e9af7c464b58a30be98c4c9f1e43" });
 
 // --- TARGET MAP AVEC FALLBACKS (MODE OSINT) ---
-const TARGETS = [
-    { 
-        name: "LVMH", 
-        category: "luxury", 
-        searchUrl: "https://www.lvmh.fr/actionnaires/publications/",
-        fallbackUrl: "https://www.pappers.fr/entreprise/lvmh-moet-hennessy-louis-vuitton-775670417"
-    },
-    { 
-        name: "Kering", 
-        category: "luxury", 
-        searchUrl: "https://www.kering.com/api/download-file/?path=Kering_2024_Full_Year_Results_Financial_Document_5682885973.pdf",
-        fallbackUrl: "https://pappers.fr/entreprise/kering-552075195" 
-    },
-    { 
-        name: "IKEA", 
-        category: "home", 
-        searchUrl: "https://www.inter.ikea.com/-/media/interikea/igi/financial-reports/fy24-financial-reports/inter-ikea-holding-bv-annual-report-fy24.pdf",
-        fallbackUrl: "https://www.ikea.com/global/en/files/IKEA_Sustainability_Report_FY24.pdf"
-    }
-];
+import targetsData from './targets.json' assert { type: 'json' };
+const TARGETS = targetsData;
 
 async function getPdfHash(url) {
     try {
