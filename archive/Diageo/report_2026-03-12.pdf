@@ -1,0 +1,605 @@
+
+
+<!DOCTYPE html>
+<html dir="ltr" mozdisallowselectionprint lang="en">
+  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes, maximum-scale=3.0" /><meta name="google-site-verification" content="a_KBU8P4i8wRsOUznJrPnf8Aw0eEh8BdqNjGBX4n0S8" /><meta name="google" content="notranslate" /><title>
+	PDF.js Viewer
+</title>
+    <style>
+      .invisible {
+        position: absolute;
+        left: -9999999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        visibility: visible !important;
+        background-color: transparent;
+      }
+      .sktmain.visible {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        visibility: visible !important;
+        z-index: 11;
+        background-color: #ffffe4;
+        padding: 8px;
+      }
+      .visually-hidden {
+        position: absolute;
+        left: -10000px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+      }
+    </style>
+    <link rel="stylesheet" href="/StaticResources/CSS/viewer.css" />
+    <script src="/StaticResources/JS/pdf.js" type="module"></script>
+    <script src="/StaticResources/JS/viewer.js" type="module"></script>
+    
+    <script src="/StaticResources/JS/analytics.js" type="module"></script>
+  </head>
+
+  <body tabindex="0">
+    <div class="sktmain invisible">
+      <a class="skip-to-main" href="" aria-label="skip-to-main" tabindex="1"
+        >Skip to main content</a
+      >
+    </div>
+    <header role="banner">
+      <h1 id="maincontentwrapper" class="visually-hidden">PDF.js viewer</h1>
+    </header>
+    <div id="outerContainer">
+      <div id="mainContainer">
+        <div class="toolbar" tabindex="0">
+          <nav aria-label="Document toolbar">
+            <div id="toolbarContainer">
+              <div id="toolbarViewer" class="toolbarHorizontalGroup">
+                <div id="toolbarViewerLeft" class="toolbarHorizontalGroup">
+                  <div class="toolbarButtonWithContainer">
+                    <button
+                      id="viewFindButton"
+                      class="toolbarButton svg-icon-btn"
+                      type="button"
+                      title="Find in Document"
+                      tabindex="0"
+                      data-l10n-id="pdfjs-findbar-button"
+                      aria-expanded="false"
+                      aria-controls="findbar"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                        />
+                      </svg>
+                      <span
+                        data-l10n-id="pdfjs-findbar-button-label"
+                        aria-label="Find"
+                        >Find 11</span
+                      >
+                    </button>
+                    <div
+                      class="hidden doorHanger toolbarHorizontalGroup"
+                      id="findbar"
+                    >
+                      <div
+                        id="findInputContainer"
+                        class="toolbarHorizontalGroup"
+                      >
+                        <span class="loadingInput end toolbarHorizontalGroup">
+                          <input
+                            id="findInput"
+                            class="toolbarField"
+                            title="Find"
+                            placeholder="Find in document…"
+                            tabindex="0"
+                            data-l10n-id="pdfjs-find-input"
+                            aria-invalid="false"
+                          />
+                        </span>
+                        <div class="toolbarHorizontalGroup">
+                          <button
+                            id="findPreviousButton"
+                            class="toolbarButton svg-icon-btn"
+                            type="button"
+                            title="Find the previous occurrence of the phrase"
+                            tabindex="0"
+                            data-l10n-id="pdfjs-find-previous-button"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 448 512"
+                            >
+                              <path
+                                d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"
+                              />
+                            </svg>
+                            <span
+                              data-l10n-id="pdfjs-find-previous-button-label"
+                              >Previous</span
+                            >
+                          </button>
+                          <div class="splitToolbarButtonSeparator"></div>
+                          <button
+                            id="findNextButton"
+                            class="toolbarButton svg-icon-btn"
+                            type="button"
+                            title="Find the next occurrence of the phrase"
+                            tabindex="0"
+                            data-l10n-id="pdfjs-find-next-button"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 448 512"
+                            >
+                              <path
+                                d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+                              />
+                            </svg>
+                            <span data-l10n-id="pdfjs-find-next-button-label"
+                              >Next</span
+                            >
+                          </button>
+                        </div>
+                      </div>
+
+                      <div
+                        id="findbarOptionsOneContainer"
+                        class="toolbarHorizontalGroup"
+                      >
+                        <div class="toggleButton toolbarLabel">
+                          <input
+                            type="checkbox"
+                            id="findHighlightAll"
+                            tabindex="0"
+                          />
+                          <label
+                            for="findHighlightAll"
+                            data-l10n-id="pdfjs-find-highlight-checkbox"
+                            >Highlight All</label
+                          >
+                        </div>
+                        <div class="toggleButton toolbarLabel">
+                          <input
+                            type="checkbox"
+                            id="findMatchCase"
+                            tabindex="0"
+                          />
+                          <label
+                            for="findMatchCase"
+                            data-l10n-id="pdfjs-find-match-case-checkbox-label"
+                            >Match Case</label
+                          >
+                        </div>
+                      </div>
+                      <div
+                        id="findbarOptionsTwoContainer"
+                        class="toolbarHorizontalGroup"
+                      >
+                        <div class="toggleButton toolbarLabel">
+                          <input
+                            type="checkbox"
+                            id="findMatchDiacritics"
+                            tabindex="0"
+                          />
+                          <label
+                            for="findMatchDiacritics"
+                            data-l10n-id="pdfjs-find-match-diacritics-checkbox-label"
+                            >Match Diacritics</label
+                          >
+                        </div>
+                        <div class="toggleButton toolbarLabel">
+                          <input
+                            type="checkbox"
+                            id="findEntireWord"
+                            tabindex="0"
+                          />
+                          <label
+                            for="findEntireWord"
+                            data-l10n-id="pdfjs-find-entire-word-checkbox-label"
+                            >Whole Words</label
+                          >
+                        </div>
+                      </div>
+
+                      <div
+                        id="findbarMessageContainer"
+                        class="toolbarHorizontalGroup"
+                        aria-live="polite"
+                      >
+                        <span id="findResultsCount" class="toolbarLabel"></span>
+                        <span id="findMsg" class="toolbarLabel"></span>
+                      </div>
+                    </div>
+                    <!-- findbar -->
+                  </div>
+                  <div class="toolbarHorizontalGroup hiddenSmallView">
+                    <button
+                      class="toolbarButton svg-icon-btn"
+                      title="Previous Page"
+                      type="button"
+                      id="previous"
+                      tabindex="0"
+                      data-l10n-id="pdfjs-previous-button"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                      >
+                        <path
+                          d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"
+                        />
+                      </svg>
+                      <span data-l10n-id="pdfjs-previous-button-label"
+                        >Previous</span
+                      >
+                    </button>
+                    <div class="splitToolbarButtonSeparator"></div>
+                    <button
+                      class="toolbarButton svg-icon-btn"
+                      type="button"
+                      title="Next Page"
+                      id="next"
+                      tabindex="0"
+                      data-l10n-id="pdfjs-next-button"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                      >
+                        <path
+                          d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+                        />
+                      </svg>
+                      <span data-l10n-id="pdfjs-next-button-label">Next</span>
+                    </button>
+                  </div>
+                  <div class="toolbarHorizontalGroup">
+                    <span class="loadingInput start toolbarHorizontalGroup">
+                      <input
+                        type="number"
+                        id="pageNumber"
+                        class="toolbarField"
+                        title="Page"
+                        value="1"
+                        min="1"
+                        tabindex="0"
+                        data-l10n-id="pdfjs-page-input"
+                        autocomplete="off"
+                      />
+                    </span>
+                    <span id="numPages" class="toolbarLabel"></span>
+                  </div>
+                </div>
+                <div id="toolbarViewerMiddle" class="toolbarHorizontalGroup">
+                  <div class="toolbarHorizontalGroup">
+                    <button
+                      id="zoomOutButton"
+                      class="toolbarButton svg-icon-btn"
+                      type="button"
+                      title="Zoom Out"
+                      tabindex="0"
+                      data-l10n-id="pdfjs-zoom-out-button"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                      >
+                        <path
+                          d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"
+                        />
+                      </svg>
+                      <span data-l10n-id="pdfjs-zoom-out-button-label"
+                        >Zoom Out</span
+                      >
+                    </button>
+                    <div class="splitToolbarButtonSeparator"></div>
+                    <button
+                      id="zoomInButton"
+                      class="toolbarButton svg-icon-btn"
+                      type="button"
+                      title="Zoom In"
+                      tabindex="0"
+                      data-l10n-id="pdfjs-zoom-in-button"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                      >
+                        <path
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"
+                        />
+                      </svg>
+                      <span data-l10n-id="pdfjs-zoom-in-button-label"
+                        >Zoom In</span
+                      >
+                    </button>
+                  </div>
+                  <span id="scaleSelectContainer" class="dropdownToolbarButton">
+                    <select
+                      id="scaleSelect"
+                      title="Zoom"
+                      tabindex="0"
+                      data-l10n-id="pdfjs-zoom-select"
+                    >
+                      <option
+                        id="pageFitOption"
+                        title=""
+                        value="page-fit"
+                        data-l10n-id="pdfjs-page-scale-fit"
+                      >
+                        Page Fit
+                      </option>
+                      <option
+                        id="pageAutoOption"
+                        title=""
+                        value="auto"
+                        data-l10n-id="pdfjs-page-scale-auto"
+                      >
+                        Automatic Zoom
+                      </option>
+                      <option
+                        id="pageActualOption"
+                        title=""
+                        value="page-actual"
+                        data-l10n-id="pdfjs-page-scale-actual"
+                      >
+                        Actual Size
+                      </option>
+                      <option
+                        id="pageWidthOption"
+                        title=""
+                        value="page-width"
+                        data-l10n-id="pdfjs-page-scale-width"
+                      >
+                        Page Width
+                      </option>
+                      <option
+                        id="customScaleOption"
+                        title=""
+                        value="custom"
+                        disabled="disabled"
+                        hidden="true"
+                        data-l10n-id="pdfjs-page-scale-percent"
+                        data-l10n-args='{ "scale": 0 }'
+                      >
+                        0%
+                      </option>
+                      <option
+                        title=""
+                        value="0.5"
+                        data-l10n-id="pdfjs-page-scale-percent"
+                        data-l10n-args='{ "scale": 50 }'
+                      >
+                        50%
+                      </option>
+                      <option
+                        title=""
+                        value="0.75"
+                        data-l10n-id="pdfjs-page-scale-percent"
+                        data-l10n-args='{ "scale": 75 }'
+                      >
+                        75%
+                      </option>
+                      <option
+                        title=""
+                        value="1"
+                        data-l10n-id="pdfjs-page-scale-percent"
+                        data-l10n-args='{ "scale": 100 }'
+                      >
+                        100%
+                      </option>
+                      <option
+                        title=""
+                        value="1.25"
+                        data-l10n-id="pdfjs-page-scale-percent"
+                        data-l10n-args='{ "scale": 125 }'
+                      >
+                        125%
+                      </option>
+                      <option
+                        title=""
+                        value="1.5"
+                        data-l10n-id="pdfjs-page-scale-percent"
+                        data-l10n-args='{ "scale": 150 }'
+                      >
+                        150%
+                      </option>
+                      <option
+                        title=""
+                        value="2"
+                        data-l10n-id="pdfjs-page-scale-percent"
+                        data-l10n-args='{ "scale": 200 }'
+                      >
+                        200%
+                      </option>
+                      <option
+                        title=""
+                        value="3"
+                        data-l10n-id="pdfjs-page-scale-percent"
+                        data-l10n-args='{ "scale": 300 }'
+                      >
+                        300%
+                      </option>
+                      <option
+                        title=""
+                        value="4"
+                        data-l10n-id="pdfjs-page-scale-percent"
+                        data-l10n-args='{ "scale": 400 }'
+                      >
+                        400%
+                      </option>
+                    </select>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                    >
+                      <path
+                        d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div id="toolbarViewerRight" class="toolbarHorizontalGroup">
+                  <div
+                    id="editorModeSeparator"
+                    class="verticalToolbarSeparator"
+                  ></div>
+
+                  <div class="toolbarHorizontalGroup hiddenMediumView">
+                    <button
+                      id="downloadButton"
+                      class="toolbarButton svg-icon-btn"
+                      type="button"
+                      title="Save"
+                      tabindex="0"
+                      data-l10n-id="pdfjs-save-button"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                      >
+                        <path
+                          d="M48 96l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-245.5c0-4.2-1.7-8.3-4.7-11.3l33.9-33.9c12 12 18.7 28.3 18.7 45.3L448 416c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l245.5 0c17 0 33.3 6.7 45.3 18.7l74.5 74.5-33.9 33.9L320.8 84.7c-.3-.3-.5-.5-.8-.8L320 184c0 13.3-10.7 24-24 24l-192 0c-13.3 0-24-10.7-24-24L80 80 64 80c-8.8 0-16 7.2-16 16zm80-16l0 80 144 0 0-80L128 80zm32 240a64 64 0 1 1 128 0 64 64 0 1 1 -128 0z"
+                        />
+                      </svg>
+                      <span data-l10n-id="pdfjs-save-button-label">Save</span>
+                    </button>
+                  </div>
+
+                  <div class="verticalToolbarSeparator hiddenMediumView"></div>
+                </div>
+              </div>
+              <div id="loadingBar">
+                <div class="progress">
+                  <div class="glimmer"></div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div id="viewerContainer" tabindex="1">
+          <div id="viewer" class="pdfViewer"></div>
+          <div id="errorWrapper"></div>
+        </div>
+      </div>
+      <!-- mainContainer -->
+    </div>
+    <!-- outerContainer -->
+
+    
+    <script defer>
+      /**
+       * PDF.js accessibility cleanup script
+       * -----------------------------------
+       * Run this after PDF.js finishes rendering each page.
+       * It removes invalid aria-labels and fixes nameless links.
+       */
+
+      function cleanPDFjsAccessibility() {
+        // 1️⃣ Remove invalid aria-labels on plain spans (no role)
+        document.querySelectorAll("span[aria-label]").forEach((span) => {
+          const role = span.getAttribute("role");
+          // Keep label only if it's meaningful (e.g., heading, button, link)
+          if (!role || ["presentation", "none"].includes(role)) {
+            span.removeAttribute("aria-label");
+          }
+        });
+
+        // 2️⃣ Add text alternatives to links without visible text
+        document.querySelectorAll('span[role="link"]').forEach((link) => {
+          const text = link.textContent.trim();
+          const hasLabel = link.hasAttribute("aria-label");
+
+          if (!text && !hasLabel) {
+            // Try to guess a URL from nearby spans or PDF.js metadata
+            let inferredUrl =
+              link.dataset?.href || link.getAttribute("data-href");
+
+            // fallback placeholder if unknown
+            if (!inferredUrl) inferredUrl = "Link";
+
+            // Clean up
+            inferredUrl = inferredUrl
+              .replace(/^https?:\/\//, "")
+              .replace(/\/$/, "");
+
+            link.setAttribute("aria-label", inferredUrl);
+          }
+        });
+
+        // Optional: report summary in console
+        // console.info("[PDF.js accessibility cleanup] Completed");
+      }
+
+      // Hook into PDF.js viewer load
+      document.addEventListener("pagesloaded", cleanPDFjsAccessibility);
+
+      // Or call manually after each page render
+      // PDFViewerApplication.eventBus.on('pagerendered', cleanPDFjsAccessibility);
+
+      /**
+       * Fix empty <a> links in PDF.js viewer by adding fallback labels.
+       */
+      function fixEmptyPdfLinks() {
+        document.querySelectorAll("a.linkAnnotation").forEach((a) => {
+          const text = a.textContent.trim();
+          const hasLabel =
+            a.hasAttribute("aria-label") || a.hasAttribute("title");
+
+          if (!text && !hasLabel) {
+            // Try to infer a label from the href or type
+            let label = "";
+
+            if (a.href && a.href.includes("#")) {
+              label = "Internal link";
+            } else if (a.href && a.href.startsWith("http")) {
+              const url = new URL(a.href);
+              label = url.hostname || "External link";
+            } else {
+              label = "Document link";
+            }
+
+            a.setAttribute("aria-label", label);
+          }
+        });
+
+        // console.info(
+        //   "[PDF.js accessibility cleanup] Empty linkAnnotations labeled"
+        // );
+      }
+
+      // Run once document pages are loaded
+      document.addEventListener("pagesloaded", fixEmptyPdfLinks);
+
+      /**
+       * Remove empty headings in PDF.js accessibility layer
+       */
+      function fixEmptyHeadings() {
+        document.querySelectorAll('[role="heading"]').forEach((h) => {
+          const text = h.textContent.trim();
+          const hasLabel = h.getAttribute("aria-label");
+
+          // If it has neither text nor label, remove the heading role
+          if (!text && !hasLabel) {
+            h.removeAttribute("role");
+            h.removeAttribute("aria-level");
+          }
+        });
+        // console.info("[PDF.js accessibility cleanup] Empty headings removed");
+      }
+
+      document.addEventListener("pagesloaded", fixEmptyHeadings);
+    </script>
+    <!-- Script tag to remove some accessibility issues -->
+  </body>
+</html>
