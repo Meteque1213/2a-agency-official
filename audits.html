@@ -99,8 +99,10 @@
         function renderAudits(data) {
             const container = document.getElementById('audit-container');
             container.innerHTML = data.map(audit => {
-                // Gestion hybride des clés (ancien format 'brand' vs nouveau format 'entity')
-                const name = audit.entity || audit.brand || "Unknown Entity";
+                // Nettoyage dynamique du nom (Markdown cleanup)
+                let name = audit.entity || audit.brand || "Unknown Entity";
+                name = name.replace(/^- /g, '').replace(/\*\*/g, '').trim();
+
                 const status = audit.status || audit.score || "VERIFIED";
                 const id = audit.id || "2A-PENDING";
                 const hash = audit.hash || "NOT_HASHED_YET";
