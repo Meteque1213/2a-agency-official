@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2A Agency | Forensic Lab Audits</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DigitalDocument",
+      "name": "Sentinel Global Report",
+      "author": {
+        "@type": "Organization",
+        "name": "2A Agency",
+        "url": "https://2aagency.tiiny.site"
+      },
+      "identifier": "0x30e32e8f9ddf2bce207b266093db8bfb356cd03e5309dbbe645dd18c8e45b6e5",
+      "description": "Certificat d'audit blockchain Triple Lock pour marques de luxe et tech (LVMH, Tesla, OpenAI...).",
+      "datePublished": "2026-03-13T15:06:48.574Z",
+      "contentVerification": {
+        "system": "EIP-191 ECDSA",
+        "signer": "0x40c07F5b9aC742CBe8f288F00166a9EC908921b9"
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
@@ -16,7 +37,6 @@
         .audit-card { transition: all 0.3s ease; border-left: 4px solid #064e3b; }
         .audit-card:hover { transform: translateX(5px); background-color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
 
-        /* NOUVEAU STYLE POUR LE LIVE BADGE */
         .live-badge { animation: pulse 2s infinite; }
         @keyframes pulse {
             0% { opacity: 1; }
@@ -106,16 +126,14 @@
     </div>
 
     <script>
-        // --- CONFIGURATION GITHUB RAW URL ---
-        // Remplace la ligne 96 par celle-ci :
-        const GITHUB_RAW_URL = "https://raw.githubusercontent.com/Meteque1213/2a-agency-official/main/audits/last-audit.json?nocache=" + new Date().getTime();
+        // URL dynamique vers ton repo GitHub
+        const GITHUB_RAW_URL = "https://raw.githubusercontent.com/Meteque1213/2a-agency-official/main/audits/last-audit.json";
 
         async function fetchLatestAudit() {
             const container = document.getElementById('dynamic-audit-container');
             try {
-                // On ajoute un timestamp pour éviter le cache navigateur
-                const response = await fetch(`${GITHUB_RAW_URL}?t=${new Date().getTime()}`);
-                if (!response.ok) throw new Error('Update in progress');
+                const response = await fetch(`${GITHUB_RAW_URL}?nocache=${new Date().getTime()}`);
+                if (!response.ok) throw new Error('Sync pending');
                 const data = await response.json();
 
                 container.innerHTML = `
@@ -145,7 +163,6 @@
             }
         }
 
-        // Charger l'audit au démarrage
         fetchLatestAudit();
 
         async function openMemo(url) {
