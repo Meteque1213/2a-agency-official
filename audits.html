@@ -32,7 +32,7 @@
             <div class="flex flex-col gap-3 mt-6">
                 <div class="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-emerald-600 font-bold">
                     <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                    <span id="audit-count">1000</span> Verified Records
+                    <span id="audit-count">...</span> Verified Records
                 </div>
                 <a href="./audits/registry.json" target="_blank" class="text-[9px] text-gray-400 hover:text-emerald-500 font-mono tracking-widest uppercase border-b border-gray-100 w-fit pb-1">
                     Export Raw Audit Data (JSON)
@@ -70,23 +70,35 @@
 
         async function loadAudits() {
             try {
-                const response = await fetch(REGISTRY_URL);
-                allAudits = await response.json();
-                document.getElementById('audit-count').textContent = allAudits.length;
+                const response = await fetch(REGISTRY_URL, { cache: "no-store" });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                
+                const data = await response.json();
+                
+                // On pointe vers la nouvelle clé "audits"
+                allAudits = data.audits || [];
+                
+                const countElem = document.getElementById('audit-count');
+                if (countElem && data.registry_metadata) {
+                    countElem.textContent = data.registry_metadata.entities_count;
+                }
+
                 renderAudits(allAudits);
             } catch (error) {
-                document.getElementById('audit-container').innerHTML = `<div class="font-mono text-xs text-red-500 uppercase tracking-widest text-center py-20">Sync Error: Registry Offline</div>`;
+                console.error("Registry Load Error:", error);
+                document.getElementById('audit-container').innerHTML = `
+                    <div class="text-center py-20 text-red-500 font-mono text-xs uppercase tracking-widest">
+                        ERROR: SYSTEM OF RECORD OFFLINE
+                    </div>`;
             }
         }
 
         function renderAudits(data) {
             const container = document.getElementById('audit-container');
             container.innerHTML = data.map(audit => {
-                // Nettoyage de sécurité
                 let name = (audit.entity || audit.brand || "N/A").replace(/^- /g, '').replace(/\*\*/g, '').trim();
                 let hash = audit.hash || "NOTARIZATION_PENDING";
                 let id = audit.id || "2A-PENDING";
-                // Gestion du chemin memo
                 const memoFile = audit.memo || "";
                 const memoPath = memoFile.startsWith('audits/') ? memoFile : `audits/${memoFile}`;
 
