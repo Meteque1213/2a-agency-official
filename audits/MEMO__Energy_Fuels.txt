@@ -1,0 +1,18 @@
+ENTITY: - **Energy Fuels**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Energy Fuels Inc.**
+
+**Objective:** Conduct a technical review of financial transactions, inventory controls, and regulatory compliance for Energy Fuels Inc., focusing on rare earth and uranium mining operations.
+
+**Scope:** Examine accounting records, mineral extraction processes, and supply chain documentation to identify discrepancies, misreporting, or operational inefficiencies.
+
+**Methodology:** Utilize data analytics, physical inventory verification, and regulatory cross-checks to assess financial integrity and operational transparency.
+
+**Deliverable:** Provide a detailed report with findings, risk assessments, and corrective recommendations by [date].
+
+*[Prepared by: Forensic Audit Team]*
+
+*(Note: Adjust dates and specifics as needed.)*
+
+[NOTARIZED BY 2A AGENCY]

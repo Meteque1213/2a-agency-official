@@ -1,0 +1,17 @@
+ENTITY: - **Roche Diagnostics**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Roche Diagnostics (Molecular Diagnostics)**
+
+**Objective:** Assess compliance with regulatory and internal controls for molecular diagnostic assays, including data integrity, chain of custody, and validation protocols.
+
+**Scope:** Review documentation, instrument logs, and sample handling procedures across [specific sites/labs] for [timeframe].
+
+**Findings:** Identify discrepancies in calibration records, unauthorized access to raw data, and deviations from validated workflows.
+
+**Recommendations:** Implement automated audit trails, enforce role-based access controls, and conduct quarterly validation audits to mitigate risks.
+
+**Approval:** [Your Name/Title]
+**Date:** [DD/MM/YYYY]
+
+[NOTARIZED BY 2A AGENCY]

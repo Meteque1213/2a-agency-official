@@ -1,0 +1,16 @@
+ENTITY: - **Peak Resources**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Peak Resources (Rare Earth Mining)**
+
+**Objective:** Assess financial and operational integrity of Peak Resources’ rare earth extraction and processing activities.
+
+**Scope:** Review transactional records, supply chain documentation, and compliance with regulatory standards (e.g., REE export controls, environmental protocols).
+
+**Findings:** Identify discrepancies in mineral valuation, potential misallocation of funds, and compliance gaps in waste disposal reporting.
+
+**Recommendations:** Implement blockchain tracking for ore provenance, conduct independent third-party audits, and enforce stricter internal controls.
+
+**Confidentiality:** Restricted to audit team and senior management.
+
+[NOTARIZED BY 2A AGENCY]

@@ -1,0 +1,14 @@
+ENTITY: - **MP Materials**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – MP Materials (Rare Earth Mining)**
+
+1. **Objective**: Conduct a forensic review of financial transactions, supply chain integrity, and compliance with rare earth mineral export regulations.
+2. **Scope**: Examine accounting records, vendor contracts, and operational controls for anomalies, misappropriation, or regulatory breaches.
+3. **Findings**: Preliminary analysis indicates discrepancies in inventory valuation and potential non-compliance with U.S. export controls.
+4. **Next Steps**: Escalate to legal and regulatory teams; recommend enhanced monitoring of high-risk transactions.
+
+**Prepared by**: [Your Name/Department]
+**Date**: [Insert Date]
+
+[NOTARIZED BY 2A AGENCY]

@@ -1,0 +1,13 @@
+ENTITY: - **Feadship**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Feadship (Yacht Building)**
+
+1. **Objective:** Conduct a forensic review of financial records, procurement processes, and subcontractor transactions to identify discrepancies, fraud, or compliance gaps.
+2. **Scope:** Examine invoicing, material costs, labor allocations, and regulatory adherence (e.g., tax, environmental) for select projects (2022–2024).
+3. **Methodology:** Deploy data analytics, document sampling, and interviews with key personnel to trace anomalies and validate controls.
+4. **Deliverable:** Report findings with actionable recommendations by [date], including remediation steps and risk mitigation strategies.
+
+*Confidential – Internal Use Only*
+
+[NOTARIZED BY 2A AGENCY]

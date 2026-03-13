@@ -1,0 +1,13 @@
+ENTITY: - **Firefly Aerospace**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Firefly Aerospace (Small Satellite Launches)**
+
+1. **Objective:** Assess financial and operational integrity of Firefly Aerospace’s small satellite launch services, focusing on cost controls, contract compliance, and technical performance metrics.
+2. **Scope:** Review launch manifest accuracy, subcontractor billing, and payload integration processes for anomalies or discrepancies.
+3. **Findings:** Preliminary analysis indicates potential overruns in propulsion system procurement and delays in payload scheduling.
+4. **Next Steps:** Conduct on-site validation of inventory records and audit subcontractor invoices for alignment with contractual terms.
+
+**Status:** Pending further investigation.
+
+[NOTARIZED BY 2A AGENCY]

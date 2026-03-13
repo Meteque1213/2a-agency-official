@@ -1,0 +1,17 @@
+ENTITY: - **Lynas Rare Earths**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Lynas Rare Earths**
+
+1. **Objective**: Conduct a forensic review of Lynas Rare Earths’ financial and operational records to assess compliance with regulatory and contractual obligations, particularly regarding waste management and environmental safeguards.
+
+2. **Scope**: Examine financial transactions, supply chain integrity, and waste disposal documentation for anomalies, focusing on potential misreporting or non-compliance with international environmental standards.
+
+3. **Methodology**: Deploy data analytics, transactional tracing, and on-site inspections to verify financial accuracy and operational adherence to legal and contractual terms.
+
+4. **Next Steps**: Compile findings in a detailed report, including recommendations for corrective actions and potential regulatory disclosures.
+
+**Prepared by**: [Your Name/Department]
+**Date**: [Insert Date]
+
+[NOTARIZED BY 2A AGENCY]

@@ -1,0 +1,17 @@
+ENTITY: - **Derecktor Shipyards**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Derecktor Shipyards (Yacht Building)**
+
+**Objective:** Conduct a forensic review of financial records, procurement processes, and inventory controls to identify discrepancies, fraud, or operational inefficiencies.
+
+**Scope:** Examine invoicing, subcontractor payments, material costs, and project timelines for the past 24 months, with a focus on high-value yacht builds.
+
+**Methodology:** Utilize data analytics, transactional sampling, and interviews with key personnel to detect anomalies and verify compliance with industry standards.
+
+**Deliverables:** Provide a detailed report with findings, risk assessments, and actionable recommendations to mitigate financial and operational risks.
+
+**Prepared by:** [Your Name/Team]
+**Date:** [Insert Date]
+
+[NOTARIZED BY 2A AGENCY]

@@ -1,0 +1,13 @@
+ENTITY: - **SK Hynix**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – SK Hynix (Semiconductor Manufacturing)**
+
+1. **Objective:** Conduct a forensic review of financial transactions, inventory records, and supply chain operations to detect fraud, embezzlement, or misappropriation of assets.
+2. **Scope:** Examine procurement contracts, vendor payments, and production yield discrepancies, with focus on high-value semiconductor components.
+3. **Methodology:** Deploy data analytics, blockchain verification, and on-site inspections to trace discrepancies in financial and operational records.
+4. **Deliverable:** Provide a detailed report with findings, risk assessments, and remediation recommendations by [date].
+
+*Confidential – Internal Use Only*
+
+[NOTARIZED BY 2A AGENCY]

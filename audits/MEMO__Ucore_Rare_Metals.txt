@@ -1,0 +1,14 @@
+ENTITY: - **Ucore Rare Metals**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Ucore Rare Metals (Rare Earth Mining)**
+
+1. **Objective:** Conduct a forensic review of financial transactions, supply chain integrity, and regulatory compliance for Ucore Rare Metals, focusing on rare earth mining operations.
+2. **Scope:** Examine procurement contracts, mineral extraction records, and third-party vendor relationships for anomalies or fraud indicators.
+3. **Methodology:** Deploy data analytics, transactional tracing, and on-site inspections to validate asset valuations and operational reporting.
+4. **Next Steps:** Compile findings and recommend corrective actions to mitigate financial and operational risks.
+
+**Prepared by:** [Your Name/Department]
+**Date:** [Insert Date]
+
+[NOTARIZED BY 2A AGENCY]

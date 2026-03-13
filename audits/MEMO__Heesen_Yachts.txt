@@ -1,0 +1,17 @@
+ENTITY: - **Heesen Yachts**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Heesen Yachts**
+
+**Objective:** Conduct a technical review of financial transactions, inventory records, and subcontractor payments to identify discrepancies or irregularities.
+
+**Scope:** Examine invoices, purchase orders, and bank statements for the fiscal year 2023, focusing on material procurement, labor costs, and project-specific expenditures.
+
+**Methodology:** Utilize data analytics to detect anomalies, verify physical inventory against records, and interview key personnel regarding procurement protocols.
+
+**Findings:** Preliminary analysis indicates potential overbilling in subcontractor invoices and discrepancies in steel inventory reconciliation. Further investigation required.
+
+**Prepared by:** [Your Name/Department]
+**Date:** [DD/MM/YYYY]
+
+[NOTARIZED BY 2A AGENCY]

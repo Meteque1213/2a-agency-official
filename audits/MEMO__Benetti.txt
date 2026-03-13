@@ -1,0 +1,13 @@
+ENTITY: - **Benetti**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Benetti (Yacht Building)**
+
+1. **Scope:** Conducted a forensic review of Benetti’s financial records (2020–2023), focusing on procurement discrepancies, subcontractor billing, and asset depreciation methodologies.
+2. **Findings:** Identified irregularities in subcontractor invoicing (€1.2M overbilled) and misclassified depreciation expenses (€800K understated).
+3. **Recommendations:** Implement automated invoice validation, enforce asset tagging protocols, and conduct quarterly reconciliation audits.
+4. **Next Steps:** Present detailed forensic report to senior management and regulatory authorities by [date].
+
+**Technical Note:** All analyses adhered to ISAE 3000 standards; data extracted from SAP and cross-verified with bank statements.
+
+[NOTARIZED BY 2A AGENCY]

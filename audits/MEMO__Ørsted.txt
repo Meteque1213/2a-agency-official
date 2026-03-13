@@ -1,0 +1,19 @@
+ENTITY: - **Ørsted**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Ørsted (Offshore Wind Energy)**
+
+**Objective:** Assess financial and operational integrity of Ørsted’s offshore wind projects, focusing on procurement, cost reporting, and regulatory compliance.
+
+**Scope:** Review contracts, invoices, and project documentation for anomalies, pricing discrepancies, and potential fraud indicators.
+
+**Methodology:** Data analytics, transactional testing, and interviews with key personnel to validate financial controls and project expenditures.
+
+**Findings:** Preliminary analysis indicates potential overbilling in supplier contracts; further investigation required to quantify discrepancies.
+
+**Recommendation:** Implement enhanced vendor oversight and real-time monitoring to mitigate financial risks.
+
+*[Date]*
+*[Prepared by: Forensic Audit Team]*
+
+[NOTARIZED BY 2A AGENCY]

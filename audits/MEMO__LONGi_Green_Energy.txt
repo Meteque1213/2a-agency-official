@@ -1,0 +1,14 @@
+ENTITY: - **LONGi Green Energy**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – LONGi Green Energy (Solar Technology)**
+
+1. **Objective:** Conduct a forensic review of LONGi’s financial records, supply chain transactions, and R&D expenditures to assess compliance with regulatory and internal controls.
+2. **Scope:** Examine high-risk areas, including revenue recognition, procurement contracts, and intellectual property safeguards, with a focus on potential fraud or misreporting.
+3. **Methodology:** Deploy data analytics, transactional sampling, and interviews with key personnel to identify anomalies or irregularities.
+4. **Next Steps:** Present preliminary findings to senior management and recommend corrective actions to mitigate identified risks.
+
+**Prepared by:** [Your Name/Department]
+**Date:** [Insert Date]
+
+[NOTARIZED BY 2A AGENCY]

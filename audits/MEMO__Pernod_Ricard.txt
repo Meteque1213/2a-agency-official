@@ -1,0 +1,18 @@
+ENTITY: - **Pernod Ricard**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Pernod Ricard (Beverages)**
+
+**Objective:** Conduct a forensic review of financial transactions, inventory records, and supply chain operations to identify discrepancies, fraud risks, and compliance gaps.
+
+**Scope:** Examine high-risk areas including sales reconciliations, distributor payments, and raw material procurement, with a focus on digital forensics and data analytics.
+
+**Methodology:** Deploy forensic accounting tools, blockchain verification, and AI-driven anomaly detection to trace irregularities in transactional data and inventory logs.
+
+**Deliverables:** Provide a detailed report with actionable insights, including remediation steps and recommendations for enhanced internal controls.
+
+**Confidentiality:** All findings will be handled under strict NDA protocols to preserve corporate integrity.
+
+**End of Memo.**
+
+[NOTARIZED BY 2A AGENCY]

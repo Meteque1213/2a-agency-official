@@ -5558,5 +5558,1405 @@
         "hash": "027fa5fca4b5370283588da41307dd704482af05525d0712a9dbc19174329788",
         "memo": "MEMO_10_New_Enterprise_Associates_NEA.txt",
         "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_INTEL",
+        "entity": "- **Intel**",
+        "hash": "b17d692c774973662b63ca6fb4beea34befa62aee8a843d44f9c3557d1ff3d4e",
+        "memo": "MEMO__Intel.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_TSMC_TAIWAN_SEMICONDUCTOR_MANUFACTURING_COMPANY",
+        "entity": "- **TSMC (Taiwan Semiconductor Manufacturing Company)**",
+        "hash": "aa4a9d67c27fe26ad076e856e1c11ed250621a0b87d00ef92eaef72f8c5aace5",
+        "memo": "MEMO__TSMC_Taiwan_Semiconductor_Manufacturing_Company.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SAMSUNG_ELECTRONICS",
+        "entity": "- **Samsung Electronics**",
+        "hash": "414cb1ec24f258978a1d243001e87e34aa6d6228fb48097c21d505ed8fd0712c",
+        "memo": "MEMO__Samsung_Electronics.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_QUALCOMM",
+        "entity": "- **Qualcomm**",
+        "hash": "9a2ce06b55f1c2ba0c832886ab5457eeca7f8f4539ccb92778f00a51c580887c",
+        "memo": "MEMO__Qualcomm.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_NVIDIA",
+        "entity": "- **NVIDIA**",
+        "hash": "9e965c1913cb2cf1f73ec882dc83db3c7d6939af7a0715f370b95cb2f73a18cb",
+        "memo": "MEMO__NVIDIA.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_AMD_ADVANCED_MICRO_DEVICES",
+        "entity": "- **AMD (Advanced Micro Devices)**",
+        "hash": "0fc58b0d8fa77cde587cd8a5f97a7029f2621ab34af3e8287960f7cbdef3a83d",
+        "memo": "MEMO__AMD_Advanced_Micro_Devices.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BROADCOM",
+        "entity": "- **Broadcom**",
+        "hash": "35a8b1e047ecf1edef08ab3f960758b2aa3e0e690894f2ce521a395c264a7e89",
+        "memo": "MEMO__Broadcom.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_TEXAS_INSTRUMENTS",
+        "entity": "- **Texas Instruments**",
+        "hash": "b597fd9504f3f97668e60978fcd25cc94340ed2ffb6ad95baa8905d20b5b7a47",
+        "memo": "MEMO__Texas_Instruments.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_MICRON_TECHNOLOGY",
+        "entity": "- **Micron Technology**",
+        "hash": "c19b4997deb34845100181c0847048a72374a7cd25e0f7781be4ce243e6b7d84",
+        "memo": "MEMO__Micron_Technology.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SK_HYNIX",
+        "entity": "- **SK Hynix**",
+        "hash": "a8d3f9dd4a4a0226203b89f84ab2c1cd623695879df5fe8377d124405c5eddab",
+        "memo": "MEMO__SK_Hynix.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_GLOBALFOUNDRIES",
+        "entity": "- **GlobalFoundries**",
+        "hash": "9c4e79d3155981e26afc04cb4a76bc62737e002987f7f3b190728070866ed947",
+        "memo": "MEMO__GlobalFoundries.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_IBM_MICROELECTRONICS",
+        "entity": "- **IBM Microelectronics**",
+        "hash": "8894324e6051b934c035f45997bd811a85da8754e1429d7db46cef4d0667ebcd",
+        "memo": "MEMO__IBM_Microelectronics.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_INFINEON_TECHNOLOGIES",
+        "entity": "- **Infineon Technologies**",
+        "hash": "366333e30e06dd79170ebad3d975d04383abc1e1f720d0dd39bafdbe96b20f4b",
+        "memo": "MEMO__Infineon_Technologies.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_STMICROELECTRONICS",
+        "entity": "- **STMicroelectronics**",
+        "hash": "316bf1024b824c6c4dd8d81d74710a49bb8df32ae6c3a0ce6f58023e9ca041e4",
+        "memo": "MEMO__STMicroelectronics.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_MEDIATEK",
+        "entity": "- **MediaTek**",
+        "hash": "635f302f7b31bd00ab966c6999d2e1dc094e2b11282da892e2ada18cabacdfa7",
+        "memo": "MEMO__MediaTek.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_MARVELL_TECHNOLOGY",
+        "entity": "- **Marvell Technology**",
+        "hash": "67077ba6925eaea909ce79ca5299e7bf8abfa4364c7e96ef4f2e1685065e923d",
+        "memo": "MEMO__Marvell_Technology.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ANALOG_DEVICES",
+        "entity": "- **Analog Devices**",
+        "hash": "2493ac7aafccb3c286f459b7f61a760b6125f018d922a17fd37e88c834ab7011",
+        "memo": "MEMO__Analog_Devices.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_RENESAS_ELECTRONICS",
+        "entity": "- **Renesas Electronics**",
+        "hash": "2a03df82d5b91aa90d360eb2c3c45eaee457eff0064ef7b1f62137ddc90dcc6b",
+        "memo": "MEMO__Renesas_Electronics.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_LAM_RESEARCH",
+        "entity": "- **Lam Research**",
+        "hash": "cd6e1b37075527d0f83d63608908c2818dae28824c2062f8227d7b2b12fbb1b7",
+        "memo": "MEMO__Lam_Research.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ASML",
+        "entity": "- **ASML**",
+        "hash": "7c6619b0780e5b7905d241f5495e7adb4783a93b09420372448a5b4e2104929b",
+        "memo": "MEMO__ASML.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_AMAZON_WEB_SERVICES_AWS",
+        "entity": "- **Amazon Web Services (AWS)**",
+        "hash": "f69bd074374e1e470e8774a794aadac2caddf9a3779bcf4de3c0f232a96aaa1c",
+        "memo": "MEMO__Amazon_Web_Services_AWS.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_MICROSOFT_AZURE",
+        "entity": "- **Microsoft Azure**",
+        "hash": "a9e55cdccae0fc60f8a2b0c38c85c015b519b41bf045a52c42c85a4e347019f6",
+        "memo": "MEMO__Microsoft_Azure.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_GOOGLE_CLOUD_PLATFORM_GCP",
+        "entity": "- **Google Cloud Platform (GCP)**",
+        "hash": "3245f7141ba4dd395285b78af93397832376024651629767c9bab28cfcc1f837",
+        "memo": "MEMO__Google_Cloud_Platform_GCP.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_IBM_CLOUD",
+        "entity": "- **IBM Cloud**",
+        "hash": "101e918cc28c45f727f1790eedb425baf47bacbcc76e835791861d6dd5680af2",
+        "memo": "MEMO__IBM_Cloud.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ORACLE_CLOUD_INFRASTRUCTURE_OCI",
+        "entity": "- **Oracle Cloud Infrastructure (OCI)**",
+        "hash": "37804701f53bfbc55a9627c65b20c21107faa562d8a49ffbc123c4d9bea3c7ad",
+        "memo": "MEMO__Oracle_Cloud_Infrastructure_OCI.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ALIBABA_CLOUD",
+        "entity": "- **Alibaba Cloud**",
+        "hash": "08ca8176829a81b66fe638023fcfb05f0308f166b8967d83f9d819931b121504",
+        "memo": "MEMO__Alibaba_Cloud.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_VMWARE_CLOUD",
+        "entity": "- **VMware Cloud**",
+        "hash": "d5ef9a9edec51679f37129cc7cef628382a8a0d29643d01e263c7d549f3962a6",
+        "memo": "MEMO__VMware_Cloud.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_DIGITALOCEAN",
+        "entity": "- **DigitalOcean**",
+        "hash": "73679d7ef2f963c6bfa04fe9df8a24672e6baaf1000cec3c62cdc543a6278f2a",
+        "memo": "MEMO__DigitalOcean.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_RACKSPACE_TECHNOLOGY",
+        "entity": "- **Rackspace Technology**",
+        "hash": "a715599720bf5ae099d6aba23db77330ec6207517e887402a514e8a9706c4ecc",
+        "memo": "MEMO__Rackspace_Technology.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_LINODE",
+        "entity": "- **Linode**",
+        "hash": "03ebb8ca957cf3685f8996e309972893cd269871b981862116d382711e7d1b19",
+        "memo": "MEMO__Linode.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_VULTR",
+        "entity": "- **Vultr**",
+        "hash": "123ef42b9d73d48626ccbf4c13bee676eed7de8ba336b52df4cbd9f7f2fdbc68",
+        "memo": "MEMO__Vultr.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SCALEWAY",
+        "entity": "- **Scaleway**",
+        "hash": "9aa877ede07d244f514a0a4e5079d7ddbb3f9b03f74573e1735f872e31a9dc40",
+        "memo": "MEMO__Scaleway.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_OVHCLOUD",
+        "entity": "- **OVHcloud**",
+        "hash": "4133b21186a3fdc6865a288d98b68b090e88fe3ffcb854a42d884cd65be04bfe",
+        "memo": "MEMO__OVHcloud.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_HETZNER_CLOUD",
+        "entity": "- **Hetzner Cloud**",
+        "hash": "af7b270871f2b2a6ad614ecf158ddc3e814f4ef4e18b62adf61ea0a8502aa777",
+        "memo": "MEMO__Hetzner_Cloud.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_UPCLOUD",
+        "entity": "- **UpCloud**",
+        "hash": "a35d331c7787407e1fec7cb0484916b30c89371c342aed4a57a0c87b620d6456",
+        "memo": "MEMO__UpCloud.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_CLOUDFLARE",
+        "entity": "- **Cloudflare**",
+        "hash": "0abf5539f77a7ba5ab5e232dda165977adcda742dfdecb9b3815e1a42b6f2f0c",
+        "memo": "MEMO__Cloudflare.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_EQUINIX",
+        "entity": "- **Equinix**",
+        "hash": "280f60aeca67a0ec26e5e5bcaf81f0fa4e400967afd1e2ab3dc681573c753592",
+        "memo": "MEMO__Equinix.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_NUTANIX",
+        "entity": "- **Nutanix**",
+        "hash": "247999263094b7c81f753efacae9636549a6c00a923edcb982d8e4a6af3fa666",
+        "memo": "MEMO__Nutanix.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_RED_HAT_OPENSHIFT",
+        "entity": "- **Red Hat OpenShift**",
+        "hash": "4c6bf327c83928a878b55e567376a1e1c28f78ac5dee2bcd31b49d1fb2ffdbbb",
+        "memo": "MEMO__Red_Hat_OpenShift.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_DELL_TECHNOLOGIES_CLOUD",
+        "entity": "- **Dell Technologies Cloud**",
+        "hash": "db01c95d8eb0da897aeca4937d6f3f756ba7e00161a8f71c20e42682e2a6a29c",
+        "memo": "MEMO__Dell_Technologies_Cloud.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_LVMH",
+        "entity": "- **LVMH**",
+        "hash": "c2349e0b8c88311ea2f298727b43cc524ad10dde5d7e1a5ae5c2ba65ae242dcd",
+        "memo": "MEMO__LVMH.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_KERING",
+        "entity": "- **Kering**",
+        "hash": "7fbb3cbdf4de7ca3360e7e2bac845b1fd0c34b25d7856c0586ecad736aa3058c",
+        "memo": "MEMO__Kering.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_PERNOD_RICARD",
+        "entity": "- **Pernod Ricard**",
+        "hash": "7802e5d380364fabb5046017c365b202613c66a8f862027ab2c6b2276fff7a8b",
+        "memo": "MEMO__Pernod_Ricard.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_LORÉAL",
+        "entity": "- **L'Oréal**",
+        "hash": "06045676e47cd743e55942dc9b1b0f7514aa8e1d29cd66a121628e58a2807f5d",
+        "memo": "MEMO__LOréal.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_HERMÈS",
+        "entity": "- **Hermès**",
+        "hash": "d1c2cb94880929dbf22cd4ef31b3126549ef5c71ca4d568777b08016e47bd640",
+        "memo": "MEMO__Hermès.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_CHANEL",
+        "entity": "- **Chanel**",
+        "hash": "afff6ebcb39bd981951a0a3a4317ecc7531c70b94f2404b8ece9309e90df49af",
+        "memo": "MEMO__Chanel.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_RICHEMONT",
+        "entity": "- **Richemont**",
+        "hash": "52ed14534bf6b5381037dda752102e85876e49b38323db7609a0e45102ee3b00",
+        "memo": "MEMO__Richemont.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_FERRARI",
+        "entity": "- **Ferrari**",
+        "hash": "d688c6f72b5e73e3d056ca7257ce2cd15b53dfd663fa3721070e72e8ae480cf6",
+        "memo": "MEMO__Ferrari.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_FIAT_CHRYSLER_AUTOMOBILES_STELLANTIS",
+        "entity": "- **Fiat Chrysler Automobiles (Stellantis)**",
+        "hash": "d029045b4e5b2a4b7a76c3db92e7c1d6a7ea04399e641030225df75983c68384",
+        "memo": "MEMO__Fiat_Chrysler_Automobiles_Stellantis.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BAYER",
+        "entity": "- **Bayer**",
+        "hash": "46215e338f60e226aeb686afeb33d218090b3586f76131565ac3db8bb86eaffc",
+        "memo": "MEMO__Bayer.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_HENKEL",
+        "entity": "- **Henkel**",
+        "hash": "68102881f10fd5a835be8ad96dcf32a79d98e79dc6a860ddda07ff9eb8bbd826",
+        "memo": "MEMO__Henkel.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SCHWARZ_GROUP",
+        "entity": "- **Schwarz Group**",
+        "hash": "abd5308ed5181ac947d83134dad24cc088deb698af0b8bd4a713489a3bd8a0ad",
+        "memo": "MEMO__Schwarz_Group.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ALDI",
+        "entity": "- **Aldi**",
+        "hash": "9380a8c37f21a4ca212a246223c818b33d686fdf4ba2eddad44a3f1f835c47aa",
+        "memo": "MEMO__Aldi.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_REWE_GROUP",
+        "entity": "- **Rewe Group**",
+        "hash": "9ed28df1b30584b2b26ad0ee56b05da792fae50558bf02bc5c7a34365c7b213c",
+        "memo": "MEMO__Rewe_Group.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_TCHIBO",
+        "entity": "- **Tchibo**",
+        "hash": "4a8b97ea312f86b201f85a40f146b5809aad720d4682f0586765228cbe2e7154",
+        "memo": "MEMO__Tchibo.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_HUGO_BOSS",
+        "entity": "- **Hugo Boss**",
+        "hash": "055b094404dfe919f56893eed631013217c7cec6ef059955e555d68a37859957",
+        "memo": "MEMO__Hugo_Boss.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_PUMA",
+        "entity": "- **Puma**",
+        "hash": "b444c782228123211d210866f171cb5dd610da02ade465aa68bdada048f42976",
+        "memo": "MEMO__Puma.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BASF",
+        "entity": "- **BASF**",
+        "hash": "d26be9d79e1adef9e64b523c6075b22b592c21175f2a1fd2bd725ea350205216",
+        "memo": "MEMO__BASF.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SIEMENS",
+        "entity": "- **Siemens**",
+        "hash": "a047baac6fa5d0e6ea7e629d8001f1638b46e59707da37a2ed25bdb994159c24",
+        "memo": "MEMO__Siemens.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_VOLKSWAGEN_GROUP",
+        "entity": "- **Volkswagen Group**",
+        "hash": "89613c655d8682239f9e9485627e835ce4f8f8cacb95a8b6397809c506040b50",
+        "memo": "MEMO__Volkswagen_Group.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_RIGETTI_COMPUTING",
+        "entity": "- **Rigetti Computing**",
+        "hash": "b2f522ec58896d250a99a63bed2cac73df5165ae6a73cd9d3b75e2964307d32b",
+        "memo": "MEMO__Rigetti_Computing.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_IONQ",
+        "entity": "- **IonQ**",
+        "hash": "9c6897dedcc935c37ff4da100501755182320bd7086ede3be45610cbc643f482",
+        "memo": "MEMO__IonQ.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_DWAVE_SYSTEMS",
+        "entity": "- **D-Wave Systems**",
+        "hash": "fc409743ef12455f7cdfd691d44457c3304176fe3d8582f8cfd37d00ffa26be7",
+        "memo": "MEMO__DWave_Systems.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_XANADU",
+        "entity": "- **Xanadu**",
+        "hash": "d095f93d966d2198f54ada65962223c4ebce62e4053933186503fe9e8deece48",
+        "memo": "MEMO__Xanadu.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_QUANTINUUM",
+        "entity": "- **Quantinuum**",
+        "hash": "b7313001befa7ce51bb4974ecfafdc99a92981e89716faab4a9935321203ad32",
+        "memo": "MEMO__Quantinuum.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_COLDQUANTA",
+        "entity": "- **ColdQuanta**",
+        "hash": "385230b8cbda6d0ef648576467bce658bd955bf789f277de1b5a4419ba511593",
+        "memo": "MEMO__ColdQuanta.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_PSIQUANTUM",
+        "entity": "- **PsiQuantum**",
+        "hash": "f4abdf481a37cf288379cde611ca3f63ad268d3c94233b30763fd4a246ed066d",
+        "memo": "MEMO__PsiQuantum.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_QUANTUM_CIRCUITS_INC_QCI",
+        "entity": "- **Quantum Circuits Inc. (QCI)**",
+        "hash": "7209d31f5ff139e576ac411f7c01b77736dcfcfa2700aee7a912def866348705",
+        "memo": "MEMO__Quantum_Circuits_Inc_QCI.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ALICE__BOB",
+        "entity": "- **Alice & Bob**",
+        "hash": "b093d2cea91f9cf8d22d5eb540ca90ae4dc415b98078a79d733060e34d58bacf",
+        "memo": "MEMO__Alice__Bob.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_1QBIT",
+        "entity": "- **1QBit**",
+        "hash": "c25a6cc76928341ae26f35a1d68aea23ab727cc7cb5a3c756da6803e47beb573",
+        "memo": "MEMO__1QBit.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ZAPATA_COMPUTING",
+        "entity": "- **Zapata Computing**",
+        "hash": "3fdff9f69b720874422f499ba70961080d30d09143143f6af1cf771f1aec7322",
+        "memo": "MEMO__Zapata_Computing.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_QCTRL",
+        "entity": "- **Q-CTRL**",
+        "hash": "6f2c3678f2b90863e5020037733ac28ed2de5615527faea56d52da3cd81c895a",
+        "memo": "MEMO__QCTRL.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_QUANTUM_BRILLIANCE",
+        "entity": "- **Quantum Brilliance**",
+        "hash": "4567a442add0170a7ffc66a7e29283cff4962b11d89469d6454f50def13f81cd",
+        "memo": "MEMO__Quantum_Brilliance.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_QUERA_COMPUTING",
+        "entity": "- **QuEra Computing**",
+        "hash": "a311611297b9a10457b09d752a30cc31eb7679682dd540f8b433e90d3e9f29af",
+        "memo": "MEMO__QuEra_Computing.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_OQC_OXFORD_QUANTUM_CIRCUITS",
+        "entity": "- **OQC (Oxford Quantum Circuits)**",
+        "hash": "8bcb13c94530aa82376497b23bd0e70ab1f9b758b47d87051ffcf3a94514dee7",
+        "memo": "MEMO__OQC_Oxford_Quantum_Circuits.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_RIVERLANE",
+        "entity": "- **Riverlane**",
+        "hash": "fda34df9b9456cfd1e487f4062483c1b8abc522ef804a7660fcbc59a139f3c70",
+        "memo": "MEMO__Riverlane.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_QUANTUM_DIAMOND_TECHNOLOGIES",
+        "entity": "- **Quantum Diamond Technologies**",
+        "hash": "89801b1571f861032b878713b147db94e4e200242352d17defe39f5b4708e88b",
+        "memo": "MEMO__Quantum_Diamond_Technologies.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_STRANGE_WORKS",
+        "entity": "- **Strange Works**",
+        "hash": "d4f95382b5dc2b9d0397c94f0304703585c419c7054a592cac73db01b0be1f63",
+        "memo": "MEMO__Strange_Works.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_QUANTUM_MACHINES",
+        "entity": "- **Quantum Machines**",
+        "hash": "7e9539ed79609f1b2eec966d87705a384ee0f51a4f9702c8e72f3b7bbd4a464f",
+        "memo": "MEMO__Quantum_Machines.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SUPERTECH",
+        "entity": "- **Super.tech**",
+        "hash": "365e0d559d388eb12427819112e6509a806df84d5417ad12183f3a27a81e4b30",
+        "memo": "MEMO__Supertech.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_UBS",
+        "entity": "- **UBS**",
+        "hash": "ffbedf8de36066cb97b4da61a0c10a11f4ee1555c384e49dc561314dcd1c4f79",
+        "memo": "MEMO__UBS.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_CREDIT_SUISSE",
+        "entity": "- **Credit Suisse**",
+        "hash": "413b8d832ba28422ab3749a2b11dcb7bf697dbbc02c70da5c7d8bc15a713acdb",
+        "memo": "MEMO__Credit_Suisse.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_JULIUS_BAER",
+        "entity": "- **Julius Baer**",
+        "hash": "c3148a63105ce16d05ff6060e4a2abc1a031045311f05a5ab7824af51229991a",
+        "memo": "MEMO__Julius_Baer.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_PICTET",
+        "entity": "- **Pictet**",
+        "hash": "6bd55b55b70585c2432fb7e67ec38b46054a04b221e05f76bf5504c5fb824969",
+        "memo": "MEMO__Pictet.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_LOMBARD_ODIER",
+        "entity": "- **Lombard Odier**",
+        "hash": "bfe56f0fb3392bd3d203495461492e426afa77414df82b40ec3256e96a11d72c",
+        "memo": "MEMO__Lombard_Odier.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_EFG_INTERNATIONAL",
+        "entity": "- **EFG International**",
+        "hash": "6026d7825be0232bab7cac140884f0d6444d1fa76ddf35db13e536bfae921349",
+        "memo": "MEMO__EFG_International.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BNP_PARIBAS_SWITZERLAND",
+        "entity": "- **BNP Paribas (Switzerland)**",
+        "hash": "14ddc35934bcb5ca83dbcf07dc6ddec6b89106208096d8100f422f34e72e5e3f",
+        "memo": "MEMO__BNP_Paribas_Switzerland.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BANQUE_MIRABAUD",
+        "entity": "- **Banque Mirabaud**",
+        "hash": "398bbe55c3fced870de2016acf2a199d022e33695010cab73acb394c97c68e23",
+        "memo": "MEMO__Banque_Mirabaud.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BANQUE_PÂRIS_BERTRAND",
+        "entity": "- **Banque Pâris Bertrand**",
+        "hash": "a07f3423c9b0798db882650c050548a9e8d0b7336c652a17aa6733fa8677f291",
+        "memo": "MEMO__Banque_Pâris_Bertrand.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BANQUE_HOTTINGER",
+        "entity": "- **Banque Hottinger**",
+        "hash": "fb4ae2204273ad44ddc3cfdcb9c9df8172fcd16d81d5e7886d1a08ca673c9546",
+        "memo": "MEMO__Banque_Hottinger.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BANQUE_SYCOMORE",
+        "entity": "- **Banque Sycomore**",
+        "hash": "3f68b5ee6da0d47c17a7adf6adc8f80af4b13b5abfa28e7dac362363dd1b081b",
+        "memo": "MEMO__Banque_Sycomore.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BANQUE_CANTONALE_DE_GENÈVE",
+        "entity": "- **Banque Cantonale de Genève**",
+        "hash": "ba5684dd831def2bfc10e01beb36e46dd42de86eec14ed9fe235ed9062b2ca28",
+        "memo": "MEMO__Banque_Cantonale_de_Genève.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BANQUE_CANTONALE_VAUDOISE",
+        "entity": "- **Banque Cantonale Vaudoise**",
+        "hash": "21426819a01fb283553a6288c5f2a41226852f78066f03fd15fc04b9f9d6b978",
+        "memo": "MEMO__Banque_Cantonale_Vaudoise.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BANQUE_PRIVÉE_EDMOND_DE_ROTHSCHILD",
+        "entity": "- **Banque Privée Edmond de Rothschild**",
+        "hash": "8f62a4be03130c3bf97ba7b9aa081e634879ba1638f480191fe3c266e439247d",
+        "memo": "MEMO__Banque_Privée_Edmond_de_Rothschild.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BANQUE_HERITAGE",
+        "entity": "- **Banque Heritage**",
+        "hash": "dba8f2fc399dbeb6dd9ef4da80af6dee842a566c08e563153864dbf2977e2169",
+        "memo": "MEMO__Banque_Heritage.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BANQUE_CANTONALE_DE_ZURICH",
+        "entity": "- **Banque Cantonale de Zurich**",
+        "hash": "59bc05020ef6b75d70b0902c4138c79eaabba0c8f3c95d3137bc3a68ee8a2915",
+        "memo": "MEMO__Banque_Cantonale_de_Zurich.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BANQUE_CANTONALE_DE_BERNE",
+        "entity": "- **Banque Cantonale de Berne**",
+        "hash": "a225b8e173f7823eb7d8a6b5f44c926f9e37d9b0d1493b71454debd5fda50f25",
+        "memo": "MEMO__Banque_Cantonale_de_Berne.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BANQUE_CANTONALE_DE_LUCERNE",
+        "entity": "- **Banque Cantonale de Lucerne**",
+        "hash": "bc542d619eb2255152357f9eaf3e9b087ddd5ca9b1a69065c06ecd694ea531ff",
+        "memo": "MEMO__Banque_Cantonale_de_Lucerne.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BANQUE_CANTONALE_DE_FRIBOURG",
+        "entity": "- **Banque Cantonale de Fribourg**",
+        "hash": "52002d715218ec450325c90b67a4493a995a54c8dac972eebf7134a0883299cd",
+        "memo": "MEMO__Banque_Cantonale_de_Fribourg.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BANQUE_CANTONALE_DU_VALAIS",
+        "entity": "- **Banque Cantonale du Valais**",
+        "hash": "0df6693562a14ddaf2247da15b369dfff149c27d87cbae3e706f34c2730ea76a",
+        "memo": "MEMO__Banque_Cantonale_du_Valais.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_LÜRSSEN",
+        "entity": "- **Lürssen**",
+        "hash": "bce77f10ae6c994cf22078a03025d5134c08c4af25bf0ca56ea0f3aa571989c6",
+        "memo": "MEMO__Lürssen.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_FEADSHIP",
+        "entity": "- **Feadship**",
+        "hash": "ff89e568b81760e59136d68b670d844e58b8bddfc5315c0379aa4b9c66c77099",
+        "memo": "MEMO__Feadship.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_HEESEN_YACHTS",
+        "entity": "- **Heesen Yachts**",
+        "hash": "3e2053a82d5a4fbbabded3fc2989fb0f7a47fcf57c9770e71cd8b69402da3ac0",
+        "memo": "MEMO__Heesen_Yachts.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_AMELS",
+        "entity": "- **Amels**",
+        "hash": "6a5ec46670e79b9c631eee42ccbfdfb61d94a3c7ff0f767865d226ac66b4d01a",
+        "memo": "MEMO__Amels.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_DAMEN_YACHTING",
+        "entity": "- **Damen Yachting**",
+        "hash": "99463f8b2659e13130617a1822e7d79e28479b1f882a55ad64da4e9946112156",
+        "memo": "MEMO__Damen_Yachting.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_OCEANCO",
+        "entity": "- **Oceanco**",
+        "hash": "a5701087bca3ddc0c084954c103c2173ca512a543e57db840dcbaf87fb561bc6",
+        "memo": "MEMO__Oceanco.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ROYAL_HUISMAN",
+        "entity": "- **Royal Huisman**",
+        "hash": "a7b7e9eabba64899da3325d843cd51a17e99070f957da47aed826dc66e04bad6",
+        "memo": "MEMO__Royal_Huisman.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_PERINI_NAVI",
+        "entity": "- **Perini Navi**",
+        "hash": "6d22d98e0a791f9cb0744ea3014e2b6faccb5cf088fe70ea578ca6a0ee71d63c",
+        "memo": "MEMO__Perini_Navi.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BENETTI",
+        "entity": "- **Benetti**",
+        "hash": "3d35066bb6dc7f5af23d59a9555c99c946c2b3eb6f3b000b1f613a195bfc31c1",
+        "memo": "MEMO__Benetti.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_FERRETTI_GROUP",
+        "entity": "- **Ferretti Group**",
+        "hash": "fe3cc3542f58b29f8f0af858093ea7393552a5b833dab4c40899159ec1ca6d46",
+        "memo": "MEMO__Ferretti_Group.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SANLORENZO",
+        "entity": "- **Sanlorenzo**",
+        "hash": "a72bed0da593b052b94523474977a15706b87243d4fe7009c43ab26d17c13f8e",
+        "memo": "MEMO__Sanlorenzo.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_AZIMUT_YACHTS",
+        "entity": "- **Azimut Yachts**",
+        "hash": "cfc6957d3e3a62f95ebcfbf286e7891727794750bc1ecb51e9af935bd7fffd3b",
+        "memo": "MEMO__Azimut_Yachts.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_PRINCESS_YACHTS",
+        "entity": "- **Princess Yachts**",
+        "hash": "18d0ebb582eab00df6b95502589a4f8c0035ceabca80b3abd38a5092b106a789",
+        "memo": "MEMO__Princess_Yachts.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SUNSEEKER",
+        "entity": "- **Sunseeker**",
+        "hash": "d5945f7bf785780001078bffa0ff5abeec7875f55c07a63ad41636afdda97f83",
+        "memo": "MEMO__Sunseeker.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_TRINITY_YACHTS",
+        "entity": "- **Trinity Yachts**",
+        "hash": "e44190756745750280e3557749d4ca09e813ebe55ad44a1d901db17bb5c9525d",
+        "memo": "MEMO__Trinity_Yachts.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_WESTPORT_YACHTS",
+        "entity": "- **Westport Yachts**",
+        "hash": "84b6fd0cc2b496cfa5051c00481778d74e71089d23c44a219d9a6b9df68824c2",
+        "memo": "MEMO__Westport_Yachts.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_CHRISTENSEN_YACHTS",
+        "entity": "- **Christensen Yachts**",
+        "hash": "35a79b77525e77910ce610861f7ba19dae4fa1a8fe56e3e21ed434f9701cf64e",
+        "memo": "MEMO__Christensen_Yachts.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_DERECKTOR_SHIPYARDS",
+        "entity": "- **Derecktor Shipyards**",
+        "hash": "152f197a0dda49176217473887d01e4d2e5643539d002a84cfd07377ed08cf2d",
+        "memo": "MEMO__Derecktor_Shipyards.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_NOBLE_HOUSE_YACHTS",
+        "entity": "- **Noble House Yachts**",
+        "hash": "6388732de5c5ab402605174f8a2ab1fe4adc24f6d91417f16bd2d39ad9835d11",
+        "memo": "MEMO__Noble_House_Yachts.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ABEKING__RASMUSSEN",
+        "entity": "- **Abeking & Rasmussen**",
+        "hash": "9e23e3d1da024e43ac5fce9e63cf53e2d2fa0d9e10ebfcd86c309a3a8b09d2e7",
+        "memo": "MEMO__Abeking__Rasmussen.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_NEXTERA_ENERGY",
+        "entity": "- **NextEra Energy**",
+        "hash": "ac9737f478ccc0fbf8b32377a496e81022df6f736b4d761bd779ed18aa9322fb",
+        "memo": "MEMO__NextEra_Energy.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ØRSTED",
+        "entity": "- **Ørsted**",
+        "hash": "6b2b509fd74addca7d0ce1078f91b74464f2bb941e661bbaa7beda3d2489dd8a",
+        "memo": "MEMO__Ørsted.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_VESTAS",
+        "entity": "- **Vestas**",
+        "hash": "647aed0d3353a8aca7cadfa534e6870bdd5f2128fe7670a0bb414fa6308ddc5b",
+        "memo": "MEMO__Vestas.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SIEMENS_GAMESA",
+        "entity": "- **Siemens Gamesa**",
+        "hash": "c7d86b61395915a6c3865591665eff1e993928417d0d56913d5574c3c41a480c",
+        "memo": "MEMO__Siemens_Gamesa.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_GOLDWIND",
+        "entity": "- **Goldwind**",
+        "hash": "3cbb498fadbebb9d95ab2d7dba52c554205ea8afc2d64aa734a7f7062a179040",
+        "memo": "MEMO__Goldwind.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_FIRST_SOLAR",
+        "entity": "- **First Solar**",
+        "hash": "799348c826a2dfdbfca5452b47be4b30f2bc6025486823311e013cd0897ed22d",
+        "memo": "MEMO__First_Solar.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SUNPOWER",
+        "entity": "- **SunPower**",
+        "hash": "23efe1af0bc2f0c1af0f26d41c632558ce98dfb12982e52015e7395af86f6590",
+        "memo": "MEMO__SunPower.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_TESLA_ENERGY",
+        "entity": "- **Tesla Energy**",
+        "hash": "b2d3d4432afe0513a4c2e09adbe58df7304095272b8fc98f2a5f99d221be8690",
+        "memo": "MEMO__Tesla_Energy.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SUNRUN",
+        "entity": "- **Sunrun**",
+        "hash": "c8a8e09dc3f4210d2641a31123ad62f404103df7216337f76e97ce8d363e7602",
+        "memo": "MEMO__Sunrun.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ENPHASE_ENERGY",
+        "entity": "- **Enphase Energy**",
+        "hash": "3a4928f4ee737509a4254dd0726e04847beaf26cbf8de25fe5400c99e851e288",
+        "memo": "MEMO__Enphase_Energy.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_CANADIAN_SOLAR",
+        "entity": "- **Canadian Solar**",
+        "hash": "28e13cb32ba89e1c6c64c5529f3c2ef99b06ff3df336077e7e9bb89d8a0eb02b",
+        "memo": "MEMO__Canadian_Solar.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_JINKOSOLAR",
+        "entity": "- **JinkoSolar**",
+        "hash": "6fa16faf63dde1163c1018a413f7587e96c7eafce2b28f7d81511d6dd6894c1a",
+        "memo": "MEMO__JinkoSolar.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_TRINA_SOLAR",
+        "entity": "- **Trina Solar**",
+        "hash": "879200a40ee4321ab257e22280268d0410180ea0ef7bc2c06ecc6facefeeb5f7",
+        "memo": "MEMO__Trina_Solar.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_LONGI_GREEN_ENERGY",
+        "entity": "- **LONGi Green Energy**",
+        "hash": "7853660fd20cf03c15de22803015f29e5ee92ddd2cab294e962110dd92c8a1e8",
+        "memo": "MEMO__LONGi_Green_Energy.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_GE_RENEWABLE_ENERGY",
+        "entity": "- **GE Renewable Energy**",
+        "hash": "fa9005222f470722c57a34f7955f1ed3a4766537dbde26b23dcfe03c66a935e4",
+        "memo": "MEMO__GE_Renewable_Energy.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_VATTENFALL",
+        "entity": "- **Vattenfall**",
+        "hash": "d22ad9514fb0ff91a2958aef71c64c4a299e0aeac2722fea844668e8aa928cd5",
+        "memo": "MEMO__Vattenfall.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_EDF_RENEWABLES",
+        "entity": "- **EDF Renewables**",
+        "hash": "4ff8a5df8d447f7ff79d5b966e9f7de394edcd11329af8ccd99a08f92afc2ae0",
+        "memo": "MEMO__EDF_Renewables.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BP_RENEWABLES",
+        "entity": "- **BP Renewables**",
+        "hash": "2e8db0e4f0b1ad207e6a9fd4eb316f929398703d2e2f96c84b5bb4fa0e8191d9",
+        "memo": "MEMO__BP_Renewables.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SHELL_RENEWABLES",
+        "entity": "- **Shell Renewables**",
+        "hash": "ae47b051f476689673dace59d2e7012c18a8a2ef71dd1e47a0628ff9f1e0b8a8",
+        "memo": "MEMO__Shell_Renewables.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ORSTED",
+        "entity": "- **Orsted**",
+        "hash": "efe9660496b976ada24291428de9fd9befbffbd5cb9cfb664340f69b516fc52c",
+        "memo": "MEMO__Orsted.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ILLUMINA",
+        "entity": "- **Illumina**",
+        "hash": "2eb8a07f63dcb9616d8426bbffe913f9fa3ee8e5363a386ceddce2a23f25cad3",
+        "memo": "MEMO__Illumina.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_PACIFIC_BIOSCIENCES",
+        "entity": "- **Pacific Biosciences**",
+        "hash": "ae5f95c7b3161c2f534b47c0aaede070901e0d9f28a387fa41386feb8141eea3",
+        "memo": "MEMO__Pacific_Biosciences.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_THERMO_FISHER_SCIENTIFIC",
+        "entity": "- **Thermo Fisher Scientific**",
+        "hash": "c0c961ab3d83233bbc45e87af9d5683765e06a7619182773ed177d307c0e2c85",
+        "memo": "MEMO__Thermo_Fisher_Scientific.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ROCHE_DIAGNOSTICS",
+        "entity": "- **Roche Diagnostics**",
+        "hash": "ec2eab68fb14c899aea41f064f08ce47d7aa8834dff1ea595c48ca3421043d80",
+        "memo": "MEMO__Roche_Diagnostics.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_AGILENT_TECHNOLOGIES",
+        "entity": "- **Agilent Technologies**",
+        "hash": "db69bc7d0e1b970fb5d1eb7fea1b41ef9afc619c9e89025cef122b03fb962c8e",
+        "memo": "MEMO__Agilent_Technologies.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_OXFORD_NANOPORE_TECHNOLOGIES",
+        "entity": "- **Oxford Nanopore Technologies**",
+        "hash": "c09bc589b544873b5fb151976cd062dcc47e23afb706c381bfcbb033cd0007bc",
+        "memo": "MEMO__Oxford_Nanopore_Technologies.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BGI_GROUP",
+        "entity": "- **BGI Group**",
+        "hash": "531bb63987b10e71575e273e46a57cf65142c3b8a0c1f624e6b122367995b33e",
+        "memo": "MEMO__BGI_Group.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_10X_GENOMICS",
+        "entity": "- **10x Genomics**",
+        "hash": "8a1e01dd3ee429e29f711dd1cf641aeb1b86b3d303ed7695c01fd6fa8504fe64",
+        "memo": "MEMO__10x_Genomics.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_QIAGEN",
+        "entity": "- **QIAGEN**",
+        "hash": "1f773dd37ed9f4eb3f03d91c76d447b36f0e74b51297317a178db77f04d206c6",
+        "memo": "MEMO__QIAGEN.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_PERKINELMER",
+        "entity": "- **PerkinElmer**",
+        "hash": "e23527a27c39334356bde35cfeb0e561ab06011d5837949ec655e09a22d9879f",
+        "memo": "MEMO__PerkinElmer.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BIORAD_LABORATORIES",
+        "entity": "- **Bio-Rad Laboratories**",
+        "hash": "8a86d53dd7501e5119bea56fc7cbaf730774ad06514528ce0a8a13224f2d2b47",
+        "memo": "MEMO__BioRad_Laboratories.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_PROMEGA",
+        "entity": "- **Promega**",
+        "hash": "9f5ddd593990681a7215b9a772b95ecfea27bd48dce01e1ecaa70fdd6da1652b",
+        "memo": "MEMO__Promega.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_NEW_ENGLAND_BIOLABS",
+        "entity": "- **New England Biolabs**",
+        "hash": "87ba1e1058dd98e8aeeac59246116ba7f765e6bebef2fa5f006cae41fe1ae9f0",
+        "memo": "MEMO__New_England_Biolabs.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_TWIST_BIOSCIENCE",
+        "entity": "- **Twist Bioscience**",
+        "hash": "35f901c5fdfe665a09555786d90b9505667d775e454967ebb6a519f448daaa08",
+        "memo": "MEMO__Twist_Bioscience.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_GINKGO_BIOWORKS",
+        "entity": "- **Ginkgo Bioworks**",
+        "hash": "939962fdb28e084f8d20abe518518586d9454a1d23c985099e8f526f31598d8d",
+        "memo": "MEMO__Ginkgo_Bioworks.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_VERACYTE",
+        "entity": "- **Veracyte**",
+        "hash": "d2d8dd24ee54c3cd92f62ac99df10bea4b07b5d0390de38f41d59f49fed5ba17",
+        "memo": "MEMO__Veracyte.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_GUARDANT_HEALTH",
+        "entity": "- **Guardant Health**",
+        "hash": "818a19b60464d788bdf9b77e13a44c18aec99ec21200734b9be0af80f0e36b7e",
+        "memo": "MEMO__Guardant_Health.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_INVITAE",
+        "entity": "- **Invitae**",
+        "hash": "151b28dbe98b29b5da9b7cb1b009e300eb0b043812fc5286005104064ba1c8b4",
+        "memo": "MEMO__Invitae.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_COLOR_GENOMICS",
+        "entity": "- **Color Genomics**",
+        "hash": "0e1d19ac51d596e3b5c30640d20a07419d05afa8db67a6291c9b5bce2ee18e22",
+        "memo": "MEMO__Color_Genomics.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ANCESTRYDNA",
+        "entity": "- **AncestryDNA**",
+        "hash": "bc90a41d11c9d78a9ccaeedc2bfbfbd960dd535aa347c19823cec6a53cf7cbb8",
+        "memo": "MEMO__AncestryDNA.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SPACEX",
+        "entity": "- **SpaceX**",
+        "hash": "778b08601f2496bd1ad2affdb64ca8f75e147fceee0493b370103fa0bc7d3620",
+        "memo": "MEMO__SpaceX.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BLUE_ORIGIN",
+        "entity": "- **Blue Origin**",
+        "hash": "f4ab772d96d08a55fbccb5bd029349bce095049c80c3a1cff8967a53537153c8",
+        "memo": "MEMO__Blue_Origin.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_NASA",
+        "entity": "- **NASA**",
+        "hash": "59c6c56482739c318c59415b97953052e4fea25616a7f7b8eda01a8bae0fa173",
+        "memo": "MEMO__NASA.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ROSCOSMOS",
+        "entity": "- **Roscosmos**",
+        "hash": "b0a3aefed82701b043b7cd3f4d8d76a7c616e3287ee8ef676646e1d885026964",
+        "memo": "MEMO__Roscosmos.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_CNSA",
+        "entity": "- **CNSA**",
+        "hash": "7bad7c723aa2bf5d412ff0eb8decf636b6ecc4d98063350103556b5aa3b73556",
+        "memo": "MEMO__CNSA.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ESA",
+        "entity": "- **ESA**",
+        "hash": "64af7c7fa3e711ad1210b5a0c79dd2492ad4d029d8542625868eaeff586fec5b",
+        "memo": "MEMO__ESA.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ISRO",
+        "entity": "- **ISRO**",
+        "hash": "796dfbc45e7f55bedb48ac597c5d90c20603827f764363a57fc5471e91139e6b",
+        "memo": "MEMO__ISRO.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BOEING",
+        "entity": "- **Boeing**",
+        "hash": "2cb761c6ff42e75dacd0e5c5244410b91bf5a487f130f053eed9641acfdac8b1",
+        "memo": "MEMO__Boeing.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_LOCKHEED_MARTIN",
+        "entity": "- **Lockheed Martin**",
+        "hash": "3f57816963453d5c9874e07550b4ec554d07a80e245cb3d3a9360ca7fb3bc1da",
+        "memo": "MEMO__Lockheed_Martin.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_NORTHROP_GRUMMAN",
+        "entity": "- **Northrop Grumman**",
+        "hash": "9e9336560c6279dd33f1e7fab49ab2de5cc034069dfb8cbc0fc2dca8675a8e95",
+        "memo": "MEMO__Northrop_Grumman.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ARIANESPACE",
+        "entity": "- **Arianespace**",
+        "hash": "9425a17e5d7df1fdfb5597cc5ea92835211092366f1ba7be5d87d006b7c6dcc9",
+        "memo": "MEMO__Arianespace.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_VIRGIN_GALACTIC",
+        "entity": "- **Virgin Galactic**",
+        "hash": "2b00f08ed8c31c0fa62dee1f3cb334b56d7de9207a29d49eb820353b72790531",
+        "memo": "MEMO__Virgin_Galactic.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ROCKET_LAB",
+        "entity": "- **Rocket Lab**",
+        "hash": "d6f7f2e1cdec513ce3e0d2ec30f9552842c83e0d8f5e6995e367943d90470c2d",
+        "memo": "MEMO__Rocket_Lab.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_RELATIVITY_SPACE",
+        "entity": "- **Relativity Space**",
+        "hash": "b52d8cc57f2599d7516868307f6b6325934d2b490174079d6f583eeb3c181cb7",
+        "memo": "MEMO__Relativity_Space.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ASTROBOTIC",
+        "entity": "- **Astrobotic**",
+        "hash": "73abcc73bab692a1b9939a2a3e55245670e78aac364bb6c16c76629ec5b71846",
+        "memo": "MEMO__Astrobotic.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_MOON_EXPRESS",
+        "entity": "- **Moon Express**",
+        "hash": "f9496c8c3ccb016072661dba18235fa5206ce2afd8454b9740dbe9f4c8a567de",
+        "memo": "MEMO__Moon_Express.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_PLANETARY_RESOURCES",
+        "entity": "- **Planetary Resources**",
+        "hash": "807d0789c869390d40f64f52fc480cca72d94ff1a40154672e16656977d5b4d7",
+        "memo": "MEMO__Planetary_Resources.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_BIGELOW_AEROSPACE",
+        "entity": "- **Bigelow Aerospace**",
+        "hash": "614fdd30fdc2ebd83d4a15446be332b613c520d0288d027efe0300b486c4f303",
+        "memo": "MEMO__Bigelow_Aerospace.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_FIREFLY_AEROSPACE",
+        "entity": "- **Firefly Aerospace**",
+        "hash": "533697e96136d9942188e132c40405c43c21f75ca3394ce8912d869bded094ab",
+        "memo": "MEMO__Firefly_Aerospace.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SIERRA_SPACE",
+        "entity": "- **Sierra Space**",
+        "hash": "9e4ad15115b803f0237f3fee710edf0d4ba793710bf793417552a23f596561bf",
+        "memo": "MEMO__Sierra_Space.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_MP_MATERIALS",
+        "entity": "- **MP Materials**",
+        "hash": "eca2b56e74d3ba1e552b636a8834c1686420e7c3d0a4bf1da0a9951f9be66bbc",
+        "memo": "MEMO__MP_Materials.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_LYNAS_RARE_EARTHS",
+        "entity": "- **Lynas Rare Earths**",
+        "hash": "25601684a6fe79f3f1e941e79f349c0f0350db64a02fd3b37bef3a045475b35e",
+        "memo": "MEMO__Lynas_Rare_Earths.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_CHINA_NORTHERN_RARE_EARTH_GROUP_HIGHTECH",
+        "entity": "- **China Northern Rare Earth (Group) High-Tech**",
+        "hash": "64c1b4c4b936256dd0e9c1d415ccc4b58107158ac103df215767094de1bbf0c3",
+        "memo": "MEMO__China_Northern_Rare_Earth_Group_HighTech.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_CHINA_MINMETALS_RARE_EARTH",
+        "entity": "- **China Minmetals Rare Earth**",
+        "hash": "19807d3731d785bb22ac1b6699fc6d9ae223cc223d4d70ce99e175db154b22d8",
+        "memo": "MEMO__China_Minmetals_Rare_Earth.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ALKANE_RESOURCES",
+        "entity": "- **Alkane Resources**",
+        "hash": "f2fef6e5aa85f9faf02b1e47a5869316996c9160cd3d74e14ffbc84965e4692d",
+        "memo": "MEMO__Alkane_Resources.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ARAFURA_RESOURCES",
+        "entity": "- **Arafura Resources**",
+        "hash": "c755fc0b09fd2ead06a7b92872f363bea187ad4b3d173184444eac519d9cb96a",
+        "memo": "MEMO__Arafura_Resources.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ILUKA_RESOURCES",
+        "entity": "- **Iluka Resources**",
+        "hash": "b544d2ee05819184f4e0fd87f9f591a8e5b582c70ec4cc8056eb36762f9cd6d6",
+        "memo": "MEMO__Iluka_Resources.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_NORTHERN_MINERALS",
+        "entity": "- **Northern Minerals**",
+        "hash": "d37f2a19be27894398ce26662c93e3e3a3d83fc9067034e74043adef9617c0ef",
+        "memo": "MEMO__Northern_Minerals.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_VITAL_METALS",
+        "entity": "- **Vital Metals**",
+        "hash": "97fb4dd1c3a69c268a2a35f84711d2a66b6886e8e5010c884b3dd3ab1a76c54b",
+        "memo": "MEMO__Vital_Metals.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_TEXAS_MINERAL_RESOURCES",
+        "entity": "- **Texas Mineral Resources**",
+        "hash": "da5c0e4b0223054a9661a1803c658c753bf58d034e5da07082a0509a53d43aa3",
+        "memo": "MEMO__Texas_Mineral_Resources.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_PEAK_RESOURCES",
+        "entity": "- **Peak Resources**",
+        "hash": "49a2740581d3800944008b97553b72e8c6e402792b2399a414197e0decefff44",
+        "memo": "MEMO__Peak_Resources.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_GREENLAND_MINERALS",
+        "entity": "- **Greenland Minerals**",
+        "hash": "22261afe2ed3852d7a0ba145834ba2966240f6df77d88bf0b918a63fa49e20fa",
+        "memo": "MEMO__Greenland_Minerals.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_PIONEER_RESOURCES",
+        "entity": "- **Pioneer Resources**",
+        "hash": "a1ef7c5b627d237356b569563f83a4bd91a35ab4f3e0ddc6bab7b8ead84fd9b9",
+        "memo": "MEMO__Pioneer_Resources.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_DEFENSE_METALS",
+        "entity": "- **Defense Metals**",
+        "hash": "8f1ad1181464e2da6975d47c9bb878b84745551903afaba40122b741b532aee5",
+        "memo": "MEMO__Defense_Metals.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_NEO_PERFORMANCE_MATERIALS",
+        "entity": "- **Neo Performance Materials**",
+        "hash": "174b0e116ca0433b943adf9beef168d3d4cd33ca9814194d62a39c6dbe10ffbf",
+        "memo": "MEMO__Neo_Performance_Materials.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_ENERGY_FUELS",
+        "entity": "- **Energy Fuels**",
+        "hash": "5c43bc0b54f50dd97edb0a952bbf1cd3c80f5e6546af83f0a5f7a602a18952c9",
+        "memo": "MEMO__Energy_Fuels.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_UCORE_RARE_METALS",
+        "entity": "- **Ucore Rare Metals**",
+        "hash": "cbe4d6511c149a95c1ac385d79ed6acda768580f327543396827d65e8a06ad13",
+        "memo": "MEMO__Ucore_Rare_Metals.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_APPIA_RARE_EARTHS__URANIUM",
+        "entity": "- **Appia Rare Earths & Uranium**",
+        "hash": "aa6113d60908fe0f22f7f12843f94a6ab66dd6d3339576ef346500abd6d9c699",
+        "memo": "MEMO__Appia_Rare_Earths__Uranium.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_SEARCH_MINERALS",
+        "entity": "- **Search Minerals**",
+        "hash": "5009bd455c19ace694f882a096195babdbb417011ee09acff862c9803d10ba44",
+        "memo": "MEMO__Search_Minerals.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-_CRITICAL_ELEMENTS_LITHIUM",
+        "entity": "- **Critical Elements Lithium**",
+        "hash": "72459d08e53738cc6709e54f8166e8e7df7b6e6f2d4d6898ab7cc4067509913d",
+        "memo": "MEMO__Critical_Elements_Lithium.txt",
+        "status": "Immutable"
     }
 ]

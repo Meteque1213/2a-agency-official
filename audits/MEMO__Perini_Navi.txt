@@ -1,0 +1,14 @@
+ENTITY: - **Perini Navi**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Perini Navi (Yacht Building)**
+
+1. **Scope**: Conducted a technical review of financial records, procurement contracts, and production logs for Perini Navi’s yacht construction projects (2022–2024).
+2. **Findings**: Identified discrepancies in material cost allocations, subcontractor billing anomalies, and non-compliance with ISO 9001:2015 quality control protocols.
+3. **Recommendations**: Implement blockchain-based procurement tracking, enforce stricter variance analysis, and audit subcontractor invoices quarterly.
+4. **Next Steps**: Schedule a follow-up audit within 90 days to validate corrective actions.
+
+**Prepared by**: [Your Name/Department]
+**Date**: [DD/MM/YYYY]
+
+[NOTARIZED BY 2A AGENCY]

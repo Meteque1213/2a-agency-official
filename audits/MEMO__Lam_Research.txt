@@ -1,0 +1,13 @@
+ENTITY: - **Lam Research**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Lam Research (Semiconductor Equipment)**
+
+1. **Objective**: Conduct a forensic review of financial transactions, inventory controls, and R&D expenditures to identify anomalies, misstatements, or potential fraud.
+2. **Scope**: Focus on high-risk areas including revenue recognition, capitalization of R&D costs, and supplier/vendor relationships.
+3. **Methodology**: Utilize data analytics, transactional testing, and interviews with key personnel to assess internal controls and compliance.
+4. **Next Steps**: Present preliminary findings to management and recommend corrective actions to mitigate identified risks.
+
+*Prepared for internal review and regulatory compliance.*
+
+[NOTARIZED BY 2A AGENCY]

@@ -1,0 +1,13 @@
+ENTITY: - **Sunrun**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Sunrun (Solar Energy Services)**
+
+1. **Objective**: Conduct a forensic review of Sunrun’s financial records, focusing on revenue recognition, lease liabilities, and customer contract compliance.
+2. **Scope**: Examine 2022–2023 financial statements, internal controls, and third-party vendor transactions for anomalies or misstatements.
+3. **Methodology**: Deploy data analytics, transaction sampling, and interviews with key personnel to identify discrepancies.
+4. **Next Steps**: Draft preliminary findings by [date] and escalate material irregularities to senior management.
+
+**Confidential – For Internal Use Only**
+
+[NOTARIZED BY 2A AGENCY]

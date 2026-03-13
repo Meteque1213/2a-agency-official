@@ -1,0 +1,15 @@
+ENTITY: - **Banque Cantonale de Genève**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Banque Cantonale de Genève**
+*Subject: Suspicious Transaction Review – High-Risk Portfolio Accounts*
+
+1. **Scope**: Reviewed 12 high-risk accounts (Q3 2023) flagged for unusual cross-border transfers (€18.4M) and potential AML compliance gaps.
+2. **Findings**: Identified 3 accounts with incomplete KYC documentation and 2 instances of structured transactions (€500K+ per transfer).
+3. **Recommendations**: Immediate KYC remediation, enhanced transaction monitoring, and referral to AML compliance for further investigation.
+4. **Next Steps**: Draft formal report by [date] and schedule senior management briefing.
+
+*Prepared by: [Your Name/Team]*
+*Date: [DD/MM/YYYY]*
+
+[NOTARIZED BY 2A AGENCY]

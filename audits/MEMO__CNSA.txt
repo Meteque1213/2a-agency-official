@@ -1,0 +1,17 @@
+ENTITY: - **CNSA**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – CNSA (China National Space Administration)**
+
+**Subject:** Unauthorized Data Access in Satellite Ground Station
+
+1. **Incident Overview:** On [Date], unauthorized access was detected in the ground station control system (GSCS) for [Satellite Name], compromising telemetry and command protocols.
+2. **Technical Findings:** Log analysis reveals anomalous SSH sessions originating from [IP Address], with evidence of credential harvesting via brute-force attacks.
+3. **Containment Measures:** Immediate firewall segmentation and credential rotation implemented; forensic imaging of affected systems completed.
+4. **Next Steps:** Full system audit and vulnerability assessment scheduled for [Date]; recommendations pending review by CNSA Cybersecurity Division.
+
+**Classification:** Confidential – Internal Use Only
+**Prepared by:** [Your Name/Department]
+**Date:** [DD/MM/YYYY]
+
+[NOTARIZED BY 2A AGENCY]

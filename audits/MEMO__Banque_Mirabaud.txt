@@ -1,0 +1,14 @@
+ENTITY: - **Banque Mirabaud**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Banque Mirabaud (Private Banking)**
+
+1. **Objective**: Conduct a forensic audit to assess potential financial irregularities, compliance breaches, and operational risks within Banque Mirabaud’s private banking division.
+2. **Scope**: Review transaction records, client account activity, and internal controls for the period [YYYY-MM-DD to YYYY-MM-DD].
+3. **Methodology**: Employ data analytics, transaction monitoring, and document examination to identify anomalies, fraud indicators, and regulatory non-compliance.
+4. **Next Steps**: Compile findings in a detailed report, including recommendations for remediation and enhanced oversight.
+
+**Prepared by**: [Your Name/Team]
+**Date**: [DD/MM/YYYY]
+
+[NOTARIZED BY 2A AGENCY]

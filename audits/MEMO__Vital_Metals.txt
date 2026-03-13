@@ -1,0 +1,13 @@
+ENTITY: - **Vital Metals**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Vital Metals (Rare Earth Mining)**
+
+1. **Objective**: Conduct a forensic review of financial transactions, supply chain integrity, and compliance with rare earth mineral export regulations.
+2. **Scope**: Examine accounting records, vendor contracts, and mineral traceability from 2022–2024, with focus on high-risk transactions.
+3. **Methodology**: Deploy blockchain analysis, document forensics, and geospatial verification to detect anomalies in sourcing and financial flows.
+4. **Next Steps**: Present preliminary findings to the Board by [date] and escalate any material discrepancies to regulatory authorities.
+
+**Confidential – Internal Use Only**
+
+[NOTARIZED BY 2A AGENCY]

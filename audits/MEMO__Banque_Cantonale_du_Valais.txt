@@ -1,0 +1,17 @@
+ENTITY: - **Banque Cantonale du Valais**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Banque Cantonale du Valais**
+
+**Subject:** Suspected Fraudulent Transactions – Wealth Management Division
+
+1. **Scope:** Review of high-risk transactions (Q3 2023) flagged by AML monitoring systems.
+2. **Findings:** Anomalies detected in trade-based money laundering (TBML) and unauthorized wire transfers.
+3. **Action Required:** Immediate freeze of suspect accounts; full transaction reconstruction pending.
+4. **Next Steps:** Formal report submission to regulatory authorities by [date].
+
+**Confidential – Internal Use Only**
+**Prepared by:** [Your Name/Team]
+**Date:** [DD/MM/YYYY]
+
+[NOTARIZED BY 2A AGENCY]

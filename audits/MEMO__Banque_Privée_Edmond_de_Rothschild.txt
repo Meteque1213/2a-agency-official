@@ -1,0 +1,19 @@
+ENTITY: - **Banque Privée Edmond de Rothschild**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Banque Privée Edmond de Rothschild**
+
+1. **Objective**: Conduct a comprehensive forensic review of transactional records, client account activity, and internal controls to identify potential fraud, regulatory non-compliance, or operational irregularities.
+
+2. **Scope**: Examine high-risk transactions (e.g., large transfers, offshore accounts), AML/CFT procedures, and IT security protocols over the past 36 months, with a focus on private banking client portfolios.
+
+3. **Methodology**: Deploy data analytics, blockchain tracing (where applicable), and forensic accounting techniques to reconstruct suspicious activity and assess control effectiveness.
+
+4. **Deliverables**: Provide a detailed report with findings, risk assessments, and remediation recommendations by [insert deadline].
+
+**Confidentiality**: Strictly adhere to banking secrecy laws and internal data protection policies.
+
+*[Prepared by: Forensic Audit Team]*
+*[Date: DD/MM/YYYY]*
+
+[NOTARIZED BY 2A AGENCY]

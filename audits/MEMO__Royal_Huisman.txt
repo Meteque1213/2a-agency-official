@@ -1,0 +1,13 @@
+ENTITY: - **Royal Huisman**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Royal Huisman (Yacht Building)**
+
+1. **Objective:** Assess financial and operational integrity of Royal Huisman’s yacht construction processes, focusing on cost controls, procurement transparency, and compliance with industry standards.
+2. **Scope:** Review invoicing, subcontractor payments, material sourcing, and project timelines for discrepancies or fraud indicators.
+3. **Methodology:** Analyze digital records, physical inventory, and supplier contracts using forensic accounting tools and blockchain verification where applicable.
+4. **Next Steps:** Present findings to senior management with actionable recommendations to mitigate risks and enhance audit trails.
+
+*Confidential – Internal Use Only*
+
+[NOTARIZED BY 2A AGENCY]

@@ -1,0 +1,14 @@
+ENTITY: - **Linode**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Linode Cloud Computing**
+
+1. **Scope**: Conducted a forensic review of Linode’s cloud infrastructure, focusing on access logs, virtual machine (VM) configurations, and network traffic patterns.
+2. **Findings**: Detected unauthorized SSH access attempts and misconfigured firewall rules in a subset of VMs, indicating potential security gaps.
+3. **Recommendations**: Enforce MFA for all administrative accounts, audit and remediate firewall policies, and implement automated log monitoring.
+4. **Next Steps**: Schedule a follow-up audit to validate remediation efforts and assess compliance with security best practices.
+
+**Prepared by**: [Your Name/Team]
+**Date**: [DD/MM/YYYY]
+
+[NOTARIZED BY 2A AGENCY]

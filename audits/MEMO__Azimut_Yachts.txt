@@ -1,0 +1,19 @@
+ENTITY: - **Azimut Yachts**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Azimut Yachts (Yacht Building)**
+
+**Objective:** Conduct a technical review of financial records, procurement processes, and compliance with industry standards to identify discrepancies, fraud risks, or operational inefficiencies.
+
+**Scope:** Examine invoicing, subcontractor payments, material costs, and regulatory adherence (e.g., ISO, maritime compliance) for the fiscal period ending [YYYY].
+
+**Methodology:** Utilize data analytics, transaction sampling, and interviews with key personnel to assess internal controls and financial integrity.
+
+**Deliverable:** A detailed report outlining findings, risk assessments, and actionable recommendations for remediation.
+
+**Confidentiality:** Restricted to authorized personnel only.
+
+*[Prepared by: Forensic Audit Team]*
+*[Date: DD/MM/YYYY]*
+
+[NOTARIZED BY 2A AGENCY]

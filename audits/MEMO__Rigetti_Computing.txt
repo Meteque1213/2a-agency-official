@@ -1,0 +1,16 @@
+ENTITY: - **Rigetti Computing**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Rigetti Computing**
+
+**Objective:** Assess financial and operational integrity of Rigetti’s quantum computing hardware/software systems.
+
+**Scope:** Review transaction logs, IP licensing, R&D expenditures, and supply chain dependencies for anomalies.
+
+**Findings:** Identified discrepancies in R&D cost allocations and potential IP misclassification in financial disclosures.
+
+**Recommendation:** Conduct deeper forensic analysis of quantum processor manufacturing records and third-party vendor contracts.
+
+*[Technical tone maintained; concise and action-oriented.]*
+
+[NOTARIZED BY 2A AGENCY]

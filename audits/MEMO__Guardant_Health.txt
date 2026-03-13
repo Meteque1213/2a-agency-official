@@ -1,0 +1,13 @@
+ENTITY: - **Guardant Health**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Guardant Health (Liquid Biopsy)**
+
+1. **Objective**: Assess financial and operational controls related to Guardant Health’s liquid biopsy testing, focusing on revenue recognition, sample handling, and regulatory compliance.
+2. **Scope**: Review billing accuracy, chain-of-custody documentation, and adherence to CLIA/CAP standards for high-complexity lab testing.
+3. **Key Risks**: Potential misclassification of test codes, improper reimbursement claims, and gaps in traceability of patient samples.
+4. **Next Steps**: Conduct on-site validation of lab processes and cross-check claims data against clinical records.
+
+*Prepared for internal review. Confidential.*
+
+[NOTARIZED BY 2A AGENCY]

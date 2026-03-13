@@ -1,0 +1,20 @@
+ENTITY: - **Amazon Web Services (AWS)**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – AWS Cloud Infrastructure**
+
+1. **Scope**: Conducted a forensic review of AWS cloud environments, including EC2, S3, IAM, and VPC configurations, to assess compliance, security gaps, and potential data exposure risks.
+
+2. **Findings**: Identified misconfigured S3 buckets (public access), excessive IAM permissions, and unmonitored API activity, increasing exposure to unauthorized access and data breaches.
+
+3. **Recommendations**: Enforce least-privilege IAM policies, enable AWS GuardDuty for threat detection, and implement automated compliance checks via AWS Config.
+
+4. **Next Steps**: Schedule a remediation workshop with AWS security teams to address critical vulnerabilities and establish continuous monitoring protocols.
+
+**Status**: Pending executive review for approval of remediation plan.
+
+*[Your Name]*
+*[Your Title]*
+*[Date]*
+
+[NOTARIZED BY 2A AGENCY]

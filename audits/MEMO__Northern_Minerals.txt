@@ -1,0 +1,13 @@
+ENTITY: - **Northern Minerals**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Northern Minerals (Rare Earth Mining)**
+
+1. **Objective:** Conduct a forensic review of financial records, supply chain transactions, and mineral extraction processes to identify discrepancies, fraud, or compliance violations.
+2. **Scope:** Examine invoicing, procurement, and export documentation; assess adherence to regulatory and contractual obligations.
+3. **Methodology:** Deploy data analytics, transactional testing, and on-site inspections to detect anomalies in revenue recognition, cost allocation, and mineral grading.
+4. **Deliverable:** Provide a detailed report with findings, risk assessments, and remediation recommendations by [date].
+
+*Confidential – For Internal Use Only.*
+
+[NOTARIZED BY 2A AGENCY]

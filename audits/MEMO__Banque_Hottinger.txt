@@ -1,0 +1,16 @@
+ENTITY: - **Banque Hottinger**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Banque Hottinger (Private Banking)**
+
+1. **Objective:** Conduct a comprehensive forensic audit to identify and assess potential financial irregularities, compliance breaches, and operational risks within Banque Hottinger’s private banking division.
+
+2. **Scope:** Review transaction records, client account activity, internal controls, and regulatory adherence (e.g., AML, KYC) for the period [X] to [Y].
+
+3. **Methodology:** Employ data analytics, transaction tracing, and document examination to detect anomalies, with a focus on high-risk areas (e.g., large transfers, beneficial ownership discrepancies).
+
+4. **Next Steps:** Present preliminary findings to senior management by [date] and final report by [date], with recommendations for remediation and enhanced oversight.
+
+**Confidential – Internal Use Only**
+
+[NOTARIZED BY 2A AGENCY]

@@ -1,0 +1,13 @@
+ENTITY: - **China Northern Rare Earth (Group) High-Tech**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – China Northern Rare Earth (Group) High-Tech**
+
+1. **Objective**: Conduct a forensic review of financial transactions, supply chain integrity, and compliance with rare earth export regulations.
+2. **Scope**: Examine procurement records, pricing anomalies, and cross-border transactions for potential discrepancies or fraud.
+3. **Methodology**: Deploy blockchain analysis, transactional forensics, and regulatory compliance checks.
+4. **Next Steps**: Present preliminary findings to senior management within 14 days; escalate material irregularities to legal counsel.
+
+**Confidential – Internal Use Only**
+
+[NOTARIZED BY 2A AGENCY]

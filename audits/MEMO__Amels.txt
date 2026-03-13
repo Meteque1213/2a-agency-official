@@ -1,0 +1,14 @@
+ENTITY: - **Amels**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Amels (Yacht Building)**
+
+1. **Scope:** Conducted a technical review of Amels’ financial records, procurement processes, and subcontractor invoicing for fiscal years 2022–2024.
+2. **Findings:** Identified discrepancies in material cost allocations and potential overbilling by subcontractors, requiring further validation.
+3. **Recommendations:** Implement automated invoice reconciliation and enforce stricter vendor compliance checks to mitigate risks.
+4. **Next Steps:** Schedule a follow-up audit to verify corrective actions and assess long-term financial controls.
+
+**Prepared by:** [Your Name/Department]
+**Date:** [Insert Date]
+
+[NOTARIZED BY 2A AGENCY]

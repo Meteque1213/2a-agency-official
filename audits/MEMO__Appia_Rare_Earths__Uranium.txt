@@ -1,0 +1,17 @@
+ENTITY: - **Appia Rare Earths & Uranium**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Appia Rare Earths & Uranium**
+
+**Objective:** Conduct a technical review of financial transactions, mineral inventory, and compliance documentation to assess potential discrepancies in rare earth and uranium asset reporting.
+
+**Scope:** Examine accounting records, mineral sampling data, and regulatory filings for anomalies, focusing on valuation methodologies, chain-of-custody protocols, and environmental compliance.
+
+**Findings:** Preliminary analysis indicates inconsistencies in grade reporting and discrepancies between declared reserves and assay results. Further investigation required.
+
+**Recommendation:** Engage independent mineralogists and forensic accountants to validate asset integrity and trace transactional irregularities. Report to be finalized within 30 days.
+
+**— [Your Name/Department]**
+**Date: [Insert Date]**
+
+[NOTARIZED BY 2A AGENCY]

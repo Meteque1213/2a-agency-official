@@ -1,0 +1,22 @@
+ENTITY: - **Defense Metals**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Defense Metals (Rare Earth Mining)**
+
+**Objective:** Conduct a forensic audit to assess financial integrity, compliance, and operational risks in rare earth extraction and processing.
+
+**Scope:** Review financial records, supply chain transactions, and regulatory adherence (e.g., REE export controls, environmental compliance).
+
+**Key Focus Areas:**
+1. **Financial Accuracy:** Validate revenue recognition, cost allocation, and inventory valuation.
+2. **Supply Chain Integrity:** Trace mineral sourcing, logistics, and third-party vendor due diligence.
+3. **Regulatory Compliance:** Ensure adherence to international trade laws and environmental protocols.
+
+**Next Steps:** Present findings to senior management with actionable recommendations.
+
+**Prepared by:** [Your Name/Team]
+**Date:** [Insert Date]
+
+*(Technical, concise, and action-oriented.)*
+
+[NOTARIZED BY 2A AGENCY]

@@ -1,0 +1,20 @@
+ENTITY: - **Ferretti Group**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Ferretti Group (Yacht Building)**
+
+**Objective:** Assess financial and operational integrity of Ferretti Group’s yacht manufacturing processes, supply chain, and revenue recognition.
+
+**Scope:** Review procurement contracts, production cost allocations, and compliance with industry standards (e.g., ISO 9001, IMO regulations).
+
+**Findings:** Identified discrepancies in material cost reporting and potential overbilling in subcontractor invoices. Traceability of high-value components requires further validation.
+
+**Recommendations:** Implement blockchain-based tracking for supply chain transparency and conduct a forensic deep-dive on suspect transactions.
+
+**Status:** Audit ongoing; preliminary report due [date].
+
+*[Your Name]*
+*Forensic Audit Lead*
+*[Date]*
+
+[NOTARIZED BY 2A AGENCY]

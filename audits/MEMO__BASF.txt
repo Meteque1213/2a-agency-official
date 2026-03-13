@@ -1,0 +1,14 @@
+ENTITY: - **BASF**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – BASF (Chemicals)**
+
+1. **Objective:** Conduct a forensic review of BASF’s financial records to identify discrepancies in chemical inventory valuation, procurement contracts, and R&D cost allocations.
+2. **Scope:** Examine transactions from Q1 2023 to Q4 2023, focusing on high-risk areas such as raw material pricing, intercompany transfers, and compliance with IFRS 15.
+3. **Methodology:** Deploy data analytics to detect anomalies, validate documentation, and interview key personnel in procurement, finance, and operations.
+4. **Next Steps:** Present preliminary findings to the Audit Committee by [date] and escalate material irregularities to legal and regulatory teams.
+
+**Prepared by:** [Your Name/Department]
+**Date:** [Insert Date]
+
+[NOTARIZED BY 2A AGENCY]

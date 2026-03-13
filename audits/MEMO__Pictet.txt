@@ -1,0 +1,13 @@
+ENTITY: - **Pictet**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Pictet (Private Banking & Asset Management)**
+
+1. **Objective**: Conduct a forensic review of transactional records, client portfolios, and internal controls to identify potential financial irregularities, compliance breaches, or operational risks.
+2. **Scope**: Examine high-risk areas including trade execution, fee structures, and cross-border transactions, with a focus on data integrity and regulatory adherence.
+3. **Methodology**: Deploy forensic data analytics, transactional reconstruction, and document verification to detect anomalies or discrepancies.
+4. **Deliverable**: Provide a detailed report with findings, risk assessments, and remediation recommendations to mitigate identified vulnerabilities.
+
+*Confidential – For Internal Use Only*
+
+[NOTARIZED BY 2A AGENCY]

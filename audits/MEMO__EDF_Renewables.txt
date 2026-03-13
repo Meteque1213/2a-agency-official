@@ -1,0 +1,13 @@
+ENTITY: - **EDF Renewables**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – EDF Renewables (Wind & Solar Energy)**
+
+1. **Objective**: Conduct a technical review of financial transactions, asset valuations, and operational compliance within EDF Renewables’ wind and solar portfolios to identify discrepancies, fraud, or inefficiencies.
+2. **Scope**: Examine procurement contracts, revenue recognition, maintenance costs, and regulatory adherence, with a focus on high-risk areas (e.g., subsidy claims, equipment depreciation).
+3. **Methodology**: Leverage data analytics, transactional sampling, and on-site inspections to validate documentation, trace funds, and assess control effectiveness.
+4. **Deliverables**: Provide a detailed report with findings, risk assessments, and actionable recommendations to mitigate financial and operational vulnerabilities.
+
+**Confidential – Internal Use Only**
+
+[NOTARIZED BY 2A AGENCY]

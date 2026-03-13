@@ -1,0 +1,13 @@
+ENTITY: - **China Minmetals Rare Earth**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – China Minmetals Rare Earth (Rare Earth Mining)**
+
+1. **Objective:** Assess financial and operational integrity of rare earth extraction, processing, and reporting systems.
+2. **Scope:** Review transactional records, inventory controls, and compliance with regulatory and contractual obligations.
+3. **Findings:** Identify discrepancies in mineral grade reporting, supply chain documentation, and revenue recognition.
+4. **Recommendations:** Implement enhanced traceability protocols and independent third-party validation for critical processes.
+
+*Prepared for internal review and regulatory submission.*
+
+[NOTARIZED BY 2A AGENCY]

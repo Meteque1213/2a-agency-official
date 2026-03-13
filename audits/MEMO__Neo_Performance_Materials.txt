@@ -1,0 +1,13 @@
+ENTITY: - **Neo Performance Materials**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Neo Performance Materials (Rare Earth Processing)**
+
+1. **Objective:** Conduct a forensic audit of Neo Performance Materials’ rare earth processing operations to assess compliance, financial integrity, and operational controls.
+2. **Scope:** Examine procurement, refining, inventory management, and revenue recognition processes, with focus on rare earth supply chain transparency.
+3. **Methodology:** Deploy data analytics, transactional testing, and physical inventory verification to identify discrepancies or irregularities.
+4. **Next Steps:** Present preliminary findings to senior management within 30 days; full report to follow with remediation recommendations.
+
+**Confidential – For Internal Use Only**
+
+[NOTARIZED BY 2A AGENCY]

@@ -1,0 +1,18 @@
+ENTITY: - **Westport Yachts**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Westport Yachts**
+
+**Objective:** Conduct a comprehensive review of financial transactions, inventory controls, and subcontractor billing to identify discrepancies, fraud, or operational inefficiencies.
+
+**Scope:** Focus on 2023 fiscal records, including purchase orders, vendor payments, and labor cost allocations, with emphasis on high-value yacht builds.
+
+**Methodology:** Utilize data analytics, transaction sampling, and interviews with key personnel to validate compliance with internal controls and regulatory standards.
+
+**Deliverable:** A detailed report outlining findings, risk assessments, and corrective action recommendations by [insert deadline].
+
+**Confidentiality:** All audit materials will be handled in accordance with legal and corporate privacy protocols.
+
+**End of Memo.**
+
+[NOTARIZED BY 2A AGENCY]

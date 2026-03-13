@@ -1,0 +1,13 @@
+ENTITY: - **Alkane Resources**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Alkane Resources (Rare Earth Mining)**
+
+1. **Objective:** Conduct a forensic review of financial transactions, supply chain integrity, and compliance with rare earth mineral extraction regulations.
+2. **Scope:** Examine procurement records, export documentation, and internal controls for anomalies or non-compliance.
+3. **Findings:** Preliminary analysis indicates discrepancies in mineral grade reporting and potential misclassification of export shipments.
+4. **Next Steps:** Recommend a detailed audit of inventory reconciliation and third-party vendor due diligence.
+
+*Prepared for internal review and regulatory submission.*
+
+[NOTARIZED BY 2A AGENCY]

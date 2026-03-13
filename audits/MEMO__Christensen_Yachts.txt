@@ -1,0 +1,16 @@
+ENTITY: - **Christensen Yachts**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Christensen Yachts**
+
+**Subject:** Technical Review of Financial and Operational Controls
+
+1. **Scope:** Examination of financial records, procurement processes, and inventory management for fiscal years 2022–2024.
+2. **Findings:** Identified discrepancies in material cost allocations and potential overbilling in subcontractor invoices.
+3. **Recommendations:** Implement automated tracking for raw material usage and conduct quarterly vendor audits.
+4. **Next Steps:** Full forensic analysis of high-risk transactions and compliance review with IMO standards.
+
+**Prepared by:** [Your Name/Department]
+**Date:** [Insert Date]
+
+[NOTARIZED BY 2A AGENCY]

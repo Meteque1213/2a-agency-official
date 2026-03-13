@@ -1,0 +1,16 @@
+ENTITY: - **Abeking & Rasmussen**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Abeking & Rasmussen (Yacht Building)**
+
+1. **Objective:** Conduct a technical review of financial records, procurement processes, and project cost allocations to identify discrepancies, fraud, or inefficiencies in yacht construction operations.
+
+2. **Scope:** Examine invoices, subcontractor agreements, material sourcing, and labor cost reporting for the fiscal years 2022–2024, with a focus on high-value projects.
+
+3. **Methodology:** Utilize data analytics, forensic accounting techniques, and on-site inspections to validate documentation and trace financial flows.
+
+4. **Deliverable:** Provide a detailed report with findings, risk assessments, and recommendations for corrective actions by [insert deadline].
+
+**End of Memo.**
+
+[NOTARIZED BY 2A AGENCY]

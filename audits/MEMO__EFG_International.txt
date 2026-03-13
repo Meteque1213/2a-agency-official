@@ -1,0 +1,13 @@
+ENTITY: - **EFG International**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – EFG International (Private Banking)**
+
+1. **Objective**: Conduct a forensic review of EFG International’s private banking transactions (2023–2024) to identify anomalies, compliance gaps, and potential fraud indicators.
+2. **Scope**: Examine client onboarding, transaction monitoring, and AML/CFT controls, with focus on high-risk jurisdictions and unusual activity patterns.
+3. **Methodology**: Deploy data analytics (SAS, ACL) to flag outliers, cross-reference with regulatory filings, and interview key personnel.
+4. **Next Steps**: Draft preliminary findings by [date] and escalate material risks to the Board and FINMA as required.
+
+**Confidential – Internal Use Only**
+
+[NOTARIZED BY 2A AGENCY]

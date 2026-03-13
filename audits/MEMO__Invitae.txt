@@ -1,0 +1,17 @@
+ENTITY: - **Invitae**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Invitae (Genetic Testing)**
+
+**Objective:** Assess financial and operational controls for genetic testing accuracy, billing integrity, and regulatory compliance.
+
+**Scope:** Review sample handling, test validation protocols, reimbursement claims, and data security measures.
+
+**Findings:** Identify discrepancies in test reporting, billing anomalies, or non-compliance with CLIA/CAP standards.
+
+**Recommendations:** Implement automated validation checks, enhance audit trails, and conduct periodic third-party reviews.
+
+*[Date]*
+*[Prepared by: Forensic Audit Team]*
+
+[NOTARIZED BY 2A AGENCY]

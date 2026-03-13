@@ -1,0 +1,13 @@
+ENTITY: - **Oceanco**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Oceanco (Yacht Building)**
+
+1. **Objective:** Conduct a forensic review of Oceanco’s financial records, focusing on cost overruns, procurement discrepancies, and compliance with maritime regulations.
+2. **Scope:** Examine invoices, subcontractor agreements, and project documentation for the past three fiscal years, with emphasis on high-value contracts.
+3. **Methodology:** Utilize data analytics to identify anomalies, perform transactional testing, and verify asset valuations against industry benchmarks.
+4. **Next Steps:** Present preliminary findings to senior management by [date] and escalate material irregularities to the audit committee.
+
+*Confidential – For Internal Use Only*
+
+[NOTARIZED BY 2A AGENCY]

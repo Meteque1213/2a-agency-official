@@ -1,0 +1,13 @@
+ENTITY: - **Hetzner Cloud**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Hetzner Cloud**
+
+1. **Scope**: Audit conducted on Hetzner Cloud infrastructure, focusing on access logs, billing discrepancies, and potential unauthorized resource utilization.
+2. **Findings**: Identified anomalous API activity, inconsistent billing records, and unallocated compute instances.
+3. **Recommendations**: Enforce MFA for all administrative accounts, implement real-time monitoring, and conduct a full resource inventory.
+4. **Next Steps**: Escalate to security team for remediation and schedule a follow-up audit within 30 days.
+
+**Status**: Critical – Immediate action required.
+
+[NOTARIZED BY 2A AGENCY]

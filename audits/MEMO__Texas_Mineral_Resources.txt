@@ -1,0 +1,14 @@
+ENTITY: - **Texas Mineral Resources**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Texas Mineral Resources (Rare Earth Mining)**
+
+1. **Objective:** Conduct a forensic audit to assess financial integrity, compliance, and operational risks in rare earth mining operations.
+2. **Scope:** Review financial records, supply chain transactions, and regulatory adherence for fiscal years 2022–2024.
+3. **Methodology:** Apply data analytics, transactional testing, and on-site inspections to identify discrepancies or fraud indicators.
+4. **Next Steps:** Present preliminary findings to senior management by [date] and final report by [date].
+
+**Prepared by:** [Your Name/Team]
+**Date:** [Insert Date]
+
+[NOTARIZED BY 2A AGENCY]

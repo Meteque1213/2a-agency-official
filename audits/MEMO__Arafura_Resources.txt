@@ -1,0 +1,13 @@
+ENTITY: - **Arafura Resources**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Arafura Resources (Rare Earth Mining)**
+
+1. **Objective**: Conduct a forensic review of financial transactions, supply chain integrity, and regulatory compliance to assess potential fraud, misreporting, or operational irregularities.
+2. **Scope**: Examine accounting records, procurement contracts, and mineral processing documentation for anomalies, focusing on rare earth extraction and export activities.
+3. **Methodology**: Deploy data analytics, transaction tracing, and on-site inspections to identify discrepancies in revenue recognition, cost allocations, and environmental compliance.
+4. **Deliverable**: Provide a detailed report with findings, risk assessments, and remediation recommendations by [insert deadline].
+
+*[Confidential – Internal Use Only]*
+
+[NOTARIZED BY 2A AGENCY]

@@ -1,0 +1,13 @@
+ENTITY: - **Julius Baer**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Julius Baer (Private Banking)**
+
+1. **Objective:** Conduct a forensic review of Julius Baer’s private banking operations to assess compliance with AML/CFT regulations, transaction monitoring efficacy, and potential financial misconduct.
+2. **Scope:** Examine client onboarding, transaction patterns, beneficial ownership disclosures, and internal controls for red flags (e.g., shell entities, suspicious transfers).
+3. **Methodology:** Deploy data analytics, document sampling, and interviews with key personnel to identify anomalies and gaps in oversight.
+4. **Next Steps:** Compile findings in a confidential report, with recommendations for remediation and regulatory reporting as required.
+
+*[Confidential – Internal Use Only]*
+
+[NOTARIZED BY 2A AGENCY]

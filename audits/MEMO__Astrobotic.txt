@@ -1,0 +1,22 @@
+ENTITY: - **Astrobotic**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Astrobotic (Lunar Exploration)**
+
+**Objective:** Assess financial and operational integrity of Astrobotic’s lunar mission contracts, supply chain, and technical compliance.
+
+**Scope:** Review contract terms, cost allocations, subcontractor payments, and mission readiness documentation for anomalies.
+
+**Methodology:** Data extraction from ERP systems, invoice reconciliation, and technical validation of lunar lander specifications.
+
+**Findings:** Preliminary analysis indicates discrepancies in subcontractor billing; further investigation required for mission-critical hardware compliance.
+
+**Recommendation:** Conduct on-site audit of manufacturing facilities and cross-check with NASA/ESA contractual obligations.
+
+**Status:** Ongoing. Final report due [date].
+
+*[Your Name]*
+*Forensic Audit Lead*
+*[Date]*
+
+[NOTARIZED BY 2A AGENCY]

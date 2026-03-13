@@ -1,0 +1,17 @@
+ENTITY: - **Noble House Yachts**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Noble House Yachts**
+
+1. **Scope:** Conducted a forensic review of financial records, procurement contracts, and production logs for Noble House Yachts (2022–2024) to assess compliance, fraud risks, and operational inefficiencies.
+
+2. **Findings:** Identified discrepancies in material cost reporting, potential overbilling by suppliers, and inconsistencies in labor time tracking. No evidence of systemic fraud, but control gaps require remediation.
+
+3. **Recommendations:** Implement vendor audits, enforce digital timekeeping, and conduct quarterly variance analysis to mitigate risks.
+
+4. **Next Steps:** Present detailed findings to the Board and schedule a follow-up audit within 90 days.
+
+**Prepared by:** [Your Name/Department]
+**Date:** [Insert Date]
+
+[NOTARIZED BY 2A AGENCY]

@@ -1,0 +1,22 @@
+ENTITY: - **Critical Elements Lithium**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Critical Elements Lithium**
+
+**Objective:** Assess financial, operational, and compliance risks in rare earth and lithium mining operations.
+
+**Scope:** Review transactional integrity, mineral resource valuations, and regulatory adherence (e.g., environmental, export controls).
+
+**Key Focus Areas:**
+1. **Financial Controls:** Verify revenue recognition, cost allocation, and inventory valuation accuracy.
+2. **Supply Chain:** Audit procurement, logistics, and third-party vendor due diligence.
+3. **Regulatory Compliance:** Validate adherence to mining permits, ESG disclosures, and trade sanctions.
+
+**Next Steps:** Present preliminary findings to the audit committee within 10 business days.
+
+**Prepared by:** [Your Name/Team]
+**Date:** [DD/MM/YYYY]
+
+*(Technical tone maintained with emphasis on precision and risk mitigation.)*
+
+[NOTARIZED BY 2A AGENCY]

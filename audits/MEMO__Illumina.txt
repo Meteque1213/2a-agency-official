@@ -1,0 +1,13 @@
+ENTITY: - **Illumina**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Illumina (Genomic Sequencing)**
+
+1. **Objective**: Assess data integrity, chain-of-custody protocols, and compliance with regulatory standards (e.g., HIPAA, GDPR) in Illumina’s genomic sequencing workflows.
+2. **Scope**: Review sample handling, sequencing accuracy, and data storage practices across Illumina’s platforms (e.g., NovaSeq, MiSeq).
+3. **Methodology**: Conduct forensic imaging of sequencing logs, validate metadata consistency, and audit access controls for sensitive genomic datasets.
+4. **Deliverable**: Provide a technical report with findings, risk assessments, and remediation recommendations to mitigate data breaches or tampering risks.
+
+*Confidential – For Internal Use Only*
+
+[NOTARIZED BY 2A AGENCY]

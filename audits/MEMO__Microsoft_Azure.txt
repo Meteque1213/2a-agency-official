@@ -1,0 +1,16 @@
+ENTITY: - **Microsoft Azure**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Microsoft Azure (Cloud Computing)**
+
+1. **Scope:** Conducted a forensic review of Azure cloud infrastructure, including virtual machines, storage accounts, and network configurations, to assess compliance, security controls, and potential data exposure risks.
+
+2. **Findings:** Identified misconfigured access policies, unpatched vulnerabilities, and anomalous login activities, indicating potential insider threats or unauthorized access.
+
+3. **Recommendations:** Enforce least-privilege access, enable MFA, and implement Azure Security Center for continuous monitoring. Remediate detected vulnerabilities immediately.
+
+4. **Next Steps:** Provide a detailed remediation plan and schedule a follow-up audit to validate corrective actions.
+
+**End of Memo.**
+
+[NOTARIZED BY 2A AGENCY]

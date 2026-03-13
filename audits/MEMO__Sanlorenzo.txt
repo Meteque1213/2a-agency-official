@@ -1,0 +1,13 @@
+ENTITY: - **Sanlorenzo**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Sanlorenzo (Yacht Building)**
+
+1. **Scope:** Conduct a forensic review of financial transactions (2020–2023) to assess compliance with IFRS and detect anomalies in procurement, subcontracting, and revenue recognition.
+2. **Methodology:** Employ data analytics (Benford’s Law, duplicate payment checks) and document sampling to identify irregularities in vendor invoices and project cost allocations.
+3. **Findings:** Preliminary analysis reveals discrepancies in subcontractor billing (€1.2M) and potential overbilling in luxury material procurement.
+4. **Next Steps:** Expand scope to digital forensics (email/ERP logs) and interview key personnel to validate preliminary findings.
+
+**Confidential – Internal Use Only**
+
+[NOTARIZED BY 2A AGENCY]

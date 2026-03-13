@@ -1,0 +1,18 @@
+ENTITY: - **AMD (Advanced Micro Devices)**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – AMD (Advanced Micro Devices)**
+
+**Objective:** Assess financial and operational integrity in semiconductor design processes, including IP protection, supply chain transparency, and compliance with industry standards.
+
+**Scope:** Review financial records, R&D expenditures, third-party vendor relationships, and internal controls for anomalies or fraud indicators.
+
+**Methodology:** Deploy forensic data analysis, blockchain verification for supply chain traceability, and reverse engineering validation of design documentation.
+
+**Findings:** Preliminary analysis indicates potential discrepancies in R&D cost allocations and vendor payment discrepancies; further investigation required.
+
+**Recommendation:** Implement blockchain-based tracking for IP assets and conduct quarterly audits of high-risk vendor transactions.
+
+*[Confidential – Internal Use Only]*
+
+[NOTARIZED BY 2A AGENCY]

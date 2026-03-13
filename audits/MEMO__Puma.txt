@@ -1,0 +1,18 @@
+ENTITY: - **Puma**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Puma (Sportswear)**
+
+**Objective:** Conduct a comprehensive forensic audit to assess financial integrity, compliance, and potential fraud risks within Puma’s financial operations.
+
+**Scope:** Review transactional records, inventory controls, and third-party vendor relationships for anomalies, discrepancies, or non-compliance with regulatory standards.
+
+**Methodology:** Employ data analytics, transactional sampling, and forensic accounting techniques to identify irregularities and trace financial flows.
+
+**Deliverable:** Provide a detailed report outlining findings, risk assessments, and actionable recommendations to mitigate identified vulnerabilities.
+
+**Confidentiality:** Maintain strict confidentiality per audit protocols.
+
+**End of Memo.**
+
+[NOTARIZED BY 2A AGENCY]

@@ -1,0 +1,17 @@
+ENTITY: - **Iluka Resources**
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Iluka Resources (Rare Earth Mining)**
+
+**Objective:** Assess financial and operational integrity of rare earth extraction processes, supply chain transparency, and compliance with regulatory frameworks.
+
+**Scope:** Review transactional records, mineral provenance documentation, and internal controls for anomalies or discrepancies.
+
+**Findings:** Preliminary analysis indicates potential inconsistencies in ore grading reports and third-party vendor invoicing.
+
+**Next Steps:** Conduct on-site validation of extraction sites and traceability systems; escalate irregularities to governance committees.
+
+*[Date]*
+*[Prepared by: Forensic Audit Team]*
+
+[NOTARIZED BY 2A AGENCY]
