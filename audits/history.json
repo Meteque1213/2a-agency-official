@@ -1,6 +1,37 @@
 [
   {
     "agency": "2A Agency",
+    "verified_signer": "0x40c07F5b9aC742CBe8f288F00166a9EC908921b9",
+    "status": "TRIPLE_LOCK_CERTIFIED",
+    "timestamp": "2026-03-13T15:06:48.574Z",
+    "blockchain": {
+      "network": "Base Mainnet",
+      "transactionHash": "0xf14de2631b12ece368454ad91aa59839695a97070d54382c0011d74236c42161",
+      "explorerUrl": "https://basescan.org/tx/0xf14de2631b12ece368454ad91aa59839695a97070d54382c0011d74236c42161"
+    },
+    "audit": {
+      "brand": "SENTINEL_GLOBAL_REPORT",
+      "documentHash": "0x30e32e8f9ddf2bce207b266093db8bfb356cd03e5309dbbe645dd18c8e45b6e5",
+      "targets": [
+        "LVMH",
+        "Hermès",
+        "Kering",
+        "Chanel",
+        "Tesla",
+        "NVIDIA",
+        "Apple",
+        "Microsoft",
+        "OpenAI"
+      ],
+      "signature": "0xcb1ef0828d0c03cab0cf026b9947c4e43f2863db5e964b1ce96cb99b68bcc4f81f91d5ed79a3c01776fa5c8eed6c9529ea0d423931cf782ce4fb09f03acfb4511c"
+    },
+    "verification_kit": {
+      "instruction": "To verify identity, run: ethers.verifyMessage(documentHash, signature). It must match verified_signer.",
+      "method": "EIP-191 ECDSA Signature"
+    }
+  },
+  {
+    "agency": "2A Agency",
     "status": "CERTIFIED",
     "timestamp": "2026-03-13T14:57:43.287Z",
     "blockchain": {
