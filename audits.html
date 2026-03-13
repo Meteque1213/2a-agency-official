@@ -7,108 +7,135 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Space Grotesk', sans-serif; background-color: #fff; color: #000; }
-        .audit-card { transition: all 0.3s ease; }
-        .audit-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #fff; color: #000; scroll-behavior: smooth; }
+        .audit-card { transition: all 0.2s ease; }
+        .audit-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-color: #10b981; }
+        /* Style pour la barre de recherche collante */
+        .search-sticky { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.9); backdrop-blur: 10px; }
     </style>
 </head>
 <body class="p-6 md:p-12">
 
-    <nav class="flex justify-between items-center mb-16">
+    <nav class="flex justify-between items-center mb-16 max-w-5xl mx-auto">
         <div class="flex items-center gap-2">
             <div class="w-3 h-3 bg-emerald-500 rounded-full"></div>
-            <span class="font-bold text-sm tracking-tight">2A AGENCY</span>
+            <span class="font-bold text-sm tracking-tight uppercase">2A AGENCY</span>
         </div>
         <div class="flex gap-6 text-xs uppercase tracking-widest text-gray-500">
             <a href="index.html" class="hover:text-black">Home</a>
-            <a href="audits.html" class="text-black font-bold">Audits</a>
+            <a href="audits.html" class="text-black font-bold underline decoration-2 underline-offset-8">Audits</a>
             <a href="whitepaper.html" class="hover:text-black">Protocol</a>
         </div>
     </nav>
 
-    <main class="max-w-5xl mx-auto space-y-6">
+    <main class="max-w-5xl mx-auto">
         
         <div class="mb-12">
-            <h1 class="text-[60px] font-bold leading-none tracking-tighter text-emerald-950">FORENSIC<br>LAB AUDITS</h1>
-            <div class="flex items-center gap-2 mt-4 text-xs uppercase tracking-widest text-gray-400">
-                <div class="w-1.5 h-1.5 bg-gray-300 rounded-full animate-pulse"></div>
-                LIVE BLOCKCHAIN FEED: SYNCING WITH BASE L2
+            <h1 class="text-[50px] md:text-[80px] font-bold leading-none tracking-tighter text-emerald-950">FORENSIC<br>LAB AUDITS</h1>
+            <div class="flex items-center gap-2 mt-6 text-[10px] uppercase tracking-[0.3em] text-emerald-600 font-bold">
+                <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                660 ENTITIES NOTARIZED ON BASE L2 / REAL-TIME DATABASE
             </div>
         </div>
 
-        <div id="audit-container" class="space-y-6">
-            </div>
+        <div class="search-sticky py-6 mb-12 border-b border-gray-100">
+            <input type="text" id="brandSearch" onkeyup="filterAudits()" 
+                   placeholder="RECHERCHER UNE MARQUE, UN TOKEN OU UNE ENTITÉ..." 
+                   class="w-full bg-gray-50 border border-gray-200 p-6 font-mono text-xs tracking-[0.2em] focus:outline-none focus:border-emerald-500 transition-all uppercase rounded-sm">
+        </div>
 
-        <div class="border-t border-dashed border-gray-300 mt-16 pt-8 text-center">
-            <span class="text-[10px] uppercase tracking-widest text-gray-400 italic font-bold">More reports available in registry...</span>
+        <div id="audit-container" class="space-y-6 min-h-[500px]">
+            <div class="text-center py-20 text-gray-400 text-xs uppercase tracking-widest animate-pulse">
+                Synchronisation du registre forensic...
+            </div>
+        </div>
+
+        <div class="border-t border-dashed border-gray-300 mt-24 pt-12 text-center pb-20">
+            <span class="text-[10px] uppercase tracking-[0.5em] text-gray-400 italic font-bold">End of Live Registry — 2A Agency System of Records</span>
         </div>
 
     </main>
 
-    <div id="memo-overlay" class="fixed inset-0 bg-white/98 z-50 hidden p-8 overflow-y-auto backdrop-blur-sm">
-        <div class="max-w-3xl mx-auto border border-gray-100 p-12 shadow-2xl bg-white relative">
-            <button onclick="closeMemo()" class="absolute top-6 right-6 text-gray-400 hover:text-black font-bold text-xs uppercase tracking-widest">[ Fermer ]</button>
-            <pre id="memo-content" class="text-emerald-950 font-mono text-xs leading-relaxed whitespace-pre-wrap pt-10"></pre>
+    <div id="memo-overlay" class="fixed inset-0 bg-white/98 z-[100] hidden p-4 md:p-12 overflow-y-auto backdrop-blur-md">
+        <div class="max-w-3xl mx-auto border border-gray-200 p-8 md:p-16 shadow-2xl bg-white relative mt-10">
+            <button onclick="closeMemo()" class="absolute top-6 right-6 text-gray-400 hover:text-black font-bold text-[10px] uppercase tracking-widest bg-gray-50 px-4 py-2 rounded-full transition-colors border border-gray-100">
+                [ Fermer / Close ]
+            </button>
+            <div class="mb-8 border-b border-gray-100 pb-8 text-center">
+                <div class="text-emerald-500 font-bold text-[10px] tracking-widest uppercase mb-2 italic">Official Forensic Notarization</div>
+                <div id="memo-title" class="text-2xl font-bold tracking-tighter text-emerald-950 uppercase">REPORT</div>
+            </div>
+            <pre id="memo-content" class="text-emerald-950 font-mono text-[11px] md:text-xs leading-relaxed whitespace-pre-wrap pt-4 bg-gray-50 p-6 border border-gray-100 rounded-sm"></pre>
         </div>
     </div>
 
     <script>
         const REGISTRY_URL = 'audits/registry.json';
+        let allAudits = [];
 
+        // Charger les données
         async function loadAudits() {
             try {
                 const response = await fetch(REGISTRY_URL);
-                const audits = await response.json();
-                
-                const container = document.getElementById('audit-container');
-                container.innerHTML = ''; // Vide le container
-
-                audits.forEach(audit => {
-                    // Structure HTML basée EXACTEMENT sur ton design original
-                    const auditHTML = `
-                        <div class="audit-card bg-gray-50 p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                            
-                            <div class="flex flex-col gap-1">
-                                <div class="text-[10px] font-bold uppercase tracking-widest text-emerald-500 flex items-center gap-1.5">
-                                    <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
-                                    LATEST LIVE NOTARIZATION / SCORE: ${audit.score}
-                                </div>
-                                <h2 class="text-3xl font-bold tracking-tight text-emerald-950">${audit.brand}</h2>
-                                <div class="flex gap-2 mt-2">
-                                    <span class="bg-gray-200 text-gray-600 text-[9px] px-2.5 py-1 font-bold uppercase tracking-wider">${audit.id}</span>
-                                    <span class="bg-emerald-100 text-emerald-800 text-[9px] px-2.5 py-1 font-bold uppercase tracking-wider">VERIFIED ON-CHAIN</span>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col md:items-end gap-4 w-full md:w-auto">
-                                <div class="font-mono text-[9px] text-gray-400 break-all max-w-xs text-left md:text-right uppercase leading-relaxed">
-                                    HASH: ${audit.hash}<br>
-                                    TIMESTAMP: ${new Date().toLocaleDateString('fr-FR')} 17:15:00
-                                </div>
-                                <button onclick="openMemo('${audit.memo}')" class="bg-black text-white px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-emerald-700 transition-all w-full md:w-auto text-center">
-                                    View Full Audit Report →
-                                </button>
-                            </div>
-
-                        </div>
-                    `;
-                    container.innerHTML += auditHTML;
-                });
+                allAudits = await response.json();
+                renderAudits(allAudits);
             } catch (error) {
-                console.error("Erreur de chargement du registre:", error);
-                container.innerHTML = `<p class="text-red-500 text-sm text-center p-8">Erreur lors du chargement des audits. Vérifiez 'audits/registry.json'.</p>`;
+                console.error("Erreur de chargement:", error);
+                document.getElementById('audit-container').innerHTML = `<p class="text-red-500 text-xs uppercase tracking-widest text-center">Erreur de connexion au registre.</p>`;
             }
         }
 
-        async function openMemo(fileName) {
+        // Afficher les cartes
+        function renderAudits(data) {
+            const container = document.getElementById('audit-container');
+            container.innerHTML = data.map(audit => `
+                <div class="audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                    <div class="flex flex-col gap-1">
+                        <div class="text-[9px] font-black uppercase tracking-widest text-emerald-500 flex items-center gap-2 mb-1">
+                            <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
+                            SCORE: ${audit.score} / VERIFIED
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold tracking-tighter text-emerald-950">${audit.brand}</h2>
+                        <div class="flex gap-2 mt-2">
+                            <span class="bg-gray-100 text-gray-500 text-[9px] px-2.5 py-1 font-bold uppercase tracking-widest border border-gray-200">${audit.id}</span>
+                            <span class="bg-emerald-50 text-emerald-700 text-[9px] px-2.5 py-1 font-bold uppercase tracking-widest border border-emerald-100">ON-CHAIN</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:items-end gap-4 w-full md:w-auto">
+                        <div class="font-mono text-[9px] text-gray-400 break-all max-w-[250px] text-left md:text-right uppercase leading-tight">
+                            HASH: ${audit.hash}
+                        </div>
+                        <button onclick="openMemo('${audit.memo}', '${audit.brand}')" class="bg-emerald-950 text-white px-8 py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-emerald-500 transition-all w-full md:w-auto text-center shadow-lg shadow-emerald-900/10">
+                            View Report →
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Fonction de recherche temps réel
+        function filterAudits() {
+            const query = document.getElementById('brandSearch').value.toUpperCase();
+            const cards = document.getElementsByClassName('audit-card');
+            
+            for (let i = 0; i < cards.length; i++) {
+                const brandName = cards[i].querySelector('h2').innerText;
+                cards[i].style.display = brandName.toUpperCase().includes(query) ? "" : "none";
+            }
+        }
+
+        // Gestion du Memo Overlay
+        async function openMemo(fileName, brandName) {
             try {
                 const response = await fetch(fileName);
                 const text = await response.text();
+                document.getElementById('memo-title').textContent = brandName;
                 document.getElementById('memo-content').textContent = text;
                 document.getElementById('memo-overlay').classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             } catch (error) {
-                alert("Erreur lors de l'ouverture du mémo.");
+                alert("Impossible de charger le rapport.");
             }
         }
 

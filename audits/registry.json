@@ -1,42 +1,5282 @@
 [
   {
-    "brand": "LOUIS VUITTON",
-    "id": "LVMH-2026-001",
-    "score": "98/100",
-    "hash": "0x0c7386299cef77bb2d1517f6bc368450221f39b3101f754af7dda33f619f5eb1",
-    "memo": "MEMO_LOUIS_VUITTON_LVMH-2026-001.txt",
+    "brand": "&TRADITION",
+    "id": "&TR-2026-001",
+    "score": "91/100",
+    "hash": "0x911550f8ce4c289f07f08599803da32dbd4e3385cc212c85912be0941a137d2b",
+    "memo": "MEMO__Tradition.txt",
     "featured": true
   },
   {
-    "brand": "OPENAI",
-    "id": "OAI-2026-009",
+    "brand": "A.P.C.",
+    "id": "A.P-2026-002",
+    "score": "92/100",
+    "hash": "0x1a6e95c89dbb2341406066822293e6707c6f2a8be8b1599fb994727864901f8c",
+    "memo": "MEMO_A_P_C_.txt",
+    "featured": false
+  },
+  {
+    "brand": "A7A5",
+    "id": "A7A-2026-003",
+    "score": "86/100",
+    "hash": "0x54394c00ec207ba58500257a57324b8d4c26e2d4c054cfcd28a62baeb6611efb",
+    "memo": "MEMO_A7A5.txt",
+    "featured": false
+  },
+  {
+    "brand": "AAVE",
+    "id": "AAV-2026-004",
+    "score": "86/100",
+    "hash": "0xa9032dcc05fcbd4dcc7d0163ff55d4b180f868a44222ebaf93faf5b55c095b17",
+    "memo": "MEMO_Aave.txt",
+    "featured": false
+  },
+  {
+    "brand": "ABBOTT",
+    "id": "ABB-2026-005",
     "score": "94/100",
-    "hash": "0xb9be651130deb451a1df3679ce6b1404d92b271f44e7ec1455faf1cb1cdf7b03",
-    "memo": "MEMO_OPENAI_OAI-2026-009.txt",
+    "hash": "0x66707590fa474cec7d207d822fe4f6008cb88f16bd2348ae6e43e13f69298baf",
+    "memo": "MEMO_Abbott.txt",
+    "featured": false
+  },
+  {
+    "brand": "ACNE STUDIOS",
+    "id": "ACN-2026-006",
+    "score": "96/100",
+    "hash": "0xbae80fcad84f5db0a9eb5daa9348683b861ab552a64bd3adcad6da5d8aa53b10",
+    "memo": "MEMO_Acne_Studios.txt",
+    "featured": false
+  },
+  {
+    "brand": "ACURA",
+    "id": "ACU-2026-007",
+    "score": "93/100",
+    "hash": "0x4d0ef5ac1ca1f5dcfdf5909a7513de7721f7488298ab1f035d33fa03a12eb042",
+    "memo": "MEMO_Acura.txt",
+    "featured": false
+  },
+  {
+    "brand": "ADIDAS ORIGINALS",
+    "id": "ADI-2026-008",
+    "score": "82/100",
+    "hash": "0xf1a1a83032fdeb0a3856c86a5ca25de33890b844e915a90d27492ecb526231d4",
+    "memo": "MEMO_Adidas_Originals.txt",
+    "featured": false
+  },
+  {
+    "brand": "AEGIS FORMULAS",
+    "id": "AEG-2026-009",
+    "score": "97/100",
+    "hash": "0xb5bada16ca9428f0e3be459ba46468b5b1446b82fe77ece4754b72d4b38e7291",
+    "memo": "MEMO_Aegis_Formulas.txt",
+    "featured": false
+  },
+  {
+    "brand": "AESOP",
+    "id": "AES-2026-010",
+    "score": "91/100",
+    "hash": "0x84d13751842e33233a246dbcd96de75d7a6b50319bb14bb9af5858676d0ac2c5",
+    "memo": "MEMO_Aesop.txt",
+    "featured": false
+  },
+  {
+    "brand": "AGA",
+    "id": "AGA-2026-011",
+    "score": "84/100",
+    "hash": "0x7b1db53ec21504f53987cfbbbadc6fdc5e65065861a537726564666f90bc9f94",
+    "memo": "MEMO_Aga.txt",
+    "featured": false
+  },
+  {
+    "brand": "AGAPE",
+    "id": "AGA-2026-012",
+    "score": "91/100",
+    "hash": "0x17f66595bfc4a6126360d97f6a2c8c709f87027e7c1c180f443cfa3ac606fb19",
+    "memo": "MEMO_Agape.txt",
+    "featured": false
+  },
+  {
+    "brand": "AIMÉ LEON DORE",
+    "id": "AIM-2026-013",
+    "score": "87/100",
+    "hash": "0x78b8daf87045eafba133430b379db53cd20e17bba75822a2348e319bc9df0e47",
+    "memo": "MEMO_Aim__Leon_Dore.txt",
+    "featured": false
+  },
+  {
+    "brand": "AIRBUS",
+    "id": "AIR-2026-014",
+    "score": "88/100",
+    "hash": "0x98c2ee9349dd7c59275a2cdb7b618e3d7c2243568c34b2071394112c9b3d2fcb",
+    "memo": "MEMO_Airbus.txt",
+    "featured": false
+  },
+  {
+    "brand": "ALAÏA",
+    "id": "ALA-2026-015",
+    "score": "83/100",
+    "hash": "0x4e157bdce8d90aaea40d4e0a206176b025038d9ba4c3e1d343c9b4dbf7f7b346",
+    "memo": "MEMO_Ala_a.txt",
+    "featured": false
+  },
+  {
+    "brand": "ALEN",
+    "id": "ALE-2026-016",
+    "score": "86/100",
+    "hash": "0xa1e4cf1b364163a4cef6bc8a3e169ac6e66a4f1795c8a7dd5e952985bc064ffd",
+    "memo": "MEMO_Alen.txt",
+    "featured": false
+  },
+  {
+    "brand": "ALESSI",
+    "id": "ALE-2026-017",
+    "score": "94/100",
+    "hash": "0xd28f51d7d6723a5f0a1121fbf2aab82fd1292b1f35d58d40525a2e0a03539f75",
+    "memo": "MEMO_Alessi.txt",
+    "featured": false
+  },
+  {
+    "brand": "ALFA ROMEO",
+    "id": "ALF-2026-018",
+    "score": "87/100",
+    "hash": "0x0ddc856b0e7a0c3da3af1ba08ec1c7e3819d91d465b7412ae7c70473d4c326eb",
+    "memo": "MEMO_Alfa_Romeo.txt",
+    "featured": false
+  },
+  {
+    "brand": "ALGORAND (ALGO)",
+    "id": "ALG-2026-019",
+    "score": "88/100",
+    "hash": "0x2d0890c577c1ef1ae448a2134879f4a8eec3a07aa7ca5a7d88e0879f7293afdc",
+    "memo": "MEMO_Algorand__ALGO_.txt",
+    "featured": false
+  },
+  {
+    "brand": "ALL G FOODS",
+    "id": "ALL-2026-020",
+    "score": "82/100",
+    "hash": "0x71390ce934cbbfe84efa0eac161c1ef4ea5741a9db57e7dfe5e415b280bf6060",
+    "memo": "MEMO_All_G_Foods.txt",
+    "featured": false
+  },
+  {
+    "brand": "ALLPLANTS",
+    "id": "ALL-2026-021",
+    "score": "96/100",
+    "hash": "0x5b0f043a35a395479019a1a25512787ce658362c3710b273503666a3cc4ed6b1",
+    "memo": "MEMO_AllPlants.txt",
+    "featured": false
+  },
+  {
+    "brand": "ALO YOGA",
+    "id": "ALO-2026-022",
+    "score": "90/100",
+    "hash": "0x87fce869896e15bcde1f933e31d86b2b0844487da0c3593c211af414f2751199",
+    "memo": "MEMO_Alo_Yoga.txt",
+    "featured": false
+  },
+  {
+    "brand": "ALPINE",
+    "id": "ALP-2026-023",
+    "score": "94/100",
+    "hash": "0x6b3ee93b8facd71d66bbf5e57b8a2b809c184e5a7f6500b3532052019506ae56",
+    "memo": "MEMO_Alpine.txt",
+    "featured": false
+  },
+  {
+    "brand": "AMAN RESIDENCES",
+    "id": "AMA-2026-024",
+    "score": "86/100",
+    "hash": "0xed685bc95b8fc1bd3d07bdbde1f0fe73722490aaf021d1df6d7c2e0afd8daced",
+    "memo": "MEMO_Aman_Residences.txt",
+    "featured": false
+  },
+  {
+    "brand": "AMI PARIS",
+    "id": "AMI-2026-025",
+    "score": "87/100",
+    "hash": "0xc6690be7eff50cb11d45d9255e604731f13ced38d0e127b174f325fe6aa5634d",
+    "memo": "MEMO_Ami_Paris.txt",
+    "featured": false
+  },
+  {
+    "brand": "ANCIENT + BRAVE",
+    "id": "ANC-2026-026",
+    "score": "91/100",
+    "hash": "0xf456fa45acdec242f90f1d64ba70bd041ce5dc54ddb05b03e4288248419fd8f8",
+    "memo": "MEMO_Ancient___Brave.txt",
+    "featured": false
+  },
+  {
+    "brand": "ANGELL",
+    "id": "ANG-2026-027",
+    "score": "99/100",
+    "hash": "0x1a9f07e386daf6caffd664154cbaf31694bc4873ef832cf60ed21a3847545adf",
+    "memo": "MEMO_Angell.txt",
+    "featured": false
+  },
+  {
+    "brand": "ANTILIA (MUMBAI)",
+    "id": "ANT-2026-028",
+    "score": "90/100",
+    "hash": "0x32573ee2290837ad9fe74b69deac2f89e498645b1913f396931c2c7ba7ce13b3",
+    "memo": "MEMO_Antilia__Mumbai_.txt",
+    "featured": false
+  },
+  {
+    "brand": "ANTOLINI",
+    "id": "ANT-2026-029",
+    "score": "93/100",
+    "hash": "0xda9ad81877e6d9c688d7a95e3e768b44475b3cbc3885bc75992f44dd367241ba",
+    "memo": "MEMO_Antolini.txt",
+    "featured": false
+  },
+  {
+    "brand": "APPIANI",
+    "id": "APP-2026-030",
+    "score": "85/100",
+    "hash": "0xd0d3a7e23f4736fe85a2d6452051287d7c8572388f25917a767d6012b82ad195",
+    "memo": "MEMO_Appiani.txt",
+    "featured": false
+  },
+  {
+    "brand": "APTOS (APT)",
+    "id": "APT-2026-031",
+    "score": "94/100",
+    "hash": "0x15ea4643ab774408bf848426ac5ddece523395f4a87d06dfa199c8317676d849",
+    "memo": "MEMO_Aptos__APT_.txt",
+    "featured": false
+  },
+  {
+    "brand": "ARC'TERYX",
+    "id": "ARC-2026-032",
+    "score": "86/100",
+    "hash": "0xba4215fd2eb4ecd6f269e4ecfb6cdc4146f823a0e590cd66dfdf119546897c4a",
+    "memo": "MEMO_Arc_teryx.txt",
+    "featured": false
+  },
+  {
+    "brand": "ARCHIE",
+    "id": "ARC-2026-033",
+    "score": "88/100",
+    "hash": "0x78b340dfd6fc21f5f89a9d69384699ebf9e840cee5edb33035723076089046c6",
+    "memo": "MEMO_Archie.txt",
+    "featured": false
+  },
+  {
+    "brand": "ARKET",
+    "id": "ARK-2026-034",
+    "score": "88/100",
+    "hash": "0x4a3e725bd81ef440576b1aae908f746031662f020a647fbd807713c6ae7dfdb2",
+    "memo": "MEMO_Arket.txt",
+    "featured": false
+  },
+  {
+    "brand": "ARTEK",
+    "id": "ART-2026-035",
+    "score": "94/100",
+    "hash": "0xcf4de1bfb7d6bda3d8d7448300ebbbcce044340415b53787a0b5a722d628192a",
+    "memo": "MEMO_Artek.txt",
+    "featured": false
+  },
+  {
+    "brand": "ARTEMIDE",
+    "id": "ART-2026-036",
+    "score": "83/100",
+    "hash": "0xfff8ca8a43052d7d41734c87fb0b651b69bd747cb8176413dac6aee8ba153954",
+    "memo": "MEMO_Artemide.txt",
+    "featured": false
+  },
+  {
+    "brand": "ARTICLE",
+    "id": "ART-2026-037",
+    "score": "95/100",
+    "hash": "0x29f8b1975f896406105fce7af0051430c85a89b33b5d4e13a11c7889c2ef2537",
+    "memo": "MEMO_Article.txt",
+    "featured": false
+  },
+  {
+    "brand": "ARWEAVE",
+    "id": "ARW-2026-038",
+    "score": "98/100",
+    "hash": "0x7e2df99a0a1e4b3f279ca80d1306bcc436483c4eb085f47cbb93cbd4b64fddfc",
+    "memo": "MEMO_Arweave.txt",
+    "featured": false
+  },
+  {
+    "brand": "ASTER (ASTER)",
+    "id": "AST-2026-039",
+    "score": "99/100",
+    "hash": "0x7e4944e787df7f2610b705a7b2673135bb7ae36321c615f1d5cee04a656d74d3",
+    "memo": "MEMO_Aster__ASTER_.txt",
+    "featured": false
+  },
+  {
+    "brand": "ASTON MARTIN",
+    "id": "AST-2026-040",
+    "score": "98/100",
+    "hash": "0x23140e3f8e61a9ae2f7e7654db87e877006c713f52405685218ffde3533a92e1",
+    "memo": "MEMO_Aston_Martin.txt",
+    "featured": false
+  },
+  {
+    "brand": "ATHLETIC BREWING",
+    "id": "ATH-2026-041",
+    "score": "93/100",
+    "hash": "0x91534d0990cd73b6bdea33e2aabde5c23946c5aee6da6ab5365ddae50acb1bc6",
+    "memo": "MEMO_Athletic_Brewing.txt",
+    "featured": false
+  },
+  {
+    "brand": "ATHLETIC GREENS (AG1)",
+    "id": "ATH-2026-042",
+    "score": "93/100",
+    "hash": "0x75153274977e96324aaea6fb9794a2acfdbbfc72f76db716d6b848ac79aa7b06",
+    "memo": "MEMO_Athletic_Greens__AG1_.txt",
+    "featured": false
+  },
+  {
+    "brand": "ATLAS CONCORDE",
+    "id": "ATL-2026-043",
+    "score": "99/100",
+    "hash": "0x7afdd7c832b6839311086c12edb96dd1f05b1d4a2489f197e775bd458cb7aee4",
+    "memo": "MEMO_Atlas_Concorde.txt",
+    "featured": false
+  },
+  {
+    "brand": "AUDEMARS PIGUET",
+    "id": "AUD-2026-044",
+    "score": "92/100",
+    "hash": "0x2e1f7e2e08940f62762b5b5af8484b612de95d7f765e70dddfa9c2e12294625a",
+    "memo": "MEMO_Audemars_Piguet.txt",
+    "featured": false
+  },
+  {
+    "brand": "AUDI",
+    "id": "AUD-2026-045",
+    "score": "86/100",
+    "hash": "0x62c0123d479d2ab65be4da758cf965c49174d0038740add823062142a514dc2d",
+    "memo": "MEMO_Audi.txt",
+    "featured": false
+  },
+  {
+    "brand": "AUGUSTINUS BADER",
+    "id": "AUG-2026-046",
+    "score": "84/100",
+    "hash": "0xf532bc2475ee86e5aff43c5edf59a111a84cde09b1c25c3f7b4d749e48de3532",
+    "memo": "MEMO_Augustinus_Bader.txt",
+    "featured": false
+  },
+  {
+    "brand": "AURA BLOCKCHAIN CONSORTIUM",
+    "id": "AUR-2026-047",
+    "score": "89/100",
+    "hash": "0xbb9c7a030f669a09cc5b3521c1d6b2f584efedee6e3727f3afbb32f67c057100",
+    "memo": "MEMO_Aura_Blockchain_Consortium.txt",
+    "featured": false
+  },
+  {
+    "brand": "AURA BORA",
+    "id": "AUR-2026-048",
+    "score": "97/100",
+    "hash": "0x02cea083956d46210a8901d106eb1b365d0794751b72eaaa6ff474c2919db832",
+    "memo": "MEMO_Aura_Bora.txt",
+    "featured": false
+  },
+  {
+    "brand": "AVALANCHE",
+    "id": "AVA-2026-049",
+    "score": "85/100",
+    "hash": "0x5fa9367caf98e999de2b1fb8a361f5116d2c27b4c997b3726d2802b273790903",
+    "memo": "MEMO_Avalanche.txt",
+    "featured": false
+  },
+  {
+    "brand": "AVENE",
+    "id": "AVE-2026-050",
+    "score": "86/100",
+    "hash": "0xeab1c7317e5731d7d5a9b9f8faec5846bda4179a67e98f4580f08e6a3aa9eaf0",
+    "memo": "MEMO_Avene.txt",
+    "featured": false
+  },
+  {
+    "brand": "AWARE",
+    "id": "AWA-2026-051",
+    "score": "99/100",
+    "hash": "0x705cef4e95f46b86bd708edfe905567e66811643ced8f57e77c8bc6d6171f705",
+    "memo": "MEMO_Aware.txt",
+    "featured": false
+  },
+  {
+    "brand": "B&B ITALIA",
+    "id": "B&B-2026-052",
+    "score": "84/100",
+    "hash": "0x718b74036566230a9673c06df781733fa92da59430a4e3a53c3d20cfe4ebee01",
+    "memo": "MEMO_B_B_Italia.txt",
+    "featured": false
+  },
+  {
+    "brand": "BACCARAT",
+    "id": "BAC-2026-053",
+    "score": "85/100",
+    "hash": "0x5ff7270cbbea1b9b99898109d1655ef58e61af5f06434ea3a5c6aac78c4218bf",
+    "memo": "MEMO_Baccarat.txt",
+    "featured": false
+  },
+  {
+    "brand": "BALENCIAGA",
+    "id": "BAL-2026-054",
+    "score": "88/100",
+    "hash": "0x3228dfc63b8a20d3d4674de4fc65e3af79199ec410df78b2f14d170222bfbdc7",
+    "memo": "MEMO_Balenciaga.txt",
+    "featured": false
+  },
+  {
+    "brand": "BALENCIAGA BEAUTY",
+    "id": "BAL-2026-055",
+    "score": "95/100",
+    "hash": "0x9363f1041020d4bfd9738789b4a4eb0a62acb1f59fb36cdf3aee3f03b74a4725",
+    "memo": "MEMO_Balenciaga_Beauty.txt",
+    "featured": false
+  },
+  {
+    "brand": "BALLY",
+    "id": "BAL-2026-056",
+    "score": "93/100",
+    "hash": "0xef9a41379723c7c863b708b69ee9ad0e906abbd8d59bb7b1e6e8c4a234476bdf",
+    "memo": "MEMO_Bally.txt",
+    "featured": false
+  },
+  {
+    "brand": "BALMAIN",
+    "id": "BAL-2026-057",
+    "score": "85/100",
+    "hash": "0x858835c352e6cc7ff286eab27db6e79db9eb752e680efc1f60bce5eae18d3f14",
+    "memo": "MEMO_Balmain.txt",
+    "featured": false
+  },
+  {
+    "brand": "BANG & OLUFSEN",
+    "id": "BAN-2026-058",
+    "score": "85/100",
+    "hash": "0xed87ebcaff25f6a31864b567766fe02eb0f897f2815ba672bf8c16a33b98e759",
+    "memo": "MEMO_Bang___Olufsen.txt",
+    "featured": false
+  },
+  {
+    "brand": "BARNES INTERNATIONAL",
+    "id": "BAR-2026-059",
+    "score": "89/100",
+    "hash": "0x7402cf42e9b791b9ddcb17cbcc288a1a99ac13730f1f6c06e876d529433f7dab",
+    "memo": "MEMO_Barnes_International.txt",
+    "featured": false
+  },
+  {
+    "brand": "BAUME & MERCIER",
+    "id": "BAU-2026-060",
+    "score": "85/100",
+    "hash": "0x3aab1f6614896d742e0ad48fa0bddec81c5354fe5430023fb7fe0ee83745d09c",
+    "memo": "MEMO_Baume___Mercier.txt",
+    "featured": false
+  },
+  {
+    "brand": "BEAR REAL FRUIT",
+    "id": "BEA-2026-061",
+    "score": "98/100",
+    "hash": "0x9fbc46212407470ed974c94d9dcc307e3af6f09555de03c5a818a4db9c4c33f8",
+    "memo": "MEMO_Bear_Real_Fruit.txt",
+    "featured": false
+  },
+  {
+    "brand": "BELDEX (BDX)",
+    "id": "BEL-2026-062",
+    "score": "87/100",
+    "hash": "0xf4df87c27adf2b0b3bc8fde0efd607738434962cbf825dd1a4b68741188a78f0",
+    "memo": "MEMO_Beldex__BDX_.txt",
+    "featured": false
+  },
+  {
+    "brand": "BELGIAN WAFFLE CO",
+    "id": "BEL-2026-063",
+    "score": "88/100",
+    "hash": "0x456d1157a87133e15bb38a96cd0f5683b95d970737060bf7cce780acbd217571",
+    "memo": "MEMO_Belgian_Waffle_Co.txt",
+    "featured": false
+  },
+  {
+    "brand": "BENTLEY",
+    "id": "BEN-2026-064",
+    "score": "87/100",
+    "hash": "0xc73efeda0dec401d496e51e57beab7770e50d6761770ce5011c7354c792559ae",
+    "memo": "MEMO_Bentley.txt",
+    "featured": false
+  },
+  {
+    "brand": "BERKELEY GROUP",
+    "id": "BER-2026-065",
+    "score": "95/100",
+    "hash": "0x4f931fc47e3683188c3c8d55322a89d0810b430028c98095b099e0787a61978c",
+    "memo": "MEMO_Berkeley_Group.txt",
+    "featured": false
+  },
+  {
+    "brand": "BFUSD",
+    "id": "BFU-2026-066",
+    "score": "99/100",
+    "hash": "0x89e8299666aa14b526cb1a8646651002688293c703382f219b045c22df1a491a",
+    "memo": "MEMO_BFUSD.txt",
+    "featured": false
+  },
+  {
+    "brand": "BÍA SMART MASK",
+    "id": "BÍA-2026-067",
+    "score": "93/100",
+    "hash": "0x5b6f25abddb83a35c6af5da5d0a42f1db2079b63e020070bbea700ee08906177",
+    "memo": "MEMO_B_a_Smart_Mask.txt",
+    "featured": false
+  },
+  {
+    "brand": "BINANCE (BNB)",
+    "id": "BIN-2026-068",
+    "score": "82/100",
+    "hash": "0x39d235d56b1c998688c5d41d2fd44533d1f2afde40994d4217a32c00bd292045",
+    "memo": "MEMO_Binance__BNB_.txt",
+    "featured": false
+  },
+  {
+    "brand": "BIOGENA",
+    "id": "BIO-2026-069",
+    "score": "87/100",
+    "hash": "0x9b531b2cff03e920eb729edb866e6d5a3e60501b67d30e93f6aade2c97e3669f",
+    "memo": "MEMO_Biogena.txt",
+    "featured": false
+  },
+  {
+    "brand": "BIOLOGIQUE RECHERCHE",
+    "id": "BIO-2026-070",
+    "score": "92/100",
+    "hash": "0x2b9f876f3dfd593485dc2e6541a1d5a2f1109255f9fa824d77eb5fb75973da81",
+    "memo": "MEMO_Biologique_Recherche.txt",
+    "featured": false
+  },
+  {
+    "brand": "BIOPTRON HYPERLIGHT",
+    "id": "BIO-2026-071",
+    "score": "84/100",
+    "hash": "0xc882dab54545e9f9d470747117133fec4e7dd2ca6ea89266921161ea1b88f994",
+    "memo": "MEMO_Bioptron_Hyperlight.txt",
+    "featured": false
+  },
+  {
+    "brand": "BISAZZA",
+    "id": "BIS-2026-072",
+    "score": "96/100",
+    "hash": "0xddf15518f4c1c4534fa208226575abd7ad513578cbc5ad9c34d92f8fd1e326f0",
+    "memo": "MEMO_Bisazza.txt",
+    "featured": false
+  },
+  {
+    "brand": "BITGET TOKEN",
+    "id": "BIT-2026-073",
+    "score": "90/100",
+    "hash": "0xdab651e090864941776c5ff0c17fcb96cb90dbdf46cd22f26fa6448f430525eb",
+    "memo": "MEMO_Bitget_Token.txt",
+    "featured": false
+  },
+  {
+    "brand": "BITCOIN (BTC)",
+    "id": "BIT-2026-074",
+    "score": "99/100",
+    "hash": "0x293d9fe4ba69f0ff43d3967edc0fd22f144cf032947e2609f6d6d71790069391",
+    "memo": "MEMO_Bitcoin__BTC_.txt",
+    "featured": false
+  },
+  {
+    "brand": "BITCOIN CASH (BCH)",
+    "id": "BIT-2026-075",
+    "score": "91/100",
+    "hash": "0x7ff1ab4113444f2c1d46f57e1015436234bdc7f4045836f1a4888c9442bbfecd",
+    "memo": "MEMO_Bitcoin_Cash__BCH_.txt",
+    "featured": false
+  },
+  {
+    "brand": "BITTENSOR (TAO)",
+    "id": "BIT-2026-076",
+    "score": "99/100",
+    "hash": "0x6c00bd69ffc7966c320ed19410c66a50c5c5abdb2dbd81acf17279c912f972f2",
+    "memo": "MEMO_Bittensor__TAO_.txt",
+    "featured": false
+  },
+  {
+    "brand": "BLABLACAR",
+    "id": "BLA-2026-077",
+    "score": "95/100",
+    "hash": "0xef347908fa0613758dcf27c2a4635a3a5b403a68c8691c946a7cc90217ee4f06",
+    "memo": "MEMO_BlaBlaCar.txt",
+    "featured": false
+  },
+  {
+    "brand": "BLACKROCK BUIDL",
+    "id": "BLA-2026-078",
+    "score": "86/100",
+    "hash": "0xe1e2e2ec1ed9ea1400bfbad7969e504c69233097a175e4518522af6312368ed0",
+    "memo": "MEMO_BlackRock_BUIDL.txt",
+    "featured": false
+  },
+  {
+    "brand": "BLOOM NUTRITION",
+    "id": "BLO-2026-079",
+    "score": "82/100",
+    "hash": "0x0696809c9fce2b5a99bde74f7b54cdbf5ff1b1bb387affb9700a1dd0010f2d2f",
+    "memo": "MEMO_Bloom_Nutrition.txt",
+    "featured": false
+  },
+  {
+    "brand": "BLUE APRON",
+    "id": "BLU-2026-080",
+    "score": "98/100",
+    "hash": "0x243a3fe1d38aecacae8af568e1a793ec3357edeb1e443c36453391602cf4f73f",
+    "memo": "MEMO_Blue_Apron.txt",
+    "featured": false
+  },
+  {
+    "brand": "BMW",
+    "id": "BMW-2026-081",
+    "score": "92/100",
+    "hash": "0x1500cadbd9db53b825cea3597ecc39543cbefb69d7653c974c7a0ed7681b4f95",
+    "memo": "MEMO_BMW.txt",
+    "featured": false
+  },
+  {
+    "brand": "BOFFI",
+    "id": "BOF-2026-082",
+    "score": "87/100",
+    "hash": "0x2101de6d71f31bcc0bb1b3ac210e1e3870560c0c43f2f7576dc8849fd40fb292",
+    "memo": "MEMO_Boffi.txt",
+    "featured": false
+  },
+  {
+    "brand": "BOCONCEPT",
+    "id": "BOC-2026-083",
+    "score": "95/100",
+    "hash": "0xf8bf1203a9c2378e2f97ce54eeaceb4d692dd836d88e95693ea2f11ba4bd1b59",
+    "memo": "MEMO_BoConcept.txt",
+    "featured": false
+  },
+  {
+    "brand": "BOLIA",
+    "id": "BOL-2026-084",
+    "score": "99/100",
+    "hash": "0xcef8b144b61c9a992936929da3d694071c0ad14bc0694731dcf1983b4644124f",
+    "memo": "MEMO_Bolia.txt",
+    "featured": false
+  },
+  {
+    "brand": "BOMBARDIER",
+    "id": "BOM-2026-085",
+    "score": "93/100",
+    "hash": "0xbd087e0ce8b9af8be95ce9a9d8ca219140719f7375e3b6ab1d153d958e0a1b94",
+    "memo": "MEMO_Bombardier.txt",
+    "featured": false
+  },
+  {
+    "brand": "BOND NO.9",
+    "id": "BON-2026-086",
+    "score": "88/100",
+    "hash": "0x1097f501af80db28eef7be1568513cc3b13c9ca3302317ed9274f50e102a2fa2",
+    "memo": "MEMO_Bond_No_9.txt",
+    "featured": false
+  },
+  {
+    "brand": "BONK (BONK)",
+    "id": "BON-2026-087",
+    "score": "93/100",
+    "hash": "0x4528e0d4de84a2b44ebd836ea1e03ec7d821e4a3f87d3c89a56f5666357574c2",
+    "memo": "MEMO_Bonk__BONK_.txt",
+    "featured": false
+  },
+  {
+    "brand": "BONPOINT",
+    "id": "BON-2026-088",
+    "score": "97/100",
+    "hash": "0xd7c6aa078d6a2835f7354943e928ce5cfe60baff57a835c6cddd5746bfa56edc",
+    "memo": "MEMO_Bonpoint.txt",
+    "featured": false
+  },
+  {
+    "brand": "BONJOUR DRINK",
+    "id": "BON-2026-089",
+    "score": "86/100",
+    "hash": "0x8d504963e51984804e25024822e292a6f151144f58b646d0e1bec0695a53e426",
+    "memo": "MEMO_Bonjour_Drink.txt",
+    "featured": false
+  },
+  {
+    "brand": "BOTTEGA VENETA",
+    "id": "BOT-2026-090",
+    "score": "96/100",
+    "hash": "0xc124547ec9a3675220f8d4f7c18ada328776f6a3c44c019937868f20eaf89667",
+    "memo": "MEMO_Bottega_Veneta.txt",
+    "featured": false
+  },
+  {
+    "brand": "BOULDER CANYON",
+    "id": "BOU-2026-091",
+    "score": "83/100",
+    "hash": "0xe26e509ba7238df86204a006402eedd4edbe44a8b9c09f5a6c8b601453f8b354",
+    "memo": "MEMO_Boulder_Canyon.txt",
+    "featured": false
+  },
+  {
+    "brand": "BREGUET",
+    "id": "BRE-2026-092",
+    "score": "89/100",
+    "hash": "0x743f27a42aa429686d6e94ed1db96c6a49f180f8cea59b030e2b25e029cd43ba",
+    "memo": "MEMO_Breguet.txt",
+    "featured": false
+  },
+  {
+    "brand": "BRUNELLO CUCINELLI",
+    "id": "BRU-2026-093",
+    "score": "90/100",
+    "hash": "0x613216426f0293f084743580cc88aa258fdb1081acd1d25a1935547fa4988d92",
+    "memo": "MEMO_Brunello_Cucinelli.txt",
+    "featured": false
+  },
+  {
+    "brand": "BRP",
+    "id": "BRP-2026-094",
+    "score": "83/100",
+    "hash": "0x38c0d095c9723f86c5ec023612bfdec3061835198c1a0faa28f2a3bc84487bd2",
+    "memo": "MEMO_BRP.txt",
+    "featured": false
+  },
+  {
+    "brand": "BUDRI",
+    "id": "BUD-2026-095",
+    "score": "89/100",
+    "hash": "0x69c1b8667ff8beb17747a5a55528d599bbaaf816703d3a0bd53d655bdd578e06",
+    "memo": "MEMO_Budri.txt",
+    "featured": false
+  },
+  {
+    "brand": "BUGATTI",
+    "id": "BUG-2026-096",
+    "score": "82/100",
+    "hash": "0x65aded556bb81828c049d2fb38e8bb12ae0d000fa314bec412c36010d849999c",
+    "memo": "MEMO_Bugatti.txt",
+    "featured": false
+  },
+  {
+    "brand": "BULGARI",
+    "id": "BUL-2026-097",
+    "score": "86/100",
+    "hash": "0x86dac64cff19e80193138bb5f7716df85e7094d4b6631dcd33d1aa0f7391b947",
+    "memo": "MEMO_Bulgari.txt",
+    "featured": false
+  },
+  {
+    "brand": "BULLETPROOF",
+    "id": "BUL-2026-098",
+    "score": "89/100",
+    "hash": "0xeab7cf5f279c9a6cecf9d8255354d2f9208cf02caead990c83e47109a5feca84",
+    "memo": "MEMO_Bulletproof.txt",
+    "featured": false
+  },
+  {
+    "brand": "BULTHAUP",
+    "id": "BUL-2026-099",
+    "score": "90/100",
+    "hash": "0xbed00893c76fad8a8791f4cde086935dc5a1f62df3b93f8c3a46508fc29df6b7",
+    "memo": "MEMO_Bulthaup.txt",
+    "featured": false
+  },
+  {
+    "brand": "BURBERRY",
+    "id": "BUR-2026-100",
+    "score": "84/100",
+    "hash": "0xb526943cbc64321e290af541607ed6c18d6c77000164cffa89dfd3f2c819463d",
+    "memo": "MEMO_Burberry.txt",
+    "featured": false
+  },
+  {
+    "brand": "BURROW",
+    "id": "BUR-2026-101",
+    "score": "99/100",
+    "hash": "0x07bae4479b9c7582f8de31c08cb270f844deded62878a657c2e4f35b6f0ee29d",
+    "memo": "MEMO_Burrow.txt",
+    "featured": false
+  },
+  {
+    "brand": "BYD",
+    "id": "BYD-2026-102",
+    "score": "82/100",
+    "hash": "0xde091487f3862fca0d5b2404ba9c774a0e689e9d3cec87abba94ce11a11c6fa6",
+    "memo": "MEMO_BYD.txt",
+    "featured": false
+  },
+  {
+    "brand": "C.P. COMPANY",
+    "id": "C.P-2026-103",
+    "score": "95/100",
+    "hash": "0x23f44f00b7adf26b116650c4c4f18da9b418ac74bdef833672657ae402521823",
+    "memo": "MEMO_C_P__Company.txt",
+    "featured": false
+  },
+  {
+    "brand": "CAKE",
+    "id": "CAK-2026-104",
+    "score": "91/100",
+    "hash": "0x03fff42acd592d8a9f174eb35419b86620536aef3ec187c3023dc41e1d13f75e",
+    "memo": "MEMO_CAKE.txt",
+    "featured": false
+  },
+  {
+    "brand": "CALM",
+    "id": "CAL-2026-105",
+    "score": "92/100",
+    "hash": "0xe69741b5aa89f1235e09c70d1a72fbb8e27cdbcf5bea9f501451735b88b8ed72",
+    "memo": "MEMO_Calm.txt",
+    "featured": false
+  },
+  {
+    "brand": "CAN-AM",
+    "id": "CAN-2026-106",
+    "score": "90/100",
+    "hash": "0xc61163e0404e9847edaa6c7bb5b12387397b36bf8ad7b30777702245690d5a77",
+    "memo": "MEMO_Can_Am.txt",
+    "featured": false
+  },
+  {
+    "brand": "CANDY CAPITAL",
+    "id": "CAN-2026-107",
+    "score": "88/100",
+    "hash": "0xb9b81586068df96931812433565381053a9bb293ceacea3edf8e1eb562e0dbb6",
+    "memo": "MEMO_Candy_Capital.txt",
+    "featured": false
+  },
+  {
+    "brand": "CANTON (CC)",
+    "id": "CAN-2026-108",
+    "score": "89/100",
+    "hash": "0x499a294907bf025d4015f967207a396ac06dac7302d39642e8734e936fa4e5b7",
+    "memo": "MEMO_Canton__CC_.txt",
+    "featured": false
+  },
+  {
+    "brand": "CARDANO",
+    "id": "CAR-2026-109",
+    "score": "91/100",
+    "hash": "0x8216821081143cb7bf1259e087df56354c3dc0986596f089a6ec371ae8ef91ec",
+    "memo": "MEMO_Cardano.txt",
+    "featured": false
+  },
+  {
+    "brand": "CARDANO (ADA)",
+    "id": "CAR-2026-110",
+    "score": "87/100",
+    "hash": "0x308ca5cbae0757f5054bfb9a96f1e6a79004caf342a101e26f9266c62ccacb9e",
+    "memo": "MEMO_Cardano__ADA_.txt",
+    "featured": false
+  },
+  {
+    "brand": "CARL HANSEN & SØN",
+    "id": "CAR-2026-111",
+    "score": "82/100",
+    "hash": "0x3c572b1b5a369160db1a589f53eb58dba8b941f2699774f676f920b5083d4a3f",
+    "memo": "MEMO_Carl_Hansen___S_n.txt",
+    "featured": false
+  },
+  {
+    "brand": "CARTIER",
+    "id": "CAR-2026-112",
+    "score": "92/100",
+    "hash": "0xbab10fd7628dbe8e41f0e4910466f7c7d8e59cd8a167bad22e14fd47985e2428",
+    "memo": "MEMO_Cartier.txt",
+    "featured": false
+  },
+  {
+    "brand": "CASALGRANDE PADANA",
+    "id": "CAS-2026-113",
+    "score": "89/100",
+    "hash": "0xdc39e27c110bdfa1ebdbac83af69585265a6ccbda8ae6fe84c84d07a330ae01a",
+    "memo": "MEMO_Casalgrande_Padana.txt",
+    "featured": false
+  },
+  {
+    "brand": "CASSINA",
+    "id": "CAS-2026-114",
+    "score": "98/100",
+    "hash": "0x9df69c1b905aaedb3c23d961099f518e1714d3952d07a0e304cca25e6c84f075",
+    "memo": "MEMO_Cassina.txt",
+    "featured": false
+  },
+  {
+    "brand": "CAUDALIE WELLNESS",
+    "id": "CAU-2026-115",
+    "score": "85/100",
+    "hash": "0x06f2d8b1dcedccc449f593dcbafe334d0b9d505bcf8c0f89d9260abf7c4bdd5d",
+    "memo": "MEMO_Caudalie_Wellness.txt",
+    "featured": false
+  },
+  {
+    "brand": "CB2",
+    "id": "CB2-2026-116",
+    "score": "84/100",
+    "hash": "0xae23ed39a21e330f7ba1a7a7bcebdf8cf031003c9ce3b08193a5e7c7660396b5",
+    "memo": "MEMO_CB2.txt",
+    "featured": false
+  },
+  {
+    "brand": "CBRE RESIDENTIAL",
+    "id": "CBR-2026-117",
+    "score": "90/100",
+    "hash": "0x6612b1e48d8c627bb8a0489d5d8be59a9f5fe91b66fb2c30a83fc154867bd871",
+    "memo": "MEMO_CBRE_Residential.txt",
+    "featured": false
+  },
+  {
+    "brand": "CELESTIA",
+    "id": "CEL-2026-118",
+    "score": "93/100",
+    "hash": "0xcebc4cc47e1005ed0f7b19f2d0c76d151d162dfa9b1ef000b91d8b032955abc2",
+    "memo": "MEMO_Celestia.txt",
+    "featured": false
+  },
+  {
+    "brand": "CELINE",
+    "id": "CEL-2026-119",
+    "score": "89/100",
+    "hash": "0x714956c60307f7240c548455fb88ffcadfec0af0f81d638d6a08e14d460aeafa",
+    "memo": "MEMO_Celine.txt",
+    "featured": false
+  },
+  {
+    "brand": "CELSIUS",
+    "id": "CEL-2026-120",
+    "score": "96/100",
+    "hash": "0xa96b54119a44ac55547077fbd9504024266821c4df483caf2abd235e81076d86",
+    "memo": "MEMO_Celsius.txt",
+    "featured": false
+  },
+  {
+    "brand": "CERAVE",
+    "id": "CER-2026-121",
+    "score": "84/100",
+    "hash": "0x5fe2dffcbdcec27992d0af92371c9167e3d6fddfa1ad881c001a282a3c24cd6c",
+    "memo": "MEMO_CeraVe.txt",
+    "featured": false
+  },
+  {
+    "brand": "CHAINLINK",
+    "id": "CHA-2026-122",
+    "score": "88/100",
+    "hash": "0x34af6eff253c31322b908a0d77b13f94990277eed048a653dc616c302c815223",
+    "memo": "MEMO_Chainlink.txt",
+    "featured": false
+  },
+  {
+    "brand": "CHAMELEON COLD-BREW",
+    "id": "CHA-2026-123",
+    "score": "98/100",
+    "hash": "0x0865af7d2c0f411b2311367e8bce4fe5f32dec450b3510d9fdf5191662a426ce",
+    "memo": "MEMO_Chameleon_Cold_Brew.txt",
+    "featured": false
+  },
+  {
+    "brand": "CHANEL",
+    "id": "CHA-2026-124",
+    "score": "82/100",
+    "hash": "0x3b9bba79fbf3c8403238f4327d4628aab9d478ecd9e5195b43360360ccdc28cc",
+    "memo": "MEMO_Chanel.txt",
+    "featured": false
+  },
+  {
+    "brand": "CHANEL BEAUTY",
+    "id": "CHA-2026-125",
+    "score": "94/100",
+    "hash": "0x6f80ada4cee531cad53d0dc33e9d8f255e28bc13fe2b911105f138db7f44fdeb",
+    "memo": "MEMO_Chanel_Beauty.txt",
+    "featured": false
+  },
+  {
+    "brand": "CHARLOTTE TILBURY",
+    "id": "CHA-2026-126",
+    "score": "83/100",
+    "hash": "0xbd128ce05a71903963e7464adfb8679c7bf108d79ceb011dac451a4e707f726c",
+    "memo": "MEMO_Charlotte_Tilbury.txt",
+    "featured": false
+  },
+  {
+    "brand": "CHELSFIELD",
+    "id": "CHE-2026-127",
+    "score": "88/100",
+    "hash": "0x25ed6c863fbe38211e9b3f6c6660650d8113de44d6b122614a2ff74afc880617",
+    "memo": "MEMO_Chelsfield.txt",
+    "featured": false
+  },
+  {
+    "brand": "CHERICO",
+    "id": "CHE-2026-128",
+    "score": "85/100",
+    "hash": "0x1a3b2869c4d576ebe5cf5da2088dc8bcf9d9f03141175b1416ddbb9eda22717d",
+    "memo": "MEMO_Cherico.txt",
+    "featured": false
+  },
+  {
+    "brand": "CHOBANI",
+    "id": "CHO-2026-129",
+    "score": "88/100",
+    "hash": "0x6d0b52fcacc3beb59cb959ca3dec5569984e454682e2d56722b25ea55ac11b58",
+    "memo": "MEMO_Chobani.txt",
+    "featured": false
+  },
+  {
+    "brand": "CHLOÉ",
+    "id": "CHL-2026-130",
+    "score": "82/100",
+    "hash": "0x97c1b59d3da750e33204cf1d1df9b99dbaa6cd791f839d7a9b9a104763b9776e",
+    "memo": "MEMO_Chlo_.txt",
+    "featured": false
+  },
+  {
+    "brand": "CHOMPS",
+    "id": "CHO-2026-131",
+    "score": "92/100",
+    "hash": "0xfb07d9432379fdaa18fbe1d9a094a81b63a8a67ba526d5b7ce08d43bdaae69cc",
+    "memo": "MEMO_Chomps.txt",
+    "featured": false
+  },
+  {
+    "brand": "CHOPARD",
+    "id": "CHO-2026-132",
+    "score": "93/100",
+    "hash": "0x8cab03b101781dbdf065da499f2c330719d3f5eadc3adcb8622911cd9df860ee",
+    "memo": "MEMO_Chopard.txt",
+    "featured": false
+  },
+  {
+    "brand": "CHRISTIE'S INTERNATIONAL REAL ESTATE",
+    "id": "CHR-2026-133",
+    "score": "87/100",
+    "hash": "0x656cf27ead4b2d9197e74448531aa766722582aa8752396529540021bfca4bcf",
+    "memo": "MEMO_Christie_s_International_Real_Estate.txt",
+    "featured": false
+  },
+  {
+    "brand": "CHRISTIAN LOUBOUTIN",
+    "id": "CHR-2026-134",
+    "score": "85/100",
+    "hash": "0x8f5559080b8741c9488db689d204980273afe4feff659cc84dcafab9ea0af6df",
+    "memo": "MEMO_Christian_Louboutin.txt",
+    "featured": false
+  },
+  {
+    "brand": "CIRCLE (USDC)",
+    "id": "CIR-2026-135",
+    "score": "96/100",
+    "hash": "0x0613ab20f492078540ca534e343f2e34c3d1c762de8e8657b45c5a3967d714a6",
+    "memo": "MEMO_Circle__USDC_.txt",
+    "featured": false
+  },
+  {
+    "brand": "CIRCLE USYC",
+    "id": "CIR-2026-136",
+    "score": "88/100",
+    "hash": "0x42befbcdfc5896ca25e55e3b8f10a43d3df7d76edbf7b303a110473ae564326d",
+    "memo": "MEMO_Circle_USYC.txt",
+    "featured": false
+  },
+  {
+    "brand": "CITROËN",
+    "id": "CIT-2026-137",
+    "score": "86/100",
+    "hash": "0x9a9467be35474681f5cf04c41707503a191eb59a840ab22a99d0d1d6c8d25898",
+    "memo": "MEMO_Citro_n.txt",
+    "featured": false
+  },
+  {
+    "brand": "CLARINS",
+    "id": "CLA-2026-138",
+    "score": "90/100",
+    "hash": "0xa13119246805aa6347ae0b62e557a3692ba9e824aef418a91059100923c6d1a9",
+    "memo": "MEMO_Clarins.txt",
+    "featured": false
+  },
+  {
+    "brand": "CLINIQUE",
+    "id": "CLI-2026-139",
+    "score": "91/100",
+    "hash": "0xabb6b9868590912c8069b64630bbd75e3344f34f051c1cf9856884b756d86239",
+    "memo": "MEMO_Clinique.txt",
+    "featured": false
+  },
+  {
+    "brand": "CLINIQUE LA PRAIRIE",
+    "id": "CLI-2026-140",
+    "score": "96/100",
+    "hash": "0x7fc58b6a6be7055efb52c1689ee180b4afb7b440cc3ae1b17b522966388805c5",
+    "memo": "MEMO_Clinique_La_Prairie.txt",
+    "featured": false
+  },
+  {
+    "brand": "CMA CGM",
+    "id": "CMA-2026-141",
+    "score": "84/100",
+    "hash": "0x23927e20a9dbf49f92a6e0df8db6f76ab438f97ac79596d04b4f717425f73b89",
+    "memo": "MEMO_CMA_CGM.txt",
+    "featured": false
+  },
+  {
+    "brand": "COACH",
+    "id": "COA-2026-142",
+    "score": "84/100",
+    "hash": "0x72ee9b670ed736e5531047ceed8fcb22694df40df613eb414757109e27e62c16",
+    "memo": "MEMO_Coach.txt",
+    "featured": false
+  },
+  {
+    "brand": "COINBASE",
+    "id": "COI-2026-143",
+    "score": "93/100",
+    "hash": "0xa203dcbedc271e72ce61cbc530b38ba82d96124c87250b45bf55af5e8f156dbb",
+    "memo": "MEMO_Coinbase.txt",
+    "featured": false
+  },
+  {
+    "brand": "COMME DES GARÇONS",
+    "id": "COM-2026-144",
+    "score": "86/100",
+    "hash": "0xf4c20841e15ef56c78b981c1a2b0ce54e5a2e4cad7719e8b89772fec646c3b6c",
+    "memo": "MEMO_Comme_des_Gar_ons.txt",
+    "featured": false
+  },
+  {
+    "brand": "COMFORT ZONE",
+    "id": "COM-2026-145",
+    "score": "97/100",
+    "hash": "0xaafa8c7a61c1f3c8a0b6a7f724196f5b69861dd1aa4aa04d263d75692aaf5eab",
+    "memo": "MEMO_Comfort_Zone.txt",
+    "featured": false
+  },
+  {
+    "brand": "COPERNI",
+    "id": "COP-2026-146",
+    "score": "83/100",
+    "hash": "0x3cdb4d2a9067837e622629b7bfb5f778a11028ab3bab805ad792e4b491f2ecd7",
+    "memo": "MEMO_Coperni.txt",
+    "featured": false
+  },
+  {
+    "brand": "CORIAN (DUPONT)",
+    "id": "COR-2026-147",
+    "score": "87/100",
+    "hash": "0x136ce7920f6b5c6fd9d243b6cd947a83d8d13c414b8347c3f0f465400b42184e",
+    "memo": "MEMO_Corian__DuPont_.txt",
+    "featured": false
+  },
+  {
+    "brand": "COS",
+    "id": "COS-2026-148",
+    "score": "82/100",
+    "hash": "0x3d34b9cdedc1afff35c0fc7ef4c241e4bc657fc30b671995930f7e8fc0aa0bd9",
+    "memo": "MEMO_COS.txt",
+    "featured": false
+  },
+  {
+    "brand": "COSMOS (ATOM)",
+    "id": "COS-2026-149",
+    "score": "94/100",
+    "hash": "0x6ebd9a53210242dadb7d2369419df3fe1dafa08d1d406002ac165f5f456ea402",
+    "memo": "MEMO_Cosmos__ATOM_.txt",
+    "featured": false
+  },
+  {
+    "brand": "COTTO D’ESTE",
+    "id": "COT-2026-150",
+    "score": "85/100",
+    "hash": "0xb3b08e6425012f0f07883ccef0d64ab519f9aff86596063fad493444e3f1d652",
+    "memo": "MEMO_Cotto_d_Este.txt",
+    "featured": false
+  },
+  {
+    "brand": "COUNTRY GARDEN",
+    "id": "COU-2026-151",
+    "score": "84/100",
+    "hash": "0x5674a04c9627b208dc25005d180034b1363493f7da12fd02c857cc87bccffb52",
+    "memo": "MEMO_Country_Garden.txt",
+    "featured": false
+  },
+  {
+    "brand": "COURRÈGES",
+    "id": "COU-2026-152",
+    "score": "93/100",
+    "hash": "0x4148182e2a6bca2e39ae974c04be690a3be32b06c38a74a3da78a1382218ba79",
+    "memo": "MEMO_Courr_ges.txt",
+    "featured": false
+  },
+  {
+    "brand": "COWBOY",
+    "id": "COW-2026-153",
+    "score": "82/100",
+    "hash": "0x3b5363fbb898715228a4cd55e8ef2058cfbc3ed895d889bd19a8ce7df2ee5bb7",
+    "memo": "MEMO_Cowboy.txt",
+    "featured": false
+  },
+  {
+    "brand": "CREED",
+    "id": "CRE-2026-154",
+    "score": "92/100",
+    "hash": "0x0f4863699d0ec1e7e1089984550ef9e4220235ec2746d8377a0d4f5f354603c5",
+    "memo": "MEMO_Creed.txt",
+    "featured": false
+  },
+  {
+    "brand": "CRONOS (CRO)",
+    "id": "CRO-2026-155",
+    "score": "96/100",
+    "hash": "0x9bbad9ec3b59c888aa37c3f8738572d0620ea315088eb9846daa20b165c804d9",
+    "memo": "MEMO_Cronos__CRO_.txt",
+    "featured": false
+  },
+  {
+    "brand": "CRUISE",
+    "id": "CRU-2026-156",
+    "score": "88/100",
+    "hash": "0x95a34a023db92f0dc62da00781d1dd3fb3fb0ed09fb3c2ccc04e016f922529d7",
+    "memo": "MEMO_Cruise.txt",
+    "featured": false
+  },
+  {
+    "brand": "CURVE FINANCE",
+    "id": "CUR-2026-157",
+    "score": "99/100",
+    "hash": "0x530a49084a435278f17409cdad88b5f7f1686e784e9d19ce1ce67833eb82a54f",
+    "memo": "MEMO_Curve_Finance.txt",
+    "featured": false
+  },
+  {
+    "brand": "DADA",
+    "id": "DAD-2026-158",
+    "score": "84/100",
+    "hash": "0x26ce8c8211b47662f2c1d4728802ac124d25cda58339ce8b7e6291268084f4a8",
+    "memo": "MEMO_Dada.txt",
+    "featured": false
+  },
+  {
+    "brand": "DAF",
+    "id": "DAF-2026-159",
+    "score": "97/100",
+    "hash": "0xf52bc005502a9ec6c73e1a2999d52c74ec2e4151ee9fb9aca82c38f26d88dcab",
+    "memo": "MEMO_DAF.txt",
+    "featured": false
+  },
+  {
+    "brand": "DAI (DAI)",
+    "id": "DAI-2026-160",
+    "score": "99/100",
+    "hash": "0x171c0da2f07c0e7b555cff3c740a2d5003b3039460ab0576fa04a31070bda057",
+    "memo": "MEMO_Dai__DAI_.txt",
+    "featured": false
+  },
+  {
+    "brand": "DAMAC PROPERTIES",
+    "id": "DAM-2026-161",
+    "score": "90/100",
+    "hash": "0xadf93ee25f9c729637e97f28422b1ffea2dddf5da58518608d8e81d26626fff3",
+    "memo": "MEMO_Damac_Properties.txt",
+    "featured": false
+  },
+  {
+    "brand": "DANIEL FÉAU",
+    "id": "DAN-2026-162",
+    "score": "83/100",
+    "hash": "0x30323542418db1697ac2d3ed5b9f49e13b840ea91243a3703fbbb668b355b78c",
+    "memo": "MEMO_Daniel_F_au.txt",
+    "featured": false
+  },
+  {
+    "brand": "DASSAULT AVIATION",
+    "id": "DAS-2026-163",
+    "score": "83/100",
+    "hash": "0x88aaa95322f83614f925682765000beb74f88d1783a0aeefbf5b9885fea9074d",
+    "memo": "MEMO_Dassault_Aviation.txt",
+    "featured": false
+  },
+  {
+    "brand": "DASSAULT FALCON",
+    "id": "DAS-2026-164",
+    "score": "95/100",
+    "hash": "0xe1e65d61ad3ceeccec58156e739e4ef68429b2b1fb65f9194bcd51b2c2aa4fcc",
+    "memo": "MEMO_Dassault_Falcon.txt",
+    "featured": false
+  },
+  {
+    "brand": "DAILY HARVEST",
+    "id": "DAI-2026-165",
+    "score": "93/100",
+    "hash": "0x0091704ada72565dd9483b14f0a3ab5419822fa9157bcd1c7e30239a294bf1be",
+    "memo": "MEMO_Daily_Harvest.txt",
+    "featured": false
+  },
+  {
+    "brand": "DE CECCO",
+    "id": "DE -2026-166",
+    "score": "82/100",
+    "hash": "0x7e05aa5db8e1c5d4fa8e1dad814c4f7c369aebfdd984d8ceb2102a79e696203c",
+    "memo": "MEMO_De_Cecco.txt",
+    "featured": false
+  },
+  {
+    "brand": "DECRED (DCR)",
+    "id": "DEC-2026-167",
+    "score": "99/100",
+    "hash": "0x0b24faeb374def0bfae725b78624712c978bec709fce569777098ff05802bcbc",
+    "memo": "MEMO_Decred__DCR_.txt",
+    "featured": false
+  },
+  {
+    "brand": "DEKTON (COSENTINO)",
+    "id": "DEK-2026-168",
+    "score": "99/100",
+    "hash": "0x8cb6e0f5a3b439cdf9a5bd742cf4bf752dfd3707589c230890ec3e2b8871af73",
+    "memo": "MEMO_Dekton__Cosentino_.txt",
+    "featured": false
+  },
+  {
+    "brand": "DHL",
+    "id": "DHL-2026-169",
+    "score": "98/100",
+    "hash": "0x0ae72cd79ecc56228214d56ce26f33ad6d85855bd3ab48ba47e84d6027a28288",
+    "memo": "MEMO_DHL.txt",
+    "featured": false
+  },
+  {
+    "brand": "DIANE VON FURSTENBERG",
+    "id": "DIA-2026-170",
+    "score": "93/100",
+    "hash": "0x4285490cda65e60973c2d1b2b5f020d4ed2ab2f6bf1d74ed21984c7269dbb77f",
+    "memo": "MEMO_Diane_von_Furstenberg.txt",
+    "featured": false
+  },
+  {
+    "brand": "DIESEL",
+    "id": "DIE-2026-171",
+    "score": "82/100",
+    "hash": "0xe23f3e2581748b6ca84c6bd76e027d146acf0003b92e2d7c635bb0cebd8d9fc2",
+    "memo": "MEMO_Diesel.txt",
+    "featured": false
+  },
+  {
+    "brand": "DIOR",
+    "id": "DIO-2026-172",
+    "score": "89/100",
+    "hash": "0x0d7508fc45a59527f13762b3b58c7f1f465a48bb7d5c2251a18fc89d2dc8d9bd",
+    "memo": "MEMO_Dior.txt",
+    "featured": false
+  },
+  {
+    "brand": "DIOR BEAUTY",
+    "id": "DIO-2026-173",
+    "score": "89/100",
+    "hash": "0x65d5bb26adddc274bc0b9c9a86ab593e5a4e753dfc8ea122eb5d0396bf6d6d53",
+    "memo": "MEMO_Dior_Beauty.txt",
+    "featured": false
+  },
+  {
+    "brand": "DOLCE & GABBANA",
+    "id": "DOL-2026-174",
+    "score": "83/100",
+    "hash": "0x58ad187c93076722491e961645695d6d84bc5255a834733fa8ad20c5a0c0d623",
+    "memo": "MEMO_Dolce___Gabbana.txt",
+    "featured": false
+  },
+  {
+    "brand": "DORNBRACHT",
+    "id": "DOR-2026-175",
+    "score": "85/100",
+    "hash": "0x9b1cd4c69866f2c58aff5138ad041af9f660a20e99955577a4dedf29b3547a50",
+    "memo": "MEMO_Dornbracht.txt",
+    "featured": false
+  },
+  {
+    "brand": "DR. BARBARA STURM",
+    "id": "DR.-2026-176",
+    "score": "97/100",
+    "hash": "0x61d4801edce86811722b6b5874c4e0cc65013c4223da2313f0251e8759c68520",
+    "memo": "MEMO_Dr__Barbara_Sturm.txt",
+    "featured": false
+  },
+  {
+    "brand": "DRIES VAN NOTEN",
+    "id": "DRI-2026-177",
+    "score": "87/100",
+    "hash": "0xd675b5cffee008a888e43c60b66ee885cebf7b3823ae068ae9af95f54f043cb1",
+    "memo": "MEMO_Dries_Van_Noten.txt",
+    "featured": false
+  },
+  {
+    "brand": "DRUNK ELEPHANT",
+    "id": "DRU-2026-178",
+    "score": "98/100",
+    "hash": "0xa5998b49336b72977d4e3374376c334ef81ccf0e3b336c65257e41f748c6688d",
+    "memo": "MEMO_Drunk_Elephant.txt",
+    "featured": false
+  },
+  {
+    "brand": "DS AUTOMOBILES",
+    "id": "DS -2026-179",
+    "score": "98/100",
+    "hash": "0xfa2c03dbe7164bcfca5ea374f3e84828cf5f159f226bf917c8f9a769c2e2b7b9",
+    "memo": "MEMO_DS_Automobiles.txt",
+    "featured": false
+  },
+  {
+    "brand": "DUNHILL",
+    "id": "DUN-2026-180",
+    "score": "85/100",
+    "hash": "0xcee325051f6b040a4c815d4620277c952c29076956d1ebfcee2f9b7704b8b5ff",
+    "memo": "MEMO_Dunhill.txt",
+    "featured": false
+  },
+  {
+    "brand": "DURAVIT",
+    "id": "DUR-2026-181",
+    "score": "94/100",
+    "hash": "0xac30fb0efdc0babab17b4a3df90c30a8a576a2bec7f27a913f85e2f195fd8442",
+    "memo": "MEMO_Duravit.txt",
+    "featured": false
+  },
+  {
+    "brand": "DYSON HOME",
+    "id": "DYS-2026-182",
+    "score": "90/100",
+    "hash": "0x8314f25872ed19ba776854a945b796d2dc66f2b23ca1677affab7242a80804be",
+    "memo": "MEMO_Dyson_Home.txt",
+    "featured": false
+  },
+  {
+    "brand": "EDRA",
+    "id": "EDR-2026-183",
+    "score": "97/100",
+    "hash": "0xafe58d284f3bad04d6022f787e14c2aca6702d53e03439d08a9911d2b85d7307",
+    "memo": "MEMO_Edra.txt",
+    "featured": false
+  },
+  {
+    "brand": "EIGHT SLEEP",
+    "id": "EIG-2026-184",
+    "score": "92/100",
+    "hash": "0xc7df911af36b094e1cb365cc54e34333af33a5d7b2cf97fdd119aac822422aa9",
+    "memo": "MEMO_Eight_Sleep.txt",
+    "featured": false
+  },
+  {
+    "brand": "ELYSIUM HEALTH",
+    "id": "ELY-2026-185",
+    "score": "86/100",
+    "hash": "0xe4c389a71656f9dc346b0ca801cb15b64450a120e8728a70236bb24f55a40441",
+    "memo": "MEMO_Elysium_Health.txt",
+    "featured": false
+  },
+  {
+    "brand": "EMAAR PROPERTIES",
+    "id": "EMA-2026-186",
+    "score": "99/100",
+    "hash": "0x83d5b147a3b15f0f3a4a23271aa5b7dab697cfd79be25257414636269ca3a999",
+    "memo": "MEMO_EMAAR_Properties.txt",
+    "featured": false
+  },
+  {
+    "brand": "ENERGYBITS®",
+    "id": "ENE-2026-187",
+    "score": "89/100",
+    "hash": "0xbc3fedeb53106e6bc2a3846e61e281bf3351267e54d71ab0a0ca3f067379b220",
+    "memo": "MEMO_ENERGYbits_.txt",
+    "featured": false
+  },
+  {
+    "brand": "ENGEL & VÖLKERS",
+    "id": "ENG-2026-188",
+    "score": "96/100",
+    "hash": "0x77107e454065405b6d915093d916b2892fcc17d2fe58d31f91e3bd77baf82a0d",
+    "memo": "MEMO_Engel___V_lkers.txt",
+    "featured": false
+  },
+  {
+    "brand": "ENTERPRISE",
+    "id": "ENT-2026-189",
+    "score": "98/100",
+    "hash": "0x33a4a570f82915f7e7dbc5f813a87451a802f825f1c07060ad0853275cf7f069",
+    "memo": "MEMO_Enterprise.txt",
+    "featured": false
+  },
+  {
+    "brand": "ERC-8004 STANDARD",
+    "id": "ERC-2026-190",
+    "score": "86/100",
+    "hash": "0xee46b19f6c2c9b27d5183988a7abdba4c84f40eeba25c33c9a251275c26446e6",
+    "memo": "MEMO_ERC_8004_Standard.txt",
+    "featured": false
+  },
+  {
+    "brand": "ESTÉE LAUDER",
+    "id": "EST-2026-191",
+    "score": "98/100",
+    "hash": "0x23c27fc1e132d1e1f679148d6c6688ff2ff827404b473d863832bc06d47f32f7",
+    "memo": "MEMO_Est_e_Lauder.txt",
+    "featured": false
+  },
+  {
+    "brand": "ETHENA (ENA)",
+    "id": "ETH-2026-192",
+    "score": "97/100",
+    "hash": "0x1dc091720eca3f0f891cc57bf4077a2f73d6269614b25d6425e954d4b63c4733",
+    "memo": "MEMO_Ethena__ENA_.txt",
+    "featured": false
+  },
+  {
+    "brand": "ETHENA USDE",
+    "id": "ETH-2026-193",
+    "score": "87/100",
+    "hash": "0x06f05dd4f33e187cd1d06dce57f7542c2c742459472adbc49454e811e86a3609",
+    "memo": "MEMO_Ethena_USDe.txt",
+    "featured": false
+  },
+  {
+    "brand": "ETHEREUM (ETH)",
+    "id": "ETH-2026-194",
+    "score": "99/100",
+    "hash": "0x01a3a16203a022eabd2dfaf2073fb8c2e07439aae0caba46a612342d13ebb4c2",
+    "memo": "MEMO_Ethereum__ETH_.txt",
+    "featured": false
+  },
+  {
+    "brand": "ETHEREUM CLASSIC",
+    "id": "ETH-2026-195",
+    "score": "95/100",
+    "hash": "0xab6d316309cb074cf1bef2432c4a8e32bd35e8d7528055218da65b61b7ad452f",
+    "memo": "MEMO_Ethereum_Classic.txt",
+    "featured": false
+  },
+  {
+    "brand": "ETRO",
+    "id": "ETR-2026-196",
+    "score": "96/100",
+    "hash": "0xc0f0c598feec55b963039e1d76f451750763e3d16a6f0c913e0ecee2e1117446",
+    "memo": "MEMO_Etro.txt",
+    "featured": false
+  },
+  {
+    "brand": "EVERGRANDE RESIDENTIAL",
+    "id": "EVE-2026-197",
+    "score": "89/100",
+    "hash": "0x1187d2b7366ba6a679420d387f2c0b9ae2979734d5dc4bfbb92e038ce11e1e4e",
+    "memo": "MEMO_Evergrande_Residential.txt",
+    "featured": false
+  },
+  {
+    "brand": "EX NIHILO",
+    "id": "EX -2026-198",
+    "score": "92/100",
+    "hash": "0xfeec66c146af7ffa337b026fd82fd20dbe96f673127fde162fd77fb351d06aa8",
+    "memo": "MEMO_Ex_Nihilo.txt",
+    "featured": false
+  },
+  {
+    "brand": "EXTELL DEVELOPMENT",
+    "id": "EXT-2026-199",
+    "score": "89/100",
+    "hash": "0x43afb25265d57f10293819b4b3f0ea8addac34b69fcfe6a76a1033f56719adc1",
+    "memo": "MEMO_Extell_Development.txt",
+    "featured": false
+  },
+  {
+    "brand": "FACTOR",
+    "id": "FAC-2026-200",
+    "score": "87/100",
+    "hash": "0xaf1e55d0f2a02648db630e58e9c356ae75bdc370d62d0ca76b91a263c7ac36ec",
+    "memo": "MEMO_Factor.txt",
+    "featured": false
+  },
+  {
+    "brand": "FAIRLIFE",
+    "id": "FAI-2026-201",
+    "score": "94/100",
+    "hash": "0xf9563ed87b5e9ff231e1ec3eb9677bbd711fdb49305050f44cc0df9082a9ada9",
+    "memo": "MEMO_Fairlife.txt",
+    "featured": false
+  },
+  {
+    "brand": "FALCON USD",
+    "id": "FAL-2026-202",
+    "score": "87/100",
+    "hash": "0x5c00c46701d06f17db546410d368799249baff3d0ab7927f59d59a073099a170",
+    "memo": "MEMO_Falcon_USD.txt",
+    "featured": false
+  },
+  {
+    "brand": "FARROW & BALL",
+    "id": "FAR-2026-203",
+    "score": "96/100",
+    "hash": "0x6451e42b82059fd90e4a6bfebd20537a839347de70c6c4a19a0daf34147cd6cb",
+    "memo": "MEMO_Farrow___Ball.txt",
+    "featured": false
+  },
+  {
+    "brand": "FEAR OF GOD",
+    "id": "FEA-2026-204",
+    "score": "89/100",
+    "hash": "0xf8e67de01edae0f07a1de4d0cb1d5b93881dadee7c9598fa7f4c908261549c02",
+    "memo": "MEMO_Fear_of_God.txt",
+    "featured": false
+  },
+  {
+    "brand": "FEAR OF GOD (ESSENTIALS)",
+    "id": "FEA-2026-205",
+    "score": "88/100",
+    "hash": "0x69752e26a8d476035e63038c21b31d1f2728151fa3f19f723cf3823ed4bdaa18",
+    "memo": "MEMO_Fear_of_God__Essentials_.txt",
+    "featured": false
+  },
+  {
+    "brand": "FEASTABLES",
+    "id": "FEA-2026-206",
+    "score": "89/100",
+    "hash": "0xafe67fd64257a3d000a8ccdf6028e554dda6d3186a5c37039d45f1734a456688",
+    "memo": "MEMO_Feastables.txt",
+    "featured": false
+  },
+  {
+    "brand": "FEDEX",
+    "id": "FED-2026-207",
+    "score": "87/100",
+    "hash": "0x118ae2017007c8339850265bd18544dfc82ff4c2e7781c19602f34b60a481c75",
+    "memo": "MEMO_FedEx.txt",
+    "featured": false
+  },
+  {
+    "brand": "FENDI",
+    "id": "FEN-2026-208",
+    "score": "91/100",
+    "hash": "0xbd3d22ccf33576fb62415f6805d1fea0c46ddb2cc40be0e14fa5fe08b9f3b880",
+    "memo": "MEMO_Fendi.txt",
+    "featured": false
+  },
+  {
+    "brand": "FENTY BEAUTY",
+    "id": "FEN-2026-209",
+    "score": "89/100",
+    "hash": "0x946be2a45ce8972a75dd915ac275e97e7130a3ffbe48f42b67c5a9216734b336",
+    "memo": "MEMO_Fenty_Beauty.txt",
+    "featured": false
+  },
+  {
+    "brand": "FERM LIVING",
+    "id": "FER-2026-210",
+    "score": "97/100",
+    "hash": "0x6d093d51bab92cf17bb5892b5dd64cd3e60e2bdcc2e3af8122f460c0fd39974f",
+    "memo": "MEMO_Ferm_Living.txt",
+    "featured": false
+  },
+  {
+    "brand": "FERRARI",
+    "id": "FER-2026-211",
+    "score": "97/100",
+    "hash": "0xe4b9b02f92be93faea734910ba73517f40d12d3b556f45c38b7b44e2e4ef41c6",
+    "memo": "MEMO_Ferrari.txt",
+    "featured": false
+  },
+  {
+    "brand": "FIAT",
+    "id": "FIA-2026-212",
+    "score": "95/100",
+    "hash": "0xd7fc7713abf56313a2d6daa90e4aa517a64ec58a7dddccccd7bcd5a91ce285c9",
+    "memo": "MEMO_Fiat.txt",
+    "featured": false
+  },
+  {
+    "brand": "FIGURE HELOC",
+    "id": "FIG-2026-213",
+    "score": "84/100",
+    "hash": "0xac9afd794057fcbfd5f1e52d350ae5396a8167827c940d16e654307bc4a4fdc6",
+    "memo": "MEMO_Figure_Heloc.txt",
+    "featured": false
+  },
+  {
+    "brand": "FILECOIN",
+    "id": "FIL-2026-214",
+    "score": "82/100",
+    "hash": "0xdbbe39417fe16c735569d09a27a05d4000235d2fcfd8c9149eb77cdb61b2a74d",
+    "memo": "MEMO_Filecoin.txt",
+    "featured": false
+  },
+  {
+    "brand": "FLARE (FLR)",
+    "id": "FLA-2026-215",
+    "score": "84/100",
+    "hash": "0x199688ceda7a0082e5a69162b2313400d51f7d296edc2921c3ecaf5c961420f4",
+    "memo": "MEMO_Flare__FLR_.txt",
+    "featured": false
+  },
+  {
+    "brand": "FLEXFORM",
+    "id": "FLE-2026-216",
+    "score": "84/100",
+    "hash": "0x9bbc9ff856eb6bde10c21db44b7200ff36ba6c11c7a7cfdc540d8a45e788020f",
+    "memo": "MEMO_Flexform.txt",
+    "featured": false
+  },
+  {
+    "brand": "FLORIM",
+    "id": "FLO-2026-217",
+    "score": "86/100",
+    "hash": "0x8bb683b8192048e069fcc6f1a70e5ad7624add831c2595ccca7f8cb5ab7fb15f",
+    "memo": "MEMO_Florim.txt",
+    "featured": false
+  },
+  {
+    "brand": "FLOS",
+    "id": "FLO-2026-218",
+    "score": "99/100",
+    "hash": "0x21197bb90f90caad48819ba2db3be0edc60f3bce88773d0bc230211e68102e12",
+    "memo": "MEMO_Flos.txt",
+    "featured": false
+  },
+  {
+    "brand": "FLY BY JING",
+    "id": "FLY-2026-219",
+    "score": "95/100",
+    "hash": "0x612102284721d51f1fe1233edaaaef1d48a5d9501e0953c77fde018dec1c9573",
+    "memo": "MEMO_Fly_by_Jing.txt",
+    "featured": false
+  },
+  {
+    "brand": "FOODJI",
+    "id": "FOO-2026-220",
+    "score": "92/100",
+    "hash": "0xadf6530d8e39cd760849c0ed98a09d5d68ba8caa72549728f016349ac61d236f",
+    "memo": "MEMO_Foodji.txt",
+    "featured": false
+  },
+  {
+    "brand": "FORD",
+    "id": "FOR-2026-221",
+    "score": "96/100",
+    "hash": "0x5c43cd88c6c6cfd77ab5fa33549985d6b0cd9e4584db9d40fa5bce62550fe67f",
+    "memo": "MEMO_Ford.txt",
+    "featured": false
+  },
+  {
+    "brand": "FORME",
+    "id": "FOR-2026-222",
+    "score": "96/100",
+    "hash": "0x6e92d512eb640bc7842e6d0dedbde41e1fc5cba5f1c0d22aaad8cd1c6243dcd2",
+    "memo": "MEMO_Forme.txt",
+    "featured": false
+  },
+  {
+    "brand": "FOUNTAIN LIFE",
+    "id": "FOU-2026-223",
+    "score": "94/100",
+    "hash": "0xbd10ea3cc13a175d7577180d52f3d3121127b98bc02292d083df250f53b1e5c2",
+    "memo": "MEMO_Fountain_Life.txt",
+    "featured": false
+  },
+  {
+    "brand": "FOUR SEASONS PRIVATE RESIDENCES",
+    "id": "FOU-2026-224",
+    "score": "86/100",
+    "hash": "0x7b2de3cc7c263795530b640bd9b1fdb062e85cf65151c8050197b770aa86292f",
+    "memo": "MEMO_Four_Seasons_Private_Residences.txt",
+    "featured": false
+  },
+  {
+    "brand": "FOUR SIGMATIC",
+    "id": "FOU-2026-225",
+    "score": "92/100",
+    "hash": "0x74ff4ef96fe554e07446ad6add4006690fd50425317239130eab50eda57f9a6d",
+    "memo": "MEMO_Four_Sigmatic.txt",
+    "featured": false
+  },
+  {
+    "brand": "FRITZ HANSEN",
+    "id": "FRI-2026-226",
+    "score": "91/100",
+    "hash": "0x33cb12f2fa3534f52979afef7fb3cfb5097456c15445e28443ed302082ecd43b",
+    "memo": "MEMO_Fritz_Hansen.txt",
+    "featured": false
+  },
+  {
+    "brand": "FTX (LEGACY)",
+    "id": "FTX-2026-227",
+    "score": "95/100",
+    "hash": "0x7c1de68f80b51de0a5b1b76602d226a7bf872e27826b5f3fd28e088e9593b641",
+    "memo": "MEMO_FTX__Legacy_.txt",
+    "featured": false
+  },
+  {
+    "brand": "GAGGENAU",
+    "id": "GAG-2026-228",
+    "score": "98/100",
+    "hash": "0x30bd6e330e2d8683ed604aa923ab365eb7a069df248a18b36f75fa3dc5f8a99a",
+    "memo": "MEMO_Gaggenau.txt",
+    "featured": false
+  },
+  {
+    "brand": "GANNI",
+    "id": "GAN-2026-229",
+    "score": "92/100",
+    "hash": "0x9e0ad2f36fc5c05da2c70e45553c2db8f08ee590416e40018b681a3ccb3febbc",
+    "memo": "MEMO_Ganni.txt",
+    "featured": false
+  },
+  {
+    "brand": "GATE (GT)",
+    "id": "GAT-2026-230",
+    "score": "96/100",
+    "hash": "0xe17e8fc32ed43c755614a13776a81c230ee4b3100a12a0a2a6d2aa0c9f3e00a7",
+    "memo": "MEMO_Gate__GT_.txt",
+    "featured": false
+  },
+  {
+    "brand": "GEMINI",
+    "id": "GEM-2026-231",
+    "score": "92/100",
+    "hash": "0xde5ec679a7b92a85ef585c974fe486f5f0588315f07cbe7d4a308646462ba6ec",
+    "memo": "MEMO_Gemini.txt",
+    "featured": false
+  },
+  {
+    "brand": "GENERAL MOTORS",
+    "id": "GEN-2026-232",
+    "score": "95/100",
+    "hash": "0xbaf5b839ce93badef6576f5ad9ea1ca0516b6ad60e6f1d219b3098bd81cf5f93",
+    "memo": "MEMO_General_Motors.txt",
+    "featured": false
+  },
+  {
+    "brand": "GENESIS",
+    "id": "GEN-2026-233",
+    "score": "93/100",
+    "hash": "0x8181e46c924f72da00ab51e6f35b8d6d7c06ed80299ea6963d7e797fc052008a",
+    "memo": "MEMO_Genesis.txt",
+    "featured": false
+  },
+  {
+    "brand": "GERVASONI",
+    "id": "GER-2026-234",
+    "score": "90/100",
+    "hash": "0x3a275982219d9a2184b22923f3c631d0de9d8fe29b78f06d4ed0786aa46f005e",
+    "memo": "MEMO_Gervasoni.txt",
+    "featured": false
+  },
+  {
+    "brand": "GHD",
+    "id": "GHD-2026-235",
+    "score": "98/100",
+    "hash": "0x48dd76bbc1c8a7d03d61382065099fd17c06fcb07dc8e9bb45c5f8a77c7c30ee",
+    "memo": "MEMO_ghd.txt",
+    "featured": false
+  },
+  {
+    "brand": "GHIA",
+    "id": "GHI-2026-236",
+    "score": "87/100",
+    "hash": "0xf457ecc053afb97c4a85e50402e6153e5dfc5d3f20da1be6efe1fddae96291e5",
+    "memo": "MEMO_Ghia.txt",
+    "featured": false
+  },
+  {
+    "brand": "GHO (AAVE)",
+    "id": "GHO-2026-237",
+    "score": "87/100",
+    "hash": "0x1da96347e0b5ff51ca4fccc05cb9e33b59943671a26c33f4dc7a1ea82b7c386f",
+    "memo": "MEMO_GHO__Aave_.txt",
+    "featured": false
+  },
+  {
+    "brand": "GIORGETTI",
+    "id": "GIO-2026-238",
+    "score": "83/100",
+    "hash": "0x66d133a9ef232fc9c712e1ecd453e9f83412aa2dce9ca70e322aa4853d598331",
+    "memo": "MEMO_Giorgetti.txt",
+    "featured": false
+  },
+  {
+    "brand": "GIORGIO ARMANI",
+    "id": "GIO-2026-239",
+    "score": "95/100",
+    "hash": "0x6921506d94dc6ccc80e8c5691dad3177c8016f50e86cc6ff847ac1f1d7e9efb8",
+    "memo": "MEMO_Giorgio_Armani.txt",
+    "featured": false
+  },
+  {
+    "brand": "GLOBAL DOLLAR",
+    "id": "GLO-2026-240",
+    "score": "95/100",
+    "hash": "0x594387087f058ce9b1d915ffda36899b978397c84447f3f3f27f889374146e86",
+    "memo": "MEMO_Global_Dollar.txt",
+    "featured": false
+  },
+  {
+    "brand": "GLOSSIER",
+    "id": "GLO-2026-241",
+    "score": "82/100",
+    "hash": "0x67bfdb0084999f492c505e5b7135e224c02b72734b95ba1c17d4a1574430e1a4",
+    "memo": "MEMO_Glossier.txt",
+    "featured": false
+  },
+  {
+    "brand": "GOODLES",
+    "id": "GOO-2026-242",
+    "score": "88/100",
+    "hash": "0x28d648f026acd03522bc9813220bd92329d48abeab22899e9a98f0345416524f",
+    "memo": "MEMO_Goodles.txt",
+    "featured": false
+  },
+  {
+    "brand": "GOYARD",
+    "id": "GOY-2026-243",
+    "score": "84/100",
+    "hash": "0xa1c73c635d63c16d36b9b179951dcc8dc5760e89a8c9be5d0fde50a22d469b27",
+    "memo": "MEMO_Goyard.txt",
+    "featured": false
+  },
+  {
+    "brand": "GRAZA",
+    "id": "GRA-2026-244",
+    "score": "98/100",
+    "hash": "0x0254a1dd0e9bbc8efbae98dcb4e7ed23ace7fa9dc26cb018ee2fc3d12e15c2ff",
+    "memo": "MEMO_Graza.txt",
+    "featured": false
+  },
+  {
+    "brand": "GREEN CHEF",
+    "id": "GRE-2026-245",
+    "score": "91/100",
+    "hash": "0x00ae18c45a265fd823f27cc20c7e6cb658a8e44ff112e9c8b0b4fcce21fe311c",
+    "memo": "MEMO_Green_Chef.txt",
+    "featured": false
+  },
+  {
+    "brand": "GROSVENOR ESTATE",
+    "id": "GRO-2026-246",
+    "score": "86/100",
+    "hash": "0xa4fb377715251dc13aab0da09df9ffa33988bfc41da67e69afa14456eaaae638",
+    "memo": "MEMO_Grosvenor_Estate.txt",
+    "featured": false
+  },
+  {
+    "brand": "GUBI",
+    "id": "GUB-2026-247",
+    "score": "84/100",
+    "hash": "0x0cb2ebb37640377bfaa4be9f35d9653c4694efa4857ef026b932cc4ee29360ed",
+    "memo": "MEMO_GUBI.txt",
+    "featured": false
+  },
+  {
+    "brand": "GUCCI",
+    "id": "GUC-2026-248",
+    "score": "96/100",
+    "hash": "0x95f970620e704d1e9bcd6ee2d1af5f60288a4f6a5647bf6aa90ab133696256de",
+    "memo": "MEMO_Gucci.txt",
+    "featured": false
+  },
+  {
+    "brand": "GULFSTREAM",
+    "id": "GUL-2026-249",
+    "score": "88/100",
+    "hash": "0x08b0fe9a8cf4af2e2e9ce8b4fc3957ecccd23f3f4172576f4693f6679dfd4bb4",
+    "memo": "MEMO_Gulfstream.txt",
+    "featured": false
+  },
+  {
+    "brand": "H. MOSER & CIE",
+    "id": "H. -2026-250",
+    "score": "99/100",
+    "hash": "0x10e13032b198bb06ac59fcfa116282f01bc0e0833a5aa522dfccaef26a42b530",
+    "memo": "MEMO_H__Moser___Cie.txt",
+    "featured": false
+  },
+  {
+    "brand": "H&M HOME",
+    "id": "H&M-2026-251",
+    "score": "99/100",
+    "hash": "0x7ae430d06f1063c91daeb25c663fe7e5fea9969db3f75a9fc826d380cdce1c2b",
+    "memo": "MEMO_H_M_Home.txt",
+    "featured": false
+  },
+  {
+    "brand": "HALO TOP",
+    "id": "HAL-2026-252",
+    "score": "94/100",
+    "hash": "0x1df24a517cd02cdba82ea76b60d733a0fe922d6c4ceac9d7c9483465cafef86e",
+    "memo": "MEMO_Halo_Top.txt",
+    "featured": false
+  },
+  {
+    "brand": "HANSGROHE",
+    "id": "HAN-2026-253",
+    "score": "94/100",
+    "hash": "0x92ed313f5bc905989d123bbf93069234737650aa8df9a237afbb498502769e1a",
+    "memo": "MEMO_Hansgrohe.txt",
+    "featured": false
+  },
+  {
+    "brand": "HAPAG-LLOYD",
+    "id": "HAP-2026-254",
+    "score": "91/100",
+    "hash": "0xef994a52be647df40f6144ff43089b6a4c4c75fb256585f1a6f582436c9c1712",
+    "memo": "MEMO_Hapag_Lloyd.txt",
+    "featured": false
+  },
+  {
+    "brand": "HARLEY-DAVIDSON",
+    "id": "HAR-2026-255",
+    "score": "96/100",
+    "hash": "0x6b29871081c7faf3ca9c24bb86e7f21f6341a3fbc19a0a10f96fcfeb4d66a01f",
+    "memo": "MEMO_Harley_Davidson.txt",
+    "featured": false
+  },
+  {
+    "brand": "HAY",
+    "id": "HAY-2026-256",
+    "score": "95/100",
+    "hash": "0x8ed9c4c917ced80e6b731aa92870001bf74c67d921c203461adf504e7a49234d",
+    "memo": "MEMO_Hay.txt",
+    "featured": false
+  },
+  {
+    "brand": "HEADSPACE",
+    "id": "HEA-2026-257",
+    "score": "98/100",
+    "hash": "0x00abb978f0e5906b92b5f54f8f6d2577626c5c2f3137aa4069aa1952ea731e8e",
+    "memo": "MEMO_Headspace.txt",
+    "featured": false
+  },
+  {
+    "brand": "HEDERA (HBAR)",
+    "id": "HED-2026-258",
+    "score": "84/100",
+    "hash": "0x3aa46e6ba4e44bd970224c13ae7e490aa06c14e01036adbb0e953ec1fe88b096",
+    "memo": "MEMO_Hedera__HBAR_.txt",
+    "featured": false
+  },
+  {
+    "brand": "HELLOFRESH",
+    "id": "HEL-2026-259",
+    "score": "91/100",
+    "hash": "0xd5cb75aa7ea7508943ccb93a121364444561fcf61544bf0d65cfde0cbe0b287a",
+    "memo": "MEMO_HelloFresh.txt",
+    "featured": false
+  },
+  {
+    "brand": "HENNESSY",
+    "id": "HEN-2026-260",
+    "score": "97/100",
+    "hash": "0x01f730621271e3c7d04a22955e6c3d194ba342f66d081375a06f8e5fb23d92ce",
+    "memo": "MEMO_Hennessy.txt",
+    "featured": false
+  },
+  {
+    "brand": "HERBIVORE",
+    "id": "HER-2026-261",
+    "score": "89/100",
+    "hash": "0xa4ef3c65b37a9da73c3e66ed149fd96d6f99f875d037ffb6d8ef6cdc8730b989",
+    "memo": "MEMO_Herbivore.txt",
+    "featured": false
+  },
+  {
+    "brand": "HERMÈS",
+    "id": "HER-2026-262",
+    "score": "97/100",
+    "hash": "0x14dc824b473991ee2880c8dcc51dc3c1455d94cff4bb19ac82700b5dde0f2205",
+    "memo": "MEMO_Herm_s.txt",
+    "featured": false
+  },
+  {
+    "brand": "HERMÈS MAISON",
+    "id": "HER-2026-263",
+    "score": "97/100",
+    "hash": "0x623ee953522652c97d014df3e7ba9a475e006638c9ce079d1c3720b780e3abed",
+    "memo": "MEMO_Herm_s_Maison.txt",
+    "featured": false
+  },
+  {
+    "brand": "HERTZ",
+    "id": "HER-2026-264",
+    "score": "90/100",
+    "hash": "0xb335fcd6d2af4d849804353471789cf695ca94bed7bdc0dd9a234580e0dadbd8",
+    "memo": "MEMO_Hertz.txt",
+    "featured": false
+  },
+  {
+    "brand": "HIGH BREW COFFEE",
+    "id": "HIG-2026-265",
+    "score": "94/100",
+    "hash": "0x4ddfd41d6f5002dd90616634311b48d00063df85592af718a483f469d85dcd67",
+    "memo": "MEMO_High_Brew_Coffee.txt",
+    "featured": false
+  },
+  {
+    "brand": "HIMACS",
+    "id": "HIM-2026-266",
+    "score": "95/100",
+    "hash": "0xee8c08bdfa1952ab872ba34e876624726cc911e9dd9b550bb84477c9d2f676f9",
+    "memo": "MEMO_Himacs.txt",
+    "featured": false
+  },
+  {
+    "brand": "HOKA",
+    "id": "HOK-2026-267",
+    "score": "90/100",
+    "hash": "0x8b3b1787c6a281d4ca00c340c4e89398126f21782ae4b6cd760d6a754d88aebc",
+    "memo": "MEMO_Hoka.txt",
+    "featured": false
+  },
+  {
+    "brand": "HOKA ONE ONE",
+    "id": "HOK-2026-268",
+    "score": "94/100",
+    "hash": "0x4b63a9baf8a4dfdc73c4072bb3fad9d8645c6553e91607b1554272ac093d0601",
+    "memo": "MEMO_Hoka_One_One.txt",
+    "featured": false
+  },
+  {
+    "brand": "HTX DAO",
+    "id": "HTX-2026-269",
+    "score": "86/100",
+    "hash": "0xfd6c94e3359ce52b22f1a7d79cf40b21fb31c3f05ea688527eab987860584fe6",
+    "memo": "MEMO_HTX_DAO.txt",
+    "featured": false
+  },
+  {
+    "brand": "HUBLOT",
+    "id": "HUB-2026-270",
+    "score": "93/100",
+    "hash": "0xf43a4cde1fc619312a87aed87c578e01220ab9ec30e7e225120cd2938142e057",
+    "memo": "MEMO_Hublot.txt",
+    "featured": false
+  },
+  {
+    "brand": "HUDA BEAUTY",
+    "id": "HUD-2026-271",
+    "score": "93/100",
+    "hash": "0x1099d922a488b9279c515fe35a02918b4873b0952e3fdca95858eaa39c237104",
+    "memo": "MEMO_Huda_Beauty.txt",
+    "featured": false
+  },
+  {
+    "brand": "HUEL",
+    "id": "HUE-2026-272",
+    "score": "98/100",
+    "hash": "0x75ed0a3b2ed9fb59bf9977260ee6f4045d35dbfd7c90fc99e9a657ba38032640",
+    "memo": "MEMO_Huel.txt",
+    "featured": false
+  },
+  {
+    "brand": "HUGO BOSS",
+    "id": "HUG-2026-273",
+    "score": "96/100",
+    "hash": "0x037fb1f7c4fbec99aa95cbc9cbba8f3bfdf5e0e3037bf4a84e74b6197599f319",
+    "memo": "MEMO_Hugo_Boss.txt",
+    "featured": false
+  },
+  {
+    "brand": "HUM NUTRITION",
+    "id": "HUM-2026-274",
+    "score": "84/100",
+    "hash": "0x3079069674139813bce02581cd119073eebc5c7f964fdb5a547eafa65cfdefa4",
+    "memo": "MEMO_Hum_Nutrition.txt",
+    "featured": false
+  },
+  {
+    "brand": "HUNGRYROOT",
+    "id": "HUN-2026-275",
+    "score": "96/100",
+    "hash": "0x0c53030e690a2176c2d4f726b1c8326fefcbe48de2000254496b32073d3fd511",
+    "memo": "MEMO_Hungryroot.txt",
+    "featured": false
+  },
+  {
+    "brand": "HVMN",
+    "id": "HVM-2026-276",
+    "score": "84/100",
+    "hash": "0x25f5fc165f224b5f55f03483bb0c467398eb890afe14ef70de706fd38c4c78b3",
+    "memo": "MEMO_HVMN.txt",
+    "featured": false
+  },
+  {
+    "brand": "HYUNDAI",
+    "id": "HYU-2026-277",
+    "score": "91/100",
+    "hash": "0x70d2fd361d077de388dac490ade1cf9366bc01106c8da23dc73d8eb714bfd261",
+    "memo": "MEMO_Hyundai.txt",
+    "featured": false
+  },
+  {
+    "brand": "HYPERLIQUID (HYPE)",
+    "id": "HYP-2026-278",
+    "score": "88/100",
+    "hash": "0x350e64384dfe10ae0cfbf3b8a3cc020491231323d7908e5e02574cefe12b8c10",
+    "memo": "MEMO_Hyperliquid__HYPE_.txt",
+    "featured": false
+  },
+  {
+    "brand": "IKEA",
+    "id": "IKE-2026-279",
+    "score": "94/100",
+    "hash": "0x10303e7dc2af50de3c4d1f9fc559feb8b00232ffe844a77812f607fac58a513c",
+    "memo": "MEMO_IKEA.txt",
+    "featured": false
+  },
+  {
+    "brand": "ILIA BEAUTY",
+    "id": "ILI-2026-280",
+    "score": "88/100",
+    "hash": "0xa93219ad14daede016a0b9e3fe04f7310d0d3aa0bb45ccd11195179883541162",
+    "memo": "MEMO_Ilia_Beauty.txt",
+    "featured": false
+  },
+  {
+    "brand": "INFINITI",
+    "id": "INF-2026-281",
+    "score": "85/100",
+    "hash": "0x3b27c1f70e617da0365e78c64a5788adc2961bbca8d6ba216679e72a746b34df",
+    "memo": "MEMO_Infiniti.txt",
+    "featured": false
+  },
+  {
+    "brand": "INFINIWELL",
+    "id": "INF-2026-282",
+    "score": "97/100",
+    "hash": "0x2c6cea3d0f816a79343c64a40b10e76c482ca938b677358e3e5aa7e5765cf3aa",
+    "memo": "MEMO_Infiniwell.txt",
+    "featured": false
+  },
+  {
+    "brand": "INTERIOR DEFINE",
+    "id": "INT-2026-283",
+    "score": "90/100",
+    "hash": "0xa34fc3143c7112f255474a7b53db3a1bc7c5173f89703b125e5b1a1036ed192f",
+    "memo": "MEMO_Interior_Define.txt",
+    "featured": false
+  },
+  {
+    "brand": "INTERNET COMP (ICP)",
+    "id": "INT-2026-284",
+    "score": "99/100",
+    "hash": "0x73a14b86e34ba389a8483f836901e2cb06d3589c455fb98573d4c88eba903f1e",
+    "memo": "MEMO_Internet_Comp__ICP_.txt",
+    "featured": false
+  },
+  {
+    "brand": "IRIS CERAMICA",
+    "id": "IRI-2026-285",
+    "score": "86/100",
+    "hash": "0xf9f8c730ef6251435e457369953cd148f9e344c9181531ca61924e49f49c9c29",
+    "memo": "MEMO_Iris_Ceramica.txt",
+    "featured": false
+  },
+  {
+    "brand": "ISABEL MARANT",
+    "id": "ISA-2026-286",
+    "score": "83/100",
+    "hash": "0x48b814bf8c9fbfcffd988176a5be2deb05e028a05fb09ad0bee58b865b5f8ff7",
+    "memo": "MEMO_Isabel_Marant.txt",
+    "featured": false
+  },
+  {
+    "brand": "IVECO",
+    "id": "IVE-2026-287",
+    "score": "96/100",
+    "hash": "0xefdb1ff55aa5651dcd143b535e907337c6fed504f1d6a4cf75c389a67ffca6a2",
+    "memo": "MEMO_Iveco.txt",
+    "featured": false
+  },
+  {
+    "brand": "IWC SCHAFFHAUSEN",
+    "id": "IWC-2026-288",
+    "score": "93/100",
+    "hash": "0x36b2ad16c0f6612f35d5598c0ca5fd32cc28c9c3fa3e0f1032ea6393aa53f99c",
+    "memo": "MEMO_IWC_Schaffhausen.txt",
+    "featured": false
+  },
+  {
+    "brand": "JACADI",
+    "id": "JAC-2026-289",
+    "score": "87/100",
+    "hash": "0x167b4abbb1db1b592f7e32aa17479cae5b8d53f69a725618bc1fe1d06c91dd14",
+    "memo": "MEMO_Jacadi.txt",
+    "featured": false
+  },
+  {
+    "brand": "JACQUEMUS",
+    "id": "JAC-2026-290",
+    "score": "96/100",
+    "hash": "0x2bb48890471f7dac86f655775d86ab1fc52665b4e02d3dc3ff8f53c34c60df56",
+    "memo": "MEMO_Jacquemus.txt",
+    "featured": false
+  },
+  {
+    "brand": "JAEGER-LECOULTRE",
+    "id": "JAE-2026-291",
+    "score": "99/100",
+    "hash": "0x70517aa83562a7a1d1ad8f2d6cf11223cfb242e9da9748cacd090fef09e26e5c",
+    "memo": "MEMO_Jaeger_LeCoultre.txt",
+    "featured": false
+  },
+  {
+    "brand": "JAGUAR",
+    "id": "JAG-2026-292",
+    "score": "93/100",
+    "hash": "0x8ba8e3519d895a0a7def7d83cf6968dd20250abbafa23f089d9ab68a047116d0",
+    "memo": "MEMO_Jaguar.txt",
+    "featured": false
+  },
+  {
+    "brand": "JANUS HENDERSON",
+    "id": "JAN-2026-293",
+    "score": "99/100",
+    "hash": "0x2b87a22f6b105a0819e4a662e617c2a32ae156c8f4367cc56f3d6719663bfb15",
+    "memo": "MEMO_Janus_Henderson.txt",
+    "featured": false
+  },
+  {
+    "brand": "JANUS HENDERSON TR.",
+    "id": "JAN-2026-294",
+    "score": "83/100",
+    "hash": "0xb9305983a21681cdd9d41fc8392a6b3a75325aa762c341fe92585c63834f0371",
+    "memo": "MEMO_Janus_Henderson_Tr_.txt",
+    "featured": false
+  },
+  {
+    "brand": "JAVVY COFFEE",
+    "id": "JAV-2026-295",
+    "score": "89/100",
+    "hash": "0x104923d32b63bc55c4fb10ed5a7287e3aa328877aa1b5dd2ac1bab0bddc82072",
+    "memo": "MEMO_Javvy_Coffee.txt",
+    "featured": false
+  },
+  {
+    "brand": "JEEP",
+    "id": "JEE-2026-296",
+    "score": "93/100",
+    "hash": "0x3cd2f3824d0446e132be2411b0dc1b0dc14085c595b42daeaa81a5d905289f31",
+    "memo": "MEMO_Jeep.txt",
+    "featured": false
+  },
+  {
+    "brand": "JHO WELLNESS",
+    "id": "JHO-2026-297",
+    "score": "99/100",
+    "hash": "0x040ff4d0842aa217c2c1da236b39f8a09fa94d3b4ddc0235f43bc9832b0d0130",
+    "memo": "MEMO_Jho_Wellness.txt",
+    "featured": false
+  },
+  {
+    "brand": "JIMMY CHOO",
+    "id": "JIM-2026-298",
+    "score": "85/100",
+    "hash": "0x3520208028d48eb64590875f1f8398beb3c1f4141fdc2bb10cfee916368cd66b",
+    "memo": "MEMO_Jimmy_Choo.txt",
+    "featured": false
+  },
+  {
+    "brand": "JLL",
+    "id": "JLL-2026-299",
+    "score": "91/100",
+    "hash": "0x51750bd8e1ffe99733ae497f17f2e562ed9be1de69194510ac8cd6c97022475f",
+    "memo": "MEMO_JLL.txt",
+    "featured": false
+  },
+  {
+    "brand": "JO MALONE",
+    "id": "JO -2026-300",
+    "score": "98/100",
+    "hash": "0x24003744b71b29336f7306a61687a31e23d91af8ad1d7e5ae2999550a1eb3371",
+    "memo": "MEMO_Jo_Malone.txt",
+    "featured": false
+  },
+  {
+    "brand": "JOBY AVIATION",
+    "id": "JOB-2026-301",
+    "score": "94/100",
+    "hash": "0xffa48df3c719f6379b3817bdc76ddec0472ab4a558ac280e502db3a71077fb3f",
+    "memo": "MEMO_Joby_Aviation.txt",
+    "featured": false
+  },
+  {
+    "brand": "JOLLY RANCHER",
+    "id": "JOL-2026-302",
+    "score": "86/100",
+    "hash": "0x356fe622015ab6e9af00e46750e05c1fa46167fd70faf038a98564f2f174c894",
+    "memo": "MEMO_Jolly_Rancher.txt",
+    "featured": false
+  },
+  {
+    "brand": "JUPITER (JUP)",
+    "id": "JUP-2026-303",
+    "score": "98/100",
+    "hash": "0x92d67a5ae223641a8a941fbdba3e5a2b5fea2ce493c8e8898c088b2882a32e22",
+    "memo": "MEMO_Jupiter__JUP_.txt",
+    "featured": false
+  },
+  {
+    "brand": "JW ANDERSON",
+    "id": "JW -2026-304",
+    "score": "84/100",
+    "hash": "0xebef36dbb3fbd7828e6fb58fa7093eb2864c51882e2a6a3dc2a435ed8847d4b2",
+    "memo": "MEMO_JW_Anderson.txt",
+    "featured": false
+  },
+  {
+    "brand": "KARTELL",
+    "id": "KAR-2026-305",
+    "score": "89/100",
+    "hash": "0x00592216eb7e6620d43306c4f705e753ec4eed1b4d372cb8bbf9db9a245999b5",
+    "memo": "MEMO_Kartell.txt",
+    "featured": false
+  },
+  {
+    "brand": "KASPA (KAS)",
+    "id": "KAS-2026-306",
+    "score": "89/100",
+    "hash": "0x38c2bfb07c55a5ef54da858000350c01cd98de303b2baa123282cb8ab68a8297",
+    "memo": "MEMO_Kaspa__KAS_.txt",
+    "featured": false
+  },
+  {
+    "brand": "KENZO",
+    "id": "KEN-2026-307",
+    "score": "89/100",
+    "hash": "0xccf203d0e4670751f97ad50edb7857ed31b3816402cbcd9cd7e465f365f4463c",
+    "memo": "MEMO_Kenzo.txt",
+    "featured": false
+  },
+  {
+    "brand": "KIA",
+    "id": "KIA-2026-308",
+    "score": "97/100",
+    "hash": "0xfa49fa7f2c54e69177ce71dca97e47437518d6b37fa6701adc8751809c12dfad",
+    "memo": "MEMO_Kia.txt",
+    "featured": false
+  },
+  {
+    "brand": "KIEHL'S",
+    "id": "KIE-2026-309",
+    "score": "99/100",
+    "hash": "0x5c297edb9dd9470aa360212808f03c196bb93ceb35422beddb3b2a46b2d62dce",
+    "memo": "MEMO_Kiehl_s.txt",
+    "featured": false
+  },
+  {
+    "brand": "KINDER’S",
+    "id": "KIN-2026-310",
+    "score": "98/100",
+    "hash": "0xfd1ca86ca8ec591557013f3342c96b99f5b1cfba6dfc306b991693cb57a719bb",
+    "memo": "MEMO_Kinder_s.txt",
+    "featured": false
+  },
+  {
+    "brand": "KITE (KITE)",
+    "id": "KIT-2026-311",
+    "score": "93/100",
+    "hash": "0x8cb723e1688e6b477f177b0426d7c23e3d9960d673c480c1904f7d944c721a2b",
+    "memo": "MEMO_Kite__KITE_.txt",
+    "featured": false
+  },
+  {
+    "brand": "KITH",
+    "id": "KIT-2026-312",
+    "score": "89/100",
+    "hash": "0x79d879d2dcf51e37b3d062f82c362d903569718b18d09dbaa76992df118ae494",
+    "memo": "MEMO_Kith.txt",
+    "featured": false
+  },
+  {
+    "brand": "KNIGHT FRANK",
+    "id": "KNI-2026-313",
+    "score": "96/100",
+    "hash": "0x15bbb84e1c8efe310c813d9561f6a10feddf4d9286efe2999dcf1f84a88a8747",
+    "memo": "MEMO_Knight_Frank.txt",
+    "featured": false
+  },
+  {
+    "brand": "KNOLL",
+    "id": "KNO-2026-314",
+    "score": "94/100",
+    "hash": "0x35491c6dafb1f9dac01e6cf90b208e11fc2087c821463f52332257599bdb2633",
+    "memo": "MEMO_Knoll.txt",
+    "featured": false
+  },
+  {
+    "brand": "KOENIGSEGG",
+    "id": "KOE-2026-315",
+    "score": "87/100",
+    "hash": "0x2159502c6ae8440346ce84a96969b8bb650ad06d42b95f5cab665f0b78a0f684",
+    "memo": "MEMO_Koenigsegg.txt",
+    "featured": false
+  },
+  {
+    "brand": "KOHLER",
+    "id": "KOH-2026-316",
+    "score": "98/100",
+    "hash": "0xce03fad478f1ff8bb906685c28b6b5adf3895aeb5ba69721538e275496bfd855",
+    "memo": "MEMO_Kohler.txt",
+    "featured": false
+  },
+  {
+    "brand": "KOIA",
+    "id": "KOI-2026-317",
+    "score": "95/100",
+    "hash": "0xaad668e3f492541997248a6b45eec6943c4646fb41fd520e7a884e1f567bd6bc",
+    "memo": "MEMO_Koia.txt",
+    "featured": false
+  },
+  {
+    "brand": "KOMO PARIS",
+    "id": "KOM-2026-318",
+    "score": "83/100",
+    "hash": "0x68fbe2c43a738937cddead813a7d1794b440f35e1f7f40b0cd514b2c8cb7c59e",
+    "memo": "MEMO_KOMO_Paris.txt",
+    "featured": false
+  },
+  {
+    "brand": "KRAKEN",
+    "id": "KRA-2026-319",
+    "score": "83/100",
+    "hash": "0x451667f69d46ff5645893ad64185685d9d410541d1e3b64e7feddb47a8e6b51a",
+    "memo": "MEMO_Kraken.txt",
+    "featured": false
+  },
+  {
+    "brand": "KRETZ FAMILY REAL ESTATE",
+    "id": "KRE-2026-320",
+    "score": "85/100",
+    "hash": "0xd735929628908ea3e0160ab8f1ffddc21ccfce71adf77e604926aef07f293a61",
+    "memo": "MEMO_Kretz_Family_Real_Estate.txt",
+    "featured": false
+  },
+  {
+    "brand": "KRION (PORCELANOSA)",
+    "id": "KRI-2026-321",
+    "score": "94/100",
+    "hash": "0x23539ffecae3ad47d5f4ddf9a6fc4c2b8d3b1cfe5422bfdd308ea67b26aac57e",
+    "memo": "MEMO_Krion__Porcelanosa_.txt",
+    "featured": false
+  },
+  {
+    "brand": "KUCOIN (KCS)",
+    "id": "KUC-2026-322",
+    "score": "87/100",
+    "hash": "0x6c024204b4dd5194cb95b60ed91016d9c928395573d004b46c965bc05b0db1de",
+    "memo": "MEMO_KuCoin__KCS_.txt",
+    "featured": false
+  },
+  {
+    "brand": "KULA BIO",
+    "id": "KUL-2026-323",
+    "score": "84/100",
+    "hash": "0xf2cf4ac384f352ccb076da6ed209be06efc16733bc0093dca66c743508bdee28",
+    "memo": "MEMO_Kula_Bio.txt",
+    "featured": false
+  },
+  {
+    "brand": "LA COLOMBE",
+    "id": "LA -2026-324",
+    "score": "88/100",
+    "hash": "0x2342b8ec2c6c4a9a0b3306e87d90ee16ee8dd4fd88b591a4665196282f6b9087",
+    "memo": "MEMO_La_Colombe.txt",
+    "featured": false
+  },
+  {
+    "brand": "LA CORNUE",
+    "id": "LA -2026-325",
+    "score": "97/100",
+    "hash": "0xd1f26aa27b7190ea2349ad78170276ab32ad797b3e472103235095412011c74b",
+    "memo": "MEMO_La_Cornue.txt",
+    "featured": false
+  },
+  {
+    "brand": "LA ROCHE-POSAY",
+    "id": "LA -2026-326",
+    "score": "84/100",
+    "hash": "0xed52f848293e1fd6276e6a11179f32fd680912f2c89fc84b4f30b6b7381a926a",
+    "memo": "MEMO_La_Roche_Posay.txt",
+    "featured": false
+  },
+  {
+    "brand": "LANCÔME",
+    "id": "LAN-2026-327",
+    "score": "88/100",
+    "hash": "0x846d18d9656de89bc5e272c016566065be7fe2c4f2bfc1f44837f12f8814df77",
+    "memo": "MEMO_Lanc_me.txt",
+    "featured": false
+  },
+  {
+    "brand": "LAND ROVER",
+    "id": "LAN-2026-328",
+    "score": "99/100",
+    "hash": "0x00cf3253f8123fa8098bbb8d344061283e355cc1bf98888f69f61c7b2fac0266",
+    "memo": "MEMO_Land_Rover.txt",
+    "featured": false
+  },
+  {
+    "brand": "LANEIGE",
+    "id": "LAN-2026-329",
+    "score": "86/100",
+    "hash": "0x44c1e4cdc73a773e9ea0c73fe5f55afd51160c0b5f9f7f47dec4cdb1354f8608",
+    "memo": "MEMO_Laneige.txt",
+    "featured": false
+  },
+  {
+    "brand": "LANSERHOF",
+    "id": "LAN-2026-330",
+    "score": "84/100",
+    "hash": "0x73a0174da80bab50ef42a1d821d98bfd41ff0162f4fe5182c60403aef2476bfd",
+    "memo": "MEMO_Lanserhof.txt",
+    "featured": false
+  },
+  {
+    "brand": "LANVIN",
+    "id": "LAN-2026-331",
+    "score": "93/100",
+    "hash": "0xbea17e3867aeb53a127e876655447b64672e64d7fc94049ed35795f8bac2720a",
+    "memo": "MEMO_Lanvin.txt",
+    "featured": false
+  },
+  {
+    "brand": "LAUFEN",
+    "id": "LAU-2026-332",
+    "score": "86/100",
+    "hash": "0x1ab2feca37cded358fa9c04151aa73715d105206b6c46dda8f83f7d39f281880",
+    "memo": "MEMO_Laufen.txt",
+    "featured": false
+  },
+  {
+    "brand": "LEA CERAMICHE",
+    "id": "LEA-2026-333",
+    "score": "85/100",
+    "hash": "0xc5b872b88da9247584d024fde86550ab9e0822c66770305501b4324c5dd2c760",
+    "memo": "MEMO_Lea_Ceramiche.txt",
+    "featured": false
+  },
+  {
+    "brand": "LEDGER",
+    "id": "LED-2026-334",
+    "score": "95/100",
+    "hash": "0xfcb1f565645665adb7dbfc204dffea95dc322069011a5d3f2efdbbaf5b06438d",
+    "memo": "MEMO_Ledger.txt",
+    "featured": false
+  },
+  {
+    "brand": "LEO TOKEN",
+    "id": "LEO-2026-335",
+    "score": "83/100",
+    "hash": "0x2b044bd906b2596dfd33356b9ad8058df6f0c5c5c3af2e708bad10816056b6c6",
+    "memo": "MEMO_LEO_Token.txt",
+    "featured": false
+  },
+  {
+    "brand": "LEVELS HEALTH",
+    "id": "LEV-2026-336",
+    "score": "82/100",
+    "hash": "0xa40880e53097f2d0e9a936ef79f57a6bb2e8e78d2fd701bcb03f482d7aac35f0",
+    "memo": "MEMO_Levels_Health.txt",
+    "featured": false
+  },
+  {
+    "brand": "LEXUS",
+    "id": "LEX-2026-337",
+    "score": "88/100",
+    "hash": "0xdbfefda90a8220a9ee9e68b475c4ceceb2d4f7e17c33f3f01fe73320796af44b",
+    "memo": "MEMO_Lexus.txt",
+    "featured": false
+  },
+  {
+    "brand": "LI AUTO",
+    "id": "LI -2026-338",
+    "score": "86/100",
+    "hash": "0x2731bba7cbeb452520adca0dc40351d4a36dc90356364185cd39e859bdba80e8",
+    "memo": "MEMO_Li_Auto.txt",
+    "featured": false
+  },
+  {
+    "brand": "LIDO",
+    "id": "LID-2026-339",
+    "score": "99/100",
+    "hash": "0x0ec17e45c12891b1b673effc739741274bb6746ada325e22dc2c3b66cd47c5d1",
+    "memo": "MEMO_Lido.txt",
+    "featured": false
+  },
+  {
+    "brand": "LIEWOOD",
+    "id": "LIE-2026-340",
+    "score": "99/100",
+    "hash": "0x07b910c80fa54b0dd2b882b470b53737e358a0c581b6156ab1ca854671ca159b",
+    "memo": "MEMO_Liewood.txt",
+    "featured": false
+  },
+  {
+    "brand": "LIGNE ROSET",
+    "id": "LIG-2026-341",
+    "score": "92/100",
+    "hash": "0xd8665cf5a02846bf83be1b5682ea3388e16d2568091c08301d839d80cd1be56a",
+    "memo": "MEMO_Ligne_Roset.txt",
+    "featured": false
+  },
+  {
+    "brand": "LILIUM",
+    "id": "LIL-2026-342",
+    "score": "84/100",
+    "hash": "0xece1f4134da96e9ea396f133ecfe0d37e6d7a5aa612af34df72a90d3c3eaa231",
+    "memo": "MEMO_Lilium.txt",
+    "featured": false
+  },
+  {
+    "brand": "LIQUID DEATH",
+    "id": "LIQ-2026-343",
+    "score": "94/100",
+    "hash": "0x196c6469bcec338c6f3fc14ae4b665c20560b981edbb641ec3505edea074ef43",
+    "memo": "MEMO_Liquid_Death.txt",
+    "featured": false
+  },
+  {
+    "brand": "LIQUID I.V.",
+    "id": "LIQ-2026-344",
+    "score": "82/100",
+    "hash": "0x039ab61d1fcd0f9a85e3775d547a0498cb8d850672ea3e59b1853a8163d619b8",
+    "memo": "MEMO_Liquid_I_V_.txt",
+    "featured": false
+  },
+  {
+    "brand": "LISA ELDRIDGE",
+    "id": "LIS-2026-345",
+    "score": "88/100",
+    "hash": "0x6dd071c72c71c19acebf81782a70bce865d8235b493fd622a96b51a5adc80a09",
+    "memo": "MEMO_Lisa_Eldridge.txt",
+    "featured": false
+  },
+  {
+    "brand": "LISA ELDRIDGE BEAUTY",
+    "id": "LIS-2026-346",
+    "score": "90/100",
+    "hash": "0x2431536511c6ea119c42ee73c7937dff71f98f797416c751807a7cc5889fa7ec",
+    "memo": "MEMO_Lisa_Eldridge_Beauty.txt",
+    "featured": false
+  },
+  {
+    "brand": "LITHOS DESIGN",
+    "id": "LIT-2026-347",
+    "score": "94/100",
+    "hash": "0xa2ba2903f268d0e54f6793a241150f9deb83d0401cf44c9b9b642dfb0348cb4a",
+    "memo": "MEMO_Lithos_Design.txt",
+    "featured": false
+  },
+  {
+    "brand": "LIVEWIRE",
+    "id": "LIV-2026-348",
+    "score": "91/100",
+    "hash": "0xc3bd613ea31002fe08776cd205e6bfab9d15437785c7504f9ce5d95eadb6bf83",
+    "memo": "MEMO_LiveWire.txt",
+    "featured": false
+  },
+  {
+    "brand": "LIVING DIVANI",
+    "id": "LIV-2026-349",
+    "score": "83/100",
+    "hash": "0x154db8b6266d0fb96fb1bb3c6dc56224a382be8739e4fae4be6a9d6ca9aa1657",
+    "memo": "MEMO_Living_Divani.txt",
+    "featured": false
+  },
+  {
+    "brand": "LMNT",
+    "id": "LMN-2026-350",
+    "score": "99/100",
+    "hash": "0x1b4915e47f6948baa5eca9cd777e9252084c3cd0b5ac6c8dda0940731be0038d",
+    "memo": "MEMO_LMNT.txt",
+    "featured": false
+  },
+  {
+    "brand": "LOEWE",
+    "id": "LOE-2026-351",
+    "score": "96/100",
+    "hash": "0x4465e073246fe461618a3726054a5716924bd55b093a78020c4338728c005483",
+    "memo": "MEMO_Loewe.txt",
+    "featured": false
+  },
+  {
+    "brand": "LONGCHAMP",
+    "id": "LON-2026-352",
+    "score": "86/100",
+    "hash": "0xf812fb793917c9178def8635a6c541c256d425eb49102255a816a39811c27199",
+    "memo": "MEMO_Longchamp.txt",
+    "featured": false
+  },
+  {
+    "brand": "LORO PIANA",
+    "id": "LOR-2026-353",
+    "score": "87/100",
+    "hash": "0x2526103cc2b234fedb21249d6d08bb2e3ce5116693232cb262feb087c190c47b",
+    "memo": "MEMO_Loro_Piana.txt",
+    "featured": false
+  },
+  {
+    "brand": "LOTUS",
+    "id": "LOT-2026-354",
+    "score": "95/100",
+    "hash": "0x88842ea83c166b30d65365f48121af0def9aede0479557550dea7c6d525c81f1",
+    "memo": "MEMO_Lotus.txt",
+    "featured": false
+  },
+  {
+    "brand": "LOUIS VUITTON",
+    "id": "LOU-2026-355",
+    "score": "97/100",
+    "hash": "0xaddadf43a8c85b3b24ccc46e5b7c0220519f89ef6150747d687c1c2ee3a48a28",
+    "memo": "MEMO_Louis_Vuitton.txt",
+    "featured": false
+  },
+  {
+    "brand": "LOUIS VUITTON ART DE VIVRE",
+    "id": "LOU-2026-356",
+    "score": "84/100",
+    "hash": "0xe338b0d6248f6af94a8625d3fbe5d2cf01192118c4ebacc5304f324334da3070",
+    "memo": "MEMO_Louis_Vuitton_Art_de_Vivre.txt",
+    "featured": false
+  },
+  {
+    "brand": "LUCID MOTORS",
+    "id": "LUC-2026-357",
+    "score": "87/100",
+    "hash": "0xf79660787a5099727f9521a882d7921c908c7bcefebb91f48d25c5f32aa00c34",
+    "memo": "MEMO_Lucid_Motors.txt",
+    "featured": false
+  },
+  {
+    "brand": "LULULEMON",
+    "id": "LUL-2026-358",
+    "score": "88/100",
+    "hash": "0x24a70a12fa587f34f020af3444ff00b63917efe40ce29e7430fdfc8e12e8e098",
+    "memo": "MEMO_Lululemon.txt",
+    "featured": false
+  },
+  {
+    "brand": "LULULEMON STUDIO",
+    "id": "LUL-2026-359",
+    "score": "91/100",
+    "hash": "0x19fcc3d1a7bc00c7fe27f62f6ea2cdef0c07a80cc1bdda43c513713e83d0ec7a",
+    "memo": "MEMO_Lululemon_Studio.txt",
+    "featured": false
+  },
+  {
+    "brand": "LUNCHLY",
+    "id": "LUN-2026-360",
+    "score": "92/100",
+    "hash": "0xfae7e2be2e8dab4f82dfdbd5aaf674baf32508374711afa8af2e88e020436607",
+    "memo": "MEMO_Lunchly.txt",
+    "featured": false
+  },
+  {
+    "brand": "LYFT",
+    "id": "LYF-2026-361",
+    "score": "84/100",
+    "hash": "0xe7c4d1984f9bc122645f5ee1c8fc42ce0e0eaffddb9bdb48753d4b38690815b0",
+    "memo": "MEMO_Lyft.txt",
+    "featured": false
+  },
+  {
+    "brand": "LYMA LIFE",
+    "id": "LYM-2026-362",
+    "score": "85/100",
+    "hash": "0x20e94b7e6f11474c0277bdb9f46c084f381bd0fccaf198328dffb6991351c484",
+    "memo": "MEMO_Lyma_Life.txt",
+    "featured": false
+  },
+  {
+    "brand": "LVMH",
+    "id": "LVM-2026-363",
+    "score": "94/100",
+    "hash": "0x600cf865619c14377eaf089a77c755f0d5b1fbde1a0aa30f7a3d87020887c254",
+    "memo": "MEMO_LVMH.txt",
+    "featured": false
+  },
+  {
+    "brand": "MADE.COM",
+    "id": "MAD-2026-364",
+    "score": "83/100",
+    "hash": "0x417edcdb12975c897b39cae16c7f468c01d12ede6609838c0f3ba14d19696661",
+    "memo": "MEMO_Made_com.txt",
+    "featured": false
+  },
+  {
+    "brand": "MAGIS",
+    "id": "MAG-2026-365",
+    "score": "98/100",
+    "hash": "0xb9ba7df8d4bfa180fe9a9225d635fcab11744b7c3dc44b50c387280ff813b6c8",
+    "memo": "MEMO_Magis.txt",
+    "featured": false
+  },
+  {
+    "brand": "MAGIC SPOON",
+    "id": "MAG-2026-366",
+    "score": "87/100",
+    "hash": "0x3e45ad8cccc419410a6ae4d37f45ce57de9e7f8c1d322f389beae734b2a8a5d6",
+    "memo": "MEMO_Magic_Spoon.txt",
+    "featured": false
+  },
+  {
+    "brand": "MAERSK",
+    "id": "MAE-2026-367",
+    "score": "98/100",
+    "hash": "0x232be5e126f4fa3cc87876fbdf897e744ee8ef5d75889c6556e014d72d7725ea",
+    "memo": "MEMO_Maersk.txt",
+    "featured": false
+  },
+  {
+    "brand": "MAJE",
+    "id": "MAJ-2026-368",
+    "score": "82/100",
+    "hash": "0x51cfb2a4c86f20eb127ee17040bc189498b8397c51764f458b0eb7616f6dc2f5",
+    "memo": "MEMO_Maje.txt",
+    "featured": false
+  },
+  {
+    "brand": "MAKERDAO (SKY)",
+    "id": "MAK-2026-369",
+    "score": "92/100",
+    "hash": "0x2e6451a7c1bdbbb3139ecd8a5b9f4ae3f2ed9a23c76bcefc04a124a8499d9c6f",
+    "memo": "MEMO_MakerDAO__Sky_.txt",
+    "featured": false
+  },
+  {
+    "brand": "MAISON MARGIELA",
+    "id": "MAI-2026-370",
+    "score": "88/100",
+    "hash": "0xf3f2bcc467e4dea4810650648d53b74dd9b18e1dd95ecbf87135fe4b2c5bbabc",
+    "memo": "MEMO_Maison_Margiela.txt",
+    "featured": false
+  },
+  {
+    "brand": "MAN",
+    "id": "MAN-2026-371",
+    "score": "82/100",
+    "hash": "0x11bd935debe405881129cc07a032469dee2710cf2e8f5f2ad6434b5032bc0d5b",
+    "memo": "MEMO_MAN.txt",
+    "featured": false
+  },
+  {
+    "brand": "MANOLO BLAHNIK",
+    "id": "MAN-2026-372",
+    "score": "94/100",
+    "hash": "0xd54ddfe1440aabdd452129f143e2a2c9afce127b7f2edc3a727cb1123ad9f1a3",
+    "memo": "MEMO_Manolo_Blahnik.txt",
+    "featured": false
+  },
+  {
+    "brand": "MANTLE (MNT)",
+    "id": "MAN-2026-373",
+    "score": "86/100",
+    "hash": "0xa13ee7f87822126b4520926c7b1945aade638b2ec230b3a1e871e4e1de75eedf",
+    "memo": "MEMO_Mantle__MNT_.txt",
+    "featured": false
+  },
+  {
+    "brand": "MARAZZI",
+    "id": "MAR-2026-374",
+    "score": "86/100",
+    "hash": "0xabfeb28997e8b9f53d3748db975b8d0f6917311aad7765867e38332c43f741e8",
+    "memo": "MEMO_Marazzi.txt",
+    "featured": false
+  },
+  {
+    "brand": "MARC JACOBS",
+    "id": "MAR-2026-375",
+    "score": "90/100",
+    "hash": "0x4b8d81dcf4dedaa6c70436502b330792cdb0052d5f9137950d6c8ea4c47c72df",
+    "memo": "MEMO_Marc_Jacobs.txt",
+    "featured": false
+  },
+  {
+    "brand": "MARGRAF",
+    "id": "MAR-2026-376",
+    "score": "89/100",
+    "hash": "0x8fdc65fe50cd64e962023d2e1032327b25c96e5992dae99a1c35be3c548cffab",
+    "memo": "MEMO_Margraf.txt",
+    "featured": false
+  },
+  {
+    "brand": "MARINE SERRE",
+    "id": "MAR-2026-377",
+    "score": "83/100",
+    "hash": "0xeb8a00fc0571801c453a9fe1f9d057dd33df8cb8f2cfc07d7d4185ad09bbc89a",
+    "memo": "MEMO_Marine_Serre.txt",
+    "featured": false
+  },
+  {
+    "brand": "MARIO BADESCU",
+    "id": "MAR-2026-378",
+    "score": "88/100",
+    "hash": "0x6fcd263b03217c0d205ec1b8ff9a09a947b5323406e67266d162070634bb77c2",
+    "memo": "MEMO_Mario_Badescu.txt",
+    "featured": false
+  },
+  {
+    "brand": "MASERATI",
+    "id": "MAS-2026-379",
+    "score": "86/100",
+    "hash": "0x3d1af0188a01cdd9aae69d65650e105e6aef668a93716fe426181294a5e31fd7",
+    "memo": "MEMO_Maserati.txt",
+    "featured": false
+  },
+  {
+    "brand": "MASSIMO DUTTI",
+    "id": "MAS-2026-380",
+    "score": "97/100",
+    "hash": "0x91929f888fd8db949cfb80246643e8a6aed5acdf7ab9e5c8c4747d1d7349858e",
+    "memo": "MEMO_Massimo_Dutti.txt",
+    "featured": false
+  },
+  {
+    "brand": "MAX MARA",
+    "id": "MAX-2026-381",
+    "score": "98/100",
+    "hash": "0x08084437886abbeacab9b1504dc4fc8259bde492288cf84c212e077de41e4fa7",
+    "memo": "MEMO_Max_Mara.txt",
+    "featured": false
+  },
+  {
+    "brand": "MAZDA",
+    "id": "MAZ-2026-382",
+    "score": "87/100",
+    "hash": "0x1286bfebdeb8d2283d4f3568eecba270f3ac682340b8fff0897bf7684faba890",
+    "memo": "MEMO_Mazda.txt",
+    "featured": false
+  },
+  {
+    "brand": "MCLAREN",
+    "id": "MCL-2026-383",
+    "score": "82/100",
+    "hash": "0x911df91201c5ae259afa71e4b9df7a991a4464d64c30c3b62208b5190817c24a",
+    "memo": "MEMO_McLaren.txt",
+    "featured": false
+  },
+  {
+    "brand": "MEMECORE (M)",
+    "id": "MEM-2026-384",
+    "score": "92/100",
+    "hash": "0xf0b7b2a287b5368aaea9435fc5bddd57679c4cf8949159ede5526e597598c7f3",
+    "memo": "MEMO_MemeCore__M_.txt",
+    "featured": false
+  },
+  {
+    "brand": "MENU",
+    "id": "MEN-2026-385",
+    "score": "84/100",
+    "hash": "0x23901b74e7ab56edb69f463f536e0f0530cac43edeef622e48ce3022c5dde83c",
+    "memo": "MEMO_Menu.txt",
+    "featured": false
+  },
+  {
+    "brand": "MERCEDES-BENZ",
+    "id": "MER-2026-386",
+    "score": "83/100",
+    "hash": "0x280fafae844671181be7c616212894c3d60b9e71a2ce539443e6af10cc0673ae",
+    "memo": "MEMO_Mercedes_Benz.txt",
+    "featured": false
+  },
+  {
+    "brand": "MICHAEL KORS",
+    "id": "MIC-2026-387",
+    "score": "82/100",
+    "hash": "0x1d51264ddfe2486223518344ee6fde16ba5f96e1ec71a88a78ec7ae857f9597e",
+    "memo": "MEMO_Michael_Kors.txt",
+    "featured": false
+  },
+  {
+    "brand": "MID-DAY SQUARES",
+    "id": "MID-2026-388",
+    "score": "94/100",
+    "hash": "0xa24ab8eb71177555184b9c98ca4e89e312f8348c5c444b15740acc771ad33759",
+    "memo": "MEMO_Mid_Day_Squares.txt",
+    "featured": false
+  },
+  {
+    "brand": "MIDNIGHT (NIGHT)",
+    "id": "MID-2026-389",
+    "score": "87/100",
+    "hash": "0x1c9fa78959b7ccc196b45da77f0047c1512263cee5a820d39e2e0fbf7f071094",
+    "memo": "MEMO_Midnight__NIGHT_.txt",
+    "featured": false
+  },
+  {
+    "brand": "MIELE",
+    "id": "MIE-2026-390",
+    "score": "97/100",
+    "hash": "0x3d0adb08fbf2f25f9cbe80b8e4a69339100f44bacb962ef4680561cbe60d9dc6",
+    "memo": "MEMO_Miele.txt",
+    "featured": false
+  },
+  {
+    "brand": "MINECRAFT SNACKS",
+    "id": "MIN-2026-391",
+    "score": "82/100",
+    "hash": "0xe8a627a68f3bfe6a3e69350c9faba694bc80b33265bace6746fd70bd73463a09",
+    "memo": "MEMO_Minecraft_Snacks.txt",
+    "featured": false
+  },
+  {
+    "brand": "MINI",
+    "id": "MIN-2026-392",
+    "score": "92/100",
+    "hash": "0x2e9a17309534705b7a5419832d94e0ff1e3592a3afa83d505d96b8cca9021ccd",
+    "memo": "MEMO_Mini.txt",
+    "featured": false
+  },
+  {
+    "brand": "MINI RODINI",
+    "id": "MIN-2026-393",
+    "score": "90/100",
+    "hash": "0xec4800fa2839c90b0a4782646f84b8e4068a35cc4c976e20f21267d938f86b5b",
+    "memo": "MEMO_Mini_Rodini.txt",
+    "featured": false
+  },
+  {
+    "brand": "MINOTTI",
+    "id": "MIN-2026-394",
+    "score": "93/100",
+    "hash": "0x3a9de01a277acd8083cb2862409eac3eb7fb92302f280b171a034494e4bc50ac",
+    "memo": "MEMO_Minotti.txt",
+    "featured": false
+  },
+  {
+    "brand": "MISSONI",
+    "id": "MIS-2026-395",
+    "score": "96/100",
+    "hash": "0x2d74b82c20fa401eb4ab3c6bfc9516b087a45e8264651767380e1437d6a41272",
+    "memo": "MEMO_Missoni.txt",
+    "featured": false
+  },
+  {
+    "brand": "MIU MIU",
+    "id": "MIU-2026-396",
+    "score": "91/100",
+    "hash": "0x1ffda68e3ac252c94cb678e7cddc2646b9d7e580f66b94e6c7deefc08617cf1a",
+    "memo": "MEMO_Miu_Miu.txt",
+    "featured": false
+  },
+  {
+    "brand": "MNDGYM",
+    "id": "MND-2026-397",
+    "score": "91/100",
+    "hash": "0x9e1faba864455704c6956999d660977644689036056a2665d02ad7d6e2f1ad77",
+    "memo": "MEMO_MNDGYM.txt",
+    "featured": false
+  },
+  {
+    "brand": "MOLTENI&C",
+    "id": "MOL-2026-398",
+    "score": "82/100",
+    "hash": "0x57a0f925b00c42de1000d97a716008a8339a0cf685b018d0feaf46d7e4c1e1f3",
+    "memo": "MEMO_Molteni_C.txt",
+    "featured": false
+  },
+  {
+    "brand": "MOMOFUKU GOODS",
+    "id": "MOM-2026-399",
+    "score": "91/100",
+    "hash": "0x25a54f96727885f4a164e52c2d88bea5cfe206a9552316edfdf46e455dbdc369",
+    "memo": "MEMO_Momofuku_Goods.txt",
+    "featured": false
+  },
+  {
+    "brand": "MONCLER",
+    "id": "MON-2026-400",
+    "score": "97/100",
+    "hash": "0x2cf41f2ada9c509a65d33321f4cc49d60fec212b4ac4ccac774d29db9114b0a7",
+    "memo": "MEMO_Moncler.txt",
+    "featured": false
+  },
+  {
+    "brand": "MONCLER GENIUS",
+    "id": "MON-2026-401",
+    "score": "88/100",
+    "hash": "0x7acdbd9a1060a2351d3d08f6b85acb0065ce06386f92be030b4a7d9796ca0a43",
+    "memo": "MEMO_Moncler_Genius.txt",
+    "featured": false
+  },
+  {
+    "brand": "MONERO",
+    "id": "MON-2026-402",
+    "score": "98/100",
+    "hash": "0xa3cb94f8be283d4bdbc414f34074beb3ef4efce01aa6e3a2272697351670fa3e",
+    "memo": "MEMO_Monero.txt",
+    "featured": false
+  },
+  {
+    "brand": "MONTBLANC",
+    "id": "MON-2026-403",
+    "score": "82/100",
+    "hash": "0x99f302f71af02693f830588e567c3048ea58a31c0d09a8d3bcf62e8f82809096",
+    "memo": "MEMO_Montblanc.txt",
+    "featured": false
+  },
+  {
+    "brand": "MOOOI",
+    "id": "MOO-2026-404",
+    "score": "92/100",
+    "hash": "0x75a3820e13509870e3bdd20c4fb23734c46634e2011547f224a66266cce7d0c2",
+    "memo": "MEMO_Moooi.txt",
+    "featured": false
+  },
+  {
+    "brand": "MOON CHEESE",
+    "id": "MOO-2026-405",
+    "score": "99/100",
+    "hash": "0x08c0fcd37430e732f3c8be78683dd7cc758fd65f8313698f4aaf6966e366016a",
+    "memo": "MEMO_Moon_Cheese.txt",
+    "featured": false
+  },
+  {
+    "brand": "MOON JUICE",
+    "id": "MOO-2026-406",
+    "score": "94/100",
+    "hash": "0x1f93df61bc53e3264d7b2bca04fac516447430f97c71f737bdd116cf98bbe1e8",
+    "memo": "MEMO_Moon_Juice.txt",
+    "featured": false
+  },
+  {
+    "brand": "MORPHO",
+    "id": "MOR-2026-407",
+    "score": "88/100",
+    "hash": "0xb7e866d5883fc57d49f4da15550b76e030ccc3cf1bd2be92351ae78643cc0ad0",
+    "memo": "MEMO_Morpho.txt",
+    "featured": false
+  },
+  {
+    "brand": "MOROSO",
+    "id": "MOR-2026-408",
+    "score": "92/100",
+    "hash": "0xd6ddbcdc9b2aa8aa8a4037faff6bbcbbbdca10c5e02e68874b20698800c7e8b1",
+    "memo": "MEMO_Moroso.txt",
+    "featured": false
+  },
+  {
+    "brand": "MOSCHINO",
+    "id": "MOS-2026-409",
+    "score": "94/100",
+    "hash": "0xdbb2f41ba020cefa85d7ab06310d3f27998a3bd707f2db3072ee16e66e65392a",
+    "memo": "MEMO_Moschino.txt",
+    "featured": false
+  },
+  {
+    "brand": "MUD/WTR",
+    "id": "MUD-2026-410",
+    "score": "87/100",
+    "hash": "0x939546067c0f916303dec361863abed26279a9a990af91e8fafd52e774acdb36",
+    "memo": "MEMO_MUD_WTR.txt",
+    "featured": false
+  },
+  {
+    "brand": "MUGLER",
+    "id": "MUG-2026-411",
+    "score": "84/100",
+    "hash": "0x1f9fb400c0ba00ed88dced2314ea4292c9daaa715422c9e69c39ef3e99886360",
+    "memo": "MEMO_Mugler.txt",
+    "featured": false
+  },
+  {
+    "brand": "MUTINA",
+    "id": "MUT-2026-412",
+    "score": "83/100",
+    "hash": "0x93b7a5485b7b64722dd7807d3fc5ecdeeb557b35b74299fab92c0169b046c43b",
+    "memo": "MEMO_Mutina.txt",
+    "featured": false
+  },
+  {
+    "brand": "MUUTO",
+    "id": "MUU-2026-413",
+    "score": "89/100",
+    "hash": "0xe78bf213ef9834f6e605b6e8d4933effc804b95067694b2cdfee0b80de4d4276",
+    "memo": "MEMO_Muuto.txt",
+    "featured": false
+  },
+  {
+    "brand": "NARS",
+    "id": "NAR-2026-414",
+    "score": "96/100",
+    "hash": "0x896a78c5df3cd9ef77835120d9ac4e681ab14578f84b856a902b85bb6ebd60d3",
+    "memo": "MEMO_NARS.txt",
+    "featured": false
+  },
+  {
+    "brand": "NATURESWEET",
+    "id": "NAT-2026-415",
+    "score": "84/100",
+    "hash": "0xa089cbc167a9c620baf6c07504638f6e11765c0e29e737e546ca58bcc31a39e7",
+    "memo": "MEMO_NatureSweet.txt",
+    "featured": false
+  },
+  {
+    "brand": "NAVISTAR",
+    "id": "NAV-2026-416",
+    "score": "83/100",
+    "hash": "0x82300a29ea05e63e94a32b6f177562b3ae0bd41690716a80457da6c5790ef748",
+    "memo": "MEMO_Navistar.txt",
+    "featured": false
+  },
+  {
+    "brand": "NAVYA",
+    "id": "NAV-2026-417",
+    "score": "91/100",
+    "hash": "0xb559f26889549298985bbb1ca0c792e4ec13902935cc8b097b0bf4890c9675c6",
+    "memo": "MEMO_Navya.txt",
+    "featured": false
+  },
+  {
+    "brand": "NEAR PROTOCOL",
+    "id": "NEA-2026-418",
+    "score": "87/100",
+    "hash": "0x39fa9a0d53091f85a928aa9ece249739b0f5272195a8c260aff71be826df5a1d",
+    "memo": "MEMO_Near_Protocol.txt",
+    "featured": false
+  },
+  {
+    "brand": "NEOM (RESIDENTIAL)",
+    "id": "NEO-2026-419",
+    "score": "95/100",
+    "hash": "0x17133d3deaec2705176519ecaa30edb442ad0df6fd8de683f9d52eda0cc346bd",
+    "memo": "MEMO_NEOM__Residential_.txt",
+    "featured": false
+  },
+  {
+    "brand": "NESTLÉ HEALTH SCIENCE",
+    "id": "NES-2026-420",
+    "score": "94/100",
+    "hash": "0x4444ecf567d289e1f4f49402fac8097472dfb0a4306a9009a5e0c5e2ddd78c52",
+    "memo": "MEMO_Nestl__Health_Science.txt",
+    "featured": false
+  },
+  {
+    "brand": "NEXO (NEXO)",
+    "id": "NEX-2026-421",
+    "score": "89/100",
+    "hash": "0x74d7a1a1106c3fbbd66274f7eb65d7ebe60ed2d36114ec58ad726e3f69fe4feb",
+    "memo": "MEMO_NEXO__NEXO_.txt",
+    "featured": false
+  },
+  {
+    "brand": "NIKE (LAB)",
+    "id": "NIK-2026-422",
+    "score": "89/100",
+    "hash": "0x3cde13ab66271c917a7c887dad4b4ef7fbe8f6cfb8eff6a9a2365afab49f5189",
+    "memo": "MEMO_Nike__Lab_.txt",
+    "featured": false
+  },
+  {
+    "brand": "NIO",
+    "id": "NIO-2026-423",
+    "score": "92/100",
+    "hash": "0x38c4227bfa7883ccf086760a2558a7eae7a05c0f365f94eb0aa06716cad47ab2",
+    "memo": "MEMO_Nio.txt",
+    "featured": false
+  },
+  {
+    "brand": "NISSAN",
+    "id": "NIS-2026-424",
+    "score": "90/100",
+    "hash": "0x26a86adeb011cc6b88b510316b276dd867cb426f5ce92dfa7832c4f75c617813",
+    "memo": "MEMO_Nissan.txt",
+    "featured": false
+  },
+  {
+    "brand": "NOONBREW",
+    "id": "NOO-2026-425",
+    "score": "92/100",
+    "hash": "0x2d53477d1c8f1f627ecb66f6cb3f87d2b2c509c9d47d3f7c14ef9e46b0428e83",
+    "memo": "MEMO_NoonBrew.txt",
+    "featured": false
+  },
+  {
+    "brand": "NORMANN COPENHAGEN",
+    "id": "NOR-2026-426",
+    "score": "94/100",
+    "hash": "0xff4b2b8cb925638e5ddabc16ad7f9609b01dc3165b5434ffdb140654aaa065d7",
+    "memo": "MEMO_Normann_Copenhagen.txt",
+    "featured": false
+  },
+  {
+    "brand": "NORTHROP GRUMMAN",
+    "id": "NOR-2026-427",
+    "score": "86/100",
+    "hash": "0x1ae61cb71af58bb5f954c555ad58cd8438f99c40f8b22cd755e16f7b6fb5167a",
+    "memo": "MEMO_Northrop_Grumman.txt",
+    "featured": false
+  },
+  {
+    "brand": "OATS OVERNIGHT",
+    "id": "OAT-2026-428",
+    "score": "97/100",
+    "hash": "0x05d8566c97053f0e93fbfb20d14c245ff59faa9cabd440c18194b4a6139e0bbb",
+    "memo": "MEMO_Oats_Overnight.txt",
+    "featured": false
+  },
+  {
+    "brand": "OFFICIAL (OREN & TAL ALEXANDER)",
+    "id": "OFF-2026-429",
+    "score": "90/100",
+    "hash": "0x39b5fc748f939f4d598c0f34ef76acd14b2e9d6a6e732e633b7adb7ccdd25cf4",
+    "memo": "MEMO_Official__Oren___Tal_Alexander_.txt",
+    "featured": false
+  },
+  {
+    "brand": "OFFICIAL TRUMP",
+    "id": "OFF-2026-430",
+    "score": "87/100",
+    "hash": "0xc42ed64d4dfaf27c831f218c44d12dde34f71075b5896420c53016a0a185c81c",
+    "memo": "MEMO_Official_Trump.txt",
+    "featured": false
+  },
+  {
+    "brand": "OFF-WHITE",
+    "id": "OFF-2026-431",
+    "score": "98/100",
+    "hash": "0x7b78e6629c3e1db54950fb7ff614671cad16e1857b3a2abbc0f5b1936459d7d0",
+    "memo": "MEMO_Off_White.txt",
+    "featured": false
+  },
+  {
+    "brand": "OIKOS",
+    "id": "OIK-2026-432",
+    "score": "82/100",
+    "hash": "0x99834bc894763d0029398b48974d3e2e464fd1ea0f12ca0584a3fdb8fa8c27a8",
+    "memo": "MEMO_Oikos.txt",
     "featured": false
   },
   {
     "brand": "OLIPOP",
-    "id": "DNVB-2026-004",
-    "score": "85/100",
-    "hash": "0x6335b8e8df9c0619411f55bccbbaa18f951a2c9f27d7d8f1ecbe718426723871",
-    "memo": "MEMO_OLIPOP_DNVB-2026-004.txt",
+    "id": "OLI-2026-433",
+    "score": "96/100",
+    "hash": "0xa6d5bdd6cccb387fac74ebab4fe40983eb0b268a77aa37ac27f57cc0929d6fb7",
+    "memo": "MEMO_Olipop.txt",
     "featured": false
   },
   {
-    "brand": "HERMES",
-    "id": "RMS-2026-002",
+    "brand": "OMEGA",
+    "id": "OME-2026-434",
+    "score": "88/100",
+    "hash": "0xd2dabf87e36e5ef9b37d116a3605fff8fa2391312f161da01e235cfbfb913990",
+    "memo": "MEMO_Omega.txt",
+    "featured": false
+  },
+  {
+    "brand": "ONDO (ONDO)",
+    "id": "OND-2026-435",
+    "score": "83/100",
+    "hash": "0xa3da1ce5c9fd9af5901a7310104b83de542595328db52d54da661e1833c0f868",
+    "memo": "MEMO_Ondo__ONDO_.txt",
+    "featured": false
+  },
+  {
+    "brand": "ONDO USDY",
+    "id": "OND-2026-436",
     "score": "99/100",
-    "hash": "0xf63f383e5b2554f597c28da6d1f31e59f88ffd9c4abf03efdc92d009bdf5dfad",
-    "memo": "MEMO_HERMES_RMS-2026-002.txt",
+    "hash": "0x487aaef5d701d036521328efef9c7c183c31b215105e2a6fc084e721f032b062",
+    "memo": "MEMO_Ondo_USDY.txt",
+    "featured": false
+  },
+  {
+    "brand": "ONE57 (NEW YORK)",
+    "id": "ONE-2026-437",
+    "score": "92/100",
+    "hash": "0xa2775ce26edc70e88c856d930e36765a6f3d18d5bb853dfb92bb2fb87c87efc5",
+    "memo": "MEMO_One57__New_York_.txt",
+    "featured": false
+  },
+  {
+    "brand": "ON RUNNING",
+    "id": "ON -2026-438",
+    "score": "87/100",
+    "hash": "0x0fe9dad2f58f6a97ec3fb5c4438635806dd5dcdfa50b22ed81e1d7dd9b841108",
+    "memo": "MEMO_On_Running.txt",
+    "featured": false
+  },
+  {
+    "brand": "OPENAI",
+    "id": "OPE-2026-439",
+    "score": "82/100",
+    "hash": "0xcc24ee2bd4aeecbe587429dd0e1854b173dcb3246b01bcc6bd440dd6184ebd98",
+    "memo": "MEMO_OpenAI.txt",
+    "featured": false
+  },
+  {
+    "brand": "OPTIMISM",
+    "id": "OPT-2026-440",
+    "score": "98/100",
+    "hash": "0xe88f1118d1da0bfdbb09c56ee6a6538e86002baf4241d3403f1139fec08165cd",
+    "memo": "MEMO_Optimism.txt",
+    "featured": false
+  },
+  {
+    "brand": "ORGAIN",
+    "id": "ORG-2026-441",
+    "score": "83/100",
+    "hash": "0x699beb1c7f6a79c19bf48fe3b59e85f6a79c5f895d3cef160a0f7bccc19ce9dc",
+    "memo": "MEMO_Orgain.txt",
+    "featured": false
+  },
+  {
+    "brand": "OSCAR DE LA RENTA",
+    "id": "OSC-2026-442",
+    "score": "86/100",
+    "hash": "0xe6a64f63a0c442115ae326413cd952971d7841060d706f525d6559a3c9cb233e",
+    "memo": "MEMO_Oscar_de_la_Renta.txt",
+    "featured": false
+  },
+  {
+    "brand": "OTB GROUP",
+    "id": "OTB-2026-443",
+    "score": "87/100",
+    "hash": "0x1d5bd26070dea90f6f25280adbb80d65849ff771c619c6a8ecfbee42893b8433",
+    "memo": "MEMO_OTB_Group.txt",
+    "featured": false
+  },
+  {
+    "brand": "OURA RING",
+    "id": "OUR-2026-444",
+    "score": "85/100",
+    "hash": "0x4299bb963c3b6ab292c79e268e081eac455dca4db99453cdfa07664048ac56d5",
+    "memo": "MEMO_Oura_Ring.txt",
+    "featured": false
+  },
+  {
+    "brand": "OUSG (ONDO)",
+    "id": "OUS-2026-445",
+    "score": "95/100",
+    "hash": "0xb9a5c2e9669f0bc075226f42a65a0787380677c2d9c6dbdf2b6fe5331658798b",
+    "memo": "MEMO_OUSG__Ondo_.txt",
+    "featured": false
+  },
+  {
+    "brand": "OWYN",
+    "id": "OWY-2026-446",
+    "score": "88/100",
+    "hash": "0x4679cadc1cff38173c049a5e4928b89f537882970b37e719b82b98ab28deb8d0",
+    "memo": "MEMO_OWYN.txt",
+    "featured": false
+  },
+  {
+    "brand": "PACT COFFEE",
+    "id": "PAC-2026-447",
+    "score": "87/100",
+    "hash": "0x97111474b7948836044fe8927597303187caf784f07bf43f01c864b937566091",
+    "memo": "MEMO_Pact_Coffee.txt",
+    "featured": false
+  },
+  {
+    "brand": "PAGANI",
+    "id": "PAG-2026-448",
+    "score": "95/100",
+    "hash": "0xab3a350051c4168cd64948c8bffca4f7ddde63e1fe8ea6e3bf9997dc491c9552",
+    "memo": "MEMO_Pagani.txt",
+    "featured": false
+  },
+  {
+    "brand": "PALACE",
+    "id": "PAL-2026-449",
+    "score": "93/100",
+    "hash": "0xf11c4636135d51ce7c19168e4c0c69743232a3ed31a9b9b3225a6c202b603815",
+    "memo": "MEMO_Palace.txt",
+    "featured": false
+  },
+  {
+    "brand": "PANERAI",
+    "id": "PAN-2026-450",
+    "score": "85/100",
+    "hash": "0x2879bfd0b916a375a5dc17762068bb3b8563ae646aadfa4bea3fe157445d9723",
+    "memo": "MEMO_Panerai.txt",
+    "featured": false
+  },
+  {
+    "brand": "PAOLA LENTI",
+    "id": "PAO-2026-451",
+    "score": "84/100",
+    "hash": "0x6169977727fd04b056207a627d45c1c86c592b45fe9d9d5dcb31af9270a5a996",
+    "memo": "MEMO_Paola_Lenti.txt",
+    "featured": false
+  },
+  {
+    "brand": "PARFUMS DE MARLY",
+    "id": "PAR-2026-452",
+    "score": "94/100",
+    "hash": "0x647ce7532fb3e415bef044403fea3869b416d7928170eb2364f25f6a290c223a",
+    "memo": "MEMO_Parfums_de_Marly.txt",
+    "featured": false
+  },
+  {
+    "brand": "PAT MCGRATH LABS",
+    "id": "PAT-2026-453",
+    "score": "82/100",
+    "hash": "0x2d0c1bfc3c06a9d059decd8c693e32886d3ab6d9f8e973b27339db120540b50f",
+    "memo": "MEMO_Pat_McGrath_Labs.txt",
+    "featured": false
+  },
+  {
+    "brand": "PATAGONIA",
+    "id": "PAT-2026-454",
+    "score": "87/100",
+    "hash": "0xe7388c1fff69d23ac318b5fd13978c0da73f61eedafd51f7bf0345d28ce14126",
+    "memo": "MEMO_Patagonia.txt",
+    "featured": false
+  },
+  {
+    "brand": "PATEK PHILIPPE",
+    "id": "PAT-2026-455",
+    "score": "88/100",
+    "hash": "0xe84ee07e0b20148e0dce960198d13b196a27e8a43c2aa2674ef64a532e446b8f",
+    "memo": "MEMO_Patek_Philippe.txt",
+    "featured": false
+  },
+  {
+    "brand": "PAX GOLD (PAXG)",
+    "id": "PAX-2026-456",
+    "score": "94/100",
+    "hash": "0x01e1a2933f81b818e23011ab786af1d900b5dfcccb80d50fd56dac3d1d8157a0",
+    "memo": "MEMO_PAX_Gold__PAXG_.txt",
+    "featured": false
+  },
+  {
+    "brand": "PAYPAL USD (PYUSD)",
+    "id": "PAY-2026-457",
+    "score": "90/100",
+    "hash": "0xfbeb7001c4585b130b18822290047542fdeadbadbae4eec6b0e3c975d1a04911",
+    "memo": "MEMO_PayPal_USD__PYUSD_.txt",
+    "featured": false
+  },
+  {
+    "brand": "PELOTON",
+    "id": "PEL-2026-458",
+    "score": "86/100",
+    "hash": "0x92eab291cd041f8c015daa2a831cf20cdc55843b9a616d021a85a2a1645179c9",
+    "memo": "MEMO_Peloton.txt",
+    "featured": false
+  },
+  {
+    "brand": "PENDULUM",
+    "id": "PEN-2026-459",
+    "score": "94/100",
+    "hash": "0xbbb513eff394d9c0c64a3b8ba9e7394acf21d0b696f7571abc387a46d3153178",
+    "memo": "MEMO_Pendulum.txt",
+    "featured": false
+  },
+  {
+    "brand": "PEPE (PEPE)",
+    "id": "PEP-2026-460",
+    "score": "91/100",
+    "hash": "0x380d1cd9a9bbbf70de3c651e61bdfb6dec53c1037ce4c840625d42cb4cfd7e69",
+    "memo": "MEMO_Pepe__PEPE_.txt",
+    "featured": false
+  },
+  {
+    "brand": "PERFECT BAR",
+    "id": "PER-2026-461",
+    "score": "89/100",
+    "hash": "0x78ec61cc8158a36640484516a0007d625315cada3b813e6a5d56085911de7300",
+    "memo": "MEMO_Perfect_Bar.txt",
+    "featured": false
+  },
+  {
+    "brand": "PERFECT KETO",
+    "id": "PER-2026-462",
+    "score": "82/100",
+    "hash": "0x33b8b707ea7856f30723e102de6b264cab7143c8b0c32fb1d4a313f6196efcd9",
+    "memo": "MEMO_Perfect_Keto.txt",
+    "featured": false
+  },
+  {
+    "brand": "PEUGEOT",
+    "id": "PEU-2026-463",
+    "score": "83/100",
+    "hash": "0x86400ad6222f6a2d70eb56238e2c5bd66a41d121f1e6aa8fdc6b87db10affd6b",
+    "memo": "MEMO_Peugeot.txt",
+    "featured": false
+  },
+  {
+    "brand": "PI NETWORK (PI)",
+    "id": "PI -2026-464",
+    "score": "97/100",
+    "hash": "0xf24c1df1e40f6b288adb03d483773addb1d4a5344ef13ebc2ac5de16010e7383",
+    "memo": "MEMO_Pi_Network__PI_.txt",
+    "featured": false
+  },
+  {
+    "brand": "PIAGET",
+    "id": "PIA-2026-465",
+    "score": "97/100",
+    "hash": "0xf9426046fbcb207281f9348bf034cfaacbabdef7ddc60d5131a5e55400b5a39f",
+    "memo": "MEMO_Piaget.txt",
+    "featured": false
+  },
+  {
+    "brand": "PLATED",
+    "id": "PLA-2026-466",
+    "score": "85/100",
+    "hash": "0x8b87b2e9db0037afecfbc3fd11fbd87e8a6244fece4054e0e165c07555478619",
+    "memo": "MEMO_Plated.txt",
+    "featured": false
+  },
+  {
+    "brand": "PLANTABLE",
+    "id": "PLA-2026-467",
+    "score": "92/100",
+    "hash": "0x8a202aebd816f123b45e9ddf823b35128655411341366502257a62f379458a31",
+    "memo": "MEMO_Plantable.txt",
+    "featured": false
+  },
+  {
+    "brand": "POL (EX-MATIC)",
+    "id": "POL-2026-468",
+    "score": "98/100",
+    "hash": "0x571d67a4ebb592d0f5dd37c395695066377ac65bf0367989d9062d085ac9c44d",
+    "memo": "MEMO_POL__ex_MATIC_.txt",
+    "featured": false
+  },
+  {
+    "brand": "POLARIS",
+    "id": "POL-2026-469",
+    "score": "93/100",
+    "hash": "0x2813d33308dea80239b483eec213de1825d9965b6e065b31d6e3258dea8d88a3",
+    "memo": "MEMO_Polaris.txt",
+    "featured": false
+  },
+  {
+    "brand": "POLESTAR",
+    "id": "POL-2026-470",
+    "score": "87/100",
+    "hash": "0x7e0d2b34feef59344488092e922bfd6052842b5d475b6858df268b8bcc872c0b",
+    "memo": "MEMO_Polestar.txt",
+    "featured": false
+  },
+  {
+    "brand": "POLIFORM",
+    "id": "POL-2026-471",
+    "score": "86/100",
+    "hash": "0x2775b08667f718432cd3da4875f203ef8eaafb3d223f0956b11773d9d2675bc1",
+    "memo": "MEMO_Poliform.txt",
+    "featured": false
+  },
+  {
+    "brand": "POLKADOT",
+    "id": "POL-2026-472",
+    "score": "87/100",
+    "hash": "0x97bb888fcdf733223950cc82825d2afc6856d1da8a3bf9f366b02713f6c00533",
+    "memo": "MEMO_Polkadot.txt",
+    "featured": false
+  },
+  {
+    "brand": "POLTRONA FRAU",
+    "id": "POL-2026-473",
+    "score": "85/100",
+    "hash": "0xccff6346c5189b02c9e909df4753eca1281e4b3be2eee121244a8d8435f2a497",
+    "memo": "MEMO_Poltrona_Frau.txt",
+    "featured": false
+  },
+  {
+    "brand": "POLYGON",
+    "id": "POL-2026-474",
+    "score": "84/100",
+    "hash": "0x78165525c44c170cf8fec86a7a422be10ca10a57243abafdda08e8ca8d54d5eb",
+    "memo": "MEMO_Polygon.txt",
+    "featured": false
+  },
+  {
+    "brand": "POPPI",
+    "id": "POP-2026-475",
+    "score": "90/100",
+    "hash": "0xe1d7edea1b334df3730229026afe5bcea998b1d5c9ea171710e359f8df18ae07",
+    "memo": "MEMO_Poppi.txt",
+    "featured": false
+  },
+  {
+    "brand": "PORRO",
+    "id": "POR-2026-476",
+    "score": "83/100",
+    "hash": "0xea70da1a74d65069ae0e29040e46272d211b78cb93bccf3a21c9d8d1edb27b48",
+    "memo": "MEMO_Porro.txt",
+    "featured": false
+  },
+  {
+    "brand": "PORSCHE",
+    "id": "POR-2026-477",
+    "score": "90/100",
+    "hash": "0x55c98fc8a35bdd42456fb73e11493c8a548cbf1e0ae4e2f2d0d6d1e335699e68",
+    "memo": "MEMO_Porsche.txt",
+    "featured": false
+  },
+  {
+    "brand": "PRADA",
+    "id": "PRA-2026-478",
+    "score": "97/100",
+    "hash": "0xd6b6bde90c14574bd6f67d136ec23bb9092d212c6a2db396575b97264f50c1e0",
+    "memo": "MEMO_Prada.txt",
+    "featured": false
+  },
+  {
+    "brand": "PRADA GROUP",
+    "id": "PRA-2026-479",
+    "score": "85/100",
+    "hash": "0xf72db75abe4fd3e877a47dec7b7f0e884fd901df348c546c9976c4fe042c5a82",
+    "memo": "MEMO_Prada_Group.txt",
+    "featured": false
+  },
+  {
+    "brand": "PRIME (LOGAN PAUL)",
+    "id": "PRI-2026-480",
+    "score": "96/100",
+    "hash": "0xb8e19647e1f7e147d7c4bf24930379ec43558e2c1bf48654ee80f7d6b22a436a",
+    "memo": "MEMO_Prime__Logan_Paul_.txt",
+    "featured": false
+  },
+  {
+    "brand": "PROPER WILD",
+    "id": "PRO-2026-481",
+    "score": "94/100",
+    "hash": "0x98284fef97bf10f1e58f69865718f1ada88f71e39c036733e0c42c9f406e4159",
+    "memo": "MEMO_Proper_Wild.txt",
+    "featured": false
+  },
+  {
+    "brand": "PROVENANCE (HASH)",
+    "id": "PRO-2026-482",
+    "score": "84/100",
+    "hash": "0xee785966344820ab6755b93f905edcec429a6cb84b188cdbdcfa8ec7a64301ee",
+    "memo": "MEMO_Provenance__HASH_.txt",
+    "featured": false
+  },
+  {
+    "brand": "PUMP.FUN (PUMP)",
+    "id": "PUM-2026-483",
+    "score": "95/100",
+    "hash": "0x5f31e042724d4e7fe7282a380d0674e56eed3b7bef29fa856dd305401573139c",
+    "memo": "MEMO_Pump_fun__PUMP_.txt",
+    "featured": false
+  },
+  {
+    "brand": "PURE ORGANIC",
+    "id": "PUR-2026-484",
+    "score": "88/100",
+    "hash": "0x33665fbc2153c06327646ed0ca5fa059ef2aa949e024dab8e824d325851310cd",
+    "memo": "MEMO_Pure_Organic.txt",
+    "featured": false
+  },
+  {
+    "brand": "QUANT (QNT)",
+    "id": "QUA-2026-485",
+    "score": "90/100",
+    "hash": "0x02598254e97e7bb5c28fc4262d0ffa91df1ce35d5c4cefc4743bb7f4c1e6cb17",
+    "memo": "MEMO_Quant__QNT_.txt",
+    "featured": false
+  },
+  {
+    "brand": "QUEST NUTRITION",
+    "id": "QUE-2026-486",
+    "score": "95/100",
+    "hash": "0x1152ea578452f5c0046a8b725c98c07887d838dddbe16f6cfc07f4959d2b1b1f",
+    "memo": "MEMO_Quest_Nutrition.txt",
+    "featured": false
+  },
+  {
+    "brand": "QUOOKER",
+    "id": "QUO-2026-487",
+    "score": "99/100",
+    "hash": "0x15d3965f269fabac35fdb5a58137cb185d55f8dba6d8425a64a65ad76dd55f47",
+    "memo": "MEMO_Quooker.txt",
+    "featured": false
+  },
+  {
+    "brand": "RAIN (RAIN)",
+    "id": "RAI-2026-488",
+    "score": "89/100",
+    "hash": "0x35d7828b036494bd64b9e3a0c4dda0400e842afe42d91f9062909f508c3328c6",
+    "memo": "MEMO_Rain__RAIN_.txt",
+    "featured": false
+  },
+  {
+    "brand": "RAMDAM",
+    "id": "RAM-2026-489",
+    "score": "95/100",
+    "hash": "0x58fef5c57e6388dd0817b69ff6afb0be553477735ccd8d62ee10e942320c8e24",
+    "memo": "MEMO_Ramdam.txt",
+    "featured": false
+  },
+  {
+    "brand": "RARE BEAUTY",
+    "id": "RAR-2026-490",
+    "score": "86/100",
+    "hash": "0x4df492efbb9106dd4d25a7917b4418438b7aa5187060afe04a17ef54270e9724",
+    "memo": "MEMO_Rare_Beauty.txt",
+    "featured": false
+  },
+  {
+    "brand": "RATIONALE",
+    "id": "RAT-2026-491",
+    "score": "88/100",
+    "hash": "0x29be55cbe297833bc58fd85621dea0be2d3976f2a909a2ea6ae37248bdc4ed4e",
+    "memo": "MEMO_Rationale.txt",
+    "featured": false
+  },
+  {
+    "brand": "REFORMATION",
+    "id": "REF-2026-492",
+    "score": "96/100",
+    "hash": "0x9b4e2d0cd74caadc1efb5eff541c348b50095a2823349f79e1d87b74fac8c042",
+    "memo": "MEMO_Reformation.txt",
+    "featured": false
+  },
+  {
+    "brand": "RELATED COMPANIES",
+    "id": "REL-2026-493",
+    "score": "94/100",
+    "hash": "0x8e42533956bba1eee7b5584b8ebdf790e6220f9f06d2b4123de5e93123fee9a6",
+    "memo": "MEMO_Related_Companies.txt",
+    "featured": false
+  },
+  {
+    "brand": "RENDER (RENDER)",
+    "id": "REN-2026-494",
+    "score": "88/100",
+    "hash": "0xfcdafc452b20ee084328069ac08f117138513c8c84b2b54a4f0a6f25c523ed19",
+    "memo": "MEMO_Render__RENDER_.txt",
+    "featured": false
+  },
+  {
+    "brand": "RENAULT",
+    "id": "REN-2026-495",
+    "score": "95/100",
+    "hash": "0x6aff307ff66e1ca694dd76bccbd3b9b83ede6c77abf86aecbe633613d3325c72",
+    "memo": "MEMO_Renault.txt",
+    "featured": false
+  },
+  {
+    "brand": "RHODE",
+    "id": "RHO-2026-496",
+    "score": "91/100",
+    "hash": "0x0f5502f5907bdef5000ec4a801e13009cf87b9198029e10a5b63eb2ee00796af",
+    "memo": "MEMO_Rhode.txt",
+    "featured": false
+  },
+  {
+    "brand": "RIMAC",
+    "id": "RIM-2026-497",
+    "score": "85/100",
+    "hash": "0x4002b6fa1c7cffc4bad93e739d9b6412422cbf18962eb9d570961338619a7616",
+    "memo": "MEMO_Rimac.txt",
+    "featured": false
+  },
+  {
+    "brand": "RIMADESIO",
+    "id": "RIM-2026-498",
+    "score": "91/100",
+    "hash": "0x8f8961c0b2006d07b32d0263c0871f5876d55a2b81b0e0e435e9bb8b2b51f2b9",
+    "memo": "MEMO_Rimadesio.txt",
+    "featured": false
+  },
+  {
+    "brand": "RIMOWA",
+    "id": "RIM-2026-499",
+    "score": "83/100",
+    "hash": "0xdb7ee21041bab1dc4a735b649f7b4cbfd2a2c2bb80c2c4ee749dac463942ff16",
+    "memo": "MEMO_Rimowa.txt",
+    "featured": false
+  },
+  {
+    "brand": "RIPPLE (XRP)",
+    "id": "RIP-2026-500",
+    "score": "88/100",
+    "hash": "0x4fc3c7f70bea027473af08bf033fab88e65ffa0fe94c4fd429ca32af4ee7336c",
+    "memo": "MEMO_Ripple__XRP_.txt",
+    "featured": false
+  },
+  {
+    "brand": "RIPPLE USD",
+    "id": "RIP-2026-501",
+    "score": "95/100",
+    "hash": "0x4ae39ab721ce7709b29a76921eb4cfd9b0dd5b2d7a4d818da9392e7e6e1d9bb2",
+    "memo": "MEMO_Ripple_USD.txt",
+    "featured": false
+  },
+  {
+    "brand": "RISE BREWING",
+    "id": "RIS-2026-502",
+    "score": "99/100",
+    "hash": "0x3a3ff5b1f1b4e1479c067da1139feb72452649bf72eb8c75a9b6ba85cb59ef01",
+    "memo": "MEMO_RISE_Brewing.txt",
+    "featured": false
+  },
+  {
+    "brand": "RITUAL",
+    "id": "RIT-2026-503",
+    "score": "95/100",
+    "hash": "0x1b98c4562035cf3f61e5038dcd7ca4d8c1f7276f2812bf4d19c91e6020f9ec78",
+    "memo": "MEMO_Ritual.txt",
+    "featured": false
+  },
+  {
+    "brand": "RIVA (FERRETTI GROUP)",
+    "id": "RIV-2026-504",
+    "score": "89/100",
+    "hash": "0x2f00f05187a03bf804727dd77bc64d25a99686b1f058d2c7e23f1603d8cfdda4",
+    "memo": "MEMO_Riva__Ferretti_Group_.txt",
+    "featured": false
+  },
+  {
+    "brand": "RIVA 1920",
+    "id": "RIV-2026-505",
+    "score": "82/100",
+    "hash": "0xdce4fc4d5ed06b4c7a1ed174ed5112e79d06ffff690e1b844fdb39b528e83de8",
+    "memo": "MEMO_Riva_1920.txt",
+    "featured": false
+  },
+  {
+    "brand": "RIVIAN",
+    "id": "RIV-2026-506",
+    "score": "97/100",
+    "hash": "0xc0bf1f0424ad903cd215ac8eba044e46e02b38d90064002c4c85ddb2002f62be",
+    "memo": "MEMO_Rivian.txt",
+    "featured": false
+  },
+  {
+    "brand": "ROBERTO CAVALLI",
+    "id": "ROB-2026-507",
+    "score": "84/100",
+    "hash": "0x998f05ecbead65589e9baf8cc7835201715c7973efdffc47b0f53839a1e730cb",
+    "memo": "MEMO_Roberto_Cavalli.txt",
+    "featured": false
+  },
+  {
+    "brand": "ROCHE BOBOIS",
+    "id": "ROC-2026-508",
+    "score": "83/100",
+    "hash": "0xccdcc32f42fb266fee8831d83549964127de42255605a3416e82832918b55bb3",
+    "memo": "MEMO_Roche_Bobois.txt",
+    "featured": false
+  },
+  {
+    "brand": "ROCKET POOL",
+    "id": "ROC-2026-509",
+    "score": "96/100",
+    "hash": "0x84bf9c5ae71d4e45df0eaa936fff4552fbe3e7cded5d28e756be4e5a4aba8c7d",
+    "memo": "MEMO_Rocket_Pool.txt",
+    "featured": false
+  },
+  {
+    "brand": "ROGER DUBUIS",
+    "id": "ROG-2026-510",
+    "score": "85/100",
+    "hash": "0xe38364f89ea13d1b2be16040b626a623b8cba86e8f669f49a2bc1d0f6e6d7f8b",
+    "memo": "MEMO_Roger_Dubuis.txt",
+    "featured": false
+  },
+  {
+    "brand": "ROLEX",
+    "id": "ROL-2026-511",
+    "score": "85/100",
+    "hash": "0x79d8a54b79393b5f06b49e8706c2f55f8bd0e5e86d46154e50a4e999a1417acc",
+    "memo": "MEMO_Rolex.txt",
+    "featured": false
+  },
+  {
+    "brand": "ROLLS-ROYCE HOLDINGS",
+    "id": "ROL-2026-512",
+    "score": "83/100",
+    "hash": "0x458f97be676c8752ee795281f6d1c379de7b69c2967e0f9ea99b041cf63a7fc6",
+    "memo": "MEMO_Rolls_Royce_Holdings.txt",
+    "featured": false
+  },
+  {
+    "brand": "ROLLS-ROYCE MOTOR CARS",
+    "id": "ROL-2026-513",
+    "score": "88/100",
+    "hash": "0x98bce236953476854e3823b9490480142092b50082381883f947b85dc75bbb5f",
+    "memo": "MEMO_Rolls_Royce_Motor_Cars.txt",
+    "featured": false
+  },
+  {
+    "brand": "ROSINA",
+    "id": "ROS-2026-514",
+    "score": "89/100",
+    "hash": "0xec17988093ceb05b480a75229516e32e27f1d864aec13681ae71964aab7ad0ae",
+    "memo": "MEMO_Rosina.txt",
+    "featured": false
+  },
+  {
+    "brand": "RXBAR",
+    "id": "RXB-2026-515",
+    "score": "88/100",
+    "hash": "0xca64b45640680dfa33ca7ece14307d0ea25779cbe2864fe0626a563b6ca924d9",
+    "memo": "MEMO_RXBAR.txt",
+    "featured": false
+  },
+  {
+    "brand": "RYZE SUPERFOODS",
+    "id": "RYZ-2026-516",
+    "score": "85/100",
+    "hash": "0xcb3a1fbc8290ee0e07e83ac7f891fd5171211341dbcf4b9eea341fc012d253b3",
+    "memo": "MEMO_RYZE_Superfoods.txt",
+    "featured": false
+  },
+  {
+    "brand": "SAIE BEAUTY",
+    "id": "SAI-2026-517",
+    "score": "88/100",
+    "hash": "0xfca5b523a6f361bea0b1380f6ae2337a95e9ef3ac110078a28ba94d595f91661",
+    "memo": "MEMO_Saie_Beauty.txt",
+    "featured": false
+  },
+  {
+    "brand": "SAINT JANE",
+    "id": "SAI-2026-518",
+    "score": "99/100",
+    "hash": "0x3f0e8ee48e04e65e30a6632f0e7da0ea523e4ff4b27be8d96580d7a29db50558",
+    "memo": "MEMO_Saint_Jane.txt",
+    "featured": false
+  },
+  {
+    "brand": "SAINT LAURENT",
+    "id": "SAI-2026-519",
+    "score": "89/100",
+    "hash": "0x8456b8df64356965751f104176312583043161f24efa93be854ca1ac39157e33",
+    "memo": "MEMO_Saint_Laurent.txt",
+    "featured": false
+  },
+  {
+    "brand": "SAKARA LIFE",
+    "id": "SAK-2026-520",
+    "score": "88/100",
+    "hash": "0x91c7bc90295bc54e9c09329d24202e2dd5a472123f8e7fce28d2ab812bb8d80a",
+    "memo": "MEMO_Sakara_Life.txt",
+    "featured": false
+  },
+  {
+    "brand": "SALOMON (S/LAB)",
+    "id": "SAL-2026-521",
+    "score": "83/100",
+    "hash": "0x176560ce9ad36bca5ad862bf7dab166cae424069d482f6310cfbc000edd79b17",
+    "memo": "MEMO_Salomon__S_LAB_.txt",
+    "featured": false
+  },
+  {
+    "brand": "SALVATORE FERRAGAMO",
+    "id": "SAL-2026-522",
+    "score": "85/100",
+    "hash": "0x84e76c39b8fdb3067bb938fc68aae1656c492181763d85deedfc27333bf09314",
+    "memo": "MEMO_Salvatore_Ferragamo.txt",
+    "featured": false
+  },
+  {
+    "brand": "SALVATORI",
+    "id": "SAL-2026-523",
+    "score": "91/100",
+    "hash": "0x19863f8c8b530968d1500732438b22e134cff1c457f68e5e7fc6e67f6b09db5c",
+    "memo": "MEMO_Salvatori.txt",
+    "featured": false
+  },
+  {
+    "brand": "SAMSUNG BESPOKE",
+    "id": "SAM-2026-524",
+    "score": "93/100",
+    "hash": "0xa4cb8484f644bab7766464dc260a4317a905b2336fdf8d3342da307c6b03e965",
+    "memo": "MEMO_Samsung_Bespoke.txt",
+    "featured": false
+  },
+  {
+    "brand": "SANDRO",
+    "id": "SAN-2026-525",
+    "score": "99/100",
+    "hash": "0x7657412d54778f3aa85c8c2f00e02328d2f0c3b3e23342e7df2a1a8093601a42",
+    "memo": "MEMO_Sandro.txt",
+    "featured": false
+  },
+  {
+    "brand": "SAVILLS",
+    "id": "SAV-2026-526",
+    "score": "96/100",
+    "hash": "0xaf956d46a712920d9636798a34a73c68356d605eea92fc1bda43c1e5f56a191e",
+    "memo": "MEMO_Savills.txt",
+    "featured": false
+  },
+  {
+    "brand": "SCANIA",
+    "id": "SCA-2026-527",
+    "score": "94/100",
+    "hash": "0xfb7ff5ae9f2fab6e01b6e649fa812ab14d83bfe21b97f8b227ea116be679a663",
+    "memo": "MEMO_Scania.txt",
+    "featured": false
+  },
+  {
+    "brand": "SCHIAPARELLI",
+    "id": "SCH-2026-528",
+    "score": "85/100",
+    "hash": "0x1e9670246e701b43684438af00b4abe7881420a905b7a683606c24f19c7793a6",
+    "memo": "MEMO_Schiaparelli.txt",
+    "featured": false
+  },
+  {
+    "brand": "SEA-DOO",
+    "id": "SEA-2026-529",
+    "score": "90/100",
+    "hash": "0xbd49745702204816f6364787061d5db2a8c39fceb71a7dccc8f0b070f176be08",
+    "memo": "MEMO_Sea_Doo.txt",
+    "featured": false
+  },
+  {
+    "brand": "SEED",
+    "id": "SEE-2026-530",
+    "score": "95/100",
+    "hash": "0xdd5fe06dd1c99e89e58449975cdbd2a96c462acb56ec804e2060669c7ed5e988",
+    "memo": "MEMO_Seed.txt",
+    "featured": false
+  },
+  {
+    "brand": "SELVÀNS",
+    "id": "SEL-2026-531",
+    "score": "88/100",
+    "hash": "0xdf7f9c28a1fa766b969ef5078a8fb7ddbd55763141f96ba318d14667187d2a35",
+    "memo": "MEMO_Selv_ns.txt",
+    "featured": false
+  },
+  {
+    "brand": "SEPHORA",
+    "id": "SEP-2026-532",
+    "score": "82/100",
+    "hash": "0x14855a9a90c285cac8160d830c8ece94c6d2084dd6f030849ebe4d46c85247ed",
+    "memo": "MEMO_Sephora.txt",
+    "featured": false
+  },
+  {
+    "brand": "SERHANT.",
+    "id": "SER-2026-533",
+    "score": "87/100",
+    "hash": "0xa17458dae593ab84ab3737e0783ecd7d8596860994f8412e529c511213a99f19",
+    "memo": "MEMO_SERHANT_.txt",
+    "featured": false
+  },
+  {
+    "brand": "SÉZANE",
+    "id": "SÉZ-2026-534",
+    "score": "95/100",
+    "hash": "0xda23adbc4aa48655bee434a6de49b606bb5f1114c2e4cb74ff30c1f0dc3f0157",
+    "memo": "MEMO_S_zane.txt",
+    "featured": false
+  },
+  {
+    "brand": "SHIB (SHIBA INU)",
+    "id": "SHI-2026-535",
+    "score": "89/100",
+    "hash": "0xf4ccbf00548ebdbfba01c3bcb5dcc4185897e18b2f35295c8dd61c2771331bd7",
+    "memo": "MEMO_SHIB__Shiba_Inu_.txt",
+    "featured": false
+  },
+  {
+    "brand": "SHISEIDO",
+    "id": "SHI-2026-536",
+    "score": "99/100",
+    "hash": "0xf767f12861bc06ee9aa8d02f1396c91c354af90b2681c5146ccc17b09905e9bd",
+    "memo": "MEMO_Shiseido.txt",
+    "featured": false
+  },
+  {
+    "brand": "SICIS",
+    "id": "SIC-2026-537",
+    "score": "97/100",
+    "hash": "0x0fb882ade9a8323ea06f7c700063e4b9b3b997553566ec94b5d619e87a6120b2",
+    "memo": "MEMO_Sicis.txt",
+    "featured": false
+  },
+  {
+    "brand": "SIETE FOODS",
+    "id": "SIE-2026-538",
+    "score": "85/100",
+    "hash": "0xffe5eae849a3a0a0e5047d7356a6d543dfbdae027b31ca3e81398f4cb0d3ba43",
+    "memo": "MEMO_Siete_Foods.txt",
+    "featured": false
+  },
+  {
+    "brand": "SILESTONE",
+    "id": "SIL-2026-539",
+    "score": "98/100",
+    "hash": "0x7fae367e0d531a4c4fc54d7e8f547f8ea997fe57374147e22cc661995b5d03e2",
+    "memo": "MEMO_Silestone.txt",
+    "featured": false
+  },
+  {
+    "brand": "SIXT",
+    "id": "SIX-2026-540",
+    "score": "94/100",
+    "hash": "0xa02b922474a43fd90eed3dae6306f0e4d70ea63f86770be33a25c5efab86a819",
+    "memo": "MEMO_Sixt.txt",
+    "featured": false
+  },
+  {
+    "brand": "SKAGERAK",
+    "id": "SKA-2026-541",
+    "score": "85/100",
+    "hash": "0xd0e8836fc7a4dbb4caa8d7ca7e265f7ab5a90faf9dec42bf3ab9343caab4d94e",
+    "memo": "MEMO_Skagerak.txt",
+    "featured": false
+  },
+  {
+    "brand": "SKIMS",
+    "id": "SKI-2026-542",
+    "score": "92/100",
+    "hash": "0x24581bd2fd2de09cb49e021d0b0220e5e09bf21953c35c8f500c41a1982d37d5",
+    "memo": "MEMO_Skims.txt",
+    "featured": false
+  },
+  {
+    "brand": "SKY (SKY)",
+    "id": "SKY-2026-543",
+    "score": "88/100",
+    "hash": "0xd0e281a340e2b989e4eeae417af43366d5dbb32e6f7d984335b5b122b690f3be",
+    "memo": "MEMO_Sky__SKY_.txt",
+    "featured": false
+  },
+  {
+    "brand": "SMEG",
+    "id": "SME-2026-544",
+    "score": "84/100",
+    "hash": "0xc9d0638cd9d8b96eb8451a8fc48e265e399d5a18b015addca1dd6acc30508d80",
+    "memo": "MEMO_Smeg.txt",
+    "featured": false
+  },
+  {
+    "brand": "SOLANA",
+    "id": "SOL-2026-545",
+    "score": "97/100",
+    "hash": "0x9350709e6d29aa5f256f209dafdfc18f29a9b968794fc9f37ecf1675c78c8825",
+    "memo": "MEMO_Solana.txt",
+    "featured": false
+  },
+  {
+    "brand": "SOMNEE",
+    "id": "SOM-2026-546",
+    "score": "96/100",
+    "hash": "0x8cf5cc1d5ca60e638c1429e91a4d507bfd95ec749780c9280c441c0a5a3ece85",
+    "memo": "MEMO_Somnee.txt",
+    "featured": false
+  },
+  {
+    "brand": "SOTHEBY'S INTERNATIONAL REALTY",
+    "id": "SOT-2026-547",
+    "score": "83/100",
+    "hash": "0x13030e994df59fdd7a86992dfc4904a9d0447cf3c315649f70cf0254c2c35e8f",
+    "memo": "MEMO_Sotheby_s_International_Realty.txt",
+    "featured": false
+  },
+  {
+    "brand": "SPIKO EUTBL",
+    "id": "SPI-2026-548",
+    "score": "89/100",
+    "hash": "0xd78f9a34c1ca30abf11fe424c982ec1503b60b83415434e946fa7e4abefc7fc3",
+    "memo": "MEMO_Spiko_EUTBL.txt",
+    "featured": false
+  },
+  {
+    "brand": "SPLENDID SPOON",
+    "id": "SPL-2026-549",
+    "score": "96/100",
+    "hash": "0x8b62aa5702189b9e13dcc932f7b8261e73b952d448d022b7d5ef2955ea6b79d2",
+    "memo": "MEMO_Splendid_Spoon.txt",
+    "featured": false
+  },
+  {
+    "brand": "STACKS (STX)",
+    "id": "STA-2026-550",
+    "score": "87/100",
+    "hash": "0xd84215948c5c4bf8b966a26e767b1779b24ed190c13ca07d5bc73d43bef1c8d7",
+    "memo": "MEMO_Stacks__STX_.txt",
+    "featured": false
+  },
+  {
+    "brand": "STABLE (STABLE)",
+    "id": "STA-2026-551",
+    "score": "84/100",
+    "hash": "0xe8d9f817fbee66478f19f289968788475904f1af9c2e8480d41bf11c1ae3eca5",
+    "memo": "MEMO_Stable__STABLE_.txt",
+    "featured": false
+  },
+  {
+    "brand": "STARLINE",
+    "id": "STA-2026-552",
+    "score": "89/100",
+    "hash": "0x92c71301f56701c1b62fc73f92053e9c547c67b3f1291c1053b29fd4ed3dfbb4",
+    "memo": "MEMO_Starline.txt",
+    "featured": false
+  },
+  {
+    "brand": "STELLA MCCARTNEY",
+    "id": "STE-2026-553",
+    "score": "90/100",
+    "hash": "0x3676daa3bf7dc983bf1e9ce13bdd94d3a349d38a5c47f17c9fff19e4c4dc2025",
+    "memo": "MEMO_Stella_McCartney.txt",
+    "featured": false
+  },
+  {
+    "brand": "STELLANTIS",
+    "id": "STE-2026-554",
+    "score": "97/100",
+    "hash": "0xddf49df496df8f8a64042b4d5d4859cafe8eff0d320b1059abc8f24aaf293900",
+    "memo": "MEMO_Stellantis.txt",
+    "featured": false
+  },
+  {
+    "brand": "STELLAR (XLM)",
+    "id": "STE-2026-555",
+    "score": "97/100",
+    "hash": "0xf7f2a14d551d493e5772be5efcd1f24c231e5240da627276598ed9f609eb41c6",
+    "memo": "MEMO_Stellar__XLM_.txt",
+    "featured": false
+  },
+  {
+    "brand": "STONE ISLAND",
+    "id": "STO-2026-556",
+    "score": "92/100",
+    "hash": "0xe024ccba693b29f0b279347c4d559167b9ed5bdab37ff2df9c880ffff87ff0a0",
+    "memo": "MEMO_Stone_Island.txt",
+    "featured": false
+  },
+  {
+    "brand": "STRING FURNITURE",
+    "id": "STR-2026-557",
+    "score": "94/100",
+    "hash": "0x1d8c571bfbda13948444d1cba615de283df80b5dc8dfdfb0fb2f046fa7bd1497",
+    "memo": "MEMO_String_Furniture.txt",
+    "featured": false
+  },
+  {
+    "brand": "STÜSSY",
+    "id": "STÜ-2026-558",
+    "score": "88/100",
+    "hash": "0x11eada1f23bcb3f97952a989eeea04058815d9aa57ef79ec94dc181943039ab4",
+    "memo": "MEMO_St_ssy.txt",
+    "featured": false
+  },
+  {
+    "brand": "SUB-ZERO WOLF",
+    "id": "SUB-2026-559",
+    "score": "90/100",
+    "hash": "0x6f6cdb80101ca00efb83017c1dcfaa5c2f26eb70765527d936a1fc2f3e1c0f03",
+    "memo": "MEMO_Sub_Zero_Wolf.txt",
+    "featured": false
+  },
+  {
+    "brand": "SUBARU",
+    "id": "SUB-2026-560",
+    "score": "87/100",
+    "hash": "0xf31b8557cc941a09b483508d9f7039c96c5a99d8ea71d9672daba1c7f0249415",
+    "memo": "MEMO_Subaru.txt",
+    "featured": false
+  },
+  {
+    "brand": "SUI (SUI)",
+    "id": "SUI-2026-561",
+    "score": "84/100",
+    "hash": "0x3ad6280cad97682e23fc4cdd1b4123e3b96cfeef5c2209449ca1c338107ec129",
+    "memo": "MEMO_Sui__SUI_.txt",
+    "featured": false
+  },
+  {
+    "brand": "SULWHASOO",
+    "id": "SUL-2026-562",
+    "score": "86/100",
+    "hash": "0x58b5d025fdc57c16a0eaf9b62882081206bd08a4bf604af188cff62ff714cf37",
+    "memo": "MEMO_Sulwhasoo.txt",
+    "featured": false
+  },
+  {
+    "brand": "SUNBASKET",
+    "id": "SUN-2026-563",
+    "score": "86/100",
+    "hash": "0x595af1e2d03dc464ad7bce8ccd123b56c4e708fe6cc1112bf4a2dc2811ff51bc",
+    "memo": "MEMO_Sunbasket.txt",
+    "featured": false
+  },
+  {
+    "brand": "SUNDAY RILEY",
+    "id": "SUN-2026-564",
+    "score": "96/100",
+    "hash": "0x0de8dad3ebec6a324b7870c799c888e6b36e0e2027d01a26b51b55a6a75fbff9",
+    "memo": "MEMO_Sunday_Riley.txt",
+    "featured": false
+  },
+  {
+    "brand": "SUNSEEKER",
+    "id": "SUN-2026-565",
+    "score": "90/100",
+    "hash": "0x14a1ca07115d47282999aa5de054788bc4c491dba3e2dc76d6f4b5af53003dff",
+    "memo": "MEMO_Sunseeker.txt",
+    "featured": false
+  },
+  {
+    "brand": "SUPERSTATE USTB",
+    "id": "SUP-2026-566",
+    "score": "94/100",
+    "hash": "0xdafc1502a4cac6e518f20fd3d05c25e3bea99e7247f682868a32648295a2f838",
+    "memo": "MEMO_Superstate_USTB.txt",
+    "featured": false
+  },
+  {
+    "brand": "SUPREME",
+    "id": "SUP-2026-567",
+    "score": "86/100",
+    "hash": "0x6d5ff33a9f8026b980e9552fb74ddea175e3f2c5510f22fa90548a6b2d3f54d1",
+    "memo": "MEMO_Supreme.txt",
+    "featured": false
+  },
+  {
+    "brand": "SURFSIDE",
+    "id": "SUR-2026-568",
+    "score": "94/100",
+    "hash": "0x8594824ea1490547ae5612ccea21765a895542aed2f4c297078c1bcbce3f7a6c",
+    "memo": "MEMO_Surfside.txt",
+    "featured": false
+  },
+  {
+    "brand": "SWIRE PROPERTIES",
+    "id": "SWI-2026-569",
+    "score": "91/100",
+    "hash": "0x31a53d0a25627c2fba74260b9c5757520e9828a1851df013828a82001047589a",
+    "memo": "MEMO_Swire_Properties.txt",
+    "featured": false
+  },
+  {
+    "brand": "SWOON",
+    "id": "SWO-2026-570",
+    "score": "94/100",
+    "hash": "0xf646dafba69f520517fee0ecb230ee0b405e4579ac1406b7ea8941ad94dc3655",
+    "memo": "MEMO_Swoon.txt",
+    "featured": false
+  },
+  {
+    "brand": "TALLY HEALTH",
+    "id": "TAL-2026-571",
+    "score": "87/100",
+    "hash": "0x607931f73cdb8738a26122093fa70079b116b0a3e18d735de15483395e42661b",
+    "memo": "MEMO_Tally_Health.txt",
+    "featured": false
+  },
+  {
+    "brand": "TAG HEUER",
+    "id": "TAG-2026-572",
+    "score": "89/100",
+    "hash": "0xdd37f9ac931cbdfe0ff74ee566367783458a63bbe845d717a63ee2d5fcb23b80",
+    "memo": "MEMO_Tag_Heuer.txt",
+    "featured": false
+  },
+  {
+    "brand": "TELFAR",
+    "id": "TEL-2026-573",
+    "score": "96/100",
+    "hash": "0x9ccef1c27681459e9f22149b81a199ab5768a464c3ab9a277c926afade63cd95",
+    "memo": "MEMO_Telfar.txt",
     "featured": false
   },
   {
     "brand": "TESLA",
-    "id": "TSLA-2026-012",
+    "id": "TES-2026-574",
     "score": "91/100",
-    "hash": "0xd4cf83c9f42d74b05f40a0575b4849cf855aba01627ea76be6c35ceec17ce616",
-    "memo": "MEMO_TESLA_TSLA-2026-012.txt",
+    "hash": "0xb6311080943a54eb22a91999633c8adf1b70f7d6e8b24d5a587551f498a2a713",
+    "memo": "MEMO_Tesla.txt",
+    "featured": false
+  },
+  {
+    "brand": "TETHER (USDT)",
+    "id": "TET-2026-575",
+    "score": "94/100",
+    "hash": "0x0f9e9a1a39d722c9a34f1e916da0b7affc6427b5876d5f54cf004e417c114910",
+    "memo": "MEMO_Tether__USDT_.txt",
+    "featured": false
+  },
+  {
+    "brand": "TETHER GOLD (XAUT)",
+    "id": "TET-2026-576",
+    "score": "84/100",
+    "hash": "0xbb06eca6838373c6c6b78c47d059e72e919af9397594c61ebf24cc3d3bd9c8f6",
+    "memo": "MEMO_Tether_Gold__XAUT_.txt",
+    "featured": false
+  },
+  {
+    "brand": "THE AGENCY (MAURICIO UMANSKY)",
+    "id": "THE-2026-577",
+    "score": "84/100",
+    "hash": "0xd6e89c071b9ca7358ab90cabc9d67c9d5ff2c4692cc84d0632bffedfdc268057",
+    "memo": "MEMO_The_Agency__Mauricio_Umansky_.txt",
+    "featured": false
+  },
+  {
+    "brand": "THE KOOPLES",
+    "id": "THE-2026-578",
+    "score": "86/100",
+    "hash": "0x531161f68e79d7355c6feb320fe3aab2cab2067c4b8a0e26b69a6d7852d00d73",
+    "memo": "MEMO_The_Kooples.txt",
+    "featured": false
+  },
+  {
+    "brand": "THE ORDINARY",
+    "id": "THE-2026-579",
+    "score": "99/100",
+    "hash": "0xbe0e3ebda1715b32a9ec6be883e57f4d1d867c4b2da6c1e5624a399e2839d018",
+    "memo": "MEMO_The_Ordinary.txt",
+    "featured": false
+  },
+  {
+    "brand": "THE RITZ-CARLTON RESIDENCES",
+    "id": "THE-2026-580",
+    "score": "93/100",
+    "hash": "0xf8c9183ab5d05531cacf498d876dc5ed2818def8a1b37bae7f279ca39dadd656",
+    "memo": "MEMO_The_Ritz_Carlton_Residences.txt",
+    "featured": false
+  },
+  {
+    "brand": "THE ROW",
+    "id": "THE-2026-581",
+    "score": "96/100",
+    "hash": "0xedf807bcd9fd7b18bf85eec243a8a07450422cbffc357cb77fdf1f6211844b9c",
+    "memo": "MEMO_The_Row.txt",
+    "featured": false
+  },
+  {
+    "brand": "THE TEA SPOT",
+    "id": "THE-2026-582",
+    "score": "89/100",
+    "hash": "0x95be3402a818c0b5ef7882f548bfdd60d2fd7bd23293286df82e684c0c183003",
+    "memo": "MEMO_The_Tea_Spot.txt",
+    "featured": false
+  },
+  {
+    "brand": "THE WHOO",
+    "id": "THE-2026-583",
+    "score": "85/100",
+    "hash": "0xee85b0a635b9d992d917677a7bb8f8cf05b390739ab524ed2b1c46b16fef22a1",
+    "memo": "MEMO_The_Whoo.txt",
+    "featured": false
+  },
+  {
+    "brand": "THE WHOLE TRUTH",
+    "id": "THE-2026-584",
+    "score": "97/100",
+    "hash": "0x17f6d27513a5dce423c8ae51c87bf55d3c97f5cc7cb6c8050d473b5a87bbde48",
+    "memo": "MEMO_The_Whole_Truth.txt",
+    "featured": false
+  },
+  {
+    "brand": "THERABODY",
+    "id": "THE-2026-585",
+    "score": "98/100",
+    "hash": "0x218f582cbbe49f2865bce556544d8b366802d4b7990560efa74bc559a3d3f79c",
+    "memo": "MEMO_Therabody.txt",
+    "featured": false
+  },
+  {
+    "brand": "THOM BROWNE",
+    "id": "THO-2026-586",
+    "score": "84/100",
+    "hash": "0x728a3c03660c1e264d71ddb9a4c83c37b5b00715bd5cb8659b5ec04968365e76",
+    "memo": "MEMO_Thom_Browne.txt",
+    "featured": false
+  },
+  {
+    "brand": "THORNE",
+    "id": "THO-2026-587",
+    "score": "86/100",
+    "hash": "0x6961aee22a1506d91b497bf0740babeb12b5c9f836d560fb9e2b06004aa7ede0",
+    "memo": "MEMO_Thorne.txt",
+    "featured": false
+  },
+  {
+    "brand": "THRIVAL",
+    "id": "THR-2026-588",
+    "score": "89/100",
+    "hash": "0x5629bba99d7a81d9a7e7a08c8fd0baad1fc82da9e27b76c941c6e552607113e3",
+    "memo": "MEMO_Thrival.txt",
+    "featured": false
+  },
+  {
+    "brand": "THRIVE MARKET",
+    "id": "THR-2026-589",
+    "score": "99/100",
+    "hash": "0xd8f8469ba9ee007947c4b0bb29c4904afd6d49d51405cd770c8f8840a05ebf4e",
+    "memo": "MEMO_Thrive_Market.txt",
+    "featured": false
+  },
+  {
+    "brand": "TIFFANY & CO.",
+    "id": "TIF-2026-590",
+    "score": "90/100",
+    "hash": "0x44f4deb6bcf4e48ad4016dd0988338d33f88c3af73af70ff9aaddcbd2cec9a89",
+    "memo": "MEMO_Tiffany___Co_.txt",
+    "featured": false
+  },
+  {
+    "brand": "TIMELINE",
+    "id": "TIM-2026-591",
+    "score": "98/100",
+    "hash": "0xaa92ec497b693499addd96df8e9bc50d2a864705ca2e719e30adaff699d88c86",
+    "memo": "MEMO_Timeline.txt",
+    "featured": false
+  },
+  {
+    "brand": "TOD’S",
+    "id": "TOD-2026-592",
+    "score": "96/100",
+    "hash": "0x5907e72e1a37e663d8b3871a8702701326eb6e756908e267666fa8d51d3f9252",
+    "memo": "MEMO_Tod_s.txt",
+    "featured": false
+  },
+  {
+    "brand": "TOM FORD",
+    "id": "TOM-2026-593",
+    "score": "83/100",
+    "hash": "0x4ecf660340ff243abd929d38a466c925005648a7d2c786ad8509fec2040c7527",
+    "memo": "MEMO_Tom_Ford.txt",
+    "featured": false
+  },
+  {
+    "brand": "TONCOIN (TON)",
+    "id": "TON-2026-594",
+    "score": "89/100",
+    "hash": "0x48a77be7f9430871bfbca1dc26be45f0902bc1d5882a4b0325394b2ba9c1f426",
+    "memo": "MEMO_Toncoin__TON_.txt",
+    "featured": false
+  },
+  {
+    "brand": "TORY BURCH",
+    "id": "TOR-2026-595",
+    "score": "83/100",
+    "hash": "0x30dace2e7fba79f09995d86d67e8741066a39d1986c6b3b8516a4823842bda95",
+    "memo": "MEMO_Tory_Burch.txt",
+    "featured": false
+  },
+  {
+    "brand": "TOTO",
+    "id": "TOT-2026-596",
+    "score": "91/100",
+    "hash": "0xa8c19425fcef66090c823a6ec8fcd99d608a22528a8b03f78af22524c28e85fe",
+    "memo": "MEMO_Toto.txt",
+    "featured": false
+  },
+  {
+    "brand": "TOTEME",
+    "id": "TOT-2026-597",
+    "score": "97/100",
+    "hash": "0xa82c041332146251f071ee97f9ae1a564572b58cbba5280d858145c718b783c3",
+    "memo": "MEMO_Toteme.txt",
+    "featured": false
+  },
+  {
+    "brand": "TOYOTA",
+    "id": "TOY-2026-598",
+    "score": "92/100",
+    "hash": "0x1a12eb0af263bb6c6ba3d380a565c2aa2e48bbc901cb470ebc5d2a1e8fc824cd",
+    "memo": "MEMO_Toyota.txt",
+    "featured": false
+  },
+  {
+    "brand": "TREND GROUP",
+    "id": "TRE-2026-599",
+    "score": "93/100",
+    "hash": "0xc5540e801d7be011bd207cdd2a746489e58d6b6a0a2d83ebc9e80388a79d2d12",
+    "memo": "MEMO_Trend_Group.txt",
+    "featured": false
+  },
+  {
+    "brand": "TRIFECTA",
+    "id": "TRI-2026-600",
+    "score": "86/100",
+    "hash": "0xc9191c3063aa218696c01927bab69b0f695ca0aa7a7cb335802485195424dced",
+    "memo": "MEMO_Trifecta.txt",
+    "featured": false
+  },
+  {
+    "brand": "TRIUMPH",
+    "id": "TRI-2026-601",
+    "score": "86/100",
+    "hash": "0xe4ad13cdc0a26476094ec808cc57e6f826f87b18cdcb07f55bd0ade870dadf96",
+    "memo": "MEMO_Triumph.txt",
+    "featured": false
+  },
+  {
+    "brand": "TROOVY",
+    "id": "TRO-2026-602",
+    "score": "82/100",
+    "hash": "0xaa0348d797bbd9f0b66d1200ca8f31fe3122e80f4101de0b30fb5cb8f42ff4fa",
+    "memo": "MEMO_Troovy.txt",
+    "featured": false
+  },
+  {
+    "brand": "TRUEUSD (TUSD)",
+    "id": "TRU-2026-603",
+    "score": "96/100",
+    "hash": "0x3c4e36f858b28c40370cab9adbfab833e6ae519d7d955a5726e345a6e38b2c69",
+    "memo": "MEMO_TrueUSD__TUSD_.txt",
+    "featured": false
+  },
+  {
+    "brand": "TRUFF",
+    "id": "TRU-2026-604",
+    "score": "96/100",
+    "hash": "0x575d05d68509f7f16125d54d3a8d71d10f19bbdcbae500e33b7a848159b4d8b9",
+    "memo": "MEMO_Truff.txt",
+    "featured": false
+  },
+  {
+    "brand": "TRYBE TECH",
+    "id": "TRY-2026-605",
+    "score": "97/100",
+    "hash": "0xad1adbc057ed7f4a71f8e920e58192e93538770f20a63a6a07f528be8e27439b",
+    "memo": "MEMO_Trybe_Tech.txt",
+    "featured": false
+  },
+  {
+    "brand": "TYPOLOGY",
+    "id": "TYP-2026-606",
+    "score": "95/100",
+    "hash": "0x4f39042795838d5aa1bcfcfc71c7e0a12e6ad6c7dd07e287125f24c81dfd4218",
+    "memo": "MEMO_Typology.txt",
+    "featured": false
+  },
+  {
+    "brand": "UBER",
+    "id": "UBE-2026-607",
+    "score": "87/100",
+    "hash": "0x7c6e792e90867a7b356229e98e0f3da388c0748230e65c4dc8968e5eaff6531e",
+    "memo": "MEMO_Uber.txt",
+    "featured": false
+  },
+  {
+    "brand": "UNILEVER WELLNESS",
+    "id": "UNI-2026-608",
+    "score": "83/100",
+    "hash": "0x23227ba5122db9d66236f5a74d53039d5acf37f56c398067c7fcf8508a92a823",
+    "memo": "MEMO_Unilever_Wellness.txt",
+    "featured": false
+  },
+  {
+    "brand": "UNISWAP",
+    "id": "UNI-2026-609",
+    "score": "82/100",
+    "hash": "0xaac762665b85ac76358ddc108bf5317dd4e630656dac1c8ff78499b6a51f8032",
+    "memo": "MEMO_Uniswap.txt",
+    "featured": false
+  },
+  {
+    "brand": "UPS",
+    "id": "UPS-2026-610",
+    "score": "95/100",
+    "hash": "0xf4922950823b1709676eb392aee74416a7d434e3bd9f7c854f3c98569ff6da2b",
+    "memo": "MEMO_UPS.txt",
+    "featured": false
+  },
+  {
+    "brand": "USD1",
+    "id": "USD-2026-611",
+    "score": "85/100",
+    "hash": "0xcbed550dfa7b7dc4cd6ca5545560cdc0cc8ade879d36e01fba0cbe8aafc0babe",
+    "memo": "MEMO_USD1.txt",
+    "featured": false
+  },
+  {
+    "brand": "USDTB",
+    "id": "USD-2026-612",
+    "score": "96/100",
+    "hash": "0x4aecffa492932851be351e9180fec18af90f235340051b92c03491f326f5e269",
+    "memo": "MEMO_USDtb.txt",
+    "featured": false
+  },
+  {
+    "brand": "USDD",
+    "id": "USD-2026-613",
+    "score": "84/100",
+    "hash": "0xc17980fd06da804bbc864d590696e29f3ae615fc057bfde8d74630ec0765eebd",
+    "memo": "MEMO_USDD.txt",
+    "featured": false
+  },
+  {
+    "brand": "USDS (USDS)",
+    "id": "USD-2026-614",
+    "score": "93/100",
+    "hash": "0x702aab7c8cf264c6db5a22c5c2de4d6caebde43f0492983580111cb95b4f5158",
+    "memo": "MEMO_USDS__USDS_.txt",
+    "featured": false
+  },
+  {
+    "brand": "USUAL USD (USD0)",
+    "id": "USU-2026-615",
+    "score": "96/100",
+    "hash": "0x2bcf9e68930b1ecd267918c2b613a5b8a1970e5fe4fa9e90a0f8ffadedf0467c",
+    "memo": "MEMO_Usual_USD__USD0_.txt",
+    "featured": false
+  },
+  {
+    "brand": "V&A WATERFRONT",
+    "id": "V&A-2026-616",
+    "score": "92/100",
+    "hash": "0x636cbc739b8ac989c09d75df1143f62b6f3665c6130813d180d3f37ce8f957c2",
+    "memo": "MEMO_V_A_Waterfront.txt",
+    "featured": false
+  },
+  {
+    "brand": "VACHERON CONSTANTIN",
+    "id": "VAC-2026-617",
+    "score": "91/100",
+    "hash": "0xc709be99748d95457bc382e715915e5d4d4a23c1335df5970b06f0f90d9520a7",
+    "memo": "MEMO_Vacheron_Constantin.txt",
+    "featured": false
+  },
+  {
+    "brand": "VALCUCINE",
+    "id": "VAL-2026-618",
+    "score": "88/100",
+    "hash": "0x941df1fb142ac91bd494ad905d84a9f86ced9f6cfd9647aa7311378406982d42",
+    "memo": "MEMO_Valcucine.txt",
+    "featured": false
+  },
+  {
+    "brand": "VALENTINO",
+    "id": "VAL-2026-619",
+    "score": "96/100",
+    "hash": "0x03c7661d95e80705a8b3016bef516b24da8163dd65b8007a43359a6a5fa78be2",
+    "memo": "MEMO_Valentino.txt",
+    "featured": false
+  },
+  {
+    "brand": "VALO",
+    "id": "VAL-2026-620",
+    "score": "90/100",
+    "hash": "0x37e86e6b69260878611529096cab4e5f0568adad6b84cfbeba944f46e56b3e9b",
+    "memo": "MEMO_Valo.txt",
+    "featured": false
+  },
+  {
+    "brand": "VAN CLEEF & ARPELS",
+    "id": "VAN-2026-621",
+    "score": "94/100",
+    "hash": "0x0f0b9e1f321f2baafc95117d72f04a894422e60c21f1ce960139deb8b54a7971",
+    "memo": "MEMO_Van_Cleef___Arpels.txt",
+    "featured": false
+  },
+  {
+    "brand": "VANMOOF",
+    "id": "VAN-2026-622",
+    "score": "90/100",
+    "hash": "0x3d02d32d02c5204114b8f0b8d950cc9b61d4b23b3fc28cb042ceb4597556a1bd",
+    "memo": "MEMO_VanMoof.txt",
+    "featured": false
+  },
+  {
+    "brand": "VECHAIN (VET)",
+    "id": "VEC-2026-623",
+    "score": "94/100",
+    "hash": "0x305465ddb538acd85569df22dac9978b6505f3a820522b594fb32a90d50ea776",
+    "memo": "MEMO_VeChain__VET_.txt",
+    "featured": false
+  },
+  {
+    "brand": "VEJA",
+    "id": "VEJ-2026-624",
+    "score": "99/100",
+    "hash": "0xdb58d55ed573a21a9e4946548dd7256878c83e529c8f8e7f93db9b276d009368",
+    "memo": "MEMO_Veja.txt",
+    "featured": false
+  },
+  {
+    "brand": "VERDILAB",
+    "id": "VER-2026-625",
+    "score": "87/100",
+    "hash": "0x0aef342a817f287fb9b35e1b3a25f2c77d8082920e7495bed471f97a64e561e1",
+    "memo": "MEMO_Verdilab.txt",
+    "featured": false
+  },
+  {
+    "brand": "VERSACE",
+    "id": "VER-2026-626",
+    "score": "87/100",
+    "hash": "0x938eab07a7b7f25d63b0cd247a1157835dc07e2483c0a8a4e565c1b72d03a3aa",
+    "memo": "MEMO_Versace.txt",
+    "featured": false
+  },
+  {
+    "brand": "VERVE COFFEE",
+    "id": "VER-2026-627",
+    "score": "97/100",
+    "hash": "0x21b751bd5b95a2202ee46f000ee63bf3fce5e6d681cfcee16bc226c3c7635362",
+    "memo": "MEMO_Verve_Coffee.txt",
+    "featured": false
+  },
+  {
+    "brand": "VESO",
+    "id": "VES-2026-628",
+    "score": "94/100",
+    "hash": "0x7f3d24458c7f8c4e47f3e03e84923a8b1d63ccfe60fda90845acdc2daf5f6b6f",
+    "memo": "MEMO_Veso.txt",
+    "featured": false
+  },
+  {
+    "brand": "VETEMENTS",
+    "id": "VET-2026-629",
+    "score": "86/100",
+    "hash": "0xf9b155da38cf514e4ba91401c175807eb573bdfdd03104bcb4e08eaa5e3a5e2f",
+    "memo": "MEMO_Vetements.txt",
+    "featured": false
+  },
+  {
+    "brand": "VINTRA",
+    "id": "VIN-2026-630",
+    "score": "88/100",
+    "hash": "0xcf22e87c9ff2448ac956858eae363a34ee223778a6710f5d5b142ad3f2cda94f",
+    "memo": "MEMO_Vintra.txt",
+    "featured": false
+  },
+  {
+    "brand": "VIOME",
+    "id": "VIO-2026-631",
+    "score": "92/100",
+    "hash": "0x2bb3b626c570e542c8d9bde1b567dd2be6fee5845d47d29c1a7418235419df30",
+    "memo": "MEMO_Viome.txt",
+    "featured": false
+  },
+  {
+    "brand": "VITAL PROTEINS",
+    "id": "VIT-2026-632",
+    "score": "86/100",
+    "hash": "0x85911be9709b7fb8e134f3b468df04b09b5476e5111b8069fd36ba939f983353",
+    "memo": "MEMO_Vital_Proteins.txt",
+    "featured": false
+  },
+  {
+    "brand": "VITRA",
+    "id": "VIT-2026-633",
+    "score": "86/100",
+    "hash": "0x7c34aaedd49e9cd3bbfe68eb637cc87ada175b64f35946b75a8cf63474d8bf4d",
+    "memo": "MEMO_Vitra.txt",
+    "featured": false
+  },
+  {
+    "brand": "VIVOBASE",
+    "id": "VIV-2026-634",
+    "score": "96/100",
+    "hash": "0x290128aec4959694064f71ce368fa6088e8e91c9e30a99da72c6d22fc902fe32",
+    "memo": "MEMO_Vivobase.txt",
+    "featured": false
+  },
+  {
+    "brand": "VOLA",
+    "id": "VOL-2026-635",
+    "score": "98/100",
+    "hash": "0x31d661ab7a40d16182fa3d947b18f7cd4c6e27631bf001910378dbd1f081f914",
+    "memo": "MEMO_Vola.txt",
+    "featured": false
+  },
+  {
+    "brand": "VOLOCOPTER",
+    "id": "VOL-2026-636",
+    "score": "89/100",
+    "hash": "0xbaf30deb6fb2f170fd6f788d1b0d37821241d1123ddf48afafbad541042ef4ae",
+    "memo": "MEMO_Volocopter.txt",
+    "featured": false
+  },
+  {
+    "brand": "VOLKSWAGEN",
+    "id": "VOL-2026-637",
+    "score": "86/100",
+    "hash": "0x1686985f5baeed8fd16f75ed2b42b36fb98c18fe74fcb8100d73e1ee44abd3d3",
+    "memo": "MEMO_Volkswagen.txt",
+    "featured": false
+  },
+  {
+    "brand": "VOLVO",
+    "id": "VOL-2026-638",
+    "score": "92/100",
+    "hash": "0x89bd594f8d6b60d02de99749bca06ef4a0de69213b638595a8c441659c66fd98",
+    "memo": "MEMO_Volvo.txt",
+    "featured": false
+  },
+  {
+    "brand": "WATERWORKS",
+    "id": "WAT-2026-639",
+    "score": "91/100",
+    "hash": "0x4ac3a525adfbb5bcd6d7079d8284439d68d61acce71c939ff76d63e38a914066",
+    "memo": "MEMO_Waterworks.txt",
+    "featured": false
+  },
+  {
+    "brand": "WAYMO",
+    "id": "WAY-2026-640",
+    "score": "85/100",
+    "hash": "0x6caaaba6cead427a62a59c05b8a333d637538196b7f09969190aa66ad6de374e",
+    "memo": "MEMO_Waymo.txt",
+    "featured": false
+  },
+  {
+    "brand": "WEST ELM",
+    "id": "WES-2026-641",
+    "score": "90/100",
+    "hash": "0xd9c9957d46729e0df7bdc99635845a6b3602af3952ed4529a20c2d267f84c4cd",
+    "memo": "MEMO_West_Elm.txt",
+    "featured": false
+  },
+  {
+    "brand": "WESTMAN ATELIER",
+    "id": "WES-2026-642",
+    "score": "93/100",
+    "hash": "0xd91525aa8d0bb545bc5fdfaaad0584df7af6de5a69d361772f8dfdef68b9e9e4",
+    "memo": "MEMO_Westman_Atelier.txt",
+    "featured": false
+  },
+  {
+    "brand": "WHITEBIT COIN",
+    "id": "WHI-2026-643",
+    "score": "93/100",
+    "hash": "0x72646ce23f08cb6abed1a91ef3ff018c190dc46bf61ec5aea8c9add5d9d18b90",
+    "memo": "MEMO_WhiteBIT_Coin.txt",
+    "featured": false
+  },
+  {
+    "brand": "WHOOP",
+    "id": "WHO-2026-644",
+    "score": "86/100",
+    "hash": "0x8eb0d9a4602fc4b1738557c1f69c5a285d836c2486cb77ff799334c485559d77",
+    "memo": "MEMO_Whoop.txt",
+    "featured": false
+  },
+  {
+    "brand": "WILD NUTRITION",
+    "id": "WIL-2026-645",
+    "score": "86/100",
+    "hash": "0x2654b286997eec4cdade08f59efbe12edcf41bca7fdd9a62fb54d21962af335b",
+    "memo": "MEMO_Wild_Nutrition.txt",
+    "featured": false
+  },
+  {
+    "brand": "WITHINGS",
+    "id": "WIT-2026-646",
+    "score": "86/100",
+    "hash": "0xe15d332644cfdec49a840c7f2fa563f9a89993a7dcc1fc28b2dca0a50878c8f1",
+    "memo": "MEMO_Withings.txt",
+    "featured": false
+  },
+  {
+    "brand": "WORLD (WORLDCOIN)",
+    "id": "WOR-2026-647",
+    "score": "82/100",
+    "hash": "0x964e9012c79e38e96c4b8ad11cbbd7387265572db497cad54acff783b22fa16e",
+    "memo": "MEMO_World__Worldcoin_.txt",
+    "featured": false
+  },
+  {
+    "brand": "WORLD LIBERTY FIN.",
+    "id": "WOR-2026-648",
+    "score": "93/100",
+    "hash": "0x89ee06a03b039bddb0c7b33a0e383bd8e0bfe6443a5029d892964da1a8aeb9b1",
+    "memo": "MEMO_World_Liberty_Fin_.txt",
+    "featured": false
+  },
+  {
+    "brand": "XDC NETWORK",
+    "id": "XDC-2026-649",
+    "score": "98/100",
+    "hash": "0x511810e8f0d3a9f8ab165e49a4da5f73c22e934c67bbb114e1c3d1365bca16bf",
+    "memo": "MEMO_XDC_Network.txt",
+    "featured": false
+  },
+  {
+    "brand": "XPENG",
+    "id": "XPE-2026-650",
+    "score": "98/100",
+    "hash": "0x0c9240e85b38a8820fd5ef2a33d665584da13d6f27b3816b1f4674cdf031ce75",
+    "memo": "MEMO_XPeng.txt",
+    "featured": false
+  },
+  {
+    "brand": "YSL BEAUTY",
+    "id": "YSL-2026-651",
+    "score": "84/100",
+    "hash": "0x94cad455ff3108622211bd9dee25ad10b4724f9a1ba32692d2f1b3725bd58439",
+    "memo": "MEMO_YSL_Beauty.txt",
+    "featured": false
+  },
+  {
+    "brand": "ZADIG & VOLTAIRE",
+    "id": "ZAD-2026-652",
+    "score": "97/100",
+    "hash": "0x478627e8224831cd2cb3d3409e9d355a4c7369c4140fdd08389e2c313b112f42",
+    "memo": "MEMO_Zadig___Voltaire.txt",
+    "featured": false
+  },
+  {
+    "brand": "ZANOTTA",
+    "id": "ZAN-2026-653",
+    "score": "99/100",
+    "hash": "0x140068241b29f90df776315a9cba64c43cfc7c75f702a7a2f7b7a270a88d2dcd",
+    "memo": "MEMO_Zanotta.txt",
+    "featured": false
+  },
+  {
+    "brand": "ZARA HOME",
+    "id": "ZAR-2026-654",
+    "score": "88/100",
+    "hash": "0x45eb6c9aaa331426e22ec389fe2cfc0d20d3e8de8ba7c90f08025ae8b016a0f4",
+    "memo": "MEMO_Zara_Home.txt",
+    "featured": false
+  },
+  {
+    "brand": "ZCASH (ZEC)",
+    "id": "ZCA-2026-655",
+    "score": "93/100",
+    "hash": "0x1fc742ed40d54396345964753e5b9e7c31a7ab9d1509d4e2e45aab269d945e0b",
+    "memo": "MEMO_Zcash__ZEC_.txt",
+    "featured": false
+  },
+  {
+    "brand": "ZESPRI",
+    "id": "ZES-2026-656",
+    "score": "92/100",
+    "hash": "0x51ec4a89fb739b47bc256784b13fe9aedc8503a74659988ddeedf825e89b6c0e",
+    "memo": "MEMO_Zespri.txt",
+    "featured": false
+  },
+  {
+    "brand": "ZIMMERMANN",
+    "id": "ZIM-2026-657",
+    "score": "97/100",
+    "hash": "0xa86b26633aa5f795020baeb29a993f5011ddffcda6328ed452d98f5e4e9caf65",
+    "memo": "MEMO_Zimmermann.txt",
+    "featured": false
+  },
+  {
+    "brand": "ZOE",
+    "id": "ZOE-2026-658",
+    "score": "98/100",
+    "hash": "0x5d411d28bc3bc698c47feddfcb4004330b77c3753b53a114e9664625d57ffc34",
+    "memo": "MEMO_ZOE.txt",
+    "featured": false
+  },
+  {
+    "brand": "ZOI",
+    "id": "ZOI-2026-659",
+    "score": "85/100",
+    "hash": "0xbfc2d451d00721d6dca43f8551c1d530790ea8f0432022e176d8cdcedf3de4d0",
+    "memo": "MEMO_ZOI.txt",
+    "featured": false
+  },
+  {
+    "brand": "ZOOX",
+    "id": "ZOO-2026-660",
+    "score": "87/100",
+    "hash": "0xda294c7639c092b618a002634a35d42142d6acee5cbaa1707edbf2dea8273ab3",
+    "memo": "MEMO_Zoox.txt",
     "featured": false
   }
 ]
