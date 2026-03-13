@@ -108,7 +108,7 @@
     <script>
         // --- CONFIGURATION GITHUB RAW URL ---
         // Remplace la ligne 96 par celle-ci :
-const GITHUB_RAW_URL = "https://cdn.jsdelivr.net/gh/Meteque1213/2a-agency-official@main/audits/last-audit.json";
+        const GITHUB_RAW_URL = "https://raw.githubusercontent.com/Meteque1213/2a-agency-official/main/audits/last-audit.json?nocache=" + new Date().getTime();
 
         async function fetchLatestAudit() {
             const container = document.getElementById('dynamic-audit-container');
