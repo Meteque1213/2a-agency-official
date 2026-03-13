@@ -16,20 +16,19 @@
         .audit-card { transition: all 0.3s ease; border-left: 4px solid #064e3b; }
         .audit-card:hover { transform: translateX(5px); background-color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
 
-        /* MODAL FORENSIC STYLE */
+        /* NOUVEAU STYLE POUR LE LIVE BADGE */
+        .live-badge { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
         #memo-modal { display: none; position: fixed; inset: 0; background: rgba(5, 5, 5, 0.98); z-index: 50; padding: 20px; overflow-y: auto; backdrop-filter: blur(10px); }
         #memo-content { 
-            background: #000; 
-            color: #ffffff; 
-            font-family: 'Courier New', Courier, monospace; 
-            padding: 30px; 
-            max-width: 900px; 
-            margin: 20px auto; 
-            border: 1px solid #1a1a1a;
-            white-space: pre-wrap;
-            font-size: 13px;
-            line-height: 1.6;
-            letter-spacing: 0.05em;
+            background: #000; color: #ffffff; font-family: 'Courier New', Courier, monospace; 
+            padding: 30px; max-width: 900px; margin: 20px auto; border: 1px solid #1a1a1a;
+            white-space: pre-wrap; font-size: 13px; line-height: 1.6; letter-spacing: 0.05em;
         }
         .memo-header { border-bottom: 1px solid #064e3b; margin-bottom: 20px; padding-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
         .close-memo { color: #ffffff; cursor: pointer; font-size: 10px; font-weight: 900; letter-spacing: 0.2em; text-transform: uppercase; border: 1px solid #ffffff; padding: 5px 15px; transition: all 0.3s; }
@@ -51,13 +50,22 @@
         <h1 class="text-6xl md:text-7xl font-black uppercase tracking-tighter leading-none text-2a-emerald">
             Forensic<br>Lab Audits
         </h1>
-        <p class="mt-4 text-xs uppercase tracking-[0.3em] font-medium opacity-60">
-            Deep-Dive Integrity Reports & Notarization Proofs
-        </p>
+        <div class="flex items-center gap-3 mt-4">
+            <div class="w-2 h-2 bg-red-600 rounded-full live-badge"></div>
+            <p class="text-xs uppercase tracking-[0.3em] font-medium opacity-60">
+                Live Blockchain Feed: Syncing with Base L2
+            </p>
+        </div>
     </header>
 
     <main class="max-w-5xl mx-auto space-y-6">
         
+        <div id="dynamic-audit-container">
+            <div class="audit-card bg-white p-8 animate-pulse border-dashed border-2 border-gray-200">
+                <p class="text-[10px] uppercase tracking-widest opacity-40 italic">Fetching latest blockchain proof...</p>
+            </div>
+        </div>
+
         <div class="audit-card bg-gray-50 p-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex flex-col gap-1">
                 <span class="font-mono text-[10px] opacity-40 uppercase tracking-widest">Case ID: DNVB-004</span>
@@ -67,7 +75,6 @@
                     <span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-[8px] font-bold uppercase">Base L2</span>
                 </div>
             </div>
-            
             <div class="flex flex-col md:items-end gap-4">
                 <div class="font-mono text-[9px] opacity-40 break-all max-w-xs md:text-right uppercase">
                     HASH: 0x116aaa402ed70944801c4bb81d71f74a582b96ea78c68c45e030c5d811f121af
@@ -78,28 +85,8 @@
             </div>
         </div>
 
-        <div class="audit-card bg-gray-50 p-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex flex-col gap-1">
-                <span class="font-mono text-[10px] opacity-40 uppercase tracking-widest">Case ID: DNVB-2026-001</span>
-                <h2 class="text-2xl font-black uppercase tracking-tighter text-2a-emerald">PRIME vs BONJOUR DRINK</h2>
-                <div class="flex gap-2 mt-1">
-                    <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[8px] font-bold uppercase">Notarized</span>
-                    <span class="px-2 py-0.5 bg-red-100 text-red-800 text-[8px] font-bold uppercase">Drift Alert: Prime</span>
-                </div>
-            </div>
-            
-            <div class="flex flex-col md:items-end gap-4">
-                <div class="font-mono text-[9px] opacity-40 break-all max-w-xs md:text-right uppercase">
-                    Forensic Analysis: AI-IQ Differential Audit
-                </div>
-                <button onclick="openMemo('MEMO_DNVB_001_BONJOUR_PRIME.txt')" class="bg-black text-white px-8 py-3 text-[10px] font-black uppercase tracking-widest hover:bg-2a-emerald transition-all">
-                    View Analysis Report →
-                </button>
-            </div>
-        </div>
-
         <div class="border border-dashed border-gray-300 p-8 flex items-center justify-center">
-            <span class="text-[10px] uppercase tracking-widest opacity-30 italic font-bold">Next Audit in progress...</span>
+            <span class="text-[10px] uppercase tracking-widest opacity-30 italic font-bold">More reports available in Registry...</span>
         </div>
 
     </main>
@@ -119,20 +106,59 @@
     </div>
 
     <script>
+        // --- CONFIGURATION GITHUB RAW URL ---
+        // Remplace la ligne 96 par celle-ci :
+const GITHUB_RAW_URL = "https://cdn.jsdelivr.net/gh/Meteque1213/2a-agency-official@main/audits/last-audit.json";
+
+        async function fetchLatestAudit() {
+            const container = document.getElementById('dynamic-audit-container');
+            try {
+                // On ajoute un timestamp pour éviter le cache navigateur
+                const response = await fetch(`${GITHUB_RAW_URL}?t=${new Date().getTime()}`);
+                if (!response.ok) throw new Error('Update in progress');
+                const data = await response.json();
+
+                container.innerHTML = `
+                    <div class="audit-card bg-emerald-50 p-8 flex flex-col md:flex-row justify-between items-center gap-6 border-l-8 border-emerald-600 shadow-xl">
+                        <div class="flex flex-col gap-1">
+                            <span class="font-mono text-[10px] text-emerald-600 font-bold uppercase tracking-widest">Latest Live Notarization</span>
+                            <h2 class="text-3xl font-black uppercase tracking-tighter">${data.audit.brand}</h2>
+                            <div class="flex gap-2 mt-2">
+                                <span class="px-2 py-0.5 bg-emerald-600 text-white text-[8px] font-bold uppercase tracking-widest">Verified On-Chain</span>
+                                <span class="px-2 py-0.5 bg-black text-white text-[8px] font-bold uppercase tracking-widest">Sentinel Core 01</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:items-end gap-4">
+                            <div class="font-mono text-[9px] text-emerald-900 opacity-60 break-all max-w-xs md:text-right uppercase">
+                                PROOF HASH: ${data.audit.documentHash}<br>
+                                TIMESTAMP: ${new Date(data.timestamp).toLocaleString()}
+                            </div>
+                            <a href="${data.blockchain.explorerUrl}" target="_blank" class="bg-emerald-900 text-white px-8 py-3 text-[10px] font-black uppercase tracking-widest hover:bg-black transition-all text-center">
+                                Verify On BaseScan ↗
+                            </a>
+                        </div>
+                    </div>
+                `;
+            } catch (err) {
+                container.innerHTML = `<div class="p-8 text-center opacity-30 text-[10px] uppercase">Waiting for next blockchain sync...</div>`;
+            }
+        }
+
+        // Charger l'audit au démarrage
+        fetchLatestAudit();
+
         async function openMemo(url) {
             const modal = document.getElementById('memo-modal');
             const content = document.getElementById('memo-content');
-            
             try {
                 const response = await fetch(url);
-                if (!response.ok) throw new Error('Fichier introuvable');
                 const text = await response.text();
                 content.innerText = text;
                 modal.style.display = 'block';
                 document.body.style.overflow = 'hidden'; 
             } catch (err) {
-                alert("Erreur de chargement du rapport forensic.");
-                console.error(err);
+                alert("Rapport en cours de notarisation...");
             }
         }
 
@@ -141,11 +167,7 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Fermer avec Echap
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeMemo();
-        });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMemo(); });
     </script>
-
 </body>
 </html>
