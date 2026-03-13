@@ -829,7 +829,6 @@
             }
             renderTable(category);
         }
-
         function renderTable(category) {
             const body = document.getElementById('registry-body');
             if (!body || !data[category]) return;
@@ -851,7 +850,7 @@
                         <div class="flex flex-col">
                             <span class="text-[13px] flex items-center gap-2">
                                 ${item.name}
-                                ${isModified ? '<span class="text-[7px] bg-red-600 text-white px-1.5 py-0.5 rounded-full italic">MODIFIED</span>' : ''}
+                                ${isModified ? '<span class="text-[7px] bg-[#f59e0b] text-black px-2 py-0.5 rounded-full font-bold uppercase shadow-sm">Updated</span>' : ''}
                             </span>
                             <span class="text-[7px] text-emerald-600 font-black opacity-80 uppercase">
                                 ${item.doc_label || "SENTINEL_INDEX"}
@@ -870,7 +869,6 @@
                 body.appendChild(row);
             });
         }
-
         async function loadData() {
             try {
                 const response = await fetch('./registry-data.json');

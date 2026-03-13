@@ -26,8 +26,10 @@ async function archivePdf(url, brandName) {
         const filePath = path.join(archiveDir, fileName);
         const response = await fetch(url, { headers: HEADERS });
         if (!response.ok) throw new Error(`Status: ${response.status}`);
-        const fileStream = createWriteStream(filePath);
-        await pipeline(response.body, fileStream);
+        
+        // Utilisation de ArrayBuffer pour la compatibilité Node 24
+        const arrayBuffer = await response.arrayBuffer();
+        await fs.writeFile(filePath, Buffer.from(arrayBuffer));
         return filePath;
     } catch (e) {
         console.error(`📁 Archive failed for ${brandName}: ${e.message}`);
@@ -38,8 +40,9 @@ async function archivePdf(url, brandName) {
 async function getPdfHash(url) {
     try {
         const response = await fetch(url, { headers: HEADERS });
-        const arrayBuffer = await response.buffer(); // Changement ici pour compatibilité fetch/node
-        return crypto.createHash('sha256').update(arrayBuffer).digest('hex');
+        const arrayBuffer = await response.arrayBuffer();
+        const buffer = Buffer.from(arrayBuffer);
+        return crypto.createHash('sha256').update(buffer).digest('hex');
     } catch (e) { return null; }
 }
 
@@ -55,27 +58,26 @@ async function updateRegistry(brandData, category) {
             const oldHash = data[category][index].doc_hash;
             const oldSnippet = data[category][index].content_snippet;
             
-            // --- LOGIQUE D'INTÉGRITÉ ---
             if (oldHash && oldHash !== brandData.doc_hash) {
-                console.log(`🚨 ALERT : Integrity breach suspected for ${brandData.name}`);
+                console.log(`🚨 ALERT : Change detected for ${brandData.name}`);
                 brandData.alert_status = "MODIFIED";
                 brandData.previous_hash = oldHash;
 
-                // --- ANALYSE SÉMANTIQUE PRIMAIRE ---
                 if (oldSnippet !== brandData.content_snippet) {
-                    brandData.audit_comment = "CRITICAL: Textual modification detected in the core narrative.";
+                    brandData.audit_comment = "CRITICAL: Textual modification detected.";
                 } else {
-                    brandData.audit_comment = "WARNING: Binary update detected (potential metadata or formatting change).";
+                    brandData.audit_comment = "WARNING: Binary update detected.";
                 }
             } else {
                 brandData.alert_status = "STABLE";
-                brandData.audit_comment = "Integrity verified. No changes detected.";
+                brandData.audit_comment = "Integrity verified.";
             }
             
+            // On fusionne les données en gardant le score de l'existant s'il y en a un
             data[category][index] = { ...data[category][index], ...brandData };
         } else {
             brandData.alert_status = "NEW";
-            brandData.audit_comment = "Initial ingestion. Monitoring started.";
+            brandData.audit_comment = "Initial ingestion.";
             data[category].push(brandData);
         }
         await fs.writeFile(filePath, JSON.stringify(data, null, 4));
@@ -97,22 +99,34 @@ async function auditSource(url, name) {
 }
 
 async function runSentinel() {
-    console.log("🛡️  SENTINEL FORENSIC MODE : ON");
+    console.log("🛡️  SENTINEL FULL SCAN MODE : ON");
+    
+    // Charger le registre actuel pour vérifier les scores
+    const currentFile = await fs.readFile('./registry-data.json', 'utf-8');
+    const currentRegistry = JSON.parse(currentFile);
+
     for (const target of TARGETS) {
         try {
             let pdfUrl = target.searchUrl.endsWith('.pdf') ? target.searchUrl : null;
             let snippet = "Direct access mode";
+            
             if (!pdfUrl) {
                 const result = await auditSource(target.searchUrl, target.name);
                 if (result) { pdfUrl = result.pdfUrl; snippet = result.snippet; }
             }
+            
             if (pdfUrl) {
                 const hash = await getPdfHash(pdfUrl);
                 if (hash) {
                     const localPath = await archivePdf(pdfUrl, target.name);
+                    
+                    // --- RÉCUPÉRATION DU SCORE EXISTANT ---
+                    const existingBrand = (currentRegistry[target.category] || []).find(b => b.name === target.name);
+                    const finalScore = existingBrand ? existingBrand.score : 85; // 85 par défaut si nouveau
+
                     const brandData = {
                         name: target.name,
-                        score: 95,
+                        score: finalScore,
                         doc_hash: hash,
                         hash: "0x" + hash.substring(0, 24) + "...",
                         proofUrl: pdfUrl,
@@ -126,7 +140,7 @@ async function runSentinel() {
             }
         } catch (error) { console.error(`💀 Error ${target.name}:`, error.message); }
     }
-    console.log("\n🏁 FORENSIC MISSION COMPLETE.");
+    console.log("\n🏁 FULL SCAN COMPLETED. ALL SECTORS POPULATED.");
 }
 
 runSentinel();
