@@ -1,0 +1,11 @@
+{
+    "agency": "2A Agency",
+    "verified_signer": "0x40c07F5b9aC742CBe8f288F00166a9EC908921b9",
+    "identity_proof": {
+      "network": "Base",
+      "protocol": "EIP-191",
+      "description": "All audits from 2A Agency are signed by the verified_signer address."
+    },
+    "contact": "https://2aagency.tiiny.site",
+    "last_audit": "https://2aagency.tiiny.site/audits/last-audit.json"
+  }
