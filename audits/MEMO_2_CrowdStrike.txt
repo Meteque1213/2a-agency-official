@@ -1,0 +1,15 @@
+ENTITY: 2. CrowdStrike
+DATE: 13-03-2026
+
+**Forensic Audit Memo – CrowdStrike (Cybersecurity)**
+
+**Subject:** Data Integrity & ERC-8004 Compliance Review
+
+1. **Objective:** Assess CrowdStrike’s data integrity controls and adherence to ERC-8004 standards for forensic evidence handling.
+2. **Scope:** Evaluate endpoint telemetry, log retention, and chain-of-custody protocols to ensure tamper-proof forensic artifacts.
+3. **Findings:** Identify gaps in cryptographic validation and timestamping mechanisms per ERC-8004 Section 3.2.
+4. **Recommendation:** Implement automated integrity checks and ERC-8004-compliant hashing for all forensic datasets.
+
+**Status:** Pending validation.
+
+[NOTARIZED BY 2A AGENCY]

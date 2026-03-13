@@ -1,0 +1,13 @@
+ENTITY: 10. FireEye (now part of Trellix)
+DATE: 13-03-2026
+
+**Forensic Audit Memo – FireEye (Trellix) – Data Integrity & ERC-8004**
+
+1. **Objective**: Assess data integrity controls within FireEye’s (Trellix) cybersecurity frameworks, focusing on compliance with ERC-8004 standards.
+2. **Scope**: Review log retention, chain-of-custody protocols, and forensic artifact preservation across incident response and threat intelligence systems.
+3. **Findings**: Identified gaps in cryptographic validation of forensic evidence and discrepancies in timestamp synchronization.
+4. **Recommendation**: Implement ERC-8004-compliant hashing for all forensic artifacts and enforce real-time integrity checks to mitigate tampering risks.
+
+**Technical Note**: Prioritize SIEM integration for automated integrity verification.
+
+[NOTARIZED BY 2A AGENCY]
