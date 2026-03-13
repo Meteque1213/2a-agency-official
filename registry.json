@@ -1,4 +1,15 @@
-[
+{
+  "registry_metadata": {
+    "protocol": "ERC-8004",
+    "network": "Base Mainnet L2",
+    "contract_status": "Active / Validation Phase",
+    "contract_address": "0x0f849b0795b6494c7becbc5dacef80e3799ca177039218745ff082d1c189791f",
+    "merkle_root": "0x4f2a778b08601f2496bd1ad2affdb64ca8f75e147fceee0493b370103fa0bc7d",
+    "entities_count": 1000,
+    "last_updated": "2026-03-13T23:15:00Z",
+    "authority": "2A Agency Forensic Lab"
+  },
+  "audits": [
     {
       "id": "GOY-001",
       "brand": "Goyard",
@@ -20,3 +31,4 @@
       "description": "Fast-fashion, renouvellement ultra-rapide des collections, prix accessibles, production de masse."
     }
   ]
+}
