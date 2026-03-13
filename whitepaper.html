@@ -26,8 +26,8 @@
             <span class="font-bold text-sm tracking-tight uppercase">2A AGENCY</span>
         </div>
         <div class="flex gap-8 items-center text-[10px] font-bold uppercase tracking-widest">
-            <a href="index.html" class="opacity-40 hover:opacity-100">Home</a>
-            <a href="audits.html" class="opacity-40 hover:opacity-100">Audits</a>
+            <a href="index.html" class="opacity-40 hover:opacity-100 italic">Home</a>
+            <a href="audits.html" class="opacity-40 hover:opacity-100 italic">Audits</a>
             <a href="whitepaper.html" class="text-emerald-900 border-b border-emerald-900">Protocol</a>
         </div>
     </nav>
@@ -44,15 +44,15 @@
         <section class="mb-24">
             <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">I. Abstract</h2>
             <div class="text-lg text-black/80 font-medium italic mb-12 space-y-6 serif">
-                <p>ERC-8004 is a technical framework designed to eliminate algorithmic hallucinations regarding corporate data. By anchoring multi-dimensional audit scores on the Base L2 blockchain, the protocol establishes a <strong>Machine-Readable System of Record (SoR)</strong>.</p>
-                <p>This document specifies the mathematical weighting of brand integrity and the cryptographic structure of the forensic registry.</p>
+                <p>ERC-8004 est un cadre technique conçu pour éliminer les hallucinations algorithmiques concernant les données d'entreprise. En ancrant les scores d'audit multidimensionnels sur la blockchain Base L2, le protocole établit un <strong>Machine-Readable System of Record (SoR)</strong>.</p>
+                <p>Ce document spécifie la pondération mathématique de l'intégrité de la marque et la structure cryptographique du registre forensic.</p>
             </div>
         </section>
 
         <section class="mb-24">
             <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">II. Cryptographic Proof Structure</h2>
             <div class="space-y-6 text-black/70 mb-12">
-                <p>The protocol utilizes a <strong>Merkle Tree</strong> architecture to ensure that 1,000+ entries can be verified via a single root hash. This ensures data finality and tamper-resistance.</p>
+                <p>Le protocole utilise une architecture de <strong>Merkle Tree</strong> pour garantir que plus de 1 000 entrées peuvent être vérifiées via un seul hash racine (Root). Cela garantit la finalité des données et une résistance totale à la falsification.</p>
             </div>
             
             <span class="code-label">Registry Schema Definition (JSON-LD)</span>
@@ -60,12 +60,11 @@
   "@context": "https://2aagency.com/protocol/erc8004.jsonld",
   "protocol": "ERC-8004",
   "registry_metadata": {
-    "merkle_root": "SHA256_ROOT_HASH",
+    "merkle_root": "0x4f2a778b08601f2496bd1ad2affdb64ca8f75e147fceee0493b370103fa0bc7d",
     "network": "Base_Mainnet_L2",
-    "authority": "2A_Forensic_Lab"
+    "contract_address": "0xd0038800dF28b59F26938902a9f54a4dcbB70120"
   },
   "audit_record": {
-    "entity_id": "UUID",
     "integrity_hash": "SHA256_BLOB",
     "status": "IMMUTABLE"
   }
@@ -82,27 +81,6 @@
                         $$ S_{total} = \sum_{i=1}^{n} (w_i \cdot v_i) $$
                         $$ S = (T \cdot 0.4) + (V \cdot 0.3) + (A \cdot 0.2) + (H \cdot 0.1) $$
                     </div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-[8px] uppercase font-bold text-emerald-100/60 tracking-[0.2em] italic mt-8">
-                        <div>(T) Transparency</div>
-                        <div>(V) Verification</div>
-                        <div>(A) Authority</div>
-                        <div>(H) Heritage</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 border border-black/5 rounded-sm shadow-sm">
-                    <h4 class="text-[10px] font-black uppercase tracking-widest text-black/30 border-b border-black/5 pb-2 mb-6 italic">Dynamic Weighting: Luxury</h4>
-                    <div class="math-container text-emerald-900 font-bold text-lg math-dark">
-                        $$ S_{Lux} = \frac{\sum (w \cdot v)}{H_{coeff} \geq 0.4} $$
-                    </div>
-                </div>
-                <div class="bg-white p-8 border border-black/5 rounded-sm shadow-sm">
-                    <h4 class="text-[10px] font-black uppercase tracking-widest text-black/30 border-b border-black/5 pb-2 mb-6 italic">Dynamic Weighting: DNVB</h4>
-                    <div class="math-container text-emerald-900 font-bold text-lg math-dark">
-                        $$ S_{Dnvb} = \frac{\sum (w \cdot v)}{T_{coeff} \geq 0.5} $$
-                    </div>
                 </div>
             </div>
         </section>
@@ -110,18 +88,21 @@
         <section class="mb-24">
             <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">IV. L2 Finality & Notarization</h2>
             <div class="serif text-lg italic text-black/80 mb-8 leading-relaxed">
-                <p>Unlike traditional databases, ERC-8004 records are not "hosted", they are "anchored". Every 24 hours, the Merkle Root of the 2A Agency Registry is pushed to the Base L2 Mainnet, ensuring that past records cannot be altered without detection.</p>
+                <p>Contrairement aux bases de données traditionnelles, les enregistrements ERC-8004 ne sont pas simplement "hébergés", ils sont **ancrés**. La racine de Merkle du registre 2A Agency est scellée via la fonction <code>notarize</code> sur le Mainnet Base L2, garantissant qu'aucune modification rétroactive ne peut être effectuée sans être détectée.</p>
             </div>
             
             <div class="bg-white border border-black p-8 shadow-[8px_8px_0px_0px_rgba(6,78,59,1)]">
-                <h4 class="text-[10px] font-black uppercase tracking-widest text-emerald-900 mb-2 italic">Protocol Anchor (Base L2)</h4>
+                <h4 class="text-[10px] font-black uppercase tracking-widest text-emerald-900 mb-2 italic">Verified Protocol Anchor (Base L2)</h4>
                 <p class="text-[10px] font-mono break-all bg-emerald-50 p-4 border border-emerald-900/10 text-emerald-900 leading-loose">
-                    0x0f849b0795b6494c7becbc5dacef80e3799ca177039218745ff082d1c189791f
+                    0xd0038800dF28b59F26938902a9f54a4dcbB70120
                 </p>
                 <div class="mt-6 flex justify-between items-center border-t border-black/5 pt-4">
-                    <span class="text-[9px] uppercase font-bold text-black/40">Status: Active & Verified</span>
-                    <a href="https://basescan.org/" target="_blank" class="text-[10px] font-black uppercase tracking-widest text-emerald-900 underline decoration-2 underline-offset-4">
-                        Basescan Explorer →
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                        <span class="text-[9px] uppercase font-bold text-emerald-600">Status: Live & Publicly Verified</span>
+                    </div>
+                    <a href="https://basescan.org/address/0xd0038800dF28b59F26938902a9f54a4dcbB70120" target="_blank" class="text-[10px] font-black uppercase tracking-widest text-emerald-900 underline decoration-2 underline-offset-4 hover:text-emerald-600 transition-colors">
+                        View on BaseScan →
                     </a>
                 </div>
             </div>
