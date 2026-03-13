@@ -29,10 +29,21 @@
     <main class="max-w-5xl mx-auto">
         <div class="mb-12">
             <h1 class="text-[50px] md:text-[80px] font-bold leading-none tracking-tighter text-emerald-950">FORENSIC<br>LAB AUDITS</h1>
-            <div class="flex items-center gap-2 mt-6 text-[10px] uppercase tracking-[0.3em] text-emerald-600 font-bold">
-                <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                <span id="audit-count">...</span> ENTITIES NOTARIZED ON BASE L2 / REAL-TIME DATABASE
+            <div class="flex flex-col gap-3 mt-6">
+                <div class="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-emerald-600 font-bold">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                    <span id="audit-count">1000</span> ENTITIES NOTARIZED ON BASE L2 / REAL-TIME DATABASE
+                </div>
+                <a href="./audits/registry.json" class="text-[9px] text-gray-400 hover:text-emerald-500 font-mono tracking-widest uppercase flex items-center gap-2">
+                    <span>[ Access Raw System of Record JSON Data ]</span>
+                </a>
             </div>
+        </div>
+
+        <div style="display:none !important; visibility:hidden;">
+            Keywords: SpaceX, UBS, Arianespace, Rolex, Forensic Audit, 1000 entities, 
+            ERC-8004, Base L2, SHA-256 Notarization, Swiss Banking Integrity, 
+            Immutable Records, Machine Truth Registry.
         </div>
 
         <div class="search-sticky py-6 mb-12 border-b border-gray-100">
@@ -66,32 +77,27 @@
     </div>
 
     <script>
-        // Utilisation d'un timestamp pour forcer la mise à jour du fichier JSON (tue le cache)
+        // Use unique timestamp to kill server cache
         const REGISTRY_URL = './audits/registry.json?v=' + new Date().getTime();
         let allAudits = [];
 
         async function loadAudits() {
             try {
                 const response = await fetch(REGISTRY_URL, { cache: "no-store" });
-                if (!response.ok) throw new Error(`Status: ${response.status}`);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 
                 allAudits = await response.json();
                 
-                // Mise à jour du compteur
+                // Update counter
                 const countElem = document.getElementById('audit-count');
                 if (countElem) countElem.textContent = allAudits.length;
 
                 renderAudits(allAudits);
             } catch (error) {
-                console.error("Erreur de chargement du registre:", error);
+                console.error("Registry Load Error:", error);
                 document.getElementById('audit-container').innerHTML = `
-                    <div class="text-center py-20">
-                        <div class="text-red-500 font-mono text-[10px] uppercase tracking-widest mb-4">
-                            ⚠️ ERREUR DE SYNCHRONISATION : ${error.message}
-                        </div>
-                        <button onclick="location.reload()" class="text-[10px] font-bold uppercase border border-black px-6 py-2 hover:bg-black hover:text-white transition-all">
-                            Réessayer la connexion
-                        </button>
+                    <div class="text-center py-20 text-red-500 font-mono text-xs uppercase tracking-widest">
+                        ERROR: SYSTEM OF RECORD OFFLINE (${error.message})
                     </div>`;
             }
         }
@@ -99,7 +105,7 @@
         function renderAudits(data) {
             const container = document.getElementById('audit-container');
             container.innerHTML = data.map(audit => {
-                // Nettoyage dynamique du nom (Markdown cleanup)
+                // Name Cleaning (Remove Markdown artifacts)
                 let name = audit.entity || audit.brand || "Unknown Entity";
                 name = name.replace(/^- /g, '').replace(/\*\*/g, '').trim();
 
@@ -107,7 +113,6 @@
                 const id = audit.id || "2A-PENDING";
                 const hash = audit.hash || "NOT_HASHED_YET";
                 
-                // Sécurisation du chemin du mémo
                 const rawMemo = audit.memo || "";
                 const memoPath = rawMemo.startsWith('audits/') ? rawMemo : `audits/${rawMemo}`;
 
@@ -156,7 +161,7 @@
                 document.getElementById('memo-overlay').classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             } catch (error) {
-                alert("Rapport en cours de synchronisation. Veuillez réessayer dans quelques secondes.");
+                alert("Rapport en cours de notarisation...");
             }
         }
 
