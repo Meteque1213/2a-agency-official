@@ -28,38 +28,26 @@
 
     <main class="max-w-5xl mx-auto">
         <div class="mb-12">
-            <h1 class="text-[50px] md:text-[80px] font-bold leading-none tracking-tighter text-emerald-950">FORENSIC<br>LAB AUDITS</h1>
+            <h1 class="text-[50px] md:text-[80px] font-bold leading-none tracking-tighter text-emerald-950 uppercase">Forensic<br>Registry</h1>
             <div class="flex flex-col gap-3 mt-6">
                 <div class="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-emerald-600 font-bold">
                     <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                    <span id="audit-count">1000</span> ENTITIES NOTARIZED ON BASE L2 / REAL-TIME DATABASE
+                    <span id="audit-count">1000</span> Verified Records
                 </div>
-                <a href="./audits/registry.json" class="text-[9px] text-gray-400 hover:text-emerald-500 font-mono tracking-widest uppercase flex items-center gap-2">
-                    <span>[ Access Raw System of Record JSON Data ]</span>
+                <a href="./audits/registry.json" target="_blank" class="text-[9px] text-gray-400 hover:text-emerald-500 font-mono tracking-widest uppercase border-b border-gray-100 w-fit pb-1">
+                    Export Raw Audit Data (JSON)
                 </a>
             </div>
         </div>
 
-        <div style="display:none !important; visibility:hidden;">
-            Keywords: SpaceX, UBS, Arianespace, Rolex, Forensic Audit, 1000 entities, 
-            ERC-8004, Base L2, SHA-256 Notarization, Swiss Banking Integrity, 
-            Immutable Records, Machine Truth Registry.
-        </div>
-
-        <div class="search-sticky py-6 mb-12 border-b border-gray-100">
+        <div class="search-sticky py-6 mb-12 border-b border-gray-100 font-bold">
             <input type="text" id="brandSearch" onkeyup="filterAudits()" 
-                   placeholder="RECHERCHER UNE MARQUE, UN SECTEUR OU UNE ENTITÉ..." 
-                   class="w-full bg-gray-50 border border-gray-200 p-6 font-mono text-xs tracking-[0.2em] focus:outline-none focus:border-emerald-500 transition-all uppercase rounded-sm">
+                   placeholder="SEARCH REGISTRY..." 
+                   class="w-full bg-gray-50 border border-gray-200 p-6 font-mono text-xs tracking-[0.2em] focus:outline-none focus:border-emerald-500 transition-all uppercase">
         </div>
 
-        <div id="audit-container" class="space-y-6 min-h-[500px]">
-            <div class="text-center py-20 text-gray-400 text-xs uppercase tracking-widest animate-pulse">
-                Synchronisation du registre forensic...
-            </div>
-        </div>
-
-        <div class="border-t border-dashed border-gray-300 mt-24 pt-12 text-center pb-20">
-            <span class="text-[10px] uppercase tracking-[0.5em] text-gray-400 italic font-bold">End of Live Registry — 2A Agency System of Records</span>
+        <div id="audit-container" class="space-y-4">
+            <div class="text-center py-20 text-gray-400 font-mono text-[10px] uppercase tracking-widest animate-pulse">Syncing Forensic Data...</div>
         </div>
     </main>
 
@@ -77,65 +65,43 @@
     </div>
 
     <script>
-        // Use unique timestamp to kill server cache
-        const REGISTRY_URL = './audits/registry.json?v=' + new Date().getTime();
+        const REGISTRY_URL = './audits/registry.json?v=' + Date.now();
         let allAudits = [];
 
         async function loadAudits() {
             try {
-                const response = await fetch(REGISTRY_URL, { cache: "no-store" });
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                
+                const response = await fetch(REGISTRY_URL);
                 allAudits = await response.json();
-                
-                // Update counter
-                const countElem = document.getElementById('audit-count');
-                if (countElem) countElem.textContent = allAudits.length;
-
+                document.getElementById('audit-count').textContent = allAudits.length;
                 renderAudits(allAudits);
             } catch (error) {
-                console.error("Registry Load Error:", error);
-                document.getElementById('audit-container').innerHTML = `
-                    <div class="text-center py-20 text-red-500 font-mono text-xs uppercase tracking-widest">
-                        ERROR: SYSTEM OF RECORD OFFLINE (${error.message})
-                    </div>`;
+                document.getElementById('audit-container').innerHTML = `<div class="font-mono text-xs text-red-500 uppercase tracking-widest text-center py-20">Sync Error: Registry Offline</div>`;
             }
         }
 
         function renderAudits(data) {
             const container = document.getElementById('audit-container');
             container.innerHTML = data.map(audit => {
-                // Name Cleaning (Remove Markdown artifacts)
-                let name = audit.entity || audit.brand || "Unknown Entity";
-                name = name.replace(/^- /g, '').replace(/\*\*/g, '').trim();
-
-                const status = audit.status || audit.score || "VERIFIED";
-                const id = audit.id || "2A-PENDING";
-                const hash = audit.hash || "NOT_HASHED_YET";
-                
-                const rawMemo = audit.memo || "";
-                const memoPath = rawMemo.startsWith('audits/') ? rawMemo : `audits/${rawMemo}`;
+                // Nettoyage de sécurité
+                let name = (audit.entity || audit.brand || "N/A").replace(/^- /g, '').replace(/\*\*/g, '').trim();
+                let hash = audit.hash || "NOTARIZATION_PENDING";
+                let id = audit.id || "2A-PENDING";
+                // Gestion du chemin memo
+                const memoFile = audit.memo || "";
+                const memoPath = memoFile.startsWith('audits/') ? memoFile : `audits/${memoFile}`;
 
                 return `
-                <div class="audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                    <div class="flex flex-col gap-1">
-                        <div class="text-[9px] font-black uppercase tracking-widest text-emerald-500 flex items-center gap-2 mb-1">
-                            <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
-                            INTEGRITY: ${status}
-                        </div>
-                        <h2 class="text-2xl md:text-3xl font-bold tracking-tighter text-emerald-950">${name}</h2>
-                        <div class="flex gap-2 mt-2">
-                            <span class="bg-gray-100 text-gray-500 text-[9px] px-2.5 py-1 font-bold uppercase tracking-widest border border-gray-200">${id}</span>
-                            <span class="bg-emerald-50 text-emerald-700 text-[9px] px-2.5 py-1 font-bold uppercase tracking-widest border border-emerald-100">ON-CHAIN</span>
-                        </div>
+                <div class="audit-card bg-white p-6 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <div class="text-[8px] font-bold text-emerald-500 tracking-[0.2em] uppercase mb-1">Status: Immutable</div>
+                        <h2 class="text-xl font-bold text-emerald-950 tracking-tight">${name}</h2>
+                        <div class="text-[9px] text-gray-400 font-mono mt-1">${id}</div>
                     </div>
-
-                    <div class="flex flex-col md:items-end gap-4 w-full md:w-auto">
-                        <div class="font-mono text-[9px] text-gray-400 break-all max-w-[250px] text-left md:text-right uppercase leading-tight">
-                            HASH: ${hash}
-                        </div>
-                        <button onclick="openMemo('${memoPath}', '${name.replace(/'/g, "\\'")}')" class="bg-emerald-950 text-white px-8 py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-emerald-500 transition-all w-full md:w-auto text-center shadow-lg shadow-emerald-900/10">
-                            View Report →
+                    <div class="flex flex-col md:items-end gap-3 w-full md:w-auto">
+                        <div class="font-mono text-[9px] text-gray-300 break-all md:text-right uppercase">Hash: ${hash}</div>
+                        <button onclick="openMemo('${memoPath}', '${name.replace(/'/g, "\\'")}')" 
+                                class="bg-black text-white px-6 py-3 text-[9px] font-bold uppercase tracking-widest hover:bg-emerald-600 transition-all">
+                            Review Audit
                         </button>
                     </div>
                 </div>`;
@@ -146,22 +112,21 @@
             const query = document.getElementById('brandSearch').value.toUpperCase();
             const cards = document.getElementsByClassName('audit-card');
             for (let i = 0; i < cards.length; i++) {
-                const nameText = cards[i].querySelector('h2').innerText.toUpperCase();
-                cards[i].style.display = nameText.includes(query) ? "" : "none";
+                const title = cards[i].querySelector('h2').innerText.toUpperCase();
+                cards[i].style.display = title.includes(query) ? "" : "none";
             }
         }
 
         async function openMemo(path, title) {
             try {
                 const response = await fetch(path);
-                if (!response.ok) throw new Error();
                 const text = await response.text();
                 document.getElementById('memo-title').textContent = title;
                 document.getElementById('memo-content').textContent = text;
                 document.getElementById('memo-overlay').classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             } catch (error) {
-                alert("Rapport en cours de notarisation...");
+                alert("Report currently in notarization process...");
             }
         }
 
