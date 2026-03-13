@@ -830,45 +830,56 @@
             renderTable(category);
         }
         function renderTable(category) {
-            const body = document.getElementById('registry-body');
-            if (!body || !data[category]) return;
-            body.innerHTML = '';
-            
-            const items = [...data[category]].sort((a, b) => b.score - a.score);
-            
-            items.forEach((item, index) => {
-                const row = document.createElement('tr');
-                row.className = "border-b border-gray-100 hover:bg-gray-50 transition-colors";
-                
-                const score = item.score || 0;
-                let badgeStyle = score >= 90 ? "bg-[#0052FF] text-white" : (score >= 75 ? "bg-emerald-600 text-white" : "bg-red-600 text-white animate-pulse");
-                const isModified = item.alert_status === "MODIFIED";
+    const body = document.getElementById('registry-body');
+    if (!body || !data[category]) return;
+    body.innerHTML = '';
+    
+    const items = [...data[category]].sort((a, b) => (b.score || 0) - (a.score || 0));
+    
+    items.forEach((item, index) => {
+        const row = document.createElement('tr');
+        row.className = "border-b border-gray-100 hover:bg-gray-50 transition-colors";
+        
+        const score = item.score || 0;
+        let badgeStyle = score >= 90 ? "bg-[#0052FF] text-white" : (score >= 75 ? "bg-emerald-600 text-white" : "bg-red-600 text-white animate-pulse");
+        
+        // On vérifie si c'est modifié
+        const isModified = item.alert_status === "MODIFIED";
+        
+        // On prépare le commentaire IA (nettoyage si vide)
+        const aiComment = item.audit_comment && item.audit_comment !== "Manual audit required." 
+                          ? item.audit_comment 
+                          : "Audit sémantique : Analyse des changements structurels du rapport.";
 
-                row.innerHTML = `
-                    <td class="py-4 w-12 opacity-30 font-mono text-[10px]">${(index + 1).toString().padStart(2, '0')}</td>
-                    <td class="py-4 font-black uppercase tracking-wider text-[#064e3b]">
-                        <div class="flex flex-col">
-                            <span class="text-[13px] flex items-center gap-2">
-                                ${item.name}
-                                ${isModified ? `<span title="${item.audit_comment || 'Analyse en cours...'}" class="cursor-help text-[7px] bg-[#f59e0b] text-black px-2 py-0.5 rounded-full font-bold uppercase shadow-sm">Updated</span>` : ''}${isModified ? '<span class="text-[7px] bg-[#f59e0b] text-black px-2 py-0.5 rounded-full font-bold uppercase shadow-sm">Updated</span>' : ''}
+        row.innerHTML = `
+            <td class="py-4 w-12 opacity-30 font-mono text-[10px]">${(index + 1).toString().padStart(2, '0')}</td>
+            <td class="py-4 font-black uppercase tracking-wider text-[#064e3b]">
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-2">
+                        <span class="text-[13px]">${item.name}</span>
+                        ${isModified ? `
+                            <span title="${aiComment}" class="cursor-help text-[7px] bg-[#f59e0b] text-black px-2 py-0.5 rounded-full font-bold uppercase shadow-sm border border-amber-600/20">
+                                Updated
                             </span>
-                            <span class="text-[7px] text-emerald-600 font-black opacity-80 uppercase">
-                                ${item.doc_label || "SENTINEL_INDEX"}
-                            </span>
-                        </div>
-                    </td>
-                    <td class="py-4 text-center">
-                        <span class="px-3 py-1 rounded-sm text-[10px] font-black inline-block min-w-[60px] ${badgeStyle}">
-                            ${score}/100
-                        </span>
-                    </td>
-                    <td class="py-4 text-right font-mono text-[9px] opacity-40">
-                        ${item.doc_hash || item.hash ? 'VERIFIED ON-CHAIN' : 'AI IQ PENDING'}
-                    </td>
-                `;
-                body.appendChild(row);
-            });
-        }
+                        ` : ''}
+                    </div>
+                    <span class="text-[7px] text-emerald-600 font-black opacity-80 uppercase mt-0.5">
+                        ${item.doc_label || "SENTINEL_INDEX"}
+                    </span>
+                </div>
+            </td>
+            <td class="py-4 text-center">
+                <span class="px-3 py-1 rounded-sm text-[10px] font-black inline-block min-w-[60px] ${badgeStyle}">
+                    ${score}/100
+                </span>
+            </td>
+            <td class="py-4 text-right font-mono text-[9px] opacity-40">
+                ${item.doc_hash || item.hash ? 'VERIFIED ON-CHAIN' : 'AI IQ PENDING'}
+            </td>
+        `;
+        body.appendChild(row);
+    });
+}
         async function loadData() {
             try {
                 const response = await fetch('./registry-data.json');
