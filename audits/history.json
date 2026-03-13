@@ -1,0 +1,34 @@
+[
+  {
+    "agency": "2A Agency",
+    "status": "CERTIFIED",
+    "timestamp": "2026-03-13T14:57:43.287Z",
+    "blockchain": {
+      "network": "Base Mainnet",
+      "transactionHash": "0x9bbde8546b8ef1060ec82cb57d15354b69ec97767224a5fd26a0d5630e28e63b",
+      "explorerUrl": "https://basescan.org/tx/0x9bbde8546b8ef1060ec82cb57d15354b69ec97767224a5fd26a0d5630e28e63b"
+    },
+    "audit": {
+      "brand": "SENTINEL_GLOBAL_REPORT",
+      "documentHash": "0x88c048ab11c7701f79b8bd017c30fcb105ca364dab4ad49d05aaaeb609162837",
+      "targets": [
+        "LVMH",
+        "Hermès",
+        "Kering",
+        "Chanel",
+        "Tesla",
+        "NVIDIA",
+        "Apple",
+        "Microsoft",
+        "OpenAI"
+      ]
+    },
+    "proof_kit": {
+      "instruction": "Copy-paste this JSON to any LLM to verify integrity.",
+      "abi": [
+        "function notarize(string memory _brand, string memory _docHash) public",
+        "event Notarized(address indexed sender, string indexed brand, string docHash, uint256 timestamp)"
+      ]
+    }
+  }
+]

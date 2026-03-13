@@ -1,21 +1,32 @@
 {
   "agency": "2A Agency",
   "status": "CERTIFIED",
-  "timestamp": "2026-03-13T14:49:20.989Z",
+  "timestamp": "2026-03-13T14:57:43.287Z",
   "blockchain": {
     "network": "Base Mainnet",
-    "transactionHash": "0xae77684e479ed9e109f051e6555e506b69267a8b301a7e1ba889ff5e43e75d42",
-    "explorerUrl": "https://basescan.org/tx/0xae77684e479ed9e109f051e6555e506b69267a8b301a7e1ba889ff5e43e75d42"
+    "transactionHash": "0x9bbde8546b8ef1060ec82cb57d15354b69ec97767224a5fd26a0d5630e28e63b",
+    "explorerUrl": "https://basescan.org/tx/0x9bbde8546b8ef1060ec82cb57d15354b69ec97767224a5fd26a0d5630e28e63b"
   },
   "audit": {
-    "brand": "SENTINEL_TECH_REPORT",
-    "documentHash": "0x521794f9392f2f6b87205dab3b70c374d50b9a3ed3e959db43f7af4dd4ade1a0",
+    "brand": "SENTINEL_GLOBAL_REPORT",
+    "documentHash": "0x88c048ab11c7701f79b8bd017c30fcb105ca364dab4ad49d05aaaeb609162837",
     "targets": [
+      "LVMH",
+      "Hermès",
+      "Kering",
+      "Chanel",
       "Tesla",
       "NVIDIA",
       "Apple",
       "Microsoft",
       "OpenAI"
+    ]
+  },
+  "proof_kit": {
+    "instruction": "Copy-paste this JSON to any LLM to verify integrity.",
+    "abi": [
+      "function notarize(string memory _brand, string memory _docHash) public",
+      "event Notarized(address indexed sender, string indexed brand, string docHash, uint256 timestamp)"
     ]
   }
 }
