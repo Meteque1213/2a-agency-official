@@ -1,26 +1,42 @@
 [
-    {
-      "brand": "LOUIS VUITTON",
-      "id": "LVMH-2026-UX-001",
-      "score": "98/100",
-      "hash": "0x0f849b0795b6494c7becbc5dacef80e3799ca177039218745ff082d1c189791f",
-      "memo": "MEMO_LVMH_001.txt",
-      "featured": true
-    },
-    {
-      "brand": "OPENAI (GPT-5 SR)",
-      "id": "OAI-2026-TECH-009",
-      "score": "94/100",
-      "hash": "0x3e4d5f6a7b8c9d0e1f2a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4",
-      "memo": "MEMO_OPENAI_009.txt",
-      "featured": false
-    },
-    {
-      "brand": "OLIPOP",
-      "id": "DNVB-2026-UX-004",
-      "score": "85/100",
-      "hash": "0x116aaa95b6494c7becbc5dacef80e3799ca177039218745ff082d1c189791f",
-      "memo": "MEMO_DNVB_004_OLIPOP.txt",
-      "featured": false
-    }
-  ]
+  {
+    "brand": "LOUIS VUITTON",
+    "id": "LVMH-2026-001",
+    "score": "98/100",
+    "hash": "0x0c7386299cef77bb2d1517f6bc368450221f39b3101f754af7dda33f619f5eb1",
+    "memo": "MEMO_LOUIS_VUITTON_LVMH-2026-001.txt",
+    "featured": true
+  },
+  {
+    "brand": "OPENAI",
+    "id": "OAI-2026-009",
+    "score": "94/100",
+    "hash": "0xb9be651130deb451a1df3679ce6b1404d92b271f44e7ec1455faf1cb1cdf7b03",
+    "memo": "MEMO_OPENAI_OAI-2026-009.txt",
+    "featured": false
+  },
+  {
+    "brand": "OLIPOP",
+    "id": "DNVB-2026-004",
+    "score": "85/100",
+    "hash": "0x6335b8e8df9c0619411f55bccbbaa18f951a2c9f27d7d8f1ecbe718426723871",
+    "memo": "MEMO_OLIPOP_DNVB-2026-004.txt",
+    "featured": false
+  },
+  {
+    "brand": "HERMES",
+    "id": "RMS-2026-002",
+    "score": "99/100",
+    "hash": "0xf63f383e5b2554f597c28da6d1f31e59f88ffd9c4abf03efdc92d009bdf5dfad",
+    "memo": "MEMO_HERMES_RMS-2026-002.txt",
+    "featured": false
+  },
+  {
+    "brand": "TESLA",
+    "id": "TSLA-2026-012",
+    "score": "91/100",
+    "hash": "0xd4cf83c9f42d74b05f40a0575b4849cf855aba01627ea76be6c35ceec17ce616",
+    "memo": "MEMO_TESLA_TSLA-2026-012.txt",
+    "featured": false
+  }
+]
