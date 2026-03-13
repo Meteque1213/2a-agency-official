@@ -24,6 +24,7 @@
     "@mistralai/mistralai": "^1.14.1",
     "axios": "^1.13.6",
     "cheerio": "^1.2.0",
+    "groq-sdk": "^1.1.1",
     "langchain": "^1.2.30",
     "langsmith": "^0.5.8",
     "openai": "^6.27.0"

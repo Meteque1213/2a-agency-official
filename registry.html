@@ -850,7 +850,7 @@
                         <div class="flex flex-col">
                             <span class="text-[13px] flex items-center gap-2">
                                 ${item.name}
-                                ${isModified ? '<span class="text-[7px] bg-[#f59e0b] text-black px-2 py-0.5 rounded-full font-bold uppercase shadow-sm">Updated</span>' : ''}
+                                ${isModified ? `<span title="${item.audit_comment || 'Analyse en cours...'}" class="cursor-help text-[7px] bg-[#f59e0b] text-black px-2 py-0.5 rounded-full font-bold uppercase shadow-sm">Updated</span>` : ''}${isModified ? '<span class="text-[7px] bg-[#f59e0b] text-black px-2 py-0.5 rounded-full font-bold uppercase shadow-sm">Updated</span>' : ''}
                             </span>
                             <span class="text-[7px] text-emerald-600 font-black opacity-80 uppercase">
                                 ${item.doc_label || "SENTINEL_INDEX"}
