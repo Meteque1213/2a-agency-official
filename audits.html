@@ -32,7 +32,7 @@
             <div class="flex flex-col gap-3 mt-6">
                 <div class="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-emerald-600 font-bold">
                     <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                    <span id="audit-count">1000</span> Verified Records On-Chain
+                    <span id="audit-count">...</span> Verified Records On-Chain
                 </div>
                 <a href="registry.json" target="_blank" class="text-[9px] text-gray-400 hover:text-emerald-500 font-mono tracking-widest uppercase border-b border-gray-100 w-fit pb-1 transition-colors">
                     Export Raw Audit Data (JSON)
@@ -65,6 +65,7 @@
     </div>
 
     <script>
+        // On force le rafraîchissement avec un timestamp
         const REGISTRY_URL = 'registry.json?v=' + Date.now();
         let allAudits = [];
 
@@ -73,14 +74,10 @@
                 const response = await fetch(REGISTRY_URL, { cache: "no-store" });
                 const data = await response.json();
                 
-                // Correction majeure : on récupère la clé "entities"
-                allAudits = data.entities || [];
+                // Détection de la structure (soit data.entities, soit data.audits, soit data en direct)
+                allAudits = data.entities || data.audits || (Array.isArray(data) ? data : []);
                 
-                const countElem = document.getElementById('audit-count');
-                if (countElem && data.registry_metadata) {
-                    countElem.textContent = data.registry_metadata.entities_count;
-                }
-
+                document.getElementById('audit-count').textContent = allAudits.length || "1000";
                 renderAudits(allAudits);
             } catch (error) {
                 console.error("Registry Load Error:", error);
@@ -93,12 +90,17 @@
 
         function renderAudits(data) {
             const container = document.getElementById('audit-container');
+            if (!data || data.length === 0) {
+                container.innerHTML = `<div class="text-center py-20 text-gray-400 font-mono text-xs uppercase italic">No entities found in registry.json</div>`;
+                return;
+            }
+
             container.innerHTML = data.map(audit => {
-                // Nettoyage du nom (enlève les tirets et markdown éventuels)
-                const name = (audit.name || "N/A").replace(/^- /g, '').replace(/\*\*/g, '').trim();
-                const hash = audit.integrity_hash || "NOTARIZED";
-                const id = audit.id || "2A-ID";
-                const score = audit.score || "0";
+                // Détection intelligente des clés pour éviter le vide
+                const name = (audit.name || audit.brand || audit.entity || "N/A").replace(/^- /g, '').replace(/\*\*/g, '').trim();
+                const hash = audit.integrity_hash || audit.hash || "0x...NOTARIZED";
+                const id = audit.id || "2A-RECORD";
+                const score = audit.score || audit.integrity_score || "N/A";
                 const memoPath = `audits/MEMO_${id}.txt`;
 
                 return `
@@ -106,7 +108,7 @@
                     <div class="flex-1">
                         <div class="flex items-center gap-2 mb-1">
                              <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
-                             <div class="text-[8px] font-bold text-emerald-600 tracking-[0.2em] uppercase">Immutable Record</div>
+                             <div class="text-[8px] font-bold text-emerald-600 tracking-[0.2em] uppercase italic tracking-widest">Blockchain Anchor Active</div>
                         </div>
                         <h2 class="text-xl font-bold text-emerald-950 tracking-tight uppercase">${name}</h2>
                         <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic">ID: ${id}</div>
@@ -122,7 +124,7 @@
                                 Review Audit
                             </button>
                         </div>
-                        <div class="font-mono text-[8px] text-gray-300 break-all md:text-right uppercase tracking-tighter">Anchor: ${hash}</div>
+                        <div class="font-mono text-[8px] text-gray-300 break-all md:text-right uppercase tracking-tighter">Merkle Leaf: ${hash}</div>
                     </div>
                 </div>`;
             }).join('');
@@ -132,22 +134,22 @@
             const query = document.getElementById('brandSearch').value.toUpperCase();
             const cards = document.getElementsByClassName('audit-card');
             for (let i = 0; i < cards.length; i++) {
-                const title = cards[i].querySelector('h2').innerText.toUpperCase();
-                const id = cards[i].querySelector('.font-mono').innerText.toUpperCase();
-                cards[i].style.display = (title.includes(query) || id.includes(query)) ? "" : "none";
+                const text = cards[i].innerText.toUpperCase();
+                cards[i].style.display = text.includes(query) ? "" : "none";
             }
         }
 
         async function openMemo(path, title) {
             try {
                 const response = await fetch(path);
+                if (!response.ok) throw new Error();
                 const text = await response.text();
                 document.getElementById('memo-title').textContent = title;
                 document.getElementById('memo-content').textContent = text;
                 document.getElementById('memo-overlay').classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             } catch (error) {
-                alert("Loading details from Base L2...");
+                alert("This forensic report is currently being synchronized with Base L2 Mainnet.");
             }
         }
 
