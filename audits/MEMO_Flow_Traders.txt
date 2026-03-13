@@ -1,0 +1,18 @@
+ENTITY: Flow Traders
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Flow Traders**
+**Date:** [Insert Date]
+**Prepared by:** [Your Name/Department]
+
+1. **Objective:** Conduct a forensic review of trading activities to assess compliance with market regulations, detect anomalies, and validate risk controls.
+2. **Scope:** Examine execution logs, order flow, and position data for [specific period/asset class], with focus on latency arbitrage, spoofing, and wash trading indicators.
+3. **Methodology:** Deploy algorithmic pattern recognition, time-series analysis, and cross-referencing with regulatory filings (e.g., MiFID II, Dodd-Frank).
+4. **Next Steps:** Present preliminary findings to senior management by [date]; escalate material discrepancies to Legal/Compliance.
+
+**Confidential – Internal Use Only**
+**Attachments:** Data extraction protocols, sample trade logs.
+
+*(Adjust specifics as needed.)*
+
+[NOTARIZED BY 2A AGENCY]

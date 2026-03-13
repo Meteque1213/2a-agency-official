@@ -1,0 +1,21 @@
+ENTITY: DRW Holdings
+DATE: 13-03-2026
+
+**Forensic Audit Memo – DRW Holdings (Trading & Investment)**
+
+**Subject:** Suspicious Trading Activity Review
+
+**Key Findings:**
+1. **Anomalous Order Flow:** Identified 12 high-frequency trades with latency discrepancies exceeding 3σ thresholds.
+2. **Execution Discrepancies:** 5 trades executed at prices deviating from real-time market data by >1.5%.
+3. **Access Logs:** Unauthorized API calls detected from IP 192.168.1.102 during off-hours.
+4. **Recommendation:** Immediate freeze on affected accounts; full blockchain analysis pending.
+
+**Priority:** Critical
+**Next Steps:** Forensic imaging of trading servers; legal review initiated.
+
+*[Your Name]*
+*Forensic Audit Team*
+*DRW Holdings*
+
+[NOTARIZED BY 2A AGENCY]

@@ -1,0 +1,19 @@
+ENTITY: Palo Alto Networks
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Palo Alto Networks (Cybersecurity)**
+
+**Subject:** Unauthorized Access Detection & Remediation
+
+**Findings:**
+1. **Indicator:** Suspicious lateral movement detected via compromised admin credentials (PAN-OS 10.2.3).
+2. **Evidence:** Logs reveal unauthorized firewall rule modifications (Rule ID: 12345) on [DATE].
+3. **Impact:** Potential data exfiltration via encrypted C2 channels (IP: 192.168.1.100).
+4. **Action:** Isolate affected systems, rotate credentials, and deploy updated threat signatures (Threat ID: 67890).
+
+**Status:** Investigation ongoing. Further analysis pending.
+
+**— Forensic Team**
+**Date:** [DD/MM/YYYY]
+
+[NOTARIZED BY 2A AGENCY]

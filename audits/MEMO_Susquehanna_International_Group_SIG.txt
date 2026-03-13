@@ -1,0 +1,16 @@
+ENTITY: Susquehanna International Group (SIG)
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Susquehanna International Group (SIG)**
+
+**Objective:** Conduct a technical review of SIG’s market-making and trading operations to assess compliance with regulatory requirements, identify operational risks, and evaluate trade execution integrity.
+
+**Scope:** Focus on algorithmic trading systems, order routing, execution latency, and trade reconciliation processes across equities, derivatives, and crypto markets.
+
+**Methodology:** Utilize blockchain forensics, trade reconstruction, and anomaly detection to analyze transaction patterns, detect potential market abuse, and validate reporting accuracy.
+
+**Deliverables:** Provide a detailed report with findings, risk assessments, and actionable recommendations to enhance transparency and mitigate financial crime risks.
+
+**End of Memo.**
+
+[NOTARIZED BY 2A AGENCY]

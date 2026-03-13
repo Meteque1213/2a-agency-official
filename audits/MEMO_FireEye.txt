@@ -1,0 +1,19 @@
+ENTITY: FireEye
+DATE: 13-03-2026
+
+**FireEye Forensic Audit Memo**
+
+**Subject:** Unauthorized Access Incident – Technical Findings
+
+1. **Incident Overview:** Detected lateral movement via compromised credentials; adversary exfiltrated sensitive data via encrypted channels.
+2. **Technical Artifacts:** Persistent backdoors identified in Active Directory; C2 traffic masked as legitimate HTTPS traffic.
+3. **Containment Actions:** Isolated affected systems; revoked compromised credentials and deployed endpoint detection rules.
+4. **Next Steps:** Full memory forensics and log analysis pending; recommend immediate patching of detected vulnerabilities.
+
+**Priority: Critical**
+**Prepared by:** [Your Name/Team]
+**Date:** [DD/MM/YYYY]
+
+*(Adjust details as needed for specificity.)*
+
+[NOTARIZED BY 2A AGENCY]

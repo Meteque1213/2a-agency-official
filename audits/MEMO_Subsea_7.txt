@@ -1,0 +1,13 @@
+ENTITY: Subsea 7
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Subsea 7 (Subsea Engineering & Exploration)**
+
+1. **Objective:** Conduct a forensic review of financial transactions, contracts, and project cost allocations to identify discrepancies, fraud, or compliance violations.
+2. **Scope:** Examine procurement records, vendor payments, and project invoicing for the period 2022–2024, with a focus on high-risk offshore engineering contracts.
+3. **Methodology:** Deploy data analytics, document sampling, and interviews with key personnel to trace financial flows and validate reporting accuracy.
+4. **Deliverables:** Provide a detailed report with findings, risk assessments, and remediation recommendations by [date].
+
+**Confidential – Internal Use Only**
+
+[NOTARIZED BY 2A AGENCY]

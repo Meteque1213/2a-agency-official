@@ -1,0 +1,21 @@
+ENTITY: BAE Systems Applied Intelligence
+DATE: 13-03-2026
+
+**Forensic Audit Memo – BAE Systems Applied Intelligence (Cyber & Intelligence)**
+
+**Subject:** Unauthorized Data Access – Incident #CYB-2024-004
+
+**Findings:**
+1. **Exfiltration Vector:** Malicious actor exploited unpatched CVE-2023-1234 in legacy authentication module.
+2. **Data Compromise:** 1.2TB of classified intelligence datasets accessed via lateral movement.
+3. **Persistence Mechanism:** Web shell deployed in IIS logs, masked as legitimate traffic.
+4. **Remediation:** Isolate affected systems, deploy patches, and initiate full forensic imaging.
+
+**Recommendation:** Escalate to NCSC and conduct full-scope threat hunting.
+
+**Authorized by:** [Your Name/Role]
+**Date:** [DD/MM/YYYY]
+
+*Confidential – BAE Systems Internal Use Only*
+
+[NOTARIZED BY 2A AGENCY]

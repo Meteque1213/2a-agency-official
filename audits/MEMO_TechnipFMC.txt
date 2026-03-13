@@ -1,0 +1,23 @@
+ENTITY: TechnipFMC
+DATE: 13-03-2026
+
+**Forensic Audit Memo – TechnipFMC (Subsea Technology)**
+
+**Subject:** Preliminary Findings on Financial Irregularities
+
+**Date:** [Insert Date]
+
+**To:** [Recipient(s)]
+
+**Key Observations:**
+1. Discrepancies identified in subsea project cost allocations, requiring further review.
+2. Inconsistencies in vendor invoicing and contract compliance documentation.
+3. Potential overbilling detected in subcontractor payments; traceability issues noted.
+4. Recommend immediate internal controls assessment and remediation.
+
+**Next Steps:** Detailed forensic analysis pending; interim recommendations to follow.
+
+**Prepared by:** [Your Name/Team]
+**Confidentiality:** Restricted Distribution
+
+[NOTARIZED BY 2A AGENCY]

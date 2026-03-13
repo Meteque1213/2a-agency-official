@@ -1,0 +1,19 @@
+ENTITY: GTS
+DATE: 13-03-2026
+
+**Forensic Audit Memo – GTS (Market Making & Trading)**
+
+1. **Objective**: Conduct a forensic review of GTS trading activities to assess compliance with market-making protocols, detect anomalies in execution strategies, and validate risk controls.
+
+2. **Scope**: Examine order flow, latency metrics, and P&L attribution for the past 12 months, with focus on high-frequency trading (HFT) and algorithmic execution.
+
+3. **Methodology**: Deploy quantitative analysis (e.g., Sharpe ratios, fill rates) and transaction-level reconciliation against exchange data feeds.
+
+4. **Deliverables**: Report findings, including deviations from benchmarks, regulatory risks, and recommendations for operational enhancements.
+
+**Approval Required**: [Name/Role]
+**Deadline**: [Date]
+
+*Confidential – Internal Use Only*
+
+[NOTARIZED BY 2A AGENCY]

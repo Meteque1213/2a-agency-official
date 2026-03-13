@@ -1,0 +1,21 @@
+ENTITY: SRM
+DATE: 13-03-2026
+
+**Forensic Audit Memo – SRM (Cyber & Corporate Intelligence)**
+
+**Subject:** Unauthorized Data Access – [Case #XXXX]
+
+**Key Findings:**
+1. **Anomalous Activity Detected:** Multiple unauthorized access attempts to [System/Database] via [IP/Account].
+2. **Data Exfiltration Suspected:** Logs indicate extraction of [Sensitive Data Type] to external endpoint [IP/URL].
+3. **Forensic Analysis Required:** Full memory and disk imaging initiated; timeline reconstruction underway.
+4. **Immediate Actions:** Isolate affected systems, preserve logs, and escalate to Incident Response Team.
+
+**Next Steps:** Await further technical analysis and legal review.
+
+**Prepared by:** [Your Name/Team]
+**Date:** [DD/MM/YYYY]
+
+*(Adjust placeholders as needed.)*
+
+[NOTARIZED BY 2A AGENCY]

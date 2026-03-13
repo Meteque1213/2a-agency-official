@@ -1,0 +1,19 @@
+ENTITY: Fortinet
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Fortinet Cybersecurity**
+
+**Subject:** Unauthorized Access Detection & Remediation
+
+1. **Incident Overview:** Suspected unauthorized access detected via FortiGate firewall logs, with anomalous traffic patterns originating from IP [REDACTED].
+2. **Technical Findings:** Analysis reveals potential credential misuse; no evidence of data exfiltration, but lateral movement indicators present.
+3. **Immediate Actions:** Isolate affected systems, reset credentials, and deploy FortiEDR for endpoint monitoring.
+4. **Next Steps:** Full log review, threat hunting, and patch validation to mitigate similar risks.
+
+**Priority: High**
+**Prepared by:** [Your Name/Team]
+**Date:** [DD/MM/YYYY]
+
+*(Note: Adjust specifics as needed for your case.)*
+
+[NOTARIZED BY 2A AGENCY]

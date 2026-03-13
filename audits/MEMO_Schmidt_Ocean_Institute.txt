@@ -1,0 +1,18 @@
+ENTITY: Schmidt Ocean Institute
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Schmidt Ocean Institute**
+**Date:** [Insert Date]
+
+1. **Objective:** Conduct a forensic review of financial transactions (Q3 2023) to assess compliance with grant allocation protocols and detect potential irregularities in marine research expenditures.
+
+2. **Scope:** Examine digital records, vendor invoices, and subaward documentation for the *Deep-Sea Biodiversity Initiative*, focusing on cost allocation, subrecipient reporting, and procurement thresholds.
+
+3. **Findings:** Preliminary analysis identified discrepancies in subaward reimbursement timelines and non-compliance with NSF’s *Ocean Exploration Guidelines* (Section 4.2.3).
+
+4. **Next Steps:** Schedule a technical interview with the Finance Director and request access to encrypted project ledgers for further validation.
+
+**Prepared by:** [Your Name/Team]
+**Approval:** [Authorized Signatory]
+
+[NOTARIZED BY 2A AGENCY]

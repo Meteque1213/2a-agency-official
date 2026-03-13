@@ -1,0 +1,16 @@
+ENTITY: Jump Trading
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Jump Trading (Proprietary Trading)**
+
+**Objective:** Assess potential market manipulation, trade execution anomalies, and compliance with regulatory frameworks (e.g., MiFID II, Dodd-Frank).
+
+**Scope:** Review proprietary trading algorithms, order flow, and execution logs for suspicious patterns (e.g., spoofing, layering, or latency arbitrage).
+
+**Methodology:** Deploy forensic tools (e.g., trade reconstruction, time-series analysis) to identify irregularities in order book dynamics and execution quality.
+
+**Deliverable:** Detailed report with statistical anomalies, regulatory risk exposure, and remediation recommendations by [date].
+
+*Confidential – Internal Use Only*
+
+[NOTARIZED BY 2A AGENCY]

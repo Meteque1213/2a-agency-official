@@ -1,0 +1,15 @@
+ENTITY: Splunk
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Splunk Cybersecurity Review**
+
+1. **Objective**: Conduct a forensic audit of Splunk’s SIEM capabilities to assess log integrity, detection efficacy, and compliance with NIST SP 800-53 controls.
+2. **Scope**: Review event collection, correlation rules, and alert response workflows across critical infrastructure.
+3. **Findings**: Identified gaps in log retention policies and misconfigured alert thresholds, increasing risk of undetected threats.
+4. **Recommendations**: Enforce 90-day log retention, implement anomaly-based detection, and conduct quarterly rule validation.
+
+**Status**: Pending leadership approval for remediation plan.
+
+*Technical Tone: Concise, action-oriented, and compliance-focused.*
+
+[NOTARIZED BY 2A AGENCY]

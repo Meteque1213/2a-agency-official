@@ -1,0 +1,19 @@
+ENTITY: Pinkerton
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Pinkerton Security & Investigations**
+
+**Subject:** Unauthorized Access to Financial Systems – Incident #2024-1147
+
+**Findings:**
+1. **Intrusion Vector:** Exploited RDP vulnerability (CVE-2023-41128) via compromised credentials.
+2. **Data Exfiltration:** 1.2GB of financial records transferred to external server (IP: 192.168.75.42).
+3. **Timeline:** Initial breach on 2024-05-15; detection delayed due to disabled SIEM alerts.
+4. **Recommendations:** Immediate credential rotation, patch deployment, and forensic imaging of affected systems.
+
+**Next Steps:** Full chain-of-custody documentation and legal escalation pending.
+
+**Prepared by:** [Your Name]
+**Date:** [Current Date]
+
+[NOTARIZED BY 2A AGENCY]

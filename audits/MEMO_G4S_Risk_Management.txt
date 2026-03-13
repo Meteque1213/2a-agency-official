@@ -1,0 +1,19 @@
+ENTITY: G4S Risk Management
+DATE: 13-03-2026
+
+**Forensic Audit Memo – G4S Risk Management (Security & Intelligence)**
+
+**Subject:** Unauthorized Access to Secure Data Repository
+
+**Key Findings:**
+1. **Access Log Anomalies:** Multiple unauthorized entry attempts detected in the secure data repository (SDR) between 22:00–02:00 UTC, originating from an unregistered endpoint.
+2. **Credential Compromise:** Evidence suggests credential stuffing via a leaked employee password (last changed 03/2023).
+3. **Data Exfiltration Risk:** No confirmed exfiltration, but forensic analysis indicates potential lateral movement to an external cloud storage service.
+4. **Remediation Steps:** Immediate credential rotation, endpoint isolation, and SDR access review initiated. Full forensic report pending.
+
+**Priority:** Critical – Escalate to CISO and Legal.
+
+**Prepared by:** [Your Name/Team]
+**Date:** [DD/MM/YYYY]
+
+[NOTARIZED BY 2A AGENCY]

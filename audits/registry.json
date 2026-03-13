@@ -6958,5 +6958,705 @@
         "hash": "72459d08e53738cc6709e54f8166e8e7df7b6e6f2d4d6898ab7cc4067509913d",
         "memo": "MEMO__Critical_Elements_Lithium.txt",
         "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-CROWDSTRIKE",
+        "entity": "CrowdStrike",
+        "hash": "d0b4b1865de5e6b5adb4446f611b65e6179d9e6200cc3408b90a14a283411023",
+        "memo": "MEMO_CrowdStrike.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-PALO_ALTO_NETWORKS",
+        "entity": "Palo Alto Networks",
+        "hash": "2dd3066de2cfda8a4a12cd448e79220774500bd163d6f94067964efde4c07e3e",
+        "memo": "MEMO_Palo_Alto_Networks.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-FIREEYE",
+        "entity": "FireEye",
+        "hash": "4dfc5b1a29d9cdd3a5f1c3ebb373fd51066ac6e401a341eebd96ba7c9f50f9a2",
+        "memo": "MEMO_FireEye.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-SENTINELONE",
+        "entity": "SentinelOne",
+        "hash": "80158fb35ccc1a574dca28b1d53508926872d7912410365a41bd70fc0f901209",
+        "memo": "MEMO_SentinelOne.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-DARKTRACE",
+        "entity": "Darktrace",
+        "hash": "458f0e4c8217d7a6c6a59e7a02e0718c5ec65be99598fab23c14c0e94d7a604c",
+        "memo": "MEMO_Darktrace.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-SPLUNK",
+        "entity": "Splunk",
+        "hash": "0f280a1e1a265f1273b015a27411c1c0742139e9806f563dfb573c781d6208ae",
+        "memo": "MEMO_Splunk.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-ZSCALER",
+        "entity": "Zscaler",
+        "hash": "daf94209a5e0faed308fdd077e9c9d617e38683329d1ce855b1244807d6cb391",
+        "memo": "MEMO_Zscaler.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-CLOUDFLARE",
+        "entity": "Cloudflare",
+        "hash": "5e5f3332bdf66874aa456ecf996a1e4a8ffaacf0a926f696e2b003e8b782fd94",
+        "memo": "MEMO_Cloudflare.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-TENABLE",
+        "entity": "Tenable",
+        "hash": "4d4d8ff448bde320711edcce86a7834c2ea17226a4531634140e542a232aac71",
+        "memo": "MEMO_Tenable.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-QUALYS",
+        "entity": "Qualys",
+        "hash": "46cc3b391c54278bd13b4b0ea8274310a61c81f7fa9fc73e98f17c4b0064b8f4",
+        "memo": "MEMO_Qualys.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-RAPID7",
+        "entity": "Rapid7",
+        "hash": "1259ca960c8dd73daadb149016d0a2340aa686289a7088af4da7a38e18c017f7",
+        "memo": "MEMO_Rapid7.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-CHECK_POINT_SOFTWARE",
+        "entity": "Check Point Software",
+        "hash": "bda839c4c923de02a09c213feb8a3cb8382674cbcc8824de7ad2efc7ae978136",
+        "memo": "MEMO_Check_Point_Software.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-FORTINET",
+        "entity": "Fortinet",
+        "hash": "c2d6e3d6053c0cbbd7dc5055785b58f7e5d70b077070b97982c8d9ec4f1b4594",
+        "memo": "MEMO_Fortinet.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-MCAFEE",
+        "entity": "McAfee",
+        "hash": "a452571eca0c881bdca253b4559aa0b65184d113aa1300ccdfeccad0a16da5e1",
+        "memo": "MEMO_McAfee.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-SYMANTEC",
+        "entity": "Symantec",
+        "hash": "72805036f1af9da7353de683d1142c29d1d096c284dced999dede065ac39fd17",
+        "memo": "MEMO_Symantec.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-KASPERSKY",
+        "entity": "Kaspersky",
+        "hash": "6b9b71b64c1761ae5ab6b5b158d228411da5c9b256b9a45b2598fc2e5b924ca9",
+        "memo": "MEMO_Kaspersky.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-TREND_MICRO",
+        "entity": "Trend Micro",
+        "hash": "fb660575f0a5f8c028d718af2265dfad39ad12fb38d07fb3b032c74d45f8e234",
+        "memo": "MEMO_Trend_Micro.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-SOPHOS",
+        "entity": "Sophos",
+        "hash": "b2f3e66c35adbca88b99ba8ecaabde2abbbc7b45ca9fbc3ab18cbfd1b25ca952",
+        "memo": "MEMO_Sophos.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-VARONIS",
+        "entity": "Varonis",
+        "hash": "6f96c7b3a35484b8a04999392e21c43ebb9a579ccd899617a7e3e4d423166af5",
+        "memo": "MEMO_Varonis.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-ILLUMIO",
+        "entity": "Illumio",
+        "hash": "cefd0dda52f79d8a5f7f9ee968ebac027f9ae0d3ab20b3776fd36560bb01c7c7",
+        "memo": "MEMO_Illumio.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-SCHMIDT_OCEAN_INSTITUTE",
+        "entity": "Schmidt Ocean Institute",
+        "hash": "9b5b981fb101084c933c070b464413d934faedc7ef153f07a2d5c754f0891353",
+        "memo": "MEMO_Schmidt_Ocean_Institute.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-OCEANGATE",
+        "entity": "OceanGate",
+        "hash": "32c439fb58b96e2217759254f15280028866e21b83d6ba7ef0281fd35e8bad0a",
+        "memo": "MEMO_OceanGate.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-TRITON_SUBMARINES",
+        "entity": "Triton Submarines",
+        "hash": "a0749798ac465cdae1e003f539d82c0def646ef5985ca8c11278a3d1f7950bd5",
+        "memo": "MEMO_Triton_Submarines.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-DEEP_OCEAN_EXPLORATION__RESEARCH_DOER_MARINE",
+        "entity": "Deep Ocean Exploration & Research (DOER Marine)",
+        "hash": "82748a83d2f9d05b7ff96e5ed58da1772c489d0556d4b662a82ea60a447fc2cb",
+        "memo": "MEMO_Deep_Ocean_Exploration__Research_DOER_Marine.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-WHOI_WOODS_HOLE_OCEANOGRAPHIC_INSTITUTION",
+        "entity": "WHOI (Woods Hole Oceanographic Institution)",
+        "hash": "5cb80fce980adac183153db24405e5e9b04e0cafef09d5cbd63f57e4c71eaa94",
+        "memo": "MEMO_WHOI_Woods_Hole_Oceanographic_Institution.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-NOAA_NATIONAL_OCEANIC_AND_ATMOSPHERIC_ADMINISTRATION",
+        "entity": "NOAA (National Oceanic and Atmospheric Administration)",
+        "hash": "631a787df356e2479694b2ae31e7b69b36b9ba847b9a92fbde2c007f38386e00",
+        "memo": "MEMO_NOAA_National_Oceanic_and_Atmospheric_Administration.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-SAAB_SEAEYE",
+        "entity": "Saab Seaeye",
+        "hash": "d3c7e210806d560a5ca4b8015c9f50e9587ecc0497fca6b5e806de2a83af5d04",
+        "memo": "MEMO_Saab_Seaeye.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-KONGSBERG_MARITIME",
+        "entity": "Kongsberg Maritime",
+        "hash": "54bcaf2fa3973b5b878e354dab5916dc42899dc2e1b742f8ef6eab5ba797b6f5",
+        "memo": "MEMO_Kongsberg_Maritime.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-BLUEYE_ROBOTICS",
+        "entity": "Blueye Robotics",
+        "hash": "a26cfe11713da581cabd8b771c622f8c01ddd684a0f3df244aadb7a054bafc41",
+        "memo": "MEMO_Blueye_Robotics.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-DEEP_OCEAN_ENGINEERING",
+        "entity": "Deep Ocean Engineering",
+        "hash": "1fdecbd778b9344df38a56a91022b41153b5b89c3bfe9eae7ded53d69be291cd",
+        "memo": "MEMO_Deep_Ocean_Engineering.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-ECA_GROUP",
+        "entity": "ECA Group",
+        "hash": "159c1dabadea7508c30ac115d972467c2dafc74fb85d02b1f14b13f24b8026b6",
+        "memo": "MEMO_ECA_Group.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-SUBSEA_7",
+        "entity": "Subsea 7",
+        "hash": "172f62a0db59cc6d58c99f169d636b24b3c4ab9f036b2a1a158786fa3e8010f1",
+        "memo": "MEMO_Subsea_7.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-TECHNIPFMC",
+        "entity": "TechnipFMC",
+        "hash": "a3334eebb52c6166811cf566833fa98e518047e0cc8c92737631813a772fd5e2",
+        "memo": "MEMO_TechnipFMC.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-OCEAN_INFINITY",
+        "entity": "Ocean Infinity",
+        "hash": "8c7830f96ccca219e91c9cfaa1471aa692b538d14695a9d48771a48b20fef732",
+        "memo": "MEMO_Ocean_Infinity.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-SEABED_2030",
+        "entity": "Seabed 2030",
+        "hash": "4a2476d710b90f6430060ad78086094a8063e8f99c4a9b6a86c3efcdfc3f8fdc",
+        "memo": "MEMO_Seabed_2030.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-NAUTILUS_MINERALS",
+        "entity": "Nautilus Minerals",
+        "hash": "57cc5760238a271d0c87a02fcd8ba5d3271c3791785192c48df1880c3ca880f6",
+        "memo": "MEMO_Nautilus_Minerals.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-LOCKHEED_MARTIN_MARINE_SYSTEMS",
+        "entity": "Lockheed Martin (Marine Systems)",
+        "hash": "fc7d1801789e5e8c7e3c59a8c08567b89b017ffd42a6667a794377c3e5ecf44b",
+        "memo": "MEMO_Lockheed_Martin_Marine_Systems.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-GENERAL_DYNAMICS_MISSION_SYSTEMS",
+        "entity": "General Dynamics Mission Systems",
+        "hash": "a11f05b0937bbd2210171264319057fd0be0a2af77144044b5d7c3c4b6c17b8a",
+        "memo": "MEMO_General_Dynamics_Mission_Systems.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-SONARDYNE",
+        "entity": "Sonardyne",
+        "hash": "771afb9ded4ba84eb9b7421f3c1c44d302c39effda7408fbdc2eb2b88abbb6c3",
+        "memo": "MEMO_Sonardyne.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-TELEDYNE_MARINE",
+        "entity": "Teledyne Marine",
+        "hash": "899b2ba94a51a5f581434f01a0a91e7ef0bd3fb213f633ea4f1ea8b39465c6a3",
+        "memo": "MEMO_Teledyne_Marine.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-CITADEL_SECURITIES",
+        "entity": "Citadel Securities",
+        "hash": "576ba60235d42bdb3adec34cc683c8351a8fb378d3dba20554cc1618a15627ff",
+        "memo": "MEMO_Citadel_Securities.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-JUMP_TRADING",
+        "entity": "Jump Trading",
+        "hash": "141546dda6c5507150d7ac231d52192dfc25c9f5222545569f38817eb25cfb8b",
+        "memo": "MEMO_Jump_Trading.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-VIRTU_FINANCIAL",
+        "entity": "Virtu Financial",
+        "hash": "08dc598940a686eaf6028b881b7288cc8dcb7e40ed4b0b483679b5ba6d164646",
+        "memo": "MEMO_Virtu_Financial.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-DRW_HOLDINGS",
+        "entity": "DRW Holdings",
+        "hash": "f22273eebef5e84c07e7c770684066d5a459b08c733869b14f6566fa9cd1f655",
+        "memo": "MEMO_DRW_Holdings.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-TWO_SIGMA_SECURITIES",
+        "entity": "Two Sigma Securities",
+        "hash": "399ed90482126f3b0dffaa3ecfaf8cd2008f260ad880d67833f43758bc64bd9d",
+        "memo": "MEMO_Two_Sigma_Securities.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-JANE_STREET",
+        "entity": "Jane Street",
+        "hash": "67f9afd090068c3c1eddd59edfb2ebfa696920b6340a0f104b8b32fc8f0628af",
+        "memo": "MEMO_Jane_Street.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-OPTIVER",
+        "entity": "Optiver",
+        "hash": "4e34d8802d1441acce1edef9bd6da629754645b8dc12eb52ad8179f7e579c468",
+        "memo": "MEMO_Optiver.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-IMC_TRADING",
+        "entity": "IMC Trading",
+        "hash": "951462e7f5c8ca2265257b0d395c88360410090a73bc439a8ad43df63d9d2b6b",
+        "memo": "MEMO_IMC_Trading.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-GTS",
+        "entity": "GTS",
+        "hash": "c445c0dc6e14a39f39b92df19b9ba1c7e74328c701226333ca634cc6cc159b5c",
+        "memo": "MEMO_GTS.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-XR_TRADING",
+        "entity": "XR Trading",
+        "hash": "a909c25420ac76e953faa9c102b68f1296f37b5224e29fc29884b326dce285e4",
+        "memo": "MEMO_XR_Trading.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-HUDSON_RIVER_TRADING",
+        "entity": "Hudson River Trading",
+        "hash": "aca05a20725c0ec04b716368b2ebaa907436e7e4d38326a7b0ebf67602f06e01",
+        "memo": "MEMO_Hudson_River_Trading.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-QUANTLAB_FINANCIAL",
+        "entity": "Quantlab Financial",
+        "hash": "f9734b34e4359f02049e463f45178ab3a469cac34e6200422449fcec99862e21",
+        "memo": "MEMO_Quantlab_Financial.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-TOWER_RESEARCH_CAPITAL",
+        "entity": "Tower Research Capital",
+        "hash": "95f18abad9a0069dce50bb38e51e1f374e1153d7eca0bfad1bec99ffd7d2603b",
+        "memo": "MEMO_Tower_Research_Capital.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-CITRON_SYSTEMS",
+        "entity": "Citron Systems",
+        "hash": "f7d27578c31d1e085fbaf17baa5c58cf7d6e4046ce2b2bb19a7de220abc8ccf1",
+        "memo": "MEMO_Citron_Systems.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-FLOW_TRADERS",
+        "entity": "Flow Traders",
+        "hash": "722ec6686ed6f68965a155118e2f2f6cfeb2ee6b1ca690a00819c953867db8ef",
+        "memo": "MEMO_Flow_Traders.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-MAKO_CAPITAL",
+        "entity": "Mako Capital",
+        "hash": "cab255dca278bbe1231e85d242a872a5078ab8ed376a075142a9b0065aad9c7f",
+        "memo": "MEMO_Mako_Capital.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-RENAISSANCE_TECHNOLOGIES",
+        "entity": "Renaissance Technologies",
+        "hash": "d1f96fa91aff6107f232baed8150167590d33ef9c743c3bcc19fe83017918824",
+        "memo": "MEMO_Renaissance_Technologies.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-SUSQUEHANNA_INTERNATIONAL_GROUP_SIG",
+        "entity": "Susquehanna International Group (SIG)",
+        "hash": "6db08cb7151a83ca13cb8cdf4f0ff810f314d97471e8d452606cf36b8feea0b6",
+        "memo": "MEMO_Susquehanna_International_Group_SIG.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-TRADEBOT_SYSTEMS",
+        "entity": "Tradebot Systems",
+        "hash": "de0aa9d7df76f5cea9921e96b7e477e5a877518abe20e08645523fd4233aab3e",
+        "memo": "MEMO_Tradebot_Systems.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-AQR_CAPITAL_MANAGEMENT",
+        "entity": "AQR Capital Management",
+        "hash": "dca3294e7c31baaa03290ed98b0b1ed15afebb8d7fea3a899a0cac03da57bd97",
+        "memo": "MEMO_AQR_Capital_Management.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_METROPOLITAN_MUSEUM_OF_ART_CONSERVATION_LAB",
+        "entity": "The Metropolitan Museum of Art Conservation Lab",
+        "hash": "50d5fd962b24e30bac85f8bb789ce249771445437fce0d5c56792af940122dc8",
+        "memo": "MEMO_The_Metropolitan_Museum_of_Art_Conservation_Lab.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_GETTY_CONSERVATION_INSTITUTE",
+        "entity": "The Getty Conservation Institute",
+        "hash": "725f812db3acdfede0d676b6e5403c3df6c341510696b724a84fe06f618047ff",
+        "memo": "MEMO_The_Getty_Conservation_Institute.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_BRITISH_MUSEUM_CONSERVATION_DEPARTMENT",
+        "entity": "The British Museum Conservation Department",
+        "hash": "40459dea465e5c574ba3f61f5861d2645da62a7da7ba411edd71362b8fc7f882",
+        "memo": "MEMO_The_British_Museum_Conservation_Department.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_LOUVRE_CONSERVATION_LABORATORIES",
+        "entity": "The Louvre Conservation Laboratories",
+        "hash": "24ba51840697b7cf6168022dcc7f7c4723ad484c3455a415959f2280cf8c6572",
+        "memo": "MEMO_The_Louvre_Conservation_Laboratories.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_VATICAN_MUSEUMS_RESTORATION_LABORATORY",
+        "entity": "The Vatican Museums Restoration Laboratory",
+        "hash": "5701537fc6c482f8ba784686a5d96258389288d3983c7729d9a873c03515df6e",
+        "memo": "MEMO_The_Vatican_Museums_Restoration_Laboratory.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_NATIONAL_GALLERY_OF_ART_CONSERVATION_DIVISION",
+        "entity": "The National Gallery of Art Conservation Division",
+        "hash": "7f8758b19f4cc1eb69949bfdbf8f81e9c71396a3d0cc3cf9f409b39a4d41dd62",
+        "memo": "MEMO_The_National_Gallery_of_Art_Conservation_Division.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_RIJKSMUSEUM_CONSERVATION_DEPARTMENT",
+        "entity": "The Rijksmuseum Conservation Department",
+        "hash": "3a0fc5d67029cf0fe8162fbeeca95fea4a61cbec5729d300313d94aa625d04e3",
+        "memo": "MEMO_The_Rijksmuseum_Conservation_Department.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_PRADO_MUSEUM_RESTORATION_WORKSHOP",
+        "entity": "The Prado Museum Restoration Workshop",
+        "hash": "f5e18b58783d6a82c5bd407e78242874ece4727c800ef0add465cd2dd3360d1d",
+        "memo": "MEMO_The_Prado_Museum_Restoration_Workshop.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_HERMITAGE_MUSEUM_CONSERVATION_LABS",
+        "entity": "The Hermitage Museum Conservation Labs",
+        "hash": "9ded18415fe4cf948b25ad3863422d76bfa6e0f857c66b71f26e1945363e0965",
+        "memo": "MEMO_The_Hermitage_Museum_Conservation_Labs.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_ART_INSTITUTE_OF_CHICAGO_CONSERVATION_CENTER",
+        "entity": "The Art Institute of Chicago Conservation Center",
+        "hash": "b86f61e11bf6b84e9524e3946bd7e04259a785d25cb59f74d4d4d422b5cbb3c7",
+        "memo": "MEMO_The_Art_Institute_of_Chicago_Conservation_Center.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_MUSEUM_OF_FINE_ARTS_BOSTON_CONSERVATION_LAB",
+        "entity": "The Museum of Fine Arts, Boston Conservation Lab",
+        "hash": "c4241b1c0b872690f1ed447c28604034caf7aa836577c830e6918fb846a94392",
+        "memo": "MEMO_The_Museum_of_Fine_Arts_Boston_Conservation_Lab.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_J_PAUL_GETTY_MUSEUM_CONSERVATION_LAB",
+        "entity": "The J. Paul Getty Museum Conservation Lab",
+        "hash": "09d31809b37f87bd281961fc1067e728aaf670097c9180c857c399b047367c0e",
+        "memo": "MEMO_The_J_Paul_Getty_Museum_Conservation_Lab.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_TATE_CONSERVATION_DEPARTMENT",
+        "entity": "The Tate Conservation Department",
+        "hash": "ec624cfca04cc584e94361e885a6bedb7816bf1b42502c36ee47a4bec522fdde",
+        "memo": "MEMO_The_Tate_Conservation_Department.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_VICTORIA_AND_ALBERT_MUSEUM_CONSERVATION_LABS",
+        "entity": "The Victoria and Albert Museum Conservation Labs",
+        "hash": "fd3b5c6e8ff9f08688ae3b71e659deeef931b930d85a4b67f3d44313b72475cf",
+        "memo": "MEMO_The_Victoria_and_Albert_Museum_Conservation_Labs.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_NATIONAL_GALLERY_OF_ART_LONDON_CONSERVATION",
+        "entity": "The National Gallery of Art (London) Conservation",
+        "hash": "6180519af26d52e92353efc1bf3482099df36611ffc6d7b0d12ef34576053bc5",
+        "memo": "MEMO_The_National_Gallery_of_Art_London_Conservation.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_UFFIZI_GALLERY_RESTORATION_LAB",
+        "entity": "The Uffizi Gallery Restoration Lab",
+        "hash": "d27e09bf2e75a803e3bd326582c374dc3e2db59e29f1df6ec08f9bfce8791825",
+        "memo": "MEMO_The_Uffizi_Gallery_Restoration_Lab.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_VAN_GOGH_MUSEUM_CONSERVATION_DEPARTMENT",
+        "entity": "The Van Gogh Museum Conservation Department",
+        "hash": "59fc76a0b786d697a3a85713dda1ac65d6c40490a11e1982ce2b855e68198a71",
+        "memo": "MEMO_The_Van_Gogh_Museum_Conservation_Department.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_MUSEUM_OF_MODERN_ART_MOMA_CONSERVATION_LAB",
+        "entity": "The Museum of Modern Art (MoMA) Conservation Lab",
+        "hash": "9df3bc195e9fe3b9151dd8ffd8d4ea12bfa9719843eb5a807a3a03def6eb0458",
+        "memo": "MEMO_The_Museum_of_Modern_Art_MoMA_Conservation_Lab.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_SMITHSONIAN_INSTITUTION_CONSERVATION_LABS",
+        "entity": "The Smithsonian Institution Conservation Labs",
+        "hash": "7a741dae5f94fdd4e090d5f37e2d72e6b3bddc6f01c87b101029f9b92323e372",
+        "memo": "MEMO_The_Smithsonian_Institution_Conservation_Labs.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_COURTAULD_INSTITUTE_OF_ART_CONSERVATION_DEPARTMENT",
+        "entity": "The Courtauld Institute of Art Conservation Department",
+        "hash": "01dd028cb0e266164e7cd74bbd034947b8befd2072b25e769f19799830d0fb24",
+        "memo": "MEMO_The_Courtauld_Institute_of_Art_Conservation_Department.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-BLACK_CUBE",
+        "entity": "Black Cube",
+        "hash": "7ac7a2094bbebc2a19589f7c6e34a247cd4d1a1d15ee72bbfa51151d514ca445",
+        "memo": "MEMO_Black_Cube.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-KROLL",
+        "entity": "Kroll",
+        "hash": "12200411d3eb5630dec75cdfd6228a90c323b64e236ead8aee569510d856f32d",
+        "memo": "MEMO_Kroll.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-PINKERTON",
+        "entity": "Pinkerton",
+        "hash": "9687ead049f1619a287d72d6ad9471e28c87499dddebc676a5153ca036b0966e",
+        "memo": "MEMO_Pinkerton.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-CONTROL_RISKS",
+        "entity": "Control Risks",
+        "hash": "15a21e1c1050e3d4a97e6da1f3a53a5e599e4fda7f6729dbb7f32ebc038a6e92",
+        "memo": "MEMO_Control_Risks.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-G4S_RISK_MANAGEMENT",
+        "entity": "G4S Risk Management",
+        "hash": "2d08a375c56302b6dbaf1e043f27bb12a0e31e9c5c352373d373cda5fb75b005",
+        "memo": "MEMO_G4S_Risk_Management.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-ALTEGRITY",
+        "entity": "Altegrity",
+        "hash": "e43dea16c64e41dc33b451136855e09210535fe9328998e2f54deed7112f1656",
+        "memo": "MEMO_Altegrity.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-HARLTON_GROUP",
+        "entity": "Harlton Group",
+        "hash": "6bc251ca5c4118daae93d96e490215f449630d0b072d89a89b201ca7a1b312fc",
+        "memo": "MEMO_Harlton_Group.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-TORCH_HILL",
+        "entity": "Torch Hill",
+        "hash": "6a1ce5151db25fbf2f2bed7739764024e2785040fb34e5eeeecaf7509c5201b5",
+        "memo": "MEMO_Torch_Hill.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-SRM",
+        "entity": "SRM",
+        "hash": "029db729245016ab0317ecc506e07f256efe885a9fd759c4eca1b4f69a08f8eb",
+        "memo": "MEMO_SRM.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-ALETHEIA_RESEARCH__INTELLIGENCE",
+        "entity": "Aletheia Research & Intelligence",
+        "hash": "ce7c283d7cba3b0b7436a1a0f073ca38783a48e73ee25237ff8877f9265fe83c",
+        "memo": "MEMO_Aletheia_Research__Intelligence.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-INTRUSION_TRUTH",
+        "entity": "Intrusion Truth",
+        "hash": "5dd46a2bb22d9ea39856dcfd90781a551c158bab58a94eb072180a1ed2ddfaaa",
+        "memo": "MEMO_Intrusion_Truth.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_FIRM",
+        "entity": "The Firm",
+        "hash": "39d3cc67bb4600c59d024b4cb0ee530f5484bc3b836d46cb41909a0611f28edb",
+        "memo": "MEMO_The_Firm.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-BEACON_GLOBAL_STRATEGIES",
+        "entity": "Beacon Global Strategies",
+        "hash": "5c2dce7c944fddc70cacb13235d2894105adbab00f761169e9a4bc5c92713507",
+        "memo": "MEMO_Beacon_Global_Strategies.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-NARDELLO__CO",
+        "entity": "Nardello & Co.",
+        "hash": "55bd120781da6e337ff6d2108a38d187cea6afe7fbff8167e13073d2e5865373",
+        "memo": "MEMO_Nardello__Co.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-SENTINEL_RISK_SOLUTIONS",
+        "entity": "Sentinel Risk Solutions",
+        "hash": "91af4c31e2015ac5107137570735f3d890da460fcafe4932017a4ead05f6cd66",
+        "memo": "MEMO_Sentinel_Risk_Solutions.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-THE_BLACKSTONE_GROUP_VIA_PRIVATE_SECURITY_ARMS",
+        "entity": "The Blackstone Group (via private security arms)",
+        "hash": "fc89754e04dbf72bef54b4f22a08b649c586b1cd75bc37d060da6422954b947f",
+        "memo": "MEMO_The_Blackstone_Group_via_private_security_arms.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-PALANTIR_TECHNOLOGIES",
+        "entity": "Palantir Technologies",
+        "hash": "0243b644f24b62bc080c4090103af1ce6bbe846cc098ac5a83cc3872ea4d1433",
+        "memo": "MEMO_Palantir_Technologies.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-BOOZ_ALLEN_HAMILTON_PRIVATE_SECTOR_WORK",
+        "entity": "Booz Allen Hamilton (private sector work)",
+        "hash": "69ef5a7ba788985ad91a0fc1f98a9877081275163a7c3b88bccac664b419aebf",
+        "memo": "MEMO_Booz_Allen_Hamilton_private_sector_work.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-BAE_SYSTEMS_APPLIED_INTELLIGENCE",
+        "entity": "BAE Systems Applied Intelligence",
+        "hash": "974d87759fcdcbaea9c2d2b4074df971cfb45071cb3b28557eb2c75eb7e31a68",
+        "memo": "MEMO_BAE_Systems_Applied_Intelligence.txt",
+        "status": "Immutable"
+    },
+    {
+        "id": "2A-MIST-RAYTHEON_INTELLIGENCE__SPACE",
+        "entity": "Raytheon Intelligence & Space",
+        "hash": "01ee2c12e29d9ceb3839a027bd3f0aa4e5111bf17e7eaf08d1c43934980262f6",
+        "memo": "MEMO_Raytheon_Intelligence__Space.txt",
+        "status": "Immutable"
     }
 ]

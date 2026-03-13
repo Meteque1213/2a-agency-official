@@ -1,0 +1,13 @@
+ENTITY: Jane Street
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Jane Street**
+
+1. **Objective**: Conduct a comprehensive review of trade execution, risk controls, and compliance protocols to identify discrepancies in market-making activities.
+2. **Scope**: Focus on high-frequency trading (HFT) algorithms, order flow, and counterparty risk exposure over the past 12 months.
+3. **Methodology**: Deploy statistical anomaly detection, transaction reconstruction, and regulatory benchmarking.
+4. **Next Steps**: Present findings to senior management with actionable remediation recommendations by [date].
+
+*Confidential – Internal Use Only*
+
+[NOTARIZED BY 2A AGENCY]

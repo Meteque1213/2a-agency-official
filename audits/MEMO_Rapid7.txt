@@ -1,0 +1,19 @@
+ENTITY: Rapid7
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Rapid7 Cybersecurity**
+
+**Subject:** Unauthorized Access Detection & Remediation
+
+**Incident:** Suspected lateral movement detected via compromised admin credentials. Logs indicate unusual RDP sessions from IP 192.168.1.102 to critical servers.
+
+**Action:** Isolate affected systems, preserve logs, and initiate forensic imaging. Conduct endpoint analysis using Rapid7 InsightIDR for IOC correlation.
+
+**Next Steps:** Escalate to IR team for containment. Review privilege access policies and implement MFA enforcement.
+
+**Priority:** Critical – Respond within 2 hours.
+
+**— Forensic Team**
+*[Date/Time]*
+
+[NOTARIZED BY 2A AGENCY]

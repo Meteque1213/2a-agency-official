@@ -1,0 +1,15 @@
+ENTITY: AQR Capital Management
+DATE: 13-03-2026
+
+**Forensic Audit Memo – AQR Capital Management**
+**Date:** [Insert Date]
+
+1. **Objective:** Conduct a forensic review of AQR’s quantitative trading models to assess compliance with regulatory requirements and identify potential operational risks.
+2. **Scope:** Examine algorithmic logic, data integrity, and execution protocols across all trading strategies, with emphasis on backtesting methodologies and trade reconciliation.
+3. **Findings:** Preliminary analysis indicates discrepancies in historical performance attribution; further investigation required to validate model assumptions and parameter stability.
+4. **Next Steps:** Schedule a detailed walkthrough with the quantitative research team to reconcile discrepancies and assess remediation timelines.
+
+**Prepared by:** [Your Name/Team]
+**Approval:** [Approval Authority]
+
+[NOTARIZED BY 2A AGENCY]

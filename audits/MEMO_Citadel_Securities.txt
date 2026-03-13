@@ -1,0 +1,20 @@
+ENTITY: Citadel Securities
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Citadel Securities (Trading & Market Making)**
+
+**Objective:** Assess potential market manipulation, trade execution anomalies, and compliance with regulatory frameworks (e.g., SEC, FINRA) in Citadel Securities’ trading activities.
+
+**Scope:** Review algorithmic trading strategies, order flow dynamics, and execution quality across equities, options, and ETFs for the period [X]–[Y].
+
+**Methodology:** Analyze trade logs, order books, and market data for patterns indicative of spoofing, layering, or front-running. Cross-reference with regulatory filings and internal controls.
+
+**Deliverable:** Detailed report with findings, risk assessments, and remediation recommendations by [date].
+
+**Confidentiality:** Restricted to authorized personnel. Disclosure prohibited without written consent.
+
+*[End of Memo]*
+
+*(Technical, concise, and actionable for internal forensic teams.)*
+
+[NOTARIZED BY 2A AGENCY]

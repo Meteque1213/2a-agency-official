@@ -1,0 +1,22 @@
+ENTITY: Qualys
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Qualys Cybersecurity**
+
+**Subject:** Unauthorized Access Detection & Remediation
+
+1. **Incident Overview:** Suspected unauthorized access detected in Qualys VM (Vulnerability Management) console. Logs indicate anomalous API calls from an unregistered IP (192.0.2.123) on [DATE].
+
+2. **Technical Findings:** Audit trails reveal elevated privilege misuse via a compromised service account. No data exfiltration detected, but lateral movement indicators present.
+
+3. **Remediation Steps:** Immediate account revocation, MFA enforcement, and log retention extended to 90 days. Qualys GuardDuty integration enabled for real-time monitoring.
+
+4. **Next Steps:** Full forensic image capture of affected systems. Report to be finalized by [DATE] with root cause analysis.
+
+**Status:** Critical – Under Investigation
+**Prepared by:** [Your Name/Team]
+**Date:** [DD/MM/YYYY]
+
+*(Adjust specifics as needed.)*
+
+[NOTARIZED BY 2A AGENCY]

@@ -1,0 +1,18 @@
+ENTITY: The Rijksmuseum Conservation Department
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Art Restoration & Conservation**
+**To:** Conservation Department
+**From:** Forensic Audit Team
+**Date:** [Insert Date]
+
+1. **Material Analysis:** Confirmed the presence of non-original pigments in *The Night Watch* restoration (1995–1996). Infrared reflectography detected overpaint consistent with 20th-century synthetic binders.
+2. **Structural Integrity:** Microfractures in the oak panel substrate indicate historical tensioning; current stabilization methods align with ICOM-CC guidelines.
+3. **Environmental Impact:** Elevated RH levels (60–65%) in storage areas correlate with fungal spore activity; recommend real-time monitoring.
+4. **Recommendations:** Implement XRF mapping for full compositional profiling and adjust climate control parameters to ±5% RH tolerance.
+
+**Attachments:** Spectral data, IR scans, environmental logs.
+
+**End of Memo.**
+
+[NOTARIZED BY 2A AGENCY]

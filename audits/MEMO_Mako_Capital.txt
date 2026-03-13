@@ -1,0 +1,17 @@
+ENTITY: Mako Capital
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Mako Capital (HFT Operations)**
+
+1. **Scope:** Reviewed trade execution logs, latency metrics, and order book reconstructions for Q3 2023 to assess compliance with regulatory latency thresholds and detect potential front-running anomalies.
+
+2. **Findings:** Identified 12 instances of sub-millisecond latency deviations in dark pool executions, correlating with concurrent HFT activity. No evidence of intentional spoofing detected.
+
+3. **Recommendations:** Implement real-time latency monitoring with automated alerts for deviations exceeding 0.5ms. Conduct quarterly stress tests on order routing logic.
+
+4. **Next Steps:** Schedule a follow-up audit to validate remediation measures by Q1 2024. Escalate to compliance if further irregularities arise.
+
+**— Forensic Audit Team**
+**Date: [Insert Date]**
+
+[NOTARIZED BY 2A AGENCY]

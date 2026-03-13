@@ -1,0 +1,16 @@
+ENTITY: Illumio
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Illumio (Cybersecurity)**
+
+**Subject:** Post-Incident Forensic Review – Illumio Core Security Controls
+
+1. **Scope:** Conducted a forensic audit of Illumio’s segmentation policies, micro-segmentation enforcement, and lateral movement detection mechanisms following a reported breach.
+2. **Findings:** Identified misconfigured segmentation rules allowing unauthorized east-west traffic; no evidence of tampering with Illumio’s core policy engine.
+3. **Recommendations:** Enforce strict RBAC for policy modifications, implement continuous validation of segmentation rules, and enable real-time anomaly detection.
+4. **Next Steps:** Schedule a follow-up audit to validate remediation and assess integration with SIEM for enhanced visibility.
+
+**Prepared by:** [Your Name/Team]
+**Date:** [MM/DD/YYYY]
+
+[NOTARIZED BY 2A AGENCY]

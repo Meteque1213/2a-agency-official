@@ -1,0 +1,20 @@
+ENTITY: WHOI (Woods Hole Oceanographic Institution)
+DATE: 13-03-2026
+
+**Forensic Audit Memo – WHOI (Woods Hole Oceanographic Institution)**
+
+**Subject:** Unauthorized Data Access in Oceanographic Research Systems
+
+**Key Findings:**
+1. **Unauthorized access** detected in the deep-sea sensor network (Node 3-7).
+2. **Data integrity compromised** in 12% of recent hydrothermal vent samples.
+3. **Log discrepancies** identified in the autonomous underwater vehicle (AUV) telemetry logs.
+4. **Recommendation:** Immediate forensic imaging of affected systems and review of access protocols.
+
+**Priority:** High
+**Next Steps:** Coordinate with IT Security for containment and analysis.
+
+**Prepared by:** [Your Name/Team]
+**Date:** [Insert Date]
+
+[NOTARIZED BY 2A AGENCY]

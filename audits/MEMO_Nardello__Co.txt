@@ -1,0 +1,18 @@
+ENTITY: Nardello & Co.
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Nardello & Co.**
+
+**Subject:** Preliminary Findings – [Client/Entity Name]
+
+1. **Data Extraction:** Completed full-system forensic imaging and log analysis; no evidence of tampering detected.
+2. **Financial Anomalies:** Identified 12 high-risk transactions requiring deeper scrutiny (Appendix A).
+3. **Control Gaps:** Weaknesses in segregation of duties and approval workflows noted.
+4. **Next Steps:** Schedule on-site interviews with key personnel and expand scope to related entities.
+
+**Prepared by:** [Your Name]
+**Date:** [DD/MM/YYYY]
+
+*Confidential – Internal Use Only*
+
+[NOTARIZED BY 2A AGENCY]

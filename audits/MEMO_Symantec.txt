@@ -1,0 +1,19 @@
+ENTITY: Symantec
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Symantec Cybersecurity**
+
+**Subject:** Unauthorized Access Detection & Remediation
+
+**Findings:**
+1. **Indicator:** Suspicious logins from non-corporate IPs detected in Symantec Endpoint Protection logs.
+2. **Analysis:** Traced to credential stuffing attempts via exposed admin credentials.
+3. **Action:** Isolated affected endpoints, enforced MFA, and revoked compromised credentials.
+4. **Recommendation:** Conduct full SIEM review and implement privileged access monitoring.
+
+**Status:** Containment achieved; further investigation ongoing.
+
+**Prepared by:** [Your Name/Team]
+**Date:** [MM/DD/YYYY]
+
+[NOTARIZED BY 2A AGENCY]

@@ -13,13 +13,13 @@ model = "mistral-small-latest"
 
 # 2. CONFIGURATION
 SECTEURS = [
-    "Semiconductor Manufacturers", "Cloud Computing Infrastructure", 
-    "European Family Offices", "Quantum Computing Startups",
-    "Swiss Private Banks", "Luxury Yacht Builders",
-    "Renewable Energy Conglomerates", "Genomic Research Labs",
-    "Space Exploration Companies", "Rare Earth Mining Corporations"
+    "Cybersecurity Unicorns",
+    "Deep Sea Exploration Tech",
+    "High-Frequency Trading Firms",
+    "Art Restoration & Conservation Labs",
+    "Private Intelligence Agencies"
 ]
-NB_PAR_SECTEUR = 20 
+NB_PAR_SECTEUR = 20
 
 # 3. CHARGEMENT ET MÉMOIRE ANTI-DOUBLONS (VERSION SÉCURISÉE)
 registry_path = 'audits/registry.json'

@@ -1,0 +1,17 @@
+ENTITY: IMC Trading
+DATE: 13-03-2026
+
+**Forensic Audit Memo – IMC Trading (Market Making & Trading)**
+
+1. **Objective:** Conduct a forensic review of IMC Trading’s market-making and proprietary trading activities to assess compliance with regulatory requirements, detect anomalies, and evaluate risk controls.
+
+2. **Scope:** Examine trade execution, order flow, algorithmic strategies, and internal controls for potential market manipulation, front-running, or operational inefficiencies.
+
+3. **Methodology:** Utilize transactional data analysis, statistical modeling, and regulatory benchmarking to identify discrepancies and assess adherence to best practices.
+
+4. **Next Steps:** Present preliminary findings to senior management and propose corrective actions, if necessary, to mitigate identified risks.
+
+**Prepared by:** [Your Name/Team]
+**Date:** [Insert Date]
+
+[NOTARIZED BY 2A AGENCY]

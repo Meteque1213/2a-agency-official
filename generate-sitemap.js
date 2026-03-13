@@ -2,6 +2,7 @@ import fs from 'fs';
 
 const registry = JSON.parse(fs.readFileSync('audits/registry.json', 'utf-8'));
 const baseUrl = 'https://2aagency.com/';
+const today = new Date().toISOString().split('T')[0]; // Date automatique
 
 let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -10,10 +11,12 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>
   <url><loc>${baseUrl}whitepaper.html</loc><priority>0.8</priority></url>`;
 
 registry.forEach(audit => {
+    // encodeURIComponent sécurise les caractères spéciaux dans l'URL
+    const safeMemo = encodeURIComponent(audit.memo);
     xml += `
   <url>
-    <loc>${baseUrl}${audit.memo}</loc>
-    <lastmod>2026-03-13</lastmod>
+    <loc>${baseUrl}audits/${safeMemo}</loc>
+    <lastmod>${today}</lastmod>
     <priority>0.5</priority>
   </url>`;
 });
@@ -21,4 +24,6 @@ registry.forEach(audit => {
 xml += '\n</urlset>';
 
 fs.writeFileSync('sitemap.xml', xml);
-console.log("✅ Sitemap.xml generated with 660+ links!");
+
+// On affiche le VRAI chiffre maintenant
+console.log(`✅ Sitemap.xml generated with ${registry.length} links!`);

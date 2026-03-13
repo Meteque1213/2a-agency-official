@@ -1,0 +1,21 @@
+ENTITY: Kroll
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Kroll (Corporate Intelligence)**
+
+**Subject:** Suspicious Financial Activity – [Client Name]
+
+**Key Findings:**
+1. **Anomalous Transactions:** Identified $X in high-risk transfers to offshore entities.
+2. **Data Integrity Issues:** Evidence of altered ledger entries post-audit.
+3. **Access Violations:** Unauthorized system access by [User ID] during critical periods.
+4. **Recommendation:** Immediate preservation of digital evidence and internal review.
+
+**Next Steps:** Full forensic imaging and chain-of-custody documentation pending.
+
+**Prepared by:** [Your Name]
+**Date:** [DD/MM/YYYY]
+
+*(Technical, concise, and action-oriented.)*
+
+[NOTARIZED BY 2A AGENCY]

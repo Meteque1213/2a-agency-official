@@ -1,0 +1,17 @@
+ENTITY: Nautilus Minerals
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Nautilus Minerals (Deep-Sea Mining)**
+
+**Objective:** Assess financial and operational integrity of Nautilus Minerals’ deep-sea mining projects, focusing on compliance, asset valuation, and risk exposure.
+
+**Scope:** Review financial statements, contracts, environmental permits, and operational logs for discrepancies, fraud indicators, or regulatory non-compliance.
+
+**Findings:** Preliminary analysis reveals potential misalignment between reported mineral reserves and independent geological assessments. Further investigation required.
+
+**Recommendation:** Conduct on-site asset verification and trace transactional flows to confirm financial reporting accuracy. Escalate to regulatory authorities if material irregularities are identified.
+
+**Prepared by:** [Your Name/Team]
+**Date:** [Insert Date]
+
+[NOTARIZED BY 2A AGENCY]

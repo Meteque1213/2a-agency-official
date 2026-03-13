@@ -1,0 +1,17 @@
+ENTITY: Teledyne Marine
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Teledyne Marine (Underwater Imaging & Sensors)**
+
+**Objective:** Assess financial integrity, compliance, and operational controls for underwater imaging and sensor systems.
+
+**Scope:** Review transactional records, inventory accuracy, and vendor contracts for fiscal years 2022–2024.
+
+**Findings:** Identified discrepancies in R&D cost allocations and potential overbilling in subcontractor invoices.
+
+**Recommendations:** Implement stricter procurement audits and real-time financial monitoring for high-risk transactions.
+
+**Prepared by:** [Your Name/Team]
+**Date:** [Insert Date]
+
+[NOTARIZED BY 2A AGENCY]

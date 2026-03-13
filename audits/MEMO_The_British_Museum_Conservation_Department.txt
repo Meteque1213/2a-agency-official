@@ -1,0 +1,16 @@
+ENTITY: The British Museum Conservation Department
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Art Restoration & Conservation**
+**To:** Conservation Department
+**From:** Forensic Audit Team
+**Date:** [Insert Date]
+
+1. **Material Analysis:** Confirmed pigment composition via micro-Raman spectroscopy; detected non-period-appropriate binders in *Portrait of Lady X* (18th c.), suggesting prior restoration.
+2. **Structural Integrity:** Infrared reflectography revealed hidden underdrawings in *Landscape with Ruins* (17th c.), indicating potential conservation risks from prior interventions.
+3. **Environmental Impact:** Elevated VOC levels in storage Unit 4; recommend immediate ventilation and rehousing of sensitive works.
+4. **Recommendations:** Propose non-invasive cleaning trials for *Portrait* and climate-controlled isolation for *Landscape* pending further analysis.
+
+**Next Steps:** Full report due [Insert Date].
+
+[NOTARIZED BY 2A AGENCY]

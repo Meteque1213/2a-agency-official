@@ -1,0 +1,21 @@
+ENTITY: Control Risks
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Control Risks (Risk & Intelligence)**
+
+**Subject:** Unauthorized Data Access – [Case #XXXX]
+
+**Key Findings:**
+1. **Anomalous Activity Detected:** Unauthorized access to [System/Database] via [IP/Account] on [Date/Time].
+2. **Data Exfiltration Suspected:** Logs indicate [X] files transferred to external storage.
+3. **Forensic Trace:** Digital artifacts suggest [Tool/Malware] usage; further analysis pending.
+4. **Recommendation:** Immediate containment; escalate to IR team for containment and remediation.
+
+**Next Steps:** Full forensic imaging and chain-of-custody preservation initiated.
+
+**Prepared by:** [Your Name]
+**Date:** [DD/MM/YYYY]
+
+*(Note: Adjust placeholders [ ] with case-specific details.)*
+
+[NOTARIZED BY 2A AGENCY]

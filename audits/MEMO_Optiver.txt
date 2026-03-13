@@ -1,0 +1,13 @@
+ENTITY: Optiver
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Optiver (Market Making & Trading)**
+
+1. **Objective**: Conduct a forensic review of Optiver’s trading systems to identify anomalies, compliance gaps, and potential market manipulation risks.
+2. **Scope**: Examine trade execution logs, algorithmic strategies, and communication records for the past 12 months, focusing on high-frequency trading (HFT) and order flow dynamics.
+3. **Methodology**: Deploy data analytics tools to detect irregular patterns, cross-reference with regulatory filings, and assess adherence to MiFID II, Dodd-Frank, and local market rules.
+4. **Deliverables**: Provide a redacted report outlining findings, risk assessments, and remediation recommendations by [date].
+
+*Confidential – For Internal Use Only*
+
+[NOTARIZED BY 2A AGENCY]

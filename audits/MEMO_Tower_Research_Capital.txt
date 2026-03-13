@@ -1,0 +1,16 @@
+ENTITY: Tower Research Capital
+DATE: 13-03-2026
+
+**Forensic Audit Memo – Tower Research Capital (HFT Operations)**
+
+1. **Objective:** Conduct a forensic review of Tower Research Capital’s high-frequency trading (HFT) systems to assess compliance with regulatory requirements and detect potential market manipulation or latency arbitrage anomalies.
+
+2. **Scope:** Examine order flow, execution algorithms, and trading patterns for evidence of spoofing, layering, or front-running, with a focus on latency-sensitive strategies.
+
+3. **Methodology:** Deploy time-series analysis, statistical arbitrage detection, and network latency profiling to identify irregularities in trade execution and market impact.
+
+4. **Deliverable:** Provide a detailed report with findings, risk assessments, and recommendations for remediation or regulatory disclosure.
+
+**Confidential – Internal Use Only**
+
+[NOTARIZED BY 2A AGENCY]
