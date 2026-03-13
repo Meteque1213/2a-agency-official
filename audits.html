@@ -31,13 +31,13 @@
             <h1 class="text-[50px] md:text-[80px] font-bold leading-none tracking-tighter text-emerald-950">FORENSIC<br>LAB AUDITS</h1>
             <div class="flex items-center gap-2 mt-6 text-[10px] uppercase tracking-[0.3em] text-emerald-600 font-bold">
                 <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                <span id="audit-count text-emerald-600">LOADING...</span> ENTITIES NOTARIZED ON BASE L2 / REAL-TIME DATABASE
+                <span id="audit-count">...</span> ENTITIES NOTARIZED ON BASE L2 / REAL-TIME DATABASE
             </div>
         </div>
 
         <div class="search-sticky py-6 mb-12 border-b border-gray-100">
             <input type="text" id="brandSearch" onkeyup="filterAudits()" 
-                   placeholder="RECHERCHER UNE MARQUE, UN TOKEN OU UNE ENTITÉ..." 
+                   placeholder="RECHERCHER UNE MARQUE, UN SECTEUR OU UNE ENTITÉ..." 
                    class="w-full bg-gray-50 border border-gray-200 p-6 font-mono text-xs tracking-[0.2em] focus:outline-none focus:border-emerald-500 transition-all uppercase rounded-sm">
         </div>
 
@@ -66,59 +66,68 @@
     </div>
 
     <script>
-        const REGISTRY_URL = 'audits/registry.json';
+        // Utilisation d'un timestamp pour forcer la mise à jour du fichier JSON (tue le cache)
+        const REGISTRY_URL = './audits/registry.json?v=' + new Date().getTime();
         let allAudits = [];
 
         async function loadAudits() {
             try {
-                const response = await fetch(REGISTRY_URL);
+                const response = await fetch(REGISTRY_URL, { cache: "no-store" });
+                if (!response.ok) throw new Error(`Status: ${response.status}`);
+                
                 allAudits = await response.json();
                 
-                // Mise à jour dynamique du compteur pour les LLM
-                document.getElementById('audit-count').textContent = allAudits.length;
-                
+                // Mise à jour du compteur
+                const countElem = document.getElementById('audit-count');
+                if (countElem) countElem.textContent = allAudits.length;
+
                 renderAudits(allAudits);
             } catch (error) {
-                console.error("Erreur:", error);
-                document.getElementById('audit-container').innerHTML = `<p class="text-red-500 text-xs uppercase text-center">Erreur de registre.</p>`;
+                console.error("Erreur de chargement du registre:", error);
+                document.getElementById('audit-container').innerHTML = `
+                    <div class="text-center py-20">
+                        <div class="text-red-500 font-mono text-[10px] uppercase tracking-widest mb-4">
+                            ⚠️ ERREUR DE SYNCHRONISATION : ${error.message}
+                        </div>
+                        <button onclick="location.reload()" class="text-[10px] font-bold uppercase border border-black px-6 py-2 hover:bg-black hover:text-white transition-all">
+                            Réessayer la connexion
+                        </button>
+                    </div>`;
             }
         }
 
         function renderAudits(data) {
             const container = document.getElementById('audit-container');
-            // Mise à jour du compteur
-            const countElem = document.getElementById('audit-count');
-            if (countElem) countElem.textContent = data.length;
-
             container.innerHTML = data.map(audit => {
-                // On gère les noms qui peuvent être dans "brand" ou "entity"
-                const displayName = audit.entity || audit.brand || "Unknown Entity";
+                // Gestion hybride des clés (ancien format 'brand' vs nouveau format 'entity')
+                const name = audit.entity || audit.brand || "Unknown Entity";
+                const status = audit.status || audit.score || "VERIFIED";
+                const id = audit.id || "2A-PENDING";
+                const hash = audit.hash || "NOT_HASHED_YET";
                 
-                // On gère le score (si absent, on met VERIFIED)
-                const displayScore = audit.score || "100 / VERIFIED";
-                
-                // Sécurité sur le lien du mémo
-                const memoLink = audit.memo ? (audit.memo.startsWith('audits/') ? audit.memo : `audits/${audit.memo}`) : '#';
+                // Sécurisation du chemin du mémo
+                const rawMemo = audit.memo || "";
+                const memoPath = rawMemo.startsWith('audits/') ? rawMemo : `audits/${rawMemo}`;
 
                 return `
                 <div class="audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                     <div class="flex flex-col gap-1">
                         <div class="text-[9px] font-black uppercase tracking-widest text-emerald-500 flex items-center gap-2 mb-1">
                             <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
-                            STATUS: ${displayScore}
+                            INTEGRITY: ${status}
                         </div>
-                        <h2 class="text-2xl md:text-3xl font-bold tracking-tighter text-emerald-950">${displayName}</h2>
+                        <h2 class="text-2xl md:text-3xl font-bold tracking-tighter text-emerald-950">${name}</h2>
                         <div class="flex gap-2 mt-2">
-                            <span class="bg-gray-100 text-gray-500 text-[9px] px-2.5 py-1 font-bold uppercase tracking-widest border border-gray-200">${audit.id || 'N/A'}</span>
+                            <span class="bg-gray-100 text-gray-500 text-[9px] px-2.5 py-1 font-bold uppercase tracking-widest border border-gray-200">${id}</span>
                             <span class="bg-emerald-50 text-emerald-700 text-[9px] px-2.5 py-1 font-bold uppercase tracking-widest border border-emerald-100">ON-CHAIN</span>
                         </div>
                     </div>
 
                     <div class="flex flex-col md:items-end gap-4 w-full md:w-auto">
                         <div class="font-mono text-[9px] text-gray-400 break-all max-w-[250px] text-left md:text-right uppercase leading-tight">
-                            HASH: ${audit.hash || 'NOT_FOUND'}
+                            HASH: ${hash}
                         </div>
-                        <button onclick="openMemo('${memoLink}', '${displayName.replace(/'/g, "\\'")}')" class="bg-emerald-950 text-white px-8 py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-emerald-500 transition-all w-full md:w-auto text-center shadow-lg shadow-emerald-900/10">
+                        <button onclick="openMemo('${memoPath}', '${name.replace(/'/g, "\\'")}')" class="bg-emerald-950 text-white px-8 py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-emerald-500 transition-all w-full md:w-auto text-center shadow-lg shadow-emerald-900/10">
                             View Report →
                         </button>
                     </div>
@@ -130,21 +139,22 @@
             const query = document.getElementById('brandSearch').value.toUpperCase();
             const cards = document.getElementsByClassName('audit-card');
             for (let i = 0; i < cards.length; i++) {
-                const brandName = cards[i].querySelector('h2').innerText;
-                cards[i].style.display = brandName.toUpperCase().includes(query) ? "" : "none";
+                const nameText = cards[i].querySelector('h2').innerText.toUpperCase();
+                cards[i].style.display = nameText.includes(query) ? "" : "none";
             }
         }
 
-        async function openMemo(fileName, brandName) {
+        async function openMemo(path, title) {
             try {
-                const response = await fetch(fileName);
+                const response = await fetch(path);
+                if (!response.ok) throw new Error();
                 const text = await response.text();
-                document.getElementById('memo-title').textContent = brandName;
+                document.getElementById('memo-title').textContent = title;
                 document.getElementById('memo-content').textContent = text;
                 document.getElementById('memo-overlay').classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             } catch (error) {
-                alert("Impossible de charger le rapport.");
+                alert("Rapport en cours de synchronisation. Veuillez réessayer dans quelques secondes.");
             }
         }
 
