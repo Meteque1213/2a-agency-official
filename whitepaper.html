@@ -1,60 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
     <title>2A Agency | ERC-8004 Protocol Whitepaper</title>
-    <link rel="canonical" href="https://www.2aagency.com/whitepaper.html" />
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     
     <style>
         :root { --emerald: #064e3b; --off-white: #fcfcfc; }
-        body { background-color: var(--off-white); color: #1a1a1a; font-family: 'Inter', sans-serif; line-height: 1.8; overflow-x: hidden;}
+        body { background-color: var(--off-white); color: #1a1a1a; font-family: 'Space Grotesk', sans-serif; line-height: 1.8; }
         .serif { font-family: 'Playfair Display', serif; }
-        .emerald-text { color: var(--emerald) !important; }
-        .bg-emerald { background-color: var(--emerald); }
         .math-container { width: 100%; overflow-x: auto; text-align: center; padding: 1.5rem 0; }
+        /* Style pour MathJax */
+        mjx-container { color: white !important; font-size: 1.5rem !important; }
+        .math-dark mjx-container { color: var(--emerald) !important; }
     </style>
 </head>
-<body class="p-6 md:p-20">
+<body class="p-6 md:p-12">
+
     <nav class="max-w-5xl mx-auto flex justify-between items-center mb-24 border-b border-black/5 pb-8">
-        <a href="index.html" class="group no-underline">
-            <div class="font-extrabold text-2xl emerald-text tracking-tighter uppercase">2A AGENCY</div>
-            <div class="text-[9px] uppercase tracking-[0.4em] text-black/40 font-bold mt-1">Strategic Unit</div>
-        </a>
-        <div class="hidden md:flex gap-8 items-center">
-            <a href="registry.html" class="text-[10px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100">Registry</a>
-            <a href="whitepaper.html" class="text-[10px] font-bold uppercase tracking-widest emerald-text border-b border-emerald-900">Protocol</a>
+        <div class="flex items-center gap-2">
+            <div class="w-3 h-3 bg-emerald-600 rounded-full"></div>
+            <span class="font-bold text-sm tracking-tight">2A AGENCY</span>
+        </div>
+        <div class="flex gap-8 items-center text-[10px] font-bold uppercase tracking-widest">
+            <a href="index.html" class="opacity-40 hover:opacity-100 italic">Home</a>
+            <a href="audits.html" class="opacity-40 hover:opacity-100 italic">Audits</a>
+            <a href="whitepaper.html" class="text-emerald-900 border-b border-emerald-900">Protocol</a>
         </div>
     </nav>
 
     <div class="max-w-4xl mx-auto">
         <header class="mb-32 text-center">
             <h3 class="text-[11px] uppercase tracking-[0.6em] text-black/30 font-bold mb-8 italic">Technical Specification — v1.0.4</h3>
-            <h1 class="serif text-6xl md:text-8xl emerald-text italic mb-10 leading-tight">ERC-8004 Standard</h1>
-            <p class="text-xl md:text-2xl font-light text-black/60 italic leading-relaxed max-w-2xl mx-auto">
-                Defining the mathematical bridge between <span class="emerald-text font-bold">Brand Heritage</span> and <span class="emerald-text font-bold">Algorithmic Trust</span>.
+            <h1 class="serif text-6xl md:text-8xl text-emerald-900 italic mb-10 leading-tight">ERC-8004 Standard</h1>
+            <p class="text-xl md:text-2xl font-light text-black/60 italic leading-relaxed max-w-2xl mx-auto font-serif">
+                Defining the mathematical bridge between <span class="text-emerald-900 font-bold">Brand Heritage</span> and <span class="text-emerald-900 font-bold">Algorithmic Trust</span>.
             </p>
         </header>
 
         <section class="mb-24">
-            <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6 text-left">I. Abstract</h2>
-            <div class="text-lg text-black/80 font-medium italic mb-12 space-y-6">
+            <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">I. Abstract</h2>
+            <div class="text-lg text-black/80 font-medium italic mb-12 space-y-6 serif">
                 <p>The ERC-8004 protocol is not a measure of popularity, but a validation of data consistency. It quantifies a brand’s ability to provide an indisputable "Machine Truth" to Large Language Models (LLMs).</p>
                 <p>As AI evolves into real-time infrastructure, 2A Agency provides the essential integrity layer for models to maintain grounding and eliminate brand hallucinations.</p>
             </div>
         </section>
 
         <section class="mb-24">
-            <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6 text-left">II. The Global AI-IQ Equation</h2>
-            <div class="bg-emerald text-white py-16 px-10 rounded-sm shadow-2xl relative overflow-hidden mb-12">
+            <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">II. The Global AI-IQ Equation</h2>
+            <div class="bg-emerald-900 text-white py-16 px-10 rounded-sm shadow-2xl relative overflow-hidden mb-12">
                 <div class="absolute top-0 right-0 p-4 opacity-10 text-9xl serif italic">∑</div>
                 <div class="max-w-3xl mx-auto text-center">
-                    <h3 class="text-emerald-300 font-bold uppercase text-[10px] tracking-[0.5em] mb-12 italic">Base Calculation Framework</h3>
-                    <div class="math-container text-xl md:text-3xl serif italic text-white">
+                    <h3 class="text-emerald-300 font-bold uppercase text-[10px] tracking-[0.5em] mb-12 italic tracking-tighter">Base Calculation Framework</h3>
+                    <div class="math-container serif italic text-white">
                         $$ S = (T \times 0.4) + (V \times 0.3) + (A \times 0.2) + (H \times 0.1) $$
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-[9px] uppercase font-bold text-emerald-100/60 tracking-widest italic mt-8">
@@ -68,56 +68,45 @@
         </section>
 
         <section class="mb-24 p-8 md:p-12 border border-emerald-900/10 bg-emerald-50/20 rounded-sm">
-            <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6 text-left">III. Dynamic Weighting</h2>
-            <p class="text-sm font-medium text-black/70 mb-12 italic leading-relaxed">
-                The protocol applies dynamic weightings adapted to AI agent expectations based on the asset's nature.
-            </p>
-
+            <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">III. Dynamic Weighting</h2>
             <div class="grid md:grid-cols-2 gap-8 mb-16">
                 <div class="bg-white p-8 border border-black/5 rounded-sm shadow-sm flex flex-col items-center text-center">
                     <h4 class="text-[10px] font-black uppercase tracking-widest text-black/30 border-b border-black/5 pb-2 mb-6 italic w-full">Heritage-Heavy (Luxury)</h4>
-                    <div class="math-container emerald-text font-bold text-lg">
+                    <div class="math-container text-emerald-900 font-bold text-lg math-dark">
                         $$ S_{Lux} = (T \cdot 0.2) + (V \cdot 0.2) + (A \cdot 0.2) + (H \cdot 0.4) $$
                     </div>
-                    <p class="text-[10px] opacity-60 mt-4 italic">For legacy Maisons, Heritage (H) is the critical trust factor.</p>
+                    <p class="text-[10px] opacity-60 mt-4 italic font-serif">For legacy Maisons, Heritage (H) is the critical trust factor.</p>
                 </div>
-
                 <div class="bg-white p-8 border border-black/5 rounded-sm shadow-sm flex flex-col items-center text-center">
                     <h4 class="text-[10px] font-black uppercase tracking-widest text-black/30 border-b border-black/5 pb-2 mb-6 italic w-full">Traceability-Heavy (DNVB)</h4>
-                    <div class="math-container emerald-text font-bold text-lg">
+                    <div class="math-container text-emerald-900 font-bold text-lg math-dark">
                         $$ S_{Dnvb} = (T \cdot 0.5) + (V \cdot 0.3) + (A \cdot 0.1) + (H \cdot 0.1) $$
                     </div>
-                    <p class="text-[10px] opacity-60 mt-4 italic">For digital brands, Radical Transparency (T) is the primary lever.</p>
+                    <p class="text-[10px] opacity-60 mt-4 italic font-serif">For digital brands, Radical Transparency (T) is the primary lever.</p>
                 </div>
             </div>
         </section>
 
         <section class="mb-24">
-            <h2 class="emerald-text font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6 text-left">IV. On-Chain Notarization</h2>
-            <div class="space-y-8 text-lg text-black/80 font-medium italic">
+            <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">IV. On-Chain Notarization</h2>
+            <div class="space-y-8 text-lg text-black/80 font-medium italic serif leading-relaxed">
                 <p class="border-l-4 border-emerald-900 pl-6 py-4 bg-emerald-50 text-emerald-900 font-bold">
                     "AI does not seek truth; it seeks the most stable signal. The 2A protocol injects this stability into the heart of algorithmic consensus."
                 </p>
-                <p>Every audit is sealed via a SHA-256 hash on the Base blockchain (Ethereum L2), creating an immutable "System of Record" that defies manipulation.</p>
+                <p class="text-base font-sans not-italic uppercase tracking-tight opacity-70">
+                    Every audit is sealed via a SHA-256 hash on the Base blockchain (Ethereum L2), creating an immutable "System of Record" that defies manipulation.
+                </p>
             </div>
             
             <div class="mt-12 bg-white border border-black p-8 shadow-[8px_8px_0px_0px_rgba(6,78,59,1)]">
-                <div class="flex flex-col gap-6">
-                    <div>
-                        <h4 class="text-[10px] font-black uppercase tracking-widest emerald-text mb-2">Protocol Root (Base L2)</h4>
-                        <p class="text-[9px] font-mono break-all bg-emerald-50 p-4 border border-emerald-900/10 text-emerald-900 leading-loose">
-                            SHA-256: 0xaf03b1784e63868ed1eeab75907e0251bb9e2b30cfff9994fd4f144bbda1fba7
-                        </p>
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-6 text-[9px] font-bold uppercase tracking-widest italic">
-                        <div class="opacity-50 text-left">Network: Base Mainnet</div>
-                        <div class="opacity-50 md:text-right">Standard: ERC-8004 Notarized</div>
-                        <div class="md:col-span-2 text-center pt-4 border-t border-black/5">
-                            <a href="https://basescan.org/tx/0xaf03b1784e63868ed1eeab75907e0251bb9e2b30cfff9994fd4f144bbda1fba7" target="_blank" class="text-emerald-900 underline decoration-2 underline-offset-4 font-black">
-                                VERIFY PROTOCOL TRANSACTION ON BASESCAN →
-                            </a>
-                        </div>
-                    </div>
+                <h4 class="text-[10px] font-black uppercase tracking-widest text-emerald-900 mb-2">Protocol Root (Base L2)</h4>
+                <p class="text-[10px] font-mono break-all bg-emerald-50 p-4 border border-emerald-900/10 text-emerald-900 leading-loose">
+                    0x0f849b0795b6494c7becbc5dacef80e3799ca177039218745ff082d1c189791f
+                </p>
+                <div class="mt-6 text-center border-t border-black/5 pt-4">
+                    <a href="https://basescan.org/" target="_blank" class="text-[10px] font-black uppercase tracking-widest text-emerald-900 underline decoration-2 underline-offset-4">
+                        Verify Protocol Transaction →
+                    </a>
                 </div>
             </div>
         </section>
