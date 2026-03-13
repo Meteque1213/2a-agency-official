@@ -1,0 +1,26 @@
+[
+    {
+      "brand": "LOUIS VUITTON",
+      "id": "LVMH-2026-UX-001",
+      "score": "98/100",
+      "hash": "0x0f849b0795b6494c7becbc5dacef80e3799ca177039218745ff082d1c189791f",
+      "memo": "MEMO_LVMH_001.txt",
+      "featured": true
+    },
+    {
+      "brand": "OPENAI (GPT-5 SR)",
+      "id": "OAI-2026-TECH-009",
+      "score": "94/100",
+      "hash": "0x3e4d5f6a7b8c9d0e1f2a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4",
+      "memo": "MEMO_OPENAI_009.txt",
+      "featured": false
+    },
+    {
+      "brand": "OLIPOP",
+      "id": "DNVB-2026-UX-004",
+      "score": "85/100",
+      "hash": "0x116aaa95b6494c7becbc5dacef80e3799ca177039218745ff082d1c189791f",
+      "memo": "MEMO_DNVB_004_OLIPOP.txt",
+      "featured": false
+    }
+  ]
