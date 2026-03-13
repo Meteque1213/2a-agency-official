@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Space Grotesk', sans-serif; background-color: #fff; color: #000; scroll-behavior: smooth; }
-        .audit-card { transition: all 0.2s ease; border-left: 2px solid transparent; }
+        .audit-card { transition: all 0.2s ease; border-left: 3px solid #f3f4f6; }
         .audit-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left-color: #10b981; }
-        .search-sticky { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.9); backdrop-blur: 10px; }
+        .search-sticky { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95); backdrop-blur: 10px; }
     </style>
 </head>
 <body class="p-6 md:p-12">
@@ -19,7 +19,7 @@
             <div class="w-3 h-3 bg-emerald-500 rounded-full"></div>
             <span class="font-bold text-sm tracking-tight uppercase">2A AGENCY</span>
         </div>
-        <div class="flex gap-6 text-xs uppercase tracking-widest text-gray-500">
+        <div class="flex gap-6 text-[10px] uppercase tracking-[0.2em] text-gray-400">
             <a href="index.html" class="hover:text-black italic">Home</a>
             <a href="audits.html" class="text-black font-bold underline decoration-2 underline-offset-8 italic">Audits</a>
             <a href="whitepaper.html" class="hover:text-black italic">Protocol</a>
@@ -28,134 +28,90 @@
 
     <main class="max-w-5xl mx-auto">
         <div class="mb-12">
-            <h1 class="text-[50px] md:text-[80px] font-bold leading-none tracking-tighter text-emerald-950 uppercase">Forensic<br>Registry</h1>
-            <div class="flex flex-col gap-3 mt-6">
+            <h1 class="text-[50px] md:text-[80px] font-black leading-[0.9] tracking-tighter text-emerald-950 uppercase">Forensic<br>Registry</h1>
+            <div class="flex flex-col gap-3 mt-8">
                 <div class="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-emerald-600 font-bold">
-                    <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                    <div class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></div>
                     <span id="audit-count">...</span> Verified Records On-Chain
                 </div>
-                <a href="registry.json" target="_blank" class="text-[9px] text-gray-400 hover:text-emerald-500 font-mono tracking-widest uppercase border-b border-gray-100 w-fit pb-1 transition-colors">
-                    Export Raw Audit Data (JSON)
-                </a>
             </div>
         </div>
 
-        <div class="search-sticky py-6 mb-12 border-b border-gray-100 font-bold">
+        <div class="search-sticky py-8 mb-8 border-b border-gray-100">
             <input type="text" id="brandSearch" onkeyup="filterAudits()" 
-                   placeholder="SEARCH REGISTRY (BRAND, ID, SCORE)..." 
-                   class="w-full bg-gray-50 border border-gray-200 p-6 font-mono text-xs tracking-[0.2em] focus:outline-none focus:border-emerald-500 transition-all uppercase">
+                   placeholder="SEARCH 1,000 AUDITS..." 
+                   class="w-full bg-gray-50 border border-gray-100 p-6 font-mono text-xs tracking-[0.2em] focus:outline-none focus:border-emerald-500 transition-all uppercase placeholder:opacity-30">
         </div>
 
-        <div id="audit-container" class="space-y-4">
-            <div class="text-center py-20 text-gray-400 font-mono text-[10px] uppercase tracking-widest animate-pulse">Syncing Forensic Data from Base L2...</div>
+        <div id="audit-container" class="space-y-4 pb-20">
+            <div class="text-center py-20 text-gray-400 font-mono text-[10px] uppercase tracking-[0.4em] animate-pulse">Syncing Base L2 Nodes...</div>
         </div>
     </main>
 
-    <div id="memo-overlay" class="fixed inset-0 bg-white/98 z-[100] hidden p-4 md:p-12 overflow-y-auto backdrop-blur-md">
-        <div class="max-w-3xl mx-auto border border-gray-200 p-8 md:p-16 shadow-2xl bg-white relative mt-10">
-            <button onclick="closeMemo()" class="absolute top-6 right-6 text-gray-400 hover:text-black font-bold text-[10px] uppercase tracking-widest bg-gray-50 px-4 py-2 rounded-full transition-colors border border-gray-100">
-                [ Fermer / Close ]
-            </button>
-            <div class="mb-8 border-b border-gray-100 pb-8 text-center">
-                <div class="text-emerald-500 font-bold text-[10px] tracking-widest uppercase mb-2 italic">Official Forensic Notarization</div>
-                <div id="memo-title" class="text-2xl font-bold tracking-tighter text-emerald-950 uppercase">REPORT</div>
-            </div>
-            <pre id="memo-content" class="text-emerald-950 font-mono text-[11px] md:text-xs leading-relaxed whitespace-pre-wrap pt-4 bg-gray-50 p-6 border border-gray-100 rounded-sm"></pre>
-        </div>
-    </div>
-
     <script>
-        // On force le rafraîchissement avec un timestamp
-        const REGISTRY_URL = 'registry.json?v=' + Date.now();
-        let allAudits = [];
+        const REGISTRY_URL = 'registry.json?nocache=' + Math.random();
 
         async function loadAudits() {
             try {
-                const response = await fetch(REGISTRY_URL, { cache: "no-store" });
+                const response = await fetch(REGISTRY_URL);
                 const data = await response.json();
-                
-                // Détection de la structure (soit data.entities, soit data.audits, soit data en direct)
-                allAudits = data.entities || data.audits || (Array.isArray(data) ? data : []);
-                
-                document.getElementById('audit-count').textContent = allAudits.length || "1000";
-                renderAudits(allAudits);
-            } catch (error) {
-                console.error("Registry Load Error:", error);
-                document.getElementById('audit-container').innerHTML = `
-                    <div class="text-center py-20 text-red-500 font-mono text-xs uppercase tracking-widest">
-                        ERROR: SYSTEM OF RECORD OFFLINE
-                    </div>`;
+                const list = data.entities || data.audits || (Array.isArray(data) ? data : []);
+                document.getElementById('audit-count').textContent = list.length;
+                renderAudits(list);
+            } catch (err) {
+                document.getElementById('audit-container').innerHTML = `<div class="text-center py-20 font-mono text-xs text-red-500 uppercase tracking-widest">Network Outage</div>`;
             }
         }
 
-        function renderAudits(data) {
+        function renderAudits(items) {
             const container = document.getElementById('audit-container');
-            if (!data || data.length === 0) {
-                container.innerHTML = `<div class="text-center py-20 text-gray-400 font-mono text-xs uppercase italic">No entities found in registry.json</div>`;
+            if (!items || items.length === 0) {
+                container.innerHTML = `<div class="text-center py-20 font-mono text-xs text-gray-400 uppercase tracking-widest">Empty Registry</div>`;
                 return;
             }
 
-            container.innerHTML = data.map(audit => {
-                // Détection intelligente des clés pour éviter le vide
-                const name = (audit.name || audit.brand || audit.entity || "N/A").replace(/^- /g, '').replace(/\*\*/g, '').trim();
-                const hash = audit.integrity_hash || audit.hash || "0x...NOTARIZED";
-                const id = audit.id || "2A-RECORD";
-                const score = audit.score || audit.integrity_score || "N/A";
-                const memoPath = `audits/MEMO_${id}.txt`;
+            container.innerHTML = items.map(item => {
+                const brand = (item.name || item.brand || item.entity || "Unknown Brand").replace(/^- /g, '').replace(/\*\*/g, '');
+                const id = item.id || "2A-RECORD";
+                // On nettoie le score pour éviter les doubles /100
+                let score = item.score || item.integrity_score || "N/A";
+                if (typeof score === 'string' && !score.includes('/100')) {
+                    score = score + "/100";
+                } else if (typeof score === 'number') {
+                    score = score + "/100";
+                }
+
+                const hash = item.integrity_hash || item.hash || "0xNotarized";
 
                 return `
-                <div class="audit-card bg-white p-6 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all">
+                <div class="audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                     <div class="flex-1">
-                        <div class="flex items-center gap-2 mb-1">
-                             <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
-                             <div class="text-[8px] font-bold text-emerald-600 tracking-[0.2em] uppercase italic tracking-widest">Blockchain Anchor Active</div>
-                        </div>
-                        <h2 class="text-xl font-bold text-emerald-950 tracking-tight uppercase">${name}</h2>
-                        <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic">ID: ${id}</div>
+                        <div class="text-[8px] font-black text-emerald-500 tracking-[0.3em] uppercase mb-2">Immutable Audit Record</div>
+                        <h2 class="text-2xl font-bold text-emerald-950 tracking-tight uppercase">${brand}</h2>
+                        <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-50">UID: ${id}</div>
                     </div>
-                    <div class="flex flex-col md:items-end gap-3 w-full md:w-auto min-w-[250px]">
-                        <div class="flex items-center gap-4 md:justify-end">
+                    <div class="flex flex-col md:items-end gap-4 w-full md:w-auto">
+                        <div class="flex items-center gap-6">
                             <div class="text-right">
-                                <div class="text-[8px] uppercase text-gray-400 font-bold tracking-widest">Integrity Score</div>
-                                <div class="text-lg font-black text-emerald-700 font-mono">${score}/100</div>
+                                <div class="text-[8px] uppercase text-gray-400 font-bold tracking-widest mb-1">Integrity Score</div>
+                                <div class="text-2xl font-black text-emerald-800 font-mono">${score}</div>
                             </div>
-                            <button onclick="openMemo('${memoPath}', '${name.replace(/'/g, "\\'")}')" 
-                                    class="bg-black text-white px-6 py-3 text-[9px] font-bold uppercase tracking-widest hover:bg-emerald-600 transition-all shadow-lg shadow-black/5">
-                                Review Audit
+                            <button onclick="alert('Accessing Base L2 Data for ${id}...')" class="bg-black text-white px-8 py-4 text-[9px] font-bold uppercase tracking-[0.2em] hover:bg-emerald-600 transition-all shadow-xl shadow-black/5">
+                                Verify Details
                             </button>
                         </div>
-                        <div class="font-mono text-[8px] text-gray-300 break-all md:text-right uppercase tracking-tighter">Merkle Leaf: ${hash}</div>
+                        <div class="font-mono text-[8px] text-gray-300 break-all md:text-right uppercase tracking-tighter opacity-60">Merkle Proof: ${hash}</div>
                     </div>
                 </div>`;
             }).join('');
         }
 
         function filterAudits() {
-            const query = document.getElementById('brandSearch').value.toUpperCase();
+            const val = document.getElementById('brandSearch').value.toUpperCase();
             const cards = document.getElementsByClassName('audit-card');
-            for (let i = 0; i < cards.length; i++) {
-                const text = cards[i].innerText.toUpperCase();
-                cards[i].style.display = text.includes(query) ? "" : "none";
+            for (let card of cards) {
+                card.style.display = card.innerText.toUpperCase().includes(val) ? "" : "none";
             }
-        }
-
-        async function openMemo(path, title) {
-            try {
-                const response = await fetch(path);
-                if (!response.ok) throw new Error();
-                const text = await response.text();
-                document.getElementById('memo-title').textContent = title;
-                document.getElementById('memo-content').textContent = text;
-                document.getElementById('memo-overlay').classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            } catch (error) {
-                alert("This forensic report is currently being synchronized with Base L2 Mainnet.");
-            }
-        }
-
-        function closeMemo() {
-            document.getElementById('memo-overlay').classList.add('hidden');
-            document.body.style.overflow = 'auto';
         }
 
         window.onload = loadAudits;
