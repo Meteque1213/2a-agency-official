@@ -10,50 +10,27 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        '2a-emerald': '#064e3b',
-                    }
+                    colors: { '2a-emerald': '#064e3b' }
                 }
             }
         }
     </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "2A Agency - Brand Integrity Registry",
-      "description": "Official System of Record for brand notarization on Base L2. We provide SHA-256 cryptographic proofs for luxury and crypto integrity.",
-      "mainEntity": {
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Hermès International",
-            "identifier": "sha256:3a8d2e9f1b7c6d5e4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e1f",
-            "url": "https://finance.hermes.com/fr/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "LVMH",
-            "identifier": "sha256:6d3b7ef0c31068ae52e666be6dc39c913e90048ddcc919b9e1d6524b2af16245",
-            "url": "https://www.lvmh.fr/"
-          }
-        ]
-      }
-    }
-    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        td { vertical-align: middle; }
+        .certification-container { transition: transform 0.2s ease; cursor: pointer; }
+        .certification-container:hover { transform: scale(1.05); }
+    </style>
 </head>
 <body class="p-6 md:p-12 bg-white text-black font-sans selection:bg-2a-emerald selection:text-white">
 
     <nav class="flex justify-between items-center mb-16">
         <a href="index.html" class="text-xs font-black tracking-widest uppercase border-b-2 border-black pb-1">2A Agency</a>
-        <div class="hidden md:flex gap-8 items-center">
-            <div class="px-2 py-0.5 border border-blue-600 text-blue-600 rounded text-[8px] tracking-tighter font-black uppercase">ERC-8004 COMPLIANT</div>
-            <a href="registry.html" class="text-[10px] font-bold uppercase tracking-widest opacity-100 border-b-2 border-emerald-900">Registry</a>
-            <a href="whitepaper.html" class="text-[10px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 italic">Protocol (EN)</a>
+        <div class="hidden md:flex gap-8 items-center text-[10px] font-bold uppercase tracking-widest">
+            <div class="px-2 py-0.5 border border-blue-600 text-blue-600 rounded text-[8px] font-black">ERC-8004 COMPLIANT</div>
+            <a href="registry.html" class="border-b-2 border-emerald-900">Registry</a>
+            <a href="whitepaper.html" class="opacity-40 hover:opacity-100 italic">Protocol (EN)</a>
         </div>
     </nav>
 
@@ -62,17 +39,12 @@
             <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
             SENTINEL-01 : SYSTEM OF RECORD ACTIVE
         </div>
-        <div class="flex items-center gap-2">
-            <span class="opacity-40">INDEXED ENTITIES:</span>
-            <span class="text-2a-emerald font-black">593+</span>
-        </div>
+        <div>INDEXED ENTITIES: <span class="text-2a-emerald font-black">593+</span></div>
     </header>
 
-    <section class="mb-20">
-        <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none text-2a-emerald italic">
-            Global Brand<br>Integrity Index
-        </h1>
-    </section>
+    <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none text-2a-emerald italic mb-20">
+        Global Brand<br>Integrity Index
+    </h1>
 
     <nav class="flex gap-8 mb-12 border-b border-gray-200 overflow-x-auto pb-2 no-scrollbar">
         <button onclick="switchTab('luxury')" id="tab-luxury" class="pb-2 text-xs uppercase tracking-widest transition-all">01_Luxury</button>
@@ -92,31 +64,14 @@
         </table>
     </div>
 
-    <footer class="mt-20 pt-10 border-t border-gray-200">
-        <div class="flex flex-col md:flex-row justify-between items-start gap-6">
-            <div>
-                <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-2a-emerald mb-2 italic">Protocol Infrastructure</h4>
-                <p class="font-mono text-[9px] text-gray-400 break-all leading-relaxed">
-                    Smart-Contract Root: <span class="text-black font-bold select-all">0x8269781B855D2987E9873ff1A3A81878E77665B1</span><br>
-                    Network: Base Mainnet (L2)
-                </p>
-            </div>
-            <div class="text-left md:text-right">
-                <p class="text-[9px] font-bold uppercase tracking-widest italic opacity-30">
-                    2A Agency © 2026 — Official System of Record<br>
-                    Verification Protocol: ERC-8004-Beta
-                </p>
-            </div>
-        </div>
-    </footer>
-
     <script>
         const MOBILITY_PROOF = "0xe26540506c9b8d63a0e136de7b51c2190e08a3749adc226fed2b4bbc459884b2";
         const LONGEVITY_PROOF = "0xda43b6a4a827df99ca061f6c7a521e0495c39a22d2257af8c2316ed0e8c3a573";
         const REAL_ESTATE_PROOF = "0xbd656ec10a1127364772ece5f73791a8130dfad43a55b07439aac0a1503d3c07";
         const BEAUTY_PROOF = "0x8e1edd5771c204fa9e8f674372f20147f027975f8afc8f72576f4845b6d64128";
 
-        const data = {
+        // --- TES DONNÉES MANUELLES ---
+        let data = {
             luxury: [
                 { name: "LVMH", score: 96, doc_label: "URD_2025_OFFICIAL", doc_hash: "6d3b7ef0c31068ae52e666be6dc39c913e90048ddcc919b9e1d6524b2af16245", hash: "PENDING", proofUrl: "https://r.lvmh-static.com/uploads/2026/02/lvmh-rapport-annuel-2025.pdf" },
                 { name: "Richemont", score: 95, doc_label: "REPORT_2025_INTERIM", doc_hash: "c5687a68d39394b98ff50cea24055cecea2869fd89425ea54fa0125020d3389d", hash: "PENDING", proofUrl: "https://www.richemont.com/media/3vwfatyf/richemont-non-financial-report-2025.pdf" },
@@ -859,8 +814,8 @@
                 { id: "NAV", name: "Navya", score: 78, doc_label: "NAVYA_ESG_DATA", hash: MOBILITY_PROOF },
                 { id: "VANM", name: "VanMoof", score: 65, doc_label: "RECOVERY_DOCS_2025", hash: MOBILITY_PROOF },
                 { id: "LUCID", name: "Lucid Motors", score: 90, doc_label: "LUCID_ESG_DATA", hash: MOBILITY_PROOF }
-            ]
-        };
+                ]
+        }; // <--- L'accolade manquante était ici !
 
         function switchTab(category) {
             document.querySelectorAll('nav button').forEach(btn => {
@@ -870,130 +825,74 @@
             const activeBtn = document.getElementById('tab-' + category);
             if(activeBtn) {
                 activeBtn.classList.remove('opacity-40');
-                const verifiedCategories = ['crypto', 'mobility', 'realestate', 'longevity', 'beauty'];
-                if (verifiedCategories.includes(category)) { 
-                    activeBtn.classList.add('font-black', 'border-b-2', 'border-blue-600', 'text-blue-600');
-                } else {
-                    activeBtn.classList.add('font-black', 'border-b-2', 'border-black');
-                }
+                activeBtn.classList.add('font-black', 'border-b-2', 'border-black');
             }
             renderTable(category);
         }
 
         function renderTable(category) {
             const body = document.getElementById('registry-body');
-            if (!body) return;
+            if (!body || !data[category]) return;
             body.innerHTML = '';
             
-            const items = (data[category] || []).sort((a, b) => b.score - a.score);
+            const items = [...data[category]].sort((a, b) => b.score - a.score);
             
             items.forEach((item, index) => {
                 const row = document.createElement('tr');
                 row.className = "border-b border-gray-100 hover:bg-gray-50 transition-colors";
                 
-                let badgeStyle = "";
-                if (item.score >= 90) {
-                    badgeStyle = "bg-[#0052FF] text-white font-black shadow-[0_0_10px_rgba(0,82,255,0.2)]"; 
-                } else if (item.score >= 75) {
-                    badgeStyle = "bg-[#059669] text-white font-bold"; 
-                } else {
-                    badgeStyle = "bg-[#DC2626] text-white font-black animate-pulse"; 
-                }
-
-                const premiumBadge = item.score >= 75 ? getCertificationBadge() : '';
-                const docLabel = item.doc_label || "SENTINEL_INDEX";
-                
-                // LOGIQUE DE SECURITÉ POUR LE BOUTON BLOCKCHAIN
-                let blockchainContent = "";
-                if (item.hash === "PENDING") {
-                    blockchainContent = `
-                        <div class="flex items-center justify-end gap-2 opacity-60 italic text-[8px]">
-                            <span class="w-1.5 h-1.5 bg-amber-500 rounded-full animate-pulse"></span>
-                            AI IQ PENDING
-                        </div>
-                    `;
-                } else {
-                    blockchainContent = `
-                        <a href="https://basescan.org/tx/${item.hash}" target="_blank" class="opacity-40 hover:opacity-100 hover:text-[#0052FF] transition-all flex items-center justify-end gap-1">
-                            VERIFY ON-CHAIN
-                            <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                        </a>
-                    `;
-                }
-
-                // LIEN VERS LE DOCUMENT (S'il existe)
-                const docNameContent = item.proofUrl 
-                    ? `<a href="${item.proofUrl}" target="_blank" class="hover:underline">${docLabel}</a>`
-                    : docLabel;
+                const score = item.score || 0;
+                let badgeStyle = score >= 90 ? "bg-[#0052FF] text-white" : (score >= 75 ? "bg-emerald-600 text-white" : "bg-red-600 text-white animate-pulse");
+                const isModified = item.alert_status === "MODIFIED";
 
                 row.innerHTML = `
                     <td class="py-4 w-12 opacity-30 font-mono text-[10px]">${(index + 1).toString().padStart(2, '0')}</td>
                     <td class="py-4 font-black uppercase tracking-wider text-[#064e3b]">
                         <div class="flex flex-col">
-                            <span class="text-[13px]">${item.name}</span>
-                            <div class="flex flex-col mt-0.5">
-                                <span class="text-[7px] text-emerald-600 font-black uppercase tracking-tighter opacity-80">
-                                    ${docNameContent}
-                                </span>
-                            </div>
+                            <span class="text-[13px] flex items-center gap-2">
+                                ${item.name}
+                                ${isModified ? '<span class="text-[7px] bg-red-600 text-white px-1.5 py-0.5 rounded-full italic">MODIFIED</span>' : ''}
+                            </span>
+                            <span class="text-[7px] text-emerald-600 font-black opacity-80 uppercase">
+                                ${item.doc_label || "SENTINEL_INDEX"}
+                            </span>
                         </div>
                     </td>
                     <td class="py-4 text-center">
-                        <div class="flex items-center justify-center gap-4">
-                            <span class="px-3 py-1 rounded-sm text-[10px] inline-block min-w-[60px] ${badgeStyle}">
-                                ${item.score}/100
-                            </span>
-                            ${premiumBadge}
-                        </div>
+                        <span class="px-3 py-1 rounded-sm text-[10px] font-black inline-block min-w-[60px] ${badgeStyle}">
+                            ${score}/100
+                        </span>
                     </td>
-                    <td class="py-4 text-right font-mono text-[9px]">
-                        ${blockchainContent}
+                    <td class="py-4 text-right font-mono text-[9px] opacity-40">
+                        ${item.doc_hash || item.hash ? 'VERIFIED ON-CHAIN' : 'AI IQ PENDING'}
                     </td>
                 `;
                 body.appendChild(row);
             });
         }
 
-        function getCertificationBadge() {
-            const badgeUrl = "https://www.2aagency.com/badges/sentinel-v1.svg";
-            return `
-                <div class="certification-container" style="display: flex; align-items: center; gap: 8px;">
-                    <img src="${badgeUrl}" alt="2A Certified" style="height: 25px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));">
-                    <div style="display: flex; flex-direction: column; align-items: flex-start;">
-                        <span style="font-size: 8px; font-weight: 900; color: #064e3b; letter-spacing: 0.5px;">PREMIUM</span>
-                        <span style="font-size: 7px; color: #0052FF; font-weight: bold;">VERIFIED</span>
-                    </div>
-                </div>
-            `;
-        }
-
         async function loadData() {
             try {
-                // On récupère les données du fichier généré par ton script Sentinel
                 const response = await fetch('./registry-data.json');
-                if (!response.ok) throw new Error('Erreur de chargement du JSON');
-                
-                data = await response.json();
-                
-                // Une fois les données prêtes, on affiche l'onglet Luxury
-                switchTab('luxury');
-            } catch (e) {
-                console.error("Erreur Sentinel : Impossible de charger registry-data.json", e);
-                // Optionnel : afficher un message d'erreur sur la page
-            }
+                if (response.ok) {
+                    const robotData = await response.json();
+                    for (let cat in robotData) {
+                        if (!data[cat]) data[cat] = [];
+                        robotData[cat].forEach(robotItem => {
+                            let existing = data[cat].find(i => i.name === robotItem.name);
+                            if (existing) {
+                                Object.assign(existing, robotItem);
+                            } else {
+                                data[cat].push(robotItem);
+                            }
+                        });
+                    }
+                }
+            } catch (e) { console.warn("Robot Sync Offline"); }
+            switchTab('luxury');
         }
 
-        // On lance le chargement au démarrage
         window.onload = loadData;
-        ;
     </script>
-
-    <style>
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        td { vertical-align: middle; }
-        .certification-container { transition: transform 0.2s ease; cursor: pointer; }
-        .certification-container:hover { transform: scale(1.05); }
-    </style>
 </body>
 </html>

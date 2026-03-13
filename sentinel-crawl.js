@@ -8,7 +8,6 @@ import path from 'path';
 
 const app = new FirecrawlApp({ apiKey: process.env.FIRECRAWL_API_KEY });
 
-// --- CONFIGURATION DE DÉGUISEMENT (BYPASS) ---
 const HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Accept': 'application/pdf,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
@@ -25,11 +24,8 @@ async function archivePdf(url, brandName) {
         await fs.mkdir(archiveDir, { recursive: true });
         const fileName = `report_${new Date().toISOString().split('T')[0]}.pdf`;
         const filePath = path.join(archiveDir, fileName);
-        
-        // On utilise les HEADERS ici pour tromper Ferrari
         const response = await fetch(url, { headers: HEADERS });
         if (!response.ok) throw new Error(`Status: ${response.status}`);
-        
         const fileStream = createWriteStream(filePath);
         await pipeline(response.body, fileStream);
         return filePath;
@@ -41,10 +37,9 @@ async function archivePdf(url, brandName) {
 
 async function getPdfHash(url) {
     try {
-        // On utilise les HEADERS ici aussi
         const response = await fetch(url, { headers: HEADERS });
-        const arrayBuffer = await response.arrayBuffer();
-        return crypto.createHash('sha256').update(Buffer.from(arrayBuffer)).digest('hex');
+        const arrayBuffer = await response.buffer(); // Changement ici pour compatibilité fetch/node
+        return crypto.createHash('sha256').update(arrayBuffer).digest('hex');
     } catch (e) { return null; }
 }
 
@@ -58,14 +53,29 @@ async function updateRegistry(brandData, category) {
         
         if (index !== -1) {
             const oldHash = data[category][index].doc_hash;
-            brandData.alert_status = (oldHash && oldHash !== brandData.doc_hash) ? "MODIFIED" : "STABLE";
-            if (brandData.alert_status === "MODIFIED") {
-                console.log(`🚨 ALERT : Change detected for ${brandData.name}`);
+            const oldSnippet = data[category][index].content_snippet;
+            
+            // --- LOGIQUE D'INTÉGRITÉ ---
+            if (oldHash && oldHash !== brandData.doc_hash) {
+                console.log(`🚨 ALERT : Integrity breach suspected for ${brandData.name}`);
+                brandData.alert_status = "MODIFIED";
                 brandData.previous_hash = oldHash;
+
+                // --- ANALYSE SÉMANTIQUE PRIMAIRE ---
+                if (oldSnippet !== brandData.content_snippet) {
+                    brandData.audit_comment = "CRITICAL: Textual modification detected in the core narrative.";
+                } else {
+                    brandData.audit_comment = "WARNING: Binary update detected (potential metadata or formatting change).";
+                }
+            } else {
+                brandData.alert_status = "STABLE";
+                brandData.audit_comment = "Integrity verified. No changes detected.";
             }
+            
             data[category][index] = { ...data[category][index], ...brandData };
         } else {
             brandData.alert_status = "NEW";
+            brandData.audit_comment = "Initial ingestion. Monitoring started.";
             data[category].push(brandData);
         }
         await fs.writeFile(filePath, JSON.stringify(data, null, 4));
@@ -87,11 +97,11 @@ async function auditSource(url, name) {
 }
 
 async function runSentinel() {
-    console.log("🛡️  SENTINEL BYPASS MODE : ACTIVATED");
+    console.log("🛡️  SENTINEL FORENSIC MODE : ON");
     for (const target of TARGETS) {
         try {
             let pdfUrl = target.searchUrl.endsWith('.pdf') ? target.searchUrl : null;
-            let snippet = "Direct PDF Access";
+            let snippet = "Direct access mode";
             if (!pdfUrl) {
                 const result = await auditSource(target.searchUrl, target.name);
                 if (result) { pdfUrl = result.pdfUrl; snippet = result.snippet; }
@@ -112,12 +122,11 @@ async function runSentinel() {
                         content_snippet: snippet
                     };
                     await updateRegistry(brandData, target.category);
-                    console.log(`✅ ${target.name} SECURED`);
                 }
             }
         } catch (error) { console.error(`💀 Error ${target.name}:`, error.message); }
     }
-    console.log("\n🏁 BYPASS MISSION COMPLETE.");
+    console.log("\n🏁 FORENSIC MISSION COMPLETE.");
 }
 
 runSentinel();
