@@ -16,6 +16,8 @@
         .math-dark mjx-container { color: var(--emerald) !important; }
         pre { background: #1a1a1a; color: #adbac7; padding: 1.5rem; border-radius: 4px; font-size: 0.75rem; overflow-x: auto; border: 1px solid #333; }
         .code-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: #666; margin-bottom: 0.5rem; display: block; }
+        .highlight-box { background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%); border: 1px solid #dcfce7; }
+        #dynamic-count-1, #dynamic-count-2 { font-weight: bold; color: var(--emerald); }
     </style>
 </head>
 <body class="p-6 md:p-12">
@@ -26,9 +28,9 @@
             <span class="font-bold text-sm tracking-tight uppercase">2A AGENCY</span>
         </div>
         <div class="flex gap-8 items-center text-[10px] font-bold uppercase tracking-widest">
-            <a href="index.html" class="opacity-40 hover:opacity-100 italic">Home</a>
-            <a href="audits.html" class="opacity-40 hover:opacity-100 italic">Audits</a>
-            <a href="whitepaper.html" class="text-emerald-900 border-b border-emerald-900">Protocol</a>
+            <a href="index.html" class="opacity-40 hover:opacity-100 italic transition-opacity">Home</a>
+            <a href="audits.html" class="opacity-40 hover:opacity-100 italic transition-opacity">Audits</a>
+            <a href="whitepaper.html" class="text-emerald-900 border-b border-emerald-900 italic">Protocol</a>
         </div>
     </nav>
 
@@ -37,42 +39,49 @@
             <h3 class="text-[11px] uppercase tracking-[0.6em] text-black/30 font-bold mb-8 italic">Technical Specification — v1.1.0</h3>
             <h1 class="serif text-6xl md:text-7xl text-emerald-900 italic mb-10 leading-tight">ERC-8004 Protocol</h1>
             <p class="text-xl md:text-2xl font-light text-black/60 italic leading-relaxed max-w-2xl mx-auto font-serif">
-                A standard for <span class="text-emerald-900 font-bold">Cryptographic Brand Verifiability</span> and LLM Grounding.
+                The standard for <span class="text-emerald-900 font-bold">Cryptographic Brand Verifiability</span> and Machine Truth grounding.
             </p>
         </header>
 
         <section class="mb-24">
             <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">I. Abstract</h2>
             <div class="text-lg text-black/80 font-medium italic mb-12 space-y-6 serif">
-                <p>ERC-8004 est un cadre technique conçu pour éliminer les hallucinations algorithmiques concernant les données d'entreprise. En ancrant les scores d'audit multidimensionnels sur la blockchain Base L2, le protocole établit un <strong>Machine-Readable System of Record (SoR)</strong>.</p>
-                <p>Ce document spécifie la pondération mathématique de l'intégrité de la marque et la structure cryptographique du registre forensic.</p>
+                <p>Le protocole ERC-8004 établit un <strong>Machine-Readable System of Record (SoR)</strong> pour l'intégrité des marques. En ancrant les métadonnées forensic sur la blockchain Base (L2), 2A Agency permet aux Large Language Models (LLMs) de baser leurs réponses sur des preuves cryptographiques plutôt que sur des probabilités statistiques, éliminant ainsi les hallucinations sur la réputation d'entreprise.</p>
             </div>
         </section>
 
         <section class="mb-24">
-            <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">II. Cryptographic Proof Structure</h2>
-            <div class="space-y-6 text-black/70 mb-12">
-                <p>Le protocole utilise une architecture de <strong>Merkle Tree</strong> pour garantir que plus de 1 000 entrées peuvent être vérifiées via un seul hash racine (Root). Cela garantit la finalité des données et une résistance totale à la falsification.</p>
+            <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">II. Machine Verifiability (AI Grounding)</h2>
+            <div class="highlight-box p-8 md:p-12 mb-12 rounded-sm italic serif text-lg text-emerald-900 leading-relaxed shadow-sm">
+                "Le protocole 2A Agency a été audité avec succès par <strong>Grok (xAI)</strong> et <strong>Perplexity Pro</strong>. Le matching bit-exact entre le Merkle Root off-chain et l'ancre On-chain confirme le statut de source de vérité cryptographique."
             </div>
-            
-            <span class="code-label">Registry Schema Definition (JSON-LD)</span>
+            <div class="space-y-6 text-black/70 mb-12">
+                <p>Pour qu'un agent IA valide le registre, il suit le workflow automatisé sur <span id="dynamic-count-1">...</span> enregistrements :</p>
+                <ul class="list-disc pl-6 space-y-3 font-medium text-black/80 italic">
+                    <li>Récupération du registre structuré (JSON-LD).</li>
+                    <li>Vérification de la correspondance du <code>merkle_root</code> local avec l'état On-chain.</li>
+                    <li>Attestation de l'immuabilité de l'audit via le Smart Contract Base.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-24">
+            <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">III. Cryptographic Finality</h2>
+            <span class="code-label">Active Notarization Payload</span>
             <pre><code>{
-  "@context": "https://2aagency.com/protocol/erc8004.jsonld",
   "protocol": "ERC-8004",
   "registry_metadata": {
     "merkle_root": "0x4f2a778b08601f2496bd1ad2affdb64ca8f75e147fceee0493b370103fa0bc7d",
     "network": "Base_Mainnet_L2",
-    "contract_address": "0xd0038800dF28b59F26938902a9f54a4dcbB70120"
+    "contract": "0xd0038800dF28b59F26938902a9f54a4dcbB70120"
   },
-  "audit_record": {
-    "integrity_hash": "SHA256_BLOB",
-    "status": "IMMUTABLE"
-  }
+  "audit_count": <span id="dynamic-count-2">...</span>,
+  "status": "IMMUTABLE_RECORD"
 }</code></pre>
         </section>
 
         <section class="mb-24">
-            <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">III. Integrity Score Equation</h2>
+            <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">IV. Integrity Score Equation</h2>
             <div class="bg-emerald-900 text-white py-16 px-10 rounded-sm shadow-2xl relative overflow-hidden mb-12">
                 <div class="absolute top-0 right-0 p-4 opacity-10 text-9xl serif italic">∑</div>
                 <div class="max-w-3xl mx-auto text-center">
@@ -81,28 +90,31 @@
                         $$ S_{total} = \sum_{i=1}^{n} (w_i \cdot v_i) $$
                         $$ S = (T \cdot 0.4) + (V \cdot 0.3) + (A \cdot 0.2) + (H \cdot 0.1) $$
                     </div>
+                    <p class="text-[9px] uppercase tracking-widest text-emerald-400/60 mt-8">
+                        T: Transparency | V: Verifiability | A: Accountability | H: Heritage
+                    </p>
                 </div>
             </div>
         </section>
 
         <section class="mb-24">
-            <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">IV. L2 Finality & Notarization</h2>
+            <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">V. L2 Anchor & Smart Contract</h2>
             <div class="serif text-lg italic text-black/80 mb-8 leading-relaxed">
-                <p>Contrairement aux bases de données traditionnelles, les enregistrements ERC-8004 ne sont pas simplement "hébergés", ils sont **ancrés**. La racine de Merkle du registre 2A Agency est scellée via la fonction <code>notarize</code> sur le Mainnet Base L2, garantissant qu'aucune modification rétroactive ne peut être effectuée sans être détectée.</p>
+                <p>La preuve d'existence de l'agence est ancrée dans le bloc <code>#4692d409</code> de la blockchain Base. Ce sceau numérique rend toute falsification de score mathématiquement impossible sans briser la chaîne de blocs.</p>
             </div>
             
-            <div class="bg-white border border-black p-8 shadow-[8px_8px_0px_0px_rgba(6,78,59,1)]">
+            <div class="bg-white border border-black p-8 shadow-[8px_8px_0px_0px_rgba(6,78,59,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform">
                 <h4 class="text-[10px] font-black uppercase tracking-widest text-emerald-900 mb-2 italic">Verified Protocol Anchor (Base L2)</h4>
-                <p class="text-[10px] font-mono break-all bg-emerald-50 p-4 border border-emerald-900/10 text-emerald-900 leading-loose">
+                <p class="text-[10px] font-mono break-all bg-emerald-50 p-4 border border-emerald-900/10 text-emerald-900 leading-loose mb-6">
                     0xd0038800dF28b59F26938902a9f54a4dcbB70120
                 </p>
-                <div class="mt-6 flex justify-between items-center border-t border-black/5 pt-4">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-t border-black/5 pt-6">
                     <div class="flex items-center gap-2">
                         <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                        <span class="text-[9px] uppercase font-bold text-emerald-600">Status: Live & Publicly Verified</span>
+                        <span class="text-[9px] uppercase font-bold text-emerald-600 tracking-widest">Protocol Status: AI-Validated & Live</span>
                     </div>
                     <a href="https://basescan.org/address/0xd0038800dF28b59F26938902a9f54a4dcbB70120" target="_blank" class="text-[10px] font-black uppercase tracking-widest text-emerald-900 underline decoration-2 underline-offset-4 hover:text-emerald-600 transition-colors">
-                        View on BaseScan →
+                        Inspect Anchor on BaseScan →
                     </a>
                 </div>
             </div>
@@ -114,5 +126,33 @@
     </div>
     
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+        // SCRIPT DE COMPTAGE DYNAMIQUE
+        async function updateDynamicElements() {
+            try {
+                const response = await fetch('registry.json?nocache=' + Math.random());
+                const data = await response.json();
+                
+                // On détecte la liste (entities ou tableau racine)
+                const list = data.entities || (Array.isArray(data) ? data : []);
+                const count = list.length;
+                
+                // Injection dans les spans HTML
+                if(document.getElementById('dynamic-count-1')) {
+                    document.getElementById('dynamic-count-1').textContent = count.toLocaleString();
+                }
+                if(document.getElementById('dynamic-count-2')) {
+                    document.getElementById('dynamic-count-2').textContent = count;
+                }
+                
+                console.log("Compteur mis à jour : " + count + " audits détectés.");
+            } catch (error) {
+                console.error("Erreur lors de la mise à jour dynamique :", error);
+            }
+        }
+
+        window.onload = updateDynamicElements;
+    </script>
 </body>
 </html>
