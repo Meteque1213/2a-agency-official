@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://www.2aagency.com/" />
+    <link rel="preload" href="/verify.js" as="script">
     <style>
         body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .text-2a-emerald { color: #064e3b; }
@@ -36,7 +37,7 @@
             </div>
             
             <div class="flex items-center gap-2">
-                <a href="https://basescan.org/address/0xd0038800dF28b59F26938902a9f54a4dcbB70120" target="_blank" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all">
+                <a id="Base_Anchor" href="https://basescan.org/address/0xd0038800dF28b59F26938902a9f54a4dcbB70120" target="_blank" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all font-bold">
                     VÉRIFIER LE PROTOCOLE (BASE L2)
                 </a>
                 <span class="opacity-20">|</span>
@@ -80,8 +81,8 @@
                 </div>
             </div>
             <div class="flex justify-center gap-6 mt-8">
-                <a href="https://github.com/Meteque1213/2a-agency-official/blob/main/verify.js" class="text-[8px] font-black uppercase tracking-widest border border-black/10 px-2 py-1 hover:border-black transition-all">Proof_Script</a>
-                <a href="https://basescan.org/address/0xd0038800dF28b59F26938902a9f54a4dcbB70120" class="text-[8px] font-black uppercase tracking-widest border border-black/10 px-2 py-1 hover:border-black transition-all">Base_Anchor</a>
+                <a id="Proof_Script" href="/verify.js" class="text-[8px] font-black uppercase tracking-widest border border-black/10 px-2 py-1 hover:border-black transition-all">Proof_Script</a>
+                <a href="https://basescan.org/address/0xd0038800dF28b59F26938902a9f54a4dcbB70120" target="_blank" class="text-[8px] font-black uppercase tracking-widest border border-black/10 px-2 py-1 hover:border-black transition-all">Base_Anchor</a>
             </div>
         </div>
     </section>
