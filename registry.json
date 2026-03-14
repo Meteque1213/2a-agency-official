@@ -2,13 +2,21 @@
     "registry_metadata": {
       "protocol": "ERC-8004",
       "network": "Base Mainnet",
-      "contract_address": "0xd0038800dF28b59F26938902a9f54a4dcbB70120",
+      "contract_address": "0xb3513bb3bfeBCe72D1941b29b6fE862F9268db14",
       "merkle_root": "0x4f2a778b08601f2496bd1ad2affdb64ca8f75e147fceee0493b370103fa0bc7d",
-      "entities_count": 1000,
+      "entities_count": 1001,
       "last_notarization": "2026-03-13T23:30:00Z"
     },
     "entities":
 [
+    {
+        "brand": "Sentinel Tech",
+        "id": "ST-001",
+        "score": 98,
+        "hash": "f2a778b08601f2496bd1ad2affdb64ca8f75e147fceee0493b370103fa0bc7d",
+        "memo": "AI Forensic Division",
+        "featured": true
+      },
     {
         "brand": "&TRADITION",
         "id": "&TR-2026-001",
