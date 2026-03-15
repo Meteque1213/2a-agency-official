@@ -1,9 +1,9 @@
 {
    "registry_metadata": {
     "protocol": "ERC-8004",
-    "merkle_root": "0x4543b6577c2f63627cfe0e3ddb210eadef24950d0f488dce18005ad41d4d1ce5",
+    "merkle_root": "0x1b6427a3710e0bb41d48125a57408f284b74d95c674e41f43a28115b46b0cedc",
     "entities_count": 1001,
-    "last_notarization": "2026-03-14T23:18:00Z",
+    "last_notarization": "2026-03-15T10:30:00Z",
     "contract_address": "0xCB7436FeB68D673c9252C312d5b4263000fcD616",
     "network": "Base L2",
     "status": "SECURED"
