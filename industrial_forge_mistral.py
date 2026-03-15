@@ -86,7 +86,7 @@ for secteur in SECTEURS:
             
             registry.append({
                 "id": f"2A-MIST-{safe_name.upper()}",
-                "entity": name,
+                "brand": name,
                 "hash": hashlib.sha256(full_content.encode()).hexdigest(),
                 "memo": filename,
                 "status": "Immutable"

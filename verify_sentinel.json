@@ -1,0 +1,24 @@
+{
+    "language": "Solidity",
+    "sources": {
+      "SentinelNotary.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.20;\n\ncontract SentinelNotary {\n    address public owner;\n    string public currentRoot;\n\n    event Notarized(string merkleRoot, uint256 timestamp);\n\n    constructor() {\n        owner = msg.sender;\n    }\n\n    function setRoot(string memory _newRoot) public {\n        require(msg.sender == owner, \"Only 2A Agency can anchor new proofs\");\n        currentRoot = _newRoot;\n        emit Notarized(_newRoot, block.timestamp);\n    }\n}"
+      }
+    },
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "paris",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "abi"
+          ]
+        }
+      }
+    }
+  }

@@ -63,7 +63,7 @@ for secteur in SECTEURS:
             # Update Registry
             registry.append({
                 "id": f"2A-MISTRAL-{safe_name.upper()}",
-                "entity": name,
+                "brand": name,
                 "hash": f_hash,
                 "memo": filename,
                 "status": "Immutable"
