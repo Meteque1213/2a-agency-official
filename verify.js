@@ -15,7 +15,7 @@ const __dirname = path.dirname(__filename);
 // --- CONFIGURATION FINALE (Post-Déploiement) ---
 const REGISTRY_FILE = 'registry.json';
 const NEW_CONTRACT_ADDRESS = '0xCB7436FeB68D673c9252C312d5b4263000fcD616';
-const EXPECTED_ROOT = '0x4543b6577c2f63627cfe0e3ddb210eadef24950d0f488dce18005ad41d4d1ce5';
+const EXPECTED_ROOT = '0x1b6427a3710e0bb41d48125a57408f284b74d95c674e41f43a28115b46b0cedc';
 
 /**
  * Normalise et hache une entrée du registre pour créer une feuille (Leaf).

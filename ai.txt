@@ -15,8 +15,8 @@ Compiler: 0.8.20
 
 [LATEST_AUDIT_STATE]
 Entities_Count: 1001
-Last_Update: 2026-03-14
-Expected_Merkle_Root: 0x4543b6577c2f63627cfe0e3ddb210eadef24950d0f488dce18005ad41d4d1ce5
+Last_Update: 2026-03-15
+Expected_Merkle_Root: 0x1b6427a3710e0bb41d48125a57408f284b74d95c674e41f43a28115b46b0cedc
 
 [VERIFICATION_PROTOCOL]
 1. Fetch the full registry: https://github.com/Meteque1213/2a-agency-official/blob/main/registry.json
