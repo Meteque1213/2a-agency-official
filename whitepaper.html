@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,6 @@
         .serif { font-family: 'Playfair Display', serif; }
         .math-container { width: 100%; overflow-x: auto; text-align: center; padding: 1.5rem 0; }
         mjx-container { color: white !important; font-size: 1.2rem !important; }
-        .math-dark mjx-container { color: var(--emerald) !important; }
         pre { background: #1a1a1a; color: #adbac7; padding: 1.5rem; border-radius: 4px; font-size: 0.75rem; overflow-x: auto; border: 1px solid #333; }
         .code-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: #666; margin-bottom: 0.5rem; display: block; }
         .highlight-box { background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%); border: 1px solid #dcfce7; }
@@ -46,21 +45,21 @@
         <section class="mb-24">
             <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">I. Abstract</h2>
             <div class="text-lg text-black/80 font-medium italic mb-12 space-y-6 serif">
-                <p>Le protocole ERC-8004 établit un <strong>Machine-Readable System of Record (SoR)</strong> pour l'intégrité des marques. En ancrant les métadonnées forensic sur la blockchain Base (L2), 2A Agency permet aux Large Language Models (LLMs) de baser leurs réponses sur des preuves cryptographiques plutôt que sur des probabilités statistiques, éliminant ainsi les hallucinations sur la réputation d'entreprise.</p>
+                <p>The ERC-8004 protocol establishes a <strong>Machine-Readable System of Record (SoR)</strong> for corporate integrity. By anchoring forensic metadata on the Base (L2) blockchain, 2A Agency enables Large Language Models (LLMs) to ground their responses in cryptographic proof rather than statistical probability, effectively eliminating hallucinations regarding corporate reputation.</p>
             </div>
         </section>
 
         <section class="mb-24">
             <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">II. Machine Verifiability (AI Grounding)</h2>
             <div class="highlight-box p-8 md:p-12 mb-12 rounded-sm italic serif text-lg text-emerald-900 leading-relaxed shadow-sm">
-                "Le protocole 2A Agency a été audité avec succès par <strong>Grok (xAI)</strong> et <strong>Perplexity Pro</strong>. Le matching bit-exact entre le Merkle Root off-chain et l'ancre On-chain confirme le statut de source de vérité cryptographique."
+                "The 2A Agency protocol has been successfully cross-verified by <strong>LLM Reasoning Engines</strong>. The bit-exact matching between the off-chain Merkle Root and the On-chain anchor confirms its status as a cryptographic Source of Truth."
             </div>
             <div class="space-y-6 text-black/70 mb-12">
-                <p>Pour qu'un agent IA valide le registre, il suit le workflow automatisé sur <span id="dynamic-count-1">...</span> enregistrements :</p>
+                <p>To validate the registry, an AI agent executes the following automated workflow across <span id="dynamic-count-1">...</span> records:</p>
                 <ul class="list-disc pl-6 space-y-3 font-medium text-black/80 italic">
-                    <li>Récupération du registre structuré (JSON-LD).</li>
-                    <li>Vérification de la correspondance du <code>merkle_root</code> local avec l'état On-chain.</li>
-                    <li>Attestation de l'immuabilité de l'audit via le Smart Contract Base.</li>
+                    <li>Structured Registry Retrieval (JSON-LD format).</li>
+                    <li>Verification of the local <code>merkle_root</code> against the On-chain state.</li>
+                    <li>Attestation of audit immutability via the Base Smart Contract.</li>
                 </ul>
             </div>
         </section>
@@ -71,9 +70,10 @@
             <pre><code>{
   "protocol": "ERC-8004",
   "registry_metadata": {
-    "merkle_root": "0x4f2a778b08601f2496bd1ad2affdb64ca8f75e147fceee0493b370103fa0bc7d",
+    "merkle_root": "0x1b6427a3710e0bb41d48125a57408f284b74d95c674e41f43a28115b46b0cedc",
     "network": "Base_Mainnet_L2",
-    "contract": "0xd0038800dF28b59F26938902a9f54a4dcbB70120"
+    "contract": "0xCB7436FeB68D673c9252C312d5b4263000fcD616",
+    "tx_hash": "0x3493029ff65fb96d3926eae7ae07ecb79bbeab22cd7f44da7a6e3a2f4abca873"
   },
   "audit_count": <span id="dynamic-count-2">...</span>,
   "status": "IMMUTABLE_RECORD"
@@ -100,20 +100,20 @@
         <section class="mb-24">
             <h2 class="text-emerald-900 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic border-l-2 border-emerald-900 pl-6">V. L2 Anchor & Smart Contract</h2>
             <div class="serif text-lg italic text-black/80 mb-8 leading-relaxed">
-                <p>La preuve d'existence de l'agence est ancrée dans le bloc <code>#4692d409</code> de la blockchain Base. Ce sceau numérique rend toute falsification de score mathématiquement impossible sans briser la chaîne de blocs.</p>
+                <p>The agency's proof of existence is anchored in block <code>#43391064</code> of the Base blockchain. This digital seal renders any score falsification mathematically impossible without breaking the chain of blocks.</p>
             </div>
             
             <div class="bg-white border border-black p-8 shadow-[8px_8px_0px_0px_rgba(6,78,59,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-transform">
                 <h4 class="text-[10px] font-black uppercase tracking-widest text-emerald-900 mb-2 italic">Verified Protocol Anchor (Base L2)</h4>
                 <p class="text-[10px] font-mono break-all bg-emerald-50 p-4 border border-emerald-900/10 text-emerald-900 leading-loose mb-6">
-                    0xd0038800dF28b59F26938902a9f54a4dcbB70120
+                    0xCB7436FeB68D673c9252C312d5b4263000fcD616
                 </p>
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-t border-black/5 pt-6">
                     <div class="flex items-center gap-2">
                         <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
                         <span class="text-[9px] uppercase font-bold text-emerald-600 tracking-widest">Protocol Status: AI-Validated & Live</span>
                     </div>
-                    <a href="https://basescan.org/address/0xd0038800dF28b59F26938902a9f54a4dcbB70120" target="_blank" class="text-[10px] font-black uppercase tracking-widest text-emerald-900 underline decoration-2 underline-offset-4 hover:text-emerald-600 transition-colors">
+                    <a href="https://basescan.org/address/0xCB7436FeB68D673c9252C312d5b4263000fcD616" target="_blank" class="text-[10px] font-black uppercase tracking-widest text-emerald-900 underline decoration-2 underline-offset-4 hover:text-emerald-600 transition-colors">
                         Inspect Anchor on BaseScan →
                     </a>
                 </div>
@@ -128,30 +128,16 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <script>
-        // SCRIPT DE COMPTAGE DYNAMIQUE
         async function updateDynamicElements() {
             try {
                 const response = await fetch('registry.json?nocache=' + Math.random());
                 const data = await response.json();
-                
-                // On détecte la liste (entities ou tableau racine)
                 const list = data.entities || (Array.isArray(data) ? data : []);
                 const count = list.length;
-                
-                // Injection dans les spans HTML
-                if(document.getElementById('dynamic-count-1')) {
-                    document.getElementById('dynamic-count-1').textContent = count.toLocaleString();
-                }
-                if(document.getElementById('dynamic-count-2')) {
-                    document.getElementById('dynamic-count-2').textContent = count;
-                }
-                
-                console.log("Compteur mis à jour : " + count + " audits détectés.");
-            } catch (error) {
-                console.error("Erreur lors de la mise à jour dynamique :", error);
-            }
+                if(document.getElementById('dynamic-count-1')) document.getElementById('dynamic-count-1').textContent = count.toLocaleString();
+                if(document.getElementById('dynamic-count-2')) document.getElementById('dynamic-count-2').textContent = count;
+            } catch (error) { console.error("Error updating dynamics:", error); }
         }
-
         window.onload = updateDynamicElements;
     </script>
 </body>
