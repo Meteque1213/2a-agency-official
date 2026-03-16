@@ -10,11 +10,9 @@ async function main() {
   const protocol = new ethers.Contract(contractAddress, abi, wallet);
 
   // --- TON NOUVEAU ROOT HASH (Pour 405 marques) ---
-  const bcorpRootHash = "0x1de343c0e0f9b212b40c0c493f6774c61224f37946c785734b24e55714433de0";
-  
+  const bcorpRootHash = "0x92ecf372d1e9ed5cb863f0bb809e38f94899f0f3e0684ca5e3841da27cfb234d";
   // --- LABEL OFFICIEL MIS À JOUR ---
-  const batchLabel = "2A Agency B-Corp Index 2026 | Comprehensive Audit (405 Brands)";
-
+  const batchLabel = "2A Agency B-Corp Index 2026 | Milestone 1000+ Brands Verified";
   console.log("--------------------------------------------------");
   console.log("🛡️  NOTARISATION MASSIVE : B-CORP INDEX");
   console.log(`📊 Volume     : 405 Marques`);
