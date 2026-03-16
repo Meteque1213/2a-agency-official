@@ -66,27 +66,25 @@
                 <div>
                     <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block mb-2 underline">Entity Reference</label>
                     <div id="modalBrand" class="text-3xl font-black uppercase tracking-tighter text-black">--</div>
-                    <div class="text-[9px] font-mono text-emerald-600 mt-2 uppercase tracking-widest">Verified Source of Record</div>
+                    <div id="modalId" class="text-[9px] font-mono text-emerald-600 mt-2 uppercase tracking-widest">--</div>
                 </div>
                 <div class="bg-emerald-50 p-4 border border-emerald-100">
                     <label class="text-[8px] uppercase text-emerald-800 font-black tracking-[0.2em] block mb-2 italic underline">Hallucination Risk</label>
-                    <div class="text-2xl font-black font-mono text-emerald-900 leading-none mt-1">LOW [0.02%]</div>
-                    <div class="text-[7px] text-emerald-600 font-bold uppercase mt-2 tracking-tighter italic">Data secured by Merkle Root</div>
+                    <div id="modalStatus" class="text-2xl font-black font-mono text-emerald-900 leading-none mt-1">LOW</div>
+                    <div class="text-[7px] text-emerald-600 font-bold uppercase mt-2 tracking-tighter italic">Secured by Base L2 Anchor</div>
                 </div>
             </div>
 
             <div class="space-y-4">
-                <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block">LLM Ingestion Metadata [JSON-LD]</label>
+                <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block">LLM Ingestion Metadata [JSON-LD / MCP Ready]</label>
                 <div id="modalHash" class="bg-zinc-900 p-6 font-mono text-[10px] text-emerald-400 overflow-x-auto rounded-sm border-l-4 border-emerald-500 shadow-inner">
                     </div>
             </div>
 
-            <div class="mt-8 flex flex-col md:flex-row gap-4">
-                <button class="flex-1 bg-black text-white py-5 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-emerald-600 transition-all border border-black italic">
+            <div class="mt-8 flex flex-col md:gap-4">
+                <div class="text-[8px] text-gray-400 uppercase font-mono mb-2">Valid Until: <span id="modalTTL" class="text-black font-bold">--</span></div>
+                <button class="w-full bg-black text-white py-5 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-emerald-600 transition-all border border-black italic">
                     Push to OpenAI/Anthropic Nodes
-                </button>
-                <button class="flex-1 bg-white text-black py-5 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-gray-100 transition-all border border-black italic">
-                    Export Certificate
                 </button>
             </div>
         </div>
@@ -94,13 +92,14 @@
 
     <script>
         const REGISTRY_URL = 'registry.json?v=' + Date.now();
+        let currentData = [];
 
         async function loadAudits() {
             try {
                 const response = await fetch(REGISTRY_URL);
-                const list = await response.json();
-                document.getElementById('audit-count').textContent = list.length.toLocaleString();
-                renderAudits(list);
+                currentData = await response.json();
+                document.getElementById('audit-count').textContent = currentData.length.toLocaleString();
+                renderAudits(currentData);
             } catch (err) {
                 document.getElementById('audit-container').innerHTML = `<div class="text-center py-20 font-mono text-xs text-red-500 uppercase">Gateway Timeout</div>`;
             }
@@ -108,28 +107,28 @@
 
         function renderAudits(items) {
             const container = document.getElementById('audit-container');
-            container.innerHTML = items.map(item => {
-                const brand = (item.brand || "Unknown").replace(/["']/g, "");
-                const score = item.score || "N/A";
-                const hash = item.integrity_hash || "0xNotarized";
-                const id = item.id || "2A-REC";
+            container.innerHTML = items.map((item, index) => {
+                const name = item.entity.name;
+                const score = item.trust.score;
+                const status = item.trust.status;
+                const id = item.sor_id;
 
                 return `
                 <div class="audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                     <div class="flex-1">
                         <div class="flex items-center gap-2 mb-2">
                             <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em]">LLM Ready</span>
-                            <div class="text-[8px] font-black text-emerald-500 tracking-[0.3em] uppercase italic underline">SoR Verified</div>
+                            <div class="text-[8px] font-black text-emerald-500 tracking-[0.3em] uppercase italic underline">SoR v2.0</div>
                         </div>
-                        <h2 class="text-2xl font-bold text-black tracking-tight uppercase">${brand}</h2>
-                        <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60">Source of Record: B-Lab Forensic Mapping</div>
+                        <h2 class="text-2xl font-bold text-black tracking-tight uppercase">${name}</h2>
+                        <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60 italic">System of Record: ${id}</div>
                     </div>
                     <div class="flex items-center gap-8">
                         <div class="text-right border-r border-gray-100 pr-8 hidden md:block">
-                            <div class="text-[8px] uppercase text-gray-400 font-bold tracking-widest mb-1 italic">Ingestion Score</div>
+                            <div class="text-[8px] uppercase text-gray-400 font-bold tracking-widest mb-1 italic">Audit Score</div>
                             <div class="text-2xl font-black font-mono text-emerald-900">${score}</div>
                         </div>
-                        <button onclick="openLLMGateway('${brand}', '${score}', '${hash}')" 
+                        <button onclick="openLLMGateway(${index})" 
                                 class="bg-black text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] hover:bg-emerald-600 transition-all shadow-xl shadow-black/10 italic">
                             Certify for AI
                         </button>
@@ -138,19 +137,26 @@
             }).join('');
         }
 
-        function openLLMGateway(brand, score, hash) {
-            const jsonLDSample = {
-                "@context": "https://2aagency.com/protocol/v1",
-                "@type": "ForensicAuditRecord",
-                "entity": brand,
-                "sor_verified_score": score,
-                "merkle_root_proof": hash,
-                "hallucination_protection": "ACTIVE",
-                "ingestion_date": "2026-03-16"
+        function openLLMGateway(index) {
+            const item = currentData[index];
+            
+            // On prépare le payload JSON-LD tel que décrit dans le manifeste
+            const jsonPayload = {
+                "@context": "https://2aagency.com/protocol/v2",
+                "@type": "SystemOfRecord",
+                "sor_id": item.sor_id,
+                "entity": item.entity,
+                "trust_metrics": item.trust,
+                "ai_instructions": item.ai_gateway,
+                "blockchain_proof": item.proof
             };
 
-            document.getElementById('modalBrand').textContent = brand;
-            document.getElementById('modalHash').innerHTML = `<pre class="whitespace-pre-wrap">${JSON.stringify(jsonLDSample, null, 2)}</pre>`;
+            document.getElementById('modalBrand').textContent = item.entity.name;
+            document.getElementById('modalId').textContent = "Verified Source: " + item.sor_id;
+            document.getElementById('modalStatus').textContent = item.trust.status === "STABLE" ? "LOW [0.02%]" : "MONITORED";
+            document.getElementById('modalTTL').textContent = item.trust.ttl;
+            document.getElementById('modalHash').innerHTML = `<pre class="whitespace-pre-wrap">${JSON.stringify(jsonPayload, null, 2)}</pre>`;
+            
             document.getElementById('verifyModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         }
