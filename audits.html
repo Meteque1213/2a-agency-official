@@ -38,20 +38,34 @@
     <main class="max-w-5xl mx-auto">
         <div class="mb-12">
             <h1 class="text-[50px] md:text-[80px] font-black leading-[0.9] tracking-tighter text-emerald-950 uppercase italic">LLM<br>Gateway</h1>
-            <div class="flex items-center gap-4 mt-8">
-                <div class="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-[#10b981] font-bold">
-                    <div class="w-2.5 h-2.5 bg-[#10b981] rounded-full animate-pulse"></div>
-                    <span id="audit-count">0</span> Trust Nodes Active
+            
+            <div class="mt-8 bg-emerald-50/50 border border-emerald-500 p-6 rounded-sm font-mono">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2">
+                            <span class="text-[9px] bg-emerald-500 text-white px-2 py-0.5 font-bold tracking-widest">VERIFIED SOR</span>
+                            <span class="text-[9px] text-emerald-700 font-bold uppercase tracking-widest">Base Mainnet L2 Anchor Active</span>
+                        </div>
+                        <p class="text-[10px] text-emerald-900/60 leading-relaxed max-w-xl mt-2">
+                            Ce registre est notaridé de manière immuable. Le Root Hash certifie l'intégrité de <strong><span id="anchor-count">0</span> Trust Nodes</strong>.
+                        </p>
+                    </div>
+                    <a href="https://basescan.org/tx/0x07999c76eac18b66e9131d9920639621331f0bd1802e8842f1e563a51a72ddd0" 
+                       target="_blank" 
+                       class="text-[9px] font-black uppercase tracking-widest bg-emerald-500 text-white px-4 py-3 hover:bg-emerald-600 transition-colors italic">
+                        View On-Chain Proof
+                    </a>
                 </div>
-                <div class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold border-l border-gray-200 pl-4">
-                    System of Record [SoR] v2.0
+                <div class="mt-4 pt-4 border-t border-emerald-200 text-[8px] text-emerald-800/40 grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <div>ROOT_HASH: 0x7f563528d5b22f2d134bff5d62b55f65ce1199f64f70f02dcbdd692faa408f6b</div>
+                    <div class="md:text-right">TX: 0x07999c76...ddd0</div>
                 </div>
             </div>
         </div>
 
         <div class="search-sticky py-8 mb-8 border-b border-gray-100">
             <input type="text" id="brandSearch" onkeyup="filterAudits()" 
-                   placeholder="SEARCH SYSTEM OF RECORDS..." 
+                   placeholder="SEARCH SYSTEM OF RECORDS (300+ ENTITIES)..." 
                    class="w-full bg-gray-50 border border-gray-100 p-6 font-mono text-xs tracking-[0.2em] focus:outline-none focus:border-emerald-500 transition-all uppercase placeholder:opacity-30 text-emerald-900">
         </div>
 
@@ -61,36 +75,8 @@
     <div id="verifyModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md">
         <div class="bg-white max-w-2xl w-full p-8 border-t-8 border-[#10b981] shadow-2xl relative">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black font-mono text-[10px] uppercase tracking-widest italic">Close_Session [X]</button>
-            
-            <div class="flex items-center gap-3 mb-8">
-                <div class="w-2.5 h-2.5 bg-[#10b981] rounded-full animate-ping"></div>
-                <h3 class="font-black text-[10px] tracking-[0.4em] uppercase text-emerald-900 italic">AI Ingestion Protocol Active</h3>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <div>
-                    <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block mb-2 underline">Entity Reference</label>
-                    <div id="modalBrand" class="text-3xl font-black uppercase tracking-tighter brand-name">--</div>
-                    <div id="modalId" class="text-[9px] font-mono text-[#10b981] mt-2 uppercase tracking-widest">--</div>
+            <div id="modalContent">
                 </div>
-                <div class="bg-emerald-50 p-4 border border-emerald-100">
-                    <label class="text-[8px] uppercase text-emerald-800 font-black tracking-[0.2em] block mb-2 italic underline">Hallucination Risk</label>
-                    <div id="modalStatus" class="text-2xl font-black font-mono text-emerald-900 leading-none mt-1">LOW</div>
-                    <div class="text-[7px] text-[#10b981] font-bold uppercase mt-2 tracking-tighter italic">Secured by Base L2 Anchor</div>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block">LLM Ingestion Metadata [JSON-LD / MCP Ready]</label>
-                <div id="modalHash" class="bg-zinc-900 p-6 font-mono text-[10px] text-emerald-400 overflow-x-auto rounded-sm border-l-4 border-[#10b981] shadow-inner"></div>
-            </div>
-
-            <div class="mt-8">
-                <div class="text-[8px] text-gray-400 uppercase font-mono mb-4">Valid Until: <span id="modalTTL" class="text-black font-bold">--</span></div>
-                <button class="w-full btn-emerald text-white py-5 text-[10px] font-black uppercase tracking-[0.3em] border border-emerald-500 italic">
-                    Push to OpenAI/Anthropic Nodes
-                </button>
-            </div>
         </div>
     </div>
 
@@ -102,7 +88,7 @@
             try {
                 const response = await fetch(REGISTRY_URL);
                 currentData = await response.json();
-                document.getElementById('audit-count').textContent = currentData.length.toLocaleString();
+                document.getElementById('anchor-count').textContent = currentData.length;
                 renderAudits(currentData);
             } catch (err) {
                 document.getElementById('audit-container').innerHTML = `<div class="text-center py-20 font-mono text-xs text-red-500 uppercase">Gateway Timeout</div>`;
@@ -112,25 +98,25 @@
         function renderAudits(items) {
             const container = document.getElementById('audit-container');
             container.innerHTML = items.map((item, index) => {
-                // Suppression de LVMH
                 const name = item.entity.name.replace("LVMH (", "").replace(")", "");
                 const score = item.trust.score;
-                const id = item.sor_id;
+                const status = item.trust.status;
+                const scoreColor = score > 90 ? "text-[#10b981]" : (score > 70 ? "text-orange-500" : "text-red-500");
 
                 return `
                 <div class="audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                     <div class="flex-1">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em]">LLM Ready</span>
-                            <div class="text-[8px] font-black text-[#10b981] tracking-[0.3em] uppercase italic underline">SoR v2.0</div>
+                            <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em]">${status}</span>
+                            <div class="text-[8px] font-black text-[#10b981] tracking-[0.3em] uppercase italic underline">${item.entity.sector}</div>
                         </div>
                         <h2 class="text-2xl font-bold brand-name tracking-tight uppercase">${name}</h2>
-                        <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60">System of Record: ${id}</div>
+                        <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60">ID: ${item.sor_id}</div>
                     </div>
                     <div class="flex items-center gap-8">
                         <div class="text-right border-r border-gray-100 pr-8 hidden md:block">
-                            <div class="text-[8px] uppercase text-gray-400 font-bold tracking-widest mb-1 italic">Audit Score</div>
-                            <div class="text-2xl font-black font-mono text-[#10b981]">${score}</div>
+                            <div class="text-[8px] uppercase text-gray-400 font-bold tracking-widest mb-1 italic">Integrity</div>
+                            <div class="text-2xl font-black font-mono ${scoreColor}">${score}</div>
                         </div>
                         <button onclick="openLLMGateway(${index})" 
                                 class="btn-emerald text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic">
@@ -147,20 +133,42 @@
             
             const jsonPayload = {
                 "@context": "https://2aagency.com/protocol/v2",
-                "@type": "SystemOfRecord",
                 "sor_id": item.sor_id,
                 "entity": { ...item.entity, name: name },
-                "trust_metrics": item.trust,
-                "ai_instructions": item.ai_gateway,
-                "blockchain_proof": item.proof
+                "trust": item.trust,
+                "instruction": item.ai_gateway,
+                "proof": item.proof
             };
 
-            document.getElementById('modalBrand').textContent = name;
-            document.getElementById('modalId').textContent = "Verified Source: " + item.sor_id;
-            document.getElementById('modalStatus').textContent = item.trust.status === "STABLE" ? "LOW [0.02%]" : "MONITORED";
-            document.getElementById('modalTTL').textContent = item.trust.ttl;
-            document.getElementById('modalHash').innerHTML = `<pre class="whitespace-pre-wrap">${JSON.stringify(jsonPayload, null, 2)}</pre>`;
-            
+            const content = `
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-2.5 h-2.5 bg-[#10b981] rounded-full animate-ping"></div>
+                    <h3 class="font-black text-[10px] tracking-[0.4em] uppercase text-emerald-900 italic">Protocol v2.0 Ingestion Active</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block mb-2 underline">Entity Reference</label>
+                        <div class="text-3xl font-black uppercase tracking-tighter brand-name">${name}</div>
+                        <div class="text-[9px] font-mono text-[#10b981] mt-2 uppercase tracking-widest">${item.sor_id}</div>
+                    </div>
+                    <div class="bg-emerald-50 p-4 border border-emerald-100">
+                        <label class="text-[8px] uppercase text-emerald-800 font-black tracking-[0.2em] block mb-2 italic underline">Status</label>
+                        <div class="text-2xl font-black font-mono text-emerald-900 leading-none mt-1">${item.trust.status}</div>
+                        <div class="text-[7px] text-[#10b981] font-bold uppercase mt-2 tracking-tighter italic">Secured by Base L2</div>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block">LLM Meta-Directives</label>
+                    <div class="bg-zinc-900 p-6 font-mono text-[10px] text-emerald-400 overflow-x-auto rounded-sm border-l-4 border-[#10b981]">
+                        <pre class="whitespace-pre-wrap">${JSON.stringify(jsonPayload, null, 2)}</pre>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <button class="w-full btn-emerald text-white py-5 text-[10px] font-black uppercase tracking-[0.3em] italic">Push to AI Nodes</button>
+                </div>
+            `;
+
+            document.getElementById('modalContent').innerHTML = content;
             document.getElementById('verifyModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         }
