@@ -14,6 +14,10 @@
         .search-sticky { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95); backdrop-blur: 10px; }
         pre { scrollbar-width: none; }
         pre::-webkit-scrollbar { display: none; }
+        /* Style spécifique pour le bouton et le titre */
+        .brand-name { color: #10b981; }
+        .btn-emerale { background-color: #10b981; transition: opacity 0.2s; }
+        .btn-emerale:hover { opacity: 0.9; }
     </style>
 </head>
 <body class="p-6 md:p-12 text-black">
@@ -49,8 +53,7 @@
                    class="w-full bg-gray-50 border border-gray-100 p-6 font-mono text-xs tracking-[0.2em] focus:outline-none focus:border-emerald-500 transition-all uppercase placeholder:opacity-30 text-emerald-900">
         </div>
 
-        <div id="audit-container" class="space-y-4 pb-20">
-            </div>
+        <div id="audit-container" class="space-y-4 pb-20"></div>
     </main>
 
     <div id="verifyModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md">
@@ -65,7 +68,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div>
                     <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block mb-2 underline">Entity Reference</label>
-                    <div id="modalBrand" class="text-3xl font-black uppercase tracking-tighter text-black">--</div>
+                    <div id="modalBrand" class="text-3xl font-black uppercase tracking-tighter brand-name">--</div>
                     <div id="modalId" class="text-[9px] font-mono text-emerald-600 mt-2 uppercase tracking-widest">--</div>
                 </div>
                 <div class="bg-emerald-50 p-4 border border-emerald-100">
@@ -77,13 +80,12 @@
 
             <div class="space-y-4">
                 <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block">LLM Ingestion Metadata [JSON-LD / MCP Ready]</label>
-                <div id="modalHash" class="bg-zinc-900 p-6 font-mono text-[10px] text-emerald-400 overflow-x-auto rounded-sm border-l-4 border-emerald-500 shadow-inner">
-                    </div>
+                <div id="modalHash" class="bg-zinc-900 p-6 font-mono text-[10px] text-emerald-400 overflow-x-auto rounded-sm border-l-4 border-emerald-500 shadow-inner"></div>
             </div>
 
-            <div class="mt-8 flex flex-col md:gap-4">
-                <div class="text-[8px] text-gray-400 uppercase font-mono mb-2">Valid Until: <span id="modalTTL" class="text-black font-bold">--</span></div>
-                <button class="w-full bg-black text-white py-5 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-emerald-600 transition-all border border-black italic">
+            <div class="mt-8">
+                <div class="text-[8px] text-gray-400 uppercase font-mono mb-4">Valid Until: <span id="modalTTL" class="text-black font-bold">--</span></div>
+                <button class="w-full btn-emerale text-white py-5 text-[10px] font-black uppercase tracking-[0.3em] border border-emerald-500 italic">
                     Push to OpenAI/Anthropic Nodes
                 </button>
             </div>
@@ -110,7 +112,6 @@
             container.innerHTML = items.map((item, index) => {
                 const name = item.entity.name;
                 const score = item.trust.score;
-                const status = item.trust.status;
                 const id = item.sor_id;
 
                 return `
@@ -120,8 +121,8 @@
                             <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em]">LLM Ready</span>
                             <div class="text-[8px] font-black text-emerald-500 tracking-[0.3em] uppercase italic underline">SoR v2.0</div>
                         </div>
-                        <h2 class="text-2xl font-bold text-black tracking-tight uppercase">${name}</h2>
-                        <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60 italic">System of Record: ${id}</div>
+                        <h2 class="text-2xl font-bold brand-name tracking-tight uppercase">${name}</h2>
+                        <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60">System of Record: ${id}</div>
                     </div>
                     <div class="flex items-center gap-8">
                         <div class="text-right border-r border-gray-100 pr-8 hidden md:block">
@@ -129,7 +130,7 @@
                             <div class="text-2xl font-black font-mono text-emerald-900">${score}</div>
                         </div>
                         <button onclick="openLLMGateway(${index})" 
-                                class="bg-black text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] hover:bg-emerald-600 transition-all shadow-xl shadow-black/10 italic">
+                                class="btn-emerale text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl shadow-emerald-500/10 italic">
                             Certify for AI
                         </button>
                     </div>
@@ -139,8 +140,6 @@
 
         function openLLMGateway(index) {
             const item = currentData[index];
-            
-            // On prépare le payload JSON-LD tel que décrit dans le manifeste
             const jsonPayload = {
                 "@context": "https://2aagency.com/protocol/v2",
                 "@type": "SystemOfRecord",
