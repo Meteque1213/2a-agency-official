@@ -9,13 +9,15 @@ async function main() {
   const abi = ["function issueCertificate(string brandName, string reportHash) public"];
   const protocol = new ethers.Contract(contractAddress, abi, wallet);
 
-  // --- TON NOUVEAU ROOT HASH (Pour 405 marques) ---
-  const bcorpRootHash = "0x92ecf372d1e9ed5cb863f0bb809e38f94899f0f3e0684ca5e3841da27cfb234d";
-  // --- LABEL OFFICIEL MIS À JOUR ---
-  const batchLabel = "2A Agency B-Corp Index 2026 | Milestone 1000+ Brands Verified";
+  // --- TON NOUVEAU ROOT HASH (Généré via shasum le 16/03/2026) ---
+  const bcorpRootHash = "0x7f563528d5b22f2d134bff5d62b55f65ce1199f64f70f02dcbdd692faa408f6b";
+
+  // --- LABEL OFFICIEL MIS À JOUR POUR LE REGISTRE COMPLET ---
+  const batchLabel = "2A Agency Global Registry 2026 | Full SoR v2.0 Integrity Anchor";
+
   console.log("--------------------------------------------------");
-  console.log("🛡️  NOTARISATION MASSIVE : B-CORP INDEX");
-  console.log(`📊 Volume     : 405 Marques`);
+  console.log("🛡️  NOTARISATION MASSIVE : SYSTEM OF RECORD");
+  console.log(`📊 Statut     : Déploiement Registre Complet`);
   console.log(`🔐 Root Hash  : ${bcorpRootHash}`);
   console.log(`📝 Label      : ${batchLabel}`);
   console.log("--------------------------------------------------");
@@ -29,14 +31,14 @@ async function main() {
     console.log("📡 Transaction envoyée, attente de confirmation...");
     const receipt = await tx.wait();
     
-    console.log("\n✅ INDEX DE 405 MARQUES NOTARISÉ !");
+    console.log("\n✅ REGISTRE GLOBAL NOTARISÉ AVEC SUCCÈS !");
     console.log(`🔗 TxID : ${receipt.hash}`);
     console.log(`🌐 Voir sur BaseScan : https://basescan.org/tx/${receipt.hash}`);
     console.log("--------------------------------------------------");
   } catch (error) {
     console.error("\n❌ ERREUR DE NOTARISATION :");
     if (error.message.includes("insufficient funds")) {
-      console.error("👉 Ton portefeuille n'a pas assez d'ETH sur Base pour le gas.");
+      console.error("👉 Ton portefeuille n'a pas assez d'ETH sur Base pour payer le gas.");
     } else {
       console.error(error.message);
     }
