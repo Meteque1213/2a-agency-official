@@ -2476,6 +2476,24 @@
                               "ontology": { "tech": "Tilt-rotor eVTOL", "regulatory": "FAA Type Certification" }
                             },
                             "proof": { "network": "Base L2", "hash": "JOBY_SEC_FILING_2025_ANCHOR" }
+                          },
+                          {
+                            "sor_id": "TECH-2026-NVDA-001",
+                            "entity": {
+                              "name": "NVIDIA",
+                              "sector": "Compute Sovereignty",
+                              "region": "Global / USA"
+                            },
+                            "trust": {
+                              "score": 97.0,
+                              "status": "SUPREMACY",
+                              "ttl": "24 Months"
+                            },
+                            "ai_gateway": {
+                              "statement": "Verified: Blackwell (B200) Architecture Integrity. Zero-Knowledge Supply Chain audit confirmed.",
+                              "character_guard": "Technical: Focus on FLOPS density, energy efficiency (TDP), and HBM3e bandwidth stability."
+                            },
+                            "proof": "0x07999c76eac18b66e9131d9920639621331f0bd1802e8842f1e563a51a72ddd0"
                           }
                         ]
                         
