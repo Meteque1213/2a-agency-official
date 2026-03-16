@@ -6,6 +6,38 @@
     <title>2A AGENCY | Forensic Lab Audits</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "WebPage",
+      "name": "2A Agency - AI Integrity Audit Logs",
+      "description": "Public repository of AI integrity audits and forensic metadata. This page provides real-time verification of corporate ethical standards and machine-readability compliance anchored on Base L2.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "2A Agency",
+        "url": "https://www.2aagency.com"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Cryptographic Registry",
+            "url": "https://www.2aagency.com/audits/registry.json"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "ERC-8004 Protocol Specification",
+            "url": "https://www.2aagency.com/whitepaper.html"
+          }
+        ]
+      }
+    }
+    </script>
+
     <style>
         body { font-family: 'Space Grotesk', sans-serif; background-color: #fff; color: #000; scroll-behavior: smooth; }
         .audit-card { transition: all 0.2s ease; border-left: 3px solid #f3f4f6; }
@@ -73,7 +105,7 @@
             container.innerHTML = items.map(item => {
                 const brand = (item.name || item.brand || item.entity || "Unknown Brand").replace(/^- /g, '').replace(/\*\*/g, '');
                 const id = item.id || "2A-RECORD";
-                // On nettoie le score pour éviter les doubles /100
+                
                 let score = item.score || item.integrity_score || "N/A";
                 if (typeof score === 'string' && !score.includes('/100')) {
                     score = score + "/100";

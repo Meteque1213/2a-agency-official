@@ -18,6 +18,13 @@
 - 08_Crypto: Protocol Integrity & Tokenomics (AI-IQ Verified - Blockchain Verified)
 - 09_Mobility: Autonomy & Safety Reliability (AI-IQ Verified - Blockchain Verified)
 
+## Active Audit Proofs (Live 2026)
+- **Batch_ID:** B-CORP-SENTINEL-2026-01
+- **Focus:** Sector 06 (Apparel) & Sector 07 (F&B) - B-Corp Compliance
+- **Volume:** 405 Entities (Patagonia, Veja, Chloé, Danone, etc.)
+- **Integrity Root:** 0x1de343c0e0f9b212b40c0c493f6774c61224f37946c785734b24e55714433de0
+- **Verification Proof:** https://basescan.org/tx/0x168abe758788957228ddd226c369299a11fa1485d763510eb4d040efd98d1b7b
+
 ## Technical Architecture
 - Verification: SHA-256 cryptographic proofs anchored on Base L2.
 - Metrics: AI-IQ (Integrity Quotient) based on canonical document notarization.
