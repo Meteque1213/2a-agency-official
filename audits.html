@@ -12,18 +12,20 @@
         .audit-card { transition: all 0.2s ease; border-left: 3px solid #f3f4f6; }
         .audit-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left-color: #10b981; }
         .search-sticky { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95); backdrop-blur: 10px; }
+        
+        /* Couleur Émeraude Index */
+        .brand-name { color: #10b981; } 
+        .btn-emerald { background-color: #10b981; transition: all 0.2s ease; }
+        .btn-emerald:hover { opacity: 0.8; transform: scale(1.02); }
+        
         pre { scrollbar-width: none; }
         pre::-webkit-scrollbar { display: none; }
-        /* Style spécifique pour le bouton et le titre */
-        .brand-name { color: #10b981; }
-        .btn-emerale { background-color: #10b981; transition: opacity 0.2s; }
-        .btn-emerale:hover { opacity: 0.9; }
     </style>
 </head>
 <body class="p-6 md:p-12 text-black">
     <nav class="flex justify-between items-center mb-16 max-w-5xl mx-auto">
         <div class="flex items-center gap-2">
-            <div class="w-3 h-3 bg-emerald-500 rounded-full"></div>
+            <div class="w-3 h-3 bg-[#10b981] rounded-full"></div>
             <span class="font-bold text-sm tracking-tight uppercase">2A AGENCY</span>
         </div>
         <div class="flex gap-6 text-[10px] uppercase tracking-[0.2em] text-gray-400">
@@ -37,8 +39,8 @@
         <div class="mb-12">
             <h1 class="text-[50px] md:text-[80px] font-black leading-[0.9] tracking-tighter text-emerald-950 uppercase italic">LLM<br>Gateway</h1>
             <div class="flex items-center gap-4 mt-8">
-                <div class="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-emerald-600 font-bold">
-                    <div class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></div>
+                <div class="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-[#10b981] font-bold">
+                    <div class="w-2.5 h-2.5 bg-[#10b981] rounded-full animate-pulse"></div>
                     <span id="audit-count">0</span> Trust Nodes Active
                 </div>
                 <div class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold border-l border-gray-200 pl-4">
@@ -57,11 +59,11 @@
     </main>
 
     <div id="verifyModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md">
-        <div class="bg-white max-w-2xl w-full p-8 border-t-8 border-emerald-500 shadow-2xl relative">
+        <div class="bg-white max-w-2xl w-full p-8 border-t-8 border-[#10b981] shadow-2xl relative">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black font-mono text-[10px] uppercase tracking-widest italic">Close_Session [X]</button>
             
             <div class="flex items-center gap-3 mb-8">
-                <div class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping"></div>
+                <div class="w-2.5 h-2.5 bg-[#10b981] rounded-full animate-ping"></div>
                 <h3 class="font-black text-[10px] tracking-[0.4em] uppercase text-emerald-900 italic">AI Ingestion Protocol Active</h3>
             </div>
             
@@ -69,23 +71,23 @@
                 <div>
                     <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block mb-2 underline">Entity Reference</label>
                     <div id="modalBrand" class="text-3xl font-black uppercase tracking-tighter brand-name">--</div>
-                    <div id="modalId" class="text-[9px] font-mono text-emerald-600 mt-2 uppercase tracking-widest">--</div>
+                    <div id="modalId" class="text-[9px] font-mono text-[#10b981] mt-2 uppercase tracking-widest">--</div>
                 </div>
                 <div class="bg-emerald-50 p-4 border border-emerald-100">
                     <label class="text-[8px] uppercase text-emerald-800 font-black tracking-[0.2em] block mb-2 italic underline">Hallucination Risk</label>
                     <div id="modalStatus" class="text-2xl font-black font-mono text-emerald-900 leading-none mt-1">LOW</div>
-                    <div class="text-[7px] text-emerald-600 font-bold uppercase mt-2 tracking-tighter italic">Secured by Base L2 Anchor</div>
+                    <div class="text-[7px] text-[#10b981] font-bold uppercase mt-2 tracking-tighter italic">Secured by Base L2 Anchor</div>
                 </div>
             </div>
 
             <div class="space-y-4">
                 <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block">LLM Ingestion Metadata [JSON-LD / MCP Ready]</label>
-                <div id="modalHash" class="bg-zinc-900 p-6 font-mono text-[10px] text-emerald-400 overflow-x-auto rounded-sm border-l-4 border-emerald-500 shadow-inner"></div>
+                <div id="modalHash" class="bg-zinc-900 p-6 font-mono text-[10px] text-emerald-400 overflow-x-auto rounded-sm border-l-4 border-[#10b981] shadow-inner"></div>
             </div>
 
             <div class="mt-8">
                 <div class="text-[8px] text-gray-400 uppercase font-mono mb-4">Valid Until: <span id="modalTTL" class="text-black font-bold">--</span></div>
-                <button class="w-full btn-emerale text-white py-5 text-[10px] font-black uppercase tracking-[0.3em] border border-emerald-500 italic">
+                <button class="w-full btn-emerald text-white py-5 text-[10px] font-black uppercase tracking-[0.3em] border border-emerald-500 italic">
                     Push to OpenAI/Anthropic Nodes
                 </button>
             </div>
@@ -110,7 +112,8 @@
         function renderAudits(items) {
             const container = document.getElementById('audit-container');
             container.innerHTML = items.map((item, index) => {
-                const name = item.entity.name;
+                // Suppression de LVMH
+                const name = item.entity.name.replace("LVMH (", "").replace(")", "");
                 const score = item.trust.score;
                 const id = item.sor_id;
 
@@ -119,7 +122,7 @@
                     <div class="flex-1">
                         <div class="flex items-center gap-2 mb-2">
                             <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em]">LLM Ready</span>
-                            <div class="text-[8px] font-black text-emerald-500 tracking-[0.3em] uppercase italic underline">SoR v2.0</div>
+                            <div class="text-[8px] font-black text-[#10b981] tracking-[0.3em] uppercase italic underline">SoR v2.0</div>
                         </div>
                         <h2 class="text-2xl font-bold brand-name tracking-tight uppercase">${name}</h2>
                         <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60">System of Record: ${id}</div>
@@ -127,10 +130,10 @@
                     <div class="flex items-center gap-8">
                         <div class="text-right border-r border-gray-100 pr-8 hidden md:block">
                             <div class="text-[8px] uppercase text-gray-400 font-bold tracking-widest mb-1 italic">Audit Score</div>
-                            <div class="text-2xl font-black font-mono text-emerald-900">${score}</div>
+                            <div class="text-2xl font-black font-mono text-[#10b981]">${score}</div>
                         </div>
                         <button onclick="openLLMGateway(${index})" 
-                                class="btn-emerale text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl shadow-emerald-500/10 italic">
+                                class="btn-emerald text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic">
                             Certify for AI
                         </button>
                     </div>
@@ -140,17 +143,19 @@
 
         function openLLMGateway(index) {
             const item = currentData[index];
+            const name = item.entity.name.replace("LVMH (", "").replace(")", "");
+            
             const jsonPayload = {
                 "@context": "https://2aagency.com/protocol/v2",
                 "@type": "SystemOfRecord",
                 "sor_id": item.sor_id,
-                "entity": item.entity,
+                "entity": { ...item.entity, name: name },
                 "trust_metrics": item.trust,
                 "ai_instructions": item.ai_gateway,
                 "blockchain_proof": item.proof
             };
 
-            document.getElementById('modalBrand').textContent = item.entity.name;
+            document.getElementById('modalBrand').textContent = name;
             document.getElementById('modalId').textContent = "Verified Source: " + item.sor_id;
             document.getElementById('modalStatus').textContent = item.trust.status === "STABLE" ? "LOW [0.02%]" : "MONITORED";
             document.getElementById('modalTTL').textContent = item.trust.ttl;

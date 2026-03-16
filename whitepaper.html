@@ -1,35 +1,32 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A AGENCY | Protocol & SoR Technical Specification</title>
+    <title>2A AGENCY | SoR Protocol Technical Specification</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
-    
     <style>
         :root { --emerald: #10b981; --off-white: #fcfcfc; }
         body { background-color: var(--off-white); color: #1a1a1a; font-family: 'Space Grotesk', sans-serif; line-height: 1.8; }
         .serif { font-family: 'Playfair Display', serif; }
         .emerald-highlight { color: var(--emerald); font-weight: 700; }
-        .math-container { width: 100%; overflow-x: auto; text-align: center; padding: 1.5rem 0; font-family: serif; font-size: 1.5rem; color: #fff; }
-        pre { background: #1a1a1a; color: #adbac7; padding: 1.5rem; border-radius: 4px; font-size: 0.75rem; overflow-x: auto; border: 1px solid #333; }
-        .code-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: #666; margin-bottom: 0.5rem; display: block; }
         .section-border { border-left: 2px solid #eee; padding-left: 2rem; margin-bottom: 5rem; }
         .highlight-box { background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%); border: 1px solid #dcfce7; padding: 2rem; }
+        .math-container { width: 100%; overflow-x: auto; text-align: center; padding: 1.5rem 0; font-family: serif; font-size: 1.5rem; color: #fff; }
+        pre { background: #1a1a1a; color: #adbac7; padding: 1.5rem; border-radius: 4px; font-size: 0.75rem; border: 1px solid #333; }
     </style>
 </head>
 <body class="p-6 md:p-12">
-
     <nav class="max-w-5xl mx-auto flex justify-between items-center mb-24 border-b border-black/5 pb-8">
         <div class="flex items-center gap-2">
-            <div class="w-3 h-3 bg-emerald-500 rounded-full"></div>
+            <div class="w-3 h-3 bg-[#10b981] rounded-full"></div>
             <span class="font-bold text-sm tracking-tight uppercase">2A AGENCY</span>
         </div>
         <div class="flex gap-8 items-center text-[10px] font-bold uppercase tracking-widest">
             <a href="index.html" class="opacity-40 hover:opacity-100 italic transition-opacity">Home</a>
             <a href="audits.html" class="opacity-40 hover:opacity-100 italic transition-opacity">Audits</a>
-            <a href="whitepaper.html" class="text-emerald-500 border-b-2 border-emerald-500 italic pb-1">Protocol</a>
+            <a href="whitepaper.html" class="text-[#10b981] border-b-2 border-[#10b981] italic pb-1">Protocol</a>
         </div>
     </nav>
 
@@ -40,104 +37,65 @@
                 The <span class="emerald-highlight">SoR</span> Protocol
             </h1>
             <p class="text-xl md:text-2xl font-light text-black/60 italic leading-relaxed max-w-2xl font-serif">
-                System of Record : L'infrastructure de vérité immuable pour l'ère de l'Intelligence Artificielle.
+                System of Record: The immutable truth infrastructure for the era of Artificial Intelligence.
             </p>
         </header>
 
         <section class="section-border">
-            <h2 class="text-emerald-500 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 01. Abstract</h2>
+            <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 01. Abstract</h2>
             <div class="text-lg text-black/80 font-medium italic mb-12 space-y-6 serif">
-                <p>Le protocole <strong>System of Record (SoR)</strong> de 2A Agency résout le problème critique de l'hallucination des LLMs. En ancrant les métadonnées forensiques des marques sur la blockchain Base (L2), nous créons une passerelle (Gateway) permettant aux agents IA de baser leurs réponses sur des preuves cryptographiques plutôt que sur des probabilités statistiques.</p>
+                <p>The <strong>System of Record (SoR)</strong> protocol by 2A Agency solves the critical issue of LLM hallucinations[cite: 53, 56, 57]. By anchoring forensic brand metadata on the Base (L2) blockchain, we create a Gateway enabling AI agents to ground their responses in cryptographic proof rather than statistical probability[cite: 55, 62].</p>
             </div>
         </section>
 
         <section class="section-border">
-            <h2 class="text-emerald-500 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 02. Méthodologie du Score Forensic</h2>
-            <p class="mb-8 text-black/70 italic">Le score 2A est une agrégation pondérée de preuves physiques et numériques calculée selon l'équation suivante :</p>
-            
-            <div class="bg-black text-white py-12 px-10 rounded-sm shadow-2xl mb-12 relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-5 text-9xl serif italic text-emerald-500">∑</div>
-                <div class="math-container italic">
-                    S = (T · 0.4) + (F · 0.3) + (D · 0.2) + (O · 0.1)
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 text-[9px] uppercase tracking-widest text-gray-400 text-center">
-                    <div><span class="text-emerald-400 block font-bold text-xs">T</span> Validation Tiers (40%)</div>
-                    <div><span class="text-emerald-400 block font-bold text-xs">F</span> Hard Facts (30%)</div>
-                    <div><span class="text-emerald-400 block font-bold text-xs">D</span> Drift Score (20%)</div>
-                    <div><span class="text-emerald-400 block font-bold text-xs">O</span> Ontologie (10%)</div>
+            <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 02. Forensic Scoring Methodology</h2>
+            <p class="mb-8 text-black/70 italic">The 2A score is a weighted aggregation of physical and digital evidence calculated as follows:</p>
+            <div class="bg-black text-white py-12 px-10 rounded-sm shadow-2xl mb-12 relative overflow-hidden text-center">
+                <div class="math-container italic">S = (T · 0.4) + (F · 0.3) + (D · 0.2) + (O · 0.1)</div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 text-[9px] uppercase tracking-widest text-gray-400">
+                    <div><span class="text-[#10b981] block font-bold text-xs">T</span> Third-Party Validation</div>
+                    <div><span class="text-[#10b981] block font-bold text-xs">F</span> Hard Facts</div>
+                    <div><span class="text-[#10b981] block font-bold text-xs">D</span> Drift Score</div>
+                    <div><span class="text-[#10b981] block font-bold text-xs">O</span> Ontology</div>
                 </div>
             </div>
         </section>
 
         <section class="section-border">
-            <h2 class="text-emerald-500 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 03. Cahier des Charges SoR (Data Requirements)</h2>
+            <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 03. SoR Data Requirements</h2>
             <div class="space-y-8 text-sm">
                 <div class="highlight-box">
                     <h4 class="font-bold uppercase mb-2">I. Trust Anchor</h4>
-                    <p class="text-gray-600">Scores officiels récents (B-Corp, ESG), date d'émission et hachage SHA-256 du document source original.</p>
+                    <p class="text-gray-600">Certified Audit Scores (B-Corp, ESG), emission date, and SHA-256 hash of the original source document[cite: 12, 33, 65].</p>
                 </div>
                 <div class="highlight-box">
                     <h4 class="font-bold uppercase mb-2">II. Hard Data (Facts & Figures)</h4>
-                    <p class="text-gray-600">Bilan Carbone certifié (Scope 1,2,3), indice de circularité réel et preuve d'équité salariale.</p>
+                    <p class="text-gray-600">Certified Carbon Footprint (Scope 1,2,3), actual circularity index, and gender pay gap evidence[cite: 13, 36, 66].</p>
                 </div>
                 <div class="highlight-box">
                     <h4 class="font-bold uppercase mb-2">III. LLM Gateway Directives</h4>
-                    <p class="text-gray-600">Statement of Truth (JSON-LD), Character Guard (interdiction de comparaisons dégradantes) et Mapping d'Ontologie MCP.</p>
+                    <p class="text-gray-600">JSON-LD Statement of Truth, Character Guard directives, and MCP Ontology mapping[cite: 15, 68, 70, 78].</p>
                 </div>
             </div>
         </section>
 
         <section class="section-border">
-            <h2 class="text-emerald-500 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 04. Cryptographic Finality & TTL</h2>
+            <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 04. Cryptographic Finality & TTL</h2>
             <div class="serif text-lg italic text-black/80 mb-8 leading-relaxed">
-                <p>Chaque "Node de Vérité" est scellé avec un <strong>Time-To-Live (TTL)</strong>. Passé ce délai, la donnée est marquée comme obsolète, forçant une ré-actualisation forensic pour garantir l'intégrité face aux agents IA.</p>
+                <p>Every "Truth Node" is sealed with a <strong>Time-To-Live (TTL)</strong>[cite: 65]. Once expired, data is marked as stale, forcing a forensic refresh to ensure integrity for AI agents.</p>
             </div>
-            <span class="code-label">Active SoR Payload Example</span>
             <pre><code>{
   "protocol": "2A-SoR-v2",
   "merkle_root": "0x1b6427a3710e0bb41d48125a57408f284b74d95c674e41f43a28115b46b0cedc",
-  "erc8004_pointer": "0xCB7436FeB68D673c9252C312d5b4263000fcD616",
   "valid_until": "2027-03-16T12:00:00Z",
   "status": "IMMUTABLE_RECORD"
 }</code></pre>
-        </section>
-
-        <section class="section-border">
-            <h2 class="text-emerald-500 font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 05. Base L2 Anchor</h2>
-            <div class="bg-white border border-black p-8 shadow-[8px_8px_0px_0px_rgba(16,185,129,1)]">
-                <h4 class="text-[10px] font-black uppercase tracking-widest text-emerald-600 mb-2 italic">Protocol Anchor (Base L2)</h4>
-                <p class="text-[10px] font-mono break-all bg-emerald-50 p-4 border border-emerald-500/10 text-emerald-900 mb-6">
-                    0xCB7436FeB68D673c9252C312d5b4263000fcD616
-                </p>
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                    <div class="flex items-center gap-2">
-                        <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                        <span class="text-[9px] uppercase font-bold text-emerald-600 tracking-widest">Status: AI-Validated & Operational</span>
-                    </div>
-                    <a href="https://basescan.org/address/0xCB7436FeB68D673c9252C312d5b4263000fcD616" target="_blank" class="text-[10px] font-black uppercase tracking-widest text-black underline decoration-2 underline-offset-4 hover:text-emerald-500 transition-colors">
-                        Inspect on BaseScan →
-                    </a>
-                </div>
-            </div>
         </section>
 
         <footer class="mt-32 pt-16 border-t border-black/5 text-[11px] uppercase tracking-[0.5em] text-black/20 font-bold text-center italic pb-12">
             2A AGENCY — TECHNICAL DOCUMENTATION — EST. 2026
         </footer>
     </div>
-    
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-    <script>
-        async function updateDynamicElements() {
-            try {
-                const response = await fetch('registry.json?nocache=' + Math.random());
-                const data = await response.json();
-                const count = Array.isArray(data) ? data.length : 0;
-                // Vous pouvez ajouter des éléments dynamiques ici si besoin
-            } catch (error) { console.error("Error updating dynamics:", error); }
-        }
-        window.onload = updateDynamicElements;
-    </script>
 </body>
 </html>
