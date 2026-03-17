@@ -12,18 +12,11 @@
         .audit-card { transition: all 0.2s ease; border-left: 3px solid #f3f4f6; }
         .audit-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left-color: #10b981; }
         .search-sticky { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95); backdrop-blur: 10px; }
-        
         .brand-name { color: #10b981; } 
         .btn-emerald { background-color: #10b981; transition: all 0.2s ease; }
         .btn-emerald:hover { opacity: 0.8; transform: scale(1.02); }
-        
         pre { scrollbar-width: none; }
         pre::-webkit-scrollbar { display: none; }
-
-        @keyframes shimmer {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
     </style>
 </head>
 <body class="p-6 md:p-12 text-black">
@@ -41,7 +34,7 @@
 
     <main class="max-w-5xl mx-auto">
         <div class="mb-12">
-            <h1 class="text-[50px] md:text-[80px] font-black leading-[0.9] tracking-tighter text-emerald-950 uppercase italic">LLM<br>Gateway</h1>
+            <h1 class="text-[50px] md:text-[80px] font-black leading-[0.9] tracking-tighter text-emerald-950 uppercase italic text-center md:text-left">LLM<br>Gateway</h1>
             
             <div class="mt-8 bg-emerald-50/50 border border-emerald-500 p-6 rounded-sm font-mono text-[#10b981]">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
@@ -51,7 +44,7 @@
                             <span class="text-[9px] text-emerald-700 font-bold uppercase tracking-widest">Base Mainnet L2 Anchor Active</span>
                         </div>
                         <p class="text-[10px] text-emerald-900/60 leading-relaxed max-w-xl mt-2">
-                            Ce registre est notarisé de manière immuable sur la blockchain. Le Root Hash certifie l'intégrité de <strong><span id="anchor-count">1056</span> Trust Nodes</strong>.
+                            Ce registre est notarisé de manière immuable. Le Root Hash certifie l'intégrité de <strong><span id="anchor-count">1056</span> Trust Nodes</strong>.
                         </p>
                     </div>
                     <a href="https://basescan.org/tx/0xf32099e9a1219a5d82944a239388f8ee3f05127c45575a6dbac88b9c98ebfcd0" 
@@ -63,6 +56,36 @@
                 <div class="mt-4 pt-4 border-t border-emerald-200 text-[8px] text-emerald-800/40 grid grid-cols-1 md:grid-cols-2 gap-2">
                     <div>ROOT_HASH: fb120608bcafe0960e3bda9b88466299928f8ab9862046153abca1b4d3f42802</div>
                     <div class="md:text-right">TX: 0xf32099e9...fcd0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12 bg-black text-white p-8 rounded-sm border-b-4 border-emerald-500 shadow-2xl">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                <h3 class="text-[10px] font-black uppercase tracking-[0.4em] italic text-emerald-500">Independent Integrity Scanner</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <p class="text-[10px] text-gray-400 leading-relaxed uppercase tracking-wider">
+                        Déposez votre fichier <code class="text-emerald-400">registry.json</code> pour comparer son empreinte numérique avec le sceau immuable ancré sur Base L2.
+                    </p>
+                    <input type="file" id="fileInput" class="hidden" accept=".json">
+                    <button onclick="document.getElementById('fileInput').click()" 
+                            class="w-full border border-emerald-500/30 py-4 text-[9px] font-black uppercase tracking-[0.2em] hover:bg-emerald-500 hover:text-black transition-all italic">
+                        SÉLECTIONNER LE REGISTRE (.JSON)
+                    </button>
+                </div>
+                
+                <div id="verifyResult" class="bg-zinc-900 border border-zinc-800 p-6 flex flex-col justify-center items-center text-center rounded-sm">
+                    <div id="statusIcon" class="text-emerald-500 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <div id="statusText" class="text-[9px] font-mono text-gray-500 uppercase tracking-widest">En attente de fichier...</div>
+                    <div id="hashDisplay" class="text-[7px] font-mono text-emerald-500/50 mt-2 break-all uppercase max-w-full overflow-hidden"></div>
                 </div>
             </div>
         </div>
@@ -99,6 +122,39 @@
         const REGISTRY_URL = 'registry.json?v=' + Date.now();
         let currentData = [];
 
+        // --- INTEGRITY SCANNER LOGIC ---
+        document.getElementById('fileInput').addEventListener('change', async function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const statusText = document.getElementById('statusText');
+            const statusIcon = document.getElementById('statusIcon');
+            const hashDisplay = document.getElementById('hashDisplay');
+            const officialHash = "fb120608bcafe0960e3bda9b88466299928f8ab9862046153abca1b4d3f42802";
+
+            statusText.innerText = "CALCUL DU HASH EN COURS...";
+            
+            try {
+                const arrayBuffer = await file.arrayBuffer();
+                const hashBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+                const fileHash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+                hashDisplay.innerText = "LOCAL_HASH: " + fileHash;
+
+                if (fileHash === officialHash) {
+                    statusText.innerHTML = "<span class='text-emerald-500'>✅ MATCH : INTÉGRITÉ CONFIRMÉE</span>";
+                    statusIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-emerald-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>`;
+                } else {
+                    statusText.innerHTML = "<span class='text-red-500'>❌ MISMATCH : DONNÉES ALTÉRÉES</span>";
+                    statusIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM10 7a1 1 0 011 1v3a1 1 0 11-2 0V8a1 1 0 011-1zm0 7a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" /></svg>`;
+                }
+            } catch (err) {
+                statusText.innerText = "ERREUR LORS DU CALCUL";
+            }
+        });
+
+        // --- REGISTRY LOADING LOGIC ---
         async function loadAudits() {
             const container = document.getElementById('audit-container');
             try {
@@ -111,7 +167,7 @@
                 requestAnimationFrame(() => renderAudits(currentData));
             } catch (err) {
                 console.error("Erreur:", err);
-                container.innerHTML = `<div class="text-center py-20">Erreur de chargement.</div>`;
+                container.innerHTML = `<div class="text-center py-20 text-red-500 font-mono text-[10px] uppercase">Erreur de chargement du registre.</div>`;
             }
         }
 
@@ -123,18 +179,16 @@
                 const div = document.createElement('div');
                 div.className = "audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-4";
                 
-                const name = item.entity.name;
                 const score = item.trust.score;
-                const status = item.trust.status;
                 const scoreColor = score > 90 ? "text-[#10b981]" : (score > 70 ? "text-orange-500" : "text-red-500");
 
                 div.innerHTML = `
                     <div class="flex-1">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em]">${status}</span>
+                            <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em]">${item.trust.status}</span>
                             <div class="text-[8px] font-black text-[#10b981] tracking-[0.3em] uppercase italic underline">${item.entity.sector}</div>
                         </div>
-                        <h2 class="text-2xl font-bold brand-name tracking-tight uppercase">${name}</h2>
+                        <h2 class="text-2xl font-bold brand-name tracking-tight uppercase">${item.entity.name}</h2>
                         <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60">ID: ${item.sor_id}</div>
                     </div>
                     <div class="flex items-center gap-8">
