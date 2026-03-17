@@ -7,32 +7,40 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; color: #050505; }
+        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; color: #050505; -webkit-font-smoothing: antialiased; }
         .text-2a-emerald { color: #064e3b; }
+        .bg-2a-emerald { background-color: #064e3b; }
+        .border-2a-emerald { border-color: #064e3b; }
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-6">
-    <div class="max-w-xl w-full border border-gray-200 p-12 bg-white shadow-sm">
+    <div class="max-w-xl w-full border border-gray-200 p-12 bg-white shadow-sm relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-2a-emerald"></div>
+
         <div class="flex items-center gap-3 mb-8 opacity-40 uppercase tracking-widest text-[10px] font-bold">
             <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
             Communication Sécurisée Établie
         </div>
         
-        <h1 class="text-4xl font-black uppercase tracking-tighter text-2a-emerald mb-6">
+        <h1 class="text-4xl font-black uppercase tracking-tighter text-2a-emerald mb-6 leading-none">
             Message Reçu.
         </h1>
         
-        <p class="text-sm leading-relaxed opacity-70 mb-8 font-medium">
+        <p class="text-sm leading-relaxed opacity-70 mb-10 font-medium">
             Votre signalement a été transmis à la <strong>Forensic Intelligence Unit</strong> de 2A Agency. 
             Nos agents procèdent à la vérification des métadonnées on-chain. 
             Une réponse vous sera adressée après notarisation de votre requête.
         </p>
         
         <div class="pt-8 border-t border-gray-100">
-            <a href="index.html" class="text-[10px] font-black uppercase tracking-widest border-b-2 border-black pb-1 hover:text-emerald-900 transition-all">
+            <a href="index.html" class="text-[10px] font-black uppercase tracking-widest border-b-2 border-black pb-1 hover:text-emerald-900 hover:border-2a-emerald transition-all inline-block">
                 ← Retour au Terminal Global
             </a>
         </div>
     </div>
+
+    <footer class="absolute bottom-8 text-[8px] uppercase tracking-widest opacity-30 font-mono">
+        TRX_ID: AUTH-REQUEST-SUCCESS-2026
+    </footer>
 </body>
 </html>
