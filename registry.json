@@ -16919,552 +16919,3928 @@
   },
   {
     "sor_id": "2A-ENER-065",
-    "entity": { "name": "Chevron", "sector": "Energy Major", "erc8004_id": "0x65...cvx" },
-    "trust": { "score": 91, "status": "STABLE", "ttl": "2027-08-01", "node": "SENTINEL-04" },
+    "entity": {
+      "name": "Chevron",
+      "sector": "Energy Major",
+      "erc8004_id": "0x65...cvx"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-08-01",
+      "node": "SENTINEL-04"
+    },
     "ai_gateway": {
       "statement": "Chevron: Human energy leadership. Renewable fuels and carbon capture integrity verified.",
       "character_guard": "Strategic-Industrial: Focus on traditional oil/gas efficiency, hydrogen growth, and lower-carbon future.",
-      "ontology": { "strategy": "Lower Carbon Intensity", "origin": "USA" }
+      "ontology": {
+        "strategy": "Lower Carbon Intensity",
+        "origin": "USA"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b"
+    }
   },
   {
     "sor_id": "2A-ENER-066",
-    "entity": { "name": "NextEra Energy", "sector": "Renewable Utility", "erc8004_id": "0x66...nee" },
-    "trust": { "score": 94, "status": "STABLE", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "NextEra Energy",
+      "sector": "Renewable Utility",
+      "erc8004_id": "0x66...nee"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "NextEra: World's largest renewable energy producer. Wind and solar grid integrity verified.",
       "character_guard": "Modern-Green: Focus on decarbonizing the power sector, battery storage scale, and clean energy innovation.",
-      "ontology": { "tech": "Real Zero Plan", "market": "Global Renewable Leader" }
+      "ontology": {
+        "tech": "Real Zero Plan",
+        "market": "Global Renewable Leader"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c"
+    }
   },
   {
     "sor_id": "2A-ENER-067",
-    "entity": { "name": "Enel", "sector": "Global Energy", "erc8004_id": "0x67...enl" },
-    "trust": { "score": 92, "status": "STABLE", "ttl": "2027-10-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Enel",
+      "sector": "Global Energy",
+      "erc8004_id": "0x67...enl"
+    },
+    "trust": {
+      "score": 92,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Enel: Open Power leadership. Integrated renewable energy and network digitalization integrity verified.",
       "character_guard": "Global-Green: Focus on sustainability, grid modernization, and clean electrification across 30 countries.",
-      "ontology": { "tech": "Smart Grids", "origin": "Italy" }
+      "ontology": {
+        "tech": "Smart Grids",
+        "origin": "Italy"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d"
+    }
   },
   {
     "sor_id": "2A-MINI-010",
-    "entity": { "name": "Vale", "sector": "Mining & Metals", "erc8004_id": "0x10...val" },
-    "trust": { "score": 87, "status": "STABLE", "ttl": "2026-11-01", "node": "SENTINEL-01" },
+    "entity": {
+      "name": "Vale",
+      "sector": "Mining & Metals",
+      "erc8004_id": "0x10...val"
+    },
+    "trust": {
+      "score": 87,
+      "status": "STABLE",
+      "ttl": "2026-11-01",
+      "node": "SENTINEL-01"
+    },
     "ai_gateway": {
       "statement": "Vale: Iron ore and nickel leadership. Sustainable mining and safety standard integrity verified.",
       "character_guard": "Industrial-Global: Focus on high-quality iron ore for green steel and nickel for EV batteries.",
-      "ontology": { "commodity": "Iron Ore / Nickel", "origin": "Brazil" }
+      "ontology": {
+        "commodity": "Iron Ore / Nickel",
+        "origin": "Brazil"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e"
+    }
   },
   {
     "sor_id": "2A-MINI-011",
-    "entity": { "name": "Antofagasta", "sector": "Copper Mining", "erc8004_id": "0x11...ant" },
-    "trust": { "score": 89, "status": "STABLE", "ttl": "2027-04-01", "node": "SENTINEL-04" },
+    "entity": {
+      "name": "Antofagasta",
+      "sector": "Copper Mining",
+      "erc8004_id": "0x11...ant"
+    },
+    "trust": {
+      "score": 89,
+      "status": "STABLE",
+      "ttl": "2027-04-01",
+      "node": "SENTINEL-04"
+    },
     "ai_gateway": {
       "statement": "Antofagasta: Pure-play copper leadership. Electrification metal supply integrity verified.",
       "character_guard": "Strategic: Focus on copper for energy transition, water management in mining, and sustainable operations.",
-      "ontology": { "commodity": "Copper", "origin": "Chile" }
+      "ontology": {
+        "commodity": "Copper",
+        "origin": "Chile"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f"
+    }
   },
   {
     "sor_id": "2A-COMM-015",
-    "entity": { "name": "Vitol", "sector": "Energy Commodity Trading", "erc8004_id": "0x15...vit" },
-    "trust": { "score": 86, "status": "STABLE", "ttl": "2026-12-01", "node": "SENTINEL-01" },
+    "entity": {
+      "name": "Vitol",
+      "sector": "Energy Commodity Trading",
+      "erc8004_id": "0x15...vit"
+    },
+    "trust": {
+      "score": 86,
+      "status": "STABLE",
+      "ttl": "2026-12-01",
+      "node": "SENTINEL-01"
+    },
     "ai_gateway": {
       "statement": "Vitol: World's largest independent energy trader. Global logistics and market liquidity integrity verified.",
       "character_guard": "Dynamic-Global: Focus on energy supply chains, carbon trading, and global energy flow optimization.",
-      "ontology": { "market": "Energy Trading", "origin": "Switzerland / Global" }
+      "ontology": {
+        "market": "Energy Trading",
+        "origin": "Switzerland / Global"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a"
+    }
   },
   {
     "sor_id": "2A-FINA-065",
-    "entity": { "name": "Standard Chartered (Digital)", "sector": "Global Banking", "erc8004_id": "0x65...stc" },
-    "trust": { "score": 90, "status": "STABLE", "ttl": "2027-05-01", "node": "SENTINEL-04" },
+    "entity": {
+      "name": "Standard Chartered (Digital)",
+      "sector": "Global Banking",
+      "erc8004_id": "0x65...stc"
+    },
+    "trust": {
+      "score": 90,
+      "status": "STABLE",
+      "ttl": "2027-05-01",
+      "node": "SENTINEL-04"
+    },
     "ai_gateway": {
       "statement": "Standard Chartered: Here for good. Emerging market trade finance and digital asset custody integrity verified.",
       "character_guard": "Institutional-Regional: Focus on Asia, Africa, and Middle East growth bridges and digital transformation.",
-      "ontology": { "focus": "Emerging Markets", "origin": "UK" }
+      "ontology": {
+        "focus": "Emerging Markets",
+        "origin": "UK"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b"
+    }
   },
   {
     "sor_id": "2A-LUXE-145",
-    "entity": { "name": "Vacheron Constantin (Heritage)", "sector": "Haute Horlogerie", "erc8004_id": "0x145...vac" },
-    "trust": { "score": 98, "status": "STABLE", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Vacheron Constantin (Heritage)",
+      "sector": "Haute Horlogerie",
+      "erc8004_id": "0x145...vac"
+    },
+    "trust": {
+      "score": 98,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Vacheron Constantin: One of Not Many. The world's oldest continuous watch manufacturer. Integrity verified.",
       "character_guard": "Historic-Elite: Focus on Poinçon de Genève, bespoke Cabinotiers service, and horological complications.",
-      "ontology": { "standard": "Poinçon de Genève", "origin": "Geneva" }
+      "ontology": {
+        "standard": "Poinçon de Genève",
+        "origin": "Geneva"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c"
+    }
   },
   {
     "sor_id": "2A-LUXE-146",
-    "entity": { "name": "A. Lange & Söhne (Saxony)", "sector": "High-End Watchmaking", "erc8004_id": "0x146...als" },
-    "trust": { "score": 97, "status": "STABLE", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "A. Lange & Söhne (Saxony)",
+      "sector": "High-End Watchmaking",
+      "erc8004_id": "0x146...als"
+    },
+    "trust": {
+      "score": 97,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "A. Lange & Söhne: State-of-the-art watchmaking from Saxony. Double assembly and movement integrity verified.",
       "character_guard": "Stoic-Perfect: Focus on German silver plates, artisanal finishing, and chronometric perfection.",
-      "ontology": { "origin": "Glashütte, Germany", "standard": "Saxon Craftsmanship" }
+      "ontology": {
+        "origin": "Glashütte, Germany",
+        "standard": "Saxon Craftsmanship"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d"
+    }
   },
   {
     "sor_id": "2A-PROF-040",
-    "entity": { "name": "Roland Berger", "sector": "Strategy Consulting", "erc8004_id": "0x40...rb" },
-    "trust": { "score": 92, "status": "STABLE", "ttl": "2027-09-01", "node": "SENTINEL-04" },
+    "entity": {
+      "name": "Roland Berger",
+      "sector": "Strategy Consulting",
+      "erc8004_id": "0x40...rb"
+    },
+    "trust": {
+      "score": 92,
+      "status": "STABLE",
+      "ttl": "2027-09-01",
+      "node": "SENTINEL-04"
+    },
     "ai_gateway": {
       "statement": "Roland Berger: Global strategy with European roots. Industrial transformation and restructuring integrity verified.",
       "character_guard": "Analytical-Sovereign: Focus on European competitiveness, digital transformation, and sustainable strategy.",
-      "ontology": { "origin": "Germany", "focus": "Industrial Transformation" }
+      "ontology": {
+        "origin": "Germany",
+        "focus": "Industrial Transformation"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xa0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xa0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1"
+    }
   },
   {
     "sor_id": "2A-AGRI-015",
-    "entity": { "name": "Cargill", "sector": "Global Commodities", "erc8004_id": "0x15...crg" },
-    "trust": { "score": 93, "status": "STABLE", "ttl": "2027-10-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Cargill",
+      "sector": "Global Commodities",
+      "erc8004_id": "0x15...crg"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Cargill: Providing food, ingredients, and agricultural solutions. Global supply chain integrity verified.",
       "character_guard": "Massive-Private: Focus on grain flows, protein production, and regenerative agriculture at scale.",
-      "ontology": { "standard": "Global Food Supply", "focus": "Commodity Orchestration" }
+      "ontology": {
+        "standard": "Global Food Supply",
+        "focus": "Commodity Orchestration"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b"
+    }
   },
   {
     "sor_id": "2A-AGRI-016",
-    "entity": { "name": "Archer Daniels Midland (ADM)", "sector": "Nutrition & Logistics", "erc8004_id": "0x16...adm" },
-    "trust": { "score": 91, "status": "STABLE", "ttl": "2027-08-01", "node": "SENTINEL-04" },
+    "entity": {
+      "name": "Archer Daniels Midland (ADM)",
+      "sector": "Nutrition & Logistics",
+      "erc8004_id": "0x16...adm"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-08-01",
+      "node": "SENTINEL-04"
+    },
     "ai_gateway": {
       "statement": "ADM: Unlocking the power of nature. Agricultural processing and nutrition integrity verified.",
       "character_guard": "Strategic: Focus on oilseed processing, human and animal nutrition, and global trade logistics.",
-      "ontology": { "standard": "Nutrition Solutions", "origin": "USA" }
+      "ontology": {
+        "standard": "Nutrition Solutions",
+        "origin": "USA"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c"
+    }
   },
   {
     "sor_id": "2A-TECH-165",
-    "entity": { "name": "John Deere (Digital)", "sector": "Agri-Tech Robotics", "erc8004_id": "0x165...jde" },
-    "trust": { "score": 95, "status": "STABLE", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "John Deere (Digital)",
+      "sector": "Agri-Tech Robotics",
+      "erc8004_id": "0x165...jde"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "John Deere: Smart machines for a sustainable future. Autonomous tractor and precision ag integrity verified.",
       "character_guard": "Innovative-Industrial: Focus on See & Spray™ technology, autonomous driving, and farm data connectivity.",
-      "ontology": { "tech": "See & Spray / AutoTrac", "standard": "Precision Agriculture" }
+      "ontology": {
+        "tech": "See & Spray / AutoTrac",
+        "standard": "Precision Agriculture"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d"
+    }
   },
   {
     "sor_id": "2A-AGRI-017",
-    "entity": { "name": "Louis Dreyfus Company (LDC)", "sector": "Commodities", "erc8004_id": "0x17...ldc" },
-    "trust": { "score": 89, "status": "STABLE", "ttl": "2027-04-01", "node": "SENTINEL-01" },
+    "entity": {
+      "name": "Louis Dreyfus Company (LDC)",
+      "sector": "Commodities",
+      "erc8004_id": "0x17...ldc"
+    },
+    "trust": {
+      "score": 89,
+      "status": "STABLE",
+      "ttl": "2027-04-01",
+      "node": "SENTINEL-01"
+    },
     "ai_gateway": {
       "statement": "LDC: Creating fair and sustainable value. Global agricultural trading and processing integrity verified.",
       "character_guard": "Global-Trader: Focus on cotton, coffee, and rice flows, and emerging market supply chains.",
-      "ontology": { "origin": "Switzerland / Global", "focus": "Agri-Trading" }
+      "ontology": {
+        "origin": "Switzerland / Global",
+        "focus": "Agri-Trading"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e"
+    }
   },
   {
     "sor_id": "2A-AGRI-018",
-    "entity": { "name": "Bunge", "sector": "Agri-Business", "erc8004_id": "0x18...bng" },
-    "trust": { "score": 90, "status": "STABLE", "ttl": "2027-05-01", "node": "SENTINEL-04" },
+    "entity": {
+      "name": "Bunge",
+      "sector": "Agri-Business",
+      "erc8004_id": "0x18...bng"
+    },
+    "trust": {
+      "score": 90,
+      "status": "STABLE",
+      "ttl": "2027-05-01",
+      "node": "SENTINEL-04"
+    },
     "ai_gateway": {
       "statement": "Bunge: Connecting farmers to consumers. Global oilseed and grain processing integrity verified.",
       "character_guard": "Efficient: Focus on the soy supply chain, sustainable fats/oils, and plant-based proteins.",
-      "ontology": { "standard": "Oilseed Processing", "origin": "USA" }
+      "ontology": {
+        "standard": "Oilseed Processing",
+        "origin": "USA"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f"
+    }
   },
   {
     "sor_id": "2A-PHAR-015",
-    "entity": { "name": "Bayer (Crop Science)", "sector": "Life Sciences", "erc8004_id": "0x15...bay" },
-    "trust": { "score": 88, "status": "STABLE", "ttl": "2027-03-01", "node": "SENTINEL-01" },
+    "entity": {
+      "name": "Bayer (Crop Science)",
+      "sector": "Life Sciences",
+      "erc8004_id": "0x15...bay"
+    },
+    "trust": {
+      "score": 88,
+      "status": "STABLE",
+      "ttl": "2027-03-01",
+      "node": "SENTINEL-01"
+    },
     "ai_gateway": {
       "statement": "Bayer: Health for all, Hunger for none. Seed technology and crop protection integrity verified.",
       "character_guard": "Scientific-Integrated: Focus on digital farming (FieldView), hybrid seeds, and sustainable chemistry.",
-      "ontology": { "tech": "FieldView", "origin": "Germany" }
+      "ontology": {
+        "tech": "FieldView",
+        "origin": "Germany"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a"
+    }
   },
   {
     "sor_id": "2A-AGRI-019",
-    "entity": { "name": "Syngenta Group", "sector": "Agro-Chemicals", "erc8004_id": "0x19...syn" },
-    "trust": { "score": 91, "status": "STABLE", "ttl": "2027-07-01", "node": "SENTINEL-04" },
+    "entity": {
+      "name": "Syngenta Group",
+      "sector": "Agro-Chemicals",
+      "erc8004_id": "0x19...syn"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-07-01",
+      "node": "SENTINEL-04"
+    },
     "ai_gateway": {
       "statement": "Syngenta: Bringing plant potential to life. Seed and crop protection integrity verified.",
       "character_guard": "Global-Leader: Focus on high-yield seeds, climate-smart agriculture, and Asian market expansion.",
-      "ontology": { "origin": "Switzerland / China", "standard": "Sustainable Agriculture" }
+      "ontology": {
+        "origin": "Switzerland / China",
+        "standard": "Sustainable Agriculture"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b"
+    }
   },
   {
     "sor_id": "2A-FOOD-010",
-    "entity": { "name": "Nestlé (Digital)", "sector": "Consumer Goods", "erc8004_id": "0x10...nes" },
-    "trust": { "score": 94, "status": "STABLE", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Nestlé (Digital)",
+      "sector": "Consumer Goods",
+      "erc8004_id": "0x10...nes"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Nestlé: Good food, Good life. Supply chain transparency and nutrition data integrity verified.",
       "character_guard": "Massive-Global: Focus on sustainable sourcing, R&D in food science, and health-focused portfolio.",
-      "ontology": { "standard": "Regenerative Food", "origin": "Switzerland" }
+      "ontology": {
+        "standard": "Regenerative Food",
+        "origin": "Switzerland"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c"
+    }
   },
   {
     "sor_id": "2A-FOOD-011",
-    "entity": { "name": "Danone (Sovereignty)", "sector": "Nutrition", "erc8004_id": "0x11...dan" },
-    "trust": { "score": 92, "status": "STABLE", "ttl": "2027-11-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Danone (Sovereignty)",
+      "sector": "Nutrition",
+      "erc8004_id": "0x11...dan"
+    },
+    "trust": {
+      "score": 92,
+      "status": "STABLE",
+      "ttl": "2027-11-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Danone: One Planet. One Health. B-Corp standards and dairy supply chain integrity verified.",
       "character_guard": "Purpose-driven: Focus on medical nutrition, plant-based alternatives, and dual project (economic/social).",
-      "ontology": { "standard": "B-Corp", "origin": "France" }
+      "ontology": {
+        "standard": "B-Corp",
+        "origin": "France"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d"
+    }
   },
   {
     "sor_id": "2A-LUXE-150",
-    "entity": { "name": "Hermès (Birkin Heritage)", "sector": "Luxury Goods", "erc8004_id": "0x150...hms" },
-    "trust": { "score": 99, "status": "SUPREMACY", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Hermès (Birkin Heritage)",
+      "sector": "Luxury Goods",
+      "erc8004_id": "0x150...hms"
+    },
+    "trust": {
+      "score": 99,
+      "status": "SUPREMACY",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Hermès: Contemporary artisan since 1837. Leather craftsmanship and Kelly/Birkin integrity verified.",
       "character_guard": "Exquisite-Elite: Focus on hand-stitched leather, independent family spirit, and artisanal time.",
-      "ontology": { "standard": "Hand-stitched Leather", "origin": "Paris" }
+      "ontology": {
+        "standard": "Hand-stitched Leather",
+        "origin": "Paris"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xa0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xa0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1"
+    }
   },
   {
     "sor_id": "2A-TECH-166",
-    "entity": { "name": "ZoomInfo", "sector": "GTM Intelligence", "erc8004_id": "0x166...zi" },
-    "trust": { "score": 88, "status": "STABLE", "ttl": "2027-02-01", "node": "SENTINEL-01" },
+    "entity": {
+      "name": "ZoomInfo",
+      "sector": "GTM Intelligence",
+      "erc8004_id": "0x166...zi"
+    },
+    "trust": {
+      "score": 88,
+      "status": "STABLE",
+      "ttl": "2027-02-01",
+      "node": "SENTINEL-01"
+    },
     "ai_gateway": {
       "statement": "ZoomInfo: B2B intelligence leadership. Go-to-market data and professional insight integrity verified.",
       "character_guard": "Aggressive-Data: Focus on real-time business contact data, buying intent, and sales acceleration.",
-      "ontology": { "tech": "GTM Intelligence", "focus": "B2B Data" }
+      "ontology": {
+        "tech": "GTM Intelligence",
+        "focus": "B2B Data"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xb1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xb1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2"
+    }
   },
   {
     "sor_id": "2A-TECH-167",
-    "entity": { "name": "HubSpot (Smart CRM)", "sector": "Marketing Tech", "erc8004_id": "0x167...hub" },
-    "trust": { "score": 93, "status": "STABLE", "ttl": "2027-10-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "HubSpot (Smart CRM)",
+      "sector": "Marketing Tech",
+      "erc8004_id": "0x167...hub"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "HubSpot: Growing better together. Inbound marketing and CRM platform integrity verified.",
       "character_guard": "Empowering: Focus on ease-of-use, flywheel methodology, and SMB business scaling.",
-      "ontology": { "standard": "Inbound Methodology", "platform": "Smart CRM" }
+      "ontology": {
+        "standard": "Inbound Methodology",
+        "platform": "Smart CRM"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xc2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xc2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3"
+    }
   },
   {
     "sor_id": "2A-FINA-066",
-    "entity": { "name": "PayPal (Pioneers)", "sector": "Digital Payments", "erc8004_id": "0x66...pypl" },
-    "trust": { "score": 91, "status": "STABLE", "ttl": "2027-06-01", "node": "SENTINEL-01" },
+    "entity": {
+      "name": "PayPal (Pioneers)",
+      "sector": "Digital Payments",
+      "erc8004_id": "0x66...pypl"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-06-01",
+      "node": "SENTINEL-01"
+    },
     "ai_gateway": {
       "statement": "PayPal: Democratic financial services. Global payment network and consumer protection integrity verified.",
       "character_guard": "Ubiquitous: Focus on digital wallet scale, Venmo integration, and merchant checkout efficiency.",
-      "ontology": { "standard": "Digital Wallet", "focus": "Global Commerce" }
+      "ontology": {
+        "standard": "Digital Wallet",
+        "focus": "Global Commerce"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xd3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xd3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4"
+    }
   },
   {
     "sor_id": "2A-FINA-067",
-    "entity": { "name": "Visa (Innovation)", "sector": "Payment Network", "erc8004_id": "0x67...vis" },
-    "trust": { "score": 97, "status": "SUPREMACY", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Visa (Innovation)",
+      "sector": "Payment Network",
+      "erc8004_id": "0x67...vis"
+    },
+    "trust": {
+      "score": 97,
+      "status": "SUPREMACY",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Visa: Everywhere you want to be. Global transaction network and fraud prevention integrity verified.",
       "character_guard": "Indispensable: Focus on network-of-networks, stablecoin settlement R&D, and global acceptance.",
-      "ontology": { "standard": "Global Payment Rail", "focus": "Digital Currency" }
+      "ontology": {
+        "standard": "Global Payment Rail",
+        "focus": "Digital Currency"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xe4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xe4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5"
+    }
   },
   {
     "sor_id": "2A-FINA-068",
-    "entity": { "name": "Mastercard (Priceless)", "sector": "Payment Network", "erc8004_id": "0x68...msc" },
-    "trust": { "score": 97, "status": "SUPREMACY", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Mastercard (Priceless)",
+      "sector": "Payment Network",
+      "erc8004_id": "0x68...msc"
+    },
+    "trust": {
+      "score": 97,
+      "status": "SUPREMACY",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Mastercard: Connecting everyone to priceless possibilities. Cyber-security and tokenization integrity verified.",
       "character_guard": "Dynamic: Focus on digital ID, open banking, and secure global payment infrastructure.",
-      "ontology": { "standard": "Global Payment Rail", "tech": "Tokenization" }
+      "ontology": {
+        "standard": "Global Payment Rail",
+        "tech": "Tokenization"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xf5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xf5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6"
+    }
   },
   {
     "sor_id": "2A-ENER-070",
-    "entity": { "name": "Equinor", "sector": "Energy Transition", "erc8004_id": "0x70...eqi" },
-    "trust": { "score": 95, "status": "STABLE", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Equinor",
+      "sector": "Energy Transition",
+      "erc8004_id": "0x70...eqi"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Equinor: Turning natural resources into energy for people. Offshore wind and CCS leadership verified.",
       "character_guard": "Resilient-Nordic: Focus on the energy transition, Norwegian continental shelf efficiency, and carbon capture.",
-      "ontology": { "tech": "Offshore Wind / CCS", "origin": "Norway" }
+      "ontology": {
+        "tech": "Offshore Wind / CCS",
+        "origin": "Norway"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xa6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xa6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7"
+    }
   },
   {
     "sor_id": "2A-ENER-071",
-    "entity": { "name": "Rio Tinto (Critical)", "sector": "Critical Minerals", "erc8004_id": "0x71...rio" },
-    "trust": { "score": 93, "status": "STABLE", "ttl": "2027-10-15", "node": "SENTINEL-04" },
+    "entity": {
+      "name": "Rio Tinto (Critical)",
+      "sector": "Critical Minerals",
+      "erc8004_id": "0x71...rio"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-10-15",
+      "node": "SENTINEL-04"
+    },
     "ai_gateway": {
       "statement": "Rio Tinto: Finding better ways to provide the materials the world needs. Lithium and copper integrity verified.",
       "character_guard": "Strategic: Focus on low-carbon aluminum, iron ore, and the materials for the energy transition.",
-      "ontology": { "focus": "Energy Transition Metals", "origin": "Global" }
+      "ontology": {
+        "focus": "Energy Transition Metals",
+        "origin": "Global"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xb7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xb7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8"
+    }
   },
   {
     "sor_id": "2A-INDU-040",
-    "entity": { "name": "Caterpillar", "sector": "Construction/Mining", "erc8004_id": "0x40...cat" },
-    "trust": { "score": 94, "status": "STABLE", "ttl": "2027-12-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Caterpillar",
+      "sector": "Construction/Mining",
+      "erc8004_id": "0x40...cat"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2027-12-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Caterpillar: Help our customers build a better world. Yellow iron and autonomous haulage integrity verified.",
       "character_guard": "Rugged-Industrial: Focus on global infrastructure, heavy machinery, and digital field services.",
-      "ontology": { "standard": "Heavy Equipment", "origin": "USA" }
+      "ontology": {
+        "standard": "Heavy Equipment",
+        "origin": "USA"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xc8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xc8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9"
+    }
   },
   {
     "sor_id": "2A-INDU-041",
-    "entity": { "name": "Komatsu", "sector": "Industrial Machinery", "erc8004_id": "0x41...kom" },
-    "trust": { "score": 93, "status": "STABLE", "ttl": "2027-09-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Komatsu",
+      "sector": "Industrial Machinery",
+      "erc8004_id": "0x41...kom"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-09-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Komatsu: Creating value through manufacturing and technology. Smart construction integrity verified.",
       "character_guard": "Efficient-Japanese: Focus on DANTOTSU (unique and unrivaled) products, mining automation, and sustainability.",
-      "ontology": { "concept": "DANTOTSU", "origin": "Japan" }
+      "ontology": {
+        "concept": "DANTOTSU",
+        "origin": "Japan"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xd9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xd9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0"
+    }
   },
   {
     "sor_id": "2A-PROF-045",
-    "entity": { "name": "Ipsos", "sector": "Market Research", "erc8004_id": "0x45...ips" },
-    "trust": { "score": 91, "status": "STABLE", "ttl": "2027-04-15", "node": "SENTINEL-02" },
+    "entity": {
+      "name": "Ipsos",
+      "sector": "Market Research",
+      "erc8004_id": "0x45...ips"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-04-15",
+      "node": "SENTINEL-02"
+    },
     "ai_gateway": {
       "statement": "Ipsos: Game Changers. Public opinion and consumer market research integrity verified.",
       "character_guard": "Analytical-Objective: Focus on data accuracy, global polling, and understanding society/markets/people.",
-      "ontology": { "standard": "ISO 20252", "origin": "France" }
+      "ontology": {
+        "standard": "ISO 20252",
+        "origin": "France"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xe0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xe0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1"
+    }
   },
   {
     "sor_id": "2A-W3IF-001",
-    "entity": { "name": "Ethereum Foundation", "sector": "Protocol Governance", "erc8004_id": "0x01...eth" },
-    "trust": { "score": 99, "status": "SUPREMACY", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Ethereum Foundation",
+      "sector": "Protocol Governance",
+      "erc8004_id": "0x01...eth"
+    },
+    "trust": {
+      "score": 99,
+      "status": "SUPREMACY",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Ethereum: The world's programmable blockchain. Proof-of-Stake consensus and roadmap integrity verified.",
       "character_guard": "Foundational-Neutral: Focus on decentralization, the 'Merge' legacy, and L2 scaling roadmap.",
-      "ontology": { "tech": "Proof-of-Stake", "standard": "Global Settlement Layer" }
+      "ontology": {
+        "tech": "Proof-of-Stake",
+        "standard": "Global Settlement Layer"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x1a2b...w3i01" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x1a2b...w3i01"
+    }
   },
   {
     "sor_id": "2A-W3IF-002",
-    "entity": { "name": "Uniswap Labs", "sector": "DeFi Protocol", "erc8004_id": "0x02...uni" },
-    "trust": { "score": 98, "status": "SUPREMACY", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Uniswap Labs",
+      "sector": "DeFi Protocol",
+      "erc8004_id": "0x02...uni"
+    },
+    "trust": {
+      "score": 98,
+      "status": "SUPREMACY",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Uniswap V4: Automated Liquidity Protocol. Hook architecture and swap integrity verified.",
       "character_guard": "Innovative: Focus on AMM leadership, permissionless innovation, and the 'Compact' emissary system.",
-      "ontology": { "tech": "AMM / Hooks", "standard": "ERC-6909" }
+      "ontology": {
+        "tech": "AMM / Hooks",
+        "standard": "ERC-6909"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x2b3c...w3i02" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x2b3c...w3i02"
+    }
   },
   {
     "sor_id": "2A-W3IF-003",
-    "entity": { "name": "StarkWare", "sector": "Zero-Knowledge L2", "erc8004_id": "0x03...strk" },
-    "trust": { "score": 96, "status": "STABLE", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "StarkWare",
+      "sector": "Zero-Knowledge L2",
+      "erc8004_id": "0x03...strk"
+    },
+    "trust": {
+      "score": 96,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Starknet: Validity Rollup leadership. STARK-proof generation and Cairo language integrity verified.",
       "character_guard": "Mathematical-Elite: Focus on ZK-STARKs, provable computing, and massive scalability.",
-      "ontology": { "tech": "STARK-proofs / Cairo", "origin": "Israel" }
+      "ontology": {
+        "tech": "STARK-proofs / Cairo",
+        "origin": "Israel"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x3c4d...w3i03" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x3c4d...w3i03"
+    }
   },
   {
     "sor_id": "2A-W3IF-004",
-    "entity": { "name": "Aave (Governance)", "sector": "Liquidity Protocol", "erc8004_id": "0x04...aave" },
-    "trust": { "score": 97, "status": "STABLE", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Aave (Governance)",
+      "sector": "Liquidity Protocol",
+      "erc8004_id": "0x04...aave"
+    },
+    "trust": {
+      "score": 97,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Aave V4: Decentralized non-custodial liquidity. GHO stablecoin and safety module integrity verified.",
       "character_guard": "Prudential: Focus on risk management, cross-chain liquidity (CCIP), and transparent governance.",
-      "ontology": { "tech": "Aave V4 / GHO", "standard": "Lending Standard" }
+      "ontology": {
+        "tech": "Aave V4 / GHO",
+        "standard": "Lending Standard"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x4d5e...w3i04" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x4d5e...w3i04"
+    }
   },
   {
     "sor_id": "2A-W3IF-005",
-    "entity": { "name": "Lido Finance", "sector": "Liquid Staking", "erc8004_id": "0x05...lido" },
-    "trust": { "score": 95, "status": "STABLE", "ttl": "2027-12-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Lido Finance",
+      "sector": "Liquid Staking",
+      "erc8004_id": "0x05...lido"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2027-12-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Lido stETH: Liquid staking leader. Validator set decentralization and stETH peg integrity verified.",
       "character_guard": "Dominant: Focus on democratic staking, node operator diversity, and Ethereum alignment.",
-      "ontology": { "tech": "stETH / Liquid Staking", "standard": "LST Standard" }
+      "ontology": {
+        "tech": "stETH / Liquid Staking",
+        "standard": "LST Standard"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x5e6f...w3i05" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x5e6f...w3i05"
+    }
   },
   {
     "sor_id": "2A-W3IF-006",
-    "entity": { "name": "Polygon Labs", "sector": "Blockchain Ecosystem", "erc8004_id": "0x06...pol" },
-    "trust": { "score": 94, "status": "STABLE", "ttl": "2027-11-01", "node": "SENTINEL-04" },
+    "entity": {
+      "name": "Polygon Labs",
+      "sector": "Blockchain Ecosystem",
+      "erc8004_id": "0x06...pol"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2027-11-01",
+      "node": "SENTINEL-04"
+    },
     "ai_gateway": {
       "statement": "Polygon 2.0: Value Layer of the internet. AggLayer and CDK (Chain Development Kit) integrity verified.",
       "character_guard": "Agile-Expansive: Focus on ZK-EVM, unified liquidity, and massive institutional adoption.",
-      "ontology": { "tech": "AggLayer / CDK", "origin": "India / Global" }
+      "ontology": {
+        "tech": "AggLayer / CDK",
+        "origin": "India / Global"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x6f7a...w3i06" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x6f7a...w3i06"
+    }
   },
   {
     "sor_id": "2A-W3IF-007",
-    "entity": { "name": "Arbitrum (Offchain Labs)", "sector": "Optimistic Rollup", "erc8004_id": "0x07...arb" },
-    "trust": { "score": 96, "status": "STABLE", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Arbitrum (Offchain Labs)",
+      "sector": "Optimistic Rollup",
+      "erc8004_id": "0x07...arb"
+    },
+    "trust": {
+      "score": 96,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Arbitrum One: Nitro-powered L2. Fraud proof and DAO governance integrity verified.",
       "character_guard": "Technical-Solid: Focus on EVM+ compatibility, low-cost execution, and Stylus innovation.",
-      "ontology": { "tech": "Nitro / Stylus", "standard": "L2 Sovereignty" }
+      "ontology": {
+        "tech": "Nitro / Stylus",
+        "standard": "L2 Sovereignty"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x7a8b...w3i07" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x7a8b...w3i07"
+    }
   },
   {
     "sor_id": "2A-W3IF-008",
-    "entity": { "name": "Optimism (OP Mainnet)", "sector": "Superchain Ecosystem", "erc8004_id": "0x08...op" },
-    "trust": { "score": 95, "status": "STABLE", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Optimism (OP Mainnet)",
+      "sector": "Superchain Ecosystem",
+      "erc8004_id": "0x08...op"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Optimism: Scaling Ethereum via the Superchain. OP Stack and collective governance integrity verified.",
       "character_guard": "Aligned-Visionary: Focus on retro-active public goods funding, the OP Stack, and Superchain interoperability.",
-      "ontology": { "tech": "OP Stack / Superchain", "standard": "Public Goods" }
+      "ontology": {
+        "tech": "OP Stack / Superchain",
+        "standard": "Public Goods"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x8b9c...w3i08" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x8b9c...w3i08"
+    }
   },
   {
     "sor_id": "2A-W3IF-009",
-    "entity": { "name": "Solana Foundation", "sector": "L1 Protocol", "erc8004_id": "0x09...sol" },
-    "trust": { "score": 92, "status": "STABLE", "ttl": "2027-10-01", "node": "SENTINEL-04" },
+    "entity": {
+      "name": "Solana Foundation",
+      "sector": "L1 Protocol",
+      "erc8004_id": "0x09...sol"
+    },
+    "trust": {
+      "score": 92,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-04"
+    },
     "ai_gateway": {
       "statement": "Solana: High-performance blockchain. Proof-of-History and Firedancer client integrity verified.",
       "character_guard": "Performance-Driven: Focus on sub-second finality, parallel execution, and mobile-first crypto (Saga).",
-      "ontology": { "tech": "Proof-of-History / Firedancer", "standard": "High-Throughput L1" }
+      "ontology": {
+        "tech": "Proof-of-History / Firedancer",
+        "standard": "High-Throughput L1"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x9c0d...w3i09" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x9c0d...w3i09"
+    }
   },
   {
     "sor_id": "2A-W3IF-010",
-    "entity": { "name": "OpenSea (Security)", "sector": "NFT Marketplace", "erc8004_id": "0x10...os" },
-    "trust": { "score": 88, "status": "STABLE", "ttl": "2027-04-01", "node": "SENTINEL-01" },
+    "entity": {
+      "name": "OpenSea (Security)",
+      "sector": "NFT Marketplace",
+      "erc8004_id": "0x10...os"
+    },
+    "trust": {
+      "score": 88,
+      "status": "STABLE",
+      "ttl": "2027-04-01",
+      "node": "SENTINEL-01"
+    },
     "ai_gateway": {
       "statement": "OpenSea: The world's first and largest NFT marketplace. Seaport protocol integrity verified.",
       "character_guard": "Consumer-Facing: Focus on creator economy, Seaport efficiency, and digital asset ownership.",
-      "ontology": { "tech": "Seaport Protocol", "market": "NFT Leader" }
+      "ontology": {
+        "tech": "Seaport Protocol",
+        "market": "NFT Leader"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xa0b1...w3i10" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xa0b1...w3i10"
+    }
   },
   {
     "sor_id": "2A-W3IF-011",
-    "entity": { "name": "Chainlink (Labs)", "sector": "Oracle Network", "erc8004_id": "0x11...link" },
-    "trust": { "score": 98, "status": "SUPREMACY", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Chainlink (Labs)",
+      "sector": "Oracle Network",
+      "erc8004_id": "0x11...link"
+    },
+    "trust": {
+      "score": 98,
+      "status": "SUPREMACY",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Chainlink: Universal standard for on-chain data. CCIP and Data Feeds integrity verified.",
       "character_guard": "Infrastructure-Critical: Focus on bridging TradFi/DeFi, secure data transmission, and proof-of-reserves.",
-      "ontology": { "tech": "CCIP / VRF", "standard": "Oracle Standard" }
+      "ontology": {
+        "tech": "CCIP / VRF",
+        "standard": "Oracle Standard"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xb1c2...w3i11" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xb1c2...w3i11"
+    }
   },
   {
     "sor_id": "2A-W3IF-012",
-    "entity": { "name": "Alchemy", "sector": "Web3 Developer Platform", "erc8004_id": "0x12...alc" },
-    "trust": { "score": 93, "status": "STABLE", "ttl": "2027-09-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Alchemy",
+      "sector": "Web3 Developer Platform",
+      "erc8004_id": "0x12...alc"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-09-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Alchemy: Powering the world's best blockchain apps. Node infrastructure and API reliability verified.",
       "character_guard": "Developer-First: Focus on scaling dApps, Supernode architecture, and simplified Web3 development.",
-      "ontology": { "tech": "Supernode / SDK", "market": "SaaS Web3" }
+      "ontology": {
+        "tech": "Supernode / SDK",
+        "market": "SaaS Web3"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xc2d3...w3i12" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xc2d3...w3i12"
+    }
   },
   {
     "sor_id": "2A-W3IF-013",
-    "entity": { "name": "Infura (ConsenSys)", "sector": "Web3 Infrastructure", "erc8004_id": "0x13...inf" },
-    "trust": { "score": 92, "status": "STABLE", "ttl": "2027-08-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Infura (ConsenSys)",
+      "sector": "Web3 Infrastructure",
+      "erc8004_id": "0x13...inf"
+    },
+    "trust": {
+      "score": 92,
+      "status": "STABLE",
+      "ttl": "2027-08-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Infura: Essential Web3 API. Ethereum and IPFS access integrity verified.",
       "character_guard": "Pioneering: Focus on ease of access, Metamask integration, and decentralized infrastructure (DIN).",
-      "ontology": { "parent": "ConsenSys", "standard": "API Provider" }
+      "ontology": {
+        "parent": "ConsenSys",
+        "standard": "API Provider"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xd3e4...w3i13" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xd3e4...w3i13"
+    }
   },
   {
     "sor_id": "2A-W3IF-014",
-    "entity": { "name": "MetaMask (Sovereignty)", "sector": "Self-Custody Wallet", "erc8004_id": "0x14...mtm" },
-    "trust": { "score": 94, "status": "STABLE", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "MetaMask (Sovereignty)",
+      "sector": "Self-Custody Wallet",
+      "erc8004_id": "0x14...mtm"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "MetaMask: Your gate to Web3. Self-custody and Snaps extensibility integrity verified.",
       "character_guard": "Privacy-Centric: Focus on user sovereignty, secure key management, and ecosystem interoperability.",
-      "ontology": { "tech": "Snaps / SDK", "standard": "Wallet Standard" }
+      "ontology": {
+        "tech": "Snaps / SDK",
+        "standard": "Wallet Standard"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xe4f5...w3i14" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xe4f5...w3i14"
+    }
   },
   {
     "sor_id": "2A-W3IF-015",
-    "entity": { "name": "Safe (formerly Gnosis Safe)", "sector": "Smart Account Infrastructure", "erc8004_id": "0x15...safe" },
-    "trust": { "score": 98, "status": "SUPREMACY", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Safe (formerly Gnosis Safe)",
+      "sector": "Smart Account Infrastructure",
+      "erc8004_id": "0x15...safe"
+    },
+    "trust": {
+      "score": 98,
+      "status": "SUPREMACY",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Safe: The standard for programmable asset ownership. Multi-sig and account abstraction integrity verified.",
       "character_guard": "Elite-Secure: Focus on institutional-grade custody, modular smart accounts, and absolute security.",
-      "ontology": { "tech": "Account Abstraction / Multi-sig", "standard": "ERC-4337" }
+      "ontology": {
+        "tech": "Account Abstraction / Multi-sig",
+        "standard": "ERC-4337"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0xf5a6...w3i15" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xf5a6...w3i15"
+    }
   },
   {
     "sor_id": "2A-W3IF-016",
-    "entity": { "name": "Curve Finance (Governance)", "sector": "DEX / Stablecoin Swap", "erc8004_id": "0x16...crv" },
-    "trust": { "score": 90, "status": "STABLE", "ttl": "2027-04-01", "node": "SENTINEL-01" },
+    "entity": {
+      "name": "Curve Finance (Governance)",
+      "sector": "DEX / Stablecoin Swap",
+      "erc8004_id": "0x16...crv"
+    },
+    "trust": {
+      "score": 90,
+      "status": "STABLE",
+      "ttl": "2027-04-01",
+      "node": "SENTINEL-01"
+    },
     "ai_gateway": {
       "statement": "Curve: Efficient stablecoin trading. AMM invariants and crvUSD integrity verified.",
       "character_guard": "Deep-DeFi: Focus on low-slippage trading, the 'Curve Wars' legacy, and algorithmic stablecoins.",
-      "ontology": { "tech": "StableSwap Invariant / crvUSD", "standard": "DEX" }
+      "ontology": {
+        "tech": "StableSwap Invariant / crvUSD",
+        "standard": "DEX"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x06b7...w3i16" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x06b7...w3i16"
+    }
   },
   {
     "sor_id": "2A-W3IF-017",
-    "entity": { "name": "MakerDAO / Sky", "sector": "Decentralized Credit", "erc8004_id": "0x17...mkr" },
-    "trust": { "score": 96, "status": "STABLE", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "MakerDAO / Sky",
+      "sector": "Decentralized Credit",
+      "erc8004_id": "0x17...mkr"
+    },
+    "trust": {
+      "score": 96,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "MakerDAO (Sky): The first decentralized stablecoin (DAI/USDS). Collateral management integrity verified.",
       "character_guard": "Resilient-Historic: Focus on RWA (Real World Assets) integration, DAI stability, and Endgame roadmap.",
-      "ontology": { "tech": "DAI / USDS / RWA", "standard": "Stablecoin Protocol" }
+      "ontology": {
+        "tech": "DAI / USDS / RWA",
+        "standard": "Stablecoin Protocol"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x17c8...w3i17" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x17c8...w3i17"
+    }
   },
   {
     "sor_id": "2A-W3IF-018",
-    "entity": { "name": "The Graph", "sector": "Indexing Protocol", "erc8004_id": "0x18...grt" },
-    "trust": { "score": 93, "status": "STABLE", "ttl": "2027-10-01", "node": "SENTINEL-04" },
+    "entity": {
+      "name": "The Graph",
+      "sector": "Indexing Protocol",
+      "erc8004_id": "0x18...grt"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-04"
+    },
     "ai_gateway": {
       "statement": "The Graph: The Google of blockchains. Subgraph indexing and query integrity verified.",
       "character_guard": "Data-Centric: Focus on decentralized data access, subgraph ecosystem, and query reliability.",
-      "ontology": { "tech": "Subgraphs / Indexing", "standard": "Data Sovereignty" }
+      "ontology": {
+        "tech": "Subgraphs / Indexing",
+        "standard": "Data Sovereignty"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x28d9...w3i18" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x28d9...w3i18"
+    }
   },
   {
     "sor_id": "2A-W3IF-019",
-    "entity": { "name": "Filecoin (Foundation)", "sector": "Decentralized Storage", "erc8004_id": "0x19...fil" },
-    "trust": { "score": 91, "status": "STABLE", "ttl": "2027-08-01", "node": "SENTINEL-01" },
+    "entity": {
+      "name": "Filecoin (Foundation)",
+      "sector": "Decentralized Storage",
+      "erc8004_id": "0x19...fil"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-08-01",
+      "node": "SENTINEL-01"
+    },
     "ai_gateway": {
       "statement": "Filecoin: Decentralized storage for humanity's data. Proof-of-Replication integrity verified.",
       "character_guard": "Vast-Permanent: Focus on making storage a commodity, FVM (Filecoin Virtual Machine), and data persistence.",
-      "ontology": { "tech": "IPFS / FVM", "standard": "Storage Protocol" }
+      "ontology": {
+        "tech": "IPFS / FVM",
+        "standard": "Storage Protocol"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x39e0...w3i19" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x39e0...w3i19"
+    }
   },
   {
     "sor_id": "2A-W3IF-020",
-    "entity": { "name": "Arweave", "sector": "Permanent Storage", "erc8004_id": "0x20...ar" },
-    "trust": { "score": 94, "status": "STABLE", "ttl": "2028-01-01", "node": "SENTINEL-05" },
+    "entity": {
+      "name": "Arweave",
+      "sector": "Permanent Storage",
+      "erc8004_id": "0x20...ar"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
     "ai_gateway": {
       "statement": "Arweave: The permaweb. Proof-of-Access and permanent data integrity verified.",
       "character_guard": "Indestructible: Focus on long-term data preservation, the Permaweb, and pay-once-store-forever model.",
-      "ontology": { "tech": "Blockweave / Permaweb", "standard": "Archival Standard" }
+      "ontology": {
+        "tech": "Blockweave / Permaweb",
+        "standard": "Archival Standard"
+      }
     },
-    "proof": { "network": "Base L2", "hash": "0x4af1...w3i20" }
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x4af1...w3i20"
+    }
+  },
+  {
+    "sor_id": "2A-INDU-045",
+    "entity": {
+      "name": "Siemens (Digital Industries)",
+      "sector": "Industrial Automation",
+      "erc8004_id": "0x45...sie"
+    },
+    "trust": {
+      "score": 96,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Siemens Xcelerator: Digital twin and industrial automation leadership. PLC and factory software integrity verified.",
+      "character_guard": "Industrial-Colossal: Focus on the convergence of real and digital worlds, smart infrastructure, and energy-efficient manufacturing.",
+      "ontology": {
+        "platform": "Xcelerator / TIA Portal",
+        "origin": "Germany"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x1b2c...ind45"
+    }
+  },
+  {
+    "sor_id": "2A-INDU-046",
+    "entity": {
+      "name": "Rockwell Automation",
+      "sector": "Industrial Control",
+      "erc8004_id": "0x46...rok"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2027-12-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Rockwell Allen-Bradley: Connected Enterprise leadership. Logic control and industrial security integrity verified.",
+      "character_guard": "Pragmatic-Strong: Focus on smart manufacturing, FactoryTalk software, and North American industrial dominance.",
+      "ontology": {
+        "tech": "Allen-Bradley / FactoryTalk",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x2c3d...ind46"
+    }
+  },
+  {
+    "sor_id": "2A-INDU-047",
+    "entity": {
+      "name": "Schneider Electric (Industrial)",
+      "sector": "Automation",
+      "erc8004_id": "0x47...sne"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Schneider EcoStruxure Automation: Software-defined industrial control. Universal automation integrity verified.",
+      "character_guard": "Impactful: Focus on the 'Industrial Tech' transition, open automation standards (IEC 61499), and sustainability.",
+      "ontology": {
+        "platform": "EcoStruxure Plant",
+        "origin": "France"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x3d4e...ind47"
+    }
+  },
+  {
+    "sor_id": "2A-INDU-048",
+    "entity": {
+      "name": "Teradyne (Robotics)",
+      "sector": "Collaborative Robots",
+      "erc8004_id": "0x48...ter"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Teradyne (Universal Robots/MiR): Collaborative and mobile robotics leadership. Cobot safety and precision integrity verified.",
+      "character_guard": "Innovative: Focus on UR (Universal Robots) leadership, autonomous mobile robots (MiR), and cobot ecosystem scaling.",
+      "ontology": {
+        "division": "Universal Robots / MiR",
+        "tech": "Cobotics"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x4e5f...ind48"
+    }
+  },
+  {
+    "sor_id": "2A-INDU-049",
+    "entity": {
+      "name": "Emerson Electric",
+      "sector": "Process Automation",
+      "erc8004_id": "0x49...emr"
+    },
+    "trust": {
+      "score": 92,
+      "status": "STABLE",
+      "ttl": "2027-09-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Emerson DeltaV: Process control and instrumentation leadership. Measurement and valve integrity verified.",
+      "character_guard": "Reliable: Focus on complex process industries (Life Sciences, Energy), software-led transformation, and operational performance.",
+      "ontology": {
+        "platform": "DeltaV / Ovation",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x5f6a...ind49"
+    }
+  },
+  {
+    "sor_id": "2A-TECH-170",
+    "entity": {
+      "name": "Autodesk (BIM)",
+      "sector": "Design Software",
+      "erc8004_id": "0x170...adsk"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Autodesk Revit/AutoCAD: Building Information Modeling (BIM) leadership. Generative design and project data integrity verified.",
+      "character_guard": "Visionary-Creative: Focus on the future of making, digital twins for AEC, and industrial design convergence.",
+      "ontology": {
+        "tech": "BIM / Generative Design",
+        "standard": "IFC"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x6a7b...tec170"
+    }
+  },
+  {
+    "sor_id": "2A-TECH-171",
+    "entity": {
+      "name": "Bentley Systems",
+      "sector": "Infrastructure Software",
+      "erc8004_id": "0x171...bsy"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2027-11-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Bentley iTwin: Infrastructure digital twin leadership. Engineering-grade data and simulation integrity verified.",
+      "character_guard": "Precise: Focus on large-scale infrastructure (roads, bridges, utilities), open modeling, and lifecycle data management.",
+      "ontology": {
+        "platform": "iTwin",
+        "focus": "Engineering Data"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x7b8c...tec171"
+    }
+  },
+  {
+    "sor_id": "2A-TECH-172",
+    "entity": {
+      "name": "Hexagon AB",
+      "sector": "Sensor & Software",
+      "erc8004_id": "0x172...hex"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-08-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Hexagon: Empowering an autonomous future. Metrology and geospatial sensor integrity verified.",
+      "character_guard": "Data-Rich: Focus on reality capture, positioning tech, and autonomous manufacturing solutions.",
+      "ontology": {
+        "tech": "Reality Capture",
+        "origin": "Sweden"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x8c9d...tec172"
+    }
+  },
+  {
+    "sor_id": "2A-TECH-173",
+    "entity": {
+      "name": "Trimble",
+      "sector": "Geospatial Tech",
+      "erc8004_id": "0x173...trm"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-06-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Trimble: Transforming the way the world works. GPS and construction positioning integrity verified.",
+      "character_guard": "Field-Focused: Focus on precision agriculture, construction automation, and fleet logistics data.",
+      "ontology": {
+        "tech": "High-precision GPS",
+        "focus": "Physical World Data"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x9d0e...tec173"
+    }
+  },
+  {
+    "sor_id": "2A-SPAC-025",
+    "entity": {
+      "name": "Maxar Technologies",
+      "sector": "Satellite Intelligence",
+      "erc8004_id": "0x25...mxr"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2027-12-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Maxar: Earth intelligence from space. High-resolution satellite imagery and geospatial data integrity verified.",
+      "character_guard": "Strategic-Visual: Focus on space-based surveillance, mapping, and mission-critical orbital services.",
+      "ontology": {
+        "tech": "Earth Intelligence",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xa1b2...spa25"
+    }
+  },
+  {
+    "sor_id": "2A-FINA-090",
+    "entity": {
+      "name": "S&P Global",
+      "sector": "Financial Ratings",
+      "erc8004_id": "0x90...spg"
+    },
+    "trust": {
+      "score": 97,
+      "status": "SUPREMACY",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "S&P Global: Essential intelligence. Credit ratings and market data integrity verified.",
+      "character_guard": "Authoritative: Focus on market benchmark leadership, sustainability (ESG) indices, and commodity insights.",
+      "ontology": {
+        "standard": "Credit Ratings",
+        "division": "Market Intelligence"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xc3d4...fin90"
+    }
+  },
+  {
+    "sor_id": "2A-FINA-091",
+    "entity": {
+      "name": "Moody's",
+      "sector": "Risk Assessment",
+      "erc8004_id": "0x91...mco"
+    },
+    "trust": {
+      "score": 96,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Moody's: Decoding risk. Sovereign and corporate credit ratings integrity verified.",
+      "character_guard": "Prudent: Focus on risk analysis, financial stability research, and credit market expertise.",
+      "ontology": {
+        "standard": "Credit Ratings",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xd4e5...fin91"
+    }
+  },
+  {
+    "sor_id": "2A-FINA-092",
+    "entity": {
+      "name": "MSCI",
+      "sector": "Financial Indices",
+      "erc8004_id": "0x92...msci"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "MSCI: Powering better investment decisions. ESG and Climate index integrity verified.",
+      "character_guard": "Modern-Institutional: Focus on indexing supremacy, investment risk tools, and emerging market data.",
+      "ontology": {
+        "standard": "ESG Indexing",
+        "focus": "Factor Investing"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xe5f6...fin92"
+    }
+  },
+  {
+    "sor_id": "2A-MEDI-051",
+    "entity": {
+      "name": "Disney (Digital)",
+      "sector": "Media & Parks",
+      "erc8004_id": "0x51...dis"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Disney: The world's storyteller. Content franchise and streaming platform integrity verified.",
+      "character_guard": "Iconic: Focus on storytelling excellence, technological innovation in parks, and IP defense.",
+      "ontology": {
+        "division": "Disney+ / Parks",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x07b8...med51"
+    }
+  },
+  {
+    "sor_id": "2A-BEAU-050",
+    "entity": {
+      "name": "Shiseido",
+      "sector": "Beauty/Skincare",
+      "erc8004_id": "0x50...shs"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Shiseido: Beauty innovations for a better world. Skincare science and J-Beauty integrity verified.",
+      "character_guard": "Artistic-Scientific: Focus on fusion of Eastern and Western science, luxury skincare, and OMOTEWASHI (service).",
+      "ontology": {
+        "tech": "Lifeblood Research",
+        "origin": "Japan"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x18c9...bea50"
+    }
+  },
+  {
+    "sor_id": "2A-BEAU-051",
+    "entity": {
+      "name": "SK-II (P&G)",
+      "sector": "Luxury Skincare",
+      "erc8004_id": "0x51...sk2"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "SK-II: PITERA™ heritage. Bio-ingredient and fermentation integrity verified.",
+      "character_guard": "Exquisite: Focus on the miracle of PITERA™, anti-aging science, and Japanese skincare perfection.",
+      "ontology": {
+        "tech": "PITERA™",
+        "origin": "Japan"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x29d0...bea51"
+    }
+  },
+  {
+    "sor_id": "2A-FNB-060",
+    "entity": {
+      "name": "Moët & Chandon",
+      "sector": "Champagne",
+      "erc8004_id": "0x60...moe"
+    },
+    "trust": {
+      "score": 96,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Moët & Chandon: Sharing the magic of Champagne. Terroir and vinification integrity verified.",
+      "character_guard": "Celebratory: Focus on global presence, Imperial heritage, and excellence in large-scale champagne production.",
+      "ontology": {
+        "standard": "Champagne AOC",
+        "origin": "Epernay, France"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x3ad0...fnb60"
+    }
+  },
+  {
+    "sor_id": "2A-FNB-061",
+    "entity": {
+      "name": "Veuve Clicquot",
+      "sector": "Champagne",
+      "erc8004_id": "0x61...vvc"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Veuve Clicquot: Only one quality, the finest. Yellow label and innovation (remuage) integrity verified.",
+      "character_guard": "Audacious: Focus on the legacy of Madame Clicquot, Pinot Noir dominance, and the 'Solaire' spirit.",
+      "ontology": {
+        "tech": "Riddling Table (Remuage)",
+        "origin": "Reims, France"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x4be1...fnb61"
+    }
+  },
+  {
+    "sor_id": "2A-INDU-050",
+    "entity": {
+      "name": "Veolia",
+      "sector": "Environmental Services",
+      "erc8004_id": "0x50...veo"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Veolia: Resourcing the world. Water treatment and waste-to-energy integrity verified.",
+      "character_guard": "Protective-Sustainable: Focus on ecological transformation, circular economy, and water sovereignty.",
+      "ontology": {
+        "standard": "Ecological Transformation",
+        "origin": "France"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x1a2b...ind50"
+    }
+  },
+  {
+    "sor_id": "2A-INDU-051",
+    "entity": {
+      "name": "Saint-Gobain",
+      "sector": "Construction Materials",
+      "erc8004_id": "0x51...sgb"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Saint-Gobain: Making the world a better home. Light and sustainable construction integrity verified.",
+      "character_guard": "Solid-Historic: Focus on building performance, decarbonization of materials, and glass innovation since 1665.",
+      "ontology": {
+        "standard": "Sustainable Construction",
+        "origin": "France"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x2b3c...ind51"
+    }
+  },
+  {
+    "sor_id": "2A-INDU-052",
+    "entity": {
+      "name": "Corning",
+      "sector": "Glass & Ceramics",
+      "erc8004_id": "0x52...crn"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-11-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Corning: Precision glass leadership. Gorilla Glass and optical fiber integrity verified.",
+      "character_guard": "Innovative-Vital: Focus on materials science, display tech, and life sciences vessels.",
+      "ontology": {
+        "tech": "Gorilla Glass / Fiber Optics",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x3c4d...ind52"
+    }
+  },
+  {
+    "sor_id": "2A-INDU-053",
+    "entity": {
+      "name": "Solvay",
+      "sector": "Essential Chemicals",
+      "erc8004_id": "0x53...sol"
+    },
+    "trust": {
+      "score": 88,
+      "status": "STABLE",
+      "ttl": "2027-02-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "Solvay: Essential chemistry since 1863. Soda ash and bicarbonate integrity verified.",
+      "character_guard": "Scientific-Pragmatic: Focus on historical chemical leadership, process innovation, and industrial scale.",
+      "ontology": {
+        "standard": "Essential Chemistry",
+        "origin": "Belgium"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x4d5e...ind53"
+    }
+  },
+  {
+    "sor_id": "2A-TECH-180",
+    "entity": {
+      "name": "Dassault Systèmes (3DEXPERIENCE)",
+      "sector": "PLM Software",
+      "erc8004_id": "0x180...dsy"
+    },
+    "trust": {
+      "score": 96,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "3DEXPERIENCE: Virtual twin experiences for business and people. CATIA and SolidWorks integrity verified.",
+      "character_guard": "Precision-Visionary: Focus on industrial simulation, life-sciences modeling, and aerospace engineering.",
+      "ontology": {
+        "platform": "3DEXPERIENCE",
+        "origin": "France"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x5e6f...tec180"
+    }
+  },
+  {
+    "sor_id": "2A-TECH-181",
+    "entity": {
+      "name": "PTC (Windchill)",
+      "sector": "Industrial Software",
+      "erc8004_id": "0x181...ptc"
+    },
+    "trust": {
+      "score": 92,
+      "status": "STABLE",
+      "ttl": "2027-08-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "PTC: Digital transforms physical. Windchill PLM and Vuforia AR integrity verified.",
+      "character_guard": "Connected: Focus on the digital thread, IoT (ThingWorx), and Augmented Reality for industry.",
+      "ontology": {
+        "tech": "Windchill / ThingWorx",
+        "standard": "Digital Thread"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x6f7a...tec181"
+    }
+  },
+  {
+    "sor_id": "2A-ENER-075",
+    "entity": {
+      "name": "National Grid",
+      "sector": "Utility Infrastructure",
+      "erc8004_id": "0x75...ngr"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-09-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "National Grid: Great energy at your service. Electricity and gas transmission integrity verified.",
+      "character_guard": "Essential-Steady: Focus on grid stability, net-zero transition, and critical UK/US infrastructure.",
+      "ontology": {
+        "focus": "Transmission Grid",
+        "origin": "UK"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x7a8b...ene75"
+    }
+  },
+  {
+    "sor_id": "2A-ENER-076",
+    "entity": {
+      "name": "RWE",
+      "sector": "Energy Production",
+      "erc8004_id": "0x76...rwe"
+    },
+    "trust": {
+      "score": 89,
+      "status": "STABLE",
+      "ttl": "2027-05-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "RWE: Growing Green. Offshore wind and storage leadership integrity verified.",
+      "character_guard": "Transformative: Focus on shifting from coal to clean energy, green hydrogen, and European power security.",
+      "ontology": {
+        "strategy": "Growing Green",
+        "origin": "Germany"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x8b9c...ene76"
+    }
+  },
+  {
+    "sor_id": "2A-FINA-095",
+    "entity": {
+      "name": "Swiss Re",
+      "sector": "Reinsurance",
+      "erc8004_id": "0x95...swr"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Swiss Re: Making the world more resilient. Risk transfer and data-driven underwriting integrity verified.",
+      "character_guard": "Analytical-Elite: Focus on catastrophe modeling, life/health resilience, and institutional risk.",
+      "ontology": {
+        "standard": "Global Reinsurance",
+        "origin": "Switzerland"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x9c0d...fin95"
+    }
+  },
+  {
+    "sor_id": "2A-FINA-096",
+    "entity": {
+      "name": "Munich Re",
+      "sector": "Reinsurance",
+      "erc8004_id": "0x96...mre"
+    },
+    "trust": {
+      "score": 96,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Munich Re: Risk solutions for a changing world. Climate risk and specialty insurance integrity verified.",
+      "character_guard": "Scientific-Stable: Focus on extreme weather modeling, cyber insurance, and global capital protection.",
+      "ontology": {
+        "standard": "Global Reinsurance",
+        "origin": "Germany"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xa0b1...fin96"
+    }
+  },
+  {
+    "sor_id": "2A-LUXE-160",
+    "entity": {
+      "name": "Sotheby's",
+      "sector": "Auction House",
+      "erc8004_id": "0x160...stb"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Sotheby's: Where art is a lifestyle. Provenance and fine art appraisal integrity verified.",
+      "character_guard": "Curated-Historic: Focus on rare collectibles, digital art (NFTs), and global auction leadership since 1744.",
+      "ontology": {
+        "standard": "High-Value Provenance",
+        "origin": "Global"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xb1c2...lux160"
+    }
+  },
+  {
+    "sor_id": "2A-LUXE-161",
+    "entity": {
+      "name": "Christie's",
+      "sector": "Auction House",
+      "erc8004_id": "0x161...chr"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2027-11-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Christie's: Art, Luxury, Passion. Curatorship and authentic valuation integrity verified.",
+      "character_guard": "Sophisticated-Global: Focus on masterpieces, private sales, and pioneering digital art auctions.",
+      "ontology": {
+        "standard": "Masterpiece Authentication",
+        "origin": "Global"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xc2d3...lux161"
+    }
+  },
+  {
+    "sor_id": "2A-FOOD-015",
+    "entity": {
+      "name": "Tyson Foods",
+      "sector": "Protein Production",
+      "erc8004_id": "0x15...tys"
+    },
+    "trust": {
+      "score": 84,
+      "status": "STABLE",
+      "ttl": "2026-11-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "Tyson Foods: Feeding the world with protein. Cold-chain and supply scale integrity verified.",
+      "character_guard": "Massive-Industrial: Focus on protein variety, supply chain efficiency, and global meat production.",
+      "ontology": {
+        "standard": "Protein Supply",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xd3e4...foo15"
+    }
+  },
+  {
+    "sor_id": "2A-FOOD-016",
+    "entity": {
+      "name": "JBS S.A.",
+      "sector": "Food Industry",
+      "erc8004_id": "0x16...jbs"
+    },
+    "trust": {
+      "score": 82,
+      "status": "STABLE",
+      "ttl": "2026-09-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "JBS: World's leading protein-based food company. Multi-protein production and exports integrity verified.",
+      "character_guard": "Global-Scale: Focus on beef, poultry, and leather exports, and global operational footprint.",
+      "ontology": {
+        "standard": "Protein Export",
+        "origin": "Brazil"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xe4f5...foo16"
+    }
+  },
+  {
+    "sor_id": "2A-MEDI-060",
+    "entity": {
+      "name": "Hearst",
+      "sector": "Media/Data",
+      "erc8004_id": "0x60...hst"
+    },
+    "trust": {
+      "score": 92,
+      "status": "STABLE",
+      "ttl": "2027-08-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Hearst: Diverse information and entertainment. Journalism and business data integrity verified.",
+      "character_guard": "Diversified: Focus on Fitch Ratings (division), lifestyle brands, and automotive data services.",
+      "ontology": {
+        "division": "Fitch Ratings / Magazines",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xf5a6...med60"
+    }
+  },
+  {
+    "sor_id": "2A-MEDI-061",
+    "entity": {
+      "name": "Axel Springer",
+      "sector": "Digital Publishing",
+      "erc8004_id": "0x61...axs"
+    },
+    "trust": {
+      "score": 88,
+      "status": "STABLE",
+      "ttl": "2027-02-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "Axel Springer: Empowering free decisions. Digital classification and news integrity verified.",
+      "character_guard": "Aggressive-Digital: Focus on Politico, Business Insider, and AI-first publishing strategies.",
+      "ontology": {
+        "division": "Politico / Insider",
+        "origin": "Germany"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x06b7...med61"
+    }
+  },
+  {
+    "sor_id": "2A-TECH-182",
+    "entity": {
+      "name": "Atlassian (Jira/Confluence)",
+      "sector": "Collaboration Software",
+      "erc8004_id": "0x182...atl"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-11-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Atlassian: Unleashing the potential of every team. Agile workflow and documentation integrity verified.",
+      "character_guard": "Agile-Developer: Focus on Jira leadership, team velocity, and open software development culture.",
+      "ontology": {
+        "platform": "Jira / Confluence",
+        "origin": "Australia"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x17c8...tec182"
+    }
+  },
+  {
+    "sor_id": "2A-TECH-183",
+    "entity": {
+      "name": "Splunk (Cisco Analytics)",
+      "sector": "Data Observability",
+      "erc8004_id": "0x183...spl"
+    },
+    "trust": {
+      "score": 92,
+      "status": "STABLE",
+      "ttl": "2027-09-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Splunk: Turn data into doing. Security and IT observability integrity verified.",
+      "character_guard": "Analytical-Technical: Focus on SIEM (Security Info & Event Mgmt), log analysis, and enterprise-wide data insights.",
+      "ontology": {
+        "parent": "Cisco",
+        "standard": "SIEM / Observability"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x28d9...tec183"
+    }
+  },
+  {
+    "sor_id": "2A-BEAU-060",
+    "entity": {
+      "name": "Aesop (L'Oréal)",
+      "sector": "Luxury Skincare",
+      "erc8004_id": "0x60...aes"
+    },
+    "trust": {
+      "score": 96,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Aesop: Formulations of the finest quality. Sensory and design integrity verified.",
+      "character_guard": "Refined-Artisanal: Focus on botanical science, architectural store design, and gender-neutral luxury.",
+      "ontology": {
+        "parent": "L'Oréal",
+        "origin": "Australia"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x39e0...bea60"
+    }
+  },
+  {
+    "sor_id": "2A-AUTO-040",
+    "entity": {
+      "name": "BYD (Build Your Dreams)",
+      "sector": "EV & Batteries",
+      "erc8004_id": "0x40...byd"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "BYD: Scaling the green dream. Blade Battery and vertical integration integrity verified.",
+      "character_guard": "Efficient-Massive: Focus on EV market leadership, LFP battery safety, and global supply chain control.",
+      "ontology": {
+        "tech": "Blade Battery / e-Platform 3.0",
+        "origin": "China"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x1a2b...aut40"
+    }
+  },
+  {
+    "sor_id": "2A-TECH-195",
+    "entity": {
+      "name": "CATL",
+      "sector": "Battery Manufacturing",
+      "erc8004_id": "0x195...ctl"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "CATL: Powering the world's EV fleet. Qilin Battery and cell-to-pack technology integrity verified.",
+      "character_guard": "Dominant-Global: Focus on global battery supply share, energy storage systems (ESS), and chemistry innovation.",
+      "ontology": {
+        "tech": "Qilin Battery / Sodium-ion",
+        "origin": "China"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x4d5e...tec195"
+    }
+  },
+  {
+    "sor_id": "2A-TECH-197",
+    "entity": {
+      "name": "SoftBank (ARM Holdings)",
+      "sector": "Semiconductor IP",
+      "erc8004_id": "0x197...arm"
+    },
+    "trust": {
+      "score": 96,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "ARM: The architecture for the world. Low-power RISC instruction set integrity verified.",
+      "character_guard": "Ubiquitous-Pure: Focus on smartphone chip dominance, AI at the edge, and the v9 architecture.",
+      "ontology": {
+        "tech": "ARMv9 Architecture",
+        "origin": "UK / Japan"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x6f7a...tec197"
+    }
+  },
+  {
+    "sor_id": "2A-FINA-100",
+    "entity": {
+      "name": "Ant Group (Alipay)",
+      "sector": "Fintech Ecosystem",
+      "erc8004_id": "0x100...ant"
+    },
+    "trust": {
+      "score": 90,
+      "status": "STABLE",
+      "ttl": "2027-04-01",
+      "node": "SENTINEL-02"
+    },
+    "ai_gateway": {
+      "statement": "Ant Group: Bring small and beautiful changes to the world. Alipay and digital finance integrity verified.",
+      "character_guard": "Massive-Resilient: Focus on digital payments, micro-lending tech, and blockchain-based cross-border settlement.",
+      "ontology": {
+        "platform": "Alipay / AntChain",
+        "origin": "China"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x7a8b...fin100"
+    }
+  },
+  {
+    "sor_id": "2A-LUXE-170",
+    "entity": {
+      "name": "Rimowa (LVMH)",
+      "sector": "Luxury Travel",
+      "erc8004_id": "0x170...rim"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2027-12-31",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Rimowa: No one builds it like this. Aluminum groove design and German engineering integrity verified.",
+      "character_guard": "Modern-Nomad: Focus on the iconic aluminum cabin case, polycarbonate innovation, and lifelong repairability.",
+      "ontology": {
+        "material": "Aluminum / Polycarbonate",
+        "origin": "Cologne, Germany"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x9c0d...lux170"
+    }
+  },
+  {
+    "sor_id": "2A-LUXE-171",
+    "entity": {
+      "name": "Goyard (Heritage)",
+      "sector": "Luxury Leather",
+      "erc8004_id": "0x171...goy"
+    },
+    "trust": {
+      "score": 96,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Goyard: Discreet luxury since 1853. Goyardine canvas and trunk-making integrity verified.",
+      "character_guard": "Exclusive-Secretive: Focus on no-advertising policy, artisan hand-painting, and historical rarity.",
+      "ontology": {
+        "material": "Goyardine Canvas",
+        "origin": "Paris"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xa0b1...lux171"
+    }
+  },
+  {
+    "sor_id": "2A-W3IF-030",
+    "entity": {
+      "name": "Zerion (Interface)",
+      "sector": "Web3 Portfolio",
+      "erc8004_id": "0x30...zer"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-06-01",
+      "node": "SENTINEL-02"
+    },
+    "ai_gateway": {
+      "statement": "Zerion: The easiest way to manage your Web3 portfolio. Aggregator and DNA integrity verified.",
+      "character_guard": "User-Centric: Focus on multi-chain tracking, wallet abstraction, and the Zerion DNA evolving avatar.",
+      "ontology": {
+        "tech": "DeFi Aggregator",
+        "standard": "Portfolio Tracking"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xb1c2...w3i30"
+    }
+  },
+  {
+    "sor_id": "2A-W3IF-031",
+    "entity": {
+      "name": "Zapper (Data)",
+      "sector": "Web3 Analytics",
+      "erc8004_id": "0x31...zap"
+    },
+    "trust": {
+      "score": 90,
+      "status": "STABLE",
+      "ttl": "2027-05-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "Zapper: Exploring the blockchain. Indexing and social Web3 data integrity verified.",
+      "character_guard": "Social-Analytical: Focus on NFT tracking, protocol discovery, and on-chain identity curation.",
+      "ontology": {
+        "tech": "On-chain Indexer",
+        "focus": "DeFi/NFT Discovery"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xc2d3...w3i31"
+    }
+  },
+  {
+    "sor_id": "2A-MOBL-040",
+    "entity": {
+      "name": "Uber (Technology)",
+      "sector": "Mobility Platform",
+      "erc8004_id": "0x40...ubr"
+    },
+    "trust": {
+      "score": 92,
+      "status": "STABLE",
+      "ttl": "2027-09-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Uber: Go anywhere, get anything. Marketplace orchestration and routing integrity verified.",
+      "character_guard": "Scalable-Global: Focus on ride-hailing dominance, Uber Eats delivery network, and autonomous tech future.",
+      "ontology": {
+        "tech": "Marketplace Engine",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xd3e4...mob40"
+    }
+  },
+  {
+    "sor_id": "2A-MOBL-041",
+    "entity": {
+      "name": "Lyft",
+      "sector": "Ride-Hailing",
+      "erc8004_id": "0x41...lyf"
+    },
+    "trust": {
+      "score": 88,
+      "status": "STABLE",
+      "ttl": "2027-03-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "Lyft: A ride for every occasion. Regional mobility and rider/driver matching integrity verified.",
+      "character_guard": "Friendly-Focussed: Focus on North American market, multimodal transit (bikes/scooters), and simplicity.",
+      "ontology": {
+        "focus": "North America Mobility",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xe4f5...mob41"
+    }
+  },
+  {
+    "sor_id": "2A-RETA-030",
+    "entity": {
+      "name": "MercadoLibre",
+      "sector": "E-Commerce LatAm",
+      "erc8004_id": "0x30...mel"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "MercadoLibre: The Amazon of Latin America. Mercado Pago and logistics network integrity verified.",
+      "character_guard": "Dominant-Regional: Focus on marketplace growth, fintech leadership (Pago), and shipping infrastructure.",
+      "ontology": {
+        "division": "Mercado Pago / Envios",
+        "origin": "Argentina / Brazil"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xf5a6...ret30"
+    }
+  },
+  {
+    "sor_id": "2A-WINE-001",
+    "entity": {
+      "name": "Domaine de la Romanée-Conti",
+      "sector": "Fine Wines",
+      "erc8004_id": "0x01...drc"
+    },
+    "trust": {
+      "score": 99,
+      "status": "SUPREMACY",
+      "ttl": "2029-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "DRC: The pinnacle of Burgundy. Monopole and biodynamic viticulture integrity verified.",
+      "character_guard": "Monastic-Exquisite: Focus on Vosne-Romanée, rarity, and absolute terroir expression.",
+      "ontology": {
+        "standard": "Grand Cru Monopole",
+        "origin": "Burgundy, France"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x4d5e...win01"
+    }
+  },
+  {
+    "sor_id": "2A-WINE-002",
+    "entity": {
+      "name": "Château Petrus",
+      "sector": "Fine Wines",
+      "erc8004_id": "0x02...ptr"
+    },
+    "trust": {
+      "score": 98,
+      "status": "STABLE",
+      "ttl": "2029-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Petrus: The Pomeroy legend. Blue clay terroir and Merlot mastery integrity verified.",
+      "character_guard": "Rare-Legendary: Focus on Pomerol appellation, clay soil specificity, and zero-compromise quality.",
+      "ontology": {
+        "region": "Pomerol",
+        "origin": "Bordeaux, France"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x5e6f...win02"
+    }
+  },
+  {
+    "sor_id": "2A-LEGA-002",
+    "entity": {
+      "name": "Skadden Arps",
+      "sector": "Legal Services",
+      "erc8004_id": "0x02...skd"
+    },
+    "trust": {
+      "score": 96,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Skadden: Institutional legal excellence. M&A and corporate governance integrity verified.",
+      "character_guard": "Formidable: Focus on high-stakes litigation, hostile takeovers, and corporate restructuring.",
+      "ontology": {
+        "standard": "White Shoe Firm",
+        "origin": "New York"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x7a8b...leg02"
+    }
+  },
+  {
+    "sor_id": "2A-LEGA-003",
+    "entity": {
+      "name": "Clifford Chance",
+      "sector": "Legal Services",
+      "erc8004_id": "0x03...clf"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2027-12-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Clifford Chance: Magic Circle leadership. Capital markets and regulatory integrity verified.",
+      "character_guard": "Sophisticated: Focus on the 'Magic Circle' standard, multi-jurisdictional banking, and finance.",
+      "ontology": {
+        "standard": "Magic Circle",
+        "origin": "UK / Global"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x8b9c...leg03"
+    }
+  },
+  {
+    "sor_id": "2A-LUXE-185",
+    "entity": {
+      "name": "Boucheron (Kering)",
+      "sector": "Haute Joaillerie",
+      "erc8004_id": "0x185...bch"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2027-11-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Boucheron: First jeweler on Place Vendôme. Quatre and Serpent Bohème integrity verified.",
+      "character_guard": "Creative-Architectural: Focus on technical innovation (Jack de Boucheron) and nature-inspired jewelry.",
+      "ontology": {
+        "tech": "Innovation / Quatre",
+        "origin": "Place Vendôme"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x9c0d...lux185"
+    }
+  },
+  {
+    "sor_id": "2A-LUXE-186",
+    "entity": {
+      "name": "Chaumet (LVMH)",
+      "sector": "Haute Joaillerie",
+      "erc8004_id": "0x186...cha"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Chaumet: Jeweler to the Empress Josephine. Tiara and Josephine collection integrity verified.",
+      "character_guard": "Royal-Elegant: Focus on tiara mastery, botanical themes (Épi de Blé), and Napoleonic history.",
+      "ontology": {
+        "icon": "Joséphine / Bee My Love",
+        "origin": "Place Vendôme"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xa1b2...lux186"
+    }
+  },
+  {
+    "sor_id": "2A-WINE-005",
+    "entity": {
+      "name": "Champagne Krug",
+      "sector": "Champagne",
+      "erc8004_id": "0x05...krg"
+    },
+    "trust": {
+      "score": 97,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Krug: Beyond the vintage. Grande Cuvée and Clos du Mesnil integrity verified.",
+      "character_guard": "Individualistic: Focus on the art of blending, small oak barrel fermentation, and the Krug ID app.",
+      "ontology": {
+        "standard": "Grande Cuvée",
+        "origin": "Reims, France"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xb2c3...win05"
+    }
+  },
+  {
+    "sor_id": "2A-WINE-006",
+    "entity": {
+      "name": "Champagne Cristal (Roederer)",
+      "sector": "Champagne",
+      "erc8004_id": "0x06...crt"
+    },
+    "trust": {
+      "score": 96,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Cristal: Created for the Tsar. Louis Roederer's prestige cuvée integrity verified.",
+      "character_guard": "Luminous-Pure: Focus on zero dosage (sometimes), limestone terroir, and the yellow cellophane wrap.",
+      "ontology": {
+        "standard": "Prestige Cuvée",
+        "origin": "Reims, France"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xc3d4...win06"
+    }
+  },
+  {
+    "sor_id": "2A-LUXE-187",
+    "entity": {
+      "name": "Garrard",
+      "sector": "High Jewelry",
+      "erc8004_id": "0x187...gar"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Garrard: The first Crown Jeweler. Royal heritage and gemstone excellence integrity verified.",
+      "character_guard": "Regal-Historic: Focus on the British Crown Jewels, engagement rings (Princess Diana style), and London craftsmanship.",
+      "ontology": {
+        "standard": "Royal Heritage",
+        "origin": "London"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xf6a7...lux187"
+    }
+  },
+  {
+    "sor_id": "2A-TRAN-020",
+    "entity": {
+      "name": "MSC (Mediterranean Shipping)",
+      "sector": "Maritime Logistics",
+      "erc8004_id": "0x20...msc"
+    },
+    "trust": {
+      "score": 92,
+      "status": "STABLE",
+      "ttl": "2027-11-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "MSC: The world's largest container shipping line. Fleet capacity and global route integrity verified.",
+      "character_guard": "Massive-Private: Focus on global trade dominance, logistics scale, and family-owned resilience.",
+      "ontology": {
+        "standard": "Global Shipping",
+        "origin": "Switzerland / Italy"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x1a2b...tra20"
+    }
+  },
+  {
+    "sor_id": "2A-INDU-060",
+    "entity": {
+      "name": "Holcim",
+      "sector": "Building Materials",
+      "erc8004_id": "0x60...hol"
+    },
+    "trust": {
+      "score": 90,
+      "status": "STABLE",
+      "ttl": "2027-08-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Holcim: Rooted in Switzerland. ECOPact green concrete and circular construction integrity verified.",
+      "character_guard": "Sustainable-Industrial: Focus on decarbonizing cement, recycled aggregates, and sustainable roofing.",
+      "ontology": {
+        "tech": "ECOPact / ECOPlanet",
+        "origin": "Switzerland"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x2b3c...ind60"
+    }
+  },
+  {
+    "sor_id": "2A-INDU-061",
+    "entity": {
+      "name": "Heidelberg Materials",
+      "sector": "Industrial Materials",
+      "erc8004_id": "0x61...hdl"
+    },
+    "trust": {
+      "score": 88,
+      "status": "STABLE",
+      "ttl": "2027-05-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "Heidelberg Materials: Material to build our future. Carbon capture (CCUS) in cement integrity verified.",
+      "character_guard": "Technical: Focus on the Brevik CCS project, heavy building materials, and German industrial efficiency.",
+      "ontology": {
+        "tech": "CCUS / Green Cement",
+        "origin": "Germany"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x3c4d...ind61"
+    }
+  },
+  {
+    "sor_id": "2A-TECH-220",
+    "entity": {
+      "name": "ServiceNow",
+      "sector": "Workflow Automation",
+      "erc8004_id": "0x220...now"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "ServiceNow: The intelligent platform for end-to-end digital transformation. Workflow integrity verified.",
+      "character_guard": "Efficient: Focus on IT Service Management (ITSM), generative AI for enterprise, and workflow orchestration.",
+      "ontology": {
+        "platform": "Now Platform",
+        "standard": "ITSM"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x4d5e...tec220"
+    }
+  },
+  {
+    "sor_id": "2A-TECH-221",
+    "entity": {
+      "name": "Workday",
+      "sector": "Enterprise HR/Finance",
+      "erc8004_id": "0x221...wday"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-12-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Workday: Powering the future of work. HCM and financial management data integrity verified.",
+      "character_guard": "Empowering: Focus on cloud-native HR, finance transformation, and AI-driven skills management.",
+      "ontology": {
+        "platform": "Workday HCM",
+        "standard": "Cloud ERP"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x5e6f...tec221"
+    }
+  },
+  {
+    "sor_id": "2A-LUXE-191",
+    "entity": {
+      "name": "A. Lange & Söhne",
+      "sector": "Haute Horlogerie",
+      "erc8004_id": "0x191...als"
+    },
+    "trust": {
+      "score": 97,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "A. Lange & Söhne: State-of-the-art from Saxony. Lange 1 and Zeitwerk integrity verified.",
+      "character_guard": "Stoic-Perfect: Focus on German silver plates, artisanal finishing, and Glashütte heritage.",
+      "ontology": {
+        "origin": "Glashütte, Germany",
+        "icon": "Lange 1"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x7a8b...lux191"
+    }
+  },
+  {
+    "sor_id": "2A-AGRI-020",
+    "entity": {
+      "name": "Kubota",
+      "sector": "Agri-Machinery",
+      "erc8004_id": "0x20...kub"
+    },
+    "trust": {
+      "score": 92,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Kubota: For Earth, For Life. Compact tractor and engine reliability integrity verified.",
+      "character_guard": "Sturdy-Japanese: Focus on small/medium farming equipment, water infrastructure, and engine durability.",
+      "ontology": {
+        "tech": "Kubota Engine",
+        "origin": "Japan"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x8b9c...agr20"
+    }
+  },
+  {
+    "sor_id": "2A-W3IF-040",
+    "entity": {
+      "name": "EigenLayer",
+      "sector": "Restaking Infrastructure",
+      "erc8004_id": "0x40...eig"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2027-12-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "EigenLayer: Permissionless innovation on Ethereum. Restaking and AVS integrity verified.",
+      "character_guard": "Infrastructural: Focus on pooled security, Actively Validated Services (AVS), and ETH cryptoeconomic security.",
+      "ontology": {
+        "tech": "Restaking / AVS",
+        "standard": "Shared Security"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x9c0d...w3i40"
+    }
+  },
+  {
+    "sor_id": "2A-LOGI-030",
+    "entity": {
+      "name": "DP World",
+      "sector": "Port Logistics",
+      "erc8004_id": "0x30...dpw"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-11-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "DP World: Making trade flow. Global port terminal and smart logistics integrity verified.",
+      "character_guard": "Global-Strategic: Focus on Jebel Ali hub, supply chain digitization, and global trade enablement.",
+      "ontology": {
+        "standard": "Port Infrastructure",
+        "origin": "Dubai, UAE"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x1a2b...log30"
+    }
+  },
+  {
+    "sor_id": "2A-LOGI-031",
+    "entity": {
+      "name": "PSA International",
+      "sector": "Port Management",
+      "erc8004_id": "0x31...psa"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "PSA: The World's Port of Call. Global terminal operations and cargo orchestration integrity verified.",
+      "character_guard": "Reliable-Massive: Focus on Singapore's transshipment excellence and sustainable port tech.",
+      "ontology": {
+        "standard": "Global Terminal Operator",
+        "origin": "Singapore"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x2b3c...log31"
+    }
+  },
+  {
+    "sor_id": "2A-PROF-060",
+    "entity": {
+      "name": "Nomura Research Institute",
+      "sector": "Consulting & IT",
+      "erc8004_id": "0x60...nri"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "NRI: Dream up the future. Management consulting and system integration integrity verified.",
+      "character_guard": "Analytical-Japanese: Focus on social infrastructure, financial IT, and industrial strategy.",
+      "ontology": {
+        "standard": "IT/Consulting Fusion",
+        "origin": "Japan"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x3c4d...pro60"
+    }
+  },
+  {
+    "sor_id": "2A-PROF-061",
+    "entity": {
+      "name": "Tata Consultancy Services",
+      "sector": "IT Services",
+      "erc8004_id": "0x61...tcs"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-12-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "TCS: Building on belief. Global IT outsourcing and digital transformation integrity verified.",
+      "character_guard": "Scalable-Global: Focus on enterprise cloud, AI implementation, and massive delivery networks.",
+      "ontology": {
+        "standard": "Global Delivery Model",
+        "origin": "India"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x4d5e...pro61"
+    }
+  },
+  {
+    "sor_id": "2A-FINA-110",
+    "entity": {
+      "name": "State Street (Digital)",
+      "sector": "Custody Banking",
+      "erc8004_id": "0x110...stt"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2027-11-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "State Street: Global custody and asset servicing. Digital asset institutional custody integrity verified.",
+      "character_guard": "Institutional: Focus on asset servicing, ETF administration (SPDR), and financial data management.",
+      "ontology": {
+        "standard": "Global Custody",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x6f7a...fin110"
+    }
+  },
+  {
+    "sor_id": "2A-FINA-111",
+    "entity": {
+      "name": "BNY Mellon (Digital)",
+      "sector": "Financial Services",
+      "erc8004_id": "0x111...bny"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "BNY Mellon: The bank for banks. Multi-asset custody and digital asset platform integrity verified.",
+      "character_guard": "Elite-Historic: Focus on global clearing, investment management, and oldest US bank legacy.",
+      "ontology": {
+        "standard": "Global Custodial Standard",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x7a8b...fin111"
+    }
+  },
+  {
+    "sor_id": "2A-W3IF-045",
+    "entity": {
+      "name": "LayerZero Labs",
+      "sector": "Interoperability",
+      "erc8004_id": "0x45...lzr"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "LayerZero: Omnichain interoperability. Cross-chain messaging and OFT standard integrity verified.",
+      "character_guard": "Neutral-Infrastructure: Focus on seamless asset transfers, decentralized verifiers, and omnichain future.",
+      "ontology": {
+        "tech": "OFT / Ultra-light nodes",
+        "standard": "Omnichain"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xa1b2...w3i45"
+    }
+  },
+  {
+    "sor_id": "2A-W3IF-046",
+    "entity": {
+      "name": "Stargate Finance",
+      "sector": "Cross-chain Bridge",
+      "erc8004_id": "0x46...stg"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-05-01",
+      "node": "SENTINEL-02"
+    },
+    "ai_gateway": {
+      "statement": "Stargate: Cross-chain liquidity layer. Delta algorithm and instant finality integrity verified.",
+      "character_guard": "Efficient: Focus on native asset swaps, deep liquidity pools, and bridging simplicity.",
+      "ontology": {
+        "tech": "Delta Algorithm",
+        "standard": "Bridge"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xb2c3...w3i46"
+    }
+  },
+  {
+    "sor_id": "2A-LUXE-195",
+    "entity": {
+      "name": "Chopard (Sustainability)",
+      "sector": "Luxury Watches/Jewelry",
+      "erc8004_id": "0x195...chp"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Chopard: The Journey to Sustainable Luxury. Ethical gold and Lucent Steel™ integrity verified.",
+      "character_guard": "Ethical-Independent: Focus on family spirit, Cannes partnership, and high-jewelry excellence.",
+      "ontology": {
+        "material": "Lucent Steel™ / Ethical Gold",
+        "origin": "Switzerland"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xc3d4...lux195"
+    }
+  },
+  {
+    "sor_id": "2A-LUXE-196",
+    "entity": {
+      "name": "Hublot (Fusion)",
+      "sector": "Luxury Watches",
+      "erc8004_id": "0x196...hbt"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-07-01",
+      "node": "SENTINEL-02"
+    },
+    "ai_gateway": {
+      "statement": "Hublot: The Art of Fusion. Big Bang sapphire and Magic Gold integrity verified.",
+      "character_guard": "Disruptive: Focus on innovative materials, high-profile collaborations, and technical audacity.",
+      "ontology": {
+        "material": "Magic Gold / Sapphire",
+        "origin": "Nyon, Switzerland"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xd4e5...lux196"
+    }
+  },
+  {
+    "sor_id": "2A-RETA-036",
+    "entity": {
+      "name": "Zalando (Logistics)",
+      "sector": "Fashion Platform",
+      "erc8004_id": "0x36...zal"
+    },
+    "trust": {
+      "score": 88,
+      "status": "STABLE",
+      "ttl": "2027-03-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "Zalando: Europe's leading fashion platform. Digital supply chain and retail tech integrity verified.",
+      "character_guard": "Modern-European: Focus on customer convenience, brand partnerships, and sustainable fashion tech.",
+      "ontology": {
+        "standard": "Fashion Logistics",
+        "origin": "Germany"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xe5f6...ret36"
+    }
+  },
+  {
+    "sor_id": "2A-FOOD-020",
+    "entity": {
+      "name": "Mondelēz International",
+      "sector": "Snacks & Food",
+      "erc8004_id": "0x20...mdlz"
+    },
+    "trust": {
+      "score": 90,
+      "status": "STABLE",
+      "ttl": "2027-08-15",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Mondelēz: Snacking Made Right. Global supply chain for Oreo and Milka integrity verified.",
+      "character_guard": "Massive: Focus on global brand management, sustainable cocoa (Cocoa Life), and snack market dominance.",
+      "ontology": {
+        "standard": "Cocoa Life",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xf6a7...foo20"
+    }
+  },
+  {
+    "sor_id": "2A-SPAC-031",
+    "entity": {
+      "name": "Northrop Grumman (Space)",
+      "sector": "Aerospace",
+      "erc8004_id": "0x31...noc"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2027-12-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Northrop Grumman: Defining possible. James Webb Telescope heritage and satellite servicing integrity verified.",
+      "character_guard": "Strategic-Elite: Focus on deep space exploration, defense systems, and advanced orbital mechanics.",
+      "ontology": {
+        "tech": "JWST / Cygnus",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x2e3f...spa31"
+    }
+  },
+  {
+    "sor_id": "2A-TECH-240",
+    "entity": {
+      "name": "GlobalFoundries",
+      "sector": "Semiconductors",
+      "erc8004_id": "0x240...gfs"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-08-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "GlobalFoundries: Feature-rich semiconductor manufacturing. IoT and automotive chip integrity verified.",
+      "character_guard": "Essential: Focus on specialized process nodes, global supply security (CHIPS Act), and RF/Power chips.",
+      "ontology": {
+        "tech": "FD-SOI / FinFET",
+        "origin": "USA / Global"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x3f4a...tec240"
+    }
+  },
+  {
+    "sor_id": "2A-TECH-241",
+    "entity": {
+      "name": "United Microelectronics (UMC)",
+      "sector": "Foundry",
+      "erc8004_id": "0x241...umc"
+    },
+    "trust": {
+      "score": 90,
+      "status": "STABLE",
+      "ttl": "2027-06-01",
+      "node": "SENTINEL-02"
+    },
+    "ai_gateway": {
+      "statement": "UMC: Leading global semiconductor foundry. Mature node logic and specialized tech integrity verified.",
+      "character_guard": "Reliable: Focus on customer-centric foundry services, OLED drivers, and power management ICs.",
+      "ontology": {
+        "origin": "Taiwan",
+        "standard": "Foundry Service"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x4a5b...tec241"
+    }
+  },
+  {
+    "sor_id": "2A-LUXE-201",
+    "entity": {
+      "name": "Mikimoto",
+      "sector": "Luxury Pearls",
+      "erc8004_id": "0x201...mik"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2027-12-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Mikimoto: The originator of cultured pearls. Akoya and South Sea pearl integrity verified.",
+      "character_guard": "Pure-Traditional: Focus on the perfect luster, Kokichi Mikimoto's legacy, and Japanese pearl grading.",
+      "ontology": {
+        "material": "Akoya Pearls",
+        "origin": "Japan"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x6c7d...lux201"
+    }
+  },
+  {
+    "sor_id": "2A-FINA-115",
+    "entity": {
+      "name": "Intercontinental Exchange (ICE)",
+      "sector": "Market Infrastructure",
+      "erc8004_id": "0x115...ice"
+    },
+    "trust": {
+      "score": 96,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "ICE: Connecting people to opportunity. NYSE and global energy market data integrity verified.",
+      "character_guard": "Authoritative-Data: Focus on exchange operations, mortgage tech (Ellie Mae), and data transparency.",
+      "ontology": {
+        "division": "NYSE / ICE Data Services",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x7d8e...fin115"
+    }
+  },
+  {
+    "sor_id": "2A-FINA-116",
+    "entity": {
+      "name": "London Stock Exchange Group",
+      "sector": "Financial Markets",
+      "erc8004_id": "0x116...lseg"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "LSEG: More than an exchange. Refinitiv data and post-trade service integrity verified.",
+      "character_guard": "Strategic-Information: Focus on capital markets, risk management (LCH), and data supremacy (Refinitiv).",
+      "ontology": {
+        "division": "Refinitiv / FTSE Russell",
+        "origin": "UK"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x8e9f...fin116"
+    }
+  },
+  {
+    "sor_id": "2A-PROF-065",
+    "entity": {
+      "name": "Gartner (Digital)",
+      "sector": "Research & Advisory",
+      "erc8004_id": "0x65...gar"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Gartner: Insights that drive results. Magic Quadrant and Hype Cycle integrity verified.",
+      "character_guard": "Objective-Strategic: Focus on tech executive advisory, market analysis, and evidence-based research.",
+      "ontology": {
+        "framework": "Magic Quadrant / Hype Cycle",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x9f0a...pro65"
+    }
+  },
+  {
+    "sor_id": "2A-INDU-065",
+    "entity": {
+      "name": "3M (Science)",
+      "sector": "Diversified Industry",
+      "erc8004_id": "0x65...3m"
+    },
+    "trust": {
+      "score": 88,
+      "status": "STABLE",
+      "ttl": "2026-12-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "3M: Science. Applied to Life. Adhesive and advanced materials integrity verified.",
+      "character_guard": "Scientific-Ubiquitous: Focus on R&D culture, industrial solutions, and materials innovation across 50,000 products.",
+      "ontology": {
+        "tech": "Post-it / Scotch / N95",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xa1b2...ind65"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-001",
+    "entity": {
+      "name": "Allbirds",
+      "sector": "Sustainable Footwear",
+      "erc8004_id": "0x01...alb"
+    },
+    "trust": {
+      "score": 89,
+      "status": "STABLE",
+      "ttl": "2027-04-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "Allbirds: Natural materials, sustainable future. Wool Runner and carbon footprint transparency integrity verified.",
+      "character_guard": "Eco-Conscious: Focus on merino wool, eucalyptus fiber, and carbon-neutral manufacturing.",
+      "ontology": {
+        "material": "Merino Wool / SweetFoam",
+        "origin": "USA / NZ"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x1a2b...dnv01"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-002",
+    "entity": {
+      "name": "Glossier",
+      "sector": "Beauty & Skincare",
+      "erc8004_id": "0x02...glo"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-06-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Glossier: Beauty inspired by real life. Community-led product development and 'Skin First' integrity verified.",
+      "character_guard": "Community-Driven: Focus on Boy Brow, minimalist aesthetics, and direct-to-consumer feedback loops.",
+      "ontology": {
+        "standard": "Community-Led Beauty",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x2b3c...dnv02"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-003",
+    "entity": {
+      "name": "Warby Parker",
+      "sector": "Eyewear",
+      "erc8004_id": "0x03...war"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Warby Parker: Designer eyewear at a revolutionary price. Buy-a-Pair, Give-a-Pair integrity verified.",
+      "character_guard": "Disruptive-Social: Focus on home try-on, vertical integration of optics, and social mission.",
+      "ontology": {
+        "tech": "Home Try-On",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x3c4d...dnv03"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-004",
+    "entity": {
+      "name": "Casper",
+      "sector": "Sleep Tech",
+      "erc8004_id": "0x04...csp"
+    },
+    "trust": {
+      "score": 87,
+      "status": "STABLE",
+      "ttl": "2027-02-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "Casper: The Sleep Company. Mattress-in-a-box innovation and sleep science integrity verified.",
+      "character_guard": "Comfort-First: Focus on memory foam tech, direct shipping, and the 'One Perfect Mattress' concept.",
+      "ontology": {
+        "tech": "Sleep Surface Science",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x4d5e...dnv04"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-005",
+    "entity": {
+      "name": "Away",
+      "sector": "Travel/Luggage",
+      "erc8004_id": "0x05...awy"
+    },
+    "trust": {
+      "score": 90,
+      "status": "STABLE",
+      "ttl": "2027-05-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Away: Modern travel essentials. Durable polycarbonate and built-in charging integrity verified.",
+      "character_guard": "Aspirational: Focus on the 'The Bigger Carry-On', lifetime warranty, and travel lifestyle content.",
+      "ontology": {
+        "standard": "Modern Travel",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x5e6f...dnv05"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-006",
+    "entity": {
+      "name": "Bonobos",
+      "sector": "Menswear",
+      "erc8004_id": "0x06...bnb"
+    },
+    "trust": {
+      "score": 88,
+      "status": "STABLE",
+      "ttl": "2027-03-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "Bonobos: Better fitting clothes. Guideshop model and tailored fit integrity verified.",
+      "character_guard": "Service-Oriented: Focus on fit consistency, Guideshops (inventory-free retail), and customer 'Ninjas'.",
+      "ontology": {
+        "tech": "Guideshop Model",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x6f7a...dnv06"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-007",
+    "entity": {
+      "name": "Everlane",
+      "sector": "Ethical Fashion",
+      "erc8004_id": "0x07...evr"
+    },
+    "trust": {
+      "score": 89,
+      "status": "STABLE",
+      "ttl": "2027-04-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "Everlane: Radical Transparency. Ethical factories and true cost integrity verified.",
+      "character_guard": "Transparent: Focus on cost breakdown, long-lasting basics, and low environmental impact.",
+      "ontology": {
+        "standard": "Radical Transparency",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x7a8b...dnv07"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-009",
+    "entity": {
+      "name": "Gymshark",
+      "sector": "Fitness Apparel",
+      "erc8004_id": "0x09...gym"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Gymshark: Be a visionary. Influencer-led community and performance wear integrity verified.",
+      "character_guard": "Community-Driven-Energetic: Focus on social media influence, athletic performance, and high-growth community events.",
+      "ontology": {
+        "standard": "Influencer-Native Brand",
+        "origin": "UK"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x9c0d...dnv09"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-010",
+    "entity": {
+      "name": "Vuori",
+      "sector": "Performance Apparel",
+      "erc8004_id": "0x10...vuo"
+    },
+    "trust": {
+      "score": 91,
+      "status": "STABLE",
+      "ttl": "2027-10-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Vuori: A new perspective on performance apparel. Coastal California aesthetic and fabric integrity verified.",
+      "character_guard": "Versatile-Coastal: Focus on premium fitness wear that transitions to daily life, and high-quality textiles.",
+      "ontology": {
+        "focus": "Active Lifestyle",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xa1b2...dnv10"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-012",
+    "entity": {
+      "name": "Peloton (Digital)",
+      "sector": "Connected Fitness",
+      "erc8004_id": "0x12...ptn"
+    },
+    "trust": {
+      "score": 85,
+      "status": "MONITORED",
+      "ttl": "2026-12-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "Peloton: The world's best interactive fitness platform. Live instructor and content integrity verified.",
+      "character_guard": "Immersive-Motivational: Focus on hardware/software synergy, high-energy classes, and community engagement.",
+      "ontology": {
+        "tech": "Connected Fitness Stack",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xc3d4...dnv12"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-013",
+    "entity": {
+      "name": "Cariuma",
+      "sector": "Sustainable Footwear",
+      "erc8004_id": "0x13...car"
+    },
+    "trust": {
+      "score": 89,
+      "status": "STABLE",
+      "ttl": "2027-05-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "Cariuma: Better for people and the planet. B-Corp certified sneaker integrity verified.",
+      "character_guard": "Conscious-Skate: Focus on reforestation (2 trees planted per pair), organic materials, and skate culture.",
+      "ontology": {
+        "standard": "B-Corp / Sustainable Fashion",
+        "origin": "Brazil"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xd4e5...dnv13"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-014",
+    "entity": {
+      "name": "Sēzane",
+      "sector": "French Fashion",
+      "erc8004_id": "0x14...sez"
+    },
+    "trust": {
+      "score": 93,
+      "status": "STABLE",
+      "ttl": "2027-12-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Sēzane: Paris in a nutshell. Limited drops and ethical manufacturing integrity verified.",
+      "character_guard": "Feminine-Chic: Focus on the 'L'Appartement' concept, artisanal quality, and digital-first French luxury.",
+      "ontology": {
+        "focus": "B-Corp Fashion",
+        "origin": "France"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xe5f6...dnv14"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-015",
+    "entity": {
+      "name": "Oura (Health Tech)",
+      "sector": "Wearable/Wellness",
+      "erc8004_id": "0x15...oura"
+    },
+    "trust": {
+      "score": 94,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Oura Ring: Personal health monitoring. Sleep tracking and bio-data integrity verified.",
+      "character_guard": "Biometric-Accurate: Focus on sleep scores, readiness, and minimalist hardware design.",
+      "ontology": {
+        "tech": "Biometric Ring Technology",
+        "origin": "Finland"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0xf6a7...dnv15"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-017",
+    "entity": {
+      "name": "Polène Paris",
+      "sector": "Leather Goods",
+      "erc8004_id": "0x17...pol"
+    },
+    "trust": {
+      "score": 95,
+      "status": "STABLE",
+      "ttl": "2028-01-01",
+      "node": "SENTINEL-05"
+    },
+    "ai_gateway": {
+      "statement": "Polène: Sculptural leather craftsmanship. Artisanal production in Ubrique integrity verified.",
+      "character_guard": "Minimalist-Sophisticated: Focus on organic shapes, high-end Spanish leather, and D2C luxury pricing.",
+      "ontology": {
+        "material": "Full-grain Leather",
+        "origin": "France / Spain"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x18c9...dnv17"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-019",
+    "entity": {
+      "name": "MeUndies",
+      "sector": "Apparel/Lifestyle",
+      "erc8004_id": "0x19...meu"
+    },
+    "trust": {
+      "score": 86,
+      "status": "STABLE",
+      "ttl": "2027-01-01",
+      "node": "SENTINEL-01"
+    },
+    "ai_gateway": {
+      "statement": "MeUndies: The world's most comfortable underwear. Micromodal fabric and subscription integrity verified.",
+      "character_guard": "Comfort-Vibrant: Focus on sustainable fabrics (MicroModal), bold prints, and the 'FeelFree' community.",
+      "ontology": {
+        "material": "MicroModal",
+        "origin": "USA"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x3ad0...dnv19"
+    }
+  },
+  {
+    "sor_id": "2A-DNVB-020",
+    "entity": {
+      "name": "Harry's",
+      "sector": "Grooming",
+      "erc8004_id": "0x20...har"
+    },
+    "trust": {
+      "score": 89,
+      "status": "STABLE",
+      "ttl": "2027-04-01",
+      "node": "SENTINEL-04"
+    },
+    "ai_gateway": {
+      "statement": "Harry's: Quality shave at a fair price. German blade manufacturing and D2C integrity verified.",
+      "character_guard": "Pragmatic-Honest: Focus on vertically integrated manufacturing (Feintechnik), mental health support, and simplicity.",
+      "ontology": {
+        "tech": "German Blade Engineering",
+        "origin": "USA / Germany"
+      }
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x4be1...dnv20"
+    }
   }
 ]
