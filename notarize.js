@@ -9,11 +9,11 @@ async function main() {
   const abi = ["function issueCertificate(string brandName, string reportHash) public"];
   const protocol = new ethers.Contract(contractAddress, abi, wallet);
 
-  // --- TON NOUVEAU ROOT HASH (Généré via shasum le 16/03/2026) ---
-  const bcorpRootHash = "0x7f563528d5b22f2d134bff5d62b55f65ce1199f64f70f02dcbdd692faa408f6b";
+ // --- TON NOUVEAU ROOT HASH SYNCHRONISÉ (802 NODES) ---
+ const bcorpRootHash = "0x773b2335c635dc82f9e04b9dfde3ae927b7b069dc3785c7fb46a360d1276f9d7";
 
-  // --- LABEL OFFICIEL MIS À JOUR POUR LE REGISTRE COMPLET ---
-  const batchLabel = "2A Agency Global Registry 2026 | Full SoR v2.0 Integrity Anchor";
+ // --- LABEL OFFICIEL MIS À JOUR ---
+ const batchLabel = "2A Agency Global Registry 2026 | Milestone 800 - 802 Trust Nodes";
 
   console.log("--------------------------------------------------");
   console.log("🛡️  NOTARISATION MASSIVE : SYSTEM OF RECORD");
