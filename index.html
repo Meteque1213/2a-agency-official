@@ -4,17 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2A Agency | The System of Record</title>
-    <meta name="description" content="Official System of Record for brand notarization on Base L2. We monitor 1000 brands for ERC-8004 compliance.">
+    
+    <meta name="google-site-verification" content="d2f5cc68a0acacf6" />
+    
+    <meta name="description" content="Official System of Record for brand notarization on Base L2. We monitor 1,056+ brands for AI-integrity and ERC-8004 compliance.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://www.2aagency.com/" />
-    <link rel="preload" href="/verify.js" as="script">
+    
     <style>
         body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .text-2a-emerald { color: #064e3b; }
         .logo-bold { font-weight: 900; letter-spacing: 0.3em; font-size: 15px; text-transform: uppercase; color: #064e3b; }
         .nav-link { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #000; opacity: 0.4; transition: opacity 0.3s; }
         .nav-link:hover { opacity: 1; }
+        
+        /* Sentinel Pulse Animation */
+        .sentinel-pulse { 
+            display: inline-block;
+            width: 8px; 
+            height: 8px; 
+            background-color: #10b981; 
+            border-radius: 50%; 
+            margin-right: 8px;
+            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); 
+            animation: pulse 2s infinite; 
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col p-6 md:p-12">
@@ -23,21 +43,20 @@
         <div class="logo-bold underline decoration-2 underline-offset-4 cursor-pointer" onclick="window.location.href='index.html'">2A Agency</div>
         <div class="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-bold items-center">
             <div class="px-2 py-0.5 border border-blue-600 text-blue-600 rounded text-[8px] tracking-tighter font-black">ERC-8004 COMPLIANT</div>
-            <a href="registry.html" class="nav-link">Registry</a>
-            <a href="glossary.html" class="nav-link">Glossary</a>
-            <a href="whitepaper.html" class="nav-link">Protocol</a>
+            <a href="audits.html" class="nav-link">Registry</a>
+            <a href="whitepaper.html" class="nav-link italic">Protocol_v2.1</a>
         </div>
     </nav>
 
     <main class="flex-grow flex flex-col justify-center items-center text-center max-w-4xl mx-auto w-full mb-12">
         <div class="flex flex-col md:flex-row items-center gap-6 mb-12 uppercase tracking-widest text-[9px] font-bold w-full justify-between">
             <div class="flex items-center gap-2 opacity-60">
-                <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                SENTINEL-01 : ACTIVE & MONITORING
+                <span class="sentinel-pulse"></span>
+                SENTINEL-01 : ACTIVE & MONITORING 1,056 NODES
             </div>
             
             <div class="flex items-center gap-2">
-                <a id="Base_Anchor" href="https://basescan.org/address/0xb3513bb3bfeBCe72D1941b29b6fE862F9268db14" target="_blank" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all font-bold">
+                <a id="Base_Anchor" href="https://basescan.org/tx/0xf32099e9a1219a5d82944a239388f8ee3f05127c45575a6dbac88b9c98ebfcd0" target="_blank" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all font-bold">
                     VÉRIFIER LE PROTOCOLE (BASE L2)
                 </a>
                 <span class="opacity-20">|</span>
@@ -53,11 +72,11 @@
         
         <p class="text-sm md:text-base font-medium opacity-60 max-w-2xl mx-auto leading-relaxed mb-12">
             Forensic brand integrity monitoring via ERC-8004 standard on Base L2.<br>
-            Securing metadata against AI hallucinations.
+            Securing metadata for 1,056 entities against AI hallucinations.
         </p>
 
         <div>
-            <a href="registry.html" class="text-xs font-black uppercase tracking-widest border-b-2 border-black pb-1 hover:text-emerald-900 hover:border-emerald-900 transition-all">
+            <a href="audits.html" class="text-xs font-black uppercase tracking-widest border-b-2 border-black pb-1 hover:text-emerald-900 hover:border-emerald-900 transition-all">
                 Open Full Registry →
             </a>
         </div>
@@ -80,10 +99,6 @@
                     <p class="text-[10px] leading-relaxed font-medium opacity-70">"Satisfies requirements for a Verifiable System of Record. Enabling absolute AI grounding via bit-exact matching."</p>
                 </div>
             </div>
-            <div class="flex justify-center gap-6 mt-8">
-                <a id="Proof_Script" href="/verify.js" class="text-[8px] font-black uppercase tracking-widest border border-black/10 px-2 py-1 hover:border-black transition-all">Proof_Script</a>
-                <a href="https://basescan.org/address/0xb3513bb3bfeBCe72D1941b29b6fE862F9268db14" target="_blank" class="text-[8px] font-black uppercase tracking-widest border border-black/10 px-2 py-1 hover:border-black transition-all">Base_Anchor</a>
-            </div>
         </div>
     </section>
 
@@ -104,47 +119,33 @@
 
         <form id="2a-contact-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col items-center md:items-end gap-3">
             <input type="hidden" name="_subject" value="Nouveau Signalement Forensic - 2A Agency">
-            
-            <input type="text" name="brand" placeholder="BRAND_NAME" required 
-                   class="bg-transparent border-b border-black text-[9px] py-1 outline-none w-48 focus:border-emerald-900 transition-all uppercase font-bold text-center md:text-right">
-            
-            <input type="email" name="email" placeholder="AGENT_EMAIL" required 
-                   class="bg-transparent border-b border-black text-[9px] py-1 outline-none w-48 focus:border-emerald-900 transition-all uppercase font-bold text-center md:text-right">
-            
-            <button type="submit" class="text-[9px] font-black uppercase tracking-widest border border-black px-4 py-1 hover:bg-black hover:text-white transition-all mt-1">
-                Send Request →
-            </button>
+            <input type="text" name="brand" placeholder="BRAND_NAME" required class="bg-transparent border-b border-black text-[9px] py-1 outline-none w-48 focus:border-emerald-900 transition-all uppercase font-bold text-center md:text-right">
+            <input type="email" name="email" placeholder="AGENT_EMAIL" required class="bg-transparent border-b border-black text-[9px] py-1 outline-none w-48 focus:border-emerald-900 transition-all uppercase font-bold text-center md:text-right">
+            <button type="submit" class="text-[9px] font-black uppercase tracking-widest border border-black px-4 py-1 hover:bg-black hover:text-white transition-all mt-1">Send Request →</button>
         </form>
     </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var form = document.getElementById("2a-contact-form");
-            
             if (form) {
                 form.addEventListener("submit", function(event) {
                     event.preventDefault(); 
                     var data = new FormData(form);
-                    
                     fetch(form.action, {
                         method: form.method,
                         body: data,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
+                        headers: { 'Accept': 'application/json' }
                     }).then(response => {
                         if (response.ok) {
-                            window.location.href = "https://www.2aagency.com/thanks.html";
+                            window.location.href = "thanks.html";
                         } else {
                             alert("Erreur serveur Formspree.");
                         }
-                    }).catch(error => {
-                        alert("Erreur réseau.");
-                    });
+                    }).catch(error => { alert("Erreur réseau."); });
                 });
             }
         });
     </script>
-
 </body>
 </html>
