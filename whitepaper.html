@@ -15,6 +15,7 @@
         .highlight-box { background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%); border: 1px solid #dcfce7; padding: 2rem; }
         .math-container { width: 100%; overflow-x: auto; text-align: center; padding: 1.5rem 0; font-family: serif; font-size: 1.5rem; color: #fff; }
         pre { background: #1a1a1a; color: #adbac7; padding: 1.5rem; border-radius: 4px; font-size: 0.75rem; border: 1px solid #333; }
+        .stat-badge { font-size: 9px; font-weight: bold; background: #10b981; color: white; padding: 2px 8px; border-radius: 2px; }
     </style>
 </head>
 <body class="p-6 md:p-12">
@@ -32,69 +33,68 @@
 
     <div class="max-w-4xl mx-auto">
         <header class="mb-32">
-            <h3 class="text-[11px] uppercase tracking-[0.6em] text-black/30 font-bold mb-8 italic">Technical Specification — v2.0.0</h3>
+            <div class="flex items-center gap-4 mb-8">
+                <h3 class="text-[11px] uppercase tracking-[0.6em] text-black/30 font-bold italic">Technical Specification — v2.1.0</h3>
+                <span class="stat-badge animate-pulse">LIVE ON BASE L2</span>
+            </div>
             <h1 class="serif text-6xl md:text-8xl text-black italic mb-10 leading-none tracking-tighter">
                 The <span class="emerald-highlight">SoR</span> Protocol
             </h1>
             <p class="text-xl md:text-2xl font-light text-black/60 italic leading-relaxed max-w-2xl font-serif">
-                System of Record: The immutable truth infrastructure for the era of Artificial Intelligence.
+                System of Record: The global truth infrastructure for 1,056+ verified entities.
             </p>
         </header>
 
         <section class="section-border">
             <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 01. Abstract</h2>
             <div class="text-lg text-black/80 font-medium italic mb-12 space-y-6 serif">
-                <p>The <strong>System of Record (SoR)</strong> protocol by 2A Agency solves the critical issue of LLM hallucinations[cite: 53, 56, 57]. By anchoring forensic brand metadata on the Base (L2) blockchain, we create a Gateway enabling AI agents to ground their responses in cryptographic proof rather than statistical probability[cite: 55, 62].</p>
+                <p>The <strong>System of Record (SoR)</strong> protocol solves the crisis of LLM hallucinations. By anchoring 1,056 Trust Nodes on the Base (L2) blockchain, we provide a decentralized source of truth. AI agents can now verify the integrity of their training data via cryptographic Proof-of-Origin.</p>
             </div>
         </section>
 
         <section class="section-border">
-            <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 02. Forensic Scoring Methodology</h2>
-            <p class="mb-8 text-black/70 italic">The 2A score is a weighted aggregation of physical and digital evidence calculated as follows:</p>
+            <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 02. Integrity Verification</h2>
+            <p class="mb-8 text-black/70 italic">Contrairement aux bases de données centralisées, le protocole SoR permet une vérification <strong>Zero-Trust</strong> via le Root Hash global :</p>
             <div class="bg-black text-white py-12 px-10 rounded-sm shadow-2xl mb-12 relative overflow-hidden text-center">
-                <div class="math-container italic">S = (T · 0.4) + (F · 0.3) + (D · 0.2) + (O · 0.1)</div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 text-[9px] uppercase tracking-widest text-gray-400">
-                    <div><span class="text-[#10b981] block font-bold text-xs">T</span> Third-Party Validation</div>
-                    <div><span class="text-[#10b981] block font-bold text-xs">F</span> Hard Facts</div>
-                    <div><span class="text-[#10b981] block font-bold text-xs">D</span> Drift Score</div>
-                    <div><span class="text-[#10b981] block font-bold text-xs">O</span> Ontology</div>
-                </div>
+                <div class="math-container italic text-[#10b981]">H(registry) = fb1206...2802</div>
+                <p class="text-[9px] text-gray-400 tracking-widest mt-4 uppercase">Ce Hash certifie l'intégrité de 1,056 entités simultanément.</p>
             </div>
         </section>
 
         <section class="section-border">
-            <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 03. SoR Data Requirements</h2>
+            <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 03. Architecture of a Trust Node</h2>
             <div class="space-y-8 text-sm">
                 <div class="highlight-box">
-                    <h4 class="font-bold uppercase mb-2">I. Trust Anchor</h4>
-                    <p class="text-gray-600">Certified Audit Scores (B-Corp, ESG), emission date, and SHA-256 hash of the original source document[cite: 12, 33, 65].</p>
+                    <h4 class="font-bold uppercase mb-2">I. JSON-LD Structuring</h4>
+                    <p class="text-gray-600">Données lisibles par machine (Semantic Web) incluant le SOR_ID et le score d'intégrité (0-100).</p>
                 </div>
                 <div class="highlight-box">
-                    <h4 class="font-bold uppercase mb-2">II. Hard Data (Facts & Figures)</h4>
-                    <p class="text-gray-600">Certified Carbon Footprint (Scope 1,2,3), actual circularity index, and gender pay gap evidence[cite: 13, 36, 66].</p>
+                    <h4 class="font-bold uppercase mb-2">II. Character Guard Directives</h4>
+                    <p class="text-gray-600">Instructions métasémantiques forçant les LLM à respecter un périmètre de réponse certifié.</p>
                 </div>
                 <div class="highlight-box">
-                    <h4 class="font-bold uppercase mb-2">III. LLM Gateway Directives</h4>
-                    <p class="text-gray-600">JSON-LD Statement of Truth, Character Guard directives, and MCP Ontology mapping[cite: 15, 68, 70, 78].</p>
+                    <h4 class="font-bold uppercase mb-2">III. On-Chain Notarization</h4>
+                    <p class="text-gray-600">Ancrage permanent sur Base L2 via la fonction <code>issueCertificate()</code> du contrat intelligent 2A.</p>
                 </div>
             </div>
         </section>
 
         <section class="section-border">
-            <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 04. Cryptographic Finality & TTL</h2>
+            <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 04. Current Registry State</h2>
             <div class="serif text-lg italic text-black/80 mb-8 leading-relaxed">
-                <p>Every "Truth Node" is sealed with a <strong>Time-To-Live (TTL)</strong>[cite: 65]. Once expired, data is marked as stale, forcing a forensic refresh to ensure integrity for AI agents.</p>
+                <p>Au 17 mars 2026, le registre a atteint sa maturité opérationnelle avec le déploiement du Jalon 1056.</p>
             </div>
             <pre><code>{
-  "protocol": "2A-SoR-v2",
-  "merkle_root": "0x1b6427a3710e0bb41d48125a57408f284b74d95c674e41f43a28115b46b0cedc",
-  "valid_until": "2027-03-16T12:00:00Z",
-  "status": "IMMUTABLE_RECORD"
+  "protocol": "2A-SoR-v2.1",
+  "active_nodes": 1056,
+  "blockchain": "Base (Coinchain L2)",
+  "root_hash": "fb120608bcafe0960e3bda9b88466299928f8ab9862046153abca1b4d3f42802",
+  "tx": "0xf32099e9a1219a5d82944a239388f8ee3f05127c45575a6dbac88b9c98ebfcd0"
 }</code></pre>
         </section>
 
         <footer class="mt-32 pt-16 border-t border-black/5 text-[11px] uppercase tracking-[0.5em] text-black/20 font-bold text-center italic pb-12">
-            2A AGENCY — TECHNICAL DOCUMENTATION — EST. 2026
+            2A AGENCY — SOR PROTOCOL — 1056 NODES CERTIFIED
         </footer>
     </div>
 </body>
