@@ -13,13 +13,23 @@
         .audit-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left-color: #10b981; }
         .search-sticky { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95); backdrop-blur: 10px; }
         
-        /* Couleur Émeraude Index */
         .brand-name { color: #10b981; } 
         .btn-emerald { background-color: #10b981; transition: all 0.2s ease; }
         .btn-emerald:hover { opacity: 0.8; transform: scale(1.02); }
         
         pre { scrollbar-width: none; }
         pre::-webkit-scrollbar { display: none; }
+
+        /* Animation pour le chargement */
+        .loading-shimmer {
+            background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
     </style>
 </head>
 <body class="p-6 md:p-12 text-black">
@@ -47,7 +57,7 @@
                             <span class="text-[9px] text-emerald-700 font-bold uppercase tracking-widest">Base Mainnet L2 Anchor Active</span>
                         </div>
                         <p class="text-[10px] text-emerald-900/60 leading-relaxed max-w-xl mt-2">
-                            Ce registre est notaridé de manière immuable. Le Root Hash certifie l'intégrité de <strong><span id="anchor-count">0</span> Trust Nodes</strong>.
+                            Ce registre est notarié de manière immuable. Le Root Hash certifie l'intégrité de <strong><span id="anchor-count">...</span> Trust Nodes</strong>.
                         </p>
                     </div>
                     <a href="https://basescan.org/tx/0x07999c76eac18b66e9131d9920639621331f0bd1802e8842f1e563a51a72ddd0" 
@@ -65,18 +75,21 @@
 
         <div class="search-sticky py-8 mb-8 border-b border-gray-100">
             <input type="text" id="brandSearch" onkeyup="filterAudits()" 
-                   placeholder="SEARCH SYSTEM OF RECORDS (300+ ENTITIES)..." 
+                   placeholder="SEARCH SYSTEM OF RECORDS (500+ ENTITIES)..." 
                    class="w-full bg-gray-50 border border-gray-100 p-6 font-mono text-xs tracking-[0.2em] focus:outline-none focus:border-emerald-500 transition-all uppercase placeholder:opacity-30 text-emerald-900">
         </div>
 
-        <div id="audit-container" class="space-y-4 pb-20"></div>
+        <div id="audit-container" class="space-y-4 pb-20">
+            <div class="text-center py-20 font-mono text-xs text-emerald-500 animate-pulse uppercase tracking-widest italic">
+                Ingestion des Trust Nodes en cours...
+            </div>
+        </div>
     </main>
 
     <div id="verifyModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md">
         <div class="bg-white max-w-2xl w-full p-8 border-t-8 border-[#10b981] shadow-2xl relative">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black font-mono text-[10px] uppercase tracking-widest italic">Close_Session [X]</button>
-            <div id="modalContent">
-                </div>
+            <div id="modalContent"></div>
         </div>
     </div>
 
@@ -85,26 +98,49 @@
         let currentData = [];
 
         async function loadAudits() {
+            const container = document.getElementById('audit-container');
+            
             try {
-                const response = await fetch(REGISTRY_URL);
+                // Timeout de 10 secondes pour le fetch
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 10000);
+
+                const response = await fetch(REGISTRY_URL, { signal: controller.signal });
+                clearTimeout(timeoutId);
+
+                if (!response.ok) throw new Error('Network response was not ok');
+                
                 currentData = await response.json();
                 document.getElementById('anchor-count').textContent = currentData.length;
-                renderAudits(currentData);
+                
+                // Rendu asynchrone pour ne pas geler l'UI
+                requestAnimationFrame(() => renderAudits(currentData));
+
             } catch (err) {
-                document.getElementById('audit-container').innerHTML = `<div class="text-center py-20 font-mono text-xs text-red-500 uppercase">Gateway Timeout</div>`;
+                console.error("Erreur:", err);
+                container.innerHTML = `
+                    <div class="text-center py-20 border-2 border-dashed border-red-100 rounded-sm">
+                        <div class="font-mono text-[10px] text-red-500 uppercase tracking-widest mb-2 font-bold italic underline">Gateway Timeout</div>
+                        <p class="text-[9px] text-gray-400 uppercase tracking-tighter">La base de données est trop lourde ou inaccessible. Vérifiez votre connexion.</p>
+                        <button onclick="location.reload()" class="mt-6 text-[8px] font-black uppercase tracking-widest border border-gray-200 px-4 py-2 hover:bg-gray-50 italic">Retry_Session</button>
+                    </div>`;
             }
         }
 
         function renderAudits(items) {
             const container = document.getElementById('audit-container');
-            container.innerHTML = items.map((item, index) => {
+            const fragment = document.createDocumentFragment();
+            
+            items.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = "audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-4";
+                
                 const name = item.entity.name.replace("LVMH (", "").replace(")", "");
                 const score = item.trust.score;
                 const status = item.trust.status;
                 const scoreColor = score > 90 ? "text-[#10b981]" : (score > 70 ? "text-orange-500" : "text-red-500");
 
-                return `
-                <div class="audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                div.innerHTML = `
                     <div class="flex-1">
                         <div class="flex items-center gap-2 mb-2">
                             <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em]">${status}</span>
@@ -122,9 +158,12 @@
                                 class="btn-emerald text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic">
                             Certify for AI
                         </button>
-                    </div>
-                </div>`;
-            }).join('');
+                    </div>`;
+                fragment.appendChild(div);
+            });
+
+            container.innerHTML = '';
+            container.appendChild(fragment);
         }
 
         function openLLMGateway(index) {
@@ -181,9 +220,14 @@
         function filterAudits() {
             const val = document.getElementById('brandSearch').value.toUpperCase();
             const cards = document.getElementsByClassName('audit-card');
-            for (let card of cards) {
-                card.style.display = card.innerText.toUpperCase().includes(val) ? "" : "none";
-            }
+            
+            // On utilise requestAnimationFrame pour fluidifier la recherche
+            requestAnimationFrame(() => {
+                for (let card of cards) {
+                    const text = card.textContent || card.innerText;
+                    card.style.display = text.toUpperCase().includes(val) ? "" : "none";
+                }
+            });
         }
 
         window.onload = loadAudits;
