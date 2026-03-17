@@ -1,15 +1,43 @@
 import json
 import os
+import sys
 
 # 1. Charger ton registre
-with open('registry.json', 'r') as f:
-    data = json.load(f)
+try:
+    with open('registry.json', 'r') as f:
+        data = json.load(f)
+except Exception as e:
+    print(f"❌ Erreur de lecture JSON : {e}")
+    sys.exit(1)
 
-# Créer le dossier audits s'il n'existe pas
+# --- DOUBLE CHECK : RECHERCHE DE DOUBLONS ---
+seen_ids = set()
+seen_names = set()
+duplicates = []
+
+for item in data:
+    sid = item.get('sor_id')
+    name = item.get('entity', {}).get('name')
+    
+    if sid in seen_ids:
+        duplicates.append(f"ID Doublon: {sid} ({name})")
+    if name in seen_names:
+        duplicates.append(f"Nom Doublon: {name} ({sid})")
+        
+    seen_ids.add(sid)
+    seen_names.add(name)
+
+if duplicates:
+    print("⚠️ COLLISION DETECTÉE - ARRÊT DU PROCESSUS")
+    for d in duplicates:
+        print(f"  -> {d}")
+    print("\n[Action requise] : Corrige ces doublons dans registry.json avant de continuer.")
+    sys.exit(1) # Arrête l'exécution pour protéger l'index
+# ---------------------------------------------
+
 if not os.path.exists('audits'):
     os.makedirs('audits')
 
-# 2. Générer le contenu pour index_ia.html
 html_index_ia = """<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>2A Agency - Full SoR Index</title></head><body>
 <h1>2A Agency System of Record - Full Database</h1>"""
 
@@ -20,11 +48,10 @@ for item in data:
     sector = item['entity']['sector']
     statement = item['ai_gateway']['statement']
     
-    # GESTION DE L'ERREUR PROOF (Vérifie si c'est un dict ou une string)
     proof_val = item['proof']
     proof_hash = proof_val['hash'] if isinstance(proof_val, dict) else proof_val
 
-    # On ajoute à l'index global
+    # Index IA
     html_index_ia += f"""
     <article>
         <h2>{name}</h2>
@@ -33,7 +60,7 @@ for item in data:
         <a href="audits/{sor_id}.html">View Full Forensic Audit</a>
     </article><hr>"""
 
-    # 3. GÉNÉRATION DE LA PAGE INDIVIDUELLE
+    # Page individuelle
     page_audit = f"""<!DOCTYPE html><html><head><title>Audit {name} | 2A Agency</title>
     <meta name="description" content="Certified Integrity Score for {name}: {score}/100. Audited by 2A Agency via ERC-8004.">
     </head><body>
@@ -56,4 +83,4 @@ html_index_ia += "</body></html>"
 with open('index_ia.html', 'w') as f:
     f.write(html_index_ia)
 
-print(f"✅ Succès ! Index IA et {len(data)} pages individuelles créées sans erreur.")
+print(f"✅ Intégrité vérifiée. Index IA et {len(data)} pages individuelles créées.")
