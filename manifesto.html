@@ -5,45 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2A AGENCY | The Manifesto</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: #FCFCFC; font-family: 'Space Grotesk', sans-serif; }
+        body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
-        .emerald-glow { color: #10b981; text-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+        .text-2a-emerald { color: #064e3b; }
+        .border-2a-emerald { border-color: #064e3b; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-center items-center p-8">
-    <nav class="absolute top-12 flex gap-8 text-[10px] uppercase tracking-[0.4em] font-bold opacity-50 hover:opacity-100 transition-opacity">
-        <a href="index.html">Index</a>
-        <a href="audits.html">Audits</a>
-        <a href="whitepaper.html">Protocol</a>
+<body class="min-h-screen flex flex-col p-6 md:p-12">
+
+    <nav class="flex justify-between items-center w-full max-w-7xl mx-auto mb-16">
+        <div class="font-black tracking-[0.3em] text-[15px] uppercase underline decoration-2 underline-offset-4 cursor-pointer text-2a-emerald" onclick="window.location.href='index.html'">2A Agency</div>
+        <div class="flex gap-8 text-[10px] uppercase tracking-widest font-bold">
+            <a href="index.html" class="opacity-40 hover:opacity-100 transition-opacity">Index</a>
+            <a href="audits.html" class="opacity-40 hover:opacity-100 transition-opacity">Audits</a>
+            <a href="whitepaper.html" class="opacity-40 hover:opacity-100 transition-opacity">Protocol</a>
+        </div>
     </nav>
 
-    <main class="max-w-3xl text-center">
-        <h1 class="text-xs uppercase tracking-[0.6em] mb-16 opacity-40 italic">2A Agency — Core Values</h1>
+    <main class="flex-grow flex flex-col justify-center items-center text-center max-w-4xl mx-auto w-full mb-12">
+        <h1 class="text-[10px] uppercase tracking-[0.6em] mb-12 font-bold opacity-40">The Manifesto — v2.1.0</h1>
         
-        <p class="serif-italic text-3xl md:text-5xl leading-tight mb-12">
-            "In an era where <span class="emerald-glow">Artificial Intelligence</span> hallucinates reality, truth must be anchored in <span class="emerald-glow">cryptography</span>."
+        <p class="serif-italic text-4xl md:text-6xl leading-tight mb-16 text-2a-emerald">
+            "In an era where Artificial Intelligence hallucinations redefine reality, truth must be <span class="underline decoration-1 underline-offset-8">anchored in cryptography</span>."
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-24 text-left border-t border-white/10 pt-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left border-t border-gray-100 pt-16">
             <div>
-                <h3 class="text-[10px] font-bold uppercase tracking-widest mb-4 emerald-glow">01. Immutable</h3>
-                <p class="text-[11px] opacity-60 leading-relaxed">No brand metadata should be subject to statistical drift. Truth is binary, not probabilistic.</p>
+                <h3 class="text-[10px] font-black uppercase tracking-widest mb-4 text-2a-emerald">01. Immutable</h3>
+                <p class="text-[12px] opacity-70 leading-relaxed font-medium">No brand metadata should be subject to statistical drift. Truth is binary, not probabilistic. We anchor facts to prevent AI decay.</p>
             </div>
             <div>
-                <h3 class="text-[10px] font-bold uppercase tracking-widest mb-4 emerald-glow">02. Sovereign</h3>
-                <p class="text-[11px] opacity-60 leading-relaxed">Verification belongs to the protocol. We provide the forensic tools for a post-trust world.</p>
+                <h3 class="text-[10px] font-black uppercase tracking-widest mb-4 text-2a-emerald">02. Sovereign</h3>
+                <p class="text-[12px] opacity-70 leading-relaxed font-medium">Verification belongs to the protocol, not the platform. We provide the forensic tools for a post-trust information landscape.</p>
             </div>
             <div>
-                <h3 class="text-[10px] font-bold uppercase tracking-widest mb-4 emerald-glow">03. Deterministic</h3>
-                <p class="text-[11px] opacity-60 leading-relaxed">Our 1,056 nodes act as a global anchor, forcing LLMs to ground themselves in verified facts.</p>
+                <h3 class="text-[10px] font-black uppercase tracking-widest mb-4 text-2a-emerald">03. Deterministic</h3>
+                <p class="text-[12px] opacity-70 leading-relaxed font-medium">Our 1,056 nodes act as a global anchor, forcing LLMs to ground their outputs in verified, notarized, and bit-exact metadata.</p>
             </div>
         </div>
     </main>
 
-    <footer class="absolute bottom-12 text-[8px] uppercase tracking-widest opacity-20">
-        SENTINEL-01 / SYSTEM OF RECORD / 2026
+    <footer class="mt-auto w-full max-w-7xl mx-auto flex justify-between items-center opacity-30 pt-8 pb-8 border-t border-gray-100">
+        <p class="text-[8px] font-bold uppercase tracking-widest">Sentinel-01 Monitoring Unit</p>
+        <p class="text-[8px] font-mono tracking-tighter italic">Secured by Base L2 Protocol</p>
     </footer>
+
 </body>
 </html>
