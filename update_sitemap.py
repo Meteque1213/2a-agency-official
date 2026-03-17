@@ -8,6 +8,7 @@ SITEMAP_FILE = 'sitemap.xml'
 
 def generate_sitemap():
     try:
+        # On force l'encodage utf-8 pour éviter les erreurs sur les noms accentués
         with open(REGISTRY_FILE, 'r', encoding='utf-8') as f:
             nodes = json.load(f)
     except FileNotFoundError:
@@ -30,7 +31,8 @@ def generate_sitemap():
     for node in nodes:
         sor_id = node.get('sor_id')
         if sor_id:
-            url = f"{DOMAIN}/audit/{sor_id}.html"
+            # CORRECTION : Ajout du 's' à audits pour correspondre à ton dossier GitHub
+            url = f"{DOMAIN}/audits/{sor_id}.html"
             lines.append(f'  <url>')
             lines.append(f'    <loc>{url}</loc>')
             lines.append(f'    <lastmod>{today}</lastmod>')
@@ -42,7 +44,7 @@ def generate_sitemap():
     with open(SITEMAP_FILE, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
     
-    print(f"✅ Sitemap généré avec succès : {len(nodes) + 3} URLs indexées.")
+    print(f"✅ Sitemap généré avec succès : {len(nodes) + 3} URLs indexées avec le chemin /audits/.")
 
 if __name__ == "__main__":
     generate_sitemap()

@@ -9,24 +9,24 @@ async function main() {
   const abi = ["function issueCertificate(string brandName, string reportHash) public"];
   const protocol = new ethers.Contract(contractAddress, abi, wallet);
 
- // --- TON NOUVEAU ROOT HASH SYNCHRONISÉ (802 NODES) ---
- const bcorpRootHash = "0x773b2335c635dc82f9e04b9dfde3ae927b7b069dc3785c7fb46a360d1276f9d7";
+  // --- TON NOUVEAU ROOT HASH (JALON 1056) ---
+  const registryRootHash = "0xfb120608bcafe0960e3bda9b88466299928f8ab9862046153abca1b4d3f42802";
 
- // --- LABEL OFFICIEL MIS À JOUR ---
- const batchLabel = "2A Agency Global Registry 2026 | Milestone 800 - 802 Trust Nodes";
+  // --- LABEL OFFICIEL ---
+  const notarizationMemo = "2A Agency | System of Record | 1056 Trust Nodes Certified | v1.0.0";
 
   console.log("--------------------------------------------------");
   console.log("🛡️  NOTARISATION MASSIVE : SYSTEM OF RECORD");
   console.log(`📊 Statut     : Déploiement Registre Complet`);
-  console.log(`🔐 Root Hash  : ${bcorpRootHash}`);
-  console.log(`📝 Label      : ${batchLabel}`);
+  console.log(`🔐 Root Hash  : ${registryRootHash}`);
+  console.log(`📝 Label      : ${notarizationMemo}`);
   console.log("--------------------------------------------------");
 
   try {
     console.log("⏳ Envoi de la preuve sur Base (Mainnet)...");
     
-    // Appel à la fonction du contrat
-    const tx = await protocol.issueCertificate(batchLabel, bcorpRootHash);
+    // Appel à la fonction du contrat avec les BONNES variables
+    const tx = await protocol.issueCertificate(notarizationMemo, registryRootHash);
     
     console.log("📡 Transaction envoyée, attente de confirmation...");
     const receipt = await tx.wait();
