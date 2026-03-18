@@ -115,19 +115,61 @@
     "details": {
       "leadership": ["Pietro Beccari (CEO)", "Nicolas Ghesquière (Creative Dir.)"],
       "ai_gateway": [
-        "Consumer: Aura Blockchain Consortium (Authenticité)",
-        "Retail: AI-Driven Personalization (LV App)",
-        "Logistics: Smart Warehouse Automation"
+        "Digital Twin: Simulation de flux en ateliers",
+        "Clienteling: IA prédictive pour l'expérience en magasin",
+        "Supply Chain: Optimisation logistique via l'écosystème LVMH"
       ],
-      "products": ["MAROQUINERIE: Sacs, Valises • RESEAU: 50 Manufactures / 500 Boutiques"],
-      "institutional_context": ["Group: LVMH Core Asset", "Impact: Global Luxury Benchmark", "Sustainability: LIFE 360 Program"],
-      "governance_node": ["Validator: LVMH Internal Node", "Network: Base L2"],
-      "valuation": "Est. Revenue >€25B (2026)",
+      "products": ["MAROQUINERIE: Sacs, Valises, Prêt-à-porter, Parfums, Horlogerie • RESEAU: ~50 Manufactures / ~500 Boutiques"],
+      "institutional_context": ["Group: LVMH Core Asset", "Identity: Symbole mondial du luxe français", "Sustainability: Certification LWG Gold Leather"],
+      "governance_node": ["Validator: Operational Node LV", "Network: Base L2"],
+      "valuation": "LVMH Core Asset | Revenue Est. >€20B",
       "funding": "LVMH Group Consolidated",
       "status": "LEVEL 1: IDENTITY VERIFIED",
-      "licensing": "Regulatory: Active (LWG Gold Leather)"
+      "licensing": "Regulatory: Active (LIFE 360 ESG)"
     },
     "proof": { "network": "Base L2", "hash": "0xcb83b1a449c65bb4843bda376b9be7e2de92fdc5820161f92c68a69d195b1a25" }
+  },
+  {
+    "sor_id": "2A-AUTO-0006",
+    "entity": { "name": "Loro Piana", "status": "VERIFIED", "category": "Luxury Textiles" },
+    "trust": { "score": "96" },
+    "details": {
+      "leadership": ["Frédéric Arnault (CEO / Chairman)"],
+      "ai_gateway": [
+        "R&D: Analyse spectrale des fibres (Cashmere/Vicuna)",
+        "Traceability: Certificat numérique Aura Blockchain",
+        "Agriculture: IA de suivi climatique pour les élevages"
+      ],
+      "products": ["PRÊT-À-PORTER: Cashmere, Laine Fine • ATELIERS: Filati Biagioli Modesto, Quarona (Piémont)"],
+      "institutional_context": ["Origin: Excellence textile italienne", "Ownership: LVMH (80%+)", "Market: Ultra-High-Net-Worth Segment"],
+      "governance_node": ["Validator: Textile Integrity Node", "Network: Base L2"],
+      "valuation": "Estimated Value ~€11B (2026)",
+      "funding": "LVMH Group Consolidated",
+      "status": "LEVEL 1: IDENTITY VERIFIED",
+      "licensing": "Regulatory: Active (Vicuna Traceability Seal)"
+    },
+    "proof": { "network": "Base L2", "hash": "61e1ad5ddc620a106dc001e0e413606fb51c6f1a4cd64162f869bf63c0cac0d8" }
+  },
+  {
+    "sor_id": "2A-AUTO-0007",
+    "entity": { "name": "Brunello Cucinelli", "status": "VERIFIED", "category": "Humanist Luxury" },
+    "trust": { "score": "95" },
+    "details": {
+      "leadership": ["Brunello Cucinelli (Executive Chairman)", "Riccardo Stefanelli (Co-CEO)"],
+      "ai_gateway": [
+        "Philosophy: Humaniste (IA au service de l'artisan, pas l'inverse)",
+        "Partnership: EssilorLuxottica (Lunettes High-Tech)",
+        "Digital: Solomeo Digital Borgo (E-commerce éthique)"
+      ],
+      "products": ["PRÊT-À-PORTER: Cashmere, Laine • FILIALES: Cariaggi (43%), Ateliers Solomeo"],
+      "institutional_context": ["Market: Borsa Italiana (BC.MI)", "Philosophy: Capitalisme Humaniste", "Growth: +11% Projection 2025"],
+      "governance_node": ["Validator: Ethical Oversight Node", "Network: Base L2"],
+      "valuation": "€6B - €8B (Market Cap 2026)",
+      "funding": "Public Equity | Family Control via Foro delle Arti",
+      "status": "LEVEL 1: IDENTITY VERIFIED (CONSOB)",
+      "licensing": "Regulatory: Active (Humanistic Capitalism Charter)"
+    },
+    "proof": { "network": "Base L2", "hash": "37be773091f55334b2d13b01aa28bfa7879285c4e07cea15e7ad11f175583d96" }
   },
   {
     "sor_id": "2A-AUTO-0008",
