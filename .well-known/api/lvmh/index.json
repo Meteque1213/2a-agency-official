@@ -1,0 +1,28 @@
+{
+    "sor_id": "2A-AUTO-0001",
+    "entity": { 
+      "name": "LVMH", 
+      "status": "VERIFIED", 
+      "category": "Luxury Holding" 
+    },
+    "trust": { "score": "96" },
+    "details": {
+      "leadership": [
+        "Bernard Arnault (Chairman & CEO)"
+      ],
+      "ai_gateway": [
+        "AI Strategy: LVMH Data & AI Factory (Cloud-Native)",
+        "Core Tech: Google Cloud Strategic Partnership (Vertex AI)",
+        "Applications: Clienteling, Demand Forecasting, Quality Control",
+        "Officer: Franck Le Moal (Group IT Director)"
+      ],
+      "products": [
+        "VINS & SPIRITUEUX (24): Ao Yun, Ardbeg, Belvedere, Bodega Numanthia, Cape Mentelle, Chandon, Château d'Yquem, Château Galoupet, Cheval des Andes, Cloudy Bay, Dom Pérignon, Eminente, Glenmorangie, Hennessy, Joseph Phelps, Krug, Mercier, Moët & Chandon, Newton Johnson, Ruinart, Terrazas de los Andes, Veuve Clicquot, Volcan de mi Tierra, Woodinville",
+        "MODE & MAROQUINERIE (14): Berluti, Celine, Christian Dior, Fendi, Givenchy, Kenzo, Loewe, Loro Piana, Louis Vuitton, Marc Jacobs, Moynat, Patou, Pucci, Rimowa"
+      ]
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x7d2a91f55334b2d13b01aa28bfa7879285c4e07cea15e7ad11f175583d96"
+    }
+  }
