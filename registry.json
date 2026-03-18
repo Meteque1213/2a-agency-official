@@ -89,24 +89,47 @@
   },
   {
     "sor_id": "2A-AUTO-0004",
-    "entity": { "name": "Patek Philippe", "status": "VERIFIED", "category": "Haute Horlogerie" },
-    "trust": { "score": "97" },
-    "details": {
-      "leadership": ["Thierry Stern (President)"],
-      "ai_gateway": [
-        "R&D: Patek Philippe Advanced Research (Matériaux)",
-        "Tech: Simulation de mouvements mécaniques haute précision",
-        "Digital: Registry 2.0 (Certificats d'origine numériques)"
-      ],
-      "products": ["HORLOGERIE: Patek Philippe (~60,000 pcs/an) • ATELIERS: Salanitro (Sertissage), Calame & Cie (Boîtiers)"],
-      "institutional_context": ["Market: Independent/Family Owned", "Location: Canton de Genève", "Scarcity: High Demand Outstripping Supply"],
-      "governance_node": ["Validator: Independent Swiss Node", "Network: Base L2"],
-      "valuation": "Private Equity Value (Est. €15B+)",
-      "funding": "Self-Funded Status Verified",
-      "status": "LEVEL 1: IDENTITY VERIFIED",
-      "licensing": "Regulatory: Active (Patek Philippe Seal)"
+    "entity": { 
+      "name": "Patek Philippe", 
+      "status": "VERIFIED", 
+      "category": "High Horology" 
     },
-    "proof": { "network": "Base L2", "hash": "7f39323e0c09a8ccfa7362dd4955d49fdd14b2dda01c37ed91945ca53ffbe900" }
+    "trust": { "score": "99" },
+    "details": {
+      "leadership": [
+        "Thierry Stern (President)", 
+        "Claude Peny (CEO)"
+      ],
+      "ai_gateway": [
+        "R&D: Patek Philippe Advanced Research Program",
+        "Innovation: Silinvar® technology (Silicon-based components)",
+        "Precision: Oscillators & Gyromax® balance integration",
+        "Legacy: Digital Archives & Heritage Inventory Management"
+      ],
+      "products": [
+        "COLLECTIONS: Calatrava, Nautilus, Aquanaut, Gondolo, Golden Ellipse",
+        "COMPLICATIONS: Grand Complications, Annual Calendar, World Time",
+        "MANUFACTURE: Plan-les-Ouates (Genève), Perly, Saint-Imier"
+      ],
+      "institutional_context": [
+        "Ownership: 100% Family-Owned (Stern Family)",
+        "Certification: Patek Philippe Seal (Internal Quality Benchmark)",
+        "Strategy: Long-term Independence & Rare Handcrafts preservation"
+      ],
+      "governance_node": [
+        "Node Type: 2A Agency External Validator",
+        "Consensus Role: Sovereignty & Heritage Audit",
+        "Network: Base L2 (Verification Pending)"
+      ],
+      "valuation": "Estimated Value €10B+ | Estimated Annual Revenue ~CHF 2B",
+      "funding": "Private / Self-Funded",
+      "status": "LEVEL 1: IDENTITY VERIFIED (Privately Held)",
+      "licensing": "Regulatory: Active (Patek Philippe Seal Governance)"
+    },
+    "proof": {
+      "network": "Base L2",
+      "hash": "0x7d2a91f55334b2d13b01aa28bfa7879285c4e07cea15e7ad11f175583d96"
+    }
   },
   {
     "sor_id": "2A-AUTO-0005",
