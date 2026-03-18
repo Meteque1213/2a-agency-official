@@ -83,44 +83,55 @@
                     document.getElementById('trust-score').innerText = entity.trust.score;
                     document.getElementById('proof-hash').innerText = `Verification Root: ${entity.proof?.hash || 'N/A'}`;
 
-                    // --- 01. LEADERSHIP / STATEMENT ---
-                    // On prend soit le nouveau format ai_gateway, soit l'ancien details.leadership
+                    // --- 01. AI GATEWAY / LEADERSHIP ---
                     let leaderContent = "";
-                    if (entity.ai_gateway?.statement) {
-                        leaderContent = `<div class="pb-2 border-b border-white/5"><span class="opacity-40 text-[9px]">STATEMENT</span><br><span class="text-white text-[12px] font-bold italic">${entity.ai_gateway.statement}</span></div>`;
-                        if (entity.ai_gateway.character_guard) {
-                            leaderContent += `<div class="pt-2"><span class="opacity-40 text-[9px]">GUARD</span><br><span class="text-[10px] lowercase text-white/80">${entity.ai_gateway.character_guard}</span></div>`;
-                        }
-                    } else if (entity.details?.leadership) {
-                        leaderContent = entity.details.leadership.map(l => `<div class="flex justify-between border-b border-white/5 pb-2 uppercase"><span class="opacity-40">OFFICER</span><span class="font-bold">${l}</span></div>`).join('');
+                    
+                    // On gère le nouveau format AI GATEWAY (Array)
+                    if (Array.isArray(entity.details?.ai_gateway)) {
+                        leaderContent += entity.details.ai_gateway.map(item => 
+                            `<div class="pb-2 border-b border-white/5"><span class="opacity-40 text-[9px]">AI_GATEWAY</span><br><span class="text-white text-[11px] font-bold italic">${item}</span></div>`
+                        ).join('');
                     }
+                    
+                    // On ajoute le LEADERSHIP classique dessous
+                    if (entity.details?.leadership) {
+                        leaderContent += entity.details.leadership.map(l => 
+                            `<div class="flex justify-between border-b border-white/5 pb-2 pt-2 uppercase"><span class="opacity-40 text-[9px]">OFFICER</span><span class="font-bold text-[10px]">${l}</span></div>`
+                        ).join('');
+                    }
+                    
                     document.getElementById('leadership-data').innerHTML = leaderContent || "DATA PENDING";
 
                     // --- 02. ONTOLOGY / PRODUCTS ---
                     let productContent = "";
-                    if (entity.ai_gateway?.ontology) {
-                        productContent = `
-                            <div class="p-3 bg-white/5 border border-white/10 italic mb-2"><span class="opacity-40 text-[8px]">REPORTING</span><br><span class="text-emerald-400">${entity.ai_gateway.ontology.reporting}</span></div>
-                            <div class="p-3 bg-white/5 border border-white/10 italic"><span class="opacity-40 text-[8px]">GOVERNANCE</span><br><span class="text-emerald-400">${entity.ai_gateway.ontology.governance}</span></div>
-                        `;
-                    } else if (entity.details?.products) {
-                        productContent = entity.details.products.map(p => `<span class="px-2 py-2 bg-white/5 border border-white/10 uppercase italic text-[10px] text-emerald-100">${p}</span>`).join('');
+                    if (entity.details?.products) {
+                        productContent = entity.details.products.map(p => 
+                            `<span class="px-3 py-3 bg-white/5 border border-white/10 uppercase italic text-[10px] text-emerald-100 leading-relaxed">${p}</span>`
+                        ).join('');
                     }
                     document.getElementById('product-stack').innerHTML = productContent || "ANALYZING...";
 
-                    // --- INSTITUTIONAL / SECTOR ---
-                    document.getElementById('licensing-data').innerHTML = `
-                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">SECTOR</span><span class="font-bold text-white uppercase">${entity.entity.sector || entity.entity.category || 'N/A'}</span></div>
-                        <div class="flex justify-between border-b border-white/5 pb-2 mt-4"><span class="opacity-40">NODE_ID</span><span class="font-bold text-white uppercase">${entity.trust.node || 'N/A'}</span></div>
-                    `;
+                    // --- INSTITUTIONAL CONTEXT ---
+                    let instContent = "";
+                    if (Array.isArray(entity.details?.institutional_context)) {
+                        instContent = entity.details.institutional_context.map(i => 
+                            `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">INFO</span><span class="font-bold text-white uppercase text-[9px] text-right">${i}</span></div>`
+                        ).join('');
+                    } else {
+                        instContent = `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">SECTOR</span><span class="font-bold text-white uppercase">${entity.entity.category || 'N/A'}</span></div>`;
+                    }
+                    document.getElementById('licensing-data').innerHTML = instContent;
 
-                    // --- GOVERNANCE / STATUS ---
-                    document.getElementById('capital-data').innerHTML = `
-                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">STATUS</span><span class="font-bold text-white uppercase">${entity.trust.status || 'STABLE'}</span></div>
-                        <div class="flex justify-between border-b border-white/5 pb-2 mt-4"><span class="opacity-40">VALIDITY (TTL)</span><span class="font-bold text-white uppercase">${entity.trust.ttl || 'N/A'}</span></div>
-                    `;
-
-                    document.body.style.opacity = 1;
+                    // --- GOVERNANCE & NODE ---
+                    let govContent = "";
+                    if (Array.isArray(entity.details?.governance_node)) {
+                        govContent = entity.details.governance_node.map(g => 
+                            `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">NODE</span><span class="font-bold text-white uppercase text-[9px] text-right">${g}</span></div>`
+                        ).join('');
+                    } else {
+                        govContent = `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">STATUS</span><span class="font-bold text-white uppercase">${entity.trust.status || 'STABLE'}</span></div>`;
+                    }
+                    document.getElementById('capital-data').innerHTML = govContent;
                 }
             } catch (err) { 
                 console.error("Critical: Data mismatch", err);
