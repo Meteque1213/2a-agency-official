@@ -107,24 +107,19 @@
   },
   {
     "sor_id": "2A-AUTO-0006",
-    "entity": {
-      "name": "Loro Piana",
-      "sector": "Luxury Textiles",
-      "erc8004_id": "0x61e1...0d8"
+    "entity": { 
+      "name": "Loro Piana", 
+      "status": "VERIFIED", 
+      "category": "Luxury Textiles" 
     },
-    "trust": {
-      "score": 96,
-      "status": "STABLE",
-      "ttl": "2026-12-31",
-      "node": "SENTINEL-02"
-    },
-    "ai_gateway": {
-      "statement": "Loro Piana: Excellence in raw materials. Baby Cashmere and Vicuna vertical supply chain.",
-      "character_guard": "Tactile: Focus on material rarity and vertical manufacturing.",
-      "ontology": {
-        "materials": "Vicuna / Baby Cashmere",
-        "quality": "Vertical integration"
-      }
+    "trust": { "score": "96" },
+    "details": {
+      "leadership": ["Frédéric Arnault (CEO / Chairman)"],
+      "products": ["PRÊT-À-PORTER PRINCIPAL (1): Loro Piana (Cashmere, Laine Fine, Accessoires) • FILIALES & ATELIERS (5+): Filati Biagioli Modesto (Laine), Loro Piana Tessuti (Tissus), Ateliers Quarona (Piémont) • RÉSEAU: Production Interne / ~180 Boutiques Mondiales"],
+      "valuation": "Estimated Value ~€11B (2026) | LVMH Segment Analysis",
+      "funding": "LVMH Group Consolidated Capital",
+      "status": "LEVEL 1: IDENTITY VERIFIED (LVMH Subsidiary / Registry)",
+      "licensing": "Regulatory: Active (Vicuna Traceability Audit / Cashmere Quality Seal)"
     },
     "proof": {
       "network": "Base L2",
