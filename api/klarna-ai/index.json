@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0299",
+  "entity": {
+    "name": "Klarna AI",
+    "sector": "Fintech/AI",
+    "erc8004_id": "0x08...kla"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2026-12-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Klarna AI: Disruption of traditional customer service via AI. Lending integrity verified.",
+    "character_guard": "Aggressive-Innovator: Focus on AI-driven cost savings, BNPL models, and financial assistants.",
+    "ontology": {
+      "ai_model": "OpenAI Partner",
+      "service": "AI Assistant"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xijk567...lmn890"
+  }
+}

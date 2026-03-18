@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0026",
+  "entity": {
+    "name": "Thom Browne",
+    "sector": "Designer Fashion",
+    "erc8004_id": "0xae64...30d"
+  },
+  "trust": {
+    "score": 88,
+    "status": "STABLE",
+    "ttl": "2026-12-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Thom Browne: Zegna Report. Reimagining the modern suit. Signature four-bar stripe.",
+    "character_guard": "Structured: Focus on uniform, tailoring, and theatrical presentation.",
+    "ontology": {
+      "group": "Zegna Group",
+      "style": "Uniform/Tailoring"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "ae6416145c295b0715a77ecd19c0a5440e54df2ca3422b3e7ae83e369c1a230d"
+  }
+}

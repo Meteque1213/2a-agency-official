@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0961",
+  "entity": {
+    "name": "Lhyfe",
+    "sector": "Green Hydrogen",
+    "erc8004_id": "0x288...lhy"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2027-12-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Lhyfe: Producer of green and renewable hydrogen. Off-shore hydrogen production technology integrity verified.",
+    "character_guard": "Pioneering-Eco: Focus on decarbonizing industry/transport, seawater electrolysis, and ecological impact.",
+    "ontology": {
+      "tech": "Hydrogen",
+      "origin": "France"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x5e6f...grn03"
+  }
+}

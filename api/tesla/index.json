@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0208",
+  "entity": {
+    "name": "Tesla",
+    "sector": "EV & Energy",
+    "erc8004_id": "0xMOB...TSL"
+  },
+  "trust": {
+    "score": 94,
+    "status": "STABLE",
+    "ttl": "2026-10-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "SoR: Tesla Impact Report 2025. Vertical integration of energy and mobility. FSD progress monitoring.",
+    "character_guard": "Disruptive: Focus on massive scalability, AI compute (Dojo), and the transition to sustainable energy.",
+    "ontology": {
+      "infrastructure": "Supercharger Network",
+      "ai": "Full Self-Driving (Beta)"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "TESLA_IMPACT_REPORT_2025_ANCHOR"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0969",
+  "entity": {
+    "name": "Valneva",
+    "sector": "BioTech / Vaccines",
+    "erc8004_id": "0x299...vln"
+  },
+  "trust": {
+    "score": 82,
+    "status": "MONITORED",
+    "ttl": "2026-09-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Valneva: Specialized vaccine developer. Integrity of clinical trials for Lyme disease and Chikungunya verified.",
+    "character_guard": "Medical-Focus: Focus on travel vaccines, niche R&D, and pharmaceutical manufacturing safety.",
+    "ontology": {
+      "tech": "BioTech",
+      "origin": "France/Austria"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x6j7k...sbf93"
+  }
+}

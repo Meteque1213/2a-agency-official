@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0538",
+  "entity": {
+    "name": "Shein",
+    "sector": "Ultra-Fast Fashion",
+    "erc8004_id": "0x16...she"
+  },
+  "trust": {
+    "score": 72,
+    "status": "MONITORED",
+    "ttl": "2026-04-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Shein: Data-driven garment production. Supply chain ethics and ESG integrity watch active.",
+    "character_guard": "Disruptive-Digital: Focus on real-time fashion, supply chain agility, and social commerce dominance.",
+    "ontology": {
+      "tech": "On-demand Manufacturing",
+      "market": "Global Youth"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x4af1...ret16"
+  }
+}

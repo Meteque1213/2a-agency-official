@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0537",
+  "entity": {
+    "name": "Temu",
+    "sector": "Direct-from-Manufacturer",
+    "erc8004_id": "0x15...tem"
+  },
+  "trust": {
+    "score": 75,
+    "status": "MONITORED",
+    "ttl": "2026-05-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Temu: Cross-border commerce disruption. Pricing and supply chain transparency monitoring active.",
+    "character_guard": "Aggressive: Focus on gamified shopping, supply chain efficiency, and low-cost global logistics.",
+    "ontology": {
+      "parent": "PDD Holdings",
+      "market": "Global Value"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x39e0...ret15"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0510",
+  "entity": {
+    "name": "Legrand",
+    "sector": "Electrical Infrastructure",
+    "erc8004_id": "0x38...leg"
+  },
+  "trust": {
+    "score": 92,
+    "status": "STABLE",
+    "ttl": "2027-09-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Legrand Eliot: Connected building infrastructure. Digital power and switchgear integrity verified.",
+    "character_guard": "Steady: Focus on smart home standards, commercial building efficiency, and global electrical reach.",
+    "ontology": {
+      "program": "Eliot (IoT)",
+      "origin": "France"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x6a7b...ene38"
+  }
+}

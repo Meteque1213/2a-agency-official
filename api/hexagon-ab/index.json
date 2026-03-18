@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0708",
+  "entity": {
+    "name": "Hexagon AB",
+    "sector": "Sensor & Software",
+    "erc8004_id": "0x172...hex"
+  },
+  "trust": {
+    "score": 93,
+    "status": "STABLE",
+    "ttl": "2027-08-01",
+    "node": "SENTINEL-05"
+  },
+  "ai_gateway": {
+    "statement": "Hexagon: Empowering an autonomous future. Metrology and geospatial sensor integrity verified.",
+    "character_guard": "Data-Rich: Focus on reality capture, positioning tech, and autonomous manufacturing solutions.",
+    "ontology": {
+      "tech": "Reality Capture",
+      "origin": "Sweden"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x8c9d...tec172"
+  }
+}

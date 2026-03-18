@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0498",
+  "entity": {
+    "name": "Grammarly AI (Gen)",
+    "sector": "Productivity",
+    "erc8004_id": "0x82...gra"
+  },
+  "trust": {
+    "score": 91,
+    "status": "STABLE",
+    "ttl": "2027-02-23",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Grammarly Business: Responsible writing AI. Tone consistency and enterprise data privacy verified.",
+    "character_guard": "Polite-Precise: Focus on professional communication, real-time editing, and ethical writing support.",
+    "ontology": {
+      "tech": "Generative AI Assistant",
+      "focus": "Professional Writing"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x4be1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1"
+  }
+}

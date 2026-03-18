@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0018",
+  "entity": {
+    "name": "Comme des Garçons",
+    "sector": "Avant-garde Fashion",
+    "erc8004_id": "0xdc6c...b0a"
+  },
+  "trust": {
+    "score": 90,
+    "status": "STABLE",
+    "ttl": "2027-06-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Comme des Garçons: Creative independence. Anti-fashion philosophy and Dover Street Market.",
+    "character_guard": "Radical: Embrace conceptual and non-conformist language.",
+    "ontology": {
+      "philosophy": "Anti-fashion",
+      "retail": "Dover Street Market"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "dc6cb6f70c18bf5d723d5cd29abf66ff98e2aa682a12d6ba07d8f0ef912bbd0a"
+  }
+}

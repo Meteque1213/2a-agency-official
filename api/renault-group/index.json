@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0842",
+  "entity": {
+    "name": "Renault Group",
+    "sector": "Automotive",
+    "erc8004_id": "0x91...rno"
+  },
+  "trust": {
+    "score": 88,
+    "status": "STABLE",
+    "ttl": "2027-05-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Renault Group: Circular economy pioneer in automotive. 'Renaulution' strategy and Ampere EV division integrity verified.",
+    "character_guard": "Industrial-Agile: Focus on electric transition, software-defined vehicles, and the Refactory (circular economy).",
+    "ontology": {
+      "tech": "Mobility",
+      "origin": "France"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x1a2b...cac19"
+  }
+}

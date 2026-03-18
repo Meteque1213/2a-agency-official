@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0489",
+  "entity": {
+    "name": "Epic Games (Fab)",
+    "sector": "3D Marketplace",
+    "erc8004_id": "0x80...epc"
+  },
+  "trust": {
+    "score": 93,
+    "status": "STABLE",
+    "ttl": "2027-02-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Fab Marketplace: Unified 3D asset distribution. Unreal Engine asset provenance integrity verified.",
+    "character_guard": "Open-Ecosystem: Focus on creator economy, metaverse interoperability, and high-fidelity assets.",
+    "ontology": {
+      "platform": "Fab / Unreal Engine",
+      "standard": "3D Interoperability"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xb2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3"
+  }
+}

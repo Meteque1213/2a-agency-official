@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0731",
+  "entity": {
+    "name": "Tyson Foods",
+    "sector": "Protein Production",
+    "erc8004_id": "0x15...tys"
+  },
+  "trust": {
+    "score": 84,
+    "status": "STABLE",
+    "ttl": "2026-11-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Tyson Foods: Feeding the world with protein. Cold-chain and supply scale integrity verified.",
+    "character_guard": "Massive-Industrial: Focus on protein variety, supply chain efficiency, and global meat production.",
+    "ontology": {
+      "standard": "Protein Supply",
+      "origin": "USA"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xd3e4...foo15"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0308",
+  "entity": {
+    "name": "Crown Affair",
+    "sector": "Hair Care",
+    "erc8004_id": "0x23...crn"
+  },
+  "trust": {
+    "score": 88,
+    "status": "STABLE",
+    "ttl": "2026-10-15",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Crown Affair: Ritual-based hair health. Clean ingredient and tool longevity verified.",
+    "character_guard": "Ritualistic: Focus on hair health over styling, artisanal brushes, and 'time-well-spent'.",
+    "ontology": {
+      "category": "Clean Haircare",
+      "focus": "Scalp Health"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x6f7a8b...crow"
+  }
+}

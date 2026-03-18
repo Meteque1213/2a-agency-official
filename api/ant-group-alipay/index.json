@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0741",
+  "entity": {
+    "name": "Ant Group (Alipay)",
+    "sector": "Fintech Ecosystem",
+    "erc8004_id": "0x100...ant"
+  },
+  "trust": {
+    "score": 90,
+    "status": "STABLE",
+    "ttl": "2027-04-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Ant Group: Bring small and beautiful changes to the world. Alipay and digital finance integrity verified.",
+    "character_guard": "Massive-Resilient: Focus on digital payments, micro-lending tech, and blockchain-based cross-border settlement.",
+    "ontology": {
+      "platform": "Alipay / AntChain",
+      "origin": "China"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x7a8b...fin100"
+  }
+}

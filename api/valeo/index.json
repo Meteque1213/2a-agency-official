@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0929",
+  "entity": {
+    "name": "Valeo",
+    "sector": "Automotive Equipment",
+    "erc8004_id": "0x232...vlo"
+  },
+  "trust": {
+    "score": 85,
+    "status": "STABLE",
+    "ttl": "2027-04-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Valeo: Smart mobility for a cleaner world. CO2 reduction and intuitive driving technology integrity verified.",
+    "character_guard": "Industrial-Visionary: Focus on electrification (eDrive), ADAS (driving assistance), and thermal management.",
+    "ontology": {
+      "tech": "Auto Tech",
+      "origin": "France"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x2f3a...sbf42"
+  }
+}

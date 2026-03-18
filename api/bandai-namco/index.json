@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-2514",
+  "entity": {
+    "name": "Bandai Namco",
+    "sector": "DeepTech",
+    "erc8004_id": "0xdc19d5fef2150d01"
+  },
+  "trust": {
+    "score": 85,
+    "status": "UNDER REVIEW",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Bandai Namco: Neural weights and model metadata notarized. Integrity score confirms protocol stability.",
+    "character_guard": "Ethics-First",
+    "ontology": {
+      "tech": "Neural-Link",
+      "origin": "Verified"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xa0742ba9f0d8880f"
+  }
+}

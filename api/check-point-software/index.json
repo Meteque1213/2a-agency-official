@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0560",
+  "entity": {
+    "name": "Check Point Software",
+    "sector": "Cybersecurity",
+    "erc8004_id": "0x123...chk"
+  },
+  "trust": {
+    "score": 92,
+    "status": "STABLE",
+    "ttl": "2027-08-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Check Point: Prevention-first security. Infinity architecture and AI threat prevention verified.",
+    "character_guard": "Vigilant: Focus on network security, cloud guard, and mobile protection.",
+    "ontology": {
+      "platform": "Infinity Architecture",
+      "origin": "Israel"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b"
+  }
+}

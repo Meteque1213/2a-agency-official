@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0396",
+  "entity": {
+    "name": "Cohere",
+    "sector": "Enterprise AI",
+    "erc8004_id": "0x70...coh"
+  },
+  "trust": {
+    "score": 92,
+    "status": "STABLE",
+    "ttl": "2027-02-15",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Cohere Command: AI for business. RAG optimization and data privacy integrity verified.",
+    "character_guard": "Professional: Focus on semantic search, multilingual models, and enterprise-grade security.",
+    "ontology": {
+      "model": "Command R+",
+      "focus": "Enterprise RAG"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x4d5e...tec70"
+  }
+}

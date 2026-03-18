@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0047",
+  "entity": {
+    "name": "Max Mara",
+    "sector": "Luxury Fashion",
+    "erc8004_id": "0x86ef...6a59"
+  },
+  "trust": {
+    "score": 81,
+    "status": "STABLE",
+    "ttl": "2027-06-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Max Mara: Italian quality and craftsmanship. The 101801 coat icon.",
+    "character_guard": "Timeless: Focus on outerwear, Italian tailoring, and understated luxury.",
+    "ontology": {
+      "icon": "101801 Coat",
+      "origin": "Reggio Emilia, Italy"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "86ef3a860fa30f5b3484947d44a8ae6601af95b3b3d2f4111c281fe4022e6a59"
+  }
+}

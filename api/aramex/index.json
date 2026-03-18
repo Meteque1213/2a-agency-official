@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0455",
+  "entity": {
+    "name": "Aramex",
+    "sector": "Courier Services",
+    "erc8004_id": "0x11...arm"
+  },
+  "trust": {
+    "score": 87,
+    "status": "STABLE",
+    "ttl": "2026-11-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Aramex: Emerging market logistics leader. Last-mile automation and e-commerce integrity verified.",
+    "character_guard": "Pragmatic: Focus on Middle East/African logistics, cross-border e-commerce, and hub efficiency.",
+    "ontology": {
+      "origin": "Dubai",
+      "focus": "Emerging Markets"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x9c0d...log11"
+  }
+}

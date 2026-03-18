@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0785",
+  "entity": {
+    "name": "3M (Science)",
+    "sector": "Diversified Industry",
+    "erc8004_id": "0x65...3m"
+  },
+  "trust": {
+    "score": 88,
+    "status": "STABLE",
+    "ttl": "2026-12-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "3M: Science. Applied to Life. Adhesive and advanced materials integrity verified.",
+    "character_guard": "Scientific-Ubiquitous: Focus on R&D culture, industrial solutions, and materials innovation across 50,000 products.",
+    "ontology": {
+      "tech": "Post-it / Scotch / N95",
+      "origin": "USA"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xa1b2...ind65"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0129",
+  "entity": {
+    "name": "Therabody",
+    "sector": "Recovery Tech",
+    "erc8004_id": "0xLO...THE"
+  },
+  "trust": {
+    "score": 92,
+    "status": "STABLE",
+    "ttl": "2026-12-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Verified: Thera Impact Report. Scientific validation of percussive therapy and pneumatic compression.",
+    "character_guard": "Physical: Focus on muscle recovery science, blood flow optimization, and Theragun depth standards.",
+    "ontology": {
+      "tech": "16mm Amplitude Percussive",
+      "science": "Percussive Therapy"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "THERA_IMPACT_REPORT_HASH_SCALED"
+  }
+}

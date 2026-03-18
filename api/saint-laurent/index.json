@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0028",
+  "entity": {
+    "name": "Saint Laurent",
+    "sector": "Luxury Fashion",
+    "erc8004_id": "0x20e4...907"
+  },
+  "trust": {
+    "score": 87,
+    "status": "STABLE",
+    "ttl": "2026-10-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Saint Laurent: Kering URD YSL. Empowerment and Parisian rock-glamour verified.",
+    "character_guard": "Sharp: Focus on youth culture, silhouette, and Parisian allure.",
+    "ontology": {
+      "group": "Kering",
+      "icon": "Le Smoking"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "20e4af47770c8d2fd3c7c322daa953ff01d620b432aee9bc479c314f82e35907"
+  }
+}

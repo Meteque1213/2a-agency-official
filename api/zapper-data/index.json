@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0745",
+  "entity": {
+    "name": "Zapper (Data)",
+    "sector": "Web3 Analytics",
+    "erc8004_id": "0x31...zap"
+  },
+  "trust": {
+    "score": 90,
+    "status": "STABLE",
+    "ttl": "2027-05-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Zapper: Exploring the blockchain. Indexing and social Web3 data integrity verified.",
+    "character_guard": "Social-Analytical: Focus on NFT tracking, protocol discovery, and on-chain identity curation.",
+    "ontology": {
+      "tech": "On-chain Indexer",
+      "focus": "DeFi/NFT Discovery"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xc2d3...w3i31"
+  }
+}

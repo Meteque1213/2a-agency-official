@@ -1,0 +1,42 @@
+{
+  "sor_id": "2A-AUTO-0007",
+  "entity": {
+    "name": "Brunello Cucinelli",
+    "status": "VERIFIED",
+    "category": "Humanist Luxury"
+  },
+  "trust": {
+    "score": "95"
+  },
+  "details": {
+    "leadership": [
+      "Brunello Cucinelli (Executive Chairman)",
+      "Riccardo Stefanelli (Co-CEO)"
+    ],
+    "ai_gateway": [
+      "Philosophy: Humaniste (IA au service de l'artisan, pas l'inverse)",
+      "Partnership: EssilorLuxottica (Lunettes High-Tech)",
+      "Digital: Solomeo Digital Borgo (E-commerce éthique)"
+    ],
+    "products": [
+      "PRÊT-À-PORTER: Cashmere, Laine • FILIALES: Cariaggi (43%), Ateliers Solomeo"
+    ],
+    "institutional_context": [
+      "Market: Borsa Italiana (BC.MI)",
+      "Philosophy: Capitalisme Humaniste",
+      "Growth: +11% Projection 2025"
+    ],
+    "governance_node": [
+      "Validator: Ethical Oversight Node",
+      "Network: Base L2"
+    ],
+    "valuation": "€6B - €8B (Market Cap 2026)",
+    "funding": "Public Equity | Family Control via Foro delle Arti",
+    "status": "LEVEL 1: IDENTITY VERIFIED (CONSOB)",
+    "licensing": "Regulatory: Active (Humanistic Capitalism Charter)"
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "37be773091f55334b2d13b01aa28bfa7879285c4e07cea15e7ad11f175583d96"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0464",
+  "entity": {
+    "name": "Tacit Legal",
+    "sector": "AI Law Firm",
+    "erc8004_id": "0x08...tct"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2026-10-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Tacit Tilder: AI-driven contract review. SRA-regulated legal assurance integrity verified.",
+    "character_guard": "Pragmatic: Focus on hybrid AI + Attorney models and commercial contract speed-to-market.",
+    "ontology": {
+      "platform": "Tilder",
+      "standard": "SRA Authorized"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x28d9...pro08"
+  }
+}

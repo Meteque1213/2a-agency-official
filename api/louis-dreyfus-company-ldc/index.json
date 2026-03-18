@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0664",
+  "entity": {
+    "name": "Louis Dreyfus Company (LDC)",
+    "sector": "Commodities",
+    "erc8004_id": "0x17...ldc"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2027-04-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "LDC: Creating fair and sustainable value. Global agricultural trading and processing integrity verified.",
+    "character_guard": "Global-Trader: Focus on cotton, coffee, and rice flows, and emerging market supply chains.",
+    "ontology": {
+      "origin": "Switzerland / Global",
+      "focus": "Agri-Trading"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e"
+  }
+}

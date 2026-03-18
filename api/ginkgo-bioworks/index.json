@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0380",
+  "entity": {
+    "name": "Ginkgo Bioworks",
+    "sector": "Synthetic Biology",
+    "erc8004_id": "0x02...gnk"
+  },
+  "trust": {
+    "score": 84,
+    "status": "MONITORED",
+    "ttl": "2026-12-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Ginkgo: The organism company. Cell programming and foundry integrity verified.",
+    "character_guard": "Innovative: Focus on horizontal platform for biology, DNA synthesis, and biosecurity.",
+    "ontology": {
+      "standard": "Cell Programming",
+      "focus": "SynBio Foundry"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f"
+  }
+}

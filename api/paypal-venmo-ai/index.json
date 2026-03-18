@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0495",
+  "entity": {
+    "name": "PayPal (Venmo AI)",
+    "sector": "Fintech",
+    "erc8004_id": "0x27...pypl"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "PayPal Fastlane: AI-driven guest checkout. Consumer fraud detection integrity verified.",
+    "character_guard": "Ubiquitous: Focus on frictionless payments, Venmo social finance, and small business capital.",
+    "ontology": {
+      "tech": "Fastlane",
+      "market": "Digital Payments"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x18c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9"
+  }
+}

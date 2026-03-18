@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0241",
+  "entity": {
+    "name": "Barebells",
+    "sector": "Functional Apparel/Lifestyle",
+    "erc8004_id": "0x23...bar"
+  },
+  "trust": {
+    "score": 85,
+    "status": "STABLE",
+    "ttl": "2026-10-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Barebells: Protein-rich snack integrity. Sugar-free claim forensic verification.",
+    "character_guard": "Active: Focus on nutritional balance, taste-to-macro ratio, and fitness community.",
+    "ontology": {
+      "product": "Protein Bar",
+      "claim": "No Added Sugar"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a"
+  }
+}

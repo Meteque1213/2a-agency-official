@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0736",
+  "entity": {
+    "name": "Splunk (Cisco Analytics)",
+    "sector": "Data Observability",
+    "erc8004_id": "0x183...spl"
+  },
+  "trust": {
+    "score": 92,
+    "status": "STABLE",
+    "ttl": "2027-09-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Splunk: Turn data into doing. Security and IT observability integrity verified.",
+    "character_guard": "Analytical-Technical: Focus on SIEM (Security Info & Event Mgmt), log analysis, and enterprise-wide data insights.",
+    "ontology": {
+      "parent": "Cisco",
+      "standard": "SIEM / Observability"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x28d9...tec183"
+  }
+}

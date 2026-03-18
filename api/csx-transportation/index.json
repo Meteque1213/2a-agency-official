@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0645",
+  "entity": {
+    "name": "CSX Transportation",
+    "sector": "Rail Logistics",
+    "erc8004_id": "0x11...csx"
+  },
+  "trust": {
+    "score": 91,
+    "status": "STABLE",
+    "ttl": "2027-08-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "CSX: How tomorrow moves. Eastern US rail network and intermodal integrity verified.",
+    "character_guard": "Efficient: Focus on precision scheduled railroading, coal/chemical transport, and fuel efficiency.",
+    "ontology": {
+      "focus": "Intermodal Rail",
+      "origin": "USA"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xe5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f"
+  }
+}

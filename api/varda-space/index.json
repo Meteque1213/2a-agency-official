@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0416",
+  "entity": {
+    "name": "Varda Space",
+    "sector": "Orbital Manufacturing",
+    "erc8004_id": "0x04...vrd"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2027-05-15",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Varda: Zero-gravity pharma manufacturing. Re-entry capsule integrity verified.",
+    "character_guard": "Frontier: Focus on space-based drug discovery and micro-gravity labs.",
+    "ontology": {
+      "tech": "Crystallization",
+      "industry": "Orbital Pharma"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b"
+  }
+}

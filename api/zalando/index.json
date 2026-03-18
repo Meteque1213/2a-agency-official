@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0536",
+  "entity": {
+    "name": "Zalando",
+    "sector": "European Fashion E-commerce",
+    "erc8004_id": "0x14...zal"
+  },
+  "trust": {
+    "score": 91,
+    "status": "STABLE",
+    "ttl": "2027-05-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Zalando: European fashion platform. Connected retail and logistics integrity verified.",
+    "character_guard": "Platform-focused: Focus on the 'Starting Point for Fashion', European logistics, and brand partnerships.",
+    "ontology": {
+      "region": "Europe",
+      "platform": "ZMS (Zalando Marketing Services)"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x28d9...ret14"
+  }
+}

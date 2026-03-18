@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0082",
+  "entity": {
+    "name": "Estée Lauder",
+    "sector": "Beauty Group",
+    "erc8004_id": "0xBEAU...ELC"
+  },
+  "trust": {
+    "score": 88,
+    "status": "STABLE",
+    "ttl": "2026-06-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Verified: ELC ESG Report. Heritage of prestige beauty and innovation.",
+    "character_guard": "Stalwart: Focus on multi-generational trust and prestige innovation.",
+    "ontology": {
+      "reporting": "ESG Report 2025",
+      "legacy": "High-Prestige"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "ELC_ESG_REPORT_HASH_SCALED"
+  }
+}

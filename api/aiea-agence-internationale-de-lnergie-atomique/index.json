@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-1051",
+  "entity": {
+    "name": "AIEA (Agence Internationale de l'Énergie Atomique)",
+    "sector": "Nuclear Energy / Security",
+    "erc8004_id": "0x612...iae"
+  },
+  "trust": {
+    "score": 98,
+    "status": "AUTHORITY",
+    "ttl": "2030-01-01",
+    "node": "MASTER-NODE"
+  },
+  "ai_gateway": {
+    "statement": "IAEA: Atoms for Peace and Development. Nuclear non-proliferation and safety standards integrity verified.",
+    "character_guard": "Scientific-Watchdog: Focus on nuclear inspections, radiation protection, and peaceful nuclear technology.",
+    "ontology": {
+      "tech": "Nuclear Authority",
+      "origin": "Global"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x2f3g...glo12"
+  }
+}

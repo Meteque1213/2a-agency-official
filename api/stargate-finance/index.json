@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0773",
+  "entity": {
+    "name": "Stargate Finance",
+    "sector": "Cross-chain Bridge",
+    "erc8004_id": "0x46...stg"
+  },
+  "trust": {
+    "score": 91,
+    "status": "STABLE",
+    "ttl": "2027-05-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Stargate: Cross-chain liquidity layer. Delta algorithm and instant finality integrity verified.",
+    "character_guard": "Efficient: Focus on native asset swaps, deep liquidity pools, and bridging simplicity.",
+    "ontology": {
+      "tech": "Delta Algorithm",
+      "standard": "Bridge"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xb2c3...w3i46"
+  }
+}

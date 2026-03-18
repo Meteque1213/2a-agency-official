@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0459",
+  "entity": {
+    "name": "Plug Power",
+    "sector": "Hydrogen Economy",
+    "erc8004_id": "0x30...plg"
+  },
+  "trust": {
+    "score": 85,
+    "status": "MONITORED",
+    "ttl": "2026-10-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Plug Power: Green hydrogen ecosystem leadership. Electrolyzer and fuel cell integrity monitoring.",
+    "character_guard": "Ambitious: Focus on vertical hydrogen integration, material handling fleets, and global infrastructure.",
+    "ontology": {
+      "tech": "Green Hydrogen",
+      "status": "Scaling Operations"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xd3e4...ene30"
+  }
+}

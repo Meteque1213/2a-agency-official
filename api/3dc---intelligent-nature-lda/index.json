@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-2227",
+  "entity": {
+    "name": "3DC - Intelligent Nature Lda",
+    "sector": "ESG Leader",
+    "erc8004_id": "0x5acc989a44c83503"
+  },
+  "trust": {
+    "score": 80,
+    "status": "UNDER REVIEW",
+    "ttl": "2028-01-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "3DC - Intelligent Nature Lda: Environmental transparency and governance ethics audited via Trust Nodes.",
+    "character_guard": "Eco-Guardian",
+    "ontology": {
+      "tech": "System-of-Record",
+      "origin": "Verified"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x29bd2db8d6afa1aa"
+  }
+}

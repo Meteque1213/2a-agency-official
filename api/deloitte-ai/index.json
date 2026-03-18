@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0445",
+  "entity": {
+    "name": "Deloitte AI",
+    "sector": "Audit & Strategy",
+    "erc8004_id": "0x05...del"
+  },
+  "trust": {
+    "score": 92,
+    "status": "STABLE",
+    "ttl": "2027-06-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Deloitte: Professional service leadership. Trustworthy AI framework integrity verified.",
+    "character_guard": "Regulated: Focus on audit quality, cloud transformation, and enterprise governance.",
+    "ontology": {
+      "framework": "Trustworthy AI",
+      "division": "Deloitte Digital"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e"
+  }
+}

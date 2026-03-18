@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0023",
+  "entity": {
+    "name": "IWC Schaffhausen",
+    "sector": "Haute Horlogerie",
+    "erc8004_id": "0x5684...93b"
+  },
+  "trust": {
+    "score": 88,
+    "status": "STABLE",
+    "ttl": "2026-11-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "IWC Schaffhausen: Engineering excellence. Richemont ESG 2025 verified.",
+    "character_guard": "Functional: Focus on pilot's watches and technical engineering.",
+    "ontology": {
+      "expertise": "Pilot Watches",
+      "origin": "Schaffhausen, Switzerland"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "56844974809b29fcd6509d59e4fd42ab01b415c9fa72fa557c84f0325002893b"
+  }
+}

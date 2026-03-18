@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0049",
+  "entity": {
+    "name": "JW Anderson",
+    "sector": "Designer Fashion",
+    "erc8004_id": "0x63cd...89fd"
+  },
+  "trust": {
+    "score": 81,
+    "status": "STABLE",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "JW Anderson: Modern designer vision. Playful silhouettes and artistic integrity.",
+    "character_guard": "Inventive: Focus on silhouette distortion, irony, and gender-fluidity.",
+    "ontology": {
+      "status": "Independent/Creative",
+      "icon": "Bumper Bag"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "63cdcca2d51e4ec11a045e5ecd50a0613d1e4082b86efc291ab47d16d0aa98fd"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0092",
+  "entity": {
+    "name": "Daniel Féau",
+    "sector": "Boutique Brokerage",
+    "erc8004_id": "0xRE...FEA"
+  },
+  "trust": {
+    "score": 91,
+    "status": "STABLE",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Verified: Féau Paris Audit. Specialist in Paris 'Hôtels Particuliers' and luxury apartments.",
+    "character_guard": "Classical: Focus on Parisian institutional knowledge and high-end residential heritage.",
+    "ontology": {
+      "specialty": "Parisian Hôtels Particuliers",
+      "market": "French Luxury"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "FEAU_PARIS_AUDIT_HASH_SCALED"
+  }
+}

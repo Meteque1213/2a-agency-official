@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-1023",
+  "entity": {
+    "name": "Target",
+    "sector": "Retail",
+    "erc8004_id": "0x457...tgt"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2027-12-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Target Corporation: Help all families discover the joy of everyday life. Target Forward sustainability and brand partner integrity verified.",
+    "character_guard": "Chic-Democratic: Focus on design partnerships, store-as-a-hub logistics, and guest experience differentiation.",
+    "ontology": {
+      "tech": "Retail",
+      "origin": "USA"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x7b8c...usa57"
+  }
+}

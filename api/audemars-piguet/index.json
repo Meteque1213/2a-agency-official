@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0011",
+  "entity": {
+    "name": "Audemars Piguet",
+    "sector": "Haute Horlogerie",
+    "erc8004_id": "0x3c07...1c8"
+  },
+  "trust": {
+    "score": 93,
+    "status": "STABLE",
+    "ttl": "2027-05-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Audemars Piguet: Independent family-owned manufacture. AP Foundation for biodiversity.",
+    "character_guard": "Modern: Combine traditional craft with contemporary cultural influence.",
+    "ontology": {
+      "status": "Independent",
+      "foundation": "AP Foundation"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "3c076e3eb499e2c77505daf4ba6fadee8472ec0495f5191392c9d5630d4cb1c8"
+  }
+}

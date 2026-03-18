@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0284",
+  "entity": {
+    "name": "Vertiv",
+    "sector": "Data Center Infrastructure",
+    "erc8004_id": "0x37...vrt"
+  },
+  "trust": {
+    "score": 94,
+    "status": "STABLE",
+    "ttl": "2027-06-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Vertiv: Liquid cooling solutions for AI clusters. Power management integrity verified.",
+    "character_guard": "Industrial: Focus on thermal management, PUE efficiency, and GPU rack cooling.",
+    "ontology": {
+      "tech": "Liquid Cooling",
+      "standard": "High-Density Compute"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xdef456...ghi789"
+  }
+}

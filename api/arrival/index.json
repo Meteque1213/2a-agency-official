@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-2351",
+  "entity": {
+    "name": "Arrival",
+    "sector": "Haute Couture",
+    "erc8004_id": "0x439e7a9597aa1392"
+  },
+  "trust": {
+    "score": 91,
+    "status": "STABLE",
+    "ttl": "2028-01-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Arrival: Visual identity and semantic prestige anchored on-chain. Integrity score reflects market exclusivity.",
+    "character_guard": "Heritage-Protector",
+    "ontology": {
+      "tech": "System-of-Record",
+      "origin": "Verified"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xaf7ca40df504c5ac"
+  }
+}

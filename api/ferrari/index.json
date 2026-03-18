@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0206",
+  "entity": {
+    "name": "Ferrari",
+    "sector": "Luxury Automotive",
+    "erc8004_id": "0xMOB...RAC"
+  },
+  "trust": {
+    "score": 98,
+    "status": "STABLE",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Verified: Ferrari Annual Report 2025. Protection of Italian manufacturing heritage and F1 racing technology transfer.",
+    "character_guard": "Exhilarating: Focus on performance, the 'Cavallino Rampante' legacy, and limited-edition series scarcity.",
+    "ontology": {
+      "heritage": "Scuderia Ferrari",
+      "scarcity": "Limited Edition Programs"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "FERRARI_ANNUAL_REPORT_2025_ANCHOR"
+  }
+}

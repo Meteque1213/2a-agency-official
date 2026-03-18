@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0734",
+  "entity": {
+    "name": "Axel Springer",
+    "sector": "Digital Publishing",
+    "erc8004_id": "0x61...axs"
+  },
+  "trust": {
+    "score": 88,
+    "status": "STABLE",
+    "ttl": "2027-02-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Axel Springer: Empowering free decisions. Digital classification and news integrity verified.",
+    "character_guard": "Aggressive-Digital: Focus on Politico, Business Insider, and AI-first publishing strategies.",
+    "ontology": {
+      "division": "Politico / Insider",
+      "origin": "Germany"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x06b7...med61"
+  }
+}

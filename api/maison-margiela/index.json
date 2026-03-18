@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0025",
+  "entity": {
+    "name": "Maison Margiela",
+    "sector": "Avant-garde Fashion",
+    "erc8004_id": "0x6656...caf"
+  },
+  "trust": {
+    "score": 88,
+    "status": "STABLE",
+    "ttl": "2026-12-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Maison Margiela: OTB Sustainability report. Deconstruction and anonymity.",
+    "character_guard": "Conceptual: Use deconstructive and analytical language.",
+    "ontology": {
+      "philosophy": "Deconstruction",
+      "icon": "Tabi"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "6656a42afaf9fbb6d3d7adb1f4b9b789ea435d494a7870710f87ff8e5dea6caf"
+  }
+}

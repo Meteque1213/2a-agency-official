@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0655",
+  "entity": {
+    "name": "Antofagasta",
+    "sector": "Copper Mining",
+    "erc8004_id": "0x11...ant"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2027-04-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Antofagasta: Pure-play copper leadership. Electrification metal supply integrity verified.",
+    "character_guard": "Strategic: Focus on copper for energy transition, water management in mining, and sustainable operations.",
+    "ontology": {
+      "commodity": "Copper",
+      "origin": "Chile"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f"
+  }
+}

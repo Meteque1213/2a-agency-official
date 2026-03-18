@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0311",
+  "entity": {
+    "name": "Stone Island (Shadow Project)",
+    "sector": "Avant-Garde Technical",
+    "erc8004_id": "0x74...sisp"
+  },
+  "trust": {
+    "score": 95,
+    "status": "STABLE",
+    "ttl": "2027-12-31",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Shadow Project: Experimental tech-wear frontier. Fabric innovation and dyeing tech verified.",
+    "character_guard": "Evolutionary: Focus on Errolson Hugh's design legacy, modularity, and high-tech textiles.",
+    "ontology": {
+      "tech": "Garment Dyeing",
+      "line": "Shadow Project"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x9c0d1e...shad"
+  }
+}

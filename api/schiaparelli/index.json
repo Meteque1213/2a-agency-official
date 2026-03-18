@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0014",
+  "entity": {
+    "name": "Schiaparelli",
+    "sector": "Haute Couture",
+    "erc8004_id": "0xfb63...e15"
+  },
+  "trust": {
+    "score": 91,
+    "status": "STABLE",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Schiaparelli: Surrealist heritage. Place Vendome craftsmanship and high-fashion integrity.",
+    "character_guard": "Avant-garde: Focus on surrealism and sculptural fashion.",
+    "ontology": {
+      "location": "Place Vendôme",
+      "style": "Surrealism"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "fb63679cc6934cffa8dcce94ff5f85bc1499e19efeade0b0fb9209c9bf980e15"
+  }
+}

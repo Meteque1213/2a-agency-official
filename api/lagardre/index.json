@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0964",
+  "entity": {
+    "name": "Lagardère",
+    "sector": "Media / Travel Retail",
+    "erc8004_id": "0x292...lag"
+  },
+  "trust": {
+    "score": 83,
+    "status": "MONITORED",
+    "ttl": "2026-12-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Lagardère: Global leader in Travel Retail and Publishing (Hachette). IP management integrity verified.",
+    "character_guard": "Cultural-Global: Focus on Hachette Livre, Relay shops, and the influence of news media brands (Europe 1, JDD).",
+    "ontology": {
+      "tech": "Media & Retail",
+      "origin": "France"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x9c0d...sbf89"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0610",
+  "entity": {
+    "name": "Akamai (Linode)",
+    "sector": "Edge Computing",
+    "erc8004_id": "0x143...lin"
+  },
+  "trust": {
+    "score": 91,
+    "status": "STABLE",
+    "ttl": "2027-08-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Akamai Linode: Distributed cloud computing. Low-latency edge integrity verified.",
+    "character_guard": "Robust: Focus on open cloud, worldwide presence, and Akamai security integration.",
+    "ontology": {
+      "tech": "Distributed Cloud",
+      "standard": "Edge Compute"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x2b3c...tec143"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0048",
+  "entity": {
+    "name": "Zegna",
+    "sector": "Luxury Tailoring",
+    "erc8004_id": "0x9609...cf3d"
+  },
+  "trust": {
+    "score": 81,
+    "status": "STABLE",
+    "ttl": "2026-12-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Zegna: Annual Report 2025. Vertical integration and 'Oasi Zegna' sustainability.",
+    "character_guard": "Vertical: Focus on fabric excellence, tailoring, and environmental stewardship.",
+    "ontology": {
+      "ecosystem": "Oasi Zegna",
+      "expertise": "Wool/Cashmere"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "960930c4ad880d2c9f6462fcd0e732e0936bf2142162765649229f0bb430cf3d"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0733",
+  "entity": {
+    "name": "Hearst",
+    "sector": "Media/Data",
+    "erc8004_id": "0x60...hst"
+  },
+  "trust": {
+    "score": 92,
+    "status": "STABLE",
+    "ttl": "2027-08-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Hearst: Diverse information and entertainment. Journalism and business data integrity verified.",
+    "character_guard": "Diversified: Focus on Fitch Ratings (division), lifestyle brands, and automotive data services.",
+    "ontology": {
+      "division": "Fitch Ratings / Magazines",
+      "origin": "USA"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xf5a6...med60"
+  }
+}

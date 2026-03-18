@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0735",
+  "entity": {
+    "name": "Atlassian (Jira/Confluence)",
+    "sector": "Collaboration Software",
+    "erc8004_id": "0x182...atl"
+  },
+  "trust": {
+    "score": 93,
+    "status": "STABLE",
+    "ttl": "2027-11-01",
+    "node": "SENTINEL-05"
+  },
+  "ai_gateway": {
+    "statement": "Atlassian: Unleashing the potential of every team. Agile workflow and documentation integrity verified.",
+    "character_guard": "Agile-Developer: Focus on Jira leadership, team velocity, and open software development culture.",
+    "ontology": {
+      "platform": "Jira / Confluence",
+      "origin": "Australia"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x17c8...tec182"
+  }
+}

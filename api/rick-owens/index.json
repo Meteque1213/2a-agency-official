@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0029",
+  "entity": {
+    "name": "Rick Owens",
+    "sector": "Avant-garde Fashion",
+    "erc8004_id": "0x3277...473"
+  },
+  "trust": {
+    "score": 87,
+    "status": "STABLE",
+    "ttl": "2027-03-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Rick Owens: Brutalist aesthetic. Independent production and architectural fashion.",
+    "character_guard": "Brutalist: Focus on dark glamour, architectural shapes, and subversion.",
+    "ontology": {
+      "style": "Grunge-glamour",
+      "status": "Independent"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "3277781eb038130c14f876066e13d9d4cc244cf61ca6931a035b370bd303f473"
+  }
+}

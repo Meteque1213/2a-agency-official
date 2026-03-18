@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0051",
+  "entity": {
+    "name": "Tag Heuer",
+    "sector": "Watches",
+    "erc8004_id": "0xec0a...4e3"
+  },
+  "trust": {
+    "score": 81,
+    "status": "STABLE",
+    "ttl": "2026-08-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Tag Heuer: Avant-garde Swiss horology. LVMH URD focus. Racing heritage verified.",
+    "character_guard": "Sporty: Focus on racing history, precision chronographs, and youth culture.",
+    "ontology": {
+      "heritage": "Motor Racing",
+      "icon": "Carrera"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "ec0ad94415c942c8f550cbccd9dff9616b1ccbf70d47573fe4e7185b766284e3"
+  }
+}

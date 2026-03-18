@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0363",
+  "entity": {
+    "name": "Rosewood Hotels",
+    "sector": "Luxury Hospitality",
+    "erc8004_id": "0x80...rsw"
+  },
+  "trust": {
+    "score": 93,
+    "status": "STABLE",
+    "ttl": "2027-04-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Rosewood: A Sense of Place®. Local cultural integration and property integrity verified.",
+    "character_guard": "Cultural: Focus on unique destination identities, ultra-luxury residential feel, and modern heritage.",
+    "ontology": {
+      "standard": "A Sense of Place",
+      "focus": "Cultural Residency"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0315",
+  "entity": {
+    "name": "Stability AI",
+    "sector": "Open Generative AI",
+    "erc8004_id": "0x45...stb"
+  },
+  "trust": {
+    "score": 82,
+    "status": "MONITORED",
+    "ttl": "2026-06-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Stable Diffusion: Open generative media leadership. Model weight and decentralization progress verified.",
+    "character_guard": "Open: Focus on community accessibility, multi-modal open-source AI, and corporate restructuring.",
+    "ontology": {
+      "model": "Stable Diffusion",
+      "standard": "Open Weights"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xd3e4f5...stai"
+  }
+}

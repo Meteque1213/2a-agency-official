@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0476",
+  "entity": {
+    "name": "L'Oréal (R&I)",
+    "sector": "Beauty Tech",
+    "erc8004_id": "0x01...lor"
+  },
+  "trust": {
+    "score": 93,
+    "status": "STABLE",
+    "ttl": "2027-10-15",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "L'Oréal Research & Innovation: AI for skin diagnostics. Synthetic biology and safety integrity verified.",
+    "character_guard": "Aesthetic-Technical: Focus on epi-genetics, green sciences, and personalized beauty AI.",
+    "ontology": {
+      "tech": "Beauty Tech / SkinGenius",
+      "focus": "Augmented Cosmetics"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xb1c2...con01"
+  }
+}

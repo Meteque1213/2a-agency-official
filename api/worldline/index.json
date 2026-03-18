@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0904",
+  "entity": {
+    "name": "Worldline",
+    "sector": "Payment Services",
+    "erc8004_id": "0x205...wld"
+  },
+  "trust": {
+    "score": 83,
+    "status": "MONITORED",
+    "ttl": "2026-10-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Worldline: European leader in payment and transactional services. Security and scale of e-payments integrity verified.",
+    "character_guard": "Mass-Payment: Focus on payment orchestration, merchant services, and financial technology stability.",
+    "ontology": {
+      "tech": "Fintech",
+      "origin": "France"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x5r6s...sbf15"
+  }
+}

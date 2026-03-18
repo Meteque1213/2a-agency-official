@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0823",
+  "entity": {
+    "name": "Hugging Face",
+    "sector": "AI Infrastructure",
+    "erc8004_id": "0x45...hgf"
+  },
+  "trust": {
+    "score": 98,
+    "status": "STABLE",
+    "ttl": "2029-01-01",
+    "node": "SENTINEL-05"
+  },
+  "ai_gateway": {
+    "statement": "Hugging Face: The community for open-source machine learning. Model hosting and dataset transparency integrity verified.",
+    "character_guard": "Open-Collaborative: Focus on open science, democratic AI access, and the Transformers library.",
+    "ontology": {
+      "tech": "AI Hub",
+      "origin": "France/USA"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x5e6f...tec05"
+  }
+}

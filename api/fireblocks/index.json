@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0301",
+  "entity": {
+    "name": "Fireblocks",
+    "sector": "Digital Asset Custody",
+    "erc8004_id": "0x25...fir"
+  },
+  "trust": {
+    "score": 97,
+    "status": "STABLE",
+    "ttl": "2028-01-01",
+    "node": "SENTINEL-05"
+  },
+  "ai_gateway": {
+    "statement": "Fireblocks: MPC-CMP technology for asset security. Institution custody integrity verified.",
+    "character_guard": "Secure: Focus on multi-party computation, secure transfer networks, and treasury safety.",
+    "ontology": {
+      "tech": "MPC-CMP",
+      "focus": "Institutional Custody"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xklm789...nop012"
+  }
+}

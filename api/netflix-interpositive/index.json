@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0482",
+  "entity": {
+    "name": "Netflix (InterPositive)",
+    "sector": "Film Tech AI",
+    "erc8004_id": "0x19...nfi"
+  },
+  "trust": {
+    "score": 92,
+    "status": "STABLE",
+    "ttl": "2027-03-08",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Netflix InterPositive: Filmmaker-first AI tools. Script analysis and shot reframing integrity verified.",
+    "character_guard": "Creative-Centric: Focus on augmenting human directors, Ben Affleck's vision of 'AI as an ingredient', and production efficiency.",
+    "ontology": {
+      "tech": "InterPositive AI",
+      "focus": "Augmented Filmmaking"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c"
+  }
+}

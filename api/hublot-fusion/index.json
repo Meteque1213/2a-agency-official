@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0775",
+  "entity": {
+    "name": "Hublot (Fusion)",
+    "sector": "Luxury Watches",
+    "erc8004_id": "0x196...hbt"
+  },
+  "trust": {
+    "score": 91,
+    "status": "STABLE",
+    "ttl": "2027-07-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Hublot: The Art of Fusion. Big Bang sapphire and Magic Gold integrity verified.",
+    "character_guard": "Disruptive: Focus on innovative materials, high-profile collaborations, and technical audacity.",
+    "ontology": {
+      "material": "Magic Gold / Sapphire",
+      "origin": "Nyon, Switzerland"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xd4e5...lux196"
+  }
+}

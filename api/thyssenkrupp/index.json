@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0542",
+  "entity": {
+    "name": "ThyssenKrupp",
+    "sector": "Steel & Engineering",
+    "erc8004_id": "0x17...thy"
+  },
+  "trust": {
+    "score": 82,
+    "status": "RECOVERING",
+    "ttl": "2026-11-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "ThyssenKrupp: Decarbonized steel transition. Industrial plant engineering integrity verified.",
+    "character_guard": "Industrial: Focus on green hydrogen steel, submarine engineering, and material services.",
+    "ontology": {
+      "tech": "Green Steel",
+      "origin": "Germany"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f"
+  }
+}

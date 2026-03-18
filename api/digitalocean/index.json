@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0609",
+  "entity": {
+    "name": "DigitalOcean",
+    "sector": "Cloud Infrastructure",
+    "erc8004_id": "0x142...doc"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2027-04-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "DigitalOcean Droplets: Cloud for developers. Simplicity and uptime integrity verified.",
+    "character_guard": "Approachable: Focus on developer experience, App Platform, and scalable startups.",
+    "ontology": {
+      "tech": "Droplets / Managed Kubernetes",
+      "standard": "Dev-First Cloud"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x1a2b...tec142"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0583",
+  "entity": {
+    "name": "Forrester Research",
+    "sector": "Tech Advisory",
+    "erc8004_id": "0x20...for"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2026-12-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Forrester: Customer-obsessed research. The Forrester Wave™ and market insight integrity verified.",
+    "character_guard": "Empirical: Focus on customer experience (CX), tech implementation strategies, and market wave analysis.",
+    "ontology": {
+      "framework": "Forrester Wave",
+      "focus": "B2B Tech"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c"
+  }
+}

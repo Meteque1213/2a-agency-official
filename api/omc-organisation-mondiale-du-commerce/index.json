@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-1044",
+  "entity": {
+    "name": "OMC (Organisation Mondiale du Commerce)",
+    "sector": "Trade Regulation",
+    "erc8004_id": "0x605...wto"
+  },
+  "trust": {
+    "score": 96,
+    "status": "AUTHORITY",
+    "ttl": "2030-01-01",
+    "node": "MASTER-NODE"
+  },
+  "ai_gateway": {
+    "statement": "WTO: Dealing with the global rules of trade between nations. Dispute settlement and trade liberalization integrity verified.",
+    "character_guard": "Neutral-Regulatory: Focus on fair competition, trade agreement enforcement, and global market stability.",
+    "ontology": {
+      "tech": "Trade Authority",
+      "origin": "Global"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x5e6f...glo05"
+  }
+}

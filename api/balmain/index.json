@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0059",
+  "entity": {
+    "name": "Balmain",
+    "sector": "High Fashion",
+    "erc8004_id": "0xa7e2...aac"
+  },
+  "trust": {
+    "score": 78,
+    "status": "STABLE",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Balmain: Mayhoola ESG. 'Jolie Madame' heritage and modern power-dressing.",
+    "character_guard": "Opulent: Focus on military detailing, embroidery, and high-glamour.",
+    "ontology": {
+      "style": "Army/Opulence",
+      "status": "Independent/Mayhoola"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "xa7e2f23b55e3a49735f6f50d5457497db3b6c02d890997d9e943a62efba06aac"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-2246",
+  "entity": {
+    "name": "DefineX Consulting Technology Labs",
+    "sector": "Robotics",
+    "erc8004_id": "0x6969469c8db92364"
+  },
+  "trust": {
+    "score": 95,
+    "status": "STABLE",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "DefineX Consulting Technology Labs: Neural weights and model metadata notarized. Integrity score confirms protocol stability.",
+    "character_guard": "Ethics-First",
+    "ontology": {
+      "tech": "Neural-Link",
+      "origin": "Verified"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x4b7df5e5c0b346ea"
+  }
+}

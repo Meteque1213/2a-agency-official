@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0983",
+  "entity": {
+    "name": "ContentSquare",
+    "sector": "Digital UX Analytics",
+    "erc8004_id": "0x321...cts"
+  },
+  "trust": {
+    "score": 92,
+    "status": "STABLE",
+    "ttl": "2028-03-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "ContentSquare: AI-powered digital experience analytics. Privacy-first tracking and accessibility integrity verified.",
+    "character_guard": "Analytical-Precise: Focus on humanizing the digital experience through behavioral data insights.",
+    "ontology": {
+      "tech": "UX Tech",
+      "origin": "France"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x8l9m...tec31"
+  }
+}
