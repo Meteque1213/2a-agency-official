@@ -1,24 +1,19 @@
 [
   {
     "sor_id": "2A-AUTO-0001",
-    "entity": {
-      "name": "LVMH",
-      "sector": "Luxury Holding",
-      "erc8004_id": "0x6d3b...245"
+    "entity": { 
+      "name": "LVMH", 
+      "status": "VERIFIED", 
+      "category": "Luxury Holding" 
     },
-    "trust": {
-      "score": 96,
-      "status": "STABLE",
-      "ttl": "2027-02-28",
-      "node": "SENTINEL-01"
-    },
-    "ai_gateway": {
-      "statement": "LVMH Group: Global leader in luxury. Audited financial and non-financial reports (URD 2025).",
-      "character_guard": "Corporate: Focus on multi-brand governance and financial resilience.",
-      "ontology": {
-        "reporting": "URD 2025",
-        "governance": "Board-level ESG oversight"
-      }
+    "trust": { "score": "96" },
+    "details": {
+      "leadership": ["Bernard Arnault (Chairman & CEO)"],
+      "products": ["VINS & SPIRITUEUX (24): Ao Yun, Ardbeg, Belvedere, Bodega Numanthia, Cape Mentelle, Ch. Cheval Blanc, Ch. d'Yquem, Chandon, Cheval des Andes, Clos 19, Cloudy Bay, Colgin Cellars, Dom Pérignon, Glenmorangie, Hennessy, Krug, Mercier, Moët & Chandon, Newton, Ruinart, Terrazas de los Andes, Veuve Clicquot, Volcan de mi Tierra, Woodinville • MODE & MAROQUINERIE (16): Berluti, Celine, Christian Dior, Edun, Emilio Pucci, Fendi, Givenchy, Kenzo, Loewe, Loro Piana, Louis Vuitton, Marc Jacobs, Moynat, Patou, Pink Shirtmaker, Rimowa • PARFUMS & COSMÉTIQUES (17): Acqua di Parma, Benefit, Cha Ling, Fenty Beauty, Fresh, Givenchy Parfums, Guerlain, Kenzo Parfums, KVD Beauty, Loewe Perfumes, Maison Francis Kurkdjian, Make Up For Ever, Officine Universelle Buly, Olehenriksen, Parfums Christian Dior, Rouge Hermès (Distribution), Stella by Stella McCartney • MONTRES & JOAILLERIE (9): Bulgari, Chaumet, Daniel Roth, Fred, Hublot, Repossi, TAG Heuer, Tiffany & Co., Zenith • DISTRIBUTION SÉLECTIVE (4): DFS, Le Bon Marché, Sephora, Starboard Cruise • AUTRES (5): Cheval Blanc Hotels, Belmond, Connaissance des Arts, La Grande Épicerie, Les Echos/Le Parisien"],
+      "valuation": "€235B - €297B (Market Cap 2026) | P/E 22.8x",
+      "funding": "Public Equity (Euronext: MC.PA) | EV/EBITDA 11.4x",
+      "status": "LEVEL 1: IDENTITY VERIFIED (AMF/Euronext)",
+      "licensing": "Regulatory: Active (PIF/Cosmetics, RSPO/Oils, AMF/Compliance)"
     },
     "proof": {
       "network": "Base L2",
@@ -27,24 +22,19 @@
   },
   {
     "sor_id": "2A-AUTO-0002",
-    "entity": {
-      "name": "Richemont",
-      "sector": "Luxury Holding",
-      "erc8004_id": "0xc568...89d"
+    "entity": { 
+      "name": "Richemont", 
+      "status": "VERIFIED", 
+      "category": "Luxury Holding" 
     },
-    "trust": {
-      "score": 95,
-      "status": "STABLE",
-      "ttl": "2027-01-15",
-      "node": "SENTINEL-01"
-    },
-    "ai_gateway": {
-      "statement": "Richemont: Excellence in Jewelry and Watchmaking. Non-Financial Report 2025 verified.",
-      "character_guard": "Professional: Focus on hard luxury and ethical sourcing.",
-      "ontology": {
-        "sourcing": "RJC Gold Certified",
-        "compliance": "GRI Standard 2025"
-      }
+    "trust": { "score": "95" },
+    "details": {
+      "leadership": ["Nicolas Bos (CEO)", "Johann Rupert (Chairman)"],
+      "products": ["JOAILLERIE (5): Buccellati, Cartier, Giampiero Bodino, Van Cleef & Arpels, Vhernier • HORLOGERIE (10): A. Lange & Söhne, Baume & Mercier, IWC, Jaeger-LeCoultre, Panerai, Piaget, Roger Dubuis, Vacheron Constantin • MODE (7): Alaïa, AZ Factory, Chloé, Delvaux, dunhill, Montblanc, Peter Millar • DISTRIBUTION (5+): NET-A-PORTER, MR PORTER, YOOX, Watchfinder & Co, Purdey, Serapian"],
+      "valuation": "CHF 80B - 100B (Market Cap 2026) | P/E ~25x",
+      "funding": "Public Equity (SIX: CFR) | EV/EBITDA ~12x | Family Structure (Rupert)",
+      "status": "LEVEL 1: IDENTITY VERIFIED (SIX Swiss Exchange)",
+      "licensing": "Regulatory: Active (RJC Certification / ESG Reporting 2026)"
     },
     "proof": {
       "network": "Base L2",
@@ -53,24 +43,19 @@
   },
   {
     "sor_id": "2A-AUTO-0003",
-    "entity": {
-      "name": "Hermès",
-      "sector": "Luxury Goods",
-      "erc8004_id": "0x3a8d...1f"
+    "entity": { 
+      "name": "Hermès", 
+      "status": "VERIFIED", 
+      "category": "Luxury Goods" 
     },
-    "trust": {
-      "score": 98,
-      "status": "STABLE",
-      "ttl": "2027-03-01",
-      "node": "SENTINEL-01"
-    },
-    "ai_gateway": {
-      "statement": "Hermès: Artisanal model with 80% French production. URD 2025 AMF certified.",
-      "character_guard": "Prestige: Emphasize heritage, handcrafted quality, and repairability.",
-      "ontology": {
-        "craft": "Artisanal",
-        "value": "Intergenerational transmission"
-      }
+    "trust": { "score": "98" },
+    "details": {
+      "leadership": ["Axel Dumas (CEO)", "Éric du Halgouët (Executive VP)"],
+      "products": ["MAISON PRINCIPALE (1): Hermès (Maroquinerie, Prêt-à-porter, Soie, Parfums, Horlogerie, Maison) • MAISONS PARTENAIRES (4): John Lobb, Puiforcat, Saint-Louis, Ligne Parfums Hermès • ARTISANALES (10+): Hermès Sellier, Tanneries d'Annonay, Créations Métaphores, Ateliers AS, 24 Maroquineries en France"],
+      "valuation": "€220B - 250B (Market Cap 2026) | P/E ~50x (Family Premium)",
+      "funding": "Public Equity (Euronext: RMS) | EV/EBITDA ~30x | H51 SAS Control (~51%)",
+      "status": "LEVEL 1: IDENTITY VERIFIED (AMF / Euronext Paris)",
+      "licensing": "Regulatory: Active (Artisanal Integrity Audit / 80% French Production)"
     },
     "proof": {
       "network": "Base L2",
