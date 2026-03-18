@@ -9,11 +9,11 @@ async function main() {
   const abi = ["function issueCertificate(string brandName, string reportHash) public"];
   const protocol = new ethers.Contract(contractAddress, abi, wallet);
 
-  // --- TON NOUVEAU ROOT HASH (JALON 1056) ---
-  const registryRootHash = "0xfb120608bcafe0960e3bda9b88466299928f8ab9862046153abca1b4d3f42802";
+  // --- TON NOUVEAU ROOT HASH (JALON 3795) ---
+  const registryRootHash = "0x6f75d09afedc92f399dab761d5c078d463fb17c01d9ae61baf95e3e6fb640c91";
 
-  // --- LABEL OFFICIEL ---
-  const notarizationMemo = "2A Agency | System of Record | 1056 Trust Nodes Certified | v1.0.0";
+// --- LABEL OFFICIEL ---
+const notarizationMemo = "2A Agency | System of Record | 2698 Unique Nodes Certified | v1.2.0";
 
   console.log("--------------------------------------------------");
   console.log("🛡️  NOTARISATION MASSIVE : SYSTEM OF RECORD");

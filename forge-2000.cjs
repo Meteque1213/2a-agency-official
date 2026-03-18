@@ -1,89 +1,86 @@
 const fs = require('fs');
 const path = require('path');
 
-const templatePath = path.join(__dirname, 'master-template.html');
+// --- CONFIGURATION ---
+const registryPath = path.join(__dirname, 'registry.json'); // Vérifie bien que c'est le bon nom !
+const listPath = path.join(__dirname, 'FINAL_LIST.txt');
 const auditsDir = path.join(__dirname, 'audits');
-const registryPath = path.join(__dirname, 'registry.json');
-const sourceFile = path.join(__dirname, 'FINAL_LIST.txt'); 
 
-function slugify(text) {
-    if (!text) return '';
-    return text.toString().toLowerCase().trim()
-        .replace(/\s+/g, '-')
-        .replace(/[^\w\-]+/g, '')
-        .replace(/\-\-+/g, '-');
-}
+if (!fs.existsSync(auditsDir)) fs.mkdirSync(auditsDir);
 
-function forge() {
-    console.log("🛡️ Vérification du registre actuel...");
+async function forge() {
+    console.log("🛡️  Vérification du registre actuel...");
     
-    const template = fs.readFileSync(templatePath, 'utf8');
-    let registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
-    const rawNames = fs.readFileSync(sourceFile, 'utf8').split('\n');
+    // 1. Charger le registre existant
+    let registry = [];
+    if (fs.existsSync(registryPath)) {
+        registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
+    }
 
-    // On crée un Set des noms existants pour une détection de doublons ultra-précise
-    const existingNames = new Set(
-        registry
-            .filter(item => item && item.memo)
-            .map(item => item.memo.toLowerCase().trim())
-    );
-    
-    let count = 0;
-    // On reprend l'incrémentation APRES le dernier élément du registre
-    let nextIndex = registry.length; 
+    // 2. Créer un Set des noms déjà présents (pour recherche ultra-rapide)
+    const existingNames = new Set(registry.map(e => e.entity.name.toLowerCase().trim()));
+    const seenInThisRun = new Set(); // Sécurité pour les doublons dans FINAL_LIST.txt
 
-    console.log(`🔍 ${existingNames.size} entités déjà protégées dans le registre. Début de la forge...`);
+    console.log(`🔍 ${existingNames.size} entités déjà protégées dans le registre.`);
 
-    rawNames.forEach((line) => {
-        const brandName = line.trim();
-        if (!brandName || brandName.length < 2) return; 
+    // 3. Lire la nouvelle liste
+    const rawList = fs.readFileSync(listPath, 'utf8');
+    const names = rawList.split('\n')
+        .map(n => n.trim())
+        .filter(n => n.length > 0);
 
-        const brandLower = brandName.toLowerCase();
+    let newCount = 0;
+    let duplicateCount = 0;
 
-        // 🛡️ PROTECTION ANTI-DOUBLONS
-        if (!existingNames.has(brandLower)) {
-            const slug = slugify(brandName);
-            if (!slug) return;
+    // 4. Boucle de création
+    names.forEach((name) => {
+        const cleanName = name.toLowerCase().trim();
 
-            const fileName = `${slug}.html`;
-            const filePath = path.join(auditsDir, fileName);
-            
-            // On génère un ID unique dans la continuité
-            const newId = `2A-AUTO-${String(nextIndex + 1).padStart(4, '0')}`;
-
-            // 1. Génération du HTML
-            let content = template.split('{{BRAND_NAME}}').join(brandName);
-            content = content.split('{{SOR_ID}}').join(newId);
-            
-            // On n'écrit le fichier que s'il n'existe pas physiquement non plus
-            if (!fs.existsSync(filePath)) {
-                fs.writeFileSync(filePath, content);
-            }
-
-            // 2. Ajout au registre avec l'écriture exacte d'hier
-            registry.push({
-                id: newId,
-                memo: brandName,
-                status: "STABLE",
-                category: "Audit 2026 / Expansion"
-            });
-
-            existingNames.add(brandLower);
-            nextIndex++;
-            count++;
+        // --- LE FILTRE DE SÉCURITÉ ---
+        if (existingNames.has(cleanName) || seenInThisRun.has(cleanName)) {
+            duplicateCount++;
+            return; // On ignore ce nom, il existe déjà
         }
+
+        // --- CRÉATION DE L'ENTITÉ ---
+        const safeId = registry.length + 1;
+        const fileName = name.toLowerCase().replace(/[^a-z0-9]/g, '-') + '.html';
+        
+        const newEntity = {
+            sor_id: `2A-AUTO-${String(safeId).padStart(4, '0')}`,
+            entity: {
+                name: name,
+                category: "PENDING_CLASSIFICATION", // Sera enrichi par enrich-registry-v2.cjs
+                status: "VERIFIED"
+            },
+            proof: {
+                hash: "0x" + Math.random().toString(16).slice(2, 10), // Placeholder
+                timestamp: new Date().toISOString()
+            }
+        };
+
+        // Ajouter au registre et marquer comme "vu"
+        registry.push(newEntity);
+        seenInThisRun.add(cleanName);
+        
+        // Créer le fichier HTML vide (sera rempli par update-html-content.cjs)
+        const htmlPath = path.join(auditsDir, fileName);
+        if (!fs.existsSync(htmlPath)) {
+            fs.writeFileSync(htmlPath, ``);
+        }
+        
+        newCount++;
     });
 
-    // 3. Sauvegarde (formatage JSON identique à hier avec 4 espaces)
-    fs.writeFileSync(registryPath, JSON.stringify(registry, null, 4));
-    
-    console.log(`✅ Mission accomplie !`);
-    console.log(`📊 ${count} nouveaux audits ajoutés sans toucher aux précédents.`);
-    console.log(`📈 Total final du System of Record : ${registry.length}`);
+    // 5. Sauvegarde
+    fs.writeFileSync(registryPath, JSON.stringify(registry, null, 2));
+
+    console.log("--------------------------------------------------");
+    console.log(`✅ Forge terminée avec succès !`);
+    console.log(`✨ Nouveaux audits créés : ${newCount}`);
+    console.log(`🚫 Doublons ignorés     : ${duplicateCount}`);
+    console.log(`📈 Total final registre : ${registry.length}`);
+    console.log("--------------------------------------------------");
 }
 
-try {
-    forge();
-} catch (error) {
-    console.error("❌ Erreur de sécurité :", error.message);
-}
+forge().catch(console.error);
