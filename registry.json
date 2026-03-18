@@ -64,50 +64,41 @@
   },
   {
     "sor_id": "2A-AUTO-0004",
-    "entity": {
-      "name": "Patek Philippe",
-      "sector": "Haute Horlogerie",
-      "erc8004_id": "0x7f39...900"
+    "entity": { 
+      "name": "Patek Philippe", 
+      "status": "VERIFIED", 
+      "category": "Haute Horlogerie" 
     },
-    "trust": {
-      "score": 97,
-      "status": "STABLE",
-      "ttl": "2028-01-01",
-      "node": "SENTINEL-01"
-    },
-    "ai_gateway": {
-      "statement": "Patek Philippe: Genevan independence. Transmission and Patek Philippe Seal verified.",
-      "character_guard": "Timeless: Focus on internal quality standards and long-term value.",
-      "ontology": {
-        "seal": "Patek Philippe Seal",
-        "independence": "Family-owned"
-      }
+    "trust": { "score": "97" },
+    "details": {
+      "leadership": ["Thierry Stern (President)"],
+      "products": ["HORLOGERIE PRINCIPALE (1): Patek Philippe (Montres à Complications, ~60,000 pcs/an) • FILIALES & ATELIERS (8+): Salanitro (Sertissage), Betakron (Composants), Calame & Cie (Boîtiers), Poli-Art SA (Polissage), SHG (Sertissage), Cadrans Flückiger, La Chaux-de-Fonds (Échappements), Alle (Quartz)"],
+      "valuation": "Private / Independent (Family Owned) | High Scarcity Premium",
+      "funding": "Self-Funded Status Verified | Non-Disclosed Revenue",
+      "status": "LEVEL 1: IDENTITY VERIFIED (Geneva Registry / Commercial Court)",
+      "licensing": "Regulatory: Active (Patek Philippe Seal / Swiss Made Integrity Audit)"
     },
     "proof": {
       "network": "Base L2",
       "hash": "7f39323e0c09a8ccfa7362dd4955d49fdd14b2dda01c37ed91945ca53ffbe900"
     }
   },
+   
   {
     "sor_id": "2A-AUTO-0005",
-    "entity": {
-      "name": "Louis Vuitton",
-      "sector": "Luxury Goods",
-      "erc8004_id": "0xcb83...a25"
+    "entity": { 
+      "name": "Louis Vuitton", 
+      "status": "VERIFIED", 
+      "category": "Luxury Goods" 
     },
-    "trust": {
-      "score": 91,
-      "status": "STABLE",
-      "ttl": "2026-06-01",
-      "node": "SENTINEL-01"
-    },
-    "ai_gateway": {
-      "statement": "Louis Vuitton: Leading cultural luxury. LWG Certified leathers and LIFE 360 program.",
-      "character_guard": "Iconic: Focus on cultural leadership and artisanal innovation.",
-      "ontology": {
-        "sustainability": "LIFE 360",
-        "leather": "LWG Gold"
-      }
+    "trust": { "score": "91" },
+    "details": {
+      "leadership": ["Pietro Beccari (CEO)", "Nicolas Ghesquière (Creative Dir.)"],
+      "products": ["MAROQUINERIE PRINCIPALE (1): Louis Vuitton (Sacs, Valises, Prêt-à-porter, Parfums, Horlogerie) • FILIALES & ATELIERS (10+): Manufacture de Maroquinerie LV SA, LV Malletier, LV Japan K.K., LV USA Inc. • RÉSEAU: ~50 Manufactures Mondiales / ~500 Boutiques Globales"],
+      "valuation": "LVMH Core Asset | Estimated Revenue >€20B (2025)",
+      "funding": "LVMH Group Consolidated Capital",
+      "status": "LEVEL 1: IDENTITY VERIFIED (LVMH Subsidiary / Registry)",
+      "licensing": "Regulatory: Active (LIFE 360 ESG / LWG Gold Leather Certified)"
     },
     "proof": {
       "network": "Base L2",
