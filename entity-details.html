@@ -65,19 +65,23 @@
 
     <script>
         async function loadEntityData() {
+            console.log("🚀 Script d'audit démarré...");
             const urlParams = new URLSearchParams(window.location.search);
             const entityName = urlParams.get('name');
-            if (!entityName) return;
+            if (!entityName) {
+                console.error("❌ Pas de nom d'entité dans l'URL");
+                return;
+            }
 
             try {
-                // Ajout d'un cache-buster pour forcer la lecture du dernier JSON
                 const response = await fetch('registry.json?v=' + Date.now());
                 const data = await response.json();
-                
-                // Recherche flexible (insensible à la casse)
+                console.log("📦 Données JSON récupérées (total) :", data.length);
+
                 const entity = data.find(e => e.entity.name.toLowerCase() === entityName.toLowerCase());
 
                 if (entity) {
+                    console.log("✅ Entité trouvée :", entity.entity.name);
                     document.getElementById('entity-name').innerText = entity.entity.name;
                     document.getElementById('top-id').innerText = `SOR_ID: ${entity.sor_id}`;
                     document.getElementById('trust-score').innerText = entity.trust.score;
@@ -85,21 +89,16 @@
 
                     // --- 01. AI GATEWAY / LEADERSHIP ---
                     let leaderContent = "";
-                    
-                    // On gère le nouveau format AI GATEWAY (Array)
                     if (Array.isArray(entity.details?.ai_gateway)) {
                         leaderContent += entity.details.ai_gateway.map(item => 
                             `<div class="pb-2 border-b border-white/5"><span class="opacity-40 text-[9px]">AI_GATEWAY</span><br><span class="text-white text-[11px] font-bold italic">${item}</span></div>`
                         ).join('');
                     }
-                    
-                    // On ajoute le LEADERSHIP classique dessous
                     if (entity.details?.leadership) {
                         leaderContent += entity.details.leadership.map(l => 
                             `<div class="flex justify-between border-b border-white/5 pb-2 pt-2 uppercase"><span class="opacity-40 text-[9px]">OFFICER</span><span class="font-bold text-[10px]">${l}</span></div>`
                         ).join('');
                     }
-                    
                     document.getElementById('leadership-data').innerHTML = leaderContent || "DATA PENDING";
 
                     // --- 02. ONTOLOGY / PRODUCTS ---
@@ -115,10 +114,10 @@
                     let instContent = "";
                     if (Array.isArray(entity.details?.institutional_context)) {
                         instContent = entity.details.institutional_context.map(i => 
-                            `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">INFO</span><span class="font-bold text-white uppercase text-[9px] text-right">${i}</span></div>`
+                            `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40 text-[9px]">INFO</span><span class="font-bold text-white uppercase text-[9px] text-right">${i}</span></div>`
                         ).join('');
                     } else {
-                        instContent = `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">SECTOR</span><span class="font-bold text-white uppercase">${entity.entity.category || 'N/A'}</span></div>`;
+                        instContent = `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">SECTOR</span><span class="font-bold text-white uppercase text-[9px]">${entity.entity.category || 'N/A'}</span></div>`;
                     }
                     document.getElementById('licensing-data').innerHTML = instContent;
 
@@ -126,16 +125,24 @@
                     let govContent = "";
                     if (Array.isArray(entity.details?.governance_node)) {
                         govContent = entity.details.governance_node.map(g => 
-                            `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">NODE</span><span class="font-bold text-white uppercase text-[9px] text-right">${g}</span></div>`
+                            `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40 text-[9px]">NODE</span><span class="font-bold text-white uppercase text-[9px] text-right">${g}</span></div>`
                         ).join('');
                     } else {
-                        govContent = `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">STATUS</span><span class="font-bold text-white uppercase">${entity.trust.status || 'STABLE'}</span></div>`;
+                        govContent = `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">STATUS</span><span class="font-bold text-white uppercase text-[9px]">${entity.trust.status || 'STABLE'}</span></div>`;
                     }
                     document.getElementById('capital-data').innerHTML = govContent;
+
+                    // Afficher le body une fois chargé
+                    document.body.style.opacity = 1;
+                } else {
+                    console.error("❌ Entité non trouvée dans le JSON pour :", entityName);
+                    document.getElementById('entity-name').innerText = "ENTITY NOT FOUND";
+                    document.body.style.opacity = 1;
                 }
             } catch (err) { 
-                console.error("Critical: Data mismatch", err);
+                console.error("🚨 ERREUR CRITIQUE :", err);
                 document.getElementById('entity-name').innerText = "FETCH_ERROR";
+                document.body.style.opacity = 1;
             }
         }
         window.onload = loadEntityData;
