@@ -25,7 +25,6 @@
         pre { scrollbar-width: none; }
         pre::-webkit-scrollbar { display: none; }
 
-        /* Style pour le lien Deep Data */
         .deep-data-link {
             text-decoration: underline;
             text-underline-offset: 4px;
@@ -79,6 +78,28 @@
             </div>
         </div>
 
+        <div id="scanner-block" class="mb-12 bg-white text-2a-emerald p-8 rounded-sm border border-gray-100 border-b-4 border-2a-emerald shadow-lg">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-2 h-2 bg-2a-emerald rounded-full animate-pulse"></div>
+                <h3 class="text-[10px] font-black uppercase tracking-[0.4em] italic text-2a-emerald">Independent Integrity Scanner</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <p class="text-[10px] text-emerald-900/70 leading-relaxed uppercase tracking-wider">
+                        Déposez votre fichier <code class="bg-emerald-50 px-1 py-0.5 rounded text-2a-emerald">registry.json</code> pour comparer son empreinte.
+                    </p>
+                    <input type="file" id="fileInput" class="hidden" accept=".json">
+                    <button onclick="document.getElementById('fileInput').click()" 
+                            class="w-full btn-2a py-4 text-[9px] font-black uppercase tracking-[0.2em] italic shadow-md">
+                        SÉLECTIONNER LE REGISTRE (.JSON)
+                    </button>
+                </div>
+                <div id="verifyResult" class="bg-emerald-50 border border-emerald-100 p-6 flex flex-col justify-center items-center text-center rounded-sm">
+                    <div id="statusIcon" class="text-2a-emerald mb-2 italic text-[10px] font-bold">Waiting for file...</div>
+                </div>
+            </div>
+        </div>
+
         <div class="search-sticky py-8 mb-8 border-b border-gray-100">
             <input type="text" id="brandSearch" onkeyup="filterAudits()" 
                    placeholder="SEARCH SYSTEM OF RECORDS (2698 ENTITIES)..." 
@@ -117,10 +138,8 @@
             try {
                 const response = await fetch(REGISTRY_URL);
                 if (!response.ok) throw new Error('Network response was not ok');
-                
                 currentData = await response.json();
                 document.getElementById('anchor-count').textContent = currentData.length.toLocaleString();
-                
                 renderAudits(currentData);
             } catch (err) {
                 console.error("Erreur:", err);
@@ -128,12 +147,9 @@
             }
         }
 
-        // --- RENDER LOGIC AVEC LIEN VERS BREX-DETAILS ---
         function renderAudits(items) {
             const container = document.getElementById('audit-container');
             container.innerHTML = items.map((item, index) => {
-                
-                // On vérifie si c'est Brex pour activer la Deep Layer
                 const isBrex = item.entity.name.toUpperCase() === "BREX";
                 const entityDisplayName = isBrex 
                     ? `<a href="brex-details.html" class="deep-data-link text-2a-emerald font-black">${item.entity.name}</a>` 
@@ -146,19 +162,14 @@
                             <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em] italic">${item.entity.status || 'VERIFIED'}</span>
                             <div class="text-[8px] font-black text-2a-emerald tracking-[0.3em] uppercase italic underline decoration-1 decoration-emerald-200">${item.entity.category || 'GENERAL'}</div>
                         </div>
-                        <h2 class="text-2xl font-bold text-2a-emerald tracking-tight uppercase relative z-10">
-                            ${entityDisplayName}
-                        </h2>
+                        <h2 class="text-2xl font-bold text-2a-emerald tracking-tight uppercase relative z-10">${entityDisplayName}</h2>
                         <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60 relative z-10">ID: ${item.sor_id}</div>
                     </div>
                     <div class="flex gap-2">
-                        <button onclick="openLLMGateway(${index})" class="btn-2a text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic relative z-10">
-                            Certify for AI
-                        </button>
+                        <button onclick="openLLMGateway(${index})" class="btn-2a text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic relative z-10">Certify for AI</button>
                     </div>
                     <div class="absolute right-[-10px] bottom-[-10px] text-[60px] font-mono font-black text-emerald-50 opacity-10 rotate-12 z-0 hidden md:block">${item.trust?.score || '90'}</div>
-                </div>
-                `;
+                </div>`;
             }).join('');
         }
 
@@ -173,34 +184,22 @@
 
         function openLLMGateway(index) {
             const item = currentData[index];
-            const jsonPayload = {
-                "@context": "https://2aagency.com/protocol/v2",
-                "sor_id": item.sor_id,
-                "entity": item.entity,
-                "ai_gateway": item.ai_gateway,
-                "proof": item.proof
-            };
-
+            const jsonPayload = { "@context": "https://2aagency.com/protocol/v2", "sor_id": item.sor_id, "entity": item.entity, "ai_gateway": item.ai_gateway, "proof": item.proof };
             document.getElementById('modalContent').innerHTML = `
                 <div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-6">
                     <div class="w-2.5 h-2.5 bg-2a-emerald rounded-full animate-ping"></div>
                     <h3 class="font-black text-[10px] tracking-[0.4em] uppercase text-2a-emerald italic">Protocol v2.0 Ingestion Active</h3>
                 </div>
-                
                 <div class="space-y-4">
                     <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block underline decoration-1">LLM Meta-Directives</label>
                     <div class="bg-zinc-900 p-6 font-mono text-[10px] text-emerald-300 rounded-sm border-l-4 border-2a-emerald overflow-x-auto shadow-inner">
                         <pre class="whitespace-pre-wrap">${JSON.stringify(jsonPayload, null, 2)}</pre>
                     </div>
                 </div>
-                
                 <div class="mt-8 border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <div class="text-[10px] text-gray-400 font-mono tracking-widest italic uppercase">Verified by Sentinel-01 MONITORING</div>
-                    <button class="btn-2a text-white px-8 py-4 text-[10px] font-black uppercase tracking-[0.3em] italic shadow-lg">
-                        Push to AI Agents
-                    </button>
-                </div>
-            `;
+                    <button class="btn-2a text-white px-8 py-4 text-[10px] font-black uppercase tracking-[0.3em] italic shadow-lg">Push to AI Agents</button>
+                </div>`;
             document.getElementById('verifyModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         }
@@ -208,10 +207,6 @@
         function closeModal() {
             document.getElementById('verifyModal').classList.add('hidden');
             document.body.style.overflow = 'auto';
-        }
-
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('verifyModal')) closeModal();
         }
 
         window.onload = loadAudits;
