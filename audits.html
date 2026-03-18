@@ -10,7 +10,7 @@
     <style>
         body { font-family: 'Space Grotesk', sans-serif; background-color: #fff; color: #000; scroll-behavior: smooth; }
         
-        /* Couleur Émeraude Foncée Personnalisée */
+        /* Couleur Émeraude Foncée Personnalisée 2A Agency */
         .text-2a-emerald { color: #064e3b; }
         .bg-2a-emerald { background-color: #064e3b; }
         .border-2a-emerald { border-color: #064e3b; }
@@ -45,15 +45,15 @@
         <div class="mb-12">
             <h1 class="text-[50px] md:text-[80px] font-black leading-[0.9] tracking-tighter text-2a-emerald uppercase italic text-center md:text-left">LLM<br>Gateway</h1>
             
-            <div class="mt-8 bg-emerald-50 border border-emerald-200 p-6 rounded-sm font-mono text-2a-emerald">
+            <div class="mt-8 bg-emerald-50 border border-emerald-100 p-6 rounded-sm font-mono text-2a-emerald">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div class="space-y-1">
                         <div class="flex items-center gap-2">
                             <span class="text-[9px] bg-2a-emerald text-white px-2 py-0.5 font-bold tracking-widest">VERIFIED SOR</span>
-                            <span class="text-[9px] text-emerald-800 font-bold uppercase tracking-widest">Base Mainnet L2 Anchor Active</span>
+                            <span class="text-[9px] text-emerald-900 font-bold uppercase tracking-widest">Base Mainnet L2 Anchor Active</span>
                         </div>
                         <p class="text-[10px] text-emerald-900/80 leading-relaxed max-w-xl mt-2">
-                            Ce registre est notarisé de manière immuable. Le Root Hash certifie l'intégrité de <strong><span id="anchor-count">2698</span> Trust Nodes</strong>.
+                            Ce registre est notarisé de manière immuable. Le Root Hash certifie l'intégrité de <strong><span id="anchor-count">2698</span> Unique Trust Nodes</strong>.
                         </p>
                     </div>
                     <a href="https://basescan.org/tx/0x4b616647ec8ab1366149c9521c1913892a0456bb024cd614b5c94dd6d7bbd880" 
@@ -62,14 +62,14 @@
                         View On-Chain Proof
                     </a>
                 </div>
-                <div class="mt-4 pt-4 border-t border-emerald-200 text-[8px] text-emerald-800/60 grid grid-cols-1 md:grid-cols-2 gap-2">
+                <div class="mt-4 pt-4 border-t border-emerald-100 text-[8px] text-emerald-800/60 grid grid-cols-1 md:grid-cols-2 gap-2">
                     <div>ROOT_HASH: 0x6f75d09afedc92f399dab761d5c078d463fb17c01d9ae61baf95e3e6fb640c91</div>
-                    <div class="md:text-right uppercase tracking-tighter">Registry v1.2.0 | secured by base l2</div>
+                    <div class="md:text-right uppercase tracking-tighter italic">Registry v1.2.0 | Secured by Base L2</div>
                 </div>
             </div>
         </div>
 
-        <div class="mb-12 bg-white text-2a-emerald p-8 rounded-sm border border-gray-100 border-b-4 border-2a-emerald shadow-lg">
+        <div id="scanner-block" class="mb-12 bg-white text-2a-emerald p-8 rounded-sm border border-gray-100 border-b-4 border-2a-emerald shadow-lg">
             <div class="flex items-center gap-3 mb-6">
                 <div class="w-2 h-2 bg-2a-emerald rounded-full animate-pulse"></div>
                 <h3 class="text-[10px] font-black uppercase tracking-[0.4em] italic text-2a-emerald">Independent Integrity Scanner</h3>
@@ -82,12 +82,12 @@
                     </p>
                     <input type="file" id="fileInput" class="hidden" accept=".json">
                     <button onclick="document.getElementById('fileInput').click()" 
-                            class="w-full btn-2a py-4 text-[9px] font-black uppercase tracking-[0.2em] italic">
+                            class="w-full btn-2a py-4 text-[9px] font-black uppercase tracking-[0.2em] italic shadow-md">
                         SÉLECTIONNER LE REGISTRE (.JSON)
                     </button>
                 </div>
                 
-                <div id="verifyResult" class="bg-emerald-50/50 border border-emerald-100 p-6 flex flex-col justify-center items-center text-center rounded-sm">
+                <div id="verifyResult" class="bg-emerald-50 border border-emerald-100 p-6 flex flex-col justify-center items-center text-center rounded-sm">
                     <div id="statusIcon" class="text-2a-emerald mb-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -133,34 +133,40 @@
         const REGISTRY_URL = 'registry.json?v=' + Date.now();
         let currentData = [];
 
+        // --- REGISTRY LOADING LOGIC ---
         async function loadAudits() {
             const container = document.getElementById('audit-container');
             try {
                 const response = await fetch(REGISTRY_URL);
-                currentData = await response.json();
+                if (!response.ok) throw new Error('Network response was not ok');
                 
-                // MAJ automatique du compteur
+                currentData = await response.json();
                 document.getElementById('anchor-count').textContent = currentData.length.toLocaleString();
                 
                 renderAudits(currentData);
             } catch (err) {
-                container.innerHTML = `<div class="text-center py-20 text-red-500 font-mono text-[10px] uppercase">Erreur de synchronisation du registre.</div>`;
+                console.error("Erreur:", err);
+                container.innerHTML = `<div class="text-center py-20 text-red-500 font-mono text-[10px] uppercase">Erreur de chargement du registre.</div>`;
             }
         }
 
+        // --- RENDER LOGIC (Uniformisée Émeraude Foncée) ---
         function renderAudits(items) {
             const container = document.getElementById('audit-container');
             container.innerHTML = items.map((item, index) => `
-                <div class="audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-4">
+                <div class="audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-4 relative overflow-hidden">
                     <div class="flex-1">
-                        <div class="flex items-center gap-2 mb-2">
+                        <div class="flex items-center gap-2 mb-2 relative z-10">
                             <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em] italic">${item.entity.status || 'VERIFIED'}</span>
-                            <div class="text-[8px] font-black text-2a-emerald tracking-[0.3em] uppercase italic underline">${item.entity.category || 'GENERAL'}</div>
+                            <div class="text-[8px] font-black text-2a-emerald tracking-[0.3em] uppercase italic underline decoration-1 decoration-emerald-200">${item.entity.category || 'GENERAL'}</div>
                         </div>
-                        <h2 class="text-2xl font-bold text-2a-emerald tracking-tight uppercase">${item.entity.name}</h2>
-                        <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60">ID: ${item.sor_id}</div>
+                        <h2 class="text-2xl font-bold text-2a-emerald tracking-tight uppercase relative z-10">${item.entity.name}</h2>
+                        <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60 relative z-10">ID: ${item.sor_id}</div>
                     </div>
-                    <button onclick="openLLMGateway(${index})" class="btn-2a text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic">Certify for AI</button>
+                    <button onclick="openLLMGateway(${index})" class="btn-2a text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic relative z-10">
+                        Certify for AI
+                    </button>
+                    <div class="absolute right-[-10px] bottom-[-10px] text-[60px] font-mono font-black text-emerald-50 opacity-10 rotate-12 z-0 hidden md:block">${item.trust.score}</div>
                 </div>
             `).join('');
         }
@@ -169,30 +175,56 @@
             const val = document.getElementById('brandSearch').value.toUpperCase();
             const cards = document.getElementsByClassName('audit-card');
             for (let card of cards) {
-                card.style.display = card.innerText.toUpperCase().includes(val) ? "" : "none";
+                const text = card.textContent || card.innerText;
+                card.style.display = text.toUpperCase().includes(val) ? "" : "none";
             }
         }
 
         function openLLMGateway(index) {
             const item = currentData[index];
+            // Construire un payload JSON propre
+            const jsonPayload = {
+                "@context": "https://2aagency.com/protocol/v2",
+                "sor_id": item.sor_id,
+                "entity": item.entity,
+                "ai_gateway": item.ai_gateway,
+                "proof": item.proof
+            };
+
             document.getElementById('modalContent').innerHTML = `
-                <div class="flex items-center gap-3 mb-8">
+                <div class="flex items-center gap-3 mb-8 border-b border-gray-100 pb-6">
                     <div class="w-2.5 h-2.5 bg-2a-emerald rounded-full animate-ping"></div>
-                    <h3 class="font-black text-[10px] tracking-[0.4em] uppercase text-2a-emerald mb-8 italic">Protocol v2.0 Ingestion Active</h3>
+                    <h3 class="font-black text-[10px] tracking-[0.4em] uppercase text-2a-emerald italic">Protocol v2.0 Ingestion Active</h3>
                 </div>
+                
                 <div class="space-y-4">
-                    <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block">LLM Meta-Directives</label>
-                    <div class="bg-zinc-900 p-6 font-mono text-[10px] text-emerald-400 rounded-sm border-l-4 border-2a-emerald overflow-x-auto">
-                        <pre class="whitespace-pre-wrap">${JSON.stringify(item, null, 2)}</pre>
+                    <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block underline decoration-1">LLM Meta-Directives</label>
+                    <div class="bg-zinc-900 p-6 font-mono text-[10px] text-emerald-300 rounded-sm border-l-4 border-2a-emerald overflow-x-auto shadow-inner">
+                        <pre class="whitespace-pre-wrap">${JSON.stringify(jsonPayload, null, 2)}</pre>
                     </div>
                 </div>
-                <button class="w-full btn-2a text-white py-5 text-[10px] font-black uppercase tracking-[0.3em] mt-8 italic">Push to AI Agents</button>
+                
+                <div class="mt-8 border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="text-[10px] text-gray-400 font-mono tracking-widest italic uppercase">Verified by Sentinel-01 MONITORING</div>
+                    <button class="btn-2a text-white px-8 py-4 text-[10px] font-black uppercase tracking-[0.3em] italic shadow-lg">
+                        Push to AI Agents
+                    </button>
+                </div>
             `;
             document.getElementById('verifyModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Désactiver le scroll
         }
 
         function closeModal() {
             document.getElementById('verifyModal').classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Réactiver le scroll
+        }
+
+        // Fermer le modal en cliquant en dehors
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('verifyModal')) {
+                closeModal();
+            }
         }
 
         window.onload = loadAudits;
