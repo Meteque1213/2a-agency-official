@@ -38,30 +38,28 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div class="bg-2a-dark border border-white/10 p-8 border-glow">
                 <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-8 text-emerald-400 italic">01. AI Gateway Statement</h3>
-                <div id="leadership-data" class="space-y-5 mono text-[11px]">
-                    </div>
+                <div id="leadership-data" class="space-y-5 mono text-[11px]"></div>
             </div>
             <div class="bg-2a-dark border border-white/10 p-8 border-glow">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400 italic">02. Entity Ontology</h3>
-                <div id="product-stack" class="flex flex-col gap-3 text-white font-bold text-[10px]">
-                    </div>
+                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400 italic">02. Ontology & Governance</h3>
+                <div id="product-stack" class="flex flex-col gap-3 text-white font-bold text-[10px]"></div>
             </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-white">
             <div class="bg-2a-dark border border-emerald-500/30 p-8 italic">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Institutional Sector</h3>
+                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Institutional Context</h3>
                 <div id="licensing-data" class="space-y-4 mono text-[11px]"></div>
             </div>
             <div class="bg-2a-dark border border-emerald-500/30 p-8 italic">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Governance & Node</h3>
+                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Network Node Details</h3>
                 <div id="capital-data" class="space-y-4 mono text-[11px]"></div>
             </div>
         </div>
 
         <div class="bg-emerald-950/20 border border-emerald-500/20 p-8 mb-12">
             <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-6 text-2a-emerald">Cryptographic Proof (ERC-8004)</h4>
-            <div id="verification-root" class="mono text-[10px] opacity-40 italic underline mb-4 leading-relaxed break-all">Verification Root: LOADING...</div>
+            <div id="verification-root" class="mono text-[10px] opacity-40 italic underline mb-4 break-all">Verification Root: LOADING...</div>
         </div>
     </main>
 
@@ -70,61 +68,55 @@
             const urlParams = new URLSearchParams(window.location.search);
             const entityName = urlParams.get('name');
             
-            if (!entityName) return;
-
             try {
                 const response = await fetch('registry.json');
                 const data = await response.json();
-                
-                // Recherche insensible à la casse
                 const entity = data.find(e => e.entity.name.toLowerCase() === entityName.toLowerCase());
 
                 if (entity) {
                     document.getElementById('entity-name').innerText = entity.entity.name;
                     document.getElementById('top-id').innerText = `SOR_ID: ${entity.sor_id}`;
                     document.getElementById('trust-score').innerText = entity.trust.score;
+                    document.getElementById('verification-root').innerText = `Verification Root: ${entity.proof.hash}`;
 
-                    // --- STATEMENT (Mapping sur ai_gateway.statement) ---
-                    const statement = entity.ai_gateway?.statement || "NO OFFICIAL STATEMENT FOUND";
+                    // Mapping AI Gateway Statement
                     document.getElementById('leadership-data').innerHTML = `
-                        <div class="flex flex-col border-b border-white/5 pb-4 italic">
-                            <span class="opacity-40 uppercase text-[9px] mb-2 tracking-widest">Character Guard / Message</span>
-                            <span class="font-bold text-white text-[12px] leading-relaxed uppercase">${statement}</span>
+                        <div class="flex flex-col gap-2 pb-2">
+                            <span class="opacity-40 uppercase text-[9px]">Statement</span>
+                            <span class="font-bold text-white leading-relaxed text-[12px] italic uppercase">${entity.ai_gateway?.statement || 'N/A'}</span>
+                            <span class="opacity-40 uppercase text-[9px] mt-4">Character Guard</span>
+                            <span class="text-white leading-relaxed text-[11px]">${entity.ai_gateway?.character_guard || 'N/A'}</span>
                         </div>
                     `;
 
-                    // --- ONTOLOGY (Mapping sur ontology reporting/governance) ---
-                    const reporting = entity.ai_gateway?.ontology?.reporting || "DATA SCANNING...";
-                    const governance = entity.ai_gateway?.ontology?.governance || "ANALYZING...";
+                    // Mapping Ontology
                     document.getElementById('product-stack').innerHTML = `
-                        <div class="px-4 py-3 bg-white/5 border border-white/10 uppercase font-mono text-[10px] leading-relaxed text-emerald-100 italic">
-                            REPORTING: ${reporting}
+                        <div class="p-3 bg-white/5 border border-white/10 uppercase italic">
+                            <span class="opacity-40 block mb-1">Reporting</span>
+                            <span class="text-emerald-400">${entity.ai_gateway?.ontology?.reporting || 'N/A'}</span>
                         </div>
-                        <div class="px-4 py-3 bg-white/5 border border-white/10 uppercase font-mono text-[10px] leading-relaxed text-emerald-100 italic">
-                            GOVERNANCE: ${governance}
+                        <div class="p-3 bg-white/5 border border-white/10 uppercase italic">
+                            <span class="opacity-40 block mb-1">Governance</span>
+                            <span class="text-emerald-400">${entity.ai_gateway?.ontology?.governance || 'N/A'}</span>
                         </div>
                     `;
 
-                    // --- SECTOR & NODE (Mapping sur entity.sector et trust.node) ---
+                    // Mapping Institutional Info
                     document.getElementById('licensing-data').innerHTML = `
-                        <div class="flex justify-between border-b border-white/5 pb-2 italic"><span class="opacity-40">SECTOR</span><span class="font-bold text-white uppercase">${entity.entity.sector || 'UNKNOWN'}</span></div>
-                        <div class="flex justify-between border-b border-white/5 pb-2 italic mt-4"><span class="opacity-40">TRUST NODE</span><span class="font-bold text-white uppercase">${entity.trust.node || 'SENTINEL-01'}</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">SECTOR</span><span class="font-bold uppercase text-white">${entity.entity.sector || 'N/A'}</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2 mt-4"><span class="opacity-40">ERC8004_ID</span><span class="font-bold text-white uppercase">${entity.entity.erc8004_id || 'N/A'}</span></div>
                     `;
 
-                    // --- CAPITAL / TTL ---
+                    // Mapping Node Details
                     document.getElementById('capital-data').innerHTML = `
-                        <div class="flex justify-between border-b border-white/5 pb-2 italic"><span class="opacity-40">TIME TO LIVE (TTL)</span><span class="font-bold text-white uppercase">${entity.trust.ttl || 'N/A'}</span></div>
-                        <div class="flex justify-between border-b border-white/5 pb-2 italic mt-4"><span class="opacity-40">LEDGER STATUS</span><span class="font-bold text-white uppercase">${entity.trust.status || 'STABLE'}</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">NODE ID</span><span class="font-bold uppercase text-white">${entity.trust.node || 'N/A'}</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2 mt-4"><span class="opacity-40">LEDGER STATUS</span><span class="font-bold text-white uppercase">${entity.trust.status || 'N/A'}</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2 mt-4"><span class="opacity-40">VALID UNTIL (TTL)</span><span class="font-bold text-white uppercase">${entity.trust.ttl || 'N/A'}</span></div>
                     `;
-
-                    // Hash
-                    if(entity.proof) {
-                        document.getElementById('verification-root').innerText = `Verification Root: ${entity.proof.hash}`;
-                    }
 
                     document.body.style.opacity = 1;
                 }
-            } catch (err) { console.error("Error loading registry:", err); }
+            } catch (err) { console.error("Error loading data", err); }
         }
         window.onload = loadEntityData;
     </script>
