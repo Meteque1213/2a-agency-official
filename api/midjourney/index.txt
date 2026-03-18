@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0316",
+  "entity": {
+    "name": "Midjourney",
+    "sector": "Generative Art",
+    "erc8004_id": "0x46...mid"
+  },
+  "trust": {
+    "score": 90,
+    "status": "STABLE",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Midjourney v7: Aesthetics-first generative AI. Prompt coherence and artistic integrity verified.",
+    "character_guard": "Artistic: Focus on visual quality, latent space exploration, and community-led aesthetic refinement.",
+    "ontology": {
+      "model": "MJ v7",
+      "service": "Generative Art"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xe4f5a6...midj"
+  }
+}

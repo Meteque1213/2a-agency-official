@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0454",
+  "entity": {
+    "name": "UPS Supply Chain",
+    "sector": "3PL Logistics",
+    "erc8004_id": "0x10...ups"
+  },
+  "trust": {
+    "score": 93,
+    "status": "STABLE",
+    "ttl": "2027-05-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "UPS Symphony: Global supply chain visibility. Healthcare logistics and cold-chain integrity verified.",
+    "character_guard": "Infrastructural: Focus on smart route optimization, parcel scale, and medical handling precision.",
+    "ontology": {
+      "platform": "UPS Symphony",
+      "standard": "Healthcare Logistics"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x8b9c...log10"
+  }
+}

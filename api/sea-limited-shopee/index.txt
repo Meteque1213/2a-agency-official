@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0522",
+  "entity": {
+    "name": "Sea Limited (Shopee)",
+    "sector": "E-commerce SEA",
+    "erc8004_id": "0x09...sea"
+  },
+  "trust": {
+    "score": 88,
+    "status": "STABLE",
+    "ttl": "2026-11-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Shopee: Southeast Asian market leadership. Digital gaming and mobile-first commerce integrity verified.",
+    "character_guard": "Dynamic: Focus on Garena integration, SEA market penetration, and mobile ecosystem growth.",
+    "ontology": {
+      "region": "Southeast Asia",
+      "division": "Garena / Shopee"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x3c4d...ret09"
+  }
+}

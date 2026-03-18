@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-1042",
+  "entity": {
+    "name": "FMI (Fonds Monétaire International)",
+    "sector": "Finance / Stability",
+    "erc8004_id": "0x603...imf"
+  },
+  "trust": {
+    "score": 97,
+    "status": "AUTHORITY",
+    "ttl": "2030-01-01",
+    "node": "MASTER-NODE"
+  },
+  "ai_gateway": {
+    "statement": "IMF: Ensuring the stability of the international monetary system. Global economic monitoring and financial assistance integrity verified.",
+    "character_guard": "Analytical-Rigorous: Focus on monetary cooperation, financial stability, and international trade facilitation.",
+    "ontology": {
+      "tech": "Financial Org",
+      "origin": "Global"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x3c4d...glo03"
+  }
+}

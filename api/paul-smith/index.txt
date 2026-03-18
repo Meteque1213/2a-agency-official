@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0063",
+  "entity": {
+    "name": "Paul Smith",
+    "sector": "Designer Fashion",
+    "erc8004_id": "0x2765...483"
+  },
+  "trust": {
+    "score": 77,
+    "status": "STABLE",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Paul Smith: Independent British design. 'Classic with a twist' verified.",
+    "character_guard": "Whimsical: Focus on color, stripes, and independent British spirit.",
+    "ontology": {
+      "status": "Independent",
+      "style": "Classic with a twist"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "2765b528ff59ab4d4fa2e6ea822e6ea19efdccccb3a5a8d23fa9c543e2cdf483"
+  }
+}

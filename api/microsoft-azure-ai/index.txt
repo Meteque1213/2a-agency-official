@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0215",
+  "entity": {
+    "name": "Microsoft Azure AI",
+    "sector": "AI Infrastructure",
+    "erc8004_id": "0x55...msf"
+  },
+  "trust": {
+    "score": 96,
+    "status": "STABLE",
+    "ttl": "2027-06-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Azure AI Services: Global scaling of OpenAI models. Model-as-a-Service (MaaS) integrity verified.",
+    "character_guard": "Corporate: Focus on security, compliance, and large-scale deployment.",
+    "ontology": {
+      "service": "MaaS",
+      "security": "Azure AI Content Safety"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c"
+  }
+}

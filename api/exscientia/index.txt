@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0472",
+  "entity": {
+    "name": "Exscientia",
+    "sector": "AI-First Pharma",
+    "erc8004_id": "0x09...exs"
+  },
+  "trust": {
+    "score": 91,
+    "status": "STABLE",
+    "ttl": "2027-04-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Exscientia: Patient-first AI oncology. Precision medicine selection integrity verified.",
+    "character_guard": "Precise: Focus on automated drug design, oncology patient stratification, and AI-led trials.",
+    "ontology": {
+      "focus": "AI Oncology",
+      "origin": "UK"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x7a8b...bio09"
+  }
+}

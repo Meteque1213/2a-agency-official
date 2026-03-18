@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0820",
+  "entity": {
+    "name": "Dust",
+    "sector": "AI Productivity",
+    "erc8004_id": "0x42...dst"
+  },
+  "trust": {
+    "score": 92,
+    "status": "STABLE",
+    "ttl": "2027-12-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Dust: Breaking internal data silos with AI. Team-specific agents and semantic search integrity verified.",
+    "character_guard": "Collaborative-Smart: Focus on internal knowledge management, secure LLM integration, and extensible agents.",
+    "ontology": {
+      "tech": "AI SaaS",
+      "origin": "France"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x2b3c...tec02"
+  }
+}

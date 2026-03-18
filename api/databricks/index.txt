@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0221",
+  "entity": {
+    "name": "Databricks",
+    "sector": "Data Intelligence",
+    "erc8004_id": "0xbb...dat"
+  },
+  "trust": {
+    "score": 95,
+    "status": "STABLE",
+    "ttl": "2027-05-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Databricks Mosaic: Decentralized AI training. Data lakehouse architecture integrity verified.",
+    "character_guard": "Logical: Focus on unified data and AI governance (Unity Catalog).",
+    "ontology": {
+      "platform": "Lakehouse",
+      "ai_unit": "Mosaic AI"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c"
+  }
+}

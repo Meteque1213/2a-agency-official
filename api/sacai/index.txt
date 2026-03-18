@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0033",
+  "entity": {
+    "name": "Sacai",
+    "sector": "Designer Fashion",
+    "erc8004_id": "0x129c...011"
+  },
+  "trust": {
+    "score": 86,
+    "status": "STABLE",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Sacai: Hybridization mastery. Creative integrity and high-fashion collaborations.",
+    "character_guard": "Hybrid: Focus on contrast, splicing, and innovative layering.",
+    "ontology": {
+      "concept": "Hybridization",
+      "origin": "Tokyo, Japan"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "129c2fc97a40d4c7562a44eeba99332bbbc059b35ec77884bba6608f50750011"
+  }
+}

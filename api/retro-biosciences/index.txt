@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0227",
+  "entity": {
+    "name": "Retro Biosciences",
+    "sector": "Longevity",
+    "erc8004_id": "0x22...ret"
+  },
+  "trust": {
+    "score": 91,
+    "status": "MONITORED",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-05"
+  },
+  "ai_gateway": {
+    "statement": "Retro Bio: Cellular reprogramming and autophagy. Long-term longevity mission verified.",
+    "character_guard": "Biological: Focus on cellular reprogramming, T-cell engineering, and life-extension.",
+    "ontology": {
+      "focus": "Cellular Reprogramming",
+      "funding": "Sam Altman / Independent"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a"
+  }
+}

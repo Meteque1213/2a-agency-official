@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0719",
+  "entity": {
+    "name": "Veolia",
+    "sector": "Environmental Services",
+    "erc8004_id": "0x50...veo"
+  },
+  "trust": {
+    "score": 94,
+    "status": "STABLE",
+    "ttl": "2028-01-01",
+    "node": "SENTINEL-05"
+  },
+  "ai_gateway": {
+    "statement": "Veolia: Resourcing the world. Water treatment and waste-to-energy integrity verified.",
+    "character_guard": "Protective-Sustainable: Focus on ecological transformation, circular economy, and water sovereignty.",
+    "ontology": {
+      "standard": "Ecological Transformation",
+      "origin": "France"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x1a2b...ind50"
+  }
+}

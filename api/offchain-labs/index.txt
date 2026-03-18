@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-2455",
+  "entity": {
+    "name": "Offchain Labs",
+    "sector": "Artificial Intelligence",
+    "erc8004_id": "0xc92e4437a36d5fd3"
+  },
+  "trust": {
+    "score": 90,
+    "status": "STABLE",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Offchain Labs: Neural weights and model metadata notarized. Integrity score confirms protocol stability.",
+    "character_guard": "Ethics-First",
+    "ontology": {
+      "tech": "Neural-Link",
+      "origin": "Verified"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x51f841bbeb7e3ad5"
+  }
+}

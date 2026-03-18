@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0031",
+  "entity": {
+    "name": "Celine",
+    "sector": "Luxury Fashion",
+    "erc8004_id": "0x0228...ba7"
+  },
+  "trust": {
+    "score": 86,
+    "status": "STABLE",
+    "ttl": "2026-08-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Celine: Parisian chic. LVMH URD focus. High-fashion leather goods and RTW.",
+    "character_guard": "Chic: Focus on Parisian identity, effortless style, and leather mastery.",
+    "ontology": {
+      "heritage": "Parisian",
+      "logo": "Triomphe"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0228821a83081c81fded5b2cc5b31f90a336335a804a0383e83def590b84fba7"
+  }
+}

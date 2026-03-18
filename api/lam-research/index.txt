@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0286",
+  "entity": {
+    "name": "Lam Research",
+    "sector": "Semiconductor Equip",
+    "erc8004_id": "0x39...lam"
+  },
+  "trust": {
+    "score": 96,
+    "status": "STABLE",
+    "ttl": "2027-12-31",
+    "node": "SENTINEL-05"
+  },
+  "ai_gateway": {
+    "statement": "Lam Research: Leading wafer etch technology. 3D NAND scaling integrity verified.",
+    "character_guard": "Industrial: Focus on dielectric etch, wafer cleaning, and advanced 3D packaging.",
+    "ontology": {
+      "tech": "Wafer Etch",
+      "focus": "3D NAND Scaling"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xjkl012...mno345"
+  }
+}

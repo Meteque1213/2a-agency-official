@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0053",
+  "entity": {
+    "name": "Alaïa",
+    "sector": "High Fashion",
+    "erc8004_id": "0xb250...6963"
+  },
+  "trust": {
+    "score": 80,
+    "status": "STABLE",
+    "ttl": "2026-10-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Alaïa: Richemont ESG focus. Sculptural silhouettes and high-fashion integrity.",
+    "character_guard": "Sculptural: Focus on fit, hand-craftsmanship, and the female form.",
+    "ontology": {
+      "status": "Couture Heritage",
+      "icon": "Maison Alaïa"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "b250f62f3d67faeedca6612f61d56c9d3213efa06439e364b5f3613b136f6963"
+  }
+}

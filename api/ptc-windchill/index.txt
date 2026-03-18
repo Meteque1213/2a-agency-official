@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0724",
+  "entity": {
+    "name": "PTC (Windchill)",
+    "sector": "Industrial Software",
+    "erc8004_id": "0x181...ptc"
+  },
+  "trust": {
+    "score": 92,
+    "status": "STABLE",
+    "ttl": "2027-08-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "PTC: Digital transforms physical. Windchill PLM and Vuforia AR integrity verified.",
+    "character_guard": "Connected: Focus on the digital thread, IoT (ThingWorx), and Augmented Reality for industry.",
+    "ontology": {
+      "tech": "Windchill / ThingWorx",
+      "standard": "Digital Thread"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x6f7a...tec181"
+  }
+}

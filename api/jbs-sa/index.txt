@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0732",
+  "entity": {
+    "name": "JBS S.A.",
+    "sector": "Food Industry",
+    "erc8004_id": "0x16...jbs"
+  },
+  "trust": {
+    "score": 82,
+    "status": "STABLE",
+    "ttl": "2026-09-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "JBS: World's leading protein-based food company. Multi-protein production and exports integrity verified.",
+    "character_guard": "Global-Scale: Focus on beef, poultry, and leather exports, and global operational footprint.",
+    "ontology": {
+      "standard": "Protein Export",
+      "origin": "Brazil"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xe4f5...foo16"
+  }
+}

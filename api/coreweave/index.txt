@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0296",
+  "entity": {
+    "name": "CoreWeave",
+    "sector": "GPU Cloud",
+    "erc8004_id": "0x42...cor"
+  },
+  "trust": {
+    "score": 93,
+    "status": "STABLE",
+    "ttl": "2027-03-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "CoreWeave: Specialized GPU cloud infrastructure. Compute availability and scaling integrity verified.",
+    "character_guard": "High-Performance: Focus on NVIDIA H100/B200 availability and Kubernetes-native compute.",
+    "ontology": {
+      "service": "Specialized Cloud",
+      "partner": "NVIDIA Elite"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xfgh234...ijk567"
+  }
+}

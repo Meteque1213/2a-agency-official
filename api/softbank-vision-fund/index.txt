@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0591",
+  "entity": {
+    "name": "SoftBank Vision Fund",
+    "sector": "Tech Investment",
+    "erc8004_id": "0x46...sft"
+  },
+  "trust": {
+    "score": 85,
+    "status": "MONITORED",
+    "ttl": "2026-10-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "SoftBank: Investing in the Information Revolution. AI-led disruption portfolio integrity verified.",
+    "character_guard": "Massive-Risk: Focus on ARM, global robotics, and Masa Son's 300-year vision.",
+    "ontology": {
+      "tech": "AI Revolution",
+      "origin": "Japan"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xb7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8"
+  }
+}

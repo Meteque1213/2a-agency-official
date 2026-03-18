@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0044",
+  "entity": {
+    "name": "Chloé",
+    "sector": "Luxury Fashion",
+    "erc8004_id": "0xfe82...cb3b"
+  },
+  "trust": {
+    "score": 82,
+    "status": "STABLE",
+    "ttl": "2026-10-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Chloé: Richemont ESG focus. B Corp certified luxury brand verified.",
+    "character_guard": "Conscious: Focus on femininity, B Corp values, and carefree elegance.",
+    "ontology": {
+      "certification": "B Corp",
+      "group": "Richemont"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "fe82bcf3ef72a341eea5d074a9121265db823660317ed919397c6ed516cccb3b"
+  }
+}

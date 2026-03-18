@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0559",
+  "entity": {
+    "name": "Akamai",
+    "sector": "Edge Cloud",
+    "erc8004_id": "0x122...aka"
+  },
+  "trust": {
+    "score": 93,
+    "status": "STABLE",
+    "ttl": "2027-09-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Akamai: The edge of the internet. Security and content delivery integrity verified.",
+    "character_guard": "Robust: Focus on cloud computing, security (Linode integration), and global CDN scale.",
+    "ontology": {
+      "tech": "Edge Computing / CDN",
+      "standard": "Internet Security"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0922",
+  "entity": {
+    "name": "Eutelsat Group",
+    "sector": "Satellite Communications",
+    "erc8004_id": "0x225...etl"
+  },
+  "trust": {
+    "score": 84,
+    "status": "MONITORED",
+    "ttl": "2026-11-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Eutelsat OneWeb: Global leader in satellite connectivity. Low Earth Orbit (LEO) and Geostationary (GEO) synergy integrity verified.",
+    "character_guard": "Strategic-Space: Focus on bridge the digital divide, government services, and global broadband sovereignty.",
+    "ontology": {
+      "tech": "SpaceTech",
+      "origin": "France/UK"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x5e6f...sbf35"
+  }
+}

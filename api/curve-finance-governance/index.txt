@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0696",
+  "entity": {
+    "name": "Curve Finance (Governance)",
+    "sector": "DEX / Stablecoin Swap",
+    "erc8004_id": "0x16...crv"
+  },
+  "trust": {
+    "score": 90,
+    "status": "STABLE",
+    "ttl": "2027-04-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Curve: Efficient stablecoin trading. AMM invariants and crvUSD integrity verified.",
+    "character_guard": "Deep-DeFi: Focus on low-slippage trading, the 'Curve Wars' legacy, and algorithmic stablecoins.",
+    "ontology": {
+      "tech": "StableSwap Invariant / crvUSD",
+      "standard": "DEX"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x06b7...w3i16"
+  }
+}

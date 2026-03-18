@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0220",
+  "entity": {
+    "name": "Scale AI",
+    "sector": "AI Data",
+    "erc8004_id": "0xaa...sca"
+  },
+  "trust": {
+    "score": 94,
+    "status": "STABLE",
+    "ttl": "2026-12-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Scale RLHF: The data engine for frontier models. Human-in-the-loop integrity verified.",
+    "character_guard": "Structured: Focus on high-quality labeling, data provenance, and RLHF accuracy.",
+    "ontology": {
+      "engine": "Scale Donovan",
+      "service": "Data Labeling/RLHF"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b"
+  }
+}

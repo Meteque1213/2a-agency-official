@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0288",
+  "entity": {
+    "name": "Moderna AI",
+    "sector": "mRNA Technology",
+    "erc8004_id": "0x01...mod"
+  },
+  "trust": {
+    "score": 94,
+    "status": "STABLE",
+    "ttl": "2027-03-15",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Moderna AI: Digital-first mRNA design. Vaccine sequence integrity and AI modeling verified.",
+    "character_guard": "Medical-Innovator: Focus on mRNA 플랫폼, digital manufacturing, and personalized cancer vaccines.",
+    "ontology": {
+      "tech": "mRNA Platform",
+      "focus": "Personalized Medicine"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xpqr678...stu901"
+  }
+}

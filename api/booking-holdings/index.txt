@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-1012",
+  "entity": {
+    "name": "Booking Holdings",
+    "sector": "Online Travel",
+    "erc8004_id": "0x436...bkg"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2027-11-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Booking Holdings: Making it easier for everyone to experience the world. AI-driven travel planning integrity verified.",
+    "character_guard": "Global-Travel: Focus on Booking.com, Priceline, and digital travel ecosystem orchestration.",
+    "ontology": {
+      "tech": "Travel-Tech",
+      "origin": "USA"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x6d7e...usa36"
+  }
+}

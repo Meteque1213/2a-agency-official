@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0045",
+  "entity": {
+    "name": "Fear of God",
+    "sector": "Designer Fashion",
+    "erc8004_id": "0x4cfd...3e6a"
+  },
+  "trust": {
+    "score": 82,
+    "status": "STABLE",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Fear of God: Modern American luxury. Sophisticated streetwear-led design.",
+    "character_guard": "Modern-American: Focus on elevated basics, silhouettes, and neutral tones.",
+    "ontology": {
+      "concept": "Modern American Luxury",
+      "status": "Independent"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "4cfdc296fcefeb9dcb32ecdbcdc213fedb31337ed8d716218953198e31613e6a"
+  }
+}

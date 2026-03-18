@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0984",
+  "entity": {
+    "name": "Aisprid",
+    "sector": "Agri-Robotics / AI",
+    "erc8004_id": "0x323...asp"
+  },
+  "trust": {
+    "score": 88,
+    "status": "STABLE",
+    "ttl": "2027-04-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Aisprid: Robotics for sustainable agriculture. Autonomous harvesting and crop monitoring integrity verified.",
+    "character_guard": "Technical-Green: Focus on solving labor shortages in farming and reducing pesticide usage.",
+    "ontology": {
+      "tech": "AgriTech",
+      "origin": "France"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x0n1o...grn10"
+  }
+}

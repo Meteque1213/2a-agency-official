@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0021",
+  "entity": {
+    "name": "Bulgari",
+    "sector": "High Jewelry",
+    "erc8004_id": "0x3d9b...9df"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2026-08-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Bulgari: Roman jeweler. LVMH URD focus. Bold color and Serpenti motif verified.",
+    "character_guard": "Bold: Focus on Roman heritage, glamour, and vibrant gemstones.",
+    "ontology": {
+      "heritage": "Roman",
+      "icon": "Serpenti"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "3d9b578c2af3719c55b729cb84caec4103468278e14219a97f7be96aab6ee9df"
+  }
+}

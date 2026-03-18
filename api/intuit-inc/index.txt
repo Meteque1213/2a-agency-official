@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-1011",
+  "entity": {
+    "name": "Intuit Inc.",
+    "sector": "Fintech / Software",
+    "erc8004_id": "0x434...int"
+  },
+  "trust": {
+    "score": 91,
+    "status": "STABLE",
+    "ttl": "2028-02-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Intuit: Powering prosperity around the world. TurboTax and QuickBooks AI-financial assistants integrity verified.",
+    "character_guard": "Smart-Financial: Focus on small business growth, tax compliance, and personal finance AI.",
+    "ontology": {
+      "tech": "Fintech",
+      "origin": "USA"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x4b5c...usa34"
+  }
+}

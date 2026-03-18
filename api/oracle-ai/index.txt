@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0295",
+  "entity": {
+    "name": "Oracle AI",
+    "sector": "Cloud/AI",
+    "erc8004_id": "0x41...ora"
+  },
+  "trust": {
+    "score": 95,
+    "status": "STABLE",
+    "ttl": "2027-04-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Oracle Cloud (OCI): RDMA networking for GPU clusters. Database AI integration integrity verified.",
+    "character_guard": "Corporate: Focus on cloud autonomy, sovereign AI, and large-scale data management.",
+    "ontology": {
+      "infrastructure": "RDMA Networking",
+      "service": "Autonomous Database"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xefg123...hij456"
+  }
+}

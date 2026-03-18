@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0544",
+  "entity": {
+    "name": "TotalEnergies",
+    "sector": "Energy Major",
+    "erc8004_id": "0x40...tot"
+  },
+  "trust": {
+    "score": 90,
+    "status": "STABLE",
+    "ttl": "2027-04-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "TotalEnergies: Multi-energy transition. Renewable storage and LNG leadership verified.",
+    "character_guard": "Strategic: Focus on solar/wind expansion, global LNG supply, and EV charging networks.",
+    "ontology": {
+      "strategy": "Multi-Energy",
+      "origin": "France"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b"
+  }
+}

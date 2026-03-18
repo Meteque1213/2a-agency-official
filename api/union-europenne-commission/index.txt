@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-1050",
+  "entity": {
+    "name": "Union Européenne (Commission)",
+    "sector": "Governance / Regulation",
+    "erc8004_id": "0x611...euc"
+  },
+  "trust": {
+    "score": 98,
+    "status": "AUTHORITY",
+    "ttl": "2030-01-01",
+    "node": "MASTER-NODE"
+  },
+  "ai_gateway": {
+    "statement": "European Commission: Proposing and enforcing EU legislation. EU AI Act and Digital Markets Act integrity verified.",
+    "character_guard": "Regulatory-Architect: Focus on the Single Market, digital sovereignty, and the Green Deal.",
+    "ontology": {
+      "tech": "Governance",
+      "origin": "Europe"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x1e2f...glo11"
+  }
+}

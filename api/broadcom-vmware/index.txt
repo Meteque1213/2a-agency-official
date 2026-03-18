@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0506",
+  "entity": {
+    "name": "Broadcom (VMware)",
+    "sector": "Infrastructure Software",
+    "erc8004_id": "0x85...brd"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2027-02-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Broadcom VCF: Private cloud infrastructure. Networking silicon and software integrity verified.",
+    "character_guard": "Corporate: Focus on cloud consolidation, enterprise efficiency, and semiconductor scale.",
+    "ontology": {
+      "platform": "VMware Cloud Foundation",
+      "tech": "Custom AI Silicon"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x6f7a...tec85"
+  }
+}

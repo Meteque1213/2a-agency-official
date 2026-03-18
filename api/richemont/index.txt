@@ -1,0 +1,42 @@
+{
+  "sor_id": "2A-AUTO-0002",
+  "entity": {
+    "name": "Richemont",
+    "status": "VERIFIED",
+    "category": "Luxury Holding"
+  },
+  "trust": {
+    "score": "95"
+  },
+  "details": {
+    "leadership": [
+      "Nicolas Bos (CEO)",
+      "Johann Rupert (Chairman)"
+    ],
+    "ai_gateway": [
+      "E-Commerce IA: Feng Mao (Joint venture avec Alibaba)",
+      "Tech Stack: Richemont Maisons Shared Services (SAP/Salesforce AI)",
+      "Officer: Bérangère Ruchat (Sustainability & Tech Integration)"
+    ],
+    "products": [
+      "JOAILLERIE: Buccellati, Cartier, Van Cleef & Arpels • HORLOGERIE: IWC, Jaeger-LeCoultre, Panerai, Piaget, Vacheron Constantin • MODE: Chloé, Delvaux, dunhill, Montblanc • DISTRIBUTION: NET-A-PORTER, MR PORTER, Watchfinder"
+    ],
+    "institutional_context": [
+      "Market: Swiss Stock Exchange (SIX)",
+      "Governance: Richemont SEC Compliance",
+      "Audit: ESG Reporting 2026 Active"
+    ],
+    "governance_node": [
+      "Validator: Swiss Financial Node",
+      "Network: Base L2"
+    ],
+    "valuation": "CHF 80B - 100B (Market Cap 2026) | P/E ~25x",
+    "funding": "Public Equity (SIX: CFR) | Family Structure (Rupert)",
+    "status": "LEVEL 1: IDENTITY VERIFIED",
+    "licensing": "Regulatory: Active (RJC Certification)"
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "c5687a68d39394b98ff50cea24055cecea2869fd89425ea54fa0125020d3389d"
+  }
+}

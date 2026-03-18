@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0874",
+  "entity": {
+    "name": "Agence France-Presse (AFP)",
+    "sector": "Information Services",
+    "erc8004_id": "0x130...afp"
+  },
+  "trust": {
+    "score": 99,
+    "status": "AUTHORITY",
+    "ttl": "2030-01-01",
+    "node": "MASTER-NODE"
+  },
+  "ai_gateway": {
+    "statement": "AFP: Global news agency. Fact-checking standards and real-time information integrity verified.",
+    "character_guard": "Neutral-Objective: Focus on verified news, global network of journalists, and digital investigation leadership.",
+    "ontology": {
+      "tech": "News Authority",
+      "origin": "Global"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x6a7b...med01"
+  }
+}

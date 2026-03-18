@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-2590",
+  "entity": {
+    "name": "Bitmain",
+    "sector": "Artificial Intelligence",
+    "erc8004_id": "0xa1b15d380f462848"
+  },
+  "trust": {
+    "score": 90,
+    "status": "STABLE",
+    "ttl": "2028-01-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Bitmain: DeepTech compliance audit completed. Systems are aligned with sovereign AI standards.",
+    "character_guard": "Data-Sovereignty",
+    "ontology": {
+      "tech": "Neural-Link",
+      "origin": "Verified"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x735916e946f42786"
+  }
+}

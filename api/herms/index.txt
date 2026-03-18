@@ -1,0 +1,42 @@
+{
+  "sor_id": "2A-AUTO-0003",
+  "entity": {
+    "name": "Hermès",
+    "status": "VERIFIED",
+    "category": "Luxury Goods"
+  },
+  "trust": {
+    "score": "98"
+  },
+  "details": {
+    "leadership": [
+      "Axel Dumas (CEO)",
+      "Éric du Halgouët (Executive VP)"
+    ],
+    "ai_gateway": [
+      "Strategy: Artisanal-First (IA limitée à la supply chain)",
+      "Traceability: Blockchain H-Origin (Suivi des cuirs)",
+      "Focus: Prévision de la demande artisanale"
+    ],
+    "products": [
+      "MAISON: Maroquinerie, Prêt-à-porter, Soie, Parfums, Horlogerie • PARTENAIRES: John Lobb, Saint-Louis • RESEAU: 24 Maroquineries en France"
+    ],
+    "institutional_context": [
+      "Market: Euronext Paris (CAC 40)",
+      "Structure: H51 SAS (Contrôle familial)",
+      "Origin: 80% French Production"
+    ],
+    "governance_node": [
+      "Validator: Heritage Custodian Node",
+      "Network: Base L2"
+    ],
+    "valuation": "€220B - 250B (Market Cap 2026) | P/E ~50x",
+    "funding": "Public Equity (Euronext: RMS)",
+    "status": "LEVEL 1: IDENTITY VERIFIED",
+    "licensing": "Regulatory: Active (Artisanal Integrity Audit)"
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x2d10f2ff3c6ddc9347357e5233e267b95ec2988bd9ce898c80f7081cdef42763"
+  }
+}

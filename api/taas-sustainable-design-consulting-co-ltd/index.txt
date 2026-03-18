@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-2307",
+  "entity": {
+    "name": "TAAS Sustainable Design Consulting Co. Ltd.",
+    "sector": "Artificial Intelligence",
+    "erc8004_id": "0xf2134c9b012fa03d"
+  },
+  "trust": {
+    "score": 80,
+    "status": "UNDER REVIEW",
+    "ttl": "2029-01-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "TAAS Sustainable Design Consulting Co. Ltd.: Neural weights and model metadata notarized. Integrity score confirms protocol stability.",
+    "character_guard": "Data-Sovereignty",
+    "ontology": {
+      "tech": "Neural-Link",
+      "origin": "Verified"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xe7d6419cde2022f7"
+  }
+}

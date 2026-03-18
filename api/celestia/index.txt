@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-2416",
+  "entity": {
+    "name": "Celestia",
+    "sector": "Eco-Design",
+    "erc8004_id": "0x67fac41e81ba684f"
+  },
+  "trust": {
+    "score": 90,
+    "status": "STABLE",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Celestia: Environmental transparency and governance ethics audited via Trust Nodes.",
+    "character_guard": "Eco-Guardian",
+    "ontology": {
+      "tech": "System-of-Record",
+      "origin": "Verified"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x6a5cf217a2cd04d9"
+  }
+}

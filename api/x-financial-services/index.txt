@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0317",
+  "entity": {
+    "name": "X (Financial Services)",
+    "sector": "Everything App",
+    "erc8004_id": "0x09...xfs"
+  },
+  "trust": {
+    "score": 78,
+    "status": "MONITORED",
+    "ttl": "2026-10-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "X Payments: Peer-to-peer financial rail integration. Money Transmitter License (MTL) integrity watch.",
+    "character_guard": "Aggressive: Focus on global financial disruption, peer-to-peer payments, and Everything App vision.",
+    "ontology": {
+      "service": "P2P Payments",
+      "license": "MTL Tracking"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xf5a6b7...xpay"
+  }
+}

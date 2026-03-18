@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0040",
+  "entity": {
+    "name": "Tiffany & Co.",
+    "sector": "High Jewelry",
+    "erc8004_id": "0xaac2...072"
+  },
+  "trust": {
+    "score": 83,
+    "status": "STABLE",
+    "ttl": "2026-08-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Tiffany & Co.: LVMH URD Tiffany. Vertically integrated jewelry model verified.",
+    "character_guard": "Legendary: Focus on 'Tiffany Blue', diamond traceability, and New York legacy.",
+    "ontology": {
+      "icon": "Tiffany Blue Box",
+      "diamond_source": "Vertically integrated"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "aac23990541a18eea8a5b766dcc45a42706ac35ea7c96de4fd01b26d191f4072"
+  }
+}

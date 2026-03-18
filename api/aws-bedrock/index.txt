@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0216",
+  "entity": {
+    "name": "AWS Bedrock",
+    "sector": "AI Infrastructure",
+    "erc8004_id": "0x66...aws"
+  },
+  "trust": {
+    "score": 94,
+    "status": "STABLE",
+    "ttl": "2027-02-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Amazon Bedrock: Multi-model API integrity. Titan and third-party models security verified.",
+    "character_guard": "Reliable: Focus on scalability, choice of models, and AWS security standards.",
+    "ontology": {
+      "platform": "Bedrock",
+      "models": "Titan / Claude / Llama"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d"
+  }
+}

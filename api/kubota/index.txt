@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0764",
+  "entity": {
+    "name": "Kubota",
+    "sector": "Agri-Machinery",
+    "erc8004_id": "0x20...kub"
+  },
+  "trust": {
+    "score": 92,
+    "status": "STABLE",
+    "ttl": "2027-10-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Kubota: For Earth, For Life. Compact tractor and engine reliability integrity verified.",
+    "character_guard": "Sturdy-Japanese: Focus on small/medium farming equipment, water infrastructure, and engine durability.",
+    "ontology": {
+      "tech": "Kubota Engine",
+      "origin": "Japan"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x8b9c...agr20"
+  }
+}

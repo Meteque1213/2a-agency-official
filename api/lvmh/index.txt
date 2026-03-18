@@ -1,0 +1,48 @@
+{
+  "sor_id": "2A-AUTO-0001",
+  "entity": {
+    "name": "LVMH",
+    "status": "VERIFIED",
+    "category": "Luxury Holding"
+  },
+  "trust": {
+    "score": "96"
+  },
+  "details": {
+    "leadership": [
+      "Bernard Arnault (Chairman & CEO)"
+    ],
+    "ai_gateway": [
+      "AI Strategy: LVMH Data & AI Factory (Cloud-Native)",
+      "Core Tech: Google Cloud Strategic Partnership (Vertex AI)",
+      "Applications: Clienteling, Demand Forecasting, Quality Control",
+      "Officer: Franck Le Moal (Group IT Director)"
+    ],
+    "products": [
+      "VINS & SPIRITUEUX (24): Ao Yun, Ardbeg, Belvedere, Bodega Numanthia, Cape Mentelle, Ch. Cheval Blanc, Ch. d'Yquem, Chandon, Cheval des Andes, Clos 19, Cloudy Bay, Colgin Cellars, Dom Pérignon, Glenmorangie, Hennessy, Krug, Mercier, Moët & Chandon, Newton, Ruinart, Terrazas de los Andes, Veuve Clicquot, Volcan de mi Tierra, Woodinville",
+      "MODE & MAROQUINERIE (16): Berluti, Celine, Christian Dior, Edun, Emilio Pucci, Fendi, Givenchy, Kenzo, Loewe, Loro Piana, Louis Vuitton, Marc Jacobs, Moynat, Patou, Pink Shirtmaker, Rimowa",
+      "PARFUMS & COSMÉTIQUES (17): Acqua di Parma, Benefit, Cha Ling, Fenty Beauty, Fresh, Givenchy Parfums, Guerlain, Kenzo Parfums, KVD Beauty, Loewe Perfumes, Maison Francis Kurkdjian, Make Up For Ever, Officine Universelle Buly, Olehenriksen, Parfums Christian Dior, Rouge Hermès (Distribution), Stella by Stella McCartney",
+      "MONTRES & JOAILLERIE (9): Bulgari, Chaumet, Daniel Roth, Fred, Hublot, Repossi, TAG Heuer, Tiffany & Co., Zenith",
+      "DISTRIBUTION SÉLECTIVE (4): DFS, Le Bon Marché, Sephora, Starboard Cruise",
+      "AUTRES (5): Cheval Blanc Hotels, Belmond, Connaissance des Arts, La Grande Épicerie, Les Echos/Le Parisien"
+    ],
+    "institutional_context": [
+      "Market Presence: 81 Maisons | 5,600+ Stores",
+      "Regulation: AMF Compliance, CSRD Sustainability Reporting",
+      "Economic Impact: Largest Market Cap in EU (2024-2026 range)"
+    ],
+    "governance_node": [
+      "Node Type: Corporate Validator",
+      "Consensus Role: Strategic Oversight",
+      "Network: Base L2 / Ethereum Mainnet"
+    ],
+    "valuation": "€235B - €297B (Market Cap 2026) | P/E 22.8x",
+    "funding": "Public Equity (Euronext: MC.PA) | EV/EBITDA 11.4x",
+    "status": "LEVEL 1: IDENTITY VERIFIED (AMF/Euronext)",
+    "licensing": "Regulatory: Active (PIF/Cosmetics, RSPO/Oils, AMF/Compliance)"
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "6d3b7ef0c31068ae52e666be6dc39c913e90048ddcc919b9e1d6524b2af16245"
+  }
+}

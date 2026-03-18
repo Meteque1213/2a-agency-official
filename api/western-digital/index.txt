@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0547",
+  "entity": {
+    "name": "Western Digital",
+    "sector": "Storage Solutions",
+    "erc8004_id": "0x115...wdc"
+  },
+  "trust": {
+    "score": 88,
+    "status": "STABLE",
+    "ttl": "2027-02-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Western Digital: HDD and Flash leadership. Data center storage integrity verified.",
+    "character_guard": "Stable: Focus on NAND flash, helium-filled HDDs, and the SanDisk professional line.",
+    "ontology": {
+      "tech": "OptiNAND / BiCS FLASH",
+      "standard": "Enterprise Storage"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e"
+  }
+}

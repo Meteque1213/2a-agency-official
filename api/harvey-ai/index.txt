@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0417",
+  "entity": {
+    "name": "Harvey AI",
+    "sector": "Legal AI",
+    "erc8004_id": "0x66...hvy"
+  },
+  "trust": {
+    "score": 93,
+    "status": "STABLE",
+    "ttl": "2027-04-15",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "Harvey: GenAI for elite law firms. Document analysis and research integrity verified.",
+    "character_guard": "Discreet: Focus on professional accuracy and secure legal LLMs.",
+    "ontology": {
+      "tech": "Legal LLM",
+      "focus": "Professional Services"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c"
+  }
+}

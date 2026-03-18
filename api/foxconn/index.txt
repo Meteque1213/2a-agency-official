@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0434",
+  "entity": {
+    "name": "Foxconn",
+    "sector": "EMS Manufacturing",
+    "erc8004_id": "0x74...fox"
+  },
+  "trust": {
+    "score": 86,
+    "status": "STABLE",
+    "ttl": "2026-12-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Foxconn: Global electronics assembly leadership. AI server production integrity verified.",
+    "character_guard": "Industrial: Focus on supply chain diversification, Bolt electric vehicle platform, and robotics.",
+    "ontology": {
+      "platform": "MIH EV Platform",
+      "sector": "AI Server Assembly"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f"
+  }
+}

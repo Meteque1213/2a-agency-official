@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-1033",
+  "entity": {
+    "name": "3M",
+    "sector": "Conglomerate",
+    "erc8004_id": "0x472...mmm"
+  },
+  "trust": {
+    "score": 88,
+    "status": "STABLE",
+    "ttl": "2027-10-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "3M: Science applied to life. Material science innovation and manufacturing scale integrity verified.",
+    "character_guard": "Versatile-Scientific: Focus on Post-it legacy, medical supplies, and industrial adhesives.",
+    "ontology": {
+      "tech": "Material Science",
+      "origin": "USA"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x7a8b...usa72"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0228",
+  "entity": {
+    "name": "Palantir AIP",
+    "sector": "AI Analytics",
+    "erc8004_id": "0x33...plr"
+  },
+  "trust": {
+    "score": 97,
+    "status": "STABLE",
+    "ttl": "2027-03-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Palantir AIP: Ontology-driven AI for defense and industry. Decision-making integrity verified.",
+    "character_guard": "Strategic: Focus on AI safety, data integration, and operational sovereignty.",
+    "ontology": {
+      "engine": "AIP (Artificial Intelligence Platform)",
+      "standard": "Decision Edge"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a"
+  }
+}

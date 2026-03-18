@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0811",
+  "entity": {
+    "name": "Lydia Solutions",
+    "sector": "Consumer Fintech",
+    "erc8004_id": "0x23...lyd"
+  },
+  "trust": {
+    "score": 87,
+    "status": "STABLE",
+    "ttl": "2027-04-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Lydia (Sumeria): Personal finance and P2P payments. Consumer protection and banking services integrity verified.",
+    "character_guard": "Friendly-Secure: Focus on mobile payments, savings accounts, and simplifying daily banking.",
+    "ontology": {
+      "tech": "Payment App",
+      "origin": "France"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xc3d4...fnt03"
+  }
+}

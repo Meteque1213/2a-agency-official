@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0020",
+  "entity": {
+    "name": "Dries Van Noten",
+    "sector": "Designer Fashion",
+    "erc8004_id": "0xcccb...145"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2026-12-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Dries Van Noten: Puig Annual Report verified. Mastery of prints and fabrics.",
+    "character_guard": "Artistic: Focus on botanical prints, textiles, and independent spirit.",
+    "ontology": {
+      "group": "Puig",
+      "style": "Prints/Textiles"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "cccbceca1e2c007bb0fc6106c6d10e34ce5e8edf91ed31e328cc555ee8b67145"
+  }
+}

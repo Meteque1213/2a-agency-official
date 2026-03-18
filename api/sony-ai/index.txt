@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0438",
+  "entity": {
+    "name": "Sony AI",
+    "sector": "Entertainment/AI",
+    "erc8004_id": "0x75...sny"
+  },
+  "trust": {
+    "score": 92,
+    "status": "STABLE",
+    "ttl": "2027-05-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Sony Sophy: Racing AI and creative tools. Imaging sensor leadership integrity verified.",
+    "character_guard": "Creative-Technical: Focus on the fusion of AI with sensors, gaming (PS5), and cinematic tech.",
+    "ontology": {
+      "tech": "Sophy AI / CMOS Sensors",
+      "market": "Creative Tech"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "sor_id": "2A-AUTO-0004",
+  "entity": {
+    "name": "Patek Philippe",
+    "status": "VERIFIED",
+    "category": "High Horology"
+  },
+  "trust": {
+    "score": "99"
+  },
+  "details": {
+    "leadership": [
+      "Thierry Stern (President)",
+      "Claude Peny (CEO)"
+    ],
+    "ai_gateway": [
+      "R&D: Patek Philippe Advanced Research Program",
+      "Innovation: Silinvar® technology (Silicon-based components)",
+      "Precision: Oscillators & Gyromax® balance integration",
+      "Legacy: Digital Archives & Heritage Inventory Management"
+    ],
+    "products": [
+      "COLLECTIONS: Calatrava, Nautilus, Aquanaut, Gondolo, Golden Ellipse",
+      "COMPLICATIONS: Grand Complications, Annual Calendar, World Time",
+      "MANUFACTURE: Plan-les-Ouates (Genève), Perly, Saint-Imier"
+    ],
+    "institutional_context": [
+      "Ownership: 100% Family-Owned (Stern Family)",
+      "Certification: Patek Philippe Seal (Internal Quality Benchmark)",
+      "Strategy: Long-term Independence & Rare Handcrafts preservation"
+    ],
+    "governance_node": [
+      "Node Type: 2A Agency External Validator",
+      "Consensus Role: Sovereignty & Heritage Audit",
+      "Network: Base L2 (Verification Pending)"
+    ],
+    "valuation": "Estimated Value €10B+ | Estimated Annual Revenue ~CHF 2B",
+    "funding": "Private / Self-Funded",
+    "status": "LEVEL 1: IDENTITY VERIFIED (Privately Held)",
+    "licensing": "Regulatory: Active (Patek Philippe Seal Governance)"
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x7d2a91f55334b2d13b01aa28bfa7879285c4e07cea15e7ad11f175583d96"
+  }
+}

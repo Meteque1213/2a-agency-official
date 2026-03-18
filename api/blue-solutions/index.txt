@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-2374",
+  "entity": {
+    "name": "Blue Solutions",
+    "sector": "Sustainable Business",
+    "erc8004_id": "0xd10661a922c7d164"
+  },
+  "trust": {
+    "score": 84,
+    "status": "UNDER REVIEW",
+    "ttl": "2028-01-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Blue Solutions: Environmental transparency and governance ethics audited via Trust Nodes.",
+    "character_guard": "Transparent-Governance",
+    "ontology": {
+      "tech": "System-of-Record",
+      "origin": "Verified"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xa0a439eaf456504c"
+  }
+}

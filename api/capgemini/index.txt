@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0648",
+  "entity": {
+    "name": "Capgemini",
+    "sector": "IT Consulting",
+    "erc8004_id": "0x35...cap"
+  },
+  "trust": {
+    "score": 90,
+    "status": "STABLE",
+    "ttl": "2027-05-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Capgemini: Get the future you want. Intelligent industry and cloud transformation integrity verified.",
+    "character_guard": "Methodical: Focus on digital engineering, enterprise AI scaling, and global delivery network.",
+    "ontology": {
+      "division": "Capgemini Invent",
+      "origin": "France"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x18c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9"
+  }
+}

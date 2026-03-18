@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0414",
+  "entity": {
+    "name": "BCG X",
+    "sector": "Strategy Consulting",
+    "erc8004_id": "0x02...bcx"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2027-01-15",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "BCG X: Tech-build leadership. Generative AI deployment integrity verified.",
+    "character_guard": "Strategic: Focus on AI at scale and venture building.",
+    "ontology": {
+      "division": "BCG X",
+      "standard": "Responsible AI"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f"
+  }
+}

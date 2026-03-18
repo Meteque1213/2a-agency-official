@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0657",
+  "entity": {
+    "name": "Standard Chartered (Digital)",
+    "sector": "Global Banking",
+    "erc8004_id": "0x65...stc"
+  },
+  "trust": {
+    "score": 90,
+    "status": "STABLE",
+    "ttl": "2027-05-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Standard Chartered: Here for good. Emerging market trade finance and digital asset custody integrity verified.",
+    "character_guard": "Institutional-Regional: Focus on Asia, Africa, and Middle East growth bridges and digital transformation.",
+    "ontology": {
+      "focus": "Emerging Markets",
+      "origin": "UK"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b"
+  }
+}

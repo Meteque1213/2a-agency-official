@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0062",
+  "entity": {
+    "name": "Salvatore Ferragamo",
+    "sector": "Luxury Goods",
+    "erc8004_id": "0xeabe...7f6"
+  },
+  "trust": {
+    "score": 77,
+    "status": "MONITORED",
+    "ttl": "2026-12-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Salvatore Ferragamo: Annual Report 2025. Shoemaker to the stars heritage.",
+    "character_guard": "Italian-Heritage: Focus on footwear mastery, Florentine craft, and modern luxury.",
+    "ontology": {
+      "heritage": "Florentine Shoemaker",
+      "status": "Independent/Public"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "eabef157961dbecb504e8c1aea452299d27917fe22e2b75877cfeabcc9fc37f6"
+  }
+}

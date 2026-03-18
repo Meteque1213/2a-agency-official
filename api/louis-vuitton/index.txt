@@ -1,0 +1,42 @@
+{
+  "sor_id": "2A-AUTO-0005",
+  "entity": {
+    "name": "Louis Vuitton",
+    "status": "VERIFIED",
+    "category": "Luxury Goods"
+  },
+  "trust": {
+    "score": "91"
+  },
+  "details": {
+    "leadership": [
+      "Pietro Beccari (CEO)",
+      "Nicolas Ghesquière (Creative Dir.)"
+    ],
+    "ai_gateway": [
+      "Digital Twin: Simulation de flux en ateliers",
+      "Clienteling: IA prédictive pour l'expérience en magasin",
+      "Supply Chain: Optimisation logistique via l'écosystème LVMH"
+    ],
+    "products": [
+      "MAROQUINERIE: Sacs, Valises, Prêt-à-porter, Parfums, Horlogerie • RESEAU: ~50 Manufactures / ~500 Boutiques"
+    ],
+    "institutional_context": [
+      "Group: LVMH Core Asset",
+      "Identity: Symbole mondial du luxe français",
+      "Sustainability: Certification LWG Gold Leather"
+    ],
+    "governance_node": [
+      "Validator: Operational Node LV",
+      "Network: Base L2"
+    ],
+    "valuation": "LVMH Core Asset | Revenue Est. >€20B",
+    "funding": "LVMH Group Consolidated",
+    "status": "LEVEL 1: IDENTITY VERIFIED",
+    "licensing": "Regulatory: Active (LIFE 360 ESG)"
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xcb83b1a449c65bb4843bda376b9be7e2de92fdc5820161f92c68a69d195b1a25"
+  }
+}

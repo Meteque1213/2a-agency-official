@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0302",
+  "entity": {
+    "name": "Palo Alto Networks",
+    "sector": "Cybersecurity",
+    "erc8004_id": "0x44...pal"
+  },
+  "trust": {
+    "score": 95,
+    "status": "STABLE",
+    "ttl": "2027-05-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Palo Alto: AI-driven cybersecurity (Precision AI). Zero Trust architecture integrity verified.",
+    "character_guard": "Defensive: Focus on threat prevention, cloud security (Prisma), and automated response.",
+    "ontology": {
+      "tech": "Precision AI",
+      "standard": "Zero Trust"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xlmn890...opq123"
+  }
+}

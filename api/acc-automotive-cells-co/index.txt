@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-2371",
+  "entity": {
+    "name": "ACC (Automotive Cells Co)",
+    "sector": "Eco-Design",
+    "erc8004_id": "0x69930d8f93af5246"
+  },
+  "trust": {
+    "score": 80,
+    "status": "UNDER REVIEW",
+    "ttl": "2028-01-01",
+    "node": "SENTINEL-02"
+  },
+  "ai_gateway": {
+    "statement": "ACC (Automotive Cells Co): Environmental transparency and governance ethics audited via Trust Nodes.",
+    "character_guard": "Eco-Guardian",
+    "ontology": {
+      "tech": "System-of-Record",
+      "origin": "Verified"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x58941d3ebe0c1f76"
+  }
+}

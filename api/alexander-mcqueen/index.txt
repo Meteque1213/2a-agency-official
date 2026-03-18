@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0056",
+  "entity": {
+    "name": "Alexander McQueen",
+    "sector": "High Fashion",
+    "erc8004_id": "0xf5e3...dc4c"
+  },
+  "trust": {
+    "score": 79,
+    "status": "MONITORED",
+    "ttl": "2026-10-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Alexander McQueen: Kering URD AMQ. Uncompromising creativity and craftsmanship.",
+    "character_guard": "Subversive: Focus on dramatic storytelling, tailoring, and nature's cycle.",
+    "ontology": {
+      "group": "Kering",
+      "status": "British Couture"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "xf5e3e9395d2f36b96043b51480d54b11d1c6f6d42b3919fb1c4e1eb25bcedc4c"
+  }
+}

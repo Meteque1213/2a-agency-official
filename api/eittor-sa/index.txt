@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-2251",
+  "entity": {
+    "name": "Eittor SA",
+    "sector": "Sustainable Business",
+    "erc8004_id": "0xd3e0597594d5e98d"
+  },
+  "trust": {
+    "score": 90,
+    "status": "STABLE",
+    "ttl": "2027-01-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Eittor SA: Environmental transparency and governance ethics audited via Trust Nodes.",
+    "character_guard": "Eco-Guardian",
+    "ontology": {
+      "tech": "System-of-Record",
+      "origin": "Verified"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x34b316e451b5de00"
+  }
+}

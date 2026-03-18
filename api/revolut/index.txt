@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0238",
+  "entity": {
+    "name": "Revolut",
+    "sector": "Digital Banking",
+    "erc8004_id": "0x01...rev"
+  },
+  "trust": {
+    "score": 90,
+    "status": "STABLE",
+    "ttl": "2026-12-31",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Revolut: Global financial super-app. Bank license integrity and multi-currency liquidity verified.",
+    "character_guard": "Agile: Focus on seamless UX, instant transfers, and the borderless financial mission.",
+    "ontology": {
+      "license": "Banking",
+      "reach": "Global Super-App"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f"
+  }
+}

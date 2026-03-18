@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0634",
+  "entity": {
+    "name": "CVS Health",
+    "sector": "Health Retail",
+    "erc8004_id": "0x25...cvs"
+  },
+  "trust": {
+    "score": 89,
+    "status": "STABLE",
+    "ttl": "2027-04-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "CVS Health: Integrated pharmacy leadership. Caremark and Aetna data integrity verified.",
+    "character_guard": "Wellness-Scale: Focus on community health, pharmacy benefit management, and digital health records.",
+    "ontology": {
+      "division": "Aetna / Caremark",
+      "origin": "USA"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x9f0a...ret25"
+  }
+}

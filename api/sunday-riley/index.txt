@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0083",
+  "entity": {
+    "name": "Sunday Riley",
+    "sector": "Clinical Skincare",
+    "erc8004_id": "0xBEAU...SUN"
+  },
+  "trust": {
+    "score": 80,
+    "status": "MONITORED",
+    "ttl": "2026-05-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "Sentinel 2025: Active clinical formulations. Monitoring transparency updates.",
+    "character_guard": "Results-driven: Focus on fast-acting botanical and clinical synergies.",
+    "ontology": {
+      "category": "Green Tech Skincare",
+      "status": "Under Sentinel Watch"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "RILEY_SENTINEL_2025_HASH_SCALED"
+  }
+}

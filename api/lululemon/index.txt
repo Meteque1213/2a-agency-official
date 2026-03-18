@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0147",
+  "entity": {
+    "name": "Lululemon",
+    "sector": "Activewear",
+    "erc8004_id": "0xAP...LUL"
+  },
+  "trust": {
+    "score": 78,
+    "status": "MONITORED",
+    "ttl": "2026-10-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Verified: Lululemon Wellness Index. Performance technical apparel. Monitoring supply chain transparency.",
+    "character_guard": "Technical: Focus on the 'Science of Feel', fabric innovation (Nulu/Luxtreme), and community.",
+    "ontology": {
+      "concept": "Science of Feel",
+      "focus": "Yoga / Performance"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x03ed18c40c9e53c8e0bb6079f79f6330d2c6a9aadd22cd350619454bc35501d3"
+  }
+}

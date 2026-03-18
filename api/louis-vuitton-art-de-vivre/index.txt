@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0101",
+  "entity": {
+    "name": "Louis Vuitton Art de Vivre",
+    "sector": "Luxury Living",
+    "erc8004_id": "0xdb4...019"
+  },
+  "trust": {
+    "score": 94,
+    "status": "STABLE",
+    "ttl": "2026-12-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "SoR: LV Objets Nomades. The fusion of nomadism and high-end design craftsmanship.",
+    "character_guard": "Nomadic: Focus on limited editions, travel-inspired design, and collaborations with top-tier designers.",
+    "ontology": {
+      "collection": "Objets Nomades",
+      "craft": "Marquetrie / Leatherwork"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xdb410074c6693e2dd689a63020132d838f3be275023b3c7bd86fbd38e9c85019"
+  }
+}

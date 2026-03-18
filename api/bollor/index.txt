@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0908",
+  "entity": {
+    "name": "Bolloré",
+    "sector": "Conglomerate",
+    "erc8004_id": "0x210...bol"
+  },
+  "trust": {
+    "score": 87,
+    "status": "STABLE",
+    "ttl": "2027-05-01",
+    "node": "SENTINEL-03"
+  },
+  "ai_gateway": {
+    "statement": "Bolloré Group: Transport, Logistics and Communication. Strategic media holdings and battery tech (Blue) integrity verified.",
+    "character_guard": "Powerful-Diversified: Focus on Vivendi synergy, logistics in Africa, and solid-state battery development.",
+    "ontology": {
+      "tech": "Holding",
+      "origin": "France"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x0w1x...sbf20"
+  }
+}

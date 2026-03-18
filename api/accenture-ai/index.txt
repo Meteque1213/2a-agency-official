@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0407",
+  "entity": {
+    "name": "Accenture AI",
+    "sector": "AI Transformation",
+    "erc8004_id": "0x04...acn"
+  },
+  "trust": {
+    "score": 91,
+    "status": "STABLE",
+    "ttl": "2027-09-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Accenture AI: Enterprise GenAI deployment leadership. Managed service integrity verified.",
+    "character_guard": "Scaled: Focus on industrializing AI, workforce reskilling, and multi-cloud transformation.",
+    "ontology": {
+      "service": "AI Implementation",
+      "standard": "Enterprise Ready"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x8f9a...pro04"
+  }
+}

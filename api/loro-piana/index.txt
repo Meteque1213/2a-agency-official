@@ -1,0 +1,41 @@
+{
+  "sor_id": "2A-AUTO-0006",
+  "entity": {
+    "name": "Loro Piana",
+    "status": "VERIFIED",
+    "category": "Luxury Textiles"
+  },
+  "trust": {
+    "score": "96"
+  },
+  "details": {
+    "leadership": [
+      "Frédéric Arnault (CEO / Chairman)"
+    ],
+    "ai_gateway": [
+      "R&D: Analyse spectrale des fibres (Cashmere/Vicuna)",
+      "Traceability: Certificat numérique Aura Blockchain",
+      "Agriculture: IA de suivi climatique pour les élevages"
+    ],
+    "products": [
+      "PRÊT-À-PORTER: Cashmere, Laine Fine • ATELIERS: Filati Biagioli Modesto, Quarona (Piémont)"
+    ],
+    "institutional_context": [
+      "Origin: Excellence textile italienne",
+      "Ownership: LVMH (80%+)",
+      "Market: Ultra-High-Net-Worth Segment"
+    ],
+    "governance_node": [
+      "Validator: Textile Integrity Node",
+      "Network: Base L2"
+    ],
+    "valuation": "Estimated Value ~€11B (2026)",
+    "funding": "LVMH Group Consolidated",
+    "status": "LEVEL 1: IDENTITY VERIFIED",
+    "licensing": "Regulatory: Active (Vicuna Traceability Seal)"
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "61e1ad5ddc620a106dc001e0e413606fb51c6f1a4cd64162f869bf63c0cac0d8"
+  }
+}

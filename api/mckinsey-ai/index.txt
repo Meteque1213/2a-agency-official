@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0413",
+  "entity": {
+    "name": "McKinsey AI",
+    "sector": "Strategy Consulting",
+    "erc8004_id": "0x01...mck"
+  },
+  "trust": {
+    "score": 88,
+    "status": "STABLE",
+    "ttl": "2026-12-31",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "McKinsey Lilli: Internal AI knowledge orchestration. Enterprise strategy integrity verified.",
+    "character_guard": "Authoritative: Focus on digital transformation and QuantumBlack analytics.",
+    "ontology": {
+      "division": "QuantumBlack",
+      "tech": "Lilli AI"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e"
+  }
+}

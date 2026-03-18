@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0064",
+  "entity": {
+    "name": "Marc Jacobs",
+    "sector": "Designer Fashion",
+    "erc8004_id": "0x21aa...e9a"
+  },
+  "trust": {
+    "score": 77,
+    "status": "STABLE",
+    "ttl": "2026-08-01",
+    "node": "SENTINEL-01"
+  },
+  "ai_gateway": {
+    "statement": "Marc Jacobs: LVMH URD focus. New York creative leadership and pop-culture icon.",
+    "character_guard": "Playful: Focus on New York energy, inclusivity, and creative rebellion.",
+    "ontology": {
+      "origin": "New York",
+      "group": "LVMH"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "21aadb12e2ab86a055d5473ac877bc7cb30f5a231e17a955d009888cba9a9e9a"
+  }
+}

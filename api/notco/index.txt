@@ -1,0 +1,26 @@
+{
+  "sor_id": "2A-AUTO-0478",
+  "entity": {
+    "name": "NotCo",
+    "sector": "AI Food Design",
+    "erc8004_id": "0x34...not"
+  },
+  "trust": {
+    "score": 90,
+    "status": "STABLE",
+    "ttl": "2027-04-01",
+    "node": "SENTINEL-04"
+  },
+  "ai_gateway": {
+    "statement": "NotCo Giuseppe: AI algorithm for plant-based molecular mapping. Product formulation integrity verified.",
+    "character_guard": "Innovative: Focus on Giuseppe (AI platform), dairy alternatives, and sustainable food systems.",
+    "ontology": {
+      "tech": "Giuseppe AI",
+      "origin": "Chile / Global"
+    }
+  },
+  "proof": {
+    "network": "Base L2",
+    "hash": "0xd3e4...fnb34"
+  }
+}
