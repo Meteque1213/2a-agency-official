@@ -10,7 +10,6 @@
     <style>
         body { font-family: 'Space Grotesk', sans-serif; background-color: #fff; color: #000; scroll-behavior: smooth; }
         
-        /* Couleur Émeraude Foncée Personnalisée 2A Agency */
         .text-2a-emerald { color: #064e3b; }
         .bg-2a-emerald { background-color: #064e3b; }
         .border-2a-emerald { border-color: #064e3b; }
@@ -20,12 +19,23 @@
         
         .search-sticky { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95); backdrop-blur: 10px; }
         
-        /* Boutons Émeraude Foncé */
-        .btn-2a { background-color: #064e3b; color: white; transition: all 0.2s ease; }
+        .btn-2a { background-color: #064e3b; color: white; transition: all 0.2s ease; cursor: pointer; border: none; }
         .btn-2a:hover { opacity: 0.9; transform: scale(1.01); }
         
         pre { scrollbar-width: none; }
         pre::-webkit-scrollbar { display: none; }
+
+        /* Style pour le lien Deep Data */
+        .deep-data-link {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 2px;
+            transition: all 0.2s ease;
+        }
+        .deep-data-link:hover {
+            color: #000;
+            background-color: #10b98110;
+        }
     </style>
 </head>
 <body class="p-6 md:p-12 text-black">
@@ -58,43 +68,13 @@
                     </div>
                     <a href="https://basescan.org/tx/0x4b616647ec8ab1366149c9521c1913892a0456bb024cd614b5c94dd6d7bbd880" 
                        target="_blank" 
-                       class="btn-2a text-[9px] font-black uppercase tracking-widest px-4 py-3 italic">
+                       class="btn-2a text-[9px] font-black uppercase tracking-widest px-4 py-3 italic inline-block">
                         View On-Chain Proof
                     </a>
                 </div>
                 <div class="mt-4 pt-4 border-t border-emerald-100 text-[8px] text-emerald-800/60 grid grid-cols-1 md:grid-cols-2 gap-2">
                     <div>ROOT_HASH: 0x6f75d09afedc92f399dab761d5c078d463fb17c01d9ae61baf95e3e6fb640c91</div>
                     <div class="md:text-right uppercase tracking-tighter italic">Registry v1.2.0 | Secured by Base L2</div>
-                </div>
-            </div>
-        </div>
-
-        <div id="scanner-block" class="mb-12 bg-white text-2a-emerald p-8 rounded-sm border border-gray-100 border-b-4 border-2a-emerald shadow-lg">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="w-2 h-2 bg-2a-emerald rounded-full animate-pulse"></div>
-                <h3 class="text-[10px] font-black uppercase tracking-[0.4em] italic text-2a-emerald">Independent Integrity Scanner</h3>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="space-y-4">
-                    <p class="text-[10px] text-emerald-900/70 leading-relaxed uppercase tracking-wider">
-                        Déposez votre fichier <code class="bg-emerald-50 px-1 py-0.5 rounded text-2a-emerald">registry.json</code> pour comparer son empreinte numérique avec le sceau immuable ancré sur Base L2.
-                    </p>
-                    <input type="file" id="fileInput" class="hidden" accept=".json">
-                    <button onclick="document.getElementById('fileInput').click()" 
-                            class="w-full btn-2a py-4 text-[9px] font-black uppercase tracking-[0.2em] italic shadow-md">
-                        SÉLECTIONNER LE REGISTRE (.JSON)
-                    </button>
-                </div>
-                
-                <div id="verifyResult" class="bg-emerald-50 border border-emerald-100 p-6 flex flex-col justify-center items-center text-center rounded-sm">
-                    <div id="statusIcon" class="text-2a-emerald mb-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-                    <div id="statusText" class="text-[9px] font-mono text-emerald-800/80 uppercase tracking-widest">En attente de fichier...</div>
-                    <div id="hashDisplay" class="text-[7px] font-mono text-2a-emerald mt-2 break-all uppercase max-w-full overflow-hidden opacity-70"></div>
                 </div>
             </div>
         </div>
@@ -128,12 +108,10 @@
     </div>
 
     <script>
-        // CONFIGURATION DYNAMIQUE
         const OFFICIAL_HASH = "6f75d09afedc92f399dab761d5c078d463fb17c01d9ae61baf95e3e6fb640c91";
         const REGISTRY_URL = 'registry.json?v=' + Date.now();
         let currentData = [];
 
-        // --- REGISTRY LOADING LOGIC ---
         async function loadAudits() {
             const container = document.getElementById('audit-container');
             try {
@@ -150,25 +128,38 @@
             }
         }
 
-        // --- RENDER LOGIC (Uniformisée Émeraude Foncée) ---
+        // --- RENDER LOGIC AVEC LIEN VERS BREX-DETAILS ---
         function renderAudits(items) {
             const container = document.getElementById('audit-container');
-            container.innerHTML = items.map((item, index) => `
+            container.innerHTML = items.map((item, index) => {
+                
+                // On vérifie si c'est Brex pour activer la Deep Layer
+                const isBrex = item.entity.name.toUpperCase() === "BREX";
+                const entityDisplayName = isBrex 
+                    ? `<a href="brex-details.html" class="deep-data-link text-2a-emerald font-black">${item.entity.name}</a>` 
+                    : item.entity.name;
+
+                return `
                 <div class="audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-4 relative overflow-hidden">
                     <div class="flex-1">
                         <div class="flex items-center gap-2 mb-2 relative z-10">
                             <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em] italic">${item.entity.status || 'VERIFIED'}</span>
                             <div class="text-[8px] font-black text-2a-emerald tracking-[0.3em] uppercase italic underline decoration-1 decoration-emerald-200">${item.entity.category || 'GENERAL'}</div>
                         </div>
-                        <h2 class="text-2xl font-bold text-2a-emerald tracking-tight uppercase relative z-10">${item.entity.name}</h2>
+                        <h2 class="text-2xl font-bold text-2a-emerald tracking-tight uppercase relative z-10">
+                            ${entityDisplayName}
+                        </h2>
                         <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60 relative z-10">ID: ${item.sor_id}</div>
                     </div>
-                    <button onclick="openLLMGateway(${index})" class="btn-2a text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic relative z-10">
-                        Certify for AI
-                    </button>
-                    <div class="absolute right-[-10px] bottom-[-10px] text-[60px] font-mono font-black text-emerald-50 opacity-10 rotate-12 z-0 hidden md:block">${item.trust.score}</div>
+                    <div class="flex gap-2">
+                        <button onclick="openLLMGateway(${index})" class="btn-2a text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic relative z-10">
+                            Certify for AI
+                        </button>
+                    </div>
+                    <div class="absolute right-[-10px] bottom-[-10px] text-[60px] font-mono font-black text-emerald-50 opacity-10 rotate-12 z-0 hidden md:block">${item.trust?.score || '90'}</div>
                 </div>
-            `).join('');
+                `;
+            }).join('');
         }
 
         function filterAudits() {
@@ -182,7 +173,6 @@
 
         function openLLMGateway(index) {
             const item = currentData[index];
-            // Construire un payload JSON propre
             const jsonPayload = {
                 "@context": "https://2aagency.com/protocol/v2",
                 "sor_id": item.sor_id,
@@ -212,19 +202,16 @@
                 </div>
             `;
             document.getElementById('verifyModal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Désactiver le scroll
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
             document.getElementById('verifyModal').classList.add('hidden');
-            document.body.style.overflow = 'auto'; // Réactiver le scroll
+            document.body.style.overflow = 'auto';
         }
 
-        // Fermer le modal en cliquant en dehors
         window.onclick = function(event) {
-            if (event.target == document.getElementById('verifyModal')) {
-                closeModal();
-            }
+            if (event.target == document.getElementById('verifyModal')) closeModal();
         }
 
         window.onload = loadAudits;
