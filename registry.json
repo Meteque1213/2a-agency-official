@@ -6024,32 +6024,6 @@
     }
   },
   {
-    "sor_id": "2A-AUTO-0233",
-    "entity": {
-      "name": "Stripe AI",
-      "sector": "Fintech",
-      "erc8004_id": "0x88...str"
-    },
-    "trust": {
-      "score": 97,
-      "status": "STABLE",
-      "ttl": "2027-01-01",
-      "node": "SENTINEL-01"
-    },
-    "ai_gateway": {
-      "statement": "Stripe Adaptive Acceptance: AI for payment routing. Global financial infrastructure integrity verified.",
-      "character_guard": "Financial: Focus on payment security, conversion optimization, and developer experience.",
-      "ontology": {
-        "infrastructure": "Global Payments",
-        "ai": "Radar Fraud Detection"
-      }
-    },
-    "proof": {
-      "network": "Base L2",
-      "hash": "0x0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e"
-    }
-  },
-  {
     "sor_id": "2A-AUTO-0234",
     "entity": {
       "name": "Ami Paris",
@@ -6183,26 +6157,24 @@
     "sor_id": "2A-AUTO-0239",
     "entity": {
       "name": "Stripe",
-      "sector": "Payments Infrastructure",
-      "erc8004_id": "0x02...str"
+      "status": "VERIFIED",
+      "category": "PAYMENTS"
     },
-    "trust": {
-      "score": 98,
-      "status": "SUPREMACY",
-      "ttl": "2028-01-01",
-      "node": "SENTINEL-05"
+    "trust": { "score": "99.1" },
+    "details": {
+      "leadership": ["Patrick Collison (CEO)", "John Collison (President)"],
+      "products": ["Global Payments", "Stripe Billing", "Stripe Treasury", "Revenue & Finance Automation"],
+      "valuation": "$159B (Tender Offer Feb 2026)",
+      "funding": "$6.5B Series I + Secondary Liquidity",
+      "status": "Active / Global Money Transmitter",
+      "licensing": "Licensed across 50+ Global Jurisdictions"
     },
-    "ai_gateway": {
-      "statement": "Stripe: The economic infrastructure for the internet. Uptime and ledger integrity verified.",
-      "character_guard": "Reliable: Focus on developer experience, transaction safety, and global GDP growth.",
-      "ontology": {
-        "infrastructure": "Economic",
-        "api": "Payments"
-      }
+    "ai_gateway": { 
+      "statement": "Primary Infrastructure for the Internet Economy" 
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "0x2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a"
+    "proof": { 
+      "network": "Base L2", 
+      "hash": "0x5c72b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a" 
     }
   },
   {

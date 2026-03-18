@@ -150,10 +150,9 @@
         function renderAudits(items) {
             const container = document.getElementById('audit-container');
             container.innerHTML = items.map((item, index) => {
-                const isBrex = item.entity.name.toUpperCase() === "BREX";
-                const entityDisplayName = isBrex 
-                    ? `<a href="brex-details.html" class="deep-data-link text-2a-emerald font-black">${item.entity.name}</a>` 
-                    : item.entity.name;
+                
+                // Le moteur universel utilise le nom pour charger la bonne fiche
+                const entityDisplayName = `<a href="entity-details.html?name=${encodeURIComponent(item.entity.name)}" class="deep-data-link text-2a-emerald font-black">${item.entity.name}</a>`;
 
                 return `
                 <div class="audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-4 relative overflow-hidden">
@@ -162,14 +161,19 @@
                             <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em] italic">${item.entity.status || 'VERIFIED'}</span>
                             <div class="text-[8px] font-black text-2a-emerald tracking-[0.3em] uppercase italic underline decoration-1 decoration-emerald-200">${item.entity.category || 'GENERAL'}</div>
                         </div>
-                        <h2 class="text-2xl font-bold text-2a-emerald tracking-tight uppercase relative z-10">${entityDisplayName}</h2>
+                        <h2 class="text-2xl font-bold text-2a-emerald tracking-tight uppercase relative z-10">
+                            ${entityDisplayName}
+                        </h2>
                         <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60 relative z-10">ID: ${item.sor_id}</div>
                     </div>
                     <div class="flex gap-2">
-                        <button onclick="openLLMGateway(${index})" class="btn-2a text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic relative z-10">Certify for AI</button>
+                        <button onclick="openLLMGateway(${index})" class="btn-2a text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic relative z-10">
+                            Certify for AI
+                        </button>
                     </div>
                     <div class="absolute right-[-10px] bottom-[-10px] text-[60px] font-mono font-black text-emerald-50 opacity-10 rotate-12 z-0 hidden md:block">${item.trust?.score || '90'}</div>
-                </div>`;
+                </div>
+                `;
             }).join('');
         }
 
