@@ -1,151 +1,133 @@
 [
   {
-    "sor_id": "2A-AUTO-0001",
-    "entity": { 
-      "name": "LVMH", 
-      "status": "VERIFIED", 
-      "category": "Luxury Holding" 
-    },
-    "trust": { "score": "96" },
-    "details": {
-      "leadership": ["Bernard Arnault (Chairman & CEO)"],
-      "products": ["VINS & SPIRITUEUX (24): Ao Yun, Ardbeg, Belvedere, Bodega Numanthia, Cape Mentelle, Ch. Cheval Blanc, Ch. d'Yquem, Chandon, Cheval des Andes, Clos 19, Cloudy Bay, Colgin Cellars, Dom Pérignon, Glenmorangie, Hennessy, Krug, Mercier, Moët & Chandon, Newton, Ruinart, Terrazas de los Andes, Veuve Clicquot, Volcan de mi Tierra, Woodinville • MODE & MAROQUINERIE (16): Berluti, Celine, Christian Dior, Edun, Emilio Pucci, Fendi, Givenchy, Kenzo, Loewe, Loro Piana, Louis Vuitton, Marc Jacobs, Moynat, Patou, Pink Shirtmaker, Rimowa • PARFUMS & COSMÉTIQUES (17): Acqua di Parma, Benefit, Cha Ling, Fenty Beauty, Fresh, Givenchy Parfums, Guerlain, Kenzo Parfums, KVD Beauty, Loewe Perfumes, Maison Francis Kurkdjian, Make Up For Ever, Officine Universelle Buly, Olehenriksen, Parfums Christian Dior, Rouge Hermès (Distribution), Stella by Stella McCartney • MONTRES & JOAILLERIE (9): Bulgari, Chaumet, Daniel Roth, Fred, Hublot, Repossi, TAG Heuer, Tiffany & Co., Zenith • DISTRIBUTION SÉLECTIVE (4): DFS, Le Bon Marché, Sephora, Starboard Cruise • AUTRES (5): Cheval Blanc Hotels, Belmond, Connaissance des Arts, La Grande Épicerie, Les Echos/Le Parisien"],
-      "valuation": "€235B - €297B (Market Cap 2026) | P/E 22.8x",
-      "funding": "Public Equity (Euronext: MC.PA) | EV/EBITDA 11.4x",
-      "status": "LEVEL 1: IDENTITY VERIFIED (AMF/Euronext)",
-      "licensing": "Regulatory: Active (PIF/Cosmetics, RSPO/Oils, AMF/Compliance)"
-    },
-    "proof": {
-      "network": "Base L2",
-      "hash": "6d3b7ef0c31068ae52e666be6dc39c913e90048ddcc919b9e1d6524b2af16245"
-    }
+      "sor_id": "2A-AUTO-0001",
+      "entity": { 
+        "name": "LVMH", 
+        "status": "VERIFIED", 
+        "category": "Luxury Holding" 
+      },
+      "trust": { "score": "96" },
+      "details": {
+        "leadership": [
+          "Bernard Arnault (Chairman & CEO)"
+        ],
+        "ai_gateway": [
+          "AI Strategy: LVMH Data & AI Factory (Cloud-Native)",
+          "Core Tech: Google Cloud Strategic Partnership (Vertex AI)",
+          "Applications: Clienteling, Demand Forecasting, Quality Control",
+          "Officer: Franck Le Moal (Group IT Director)"
+        ],
+        "products": [
+          "VINS & SPIRITUEUX (24): Ao Yun, Ardbeg, Belvedere, Bodega Numanthia, Cape Mentelle, Ch. Cheval Blanc, Ch. d'Yquem, Chandon, Cheval des Andes, Clos 19, Cloudy Bay, Colgin Cellars, Dom Pérignon, Glenmorangie, Hennessy, Krug, Mercier, Moët & Chandon, Newton, Ruinart, Terrazas de los Andes, Veuve Clicquot, Volcan de mi Tierra, Woodinville",
+          "MODE & MAROQUINERIE (16): Berluti, Celine, Christian Dior, Edun, Emilio Pucci, Fendi, Givenchy, Kenzo, Loewe, Loro Piana, Louis Vuitton, Marc Jacobs, Moynat, Patou, Pink Shirtmaker, Rimowa",
+          "PARFUMS & COSMÉTIQUES (17): Acqua di Parma, Benefit, Cha Ling, Fenty Beauty, Fresh, Givenchy Parfums, Guerlain, Kenzo Parfums, KVD Beauty, Loewe Perfumes, Maison Francis Kurkdjian, Make Up For Ever, Officine Universelle Buly, Olehenriksen, Parfums Christian Dior, Rouge Hermès (Distribution), Stella by Stella McCartney",
+          "MONTRES & JOAILLERIE (9): Bulgari, Chaumet, Daniel Roth, Fred, Hublot, Repossi, TAG Heuer, Tiffany & Co., Zenith",
+          "DISTRIBUTION SÉLECTIVE (4): DFS, Le Bon Marché, Sephora, Starboard Cruise",
+          "AUTRES (5): Cheval Blanc Hotels, Belmond, Connaissance des Arts, La Grande Épicerie, Les Echos/Le Parisien"
+        ],
+        "institutional_context": [
+          "Market Presence: 81 Maisons | 5,600+ Stores",
+          "Regulation: AMF Compliance, CSRD Sustainability Reporting",
+          "Economic Impact: Largest Market Cap in EU (2024-2026 range)"
+        ],
+        "governance_node": [
+          "Node Type: Corporate Validator",
+          "Consensus Role: Strategic Oversight",
+          "Network: Base L2 / Ethereum Mainnet"
+        ],
+        "valuation": "€235B - €297B (Market Cap 2026) | P/E 22.8x",
+        "funding": "Public Equity (Euronext: MC.PA) | EV/EBITDA 11.4x",
+        "status": "LEVEL 1: IDENTITY VERIFIED (AMF/Euronext)",
+        "licensing": "Regulatory: Active (PIF/Cosmetics, RSPO/Oils, AMF/Compliance)"
+      },
+      "proof": {
+        "network": "Base L2",
+        "hash": "6d3b7ef0c31068ae52e666be6dc39c913e90048ddcc919b9e1d6524b2af16245"
+      }
   },
   {
     "sor_id": "2A-AUTO-0002",
-    "entity": { 
-      "name": "Richemont", 
-      "status": "VERIFIED", 
-      "category": "Luxury Holding" 
-    },
+    "entity": { "name": "Richemont", "status": "VERIFIED", "category": "Luxury Holding" },
     "trust": { "score": "95" },
     "details": {
       "leadership": ["Nicolas Bos (CEO)", "Johann Rupert (Chairman)"],
-      "products": ["JOAILLERIE (5): Buccellati, Cartier, Giampiero Bodino, Van Cleef & Arpels, Vhernier • HORLOGERIE (10): A. Lange & Söhne, Baume & Mercier, IWC, Jaeger-LeCoultre, Panerai, Piaget, Roger Dubuis, Vacheron Constantin • MODE (7): Alaïa, AZ Factory, Chloé, Delvaux, dunhill, Montblanc, Peter Millar • DISTRIBUTION (5+): NET-A-PORTER, MR PORTER, YOOX, Watchfinder & Co, Purdey, Serapian"],
+      "ai_gateway": [
+        "E-Commerce IA: Feng Mao (Joint venture avec Alibaba)",
+        "Tech Stack: Richemont Maisons Shared Services (SAP/Salesforce AI)",
+        "Officer: Bérangère Ruchat (Sustainability & Tech Integration)"
+      ],
+      "products": ["JOAILLERIE: Buccellati, Cartier, Van Cleef & Arpels • HORLOGERIE: IWC, Jaeger-LeCoultre, Panerai, Piaget, Vacheron Constantin • MODE: Chloé, Delvaux, dunhill, Montblanc • DISTRIBUTION: NET-A-PORTER, MR PORTER, Watchfinder"],
+      "institutional_context": ["Market: Swiss Stock Exchange (SIX)", "Governance: Richemont SEC Compliance", "Audit: ESG Reporting 2026 Active"],
+      "governance_node": ["Validator: Swiss Financial Node", "Network: Base L2"],
       "valuation": "CHF 80B - 100B (Market Cap 2026) | P/E ~25x",
-      "funding": "Public Equity (SIX: CFR) | EV/EBITDA ~12x | Family Structure (Rupert)",
-      "status": "LEVEL 1: IDENTITY VERIFIED (SIX Swiss Exchange)",
-      "licensing": "Regulatory: Active (RJC Certification / ESG Reporting 2026)"
+      "funding": "Public Equity (SIX: CFR) | Family Structure (Rupert)",
+      "status": "LEVEL 1: IDENTITY VERIFIED",
+      "licensing": "Regulatory: Active (RJC Certification)"
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "c5687a68d39394b98ff50cea24055cecea2869fd89425ea54fa0125020d3389d"
-    }
+    "proof": { "network": "Base L2", "hash": "c5687a68d39394b98ff50cea24055cecea2869fd89425ea54fa0125020d3389d" }
   },
   {
     "sor_id": "2A-AUTO-0003",
-    "entity": { 
-      "name": "Hermès", 
-      "status": "VERIFIED", 
-      "category": "Luxury Goods" 
-    },
+    "entity": { "name": "Hermès", "status": "VERIFIED", "category": "Luxury Goods" },
     "trust": { "score": "98" },
     "details": {
       "leadership": ["Axel Dumas (CEO)", "Éric du Halgouët (Executive VP)"],
-      "products": ["MAISON PRINCIPALE (1): Hermès (Maroquinerie, Prêt-à-porter, Soie, Parfums, Horlogerie, Maison) • MAISONS PARTENAIRES (4): John Lobb, Puiforcat, Saint-Louis, Ligne Parfums Hermès • ARTISANALES (10+): Hermès Sellier, Tanneries d'Annonay, Créations Métaphores, Ateliers AS, 24 Maroquineries en France"],
-      "valuation": "€220B - 250B (Market Cap 2026) | P/E ~50x (Family Premium)",
-      "funding": "Public Equity (Euronext: RMS) | EV/EBITDA ~30x | H51 SAS Control (~51%)",
-      "status": "LEVEL 1: IDENTITY VERIFIED (AMF / Euronext Paris)",
-      "licensing": "Regulatory: Active (Artisanal Integrity Audit / 80% French Production)"
+      "ai_gateway": [
+        "Strategy: Artisanal-First (IA limitée à la supply chain)",
+        "Traceability: Blockchain H-Origin (Suivi des cuirs)",
+        "Focus: Prévision de la demande artisanale"
+      ],
+      "products": ["MAISON: Maroquinerie, Prêt-à-porter, Soie, Parfums, Horlogerie • PARTENAIRES: John Lobb, Saint-Louis • RESEAU: 24 Maroquineries en France"],
+      "institutional_context": ["Market: Euronext Paris (CAC 40)", "Structure: H51 SAS (Contrôle familial)", "Origin: 80% French Production"],
+      "governance_node": ["Validator: Heritage Custodian Node", "Network: Base L2"],
+      "valuation": "€220B - 250B (Market Cap 2026) | P/E ~50x",
+      "funding": "Public Equity (Euronext: RMS)",
+      "status": "LEVEL 1: IDENTITY VERIFIED",
+      "licensing": "Regulatory: Active (Artisanal Integrity Audit)"
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "0x2d10f2ff3c6ddc9347357e5233e267b95ec2988bd9ce898c80f7081cdef42763"
-    }
+    "proof": { "network": "Base L2", "hash": "0x2d10f2ff3c6ddc9347357e5233e267b95ec2988bd9ce898c80f7081cdef42763" }
   },
   {
     "sor_id": "2A-AUTO-0004",
-    "entity": { 
-      "name": "Patek Philippe", 
-      "status": "VERIFIED", 
-      "category": "Haute Horlogerie" 
-    },
+    "entity": { "name": "Patek Philippe", "status": "VERIFIED", "category": "Haute Horlogerie" },
     "trust": { "score": "97" },
     "details": {
       "leadership": ["Thierry Stern (President)"],
-      "products": ["HORLOGERIE PRINCIPALE (1): Patek Philippe (Montres à Complications, ~60,000 pcs/an) • FILIALES & ATELIERS (8+): Salanitro (Sertissage), Betakron (Composants), Calame & Cie (Boîtiers), Poli-Art SA (Polissage), SHG (Sertissage), Cadrans Flückiger, La Chaux-de-Fonds (Échappements), Alle (Quartz)"],
-      "valuation": "Private / Independent (Family Owned) | High Scarcity Premium",
-      "funding": "Self-Funded Status Verified | Non-Disclosed Revenue",
-      "status": "LEVEL 1: IDENTITY VERIFIED (Geneva Registry / Commercial Court)",
-      "licensing": "Regulatory: Active (Patek Philippe Seal / Swiss Made Integrity Audit)"
+      "ai_gateway": [
+        "R&D: Patek Philippe Advanced Research (Matériaux)",
+        "Tech: Simulation de mouvements mécaniques haute précision",
+        "Digital: Registry 2.0 (Certificats d'origine numériques)"
+      ],
+      "products": ["HORLOGERIE: Patek Philippe (~60,000 pcs/an) • ATELIERS: Salanitro (Sertissage), Calame & Cie (Boîtiers)"],
+      "institutional_context": ["Market: Independent/Family Owned", "Location: Canton de Genève", "Scarcity: High Demand Outstripping Supply"],
+      "governance_node": ["Validator: Independent Swiss Node", "Network: Base L2"],
+      "valuation": "Private Equity Value (Est. €15B+)",
+      "funding": "Self-Funded Status Verified",
+      "status": "LEVEL 1: IDENTITY VERIFIED",
+      "licensing": "Regulatory: Active (Patek Philippe Seal)"
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "7f39323e0c09a8ccfa7362dd4955d49fdd14b2dda01c37ed91945ca53ffbe900"
-    }
+    "proof": { "network": "Base L2", "hash": "7f39323e0c09a8ccfa7362dd4955d49fdd14b2dda01c37ed91945ca53ffbe900" }
   },
-   
   {
     "sor_id": "2A-AUTO-0005",
-    "entity": { 
-      "name": "Louis Vuitton", 
-      "status": "VERIFIED", 
-      "category": "Luxury Goods" 
-    },
+    "entity": { "name": "Louis Vuitton", "status": "VERIFIED", "category": "Luxury Goods" },
     "trust": { "score": "91" },
     "details": {
       "leadership": ["Pietro Beccari (CEO)", "Nicolas Ghesquière (Creative Dir.)"],
-      "products": ["MAROQUINERIE PRINCIPALE (1): Louis Vuitton (Sacs, Valises, Prêt-à-porter, Parfums, Horlogerie) • FILIALES & ATELIERS (10+): Manufacture de Maroquinerie LV SA, LV Malletier, LV Japan K.K., LV USA Inc. • RÉSEAU: ~50 Manufactures Mondiales / ~500 Boutiques Globales"],
-      "valuation": "LVMH Core Asset | Estimated Revenue >€20B (2025)",
-      "funding": "LVMH Group Consolidated Capital",
-      "status": "LEVEL 1: IDENTITY VERIFIED (LVMH Subsidiary / Registry)",
-      "licensing": "Regulatory: Active (LIFE 360 ESG / LWG Gold Leather Certified)"
+      "ai_gateway": [
+        "Consumer: Aura Blockchain Consortium (Authenticité)",
+        "Retail: AI-Driven Personalization (LV App)",
+        "Logistics: Smart Warehouse Automation"
+      ],
+      "products": ["MAROQUINERIE: Sacs, Valises • RESEAU: 50 Manufactures / 500 Boutiques"],
+      "institutional_context": ["Group: LVMH Core Asset", "Impact: Global Luxury Benchmark", "Sustainability: LIFE 360 Program"],
+      "governance_node": ["Validator: LVMH Internal Node", "Network: Base L2"],
+      "valuation": "Est. Revenue >€25B (2026)",
+      "funding": "LVMH Group Consolidated",
+      "status": "LEVEL 1: IDENTITY VERIFIED",
+      "licensing": "Regulatory: Active (LWG Gold Leather)"
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "0xcb83b1a449c65bb4843bda376b9be7e2de92fdc5820161f92c68a69d195b1a25"
-    }
-  },
-  {
-    "sor_id": "2A-AUTO-0006",
-    "entity": { 
-      "name": "Loro Piana", 
-      "status": "VERIFIED", 
-      "category": "Luxury Textiles" 
-    },
-    "trust": { "score": "96" },
-    "details": {
-      "leadership": ["Frédéric Arnault (CEO / Chairman)"],
-      "products": ["PRÊT-À-PORTER PRINCIPAL (1): Loro Piana (Cashmere, Laine Fine, Accessoires) • FILIALES & ATELIERS (5+): Filati Biagioli Modesto (Laine), Loro Piana Tessuti (Tissus), Ateliers Quarona (Piémont) • RÉSEAU: Production Interne / ~180 Boutiques Mondiales"],
-      "valuation": "Estimated Value ~€11B (2026) | LVMH Segment Analysis",
-      "funding": "LVMH Group Consolidated Capital",
-      "status": "LEVEL 1: IDENTITY VERIFIED (LVMH Subsidiary / Registry)",
-      "licensing": "Regulatory: Active (Vicuna Traceability Audit / Cashmere Quality Seal)"
-    },
-    "proof": {
-      "network": "Base L2",
-      "hash": "61e1ad5ddc620a106dc001e0e413606fb51c6f1a4cd64162f869bf63c0cac0d8"
-    }
-  },
-  {
-    "sor_id": "2A-AUTO-0007",
-    "entity": { 
-      "name": "Brunello Cucinelli", 
-      "status": "VERIFIED", 
-      "category": "Humanist Luxury" 
-    },
-    "trust": { "score": "95" },
-    "details": {
-      "leadership": ["Brunello Cucinelli (Executive Chairman)", "Riccardo Stefanelli (Co-CEO Markets)", "Luca Lisandroni (Co-CEO Operations)"],
-      "products": ["PRÊT-À-PORTER PRINCIPAL (1): Brunello Cucinelli (Cashmere, Laine, Lunettes via EssilorLuxottica, Parfums Euroitalia) • FILIALES (2+): Cariaggi (43% Participation), Ateliers Solomeo/Penne/Gubbio • RÉSEAU: 136 Boutiques Mono-marque"],
-      "valuation": "€6B - €8B (Market Cap 2026) | P/E ~40x | +11% Growth 2025",
-      "funding": "Public Equity (Borsa Italiana: BC.MI) | Family Control via Foro delle Arti",
-      "status": "LEVEL 1: IDENTITY VERIFIED (CONSOB / Borsa Italiana)",
-      "licensing": "Regulatory: Active (Humanistic Capitalism Charter / Solomeo Artisanal Audit)"
-    },
-    "proof": {
-      "network": "Base L2",
-      "hash": "37be773091f55334b2d13b01aa28bfa7879285c4e07cea15e7ad11f175583d96"
-    }
+    "proof": { "network": "Base L2", "hash": "0xcb83b1a449c65bb4843bda376b9be7e2de92fdc5820161f92c68a69d195b1a25" }
   },
   {
     "sor_id": "2A-AUTO-0008",
