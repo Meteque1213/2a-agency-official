@@ -37,12 +37,12 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div class="bg-2a-dark border border-white/10 p-8 border-glow">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-8 text-emerald-400 italic">01. Executive Leadership</h3>
+                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-8 text-emerald-400 italic">01. AI Gateway Statement</h3>
                 <div id="leadership-data" class="space-y-5 mono text-[11px]">
                     </div>
             </div>
             <div class="bg-2a-dark border border-white/10 p-8 border-glow">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400 italic">02. Core Product Stack</h3>
+                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400 italic">02. Entity Ontology</h3>
                 <div id="product-stack" class="flex flex-col gap-3 text-white font-bold text-[10px]">
                     </div>
             </div>
@@ -50,20 +50,18 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-white">
             <div class="bg-2a-dark border border-emerald-500/30 p-8 italic">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Institutional Licensing</h3>
-                <div id="licensing-data" class="space-y-4 mono text-[11px]">
-                     </div>
+                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Institutional Sector</h3>
+                <div id="licensing-data" class="space-y-4 mono text-[11px]"></div>
             </div>
             <div class="bg-2a-dark border border-emerald-500/30 p-8 italic">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Capital & Governance</h3>
-                <div id="capital-data" class="space-y-4 mono text-[11px]">
-                     </div>
+                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Governance & Node</h3>
+                <div id="capital-data" class="space-y-4 mono text-[11px]"></div>
             </div>
         </div>
 
         <div class="bg-emerald-950/20 border border-emerald-500/20 p-8 mb-12">
             <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-6 text-2a-emerald">Cryptographic Proof (ERC-8004)</h4>
-            <div id="verification-root" class="mono text-[10px] opacity-40 italic underline mb-4">Verification Root: LOADING...</div>
+            <div id="verification-root" class="mono text-[10px] opacity-40 italic underline mb-4 leading-relaxed break-all">Verification Root: LOADING...</div>
         </div>
     </main>
 
@@ -72,10 +70,7 @@
             const urlParams = new URLSearchParams(window.location.search);
             const entityName = urlParams.get('name');
             
-            if (!entityName) {
-                console.error("No entity name provided in URL");
-                return;
-            }
+            if (!entityName) return;
 
             try {
                 const response = await fetch('registry.json');
@@ -88,54 +83,48 @@
                     document.getElementById('entity-name').innerText = entity.entity.name;
                     document.getElementById('top-id').innerText = `SOR_ID: ${entity.sor_id}`;
                     document.getElementById('trust-score').innerText = entity.trust.score;
-                    
-                    // Preuve Cryptographique
+
+                    // --- STATEMENT (Mapping sur ai_gateway.statement) ---
+                    const statement = entity.ai_gateway?.statement || "NO OFFICIAL STATEMENT FOUND";
+                    document.getElementById('leadership-data').innerHTML = `
+                        <div class="flex flex-col border-b border-white/5 pb-4 italic">
+                            <span class="opacity-40 uppercase text-[9px] mb-2 tracking-widest">Character Guard / Message</span>
+                            <span class="font-bold text-white text-[12px] leading-relaxed uppercase">${statement}</span>
+                        </div>
+                    `;
+
+                    // --- ONTOLOGY (Mapping sur ontology reporting/governance) ---
+                    const reporting = entity.ai_gateway?.ontology?.reporting || "DATA SCANNING...";
+                    const governance = entity.ai_gateway?.ontology?.governance || "ANALYZING...";
+                    document.getElementById('product-stack').innerHTML = `
+                        <div class="px-4 py-3 bg-white/5 border border-white/10 uppercase font-mono text-[10px] leading-relaxed text-emerald-100 italic">
+                            REPORTING: ${reporting}
+                        </div>
+                        <div class="px-4 py-3 bg-white/5 border border-white/10 uppercase font-mono text-[10px] leading-relaxed text-emerald-100 italic">
+                            GOVERNANCE: ${governance}
+                        </div>
+                    `;
+
+                    // --- SECTOR & NODE (Mapping sur entity.sector et trust.node) ---
+                    document.getElementById('licensing-data').innerHTML = `
+                        <div class="flex justify-between border-b border-white/5 pb-2 italic"><span class="opacity-40">SECTOR</span><span class="font-bold text-white uppercase">${entity.entity.sector || 'UNKNOWN'}</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2 italic mt-4"><span class="opacity-40">TRUST NODE</span><span class="font-bold text-white uppercase">${entity.trust.node || 'SENTINEL-01'}</span></div>
+                    `;
+
+                    // --- CAPITAL / TTL ---
+                    document.getElementById('capital-data').innerHTML = `
+                        <div class="flex justify-between border-b border-white/5 pb-2 italic"><span class="opacity-40">TIME TO LIVE (TTL)</span><span class="font-bold text-white uppercase">${entity.trust.ttl || 'N/A'}</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2 italic mt-4"><span class="opacity-40">LEDGER STATUS</span><span class="font-bold text-white uppercase">${entity.trust.status || 'STABLE'}</span></div>
+                    `;
+
+                    // Hash
                     if(entity.proof) {
                         document.getElementById('verification-root').innerText = `Verification Root: ${entity.proof.hash}`;
                     }
 
-                    // --- LEADERSHIP (Gère String ou Array) ---
-                    const rawLeaders = entity.details?.leadership || ["Data Ingestion Pending"];
-                    const leaders = Array.isArray(rawLeaders) ? rawLeaders : [rawLeaders];
-                    document.getElementById('leadership-data').innerHTML = leaders.map(l => `
-                        <div class="flex justify-between border-b border-white/5 pb-2 uppercase italic">
-                            <span class="opacity-40 uppercase">Officer</span>
-                            <span class="font-bold text-white">${l}</span>
-                        </div>
-                    `).join('');
-
-                    // --- PRODUCTS (Gère String ou Array) ---
-                    const rawProducts = entity.details?.products || ["Analyzing Stack..."];
-                    const products = Array.isArray(rawProducts) ? rawProducts : [rawProducts];
-                    document.getElementById('product-stack').innerHTML = products.map(p => `
-                        <div class="px-4 py-3 bg-white/5 border border-white/10 uppercase font-mono text-[10px] leading-relaxed text-emerald-100 italic">
-                            ${p}
-                        </div>
-                    `).join('');
-
-                    // --- LICENSING ---
-                    document.getElementById('licensing-data').innerHTML = `
-                        <div class="flex justify-between border-b border-white/5 pb-2 italic"><span class="opacity-40">REG STATUS</span><span class="font-bold text-white">${entity.details?.status || 'PENDING AUDIT'}</span></div>
-                        <div class="flex justify-between border-b border-white/5 pb-2 italic mt-4"><span class="opacity-40">LICENSING</span><span class="font-bold text-white">${entity.details?.licensing || 'SCANNING...'}</span></div>
-                    `;
-
-                    // --- CAPITAL ---
-                    document.getElementById('capital-data').innerHTML = `
-                        <div class="flex justify-between border-b border-white/5 pb-2 italic"><span class="opacity-40">VALUATION</span><span class="font-bold text-white">${entity.details?.valuation || 'ESTIMATING...'}</span></div>
-                        <div class="flex justify-between border-b border-white/5 pb-2 italic mt-4"><span class="opacity-40">FUNDING</span><span class="font-bold text-white">${entity.details?.funding || 'VERIFYING...'}</span></div>
-                    `;
-
-                    // Fade in once data is ready
-                    document.body.style.opacity = 1;
-                } else {
-                    document.getElementById('entity-name').innerText = "ENTITY NOT FOUND";
                     document.body.style.opacity = 1;
                 }
-            } catch (err) { 
-                console.error("Error loading data:", err); 
-                document.getElementById('entity-name').innerText = "ERROR LOADING DATA";
-                document.body.style.opacity = 1;
-            }
+            } catch (err) { console.error("Error loading registry:", err); }
         }
         window.onload = loadEntityData;
     </script>
