@@ -9,64 +9,105 @@
     
     <style>
         body { font-family: 'Space Grotesk', sans-serif; background-color: #fff; color: #000; scroll-behavior: smooth; }
+        
+        /* Couleur Émeraude Foncée Personnalisée */
+        .text-2a-emerald { color: #064e3b; }
+        .bg-2a-emerald { background-color: #064e3b; }
+        .border-2a-emerald { border-color: #064e3b; }
+
         .audit-card { transition: all 0.2s ease; border-left: 3px solid #f3f4f6; }
-        .audit-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left-color: #10b981; }
+        .audit-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left-color: #064e3b; }
+        
         .search-sticky { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95); backdrop-blur: 10px; }
-        .brand-name { color: #10b981; } 
-        .btn-emerald { background-color: #10b981; transition: all 0.2s ease; }
-        .btn-emerald:hover { opacity: 0.8; transform: scale(1.02); }
+        
+        /* Boutons Émeraude Foncé */
+        .btn-2a { background-color: #064e3b; color: white; transition: all 0.2s ease; }
+        .btn-2a:hover { opacity: 0.9; transform: scale(1.01); }
+        
+        pre { scrollbar-width: none; }
+        pre::-webkit-scrollbar { display: none; }
     </style>
 </head>
 <body class="p-6 md:p-12 text-black">
-    <nav class="flex justify-between items-center mb-16 max-w-5xl mx-auto">
+    <nav class="flex justify-between items-center mb-16 max-w-5xl mx-auto border-b border-gray-100 pb-8">
         <div class="flex items-center gap-2">
-            <div class="w-3 h-3 bg-[#10b981] rounded-full"></div>
-            <span class="font-bold text-sm tracking-tight uppercase">2A AGENCY</span>
+            <div class="w-3 h-3 bg-2a-emerald rounded-full"></div>
+            <span class="font-bold text-sm tracking-tight uppercase text-2a-emerald">2A AGENCY</span>
         </div>
         <div class="flex gap-6 text-[10px] uppercase tracking-[0.2em] text-gray-400">
-            <a href="index.html" class="hover:text-black italic">Home</a>
-            <a href="audits.html" class="text-black font-bold underline decoration-2 underline-offset-8 italic">Audits</a>
-            <a href="whitepaper.html" class="hover:text-black italic">Protocol</a>
+            <a href="index.html" class="hover:text-2a-emerald italic">Home</a>
+            <a href="audits.html" class="text-2a-emerald font-bold underline decoration-2 underline-offset-8 italic">Audits</a>
+            <a href="whitepaper.html" class="hover:text-2a-emerald italic">Protocol</a>
         </div>
     </nav>
 
     <main class="max-w-5xl mx-auto">
         <div class="mb-12">
-            <h1 class="text-[50px] md:text-[80px] font-black leading-[0.9] tracking-tighter text-emerald-950 uppercase italic text-center md:text-left">LLM<br>Gateway</h1>
+            <h1 class="text-[50px] md:text-[80px] font-black leading-[0.9] tracking-tighter text-2a-emerald uppercase italic text-center md:text-left">LLM<br>Gateway</h1>
             
-            <div class="mt-8 bg-emerald-50/50 border border-emerald-500 p-6 rounded-sm font-mono text-[#10b981]">
+            <div class="mt-8 bg-emerald-50 border border-emerald-200 p-6 rounded-sm font-mono text-2a-emerald">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div class="space-y-1">
                         <div class="flex items-center gap-2">
-                            <span class="text-[9px] bg-emerald-500 text-white px-2 py-0.5 font-bold tracking-widest">VERIFIED SOR</span>
-                            <span class="text-[9px] text-emerald-700 font-bold uppercase tracking-widest">Base Mainnet L2 Anchor Active</span>
+                            <span class="text-[9px] bg-2a-emerald text-white px-2 py-0.5 font-bold tracking-widest">VERIFIED SOR</span>
+                            <span class="text-[9px] text-emerald-800 font-bold uppercase tracking-widest">Base Mainnet L2 Anchor Active</span>
                         </div>
-                        <p class="text-[10px] text-emerald-900/60 leading-relaxed max-w-xl mt-2">
-                            Ce registre est notarisé de manière immuable. Le Root Hash certifie l'intégrité de <strong><span id="anchor-count">...</span> Trust Nodes</strong>.
+                        <p class="text-[10px] text-emerald-900/80 leading-relaxed max-w-xl mt-2">
+                            Ce registre est notarisé de manière immuable. Le Root Hash certifie l'intégrité de <strong><span id="anchor-count">2698</span> Trust Nodes</strong>.
                         </p>
                     </div>
-                    <a id="basescan-link" href="https://basescan.org/tx/0x4b616647ec8ab1366149c9521c1913892a0456bb024cd614b5c94dd6d7bbd880" 
+                    <a href="https://basescan.org/tx/0x4b616647ec8ab1366149c9521c1913892a0456bb024cd614b5c94dd6d7bbd880" 
                        target="_blank" 
-                       class="text-[9px] font-black uppercase tracking-widest bg-emerald-500 text-white px-4 py-3 hover:bg-emerald-600 transition-colors italic">
+                       class="btn-2a text-[9px] font-black uppercase tracking-widest px-4 py-3 italic">
                         View On-Chain Proof
                     </a>
                 </div>
-                <div class="mt-4 pt-4 border-t border-emerald-200 text-[8px] text-emerald-800/40 grid grid-cols-1 md:grid-cols-2 gap-2">
-                    <div id="display-hash">ROOT_HASH: 0x6f75d09afedc92f399dab761d5c078d463fb17c01d9ae61baf95e3e6fb640c91</div>
-                    <div class="md:text-right italic">Registry v1.2.0 | Secured by Base L2</div>
+                <div class="mt-4 pt-4 border-t border-emerald-200 text-[8px] text-emerald-800/60 grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <div>ROOT_HASH: 0x6f75d09afedc92f399dab761d5c078d463fb17c01d9ae61baf95e3e6fb640c91</div>
+                    <div class="md:text-right uppercase tracking-tighter">Registry v1.2.0 | secured by base l2</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12 bg-white text-2a-emerald p-8 rounded-sm border border-gray-100 border-b-4 border-2a-emerald shadow-lg">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-2 h-2 bg-2a-emerald rounded-full animate-pulse"></div>
+                <h3 class="text-[10px] font-black uppercase tracking-[0.4em] italic text-2a-emerald">Independent Integrity Scanner</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <p class="text-[10px] text-emerald-900/70 leading-relaxed uppercase tracking-wider">
+                        Déposez votre fichier <code class="bg-emerald-50 px-1 py-0.5 rounded text-2a-emerald">registry.json</code> pour comparer son empreinte numérique avec le sceau immuable ancré sur Base L2.
+                    </p>
+                    <input type="file" id="fileInput" class="hidden" accept=".json">
+                    <button onclick="document.getElementById('fileInput').click()" 
+                            class="w-full btn-2a py-4 text-[9px] font-black uppercase tracking-[0.2em] italic">
+                        SÉLECTIONNER LE REGISTRE (.JSON)
+                    </button>
+                </div>
+                
+                <div id="verifyResult" class="bg-emerald-50/50 border border-emerald-100 p-6 flex flex-col justify-center items-center text-center rounded-sm">
+                    <div id="statusIcon" class="text-2a-emerald mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <div id="statusText" class="text-[9px] font-mono text-emerald-800/80 uppercase tracking-widest">En attente de fichier...</div>
+                    <div id="hashDisplay" class="text-[7px] font-mono text-2a-emerald mt-2 break-all uppercase max-w-full overflow-hidden opacity-70"></div>
                 </div>
             </div>
         </div>
 
         <div class="search-sticky py-8 mb-8 border-b border-gray-100">
             <input type="text" id="brandSearch" onkeyup="filterAudits()" 
-                   placeholder="SEARCH SYSTEM OF RECORDS..." 
-                   class="w-full bg-gray-50 border border-gray-100 p-6 font-mono text-xs tracking-[0.2em] focus:outline-none focus:border-emerald-500 transition-all uppercase placeholder:opacity-30 text-emerald-900">
+                   placeholder="SEARCH SYSTEM OF RECORDS (2698 ENTITIES)..." 
+                   class="w-full bg-gray-50 border border-gray-100 p-6 font-mono text-xs tracking-[0.2em] focus:outline-none focus:border-2a-emerald transition-all uppercase placeholder:text-emerald-900 placeholder:opacity-20 text-2a-emerald">
         </div>
 
         <div id="audit-container" class="space-y-4 pb-20">
-            <div class="text-center py-20 font-mono text-xs text-emerald-500 animate-pulse uppercase tracking-widest italic">
-                Synchronisation du registre (2,698 nodes)...
+            <div class="text-center py-20 font-mono text-xs text-2a-emerald animate-pulse uppercase tracking-widest italic">
+                Synchronisation des Trust Nodes (2,698)...
             </div>
         </div>
     </main>
@@ -74,20 +115,20 @@
     <footer class="max-w-5xl mx-auto py-12 border-t border-gray-100 opacity-30">
         <div class="font-mono text-[9px] text-gray-400 space-y-2 uppercase tracking-widest">
             <p>🛡️ System Integrity Verified | Registry v1.2.0</p>
+            <p>Last Anchor: 2026-03-18 | 2,698 Unique Nodes Notarized</p>
             <p>© 2A Agency - Infrastructure of Truth for AI Agents</p>
         </div>
     </footer>
 
     <div id="verifyModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md">
-        <div class="bg-white max-w-2xl w-full p-8 border-t-8 border-[#10b981] shadow-2xl relative">
+        <div class="bg-white max-w-2xl w-full p-8 border-t-8 border-2a-emerald shadow-2xl relative">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black font-mono text-[10px] uppercase tracking-widest italic">Close [X]</button>
             <div id="modalContent"></div>
         </div>
     </div>
 
     <script>
-        // ON DEFINIT LE HASH OFFICIEL ICI (C'est la seule chose à changer si tu veux rester 100% manuel, 
-        // mais le compteur de noeuds, lui, est automatique)
+        // CONFIGURATION DYNAMIQUE
         const OFFICIAL_HASH = "6f75d09afedc92f399dab761d5c078d463fb17c01d9ae61baf95e3e6fb640c91";
         const REGISTRY_URL = 'registry.json?v=' + Date.now();
         let currentData = [];
@@ -98,12 +139,12 @@
                 const response = await fetch(REGISTRY_URL);
                 currentData = await response.json();
                 
-                // MISE À JOUR AUTOMATIQUE DU COMPTEUR
+                // MAJ automatique du compteur
                 document.getElementById('anchor-count').textContent = currentData.length.toLocaleString();
                 
                 renderAudits(currentData);
             } catch (err) {
-                container.innerHTML = `<div class="text-center py-20 text-red-500 font-mono text-[10px]">Erreur de chargement.</div>`;
+                container.innerHTML = `<div class="text-center py-20 text-red-500 font-mono text-[10px] uppercase">Erreur de synchronisation du registre.</div>`;
             }
         }
 
@@ -114,12 +155,12 @@
                     <div class="flex-1">
                         <div class="flex items-center gap-2 mb-2">
                             <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em] italic">${item.entity.status || 'VERIFIED'}</span>
-                            <div class="text-[8px] font-black text-[#10b981] tracking-[0.3em] uppercase italic underline">${item.entity.category || 'GENERAL'}</div>
+                            <div class="text-[8px] font-black text-2a-emerald tracking-[0.3em] uppercase italic underline">${item.entity.category || 'GENERAL'}</div>
                         </div>
-                        <h2 class="text-2xl font-bold brand-name tracking-tight uppercase">${item.entity.name}</h2>
+                        <h2 class="text-2xl font-bold text-2a-emerald tracking-tight uppercase">${item.entity.name}</h2>
                         <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60">ID: ${item.sor_id}</div>
                     </div>
-                    <button onclick="openLLMGateway(${index})" class="btn-emerald text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic">Certify for AI</button>
+                    <button onclick="openLLMGateway(${index})" class="btn-2a text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic">Certify for AI</button>
                 </div>
             `).join('');
         }
@@ -135,15 +176,24 @@
         function openLLMGateway(index) {
             const item = currentData[index];
             document.getElementById('modalContent').innerHTML = `
-                <h3 class="font-black text-[10px] tracking-[0.4em] uppercase text-emerald-900 mb-8 italic">Protocol v2.0 Ingestion Active</h3>
-                <div class="bg-zinc-900 p-6 font-mono text-[10px] text-emerald-400 rounded-sm border-l-4 border-[#10b981]">
-                    <pre class="whitespace-pre-wrap">${JSON.stringify(item, null, 2)}</pre>
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-2.5 h-2.5 bg-2a-emerald rounded-full animate-ping"></div>
+                    <h3 class="font-black text-[10px] tracking-[0.4em] uppercase text-2a-emerald mb-8 italic">Protocol v2.0 Ingestion Active</h3>
                 </div>
+                <div class="space-y-4">
+                    <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block">LLM Meta-Directives</label>
+                    <div class="bg-zinc-900 p-6 font-mono text-[10px] text-emerald-400 rounded-sm border-l-4 border-2a-emerald overflow-x-auto">
+                        <pre class="whitespace-pre-wrap">${JSON.stringify(item, null, 2)}</pre>
+                    </div>
+                </div>
+                <button class="w-full btn-2a text-white py-5 text-[10px] font-black uppercase tracking-[0.3em] mt-8 italic">Push to AI Agents</button>
             `;
             document.getElementById('verifyModal').classList.remove('hidden');
         }
 
-        function closeModal() { document.getElementById('verifyModal').classList.add('hidden'); }
+        function closeModal() {
+            document.getElementById('verifyModal').classList.add('hidden');
+        }
 
         window.onload = loadAudits;
     </script>
