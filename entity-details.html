@@ -65,23 +65,20 @@
 
     <script>
         async function loadEntityData() {
-            console.log("🚀 Script d'audit démarré...");
+            console.log("🚀 Audit System Online...");
             const urlParams = new URLSearchParams(window.location.search);
             const entityName = urlParams.get('name');
-            if (!entityName) {
-                console.error("❌ Pas de nom d'entité dans l'URL");
-                return;
-            }
+            if (!entityName) return;
 
             try {
                 const response = await fetch('registry.json?v=' + Date.now());
                 const data = await response.json();
-                console.log("📦 Données JSON récupérées (total) :", data.length);
-
+                
+                // Recherche flexible
                 const entity = data.find(e => e.entity.name.toLowerCase() === entityName.toLowerCase());
 
                 if (entity) {
-                    console.log("✅ Entité trouvée :", entity.entity.name);
+                    console.log("✅ Entity Found:", entity.entity.name);
                     document.getElementById('entity-name').innerText = entity.entity.name;
                     document.getElementById('top-id').innerText = `SOR_ID: ${entity.sor_id}`;
                     document.getElementById('trust-score').innerText = entity.trust.score;
@@ -89,31 +86,39 @@
 
                     // --- 01. AI GATEWAY / LEADERSHIP ---
                     let leaderContent = "";
-                    if (Array.isArray(entity.details?.ai_gateway)) {
-                        leaderContent += entity.details.ai_gateway.map(item => 
+                    
+                    // Priorité AI Gateway (Array)
+                    const aiGateway = entity.details?.ai_gateway || entity.ai_gateway;
+                    if (Array.isArray(aiGateway)) {
+                        leaderContent += aiGateway.map(item => 
                             `<div class="pb-2 border-b border-white/5"><span class="opacity-40 text-[9px]">AI_GATEWAY</span><br><span class="text-white text-[11px] font-bold italic">${item}</span></div>`
                         ).join('');
                     }
-                    if (entity.details?.leadership) {
-                        leaderContent += entity.details.leadership.map(l => 
-                            `<div class="flex justify-between border-b border-white/5 pb-2 pt-2 uppercase"><span class="opacity-40 text-[9px]">OFFICER</span><span class="font-bold text-[10px]">${l}</span></div>`
+
+                    // Ajout Leadership
+                    const leaders = entity.details?.leadership || entity.leadership;
+                    if (Array.isArray(leaders)) {
+                        leaderContent += leaders.map(l => 
+                            `<div class="flex justify-between border-b border-white/5 pb-2 pt-2 uppercase"><span class="opacity-40 text-[9px]">OFFICER</span><span class="font-bold text-[10px] text-right">${l}</span></div>`
                         ).join('');
                     }
                     document.getElementById('leadership-data').innerHTML = leaderContent || "DATA PENDING";
 
                     // --- 02. ONTOLOGY / PRODUCTS ---
+                    const products = entity.details?.products || entity.products;
                     let productContent = "";
-                    if (entity.details?.products) {
-                        productContent = entity.details.products.map(p => 
+                    if (Array.isArray(products)) {
+                        productContent = products.map(p => 
                             `<span class="px-3 py-3 bg-white/5 border border-white/10 uppercase italic text-[10px] text-emerald-100 leading-relaxed">${p}</span>`
                         ).join('');
                     }
                     document.getElementById('product-stack').innerHTML = productContent || "ANALYZING...";
 
                     // --- INSTITUTIONAL CONTEXT ---
+                    const instCtx = entity.details?.institutional_context || entity.institutional_context;
                     let instContent = "";
-                    if (Array.isArray(entity.details?.institutional_context)) {
-                        instContent = entity.details.institutional_context.map(i => 
+                    if (Array.isArray(instCtx)) {
+                        instContent = instCtx.map(i => 
                             `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40 text-[9px]">INFO</span><span class="font-bold text-white uppercase text-[9px] text-right">${i}</span></div>`
                         ).join('');
                     } else {
@@ -122,9 +127,10 @@
                     document.getElementById('licensing-data').innerHTML = instContent;
 
                     // --- GOVERNANCE & NODE ---
+                    const govNode = entity.details?.governance_node || entity.governance_node;
                     let govContent = "";
-                    if (Array.isArray(entity.details?.governance_node)) {
-                        govContent = entity.details.governance_node.map(g => 
+                    if (Array.isArray(govNode)) {
+                        govContent = govNode.map(g => 
                             `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40 text-[9px]">NODE</span><span class="font-bold text-white uppercase text-[9px] text-right">${g}</span></div>`
                         ).join('');
                     } else {
@@ -132,17 +138,10 @@
                     }
                     document.getElementById('capital-data').innerHTML = govContent;
 
-                    // Afficher le body une fois chargé
-                    document.body.style.opacity = 1;
-                } else {
-                    console.error("❌ Entité non trouvée dans le JSON pour :", entityName);
-                    document.getElementById('entity-name').innerText = "ENTITY NOT FOUND";
                     document.body.style.opacity = 1;
                 }
             } catch (err) { 
-                console.error("🚨 ERREUR CRITIQUE :", err);
-                document.getElementById('entity-name').innerText = "FETCH_ERROR";
-                document.body.style.opacity = 1;
+                console.error("🚨 Critical Mapping Error:", err);
             }
         }
         window.onload = loadEntityData;
