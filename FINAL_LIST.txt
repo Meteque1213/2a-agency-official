@@ -4,16 +4,16 @@
 16 Interactive Ltd
 20/20 Business Insight Limited
 21Solutions srl
-29Bison, LLC
+29Bison LLC
 2GoCup
 30Acres
-3DC - Intelligent Nature, Lda
+3DC - Intelligent Nature Lda
 3G Professioneel BVShowing all 10368 B Corps
 50 Partners Gestion
 5th floor Software
 7NXT
 87th Street Creative
-AAFCPAs, Inc.
+AAFCPAs Inc.
 ABER Group Ltd
 ACL
 ADENTRANDO
@@ -49,7 +49,7 @@ Adre
 Advanced Secure Technologies
 Advens
 Adventure And Education Holdings Ltd
-Advocates for Human Potential, Inc.
+Advocates for Human Potential Inc.
 Aerofoil Energy
 Afar LLC
 Agence Cali
@@ -61,10 +61,10 @@ Aizuru
 Akteo
 Alamesa
 Albany HR
-Albet i Noya S.L
+Albet i Noya SL
 Alchemy Bali Group
 Alfa Sea
-Algeiba S.A
+Algeiba SA
 AliKats Mountain Holidays
 Alitex Ltd
 All Things Equitable Inc.
@@ -78,14 +78,14 @@ Amalgama
 Amazônia Agroflorestal
 An-Nahal
 Annahitah
-Anne Shoemaker, LLC
+Anne Shoemaker LLC
 Antilophia
 Anturas Consulting Ltd
-Aodaci, Lda.
+Aodaci Lda.
 Apptitude SA
 Arbikie Distilling Ltd
 Archetype
-Arctic Sea, S.L.
+Arctic Sea SL
 Ardent Pub Group
 Arleigh Holdings Limited T/A Pro-Tech MOT and Automotive Academy
 Armitage Jones
@@ -115,7 +115,7 @@ BOXLESS LTD
 BPA OCUZCA
 BSQ Group
 BWB Technologies
-Baby Gear Group, LLC
+Baby Gear Group LLC
 Back Office Support Solutions Limited t/a Ask The Boss
 Bags of Ethics (Supreme Creations)
 Balance Eco Ltd
@@ -138,7 +138,7 @@ Bespoke Engineering Limited
 Beta Distribution South Ltd T/A Lbox Communications
 Bexley Beaumont Limited
 Big Five Tours and Expeditions Inc
-Big Sea, Inc.
+Big Sea Inc.
 Big Spoon Roasters
 Biobridge Partners ApS
 Biodivér do Brasil Ltda
@@ -158,7 +158,7 @@ Bonduelle EurAsia Markets
 Bonduelle Group
 Bonduelle do Brasil Alimentos
 Bork Horeca Automatisering BV
-Both People & Comms, S.L
+Both People & Comms SL
 Branding Box Ltd
 Bright Humans
 Brunnur Distillery ehf.
@@ -171,7 +171,7 @@ CARE BY ME Aps
 CAXACORI STUDIO
 CGC (Civil Geotechnical Consultants)
 CITYPRIVE PSFP
-CLT ENVIRO-LAW LTD, trading as Ardea International
+CLT ENVIRO-LAW LTD trading as Ardea International
 CO2 Strategy SRL
 COLTUR
 COMERCIALIZADORA MITZ SA DE CV
@@ -181,7 +181,7 @@ Cadí SCCL
 Cafe Fazenda Sertãozinho
 Café Joyeux
 Cafico International
-California Giant, Inc.
+California Giant Inc.
 Canadian Down & Feather Company Inc.
 Canary LLC (Canary Marketing)
 Cantel Computer Services Ltd
@@ -209,7 +209,7 @@ Champagne MAILLY GRAND CRU - Société de Producteurs Mailly-Champagne
 Change Hospitality
 Channing Street Copper Company
 Cheeky Baby Products Ltd
-Cheng Yu Integrated Marketing Co., Ltd.
+Cheng Yu Integrated Marketing Co. Ltd.
 Chimu Adventures Pty Ltd
 Chocolatemakers
 Chrissy's Kitchen Ltd
@@ -238,12 +238,12 @@ Con Impacto Consulting
 Connection Crew CIC
 Consensus Aps
 Consultora Liquen
-Continuity Wealth Management, Corp.
+Continuity Wealth Management Corp.
 Conveyortek
 Coo-Mon Accessoires et Cultures
 Cool Running Events
 Cool Ventures Ltd
-Coordonné Brands, S.L.U.
+Coordonné Brands SLU
 Core Impact
 Corferias
 Cornflower Limited
@@ -261,9 +261,9 @@ Cyan Partners
 Cycloo Suisse Sàrl
 Cyd Innovation
 Cytoplan Ltd
-D&D International B.V.
+D&D International BV
 DC Grafica sa
-DEOKHWAFOOD CO.,LTD.
+DEOKHWAFOOD CO.LTD.
 DJH Holding Group Limited
 DJS Research
 DLRC Ltd
@@ -272,7 +272,7 @@ DRAGON COLOMBIA SAS
 DSG
 DUNDER MIFFLIN PAPER COMPANY SL
 DUX Company SA
-Dalero B.V.
+Dalero BV
 Danai Ltd t/a Navigate Travel
 Danerolles / Magioni
 Danone Group
@@ -281,7 +281,7 @@ Dark Blue Pig Ltd
 De Groene Artisanen BV
 Deansgate and Co Investments Ltd - trading name JLES Group Ltd
 Decoboco-Base Inc.
-DefineX Consulting, Technology, Labs
+DefineX Consulting Technology Labs
 Deiron Srl Società Benefit
 Delegatus services juridiques inc.
 Deli Home
@@ -291,17 +291,17 @@ Delve DMD Ltd. T/A Sinch
 Dendron
 Desi Daru Ltd
 Design Pool Limited dba Native Union
-Dialectic, Inc.
+Dialectic Inc.
 Digital Garden
 DigitalLandSolutions Ltd
 Dinner Ladies
 Dinosaur Season Unip
 Direct Tyre Management
-Doloris International B.V.
+Doloris International BV
 Doorman
 Dovetail IT Support Limited
 Dovetail Social Enterprises
-Dr. Vranjes Firenze S.p.A.
+Dr. Vranjes Firenze SpA
 DrDoctor
 Drab to Fab LLC
 Dstnct Group Limited
@@ -311,7 +311,7 @@ ESTEVE
 ETAM SCE (Groupe Etam)
 EVEREST
 EXP Journeys
-Earth Mart Co., LTD.
+Earth Mart Co. LTD.
 Earth Positive Wealth Ltd
 EarthWize Group PTY LTD
 East Crema Coffee SL
@@ -324,10 +324,10 @@ Ecovis Wingrave Yeats LLP
 Ecoworks
 Eddy Aesthetic
 Effective Hospitality Management Ltd.
-Eittor S.A.
+Eittor SA
 Eldora SA
 Electrical Waste Recycling Group Ltd (Waste Experts)
-Electromotion S.A.C.
+Electromotion SAC
 Elephant Box Stainless Steel Limited
 Elevate Everywhere
 Eleven
@@ -348,16 +348,16 @@ Estudio Contexto
 Eteria Limited
 Eureka srl
 European Raid Arrays Ltd
-Evermore Pet Food, Inc.
+Evermore Pet Food Inc.
 Every Bit Counts
 Extract Coffee Roasters Ltd
 Ezee Group International Ltd
-FABA S.r.l.
+FABA Srl.
 FERMOIE
 FERN
 FN Fresh Ltd. / Rosy Farms
-FOOD SOLUTIONS S.A.
-FREE TIME GEAR INTERNATIONAL CO., LTD.
+FOOD SOLUTIONS SA
+FREE TIME GEAR INTERNATIONAL CO. LTD.
 FUTUN: FamilienUnternehmerTUN GmbH
 Fab Glass and Mirror LLC
 Factory Family Group Ltd
@@ -387,20 +387,20 @@ Freckl
 French Revolution
 Fresh Ground Films Limited
 Frontify AG
-Fruytier Lawyers in Business B.V.
+Fruytier Lawyers in Business BV
 Full Circle Labs Ltd
 Fuzzy Insurance Limited
-GABRIEL POVEDA FERRIOLS, S.L. (POVEDA TEXTIL)
+GABRIEL POVEDA FERRIOLS SL (POVEDA TEXTIL)
 GAU Catering
 GENFIT
-GL SOFT CO., LTD.
+GL SOFT CO. LTD.
 GLP Training Ltd
 GMA Creative Firm
 GOOFF
 GPSS Holdings Inc.
 GREEN HUG-INDUSTRIES
 GREENWORKING
-GRENDI HOLDING S.P.A. SOCIETA' BENEFIT
+GRENDI HOLDING SPA SOCIETA' BENEFIT
 GRØD
 GROUPE JARNIAS
 GROUPE MAISON VILLEVERT - SAINT VINCENT
@@ -409,10 +409,10 @@ GSE
 Gaia Srl Società Benefit
 Galileo Media Lab
 Gardin Quadri Srl Società Benefit
-Gas N2itrogen S.L.
+Gas N2itrogen SL
 Gegan Environmental Management Ltd
-Giffy B.V.
-Gifted Breads, LLC
+Giffy BV
+Gifted Breads LLC
 Giftpoint Ltd
 GladTeknik A/S
 Glengarth Medical Limited trading as CaramoCare
@@ -450,7 +450,7 @@ Gurbtec Iguana Telecom
 H Porter & Sons
 HAVEP
 HEGO Nearshore Services LLC dba Virtue Ally
-HERALBONY Co., Ltd.
+HERALBONY Co. Ltd.
 HERBIOTECH AROMA
 HIVED
 HUGGYS
@@ -467,7 +467,7 @@ Haymarket Media Group
 Headwaters Law
 HealthBegins
 Hearth Sustainability
-Hefei Leaf Biotech CO.,LTD
+Hefei Leaf Biotech CO.LTD
 Heng Hiap Industries Sdn Bhd
 Herdade da Malhadinha Nova
 Here's The Plan Ltd
@@ -476,12 +476,12 @@ Herman Vaessen BV
 Hi Boop! Inc
 Hillier Hopkins LLP
 Hingston & Co Ltd
-Hippocrates Holding S.p.A.
+Hippocrates Holding SpA
 Hive IT Ltd
 Horace
 House Collective
-Huangshan Qiyue Ecological Agriculture Co., Ltd.
-Human Capital Innovations, LLC
+Huangshan Qiyue Ecological Agriculture Co. Ltd.
+Human Capital Innovations LLC
 Humanise Services Partagés
 Huntaway Wild Limited
 Huntsmill Group Ltd.
@@ -491,16 +491,16 @@ ILP Strategy Ltd
 INFRA (Independent Natural Food Retailers Association)
 INSIDE STUDIO SAS
 ITRIM Japan
-IVV Asset Management B.V.
+IVV Asset Management BV
 Ignition
-Ijsbaart B.V.
+Ijsbaart BV
 Il Mannarino SB Srl
 Illuminate Technology
 Immersion Montessori School LLC
 Impact Explorers
 Impact Pathways Inc.
 Impact Productions T/A GoodChat
-ImpactGC, LLP
+ImpactGC LLP
 Impronta Advertising Srl BENEFIT
 Incenteev
 Indicium Dynamics
@@ -516,7 +516,7 @@ Install Creative Ltd t/a Etch Creative
 Institute for Sensible Transport
 Integral Advisory
 Intellegend Martech Ltd. Co.
-Intradecon (International Trade Cargo & Contract Consultancy S.A.S. - BIC)
+Intradecon (International Trade Cargo & Contract Consultancy SAS - BIC)
 Isola Catania Impresa Sociale srl
 Itec Training Solutions Ltd
 ItemPath Inc.
@@ -553,7 +553,7 @@ Kinrise
 Kip Hideaways LTD
 Kipinä Software
 Kitchen Bath Ventures SL
-Koffiebranderij J.W. Hesselink & Zn BV
+Koffiebranderij JW Hesselink & Zn BV
 Kolet
 Kontechs Limited
 Kost Capital
@@ -568,12 +568,12 @@ LEGADO SPA- WINGA
 LIVE IT GROUP
 LS SCIENTIFIC LIMITED
 LTV Group Ltd
-L´HEURA, Centre Especial de Treball S.L.
+L´HEURA Centre Especial de Treball SL
 La Compagnie Grain de Sail
 Laboratori Fabrici Srl
-Laboratorios Phergal, S.A.
+Laboratorios Phergal SA
 Lakes Bathrooms Limited
-Laveen B.V.
+Laveen BV
 Lavender flow limited
 Le Chic Miami LLC
 Leading Hand Design
@@ -589,7 +589,7 @@ Lewis Digital Ltd
 Lexsynergy Limited
 Libro.fm
 Light Eagle AG
-Lima Compost S.A.C.
+Lima Compost SAC
 Linnas Design Inc.
 Lion Pty Ltd
 Little Dot Studios
@@ -652,24 +652,24 @@ McCarthy Denning
 McWilliam Bags
 MediaMixer
 Medico Digital
-Melómano, Inc.
+Melómano Inc.
 Meninx AG
 Met Foods LTD
 Meta Compliance Ltd
-MiYO ORGANIC. Inc
+MiYO ORGANIC Inc
 Milestone Creative Ltd
-Milgro Groep B.V.
+Milgro Groep BV
 Mindsight LLC
 Mitiga Solutions
 Mobilityways
 Mobyan
-Mocoffee Europe, S.A.
+Mocoffee Europe SA
 Mondottica International Limited
 MonguiFoods SAPI de CV
 Montpellier Legal
 Morning Marvels
 Motability Operations Group Plc
-Motif Group Co., Ltd
+Motif Group Co. Ltd
 Mountain Goodness Natural Foods Inc.
 Mountain iT BV
 Moxie Bread Co.
@@ -681,8 +681,8 @@ Myel design inc
 NAI Elliott
 NUTRIEARTH
 Nadi Marketing LLC
-Naeco Group, S.A.
-Nakagawa Masashichi Shoten Co.,Ltd.
+Naeco Group SA
+Nakagawa Masashichi Shoten Co.Ltd.
 Naked Bakes
 Nala's Baby
 Nancybird Pty Ltd
@@ -695,7 +695,7 @@ Natural Pet Food Group Limited
 Nature's Way of Canada
 Naty
 Neal Jones Furniture Ltd
-NegaWatt Consulting, Inc.
+NegaWatt Consulting Inc.
 Nelson Jam
 Net Zero Foods
 Nets Printwork Sdn Bhd
@@ -703,10 +703,10 @@ Neutral.com A/S
 New Vegas
 Nicki Hoyne
 Nine Dean LLC
-Ningbo Liangyuan Packaging Solution Technology Co.,Ltd.
+Ningbo Liangyuan Packaging Solution Technology Co.Ltd.
 Nobody's Child
 Nocla A/S
-Norday B.V.
+Norday BV
 North Melbourne Football Club
 Northern Monk Brew Co. Ltd
 Novelteak Costa Rica
@@ -733,7 +733,7 @@ Oraije
 Organic Zoo Ltd
 Orion
 OryxAlign Limited
-OurWorlds, Inc.
+OurWorlds Inc.
 OuterEdit
 Outpatch LLC
 Over The Top Promotions
@@ -749,12 +749,12 @@ PLANET B
 PLMR
 PLUS HAUT
 PM+M Solutions for Business LLP
-POLO CLUB EUROPE S.L.
+POLO CLUB EUROPE SL
 PRC Architecture and Planning
 PRODUCTOS SAN CAMILO
 PRORIL PUMPS CORPORATION
 PT Forestwise Wild Keepers
-PUNTOCOM RENT S.A.C. - LEASEIN
+PUNTOCOM RENT SAC - LEASEIN
 Packington Free Range
 Pallets Nef
 Pangea Search Partners Limited
@@ -789,7 +789,7 @@ Postlethwaite Solicitors Limited
 Powered by People Corp.
 Practipol Ltd
 Précon Consulting Group BV
-Prelove You, Inc.
+Prelove You Inc.
 Print & Pack LLC
 Pro Enviro
 ProTalent Ltd
@@ -797,7 +797,7 @@ Profil M Beratung für Human Resources Management GmbH & Co. KG
 Project36 Limited
 Projets21
 Proof Agency BV
-Proyectos Extraordinarios s.l.
+Proyectos Extraordinarios sl.
 Pryme Solutions LLC.
 Pudel SB srl
 Pulitzer Hotels
@@ -806,8 +806,8 @@ Purely Energy Ltd
 Purpose Capital
 Q's&Co.
 QFactorial
-QSA S.r.l. - Engineering Consulting Training Società Benefit
-QTELECOM CO., LTD.
+QSA Srl - Engineering Consulting Training Società Benefit
+QTELECOM CO. LTD.
 QUBIZ.team
 Qeet Holding BV
 Qtac
@@ -821,7 +821,7 @@ ROUGE Collective Pte Ltd
 RTC North Ltd
 RW Stokes and Sons
 Randall and Payne
-ReTraze Co., Ltd.
+ReTraze Co. Ltd.
 Real Thread
 Recognition Industries Ltd
 Reconstructed Industries Pty Ltd
@@ -841,15 +841,15 @@ Revel Architecture & Design
 Revino Inc.
 Revive Active
 Revolution Software Development Ltd
-Revoolt Smart Solutions S.L.
+Revoolt Smart Solutions SL
 Ridgewel
 Riksja Travel
 Roast Group Ltd
 Roger Pradier
 Rooftop Republic Co. Limited
-Rose Code, Inc.
+Rose Code Inc.
 Rotorflush Filters Ltd
-Royal Vriesco B.V. | A House of Happiness
+Royal Vriesco BV | A House of Happiness
 Ruadh
 Rubtec
 Ruohonjuuri Oy
@@ -859,10 +859,10 @@ SARL Domaine Pasquet
 SCA VIGNOBLE DE LA VOIE d'HERACLES
 SDG Align Pty Ltd
 SEA FOREST LIMITED
-SEA K ORGANICS, LLC
+SEA K ORGANICS LLC
 SEA Water
 SECONDE VUE
-SEVEN S.p.A.
+SEVEN SpA
 SILVERSQUARE
 SISTERLY
 SKILLS FOR IMPACT SL.
@@ -870,10 +870,10 @@ SMARTSIDE
 SPASE Ltd
 SR Mailing
 STELAR London Limited
-STOX B.V.
+STOX BV
 STUDIO FSR
 STUDIO/gather
-Safety21 S.p.A.
+Safety21 SpA
 Salinas de La Concepcio SL
 Salon Freyja
 Salud Integral SW
@@ -899,7 +899,7 @@ Shipping Protection Ship Services
 Shootme Visual Artists
 Showing all 10368 B Corps
 Sia Habitat
-Siegen S.A.
+Siegen SA
 Signature
 Silentnight Group Limited
 Silverbean
@@ -943,29 +943,29 @@ Studio Masscob SL
 Studio Quirico s.r.l.
 Studio Unthink Limited
 Study & Stay
-Suenn Liang Electric. Co, Ltd.
+Suenn Liang Electric. Co Ltd.
 Sunpath Solar
-Suntchi (Shanghai) Brand & Technology Co., Ltd.
+Suntchi (Shanghai) Brand & Technology Co. Ltd.
 Supported Living Services Ltd
 Surmesur
 Sustainability 360
 Sustainment Technologies Inc
-Swile S.A.S.
+Swile SAS
 Swish Cocktails Ltd
 Swiss Luxra Holding AG
 Synergy Distribution Limited
 Syntech Biofuel Ltd
 Synthology
 System Engineering Group Ltd
-TAAS Sustainable Design Consulting Co., Ltd.
+TAAS Sustainable Design Consulting Co. Ltd.
 TASTE
 TAXUS MEDIO AMBIENTE
 TEGO
 TEO GARMENTS CORPORATION PTE LTD
-THE Co.,Ltd.
+THE Co.Ltd.
 THEY VISUALIZE VALUE
 THIS IS BP
-TIFF Advisory Services, LLC
+TIFF Advisory Services LLC
 TLG London Limited
 TTM Healthcare
 TVNET
@@ -978,12 +978,12 @@ Talent Hive
 Tang
 Taste of Nature Foods Inc.
 Technos
-Tecnosan S.r.l. Società Benefit
+Tecnosan Srl Società Benefit
 Telford Studio LLC
 Tempo Colombia
 Terminal B Intl LLC
 Tewke
-Textil de los Andes S.A.
+Textil de los Andes SA
 The AMBITIOUS Consultancy Limited (AMBITIOUS)
 The Blueberry Hill
 The Bluff Distillery Ltd
@@ -1024,7 +1024,7 @@ Tilefield Limited
 Tilting the Lens
 Titan One Inc.
 Tivarri Limited
-Toad & Co. International, Inc.
+Toad & Co. International Inc.
 Tomorrow Theory
 Tonic Communications
 Town Square Agency Pty Ltd
@@ -1035,32 +1035,32 @@ Transition Global Management Limited
 Treadlite
 TreeStory Limited
 TrendingTea BV
-True Botanicals, Inc
+True Botanicals Inc
 Tsao Family Office
 Tuggs
-Tunturi New Fitness B.V.
+Tunturi New Fitness BV
 Turien & Co. Holding
 Turley Associates Ltd
 Tvaru Kvadratu | Application
 Two Degrees Studio
-TwynstraGudde Holding B.V.
+TwynstraGudde Holding BV
 Tyk Technologies
 U S 2 Inc
 UMAGE Group ApS
 UNLESS Financial
 UNNI Corporation
-UPDATER,INC.
+UPDATERINC.
 Uluu
 UmoParis
-Underwear Innovations B.V.
+Underwear Innovations BV
 Uniontel
 United Heroes
-Unlock Mobile Agency B.V.
-Up & Over Advisors, LLC
+Unlock Mobile Agency BV
+Up & Over Advisors LLC
 Upside Creative Solutions
 Urban Front Ltd
-Urbano Express Argentina S.A.
-Us Media B.V.
+Urbano Express Argentina SA
+Us Media BV
 VARM
 VO Group
 VOYA
@@ -1070,13 +1070,13 @@ Van Hunks
 Vapoura Ltd
 Vault 23 t/a LEVEL Workspace
 Vela Venture Yard Limited T/a Double Puc Cafe
-Velor B.V.
+Velor BV
 Vélosophy
 Via ID
 Vicengreen
 Vigifinance Family Office
 Virena
-Virtualware 2007 S.A.
+Virtualware 2007 SA
 Visión y Acción
 Vitara
 Vitasoy North America Inc.
@@ -1089,7 +1089,7 @@ Vonmählen GmbH
 Voro
 VoucherCodes
 W4G Fire and Security
-WAKUWORK ENGLISH,INC.
+WAKUWORK ENGLISHINC.
 WASTESPRESSO
 WEPURPLE GROUP Pte Ltd
 WHOLSUM FOODS PRIVATE LIMITED
@@ -1101,26 +1101,26 @@ Waste to Worth Latam
 Wavehill Ltd
 Ways Out Limited
 Webtrends Optimize
-Wegter Grootverbruik B.V.
+Wegter Grootverbruik BV
 WellBox
 Welsh Coffee Co ltd
 West Bromwich Building Society
 What's Possible Marketing Group Limited
 Widen the Net Limited
 Widgit Software Ltd
-Wigwam Creative Inc., DBA Tekwani Design Co.
+Wigwam Creative Inc. DBA Tekwani Design Co.
 Wild Thang Ltd
 Wilderness Motorhomes Ltd.
 William Aitken & Co
 William Wallace Group
 Windles Group
 Winter Design Ltd
-Wipala S.A.S
+Wipala SAS
 Wise Investments Ltd
 With Grace Skin Management Pty Ltd
 Wizardz Consulting
 Wiztrust
-Wm Croxson & Son, Limited
+Wm Croxson & Son Limited
 Wondersphere Ltd
 Woods Foodservice Ltd
 Work With Island
@@ -1129,23 +1129,23 @@ YIN Fine Jewelry
 YOURGB EVENTS LTD
 Yamanokujira Inc.
 Yard B Ltd
-YareSafo Hair, LLC (DBA Safo Hair)
+YareSafo Hair LLC (DBA Safo Hair)
 Yealand Fund Services Limited
 Yello Strom GmbH
 Yellow Fish Event Management Ltd
 Yellowstone Capital Partners
 Yepoda GmbH
 Yi Design Company Limited
-Yinoo Industrial Shanghai Co.,Ltd
+Yinoo Industrial Shanghai Co.Ltd
 Yoke
 Your Audience Ltd
 Your Digital Future
-Your Very Best, LLC
+Your Very Best LLC
 Yugen
 Yugen Design Group
 Zechstein Minerals
 Zentive Agency
-Ziezodan B.V.
+Ziezodan BV
 bas&is
 bcause GmbH
 be/impact
@@ -1158,7 +1158,7 @@ i-team Global
 iCT4 Limited
 iSprout
 lemlem
-morning after cutting my hair, Inc.
+morning after cutting my hair Inc.
 nivo
 planet-a-mor
 salon concepts
@@ -1166,11 +1166,405 @@ schultearchitekten gmbh
 sterling quality services ltd (SQS)
 subbyx srl società benefit
 the marc boutin architectural collaborative inc.
-ugo, Inc.
+ugo Inc.
 viviid coaching Ltd.
 xFarm Technologies SA
-東莞宏佳宜紡織有限公司
-上海材见信息科技有限公司
-北京企彩信息科技有限公司
-四川还原文化传播有限公司
-广州大树管理咨询有限公司
+Ferrari
+Lamborghini
+Porsche
+Bentley
+Bugatti
+Aston Martin
+Maserati
+Rolls-Royce
+McLaren
+Pagani
+Lotus
+Lucid Motors
+Rivian
+Polestar
+Rimac Automobili
+VinFast
+BYD
+NIO
+XPeng
+Zeekr
+Fisker
+Canoo
+Faraday Future
+Lordstown Motors
+Arrival
+Hyliion
+Nikola Motor
+Proterra
+Lion Electric
+Workhorse
+Hyzon Motors
+QuantumScape
+Solid Power
+SES AI
+Factorial Energy
+Our Next Energy
+StoreDot
+Sila Nanotechnologies
+Group14 Technologies
+Redwood Materials
+Li-Cycle
+Ascend Elements
+Northvolt
+Verkor
+Northvolt
+Italvolt
+Britishvolt
+ACC (Automotive Cells Co)
+Freyr Battery
+Morrow Batteries
+Blue Solutions
+Saft
+CATL
+LG Energy Solution
+SK On
+Samsung SDI
+Panasonic Energy
+Envision AESC
+Gotion High-tech
+EVE Energy
+SVOLT
+CALB
+Farasis Energy
+Sunwoda
+Huawei Cloud
+Tencent Cloud
+Baidu AI Cloud
+Alibaba Cloud
+Scaleway
+Hetzner
+Linode
+Vultr
+Okta
+Splunk
+Datadog
+Dynatrace
+New Relic
+AppDynamics
+Elastic
+HashiCorp
+Confluent
+MongoDB
+Databricks
+Teradata
+C3.ai
+Upstart
+SoFi
+Avalanche
+Cardano
+Polkadot
+Cosmos
+Near Protocol
+Algorand
+Hedera
+Aptos
+Sui
+Sei Network
+Celestia
+Monad
+Berachain
+Pendle
+Lido Finance
+Rocket Pool
+Frax Finance
+Synthetix
+GMX
+dYdX
+Jupiter
+Raydium
+Orca
+Drift Protocol
+Magic Eden
+OpenSea
+Blur
+LooksRare
+Rarible
+SuperRare
+Art Blocks
+Yuga Labs
+Proof Collective
+Moonbirds
+Pudgy Penguins
+Azuki
+DeGods
+Doodles
+Cool Cats
+World of Women
+Meebits
+CloneX
+Veve
+Sorare
+Axie Infinity
+Decentraland
+The Sandbox
+Illuvium
+Star Atlas
+Parallel
+Shrapnel
+Offchain Labs
+Matter Labs
+Scroll
+Polygon Labs
+StarkWare
+Ava Labs
+Solana Labs
+Parity Technologies
+Interchain Foundation
+Aptos Labs
+Mysten Labs
+Offchain Labs
+Espresso Systems
+RISC Zero
+Succinct Labs
+Polyhedra Network
+LayerZero
+Wormhole
+Axelar
+Pyth Network
+Stargate Finance
+PancakeSwap
+SushiSwap
+Balancer
+Bancor
+1inch
+Cow Swap
+Agoric
+Akash Network
+Ankr
+Arweave
+Filecoin
+Storj
+Helium
+Livepeer
+Render Network
+Bittensor
+Fetch.ai
+SingularityNET
+Ocean Protocol
+Numerai
+Golem
+IOTA
+Theta Network
+Audius
+StepN
+Sweatcoin
+Chiliz
+Socios.com
+Flow
+Immutable
+Enjin
+Gala Games
+Forte
+Mythical Games
+Animoca Brands
+Dapper Labs
+Sky Mavis
+Electronic Arts
+Ubisoft
+Take-Two Interactive
+Activision Blizzard
+Nintendo
+Sony Interactive Entertainment
+Microsoft Gaming
+Sega
+Capcom
+Bandai Namco
+Square Enix
+Konami
+NetEase
+miHoYo
+Krafton
+NCSoft
+Nexon
+Unity
+Epic Games
+Valve
+Discord
+Twitch
+Patreon
+Substack
+Medium
+Ghost
+Beehiiv
+Mirror
+Lens Protocol
+Farcaster
+Bluesky
+Mastodon
+Nostr
+Damus
+Amethyst
+Snort
+Iris
+Coracle
+Primal
+Zap.stream
+Mutiny Wallet
+Phoenix Wallet
+Breez
+Zeus
+Alby
+Strike
+River
+Swan Bitcoin
+Unchained
+Casa
+Voltage
+Start9
+Umbrel
+Embassy
+RaspiBlitz
+MyNode
+RoninD
+Specter
+Sparrow Wallet
+BlueWallet
+Electrum
+Wasabi Wallet
+Samourai Wallet
+Jade
+Coldcard
+Keystone
+BitBox
+Foundation Devices
+Passport
+Blockstream
+Core
+Lightning Labs
+Spiral
+TBD
+Jack Dorsey
+Michael Saylor
+MicroStrategy
+Marathon Digital
+Riot Platforms
+CleanSpark
+Hive Digital
+Hut 8
+Cipher Mining
+Terawulf
+Bitdeer
+Canaan
+Bitmain
+MicroBT
+Canaan Creative
+Foundry
+Core Scientific
+Argo Blockchain
+Northern Data
+Iris Energy
+Soluna Computing
+Applied Digital
+Crusoe Energy
+Vespene Energy
+Upstream Data
+Great American Mining
+Nakamoto Portfolio
+Galaxy Digital
+NYDIG
+Fidelity Digital Assets
+Bakkt
+ErisX
+Bitstamp
+Gemini
+BitPanda
+Revolut
+Monzo
+N26
+Starling Bank
+Chime
+NuBank
+Brex
+Ramp
+Mercury
+Rho
+Arc
+Airwallex
+Wise
+Remitly
+WorldRemit
+Western Union
+MoneyGram
+PayPal
+Venmo
+Cash App
+Zelle
+Stripe
+Adyen
+Checkout.com
+Marqeta
+Plaid
+Tink
+Truelayer
+Yapily
+Volt
+GoCardless
+Afterpay
+Zilch
+Scalapay
+Tabby
+Pine Labs
+Razorpay
+Cred
+PhonePe
+BharatPe
+Paytm
+Ant Group
+Grab
+GoTo
+Sea Group
+Shopee
+Lazada
+Tokopedia
+Bukalapak
+Traveloka
+Akulaku
+J&T Express
+Ninja Van
+Flash Express
+Kerry Express
+Blue Dart
+Delhivery
+Shadowfax
+XpressBees
+Shiprocket
+Pickrr
+Ecom Express
+SafeXpress
+Gati
+TCI Express
+V-Xpress
+Rivigo
+BlackBuck
+Porter
+Dunzo
+Swiggy
+Zomato
+Zepto
+Blinkit
+Instamart
+BigBasket
+JioMart
+Tata Neu
+Amazon India
+Flipkart
+Myntra
+Nykaa
+FirstCry
+Ajio
+Meesho
+Pepperfry
+Urban Ladder
+Livspace
+Homelane
+Wakefit
+Sleepycat
+Flo Mattress
+Sunday Mattress
+Sleepyhead
