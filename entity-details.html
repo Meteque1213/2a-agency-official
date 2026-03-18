@@ -64,61 +64,37 @@
     </main>
 
     <script>
-        async function loadEntityData() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const entityName = urlParams.get('name');
+       async function loadEntityData() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const entityName = urlParams.get('name');
+    
+    try {
+        const response = await fetch('registry.json?v=' + Date.now());
+        const data = await response.json();
+        const entity = data.find(e => e.entity.name.toUpperCase() === entityName.toUpperCase());
+
+        if (entity) {
+            // Remplissage forcé
+            document.getElementById('entity-name').innerText = entity.entity.name;
+            document.getElementById('trust-score').innerText = entity.trust.score;
+
+            // Debug Leadership/Statement
+            const leaderContent = entity.ai_gateway?.statement || entity.details?.leadership?.[0] || "Non trouvé";
+            document.getElementById('leadership-data').innerText = leaderContent;
+
+            // Debug Products/Ontology
+            const productContent = entity.ai_gateway?.ontology?.reporting || entity.details?.products?.[0] || "Non trouvé";
+            document.getElementById('product-stack').innerText = productContent;
+
+            // Hash
+            document.getElementById('verification-root').innerText = "Hash: " + (entity.proof?.hash || "N/A");
             
-            try {
-                // Utilisation du cache-buster ?t= pour forcer la mise à jour
-                const response = await fetch('registry.json?t=' + Date.now());
-                const data = await response.json();
-                const entity = data.find(e => e.entity.name.toLowerCase() === entityName.toLowerCase());
-
-                if (entity) {
-                    document.getElementById('entity-name').innerText = entity.entity.name;
-                    document.getElementById('top-id').innerText = `SOR_ID: ${entity.sor_id}`;
-                    document.getElementById('trust-score').innerText = entity.trust.score;
-                    document.getElementById('verification-root').innerText = `Verification Root: ${entity.proof.hash}`;
-
-                    // --- 01. AI GATEWAY STATEMENT ---
-                    document.getElementById('ai-statement-data').innerHTML = `
-                        <div class="flex flex-col gap-3 pb-2 uppercase italic text-white">
-                            <span class="opacity-40 text-[9px] tracking-widest">Main Statement</span>
-                            <span class="font-bold leading-relaxed">${entity.ai_gateway?.statement || 'N/A'}</span>
-                            <span class="opacity-40 text-[9px] tracking-widest mt-4">Character Guard</span>
-                            <span class="text-[10px] opacity-80">${entity.ai_gateway?.character_guard || 'N/A'}</span>
-                        </div>
-                    `;
-
-                    // --- 02. ONTOLOGY (Reporting & Governance) ---
-                    document.getElementById('ontology-data').innerHTML = `
-                        <div class="p-4 bg-white/5 border border-white/10 uppercase italic">
-                            <span class="opacity-40 block mb-2 text-[8px]">Ontology Reporting</span>
-                            <span class="text-emerald-400 font-bold">${entity.ai_gateway?.ontology?.reporting || 'N/A'}</span>
-                        </div>
-                        <div class="p-4 bg-white/5 border border-white/10 uppercase italic">
-                            <span class="opacity-40 block mb-2 text-[8px]">Governance Protocol</span>
-                            <span class="text-emerald-400 font-bold">${entity.ai_gateway?.ontology?.governance || 'N/A'}</span>
-                        </div>
-                    `;
-
-                    // --- SECTOR ---
-                    document.getElementById('sector-data').innerHTML = `
-                        <div class="flex justify-between border-b border-white/5 pb-2 uppercase"><span class="opacity-40">Sector</span><span class="font-bold">${entity.entity.sector || 'N/A'}</span></div>
-                        <div class="flex justify-between border-b border-white/5 pb-2 mt-4 uppercase"><span class="opacity-40">ERC8004 ID</span><span class="font-bold text-[10px]">${entity.entity.erc8004_id || 'N/A'}</span></div>
-                    `;
-
-                    // --- NODE DETAILS ---
-                    document.getElementById('node-data').innerHTML = `
-                        <div class="flex justify-between border-b border-white/5 pb-2 uppercase"><span class="opacity-40">Active Node</span><span class="font-bold text-emerald-500">${entity.trust.node || 'N/A'}</span></div>
-                        <div class="flex justify-between border-b border-white/5 pb-2 mt-4 uppercase"><span class="opacity-40">Ledger Status</span><span class="font-bold">${entity.trust.status || 'STABLE'}</span></div>
-                        <div class="flex justify-between border-b border-white/5 pb-2 mt-4 uppercase"><span class="opacity-40">TTL (Validity)</span><span class="font-bold">${entity.trust.ttl || 'N/A'}</span></div>
-                    `;
-
-                    document.body.style.opacity = 1;
-                }
-            } catch (err) { console.error("Critical: Data mismatch or fetch error", err); }
+            document.body.style.opacity = 1;
         }
+    } catch (err) {
+        alert("Erreur JSON : " + err.message);
+    }
+}
         window.onload = loadEntityData;
     </script>
 </body>
