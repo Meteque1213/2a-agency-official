@@ -37,64 +37,96 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div class="bg-2a-dark border border-white/10 p-8 border-glow">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-8 text-emerald-400 italic">01. AI Gateway Statement</h3>
-                <div id="ai-statement-data" class="space-y-5 mono text-[11px]"></div>
+                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-8 text-emerald-400 italic">01. AI Gateway / Leadership</h3>
+                <div id="leadership-data" class="space-y-5 mono text-[11px]"></div>
             </div>
             <div class="bg-2a-dark border border-white/10 p-8 border-glow">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400 italic">02. Entity Ontology</h3>
-                <div id="ontology-data" class="flex flex-col gap-3 text-white font-bold text-[10px]"></div>
+                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400 italic">02. Ontology / Product Stack</h3>
+                <div id="product-stack" class="flex flex-col gap-2 mb-6 text-white uppercase font-bold text-[9px]"></div>
             </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-white">
             <div class="bg-2a-dark border border-emerald-500/30 p-8 italic">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Institutional Sector</h3>
-                <div id="sector-data" class="space-y-4 mono text-[11px]"></div>
+                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Institutional Context</h3>
+                <div id="licensing-data" class="space-y-4 mono text-[11px]"></div>
             </div>
             <div class="bg-2a-dark border border-emerald-500/30 p-8 italic">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Node Configuration</h3>
-                <div id="node-data" class="space-y-4 mono text-[11px]"></div>
+                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Governance & Node</h3>
+                <div id="capital-data" class="space-y-4 mono text-[11px]"></div>
             </div>
         </div>
 
         <div class="bg-emerald-950/20 border border-emerald-500/20 p-8 mb-12">
             <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-6 text-2a-emerald">Cryptographic Proof (ERC-8004)</h4>
-            <div id="verification-root" class="mono text-[10px] opacity-40 italic underline mb-4 break-all">Verification Root: LOADING...</div>
+            <div id="proof-hash" class="mono text-[10px] opacity-40 italic underline mb-4 break-all leading-relaxed">Verification Root: LOADING...</div>
         </div>
     </main>
 
     <script>
-       async function loadEntityData() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const entityName = urlParams.get('name');
-    
-    try {
-        const response = await fetch('registry.json?v=' + Date.now());
-        const data = await response.json();
-        const entity = data.find(e => e.entity.name.toUpperCase() === entityName.toUpperCase());
+        async function loadEntityData() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const entityName = urlParams.get('name');
+            if (!entityName) return;
 
-        if (entity) {
-            // Remplissage forcé
-            document.getElementById('entity-name').innerText = entity.entity.name;
-            document.getElementById('trust-score').innerText = entity.trust.score;
+            try {
+                // Ajout d'un cache-buster pour forcer la lecture du dernier JSON
+                const response = await fetch('registry.json?v=' + Date.now());
+                const data = await response.json();
+                
+                // Recherche flexible (insensible à la casse)
+                const entity = data.find(e => e.entity.name.toLowerCase() === entityName.toLowerCase());
 
-            // Debug Leadership/Statement
-            const leaderContent = entity.ai_gateway?.statement || entity.details?.leadership?.[0] || "Non trouvé";
-            document.getElementById('leadership-data').innerText = leaderContent;
+                if (entity) {
+                    document.getElementById('entity-name').innerText = entity.entity.name;
+                    document.getElementById('top-id').innerText = `SOR_ID: ${entity.sor_id}`;
+                    document.getElementById('trust-score').innerText = entity.trust.score;
+                    document.getElementById('proof-hash').innerText = `Verification Root: ${entity.proof?.hash || 'N/A'}`;
 
-            // Debug Products/Ontology
-            const productContent = entity.ai_gateway?.ontology?.reporting || entity.details?.products?.[0] || "Non trouvé";
-            document.getElementById('product-stack').innerText = productContent;
+                    // --- 01. LEADERSHIP / STATEMENT ---
+                    // On prend soit le nouveau format ai_gateway, soit l'ancien details.leadership
+                    let leaderContent = "";
+                    if (entity.ai_gateway?.statement) {
+                        leaderContent = `<div class="pb-2 border-b border-white/5"><span class="opacity-40 text-[9px]">STATEMENT</span><br><span class="text-white text-[12px] font-bold italic">${entity.ai_gateway.statement}</span></div>`;
+                        if (entity.ai_gateway.character_guard) {
+                            leaderContent += `<div class="pt-2"><span class="opacity-40 text-[9px]">GUARD</span><br><span class="text-[10px] lowercase text-white/80">${entity.ai_gateway.character_guard}</span></div>`;
+                        }
+                    } else if (entity.details?.leadership) {
+                        leaderContent = entity.details.leadership.map(l => `<div class="flex justify-between border-b border-white/5 pb-2 uppercase"><span class="opacity-40">OFFICER</span><span class="font-bold">${l}</span></div>`).join('');
+                    }
+                    document.getElementById('leadership-data').innerHTML = leaderContent || "DATA PENDING";
 
-            // Hash
-            document.getElementById('verification-root').innerText = "Hash: " + (entity.proof?.hash || "N/A");
-            
-            document.body.style.opacity = 1;
+                    // --- 02. ONTOLOGY / PRODUCTS ---
+                    let productContent = "";
+                    if (entity.ai_gateway?.ontology) {
+                        productContent = `
+                            <div class="p-3 bg-white/5 border border-white/10 italic mb-2"><span class="opacity-40 text-[8px]">REPORTING</span><br><span class="text-emerald-400">${entity.ai_gateway.ontology.reporting}</span></div>
+                            <div class="p-3 bg-white/5 border border-white/10 italic"><span class="opacity-40 text-[8px]">GOVERNANCE</span><br><span class="text-emerald-400">${entity.ai_gateway.ontology.governance}</span></div>
+                        `;
+                    } else if (entity.details?.products) {
+                        productContent = entity.details.products.map(p => `<span class="px-2 py-2 bg-white/5 border border-white/10 uppercase italic text-[10px] text-emerald-100">${p}</span>`).join('');
+                    }
+                    document.getElementById('product-stack').innerHTML = productContent || "ANALYZING...";
+
+                    // --- INSTITUTIONAL / SECTOR ---
+                    document.getElementById('licensing-data').innerHTML = `
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">SECTOR</span><span class="font-bold text-white uppercase">${entity.entity.sector || entity.entity.category || 'N/A'}</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2 mt-4"><span class="opacity-40">NODE_ID</span><span class="font-bold text-white uppercase">${entity.trust.node || 'N/A'}</span></div>
+                    `;
+
+                    // --- GOVERNANCE / STATUS ---
+                    document.getElementById('capital-data').innerHTML = `
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">STATUS</span><span class="font-bold text-white uppercase">${entity.trust.status || 'STABLE'}</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2 mt-4"><span class="opacity-40">VALIDITY (TTL)</span><span class="font-bold text-white uppercase">${entity.trust.ttl || 'N/A'}</span></div>
+                    `;
+
+                    document.body.style.opacity = 1;
+                }
+            } catch (err) { 
+                console.error("Critical: Data mismatch", err);
+                document.getElementById('entity-name').innerText = "FETCH_ERROR";
+            }
         }
-    } catch (err) {
-        alert("Erreur JSON : " + err.message);
-    }
-}
         window.onload = loadEntityData;
     </script>
 </body>
