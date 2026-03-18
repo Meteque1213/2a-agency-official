@@ -1,19 +1,19 @@
 # ==========================================
-# 2A AGENCY | SYSTEM OF RECORD ROBOTS.TXT
+# 2A AGENCY | SYSTEM OF RECORD | V1.2.0
 # ==========================================
 
 User-agent: *
 Allow: /
-Allow: /registry.html
-Allow: /database.js
-Allow: /MEMO_DNVB_001_BONJOUR_PRIME.txt
-Allow: /MEMO_DNVB_004_OLIPOP.txt
+Allow: /registry.json
+Allow: /audits.html
+Allow: /audits/
+Allow: /.well-known/ai-plugin.json
 
-Sitemap: https://www.2aagency.com/sitemap.xml
+# --- AI AGENTS ACCESS (THE GATEWAY) ---
 
-# Autorisation spécifique pour les agents IA (LLM Crawlers)
 User-agent: GPTBot
 Allow: /
+Allow: /registry.json
 
 User-agent: ChatGPT-User
 Allow: /
@@ -23,20 +23,17 @@ Allow: /
 
 User-agent: ClaudeBot
 Allow: /
+Allow: /registry.json
 
 User-agent: Google-Extended
 Allow: /
 
-# Forcer l'indexation de la base de données brute
-User-agent: *
-Allow: /registry.json
-Allow: /audits.html
-
-# Crawler spécifique pour l'analyse sémantique
 User-agent: OAI-SearchBot
 Allow: /
 
-# Lien vers ton plan de site pour une indexation rapide
-# ... (le reste du fichier)
+# --- SITEMAP INDEXATION ---
 Sitemap: https://www.2aagency.com/sitemap.xml
-Sitemap: https://meteque1213.github.io/2a-agency-official/sitemap.xml
+
+# ==========================================
+# END OF SYSTEM OF RECORD PROTOCOL
+# ==========================================
