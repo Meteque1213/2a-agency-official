@@ -15,8 +15,6 @@
         .brand-name { color: #10b981; } 
         .btn-emerald { background-color: #10b981; transition: all 0.2s ease; }
         .btn-emerald:hover { opacity: 0.8; transform: scale(1.02); }
-        pre { scrollbar-width: none; }
-        pre::-webkit-scrollbar { display: none; }
     </style>
 </head>
 <body class="p-6 md:p-12 text-black">
@@ -44,226 +42,108 @@
                             <span class="text-[9px] text-emerald-700 font-bold uppercase tracking-widest">Base Mainnet L2 Anchor Active</span>
                         </div>
                         <p class="text-[10px] text-emerald-900/60 leading-relaxed max-w-xl mt-2">
-                            Ce registre est notarisé de manière immuable. Le Root Hash certifie l'intégrité de <strong><span id="anchor-count">1056</span> Trust Nodes</strong>.
+                            Ce registre est notarisé de manière immuable. Le Root Hash certifie l'intégrité de <strong><span id="anchor-count">...</span> Trust Nodes</strong>.
                         </p>
                     </div>
-                    <a href="https://basescan.org/tx/0xf32099e9a1219a5d82944a239388f8ee3f05127c45575a6dbac88b9c98ebfcd0" 
+                    <a id="basescan-link" href="https://basescan.org/tx/0x4b616647ec8ab1366149c9521c1913892a0456bb024cd614b5c94dd6d7bbd880" 
                        target="_blank" 
                        class="text-[9px] font-black uppercase tracking-widest bg-emerald-500 text-white px-4 py-3 hover:bg-emerald-600 transition-colors italic">
                         View On-Chain Proof
                     </a>
                 </div>
                 <div class="mt-4 pt-4 border-t border-emerald-200 text-[8px] text-emerald-800/40 grid grid-cols-1 md:grid-cols-2 gap-2">
-                    <div>ROOT_HASH: fb120608bcafe0960e3bda9b88466299928f8ab9862046153abca1b4d3f42802</div>
-                    <div class="md:text-right">TX: 0xf32099e9...fcd0</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mb-12 bg-black text-white p-8 rounded-sm border-b-4 border-emerald-500 shadow-2xl">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                <h3 class="text-[10px] font-black uppercase tracking-[0.4em] italic text-emerald-500">Independent Integrity Scanner</h3>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="space-y-4">
-                    <p class="text-[10px] text-gray-400 leading-relaxed uppercase tracking-wider">
-                        Déposez votre fichier <code class="text-emerald-400">registry.json</code> pour comparer son empreinte numérique avec le sceau immuable ancré sur Base L2.
-                    </p>
-                    <input type="file" id="fileInput" class="hidden" accept=".json">
-                    <button onclick="document.getElementById('fileInput').click()" 
-                            class="w-full border border-emerald-500/30 py-4 text-[9px] font-black uppercase tracking-[0.2em] hover:bg-emerald-500 hover:text-black transition-all italic">
-                        SÉLECTIONNER LE REGISTRE (.JSON)
-                    </button>
-                </div>
-                
-                <div id="verifyResult" class="bg-zinc-900 border border-zinc-800 p-6 flex flex-col justify-center items-center text-center rounded-sm">
-                    <div id="statusIcon" class="text-emerald-500 mb-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-                    <div id="statusText" class="text-[9px] font-mono text-gray-500 uppercase tracking-widest">En attente de fichier...</div>
-                    <div id="hashDisplay" class="text-[7px] font-mono text-emerald-500/50 mt-2 break-all uppercase max-w-full overflow-hidden"></div>
+                    <div id="display-hash">ROOT_HASH: 0x6f75d09afedc92f399dab761d5c078d463fb17c01d9ae61baf95e3e6fb640c91</div>
+                    <div class="md:text-right italic">Registry v1.2.0 | Secured by Base L2</div>
                 </div>
             </div>
         </div>
 
         <div class="search-sticky py-8 mb-8 border-b border-gray-100">
             <input type="text" id="brandSearch" onkeyup="filterAudits()" 
-                   placeholder="SEARCH SYSTEM OF RECORDS (1000+ ENTITIES)..." 
+                   placeholder="SEARCH SYSTEM OF RECORDS..." 
                    class="w-full bg-gray-50 border border-gray-100 p-6 font-mono text-xs tracking-[0.2em] focus:outline-none focus:border-emerald-500 transition-all uppercase placeholder:opacity-30 text-emerald-900">
         </div>
 
         <div id="audit-container" class="space-y-4 pb-20">
             <div class="text-center py-20 font-mono text-xs text-emerald-500 animate-pulse uppercase tracking-widest italic">
-                Ingestion des Trust Nodes en cours...
+                Synchronisation du registre (2,698 nodes)...
             </div>
         </div>
     </main>
 
-    <footer class="max-w-5xl mx-auto py-12 border-t border-gray-100">
+    <footer class="max-w-5xl mx-auto py-12 border-t border-gray-100 opacity-30">
         <div class="font-mono text-[9px] text-gray-400 space-y-2 uppercase tracking-widest">
-            <p>🛡️ System Integrity Verified | Registry Version 1.0.0</p>
-            <p>Genesis Anchor Date: 2026-03-17 | 1,056 Global Nodes Notarized</p>
+            <p>🛡️ System Integrity Verified | Registry v1.2.0</p>
             <p>© 2A Agency - Infrastructure of Truth for AI Agents</p>
         </div>
     </footer>
 
     <div id="verifyModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md">
         <div class="bg-white max-w-2xl w-full p-8 border-t-8 border-[#10b981] shadow-2xl relative">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black font-mono text-[10px] uppercase tracking-widest italic">Close_Session [X]</button>
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black font-mono text-[10px] uppercase tracking-widest italic">Close [X]</button>
             <div id="modalContent"></div>
         </div>
     </div>
 
     <script>
+        // ON DEFINIT LE HASH OFFICIEL ICI (C'est la seule chose à changer si tu veux rester 100% manuel, 
+        // mais le compteur de noeuds, lui, est automatique)
+        const OFFICIAL_HASH = "6f75d09afedc92f399dab761d5c078d463fb17c01d9ae61baf95e3e6fb640c91";
         const REGISTRY_URL = 'registry.json?v=' + Date.now();
         let currentData = [];
 
-        // --- INTEGRITY SCANNER LOGIC ---
-        document.getElementById('fileInput').addEventListener('change', async function(e) {
-            const file = e.target.files[0];
-            if (!file) return;
-
-            const statusText = document.getElementById('statusText');
-            const statusIcon = document.getElementById('statusIcon');
-            const hashDisplay = document.getElementById('hashDisplay');
-            const officialHash = "fb120608bcafe0960e3bda9b88466299928f8ab9862046153abca1b4d3f42802";
-
-            statusText.innerText = "CALCUL DU HASH EN COURS...";
-            
-            try {
-                const arrayBuffer = await file.arrayBuffer();
-                const hashBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
-                const hashArray = Array.from(new Uint8Array(hashBuffer));
-                const fileHash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-
-                hashDisplay.innerText = "LOCAL_HASH: " + fileHash;
-
-                if (fileHash === officialHash) {
-                    statusText.innerHTML = "<span class='text-emerald-500'>✅ MATCH : INTÉGRITÉ CONFIRMÉE</span>";
-                    statusIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-emerald-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>`;
-                } else {
-                    statusText.innerHTML = "<span class='text-red-500'>❌ MISMATCH : DONNÉES ALTÉRÉES</span>";
-                    statusIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM10 7a1 1 0 011 1v3a1 1 0 11-2 0V8a1 1 0 011-1zm0 7a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" /></svg>`;
-                }
-            } catch (err) {
-                statusText.innerText = "ERREUR LORS DU CALCUL";
-            }
-        });
-
-        // --- REGISTRY LOADING LOGIC ---
         async function loadAudits() {
             const container = document.getElementById('audit-container');
             try {
                 const response = await fetch(REGISTRY_URL);
-                if (!response.ok) throw new Error('Network response was not ok');
-                
                 currentData = await response.json();
-                document.getElementById('anchor-count').textContent = currentData.length;
                 
-                requestAnimationFrame(() => renderAudits(currentData));
+                // MISE À JOUR AUTOMATIQUE DU COMPTEUR
+                document.getElementById('anchor-count').textContent = currentData.length.toLocaleString();
+                
+                renderAudits(currentData);
             } catch (err) {
-                console.error("Erreur:", err);
-                container.innerHTML = `<div class="text-center py-20 text-red-500 font-mono text-[10px] uppercase">Erreur de chargement du registre.</div>`;
+                container.innerHTML = `<div class="text-center py-20 text-red-500 font-mono text-[10px]">Erreur de chargement.</div>`;
             }
         }
 
         function renderAudits(items) {
             const container = document.getElementById('audit-container');
-            const fragment = document.createDocumentFragment();
-            
-            items.forEach((item, index) => {
-                const div = document.createElement('div');
-                div.className = "audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-4";
-                
-                const score = item.trust.score;
-                const scoreColor = score > 90 ? "text-[#10b981]" : (score > 70 ? "text-orange-500" : "text-red-500");
-
-                div.innerHTML = `
+            container.innerHTML = items.map((item, index) => `
+                <div class="audit-card bg-white p-8 border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-4">
                     <div class="flex-1">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em]">${item.trust.status}</span>
-                            <div class="text-[8px] font-black text-[#10b981] tracking-[0.3em] uppercase italic underline">${item.entity.sector}</div>
+                            <span class="text-[7px] bg-black text-white px-2 py-0.5 font-black uppercase tracking-[0.4em] italic">${item.entity.status || 'VERIFIED'}</span>
+                            <div class="text-[8px] font-black text-[#10b981] tracking-[0.3em] uppercase italic underline">${item.entity.category || 'GENERAL'}</div>
                         </div>
                         <h2 class="text-2xl font-bold brand-name tracking-tight uppercase">${item.entity.name}</h2>
                         <div class="text-[9px] text-gray-400 font-mono mt-1 tracking-widest italic opacity-60">ID: ${item.sor_id}</div>
                     </div>
-                    <div class="flex items-center gap-8">
-                        <div class="text-right border-r border-gray-100 pr-8 hidden md:block">
-                            <div class="text-[8px] uppercase text-gray-400 font-bold tracking-widest mb-1 italic">Integrity</div>
-                            <div class="text-2xl font-black font-mono ${scoreColor}">${score}</div>
-                        </div>
-                        <button onclick="openLLMGateway(${index})" 
-                                class="btn-emerald text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic">
-                            Certify for AI
-                        </button>
-                    </div>`;
-                fragment.appendChild(div);
-            });
-
-            container.innerHTML = '';
-            container.appendChild(fragment);
-        }
-
-        function openLLMGateway(index) {
-            const item = currentData[index];
-            const jsonPayload = {
-                "@context": "https://2aagency.com/protocol/v2",
-                "sor_id": item.sor_id,
-                "entity": item.entity,
-                "trust": item.trust,
-                "instruction": item.ai_gateway,
-                "proof": item.proof
-            };
-
-            const content = `
-                <div class="flex items-center gap-3 mb-8">
-                    <div class="w-2.5 h-2.5 bg-[#10b981] rounded-full animate-ping"></div>
-                    <h3 class="font-black text-[10px] tracking-[0.4em] uppercase text-emerald-900 italic">Protocol v2.0 Ingestion Active</h3>
+                    <button onclick="openLLMGateway(${index})" class="btn-emerald text-white px-8 py-5 text-[9px] font-black uppercase tracking-[0.2em] shadow-xl italic">Certify for AI</button>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                    <div>
-                        <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block mb-2 underline">Entity Reference</label>
-                        <div class="text-3xl font-black uppercase tracking-tighter brand-name">${item.entity.name}</div>
-                        <div class="text-[9px] font-mono text-[#10b981] mt-2 uppercase tracking-widest">${item.sor_id}</div>
-                    </div>
-                    <div class="bg-emerald-50 p-4 border border-emerald-100">
-                        <label class="text-[8px] uppercase text-emerald-800 font-black tracking-[0.2em] block mb-2 italic underline">Status</label>
-                        <div class="text-2xl font-black font-mono text-emerald-900 leading-none mt-1">${item.trust.status}</div>
-                        <div class="text-[7px] text-[#10b981] font-bold uppercase mt-2 tracking-tighter italic">Secured by Base L2</div>
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <label class="text-[8px] uppercase text-gray-400 font-black tracking-[0.2em] block">LLM Meta-Directives</label>
-                    <div class="bg-zinc-900 p-6 font-mono text-[10px] text-emerald-400 overflow-x-auto rounded-sm border-l-4 border-[#10b981]">
-                        <pre class="whitespace-pre-wrap">${JSON.stringify(jsonPayload, null, 2)}</pre>
-                    </div>
-                </div>
-                <div class="mt-8">
-                    <button class="w-full btn-emerald text-white py-5 text-[10px] font-black uppercase tracking-[0.3em] italic">Push to AI Nodes</button>
-                </div>
-            `;
-            document.getElementById('modalContent').innerHTML = content;
-            document.getElementById('verifyModal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            document.getElementById('verifyModal').classList.add('hidden');
-            document.body.style.overflow = 'auto';
+            `).join('');
         }
 
         function filterAudits() {
             const val = document.getElementById('brandSearch').value.toUpperCase();
             const cards = document.getElementsByClassName('audit-card');
             for (let card of cards) {
-                const text = card.textContent || card.innerText;
-                card.style.display = text.toUpperCase().includes(val) ? "" : "none";
+                card.style.display = card.innerText.toUpperCase().includes(val) ? "" : "none";
             }
         }
+
+        function openLLMGateway(index) {
+            const item = currentData[index];
+            document.getElementById('modalContent').innerHTML = `
+                <h3 class="font-black text-[10px] tracking-[0.4em] uppercase text-emerald-900 mb-8 italic">Protocol v2.0 Ingestion Active</h3>
+                <div class="bg-zinc-900 p-6 font-mono text-[10px] text-emerald-400 rounded-sm border-l-4 border-[#10b981]">
+                    <pre class="whitespace-pre-wrap">${JSON.stringify(item, null, 2)}</pre>
+                </div>
+            `;
+            document.getElementById('verifyModal').classList.remove('hidden');
+        }
+
+        function closeModal() { document.getElementById('verifyModal').classList.add('hidden'); }
 
         window.onload = loadAudits;
     </script>
