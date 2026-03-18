@@ -10,6 +10,7 @@
         body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
         .text-2a-emerald { color: #064e3b; }
+        .bg-2a-emerald { background-color: #064e3b; }
         .border-2a-emerald { border-color: #064e3b; }
     </style>
 </head>
@@ -20,7 +21,7 @@
         <div class="flex gap-8 text-[10px] uppercase tracking-widest font-bold">
             <a href="index.html" class="opacity-40 hover:opacity-100 transition-opacity">Index</a>
             <a href="audits.html" class="opacity-40 hover:opacity-100 transition-opacity">Audits</a>
-            <a href="whitepaper.html" class="opacity-40 hover:opacity-100 transition-opacity">Protocol</a>
+            <a href="whitepaper.html" class="text-2a-emerald font-bold underline underline-offset-4 italic">Protocol</a>
         </div>
     </nav>
 
@@ -31,7 +32,7 @@
             "In an era where Artificial Intelligence hallucinations redefine reality, truth must be <span class="underline decoration-1 underline-offset-8">anchored in cryptography</span>."
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left border-t border-gray-100 pt-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left border-t border-gray-100 pt-16 mb-20">
             <div>
                 <h3 class="text-[10px] font-black uppercase tracking-widest mb-4 text-2a-emerald">01. Immutable</h3>
                 <p class="text-[12px] opacity-70 leading-relaxed font-medium">No brand metadata should be subject to statistical drift. Truth is binary, not probabilistic. We anchor facts to prevent AI decay.</p>
@@ -45,13 +46,30 @@
                 <p class="text-[12px] opacity-70 leading-relaxed font-medium">Our 2,698 unique certified nodes act as a global anchor, forcing LLMs to ground their outputs in verified, notarized, and bit-exact metadata.</p>
             </div>
         </div>
+
+        <div class="w-full max-w-2xl border-t border-gray-100 pt-12 text-center md:text-left">
+            <h4 class="text-[8px] font-black uppercase tracking-[0.4em] mb-6 text-2a-emerald italic">Official Protocol Update</h4>
+            <div class="bg-emerald-50/50 p-8 border-l-4 border-2a-emerald flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="space-y-1">
+                    <p class="text-[10px] font-mono leading-relaxed text-emerald-900 uppercase tracking-tighter">
+                        Milestone 2698 : Anchoring the Truth on Base L2.
+                    </p>
+                    <p class="text-[8px] opacity-50 uppercase tracking-widest">Published via Paragraph.xyz | March 18, 2026</p>
+                </div>
+                <a href="https://paragraph.com/@alexandre@2aagency.com/anchoring-the-truth-2a-agency-scales-to-2698-forensic-trust-nodes-on-base-l2" 
+                   target="_blank" 
+                   class="text-[9px] font-black uppercase tracking-widest bg-2a-emerald text-white px-6 py-3 hover:bg-black transition-all italic shadow-lg">
+                   Read Brief →
+                </a>
+            </div>
+        </div>
     </main>
 
     <footer class="mt-auto w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center opacity-40 pt-8 pb-8 border-t border-gray-100 gap-4">
         <p class="text-[8px] font-bold uppercase tracking-widest italic text-2a-emerald">System of Record | Registry v1.2.0 Certified</p>
         
         <a href="https://basescan.org/tx/0x4b616647ec8ab1366149c9521c1913892a0456bb024cd614b5c94dd6d7bbd880" target="_blank" class="text-[7px] font-mono tracking-tighter hover:text-2a-emerald transition-colors flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="w-2 h-2 rounded-full bg-[#064e3b] animate-pulse"></span>
             ROOT HASH: 0x6f75d09afedc92f399dab761d5c078d463fb17c01d9ae61baf95e3e6fb640c91
         </a>
 
