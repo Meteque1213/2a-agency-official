@@ -13,7 +13,7 @@ https://2a-agency-official.vercel.app/api/chanel/index.txt
 https://2a-agency-official.vercel.app/api/van-cleef-arpels/index.txt
 https://2a-agency-official.vercel.app/api/schiaparelli/index.txt
 https://2a-agency-official.vercel.app/api/piaget/index.txt
-https://2a-agency-official.vercel.app/api/dior/index.txt
+https://2a-agency-official.vercel.app/api/christian-dior/index.txt
 https://2a-agency-official.vercel.app/api/breguet/index.txt
 https://2a-agency-official.vercel.app/api/comme-des-garons/index.txt
 https://2a-agency-official.vercel.app/api/jaeger-lecoultre/index.txt
