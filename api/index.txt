@@ -1,7 +1,7 @@
 {
   "api_version": "1.2",
   "protocol": "2A-SoR-v2.1",
-  "last_update": "2026-03-19T13:56:41.310Z",
+  "last_update": "2026-03-19T13:58:18.900Z",
   "status": "OPERATIONAL",
   "total_entities": 2697,
   "endpoints": {
