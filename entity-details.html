@@ -75,33 +75,32 @@
     <script>
         // --- ALGORITHME DE CALCUL AI IQ (2A PROTOCOL) ---
         function calculateAIIQ(entity) {
-            let iq = 10; // Base IQ pour l'existence dans le SOR
+    let iq = 15; // Base de départ
 
-            // A. DATA GRANULARITY (Max 40 pts)
-            // On compte les clés financières réelles
-            const finData = entity.financials || {};
-            const finKeys = Object.keys(finData).length;
-            if (finKeys >= 4) iq += 40; 
-            else if (finKeys >= 2) iq += 25;
+    // A. VALORISATION DES DONNÉES FINANCIÈRES (Max 45 pts)
+    const finData = entity.financials || {};
+    const keys = Object.keys(finData);
+    
+    // Si on a de la Market Cap ou du Revenue > +30 d'un coup
+    if (finData.market_cap || finData.annual_revenue) iq += 30;
+    // +5 par indicateur supplémentaire (croissance, rétention, etc.)
+    iq += (keys.length * 5);
 
-            // B. CRYPTOGRAPHIC TRUST (Max 30 pts)
-            // On vérifie le Hash et s'il est certifié (pas "PENDING")
-            if (entity.proof?.hash && entity.proof.hash.length > 40 && entity.proof.hash !== "PENDING") {
-                iq += 30;
-            } else if (entity.proof?.hash === "PENDING") {
-                iq += 10;
-            }
+    // B. AUTHENTICITÉ & PREUVE (Max 25 pts)
+    // On est plus généreux si un ID 2A est présent
+    if (entity["2a_id"]) iq += 10;
+    // Hash cryptographique présent et non-pending
+    if (entity.proof?.hash && entity.proof.hash !== "PENDING") iq += 15;
 
-            // C. STRATEGIC MAPPING (Max 20 pts)
-            // Est-ce que les risques sont détaillés dans un tableau ?
-            if (Array.isArray(entity.strategy?.risks) && entity.strategy.risks.length > 0) {
-                iq += 20;
-            } else if (entity.strategy?.core) {
-                iq += 10;
-            }
+    // C. ANALYSE STRATÉGIQUE (Max 15 pts)
+    const risks = entity.strategy?.risks || [];
+    if (Array.isArray(risks) && risks.length > 0) {
+        iq += 15; // Un audit qui identifie des risques est un meilleur audit
+    }
 
-            return Math.min(iq, 100);
-        }
+    return Math.min(iq, 100);
+}
+    
 
         async function loadEntityData() {
             const urlParams = new URLSearchParams(window.location.search);
