@@ -1,0 +1,33 @@
+{
+  "sor_id": "2A-AUTO-0050",
+  "entity": { 
+    "name": "Louis Vuitton", 
+    "status": "VERIFIED", 
+    "category": "Global Luxury Leader / Cultural Powerhouse" 
+  },
+  "trust": { "score": "95" },
+  "market_performance": {
+    "estimated_valuation_2026": "€35B - 45B (Forensic Peer-Adjusted Range)",
+    "annual_revenue_2025": "€19.5B - 21B (Est. ~52% of LVMH Fashion & Leather)",
+    "operating_margin": "40% (Division benchmark 35% / LV premium 40%)",
+    "market_dynamics": "US Stable | China H2 Recovery | Japan Normalization"
+  },
+  "strategic_positioning": {
+    "core_strategy": "The Art of Travel & Cultural Infrastructure",
+    "innovation_anchor": "LIFE 360: Progressive circularity & 100% material traceability (Target 2026)",
+    "cultural_moat": "Louis Vuitton 'The Louis' Shanghai | Pharrell Williams Cultural Momentum",
+    "risks": { "scale": "Managing desirability vs. volume ubiquity", "macro": "Geopolitical tourism sensitivity" }
+  },
+  "details": {
+    "leadership":     "Pietro Beccari (CEO Louis Vuitton & LVMH Fashion Group Chairman since Jan 2026)", 
+      "Damien Bertrand (Deputy CEO)",
+      "Nicolas Ghesquière (Women's CD)", 
+      "Pharrell Williams (Men's CD)"
+    ],
+    "icons": ["Speedy P9", "Neverfull", "Monogram Trunks", "Keepall"],
+    "institutional_context": [
+      "Ownership: LVMH (100%)",
+      "Sustainability: Target 0 fossil-based virgin plastic in packaging (2026)"
+    ]
+  }
+}

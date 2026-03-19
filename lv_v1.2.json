@@ -1,0 +1,100 @@
+{
+  "2a_protocol": "v1.2",
+  "2a_id": "2A-LUX-LV-0001",
+  "metadata": {
+    "as_of": "2026-03-19",
+    "version": "1.2.9",
+    "llm_readiness_score": 0.99,
+    "fx_rate_reference": "EUR/USD_2025_AVG"
+  },
+  "entity": {
+    "name": "Louis Vuitton",
+    "category": "Global Luxury Leader",
+    "verified": true,
+    "ownership": [
+      {
+        "entity": "LVMH Group",
+        "stake": "100%",
+        "type": "reported",
+        "since": "1987-06"
+      }
+    ]
+  },
+  "financials": {
+    "annual_revenue": {
+      "value": 20.2,
+      "currency": "EUR_B",
+      "type": "estimated",
+      "methodology": "2A_forensic_model_v1",
+      "confidence": 0.92,
+      "source_ref": "LVMH_FY25_Consensus_Mix"
+    },
+    "historical_range": {
+      "min": 19.5,
+      "max": 21.0,
+      "currency": "EUR_B",
+      "type": "estimated",
+      "confidence": 0.90
+    },
+    "operating_margin": {
+      "value": 0.40,
+      "type": "estimated",
+      "benchmark": "Division_Avg_35%",
+      "confidence": 0.88
+    }
+  },
+  "events": [
+    {
+      "year": 2023,
+      "type": "leadership_shift",
+      "description": "Pietro Beccari CEO & Pharrell Williams Men's CD appointments",
+      "impact": "cultural_acceleration"
+    },
+    {
+      "year": 2026,
+      "type": "restructuring",
+      "description": "Pietro Beccari appointed LVMH Fashion Group Chairman (Jan 2026)",
+      "impact": "strategic_centralization"
+    }
+  ],
+  "cultural_intelligence": {
+    "brand_heat_index": {
+      "value": 96,
+      "type": "estimated",
+      "methodology": "2A_multi_factor_index",
+      "confidence": 0.95
+    },
+    "cultural_moat": {
+      "type": "narrative",
+      "value": "Art of Travel; global cultural infrastructure via 'The Louis' Shanghai and Pharrell momentum",
+      "confidence": 0.98
+    }
+  },
+  "strategy": {
+    "core": {
+      "type": "narrative",
+      "value": "Managing desirability vs. ubiquity; extreme retail control",
+      "confidence": 0.96
+    },
+    "risks": [
+      { "type": "reported", "value": "Aspirational middle-class fatigue (US/EU)", "confidence": 0.92 },
+      { "type": "inferred", "value": "Logo saturation in mature digital markets", "confidence": 0.85 }
+    ]
+  },
+  "governance": {
+    "ceo": { "name": "Pietro Beccari", "since": "2023", "verified": true },
+    "deputy_ceo": { "name": "Damien Bertrand", "since": "2025", "verified": true },
+    "creative_directors": [
+      { "name": "Nicolas Ghesquière", "role": "Women", "since": "2013" },
+      { "name": "Pharrell Williams", "role": "Men", "since": "2023" }
+    ]
+  },
+  "proof": {
+    "confidence_score": 0.96,
+    "verification": "multi-source_triangulation",
+    "sources": [
+      { "name": "LVMH Financial Disclosures FY25", "type": "public_filing", "reliability": 1.0 },
+      { "name": "HSBC Luxury Sector Review", "type": "institutional", "reliability": 0.94 }
+    ]
+  }
+}
