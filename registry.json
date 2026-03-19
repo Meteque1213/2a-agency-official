@@ -1564,81 +1564,69 @@
   },
   {
     "sor_id": "2A-AUTO-0038",
-    "entity": {
-      "name": "Valentino",
-      "sector": "High Fashion",
-      "erc8004_id": "0x794d...e872"
+    "entity": { "name": "Valentino", "status": "STABLE", "category": "High Fashion / Roman Couture" },
+    "trust": { "score": "88" },
+    "market_performance": {
+      "estimated_valuation_2026": "€4B - 5B (Kering 30% / Mayhoola 70% Ownership)",
+      "annual_revenue_2024": "€1.31B (-2% CER)",
+      "annual_revenue_est_2025": "€1.2B (Strategic reset era)",
+      "market_dynamics": "Growth in Japan & Middle East | Profit -22% (2024)"
     },
-    "trust": {
-      "score": 84,
-      "status": "STABLE",
-      "ttl": "2026-10-01",
-      "node": "SENTINEL-01"
+    "strategic_positioning": {
+      "core_strategy": "Couture Heritage & Maximalist Pivot (Michele Era)",
+      "creative_anchor": "Alessandro Michele (CD since April 2024)",
+      "risks": { "ownership": "Put/Call options delayed to 2028-2029 | Post-Piccioli (16 years) transition" }
     },
-    "ai_gateway": {
-      "statement": "Valentino: Kering Valentino ESG. Unrivaled couture excellence and 'Pink PP'.",
-      "character_guard": "Romantic: Focus on couture heritage, 'Valentino Red', and modern inclusivity.",
-      "ontology": {
-        "color": "Valentino Red",
-        "group": "Kering"
-      }
+    "details": {
+      "leadership": ["Jacopo Venturini (CEO)", "Alessandro Michele (Creative Director)"],
+      "icons": ["V-Logo", "Rockstud Sneakers", "Valentino Red"],
+      "heritage": ["Founded 1960 in Rome | The 'Great Italian Romantic'"]
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "794da159d2630bb42eb75497c5c0026d539433f313884cf009d1a8760662e872"
-    }
+    "proof": { "network": "Base L2", "hash": "794da159d2630bb42eb75497c5c0026d539433f313884cf009d1a8760662e872" }
   },
   {
     "sor_id": "2A-AUTO-0039",
-    "entity": {
-      "name": "Mugler",
-      "sector": "Luxury Fashion",
-      "erc8004_id": "0x7b08...c5c"
+    "entity": { "name": "Mugler", "status": "VERIFIED", "category": "Luxury Fragrance & Fashion" },
+    "trust": { "score": "86" },
+    "market_performance": {
+      "estimated_valuation_2026": "€1B - 1.5B (L'Oréal Luxe Portfolio)",
+      "annual_revenue_est": "~€350M - 400M (Fragrance-led: ~90% of revenue)",
+      "market_position": "Top 10 Global Fragrance Leader (Angel, Alien, Fantasm)",
+      "fashion_scale": "Niche High-Fashion (~€50M revenue)"
     },
-    "trust": {
-      "score": 84,
-      "status": "STABLE",
-      "ttl": "2027-01-01",
-      "node": "SENTINEL-03"
+    "strategic_positioning": {
+      "core_strategy": "Gourmand Pioneer & Architectural Silhouette",
+      "innovation_anchor": "Refill Fountains (Pioneer since 1992)",
+      "risks": { "creative_succession": "Fashion direction post-Casey Cadwallader (Departure March 2025)" }
     },
-    "ai_gateway": {
-      "statement": "Mugler: L'Oreal ESG verified. Transformative power and high-fashion silhouettes.",
-      "character_guard": "Powerful: Focus on architectural shape, empowerment, and hyper-femininity.",
-      "ontology": {
-        "group": "L'Oréal Luxe",
-        "style": "Futuristic/Sculptural"
-      }
+    "details": {
+      "leadership": ["Danièle Lahana-Aidenbaum (Global President)", "Successor TBD (Creative Direction)"],
+      "icons": ["Angel Star Bottle", "Alien", "Spiral Denim", "Bodysuits"],
+      "heritage": ["Founded 1973 by Manfred Thierry Mugler | Acquired by L'Oréal in 2020"]
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "7b083bb2942944618d49d81b9f55c2610c7985c99258fe349269c81a5f19dc5c"
-    }
+    "proof": { "network": "Base L2", "hash": "7b083bb2942944618d49d81b9f55c2610c7985c99258fe349269c81a5f19dc5c" }
   },
   {
     "sor_id": "2A-AUTO-0040",
-    "entity": {
-      "name": "Tiffany & Co.",
-      "sector": "High Jewelry",
-      "erc8004_id": "0xaac2...072"
+    "entity": { "name": "Tiffany & Co.", "status": "VERIFIED", "category": "High Jewelry / New York Legacy" },
+    "trust": { "score": "93" },
+    "market_performance": {
+      "estimated_valuation_2026": "€20B - 25B (LVMH Jewel in the crown)",
+      "annual_revenue_est_2025": "€6.5B (Resilient Q4 +8% Organic growth)",
+      "retail_anchor": "The Landmark NYC (Global #1 Luxury Store)",
+      "market_share": "~40% of LVMH Watches & Jewelry segment (€15B)"
     },
-    "trust": {
-      "score": 83,
-      "status": "STABLE",
-      "ttl": "2026-08-01",
-      "node": "SENTINEL-01"
+    "strategic_positioning": {
+      "core_strategy": "High Jewelry Elevation & NYC Cultural Supremacy",
+      "traceability_moat": "Diamond Source Initiative (Full provenance 0.18ct+ since 2019)",
+      "risks": { "macro": "Gold price volatility & US aspirational slowdown" }
     },
-    "ai_gateway": {
-      "statement": "Tiffany & Co.: LVMH URD Tiffany. Vertically integrated jewelry model verified.",
-      "character_guard": "Legendary: Focus on 'Tiffany Blue', diamond traceability, and New York legacy.",
-      "ontology": {
-        "icon": "Tiffany Blue Box",
-        "diamond_source": "Vertically integrated"
-      }
+    "details": {
+      "leadership": ["Alessandro Bogliolo (CEO since 2024)", "Alexandre Arnault (EVP)"],
+      "icons": ["Blue Box", "Jean Schlumberger Bird on a Rock", "Lock Collection"],
+      "sustainability": "IRMA & ASM Initiatives (Responsible Mining)"
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "aac23990541a18eea8a5b766dcc45a42706ac35ea7c96de4fd01b26d191f4072"
-    }
+    "proof": { "network": "Base L2", "hash": "aac23990541a18eea8a5b766dcc45a42706ac35ea7c96de4fd01b26d191f4072" }
   },
   {
     "sor_id": "2A-AUTO-0041",
