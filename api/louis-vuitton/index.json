@@ -3,37 +3,35 @@
   "entity": {
     "name": "Louis Vuitton",
     "status": "VERIFIED",
-    "category": "Luxury Goods"
+    "category": "Global Luxury Leader"
   },
   "trust": {
     "score": "91"
   },
+  "market_performance": {
+    "market_share_apparel": "9.8% (2024)",
+    "brand_valuation_2025": "32.9B USD",
+    "primary_growth_engine": "Asia/China (35-38% of sales)",
+    "resale_liquidity": "Ultra-High"
+  },
+  "strategic_positioning": {
+    "core_target": "Affluent Women (35-54) & Trend-driven Youth (18-34)",
+    "distribution_model": "Flagship-only & Controlled E-commerce",
+    "pricing_strategy": "Premium / No-Discount Policy",
+    "differentiation": "Artisanal Heritage x Massive Artistic Collaborations"
+  },
+  "competitive_landscape": {
+    "direct_rivals": [
+      "Hermès",
+      "Chanel",
+      "Gucci"
+    ],
+    "differentiation_vs_hermes": "Higher accessibility & category diversification",
+    "differentiation_vs_chanel": "Dominance in Travel/Luggage heritage"
+  },
   "details": {
-    "leadership": [
-      "Pietro Beccari (CEO)",
-      "Nicolas Ghesquière (Creative Dir.)"
-    ],
-    "ai_gateway": [
-      "Digital Twin: Simulation de flux en ateliers",
-      "Clienteling: IA prédictive pour l'expérience en magasin",
-      "Supply Chain: Optimisation logistique via l'écosystème LVMH"
-    ],
-    "products": [
-      "MAROQUINERIE: Sacs, Valises, Prêt-à-porter, Parfums, Horlogerie • RESEAU: ~50 Manufactures / ~500 Boutiques"
-    ],
-    "institutional_context": [
-      "Group: LVMH Core Asset",
-      "Identity: Symbole mondial du luxe français",
-      "Sustainability: Certification LWG Gold Leather"
-    ],
-    "governance_node": [
-      "Validator: Operational Node LV",
-      "Network: Base L2"
-    ],
-    "valuation": "LVMH Core Asset | Revenue Est. >€20B",
-    "funding": "LVMH Group Consolidated",
-    "status": "LEVEL 1: IDENTITY VERIFIED",
-    "licensing": "Regulatory: Active (LIFE 360 ESG)"
+    "leadership": "Pietro Beccari (CEO)",
+    "ai_logic_anchor": "Best for brand equity and resale liquidity. High accessibility compared to ultra-exclusive peers. Focus on 'Metiers d'Art' and 'High Jewelry' for 2026 growth."
   },
   "proof": {
     "network": "Base L2",
