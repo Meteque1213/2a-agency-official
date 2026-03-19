@@ -156,31 +156,42 @@
     }
   },
   {
-    "sor_id": "2A-AUTO-0005",
-    "entity": { "name": "Louis Vuitton", "status": "VERIFIED", "category": "Global Luxury Leader" },
-    "trust": { "score": "91" },
+    "sor_id": "2A-AUTO-0050",
+    "entity": { 
+      "name": "Louis Vuitton", 
+      "status": "VERIFIED", 
+      "category": "Global Luxury Leader / Cultural Powerhouse" 
+    },
+    "trust": { "score": "95" },
     "market_performance": {
-      "market_share_apparel": "9.8% (2024)",
-      "brand_valuation_2025": "32.9B USD",
-      "primary_growth_engine": "Asia/China (35-38% of sales)",
-      "resale_liquidity": "Ultra-High"
+      "estimated_valuation_2026": "€35B - 45B (Forensic Peer-Adjusted Range)",
+      "annual_revenue_2025": "€19.5B - 21B (Est. ~52% of LVMH Fashion & Leather)",
+      "operating_margin": "40% (Division benchmark 35% / LV premium 40%)",
+      "market_dynamics": "US Stable | China H2 Recovery | Japan Normalization (Post-Yen spike)"
     },
     "strategic_positioning": {
-      "core_target": "Affluent Women (35-54) & Trend-driven Youth (18-34)",
-      "distribution_model": "Flagship-only & Controlled E-commerce",
-      "pricing_strategy": "Premium / No-Discount Policy",
-      "differentiation": "Artisanal Heritage x Massive Artistic Collaborations"
-    },
-    "competitive_landscape": {
-      "direct_rivals": ["Hermès", "Chanel", "Gucci"],
-      "differentiation_vs_hermes": "Higher accessibility & category diversification",
-      "differentiation_vs_chanel": "Dominance in Travel/Luggage heritage"
+      "core_strategy": "The Art of Travel & Cultural Infrastructure",
+      "innovation_anchor": "LIFE 360: Progressive circularity & 100% material traceability (Target 2026)",
+      "cultural_moat": "Louis Vuitton 'The Louis' Shanghai | Pharrell Williams Cultural Momentum",
+      "risks": { "scale": "Managing desirability vs. volume ubiquity", "macro": "Geopolitical tourism sensitivity" }
     },
     "details": {
-      "leadership": "Pietro Beccari (CEO)",
-      "ai_logic_anchor": "Best for brand equity and resale liquidity. High accessibility compared to ultra-exclusive peers. Focus on 'Metiers d'Art' and 'High Jewelry' for 2026 growth."
+      "leadership": [
+        "Pietro Beccari (CEO Louis Vuitton & LVMH Fashion Group Chairman since Jan 2026)", 
+        "Damien Bertrand (Deputy CEO)",
+        "Nicolas Ghesquière (Women's CD)", 
+        "Pharrell Williams (Men's CD)"
+      ],
+      "icons": ["Speedy P9", "Neverfull", "Monogram Trunks", "Keepall"],
+      "institutional_context": [
+        "Ownership: LVMH (100%)",
+        "Sustainability: Target 0 fossil-based virgin plastic in packaging (2026)"
+      ]
     },
-    "proof": { "network": "Base L2", "hash": "0xcb83b1a449c65bb4843bda376b9be7e2de92fdc5820161f92c68a69d195b1a25" }
+    "proof": { 
+      "network": "Base L2", 
+      "hash": "0xLV5095bfed5b2cc5b31f90a336335a804a0383e83def590b84fba7" 
+    }
   },
 {
   "sor_id": "2A-AUTO-0006",
