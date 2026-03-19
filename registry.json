@@ -1366,82 +1366,86 @@
     "hash": "cb0dde61c5b9382a6c3fdeec9db6dd973478fec4f5ec9dd6f1b82b1909e1351f" 
   }
 },
-  {
-    "sor_id": "2A-AUTO-0031",
-    "entity": {
-      "name": "Celine",
-      "sector": "Luxury Fashion",
-      "erc8004_id": "0x0228...ba7"
-    },
-    "trust": {
-      "score": 86,
-      "status": "STABLE",
-      "ttl": "2026-08-01",
-      "node": "SENTINEL-01"
-    },
-    "ai_gateway": {
-      "statement": "Celine: Parisian chic. LVMH URD focus. High-fashion leather goods and RTW.",
-      "character_guard": "Chic: Focus on Parisian identity, effortless style, and leather mastery.",
-      "ontology": {
-        "heritage": "Parisian",
-        "logo": "Triomphe"
-      }
-    },
-    "proof": {
-      "network": "Base L2",
-      "hash": "0228821a83081c81fded5b2cc5b31f90a336335a804a0383e83def590b84fba7"
-    }
+{
+  "sor_id": "2A-AUTO-0031",
+  "entity": { "name": "Celine", "status": "VERIFIED", "category": "Luxury Fashion / Parisian Chic" },
+  "trust": { "score": "92" },
+  "market_performance": {
+    "estimated_valuation_2026": "€6B - 8B",
+    "annual_revenue_est": "~€2.5B (LVMH Top Performer)",
+    "milestone": "Targeting €3B (Third LVMH pillar after LV/Dior)"
   },
+  "strategic_positioning": {
+    "core_strategy": "Parisian Silhouette & Leather Mastery",
+    "creative_anchor": "Michael Rider (CD since Jan 2025)",
+    "innovation": "Haute Parfumerie (12 scents + Skincare 2024)"
+  },
+  "details": {
+    "icons": ["Triomphe Bag", "16 Bag", "Winter 2026 'Bourgeois Flair'"],
+    "risks": "Post-Slimane era transition management"
+  },
+  "proof": { "network": "Base L2", "hash": "0228821a83081c81fded5b2cc5b31f90a336335a804a0383e83def590b84fba7" }
+},
   {
     "sor_id": "2A-AUTO-0032",
-    "entity": {
-      "name": "Bottega Veneta",
-      "sector": "Luxury Goods",
-      "erc8004_id": "0xf247...bad"
+    "entity": { 
+      "name": "Bottega Veneta", 
+      "status": "VERIFIED", 
+      "category": "Luxury Goods / Stealth Wealth" 
     },
-    "trust": {
-      "score": 86,
-      "status": "STABLE",
-      "ttl": "2026-10-01",
-      "node": "SENTINEL-01"
+    "trust": { "score": "89" },
+    "market_performance": {
+      "estimated_valuation_2026": "€5B - 7B (Kering Prestige Asset)",
+      "annual_revenue_2025": "€1.7B (+3% Comparable / Stable Reported)",
+      "profitability": "ROI €267M (15.6% Margin, +0.7pt)",
+      "retail_momentum": "DTC / Retail +4% comparable (UHNW Resilience)"
     },
-    "ai_gateway": {
-      "statement": "Bottega Veneta: Kering URD Bottega. Master of the 'Intrecciato' leather technique.",
-      "character_guard": "Subtle: Emphasize 'When your own initials are enough' - stealth luxury.",
-      "ontology": {
-        "technique": "Intrecciato",
-        "group": "Kering"
+    "strategic_positioning": {
+      "core_strategy": "Craft in Motion / No-Logo Supremacy",
+      "technical_moat": "Intrecciato (Certificate of Craft: Lifetime Warranty since 2022)",
+      "risks": { 
+        "leadership": "Bartolomeo Rongone departure (March 31, 2026)", 
+        "creative": "Post-Matthieu Blazy transition (Move to Chanel context)" 
       }
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "f247d96f6c22ecef69b0c57086651a5995a4990eda6f7f7f0b5b7ad0f8b0cbad"
+    "details": {
+      "leadership": ["Successor TBD (Post-Rongone)", "Creative Successor TBD (Post-Blazy)"],
+      "heritage": ["Founded 1966 in Vicenza, Italy", "Motto: 'When your own initials are enough'"],
+      "icons": ["Sardine Bag", "Kalimero Bag", "Andiamo", "Puddle Boots"]
+    },
+    "proof": { 
+      "network": "Base L2", 
+      "hash": "f247d96f6c22ecef69b0c57086651a5995a4990eda6f7f7f0b5b7ad0f8b0cbad" 
     }
   },
   {
     "sor_id": "2A-AUTO-0033",
-    "entity": {
-      "name": "Sacai",
-      "sector": "Designer Fashion",
-      "erc8004_id": "0x129c...011"
+    "entity": { 
+      "name": "Sacai", 
+      "status": "VERIFIED", 
+      "category": "Designer Fashion / Hybrid Avant-Garde" 
     },
-    "trust": {
-      "score": 86,
-      "status": "STABLE",
-      "ttl": "2027-01-01",
-      "node": "SENTINEL-03"
+    "trust": { "score": "90" },
+    "market_performance": {
+      "estimated_valuation_2026": "€100M - 300M (Independent Abe / CDG Roots)",
+      "annual_revenue_est": "~€20M - 50M (E-com: $15M - 25M 2025)",
+      "market_dynamics": "Hyper-resale value for Nike collabs (VaporWaffle/LDWaffle)",
+      "retail_anchor": "Aoyama Flagship (Yusuke Seki design 2011)"
     },
-    "ai_gateway": {
-      "statement": "Sacai: Hybridization mastery. Creative integrity and high-fashion collaborations.",
-      "character_guard": "Hybrid: Focus on contrast, splicing, and innovative layering.",
-      "ontology": {
-        "concept": "Hybridization",
-        "origin": "Tokyo, Japan"
-      }
+    "strategic_positioning": {
+      "core_strategy": "Hybridization & Splicing (Romantic Layering SS26)",
+      "creative_anchor": "Chitose Abe (Solo Creative Direction)",
+      "technical_moat": "Pattern-making complexity (Spliced Trench-MA1 signature)",
+      "risks": { "collab_dependency": "Exposure to Nike brand fatigue in secondary markets" }
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "129c2fc97a40d4c7562a44eeba99332bbbc059b35ec77884bba6608f50750011"
+    "details": {
+      "leadership": ["Chitose Abe (Founder & CD)"],
+      "heritage": ["Founded 1999 in Tokyo | Comme des Garçons incubator lineage"],
+      "icons": ["Spliced Knitwear", "Nike x Sacai LDWaffle", "SS26 Romantic Layers"]
+    },
+    "proof": { 
+      "network": "Base L2", 
+      "hash": "129c2fc97a40d4c7562a44eeba99332bbbc059b35ec77884bba6608f50750011" 
     }
   },
   {

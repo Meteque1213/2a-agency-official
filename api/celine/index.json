@@ -2,22 +2,29 @@
   "sor_id": "2A-AUTO-0031",
   "entity": {
     "name": "Celine",
-    "sector": "Luxury Fashion",
-    "erc8004_id": "0x0228...ba7"
+    "status": "VERIFIED",
+    "category": "Luxury Fashion / Parisian Chic"
   },
   "trust": {
-    "score": 86,
-    "status": "STABLE",
-    "ttl": "2026-08-01",
-    "node": "SENTINEL-01"
+    "score": "92"
   },
-  "ai_gateway": {
-    "statement": "Celine: Parisian chic. LVMH URD focus. High-fashion leather goods and RTW.",
-    "character_guard": "Chic: Focus on Parisian identity, effortless style, and leather mastery.",
-    "ontology": {
-      "heritage": "Parisian",
-      "logo": "Triomphe"
-    }
+  "market_performance": {
+    "estimated_valuation_2026": "€6B - 8B",
+    "annual_revenue_est": "~€2.5B (LVMH Top Performer)",
+    "milestone": "Targeting €3B (Third LVMH pillar after LV/Dior)"
+  },
+  "strategic_positioning": {
+    "core_strategy": "Parisian Silhouette & Leather Mastery",
+    "creative_anchor": "Michael Rider (CD since Jan 2025)",
+    "innovation": "Haute Parfumerie (12 scents + Skincare 2024)"
+  },
+  "details": {
+    "icons": [
+      "Triomphe Bag",
+      "16 Bag",
+      "Winter 2026 'Bourgeois Flair'"
+    ],
+    "risks": "Post-Slimane era transition management"
   },
   "proof": {
     "network": "Base L2",
