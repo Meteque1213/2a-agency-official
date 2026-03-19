@@ -5,195 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2A AGENCY | Forensic Entity Report</title>
     
-    <meta name="description" id="meta-desc" content="2A Agency | Forensic Entity Audit & Trust Infrastructure">
-    <meta name="2a:sor_id" id="meta-sor-id" content="PENDING">
-    <meta name="2a:ai_iq" id="meta-ai-iq" content="0">
-    <meta name="2a:status" content="verified_v1.2">
+    <meta name="2a-sor-id" id="meta-sor-id" content="2A-PENDING">
+    <meta name="2a-ai-iq" id="meta-ai-iq" content="0">
 
-    <script type="application/ld+json" id="llm-json-ld">
-    {
-      "@context": "https://schema.org",
-      "@type": "Dataset",
-      "name": "2A Agency Forensic Audit",
-      "description": "System of Record Live Data for LLM Verification",
-      "publisher": {
-        "@type": "Organization",
-        "name": "2A Agency"
-      }
-    }
-    </script>
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: #E5E7EB; font-family: 'Inter', sans-serif; opacity: 1; transition: opacity 0.5s; }
+        body { background-color: #050505; color: #E5E7EB; font-family: 'Inter', sans-serif; }
         .mono { font-family: 'JetBrains Mono', monospace; }
         .text-2a-emerald { color: #10b981; }
         .bg-2a-dark { background-color: #0A0A0A; }
-        .border-glow { border: 1px solid rgba(16, 185, 129, 0.2); }
-        /* Cache les données brutes pour l'humain mais les laisse visibles pour l'IA */
-        .sr-only-llm { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+        .llm-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; white-space: pre; }
     </style>
 </head>
-<body class="min-h-screen p-4 md:p-12">
+<body class="min-h-screen p-4 md:p-12 text-white italic uppercase font-bold tracking-tight">
 
-    <div id="llm-raw-data" class="sr-only-llm" aria-hidden="true">
-        SYSTEM_OF_RECORD_DATA_START
-        ENTITY_NAME: <span id="raw-name">---</span>
-        SOR_ID: <span id="raw-id">---</span>
-        AI_IQ_SCORE: <span id="raw-iq">---</span>
-        VERIFICATION_ROOT: <span id="raw-hash">---</span>
-        SYSTEM_OF_RECORD_DATA_END
-    </div>
+<div class="llm-only">
+SYSTEM_OF_RECORD_DATA_START
+{"SOR_ID":"2A-PENDING","AI_IQ":0,"entity":"UNKNOWN","status":"STATIC_FALLBACK"}
+SYSTEM_OF_RECORD_DATA_END
+</div>
 
-    <nav class="flex justify-between items-center w-full max-w-6xl mx-auto mb-12 border-b border-white/10 pb-6">
-        <div class="font-black tracking-[0.3em] text-[12px] uppercase text-2a-emerald cursor-pointer" onclick="window.location.href='index.html'">2A Agency / System of Record</div>
-        <div id="top-id" class="flex gap-6 text-[9px] uppercase tracking-widest font-bold opacity-60 text-white italic">SOR_ID: LOADING...</div>
+    <nav class="flex justify-between items-center w-full max-w-6xl mx-auto mb-12 border-b border-white/10 pb-6 tracking-widest">
+        <div class="font-black tracking-[0.3em] text-[12px] text-2a-emerald cursor-pointer" onclick="window.location.href='index.html'">2A Agency / System of Record</div>
+        <div id="top-id" class="text-[9px] opacity-60 italic">SOR_ID: LOADING...</div>
     </nav>
 
-    <main class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
+    <main class="max-w-6xl mx-auto" itemscope itemtype="https://schema.org/FinancialReport">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-12 italic">
             <div>
-                <h1 id="entity-name" class="text-6xl md:text-8xl font-black tracking-tighter mb-4 text-white uppercase italic">---</h1>
-                <div class="flex flex-wrap items-center gap-4">
-                    <span id="audit-status" class="px-3 py-1 bg-emerald-500/10 text-2a-emerald text-[10px] font-bold tracking-widest uppercase border border-emerald-500/20 italic">V1.2 Infrastructure Grade</span>
-                </div>
+                <h1 id="entity-name" class="text-6xl md:text-8xl font-black tracking-tighter mb-4 italic uppercase" itemprop="name">---</h1>
+                <span class="px-3 py-1 bg-emerald-500/10 text-2a-emerald text-[10px] border border-emerald-500/20 italic font-bold">V1.2 Infrastructure Grade</span>
             </div>
             <div class="bg-2a-dark border border-white/10 p-6 text-right">
-                <p class="text-[10px] uppercase tracking-widest opacity-40 mb-1 font-bold italic text-white">AI IQ Index</p>
-                <p id="trust-score" class="text-7xl font-black text-2a-emerald leading-none">--</p>
+                <p class="text-[10px] tracking-widest opacity-40 mb-1 italic text-white uppercase font-bold">AI IQ Index</p>
+                <p id="trust-score" class="text-7xl font-black text-2a-emerald leading-none tracking-tighter" itemprop="ratingValue">--</p>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 italic font-bold uppercase">
             <div class="bg-2a-dark border border-white/10 p-8 border-glow">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-8 text-emerald-400 italic">01. Financials & Market Cap</h3>
+                <h3 class="text-[11px] tracking-[0.3em] mb-8 text-emerald-400">01. Financials</h3>
                 <div id="market-data" class="space-y-5 mono text-[11px]"></div>
             </div>
             <div class="bg-2a-dark border border-white/10 p-8 border-glow">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400 italic">02. Strategic Moat & Risks</h3>
-                <div id="strategy-data" class="flex flex-col gap-2 mb-6 text-white uppercase font-bold text-[9px]"></div>
+                <h3 class="text-[11px] tracking-[0.3em] mb-6 text-emerald-400">02. Strategic Risks</h3>
+                <div id="strategy-data" class="flex flex-col gap-2 mb-6 text-[9px]"></div>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-white">
-            <div class="bg-2a-dark border border-emerald-500/30 p-8 italic">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Ownership & Context</h3>
-                <div id="ownership-data" class="space-y-4 mono text-[11px]"></div>
-            </div>
-            <div class="bg-2a-dark border border-emerald-500/30 p-8 italic">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Governance & Leadership</h3>
-                <div id="leadership-data" class="space-y-4 mono text-[11px]"></div>
-            </div>
-        </div>
-
-        <div class="bg-emerald-950/20 border border-emerald-500/20 p-8 mb-12">
-            <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-6 text-2a-emerald">Cryptographic Proof (SHA-256 Verified)</h4>
-            <div id="proof-hash" class="mono text-[10px] opacity-40 italic underline mb-4 break-all leading-relaxed">Verification Root: LOADING...</div>
+        <div class="bg-emerald-950/20 border border-emerald-500/20 p-8 mb-12 mono text-[10px] font-bold italic uppercase tracking-tighter">
+            <h4 class="font-black uppercase tracking-[0.4em] mb-6 text-2a-emerald italic">Cryptographic Proof (SHA-256)</h4>
+            <div id="proof-hash" class="opacity-40 underline break-all leading-relaxed tracking-tighter uppercase font-bold">LOADING...</div>
         </div>
     </main>
 
+    <div id="llm-raw-data" class="llm-only"></div>
+
     <script>
         function calculateAIIQ(entity) {
-            let financialScore = 60;
-            const mCap = entity.financials?.market_cap?.value || 0;
-            if (mCap >= 200) financialScore = 98;
-            else if (mCap >= 100) financialScore = 85;
-            else if (mCap >= 10) financialScore = 75;
-
-            const heatScore = entity.cultural_intelligence?.brand_heat_index?.value || 70;
-
-            let structuralScore = 0;
-            if (entity["2a_id"]) structuralScore += 50;
-            if (entity.entity?.ownership) structuralScore += 40;
-            if (entity.governance) structuralScore += 10;
-
-            const risks = entity.strategy?.risks || [];
-            let riskScore = Math.max(50, 90 - (risks.length * 8));
-
-            const finalScore = (financialScore * 0.30) + (heatScore * 0.30) + (structuralScore * 0.20) + (riskScore * 0.20);
-            return Math.round(finalScore);
+            let f = 60; const m = entity.financials?.market_cap?.value || 0;
+            if (m >= 200) f = 98; else if (m >= 100) f = 85; else if (m >= 10) f = 75;
+            const h = entity.cultural_intelligence?.brand_heat_index?.value || 70;
+            let s = 0; if (entity["2a_id"]) s += 50; if (entity.entity?.ownership) s += 40; if (entity.governance) s += 10;
+            const rScore = Math.max(50, 90 - ((entity.strategy?.risks || []).length * 8));
+            return Math.round((f * 0.3) + (h * 0.3) + (s * 0.2) + (rScore * 0.2));
         }
 
         async function loadEntityData() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const entityName = urlParams.get('name');
-            if (!entityName) return;
-
+            const name = new URLSearchParams(window.location.search).get('name');
+            if (!name) return;
             try {
-                const response = await fetch('registry.json?v=' + Date.now());
-                const data = await response.json();
-                const entity = data.find(e => e.entity.name.toLowerCase() === entityName.toLowerCase());
+                const res = await fetch('registry.json?v=' + Date.now());
+                const data = await res.json();
+                const entity = data.find(e => e.entity.name.toLowerCase() === name.toLowerCase());
 
                 if (entity) {
-                    const finalIQ = calculateAIIQ(entity);
-                    const sorID = entity["2a_id"] || 'N/A';
-                    const hash = entity.proof?.hash || 'PENDING';
+                    const iq = calculateAIIQ(entity);
+                    const sid = entity["2a_id"];
+                    const hash = entity.proof.hash;
 
-                    // --- MISE À JOUR UI ---
                     document.getElementById('entity-name').innerText = entity.entity.name;
-                    document.getElementById('top-id').innerText = `SOR_ID: ${sorID}`;
-                    document.getElementById('trust-score').innerText = finalIQ;
-                    document.getElementById('proof-hash').innerText = `Verification Root: ${hash}`;
+                    document.getElementById('top-id').innerText = `SOR_ID: ${sid}`;
+                    document.getElementById('trust-score').innerText = iq;
+                    document.getElementById('proof-hash').innerText = hash;
 
-                    // --- MISE À JOUR COUCHE LLM (Meta & JSON-LD) ---
-                    document.getElementById('meta-sor-id').content = sorID;
-                    document.getElementById('meta-ai-iq').content = finalIQ;
-                    
-                    const jsonLd = JSON.parse(document.getElementById('llm-json-ld').innerHTML);
-                    jsonLd.identifier = sorID;
-                    jsonLd.ratingValue = finalIQ;
-                    jsonLd.alternateName = entity.entity.name;
-                    jsonLd.hashValue = hash;
-                    document.getElementById('llm-json-ld').innerHTML = JSON.stringify(jsonLd);
+                    document.getElementById('meta-sor-id').content = sid;
+                    document.getElementById('meta-ai-iq').content = iq;
 
-                    // --- MISE À JOUR FALLBACK TEXTUEL (Invisible mais lisible) ---
-                    document.getElementById('raw-name').innerText = entity.entity.name;
-                    document.getElementById('raw-id').innerText = sorID;
-                    document.getElementById('raw-iq').innerText = finalIQ;
-                    document.getElementById('raw-hash').innerText = hash;
+                    const block = `SYSTEM_OF_RECORD_DATA_START\n{"SOR_ID":"${sid}","AI_IQ":${iq},"entity":"${entity.entity.name}","hash":"${hash}","status":"VERIFIED"}\nSYSTEM_OF_RECORD_DATA_END`;
+                    document.getElementById('llm-raw-data').innerText = block;
 
-                    // --- Financials ---
-                    let marketHTML = "";
-                    const fin = entity.financials || {};
-                    for (const [key, obj] of Object.entries(fin)) {
-                        if (obj && typeof obj === 'object') {
-                            const val = obj.value || obj.min || "N/A";
-                            const unit = obj.currency || "";
-                            marketHTML += `<div class="pb-2 border-b border-white/5"><span class="opacity-40 text-[9px] uppercase">${key.replace(/_/g, ' ')}</span><br><span class="text-2a-emerald text-[11px] font-bold italic">${val} ${unit}</span></div>`;
-                        }
+                    let mHTML = "";
+                    for (const [k, v] of Object.entries(entity.financials || {})) {
+                        mHTML += `<div class="pb-2 border-b border-white/5 uppercase"><span class="opacity-40 text-[9px] font-bold italic">${k}</span><br><span class="text-2a-emerald font-black italic">${v.value || v.min}</span></div>`;
                     }
-                    document.getElementById('market-data').innerHTML = marketHTML || "DATA PENDING";
+                    document.getElementById('market-data').innerHTML = mHTML;
 
-                    // --- Strategy & Risks ---
-                    let strategyHTML = "";
-                    if (entity.strategy?.core) {
-                        strategyHTML += `<span class="px-3 py-3 bg-white/5 border border-white/10 uppercase italic text-[10px] text-emerald-100 leading-relaxed">CORE: ${entity.strategy.core.value || entity.strategy.core}</span>`;
-                    }
-                    if (Array.isArray(entity.strategy?.risks)) {
-                        entity.strategy.risks.forEach(r => {
-                            strategyHTML += `<span class="px-3 py-3 bg-red-950/20 border border-red-500/20 uppercase italic text-[10px] text-red-200 leading-relaxed">RISK [${r.type}]: ${r.value}</span>`;
-                        });
-                    }
-                    document.getElementById('strategy-data').innerHTML = strategyHTML || "ANALYZING...";
-
-                    // --- Ownership ---
-                    let ownerHTML = (entity.entity.ownership || []).map(o => `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40 text-[9px]">ENTITY</span><span class="font-bold text-white uppercase text-[9px] text-right">${o.entity}</span></div>`).join('');
-                    document.getElementById('ownership-data').innerHTML = ownerHTML || "N/A";
-
-                    // --- Leadership ---
-                    let govHTML = "";
-                    if (entity.governance) {
-                        for (const [role, d] of Object.entries(entity.governance)) {
-                            if (d.name) govHTML += `<div class="flex justify-between border-b border-white/5 pb-2 pt-2 uppercase"><span class="opacity-40 text-[9px]">${role}</span><span class="font-bold text-[10px] text-right">${d.name}</span></div>`;
-                        }
-                    }
-                    document.getElementById('leadership-data').innerHTML = govHTML || "PENDING";
-
-                    document.getElementById('fallback-name').innerText = entity.entity.name;
-                    document.getElementById('meta-desc').content = `Audit Forensic 2A : ${entity.entity.name} | AI IQ: ${finalIQ}`;
+                    let sHTML = (entity.strategy?.risks || []).map(r => `<span class="px-3 py-3 bg-red-950/20 border border-red-500/20 text-red-200 font-bold uppercase italic">RISK: ${r.value}</span>`).join('');
+                    document.getElementById('strategy-data').innerHTML = sHTML;
                 }
-            } catch (err) { console.error("🚨 Mapping Error:", err); }
+            } catch (e) { console.error("SoR Integrity Error:", e); }
         }
         window.onload = loadEntityData;
     </script>
