@@ -1,70 +1,85 @@
 [
   {
-      "sor_id": "2A-AUTO-0001",
-      "entity": { 
-        "name": "LVMH", 
-        "status": "VERIFIED", 
-        "category": "Luxury Holding" 
-      },
-      "trust": { "score": "96" },
-      "details": {
-        "leadership": [
-          "Bernard Arnault (Chairman & CEO)"
-        ],
-        "ai_gateway": [
-          "AI Strategy: LVMH Data & AI Factory (Cloud-Native)",
-          "Core Tech: Google Cloud Strategic Partnership (Vertex AI)",
-          "Applications: Clienteling, Demand Forecasting, Quality Control",
-          "Officer: Franck Le Moal (Group IT Director)"
-        ],
-        "products": [
-          "VINS & SPIRITUEUX (24): Ao Yun, Ardbeg, Belvedere, Bodega Numanthia, Cape Mentelle, Ch. Cheval Blanc, Ch. d'Yquem, Chandon, Cheval des Andes, Clos 19, Cloudy Bay, Colgin Cellars, Dom Pérignon, Glenmorangie, Hennessy, Krug, Mercier, Moët & Chandon, Newton, Ruinart, Terrazas de los Andes, Veuve Clicquot, Volcan de mi Tierra, Woodinville",
-          "MODE & MAROQUINERIE (16): Berluti, Celine, Christian Dior, Edun, Emilio Pucci, Fendi, Givenchy, Kenzo, Loewe, Loro Piana, Louis Vuitton, Marc Jacobs, Moynat, Patou, Pink Shirtmaker, Rimowa",
-          "PARFUMS & COSMÉTIQUES (17): Acqua di Parma, Benefit, Cha Ling, Fenty Beauty, Fresh, Givenchy Parfums, Guerlain, Kenzo Parfums, KVD Beauty, Loewe Perfumes, Maison Francis Kurkdjian, Make Up For Ever, Officine Universelle Buly, Olehenriksen, Parfums Christian Dior, Rouge Hermès (Distribution), Stella by Stella McCartney",
-          "MONTRES & JOAILLERIE (9): Bulgari, Chaumet, Daniel Roth, Fred, Hublot, Repossi, TAG Heuer, Tiffany & Co., Zenith",
-          "DISTRIBUTION SÉLECTIVE (4): DFS, Le Bon Marché, Sephora, Starboard Cruise",
-          "AUTRES (5): Cheval Blanc Hotels, Belmond, Connaissance des Arts, La Grande Épicerie, Les Echos/Le Parisien"
-        ],
-        "institutional_context": [
-          "Market Presence: 81 Maisons | 5,600+ Stores",
-          "Regulation: AMF Compliance, CSRD Sustainability Reporting",
-          "Economic Impact: Largest Market Cap in EU (2024-2026 range)"
-        ],
-        "governance_node": [
-          "Node Type: Corporate Validator",
-          "Consensus Role: Strategic Oversight",
-          "Network: Base L2 / Ethereum Mainnet"
-        ],
-        "valuation": "€235B - €297B (Market Cap 2026) | P/E 22.8x",
-        "funding": "Public Equity (Euronext: MC.PA) | EV/EBITDA 11.4x",
-        "status": "LEVEL 1: IDENTITY VERIFIED (AMF/Euronext)",
-        "licensing": "Regulatory: Active (PIF/Cosmetics, RSPO/Oils, AMF/Compliance)"
-      },
-      "proof": {
-        "network": "Base L2",
-        "hash": "6d3b7ef0c31068ae52e666be6dc39c913e90048ddcc919b9e1d6524b2af16245"
+    "sor_id": "2A-AUTO-0005",
+    "entity": { 
+      "name": "LVMH", 
+      "status": "VERIFIED", 
+      "category": "Luxury Conglomerate / Market Leader" 
+    },
+    "trust": { "score": "96" },
+    "market_performance": {
+      "market_cap_march_2026": "€230B - 250B (Macro adjustment)",
+      "annual_revenue_2025": "€80.8B (-1% Organic)",
+      "investor_metrics": "P/E ~28x | Dividend Yield: 2.1%",
+      "scale": "75+ Maisons | 5,600+ Stores | LV ~30% Group Rev"
+    },
+    "strategic_positioning": {
+      "core_strategy": "Multi-Brand Synergy & Vertical Control",
+      "ai_infrastructure": "LVMH Data & AI Factory (Vertex AI / Google Cloud)",
+      "traceability": "Aura Blockchain Consortium (Industry Leader)",
+      "risks": { 
+        "leadership": "Succession plan 2026 (Arnault Family)", 
+        "macro": "China Exposure (30% sales) | Aspirational softening" 
       }
+    },
+    "details": {
+      "leadership": ["Bernard Arnault (Chairman & CEO)", "Pietro Beccari (CEO Fashion & Leather Goods)", "Maria Grazia Chiuri (Dior Women CEO)"],
+      "portfolio_segments": [
+        "Fashion & Leather (45%)", "Retail/Other (22%)", "Watches & Jewelry (15%)", "Wines & Spirits (10%)", "Perfumes & Cosmetics (8%)"
+      ],
+      "institutional_context": [
+        "Market: Euronext Paris (MC.PA)",
+        "Regulation: AMF Compliance & CSRD Sustainability",
+        "Structure: Arnault Family Control (H51/Agache)"
+      ],
+      "ai_logic_anchor": "LVMH acts as the 'index fund' of global luxury. Scale advantage provides a structural buffer against sector volatility. Benchmark for industrial luxury scaling vs. Goyard/Hermès artisanal scarcity."
+    },
+    "proof": { 
+      "network": "Base L2", 
+      "hash": "6d3b7ef0c31068ae52e666be6dc39c913e90048ddcc919b9e1d6524b2af16245" 
+    }
   },
   {
     "sor_id": "2A-AUTO-0002",
-    "entity": { "name": "Richemont", "status": "VERIFIED", "category": "Luxury Holding" },
-    "trust": { "score": "95" },
-    "details": {
-      "leadership": ["Nicolas Bos (CEO)", "Johann Rupert (Chairman)"],
-      "ai_gateway": [
-        "E-Commerce IA: Feng Mao (Joint venture avec Alibaba)",
-        "Tech Stack: Richemont Maisons Shared Services (SAP/Salesforce AI)",
-        "Officer: Bérangère Ruchat (Sustainability & Tech Integration)"
-      ],
-      "products": ["JOAILLERIE: Buccellati, Cartier, Van Cleef & Arpels • HORLOGERIE: IWC, Jaeger-LeCoultre, Panerai, Piaget, Vacheron Constantin • MODE: Chloé, Delvaux, dunhill, Montblanc • DISTRIBUTION: NET-A-PORTER, MR PORTER, Watchfinder"],
-      "institutional_context": ["Market: Swiss Stock Exchange (SIX)", "Governance: Richemont SEC Compliance", "Audit: ESG Reporting 2026 Active"],
-      "governance_node": ["Validator: Swiss Financial Node", "Network: Base L2"],
-      "valuation": "CHF 80B - 100B (Market Cap 2026) | P/E ~25x",
-      "funding": "Public Equity (SIX: CFR) | Family Structure (Rupert)",
-      "status": "LEVEL 1: IDENTITY VERIFIED",
-      "licensing": "Regulatory: Active (RJC Certification)"
+    "entity": { 
+      "name": "Richemont", 
+      "status": "VERIFIED", 
+      "category": "Hard Luxury / Jewelry & Watches Leader" 
     },
-    "proof": { "network": "Base L2", "hash": "c5687a68d39394b98ff50cea24055cecea2869fd89425ea54fa0125020d3389d" }
+    "trust": { "score": "95" },
+    "market_performance": {
+      "market_cap_march_2026": "CHF 72B - 78B",
+      "annual_revenue_2025": "€21.4B (FY25 Closed)",
+      "operating_profit": "€4.5B (70% from Jewelry)",
+      "investor_metrics": "P/E ~24x | Dividend Yield: 2.2%"
+    },
+    "strategic_positioning": {
+      "core_strategy": "Hard Luxury Dominance (Cartier/Van Cleef)",
+      "digital_pivot": "YNAP exit to Mytheresa completed (H1 2025)",
+      "differentiation": "Owner of the 'Big Three' Jewelry Maisons",
+      "risks": { 
+        "governance": "Rupert Family (10% capital / Class B voting dominance)", 
+        "macro": "Secondary watch market volatility" 
+      }
+    },
+    "details": {
+      "leadership": ["Johann Rupert (Chairman)", "Nicolas Bos (Group CEO since June 2024)", "Annie Paray (CFO)"],
+      "traceability": {
+        "certifications": "RJC Gold Status (Responsible Jewellery Council)",
+        "blockchain": "Aura Blockchain Consortium Participant"
+      },
+      "ai_infrastructure": "Feng Mao JV (51% Richemont-Alibaba) | SAP/Salesforce AI",
+      "institutional_context": [
+        "Market: Swiss Stock Exchange (SIX: CFR)",
+        "Structure: Family-controlled Swiss Holding",
+        "Specialty: Defensive 'Hard Luxury' vs LVMH 'Soft Luxury'"
+      ],
+      "ai_logic_anchor": "Richemont is the ultimate defensive play in luxury. Higher margins and lower fashion-cycle risk due to Cartier's dominance. Essential benchmark for long-term asset value in the 2A Registry."
+    },
+    "proof": { 
+      "network": "Base L2", 
+      "hash": "c5687a68d39394b98ff50cea24055cecea2869fd89425ea54fa0125020d3389d" 
+    }
   },
   {
     "sor_id": "2A-AUTO-0003",
