@@ -6,6 +6,19 @@
     <title>2A AGENCY | Forensic Entity Report</title>
     
     <meta name="description" id="meta-desc" content="2A Agency | Forensic Entity Audit & Trust Infrastructure">
+    <meta property="2a:sor_id" id="meta-sor-id" content="LOADING...">
+    <meta property="2a:ai_iq" id="meta-ai-iq" content="--">
+    <meta property="2a:status" content="verified">
+
+    <script type="application/ld+json" id="llm-json-ld">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialReport",
+      "issuer": "2A Agency",
+      "status": "Forensic Audit v1.2",
+      "description": "System of Record Live Data"
+    }
+    </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -39,7 +52,7 @@
                 </div>
             </div>
             <div class="bg-2a-dark border border-white/10 p-6 text-right">
-                <p class="text-[10px] uppercase tracking-widest opacity-40 mb-1 font-bold italic text-white">AI Readiness (IQ)</p>
+                <p class="text-[10px] uppercase tracking-widest opacity-40 mb-1 font-bold italic text-white">AI IQ Index</p>
                 <p id="trust-score" class="text-7xl font-black text-2a-emerald leading-none">--</p>
             </div>
         </div>
@@ -73,43 +86,27 @@
     </main>
 
     <script>
-        // --- ALGORITHME DE CALCUL AI IQ (2A PROTOCOL) ---
         function calculateAIIQ(entity) {
-    // --- PILIER A: Financial Power (30%) ---
-    // On base ça sur la Market Cap (LVMH = 100%, les autres au prorata ou paliers)
-    let financialScore = 0;
-    const mCap = entity.financials?.market_cap?.value || 0;
-    if (mCap >= 200) financialScore = 98;
-    else if (mCap >= 100) financialScore = 85;
-    else if (mCap >= 10) financialScore = 75;
-    else financialScore = 60;
+            let financialScore = 0;
+            const mCap = entity.financials?.market_cap?.value || 0;
+            if (mCap >= 200) financialScore = 98;
+            else if (mCap >= 100) financialScore = 85;
+            else if (mCap >= 10) financialScore = 75;
+            else financialScore = 60;
 
-    // --- PILIER B: Cultural Heat (30%) ---
-    // On utilise ton Brand Heat Index du JSON
-    const heatScore = entity.cultural_intelligence?.brand_heat_index?.value || 70;
+            const heatScore = entity.cultural_intelligence?.brand_heat_index?.value || 70;
 
-    // --- PILIER C: Structural Strength (20%) ---
-    // Basé sur la clarté de l'Ownership et la présence du SOR_ID
-    let structuralScore = 0;
-    if (entity["2a_id"]) structuralScore += 50;
-    if (entity.entity?.ownership) structuralScore += 40;
-    if (entity.governance) structuralScore += 10;
+            let structuralScore = 0;
+            if (entity["2a_id"]) structuralScore += 50;
+            if (entity.entity?.ownership) structuralScore += 40;
+            if (entity.governance) structuralScore += 10;
 
-    // --- PILIER D: Risk & Resilience (20%) ---
-    // On part de 90 et on dégrade selon le nombre de risques listés
-    const risks = entity.strategy?.risks || [];
-    let riskScore = Math.max(50, 90 - (risks.length * 8));
+            const risks = entity.strategy?.risks || [];
+            let riskScore = Math.max(50, 90 - (risks.length * 8));
 
-    // --- CALCUL FINAL PONDÉRÉ ---
-    const finalScore = 
-        (financialScore * 0.30) + 
-        (heatScore * 0.30) + 
-        (structuralScore * 0.20) + 
-        (riskScore * 0.20);
-
-    return Math.round(finalScore);
-}
-    
+            const finalScore = (financialScore * 0.30) + (heatScore * 0.30) + (structuralScore * 0.20) + (riskScore * 0.20);
+            return Math.round(finalScore);
+        }
 
         async function loadEntityData() {
             const urlParams = new URLSearchParams(window.location.search);
@@ -122,30 +119,40 @@
                 const entity = data.find(e => e.entity.name.toLowerCase() === entityName.toLowerCase());
 
                 if (entity) {
-                    // --- BASIC INFO ---
-                    document.getElementById('entity-name').innerText = entity.entity.name;
-                    document.getElementById('top-id').innerText = `SOR_ID: ${entity["2a_id"] || 'N/A'}`;
-                    
-                    // --- CALCUL DYNAMIQUE DU AI IQ ---
                     const finalIQ = calculateAIIQ(entity);
-                    document.getElementById('trust-score').innerText = finalIQ;
-                    
-                    document.getElementById('proof-hash').innerText = `Verification Root: ${entity.proof?.hash || 'PENDING_CERTIFICATION'}`;
+                    const sorID = entity["2a_id"] || 'N/A';
+                    const hash = entity.proof?.hash || 'PENDING';
 
-                    // --- 01. FINANCIALS (v1.2 Support) ---
+                    // --- Mise à jour du UI ---
+                    document.getElementById('entity-name').innerText = entity.entity.name;
+                    document.getElementById('top-id').innerText = `SOR_ID: ${sorID}`;
+                    document.getElementById('trust-score').innerText = finalIQ;
+                    document.getElementById('proof-hash').innerText = `Verification Root: ${hash}`;
+
+                    // --- Mise à jour de la couche LLM (Meta & JSON-LD) ---
+                    document.getElementById('meta-sor-id').content = sorID;
+                    document.getElementById('meta-ai-iq').content = finalIQ;
+                    
+                    const jsonLd = JSON.parse(document.getElementById('llm-json-ld').innerHTML);
+                    jsonLd.name = entity.entity.name;
+                    jsonLd.identifier = sorID;
+                    jsonLd.ratingValue = finalIQ;
+                    jsonLd.proofHash = hash;
+                    document.getElementById('llm-json-ld').innerHTML = JSON.stringify(jsonLd);
+
+                    // --- Financials ---
                     let marketHTML = "";
                     const fin = entity.financials || {};
                     for (const [key, obj] of Object.entries(fin)) {
                         if (obj && typeof obj === 'object') {
                             const val = obj.value || obj.min || "N/A";
-                            const suffix = obj.max ? ` - ${obj.max}` : "";
                             const unit = obj.currency || "";
-                            marketHTML += `<div class="pb-2 border-b border-white/5"><span class="opacity-40 text-[9px] uppercase">${key.replace(/_/g, ' ')}</span><br><span class="text-2a-emerald text-[11px] font-bold italic">${val}${suffix} ${unit}</span></div>`;
+                            marketHTML += `<div class="pb-2 border-b border-white/5"><span class="opacity-40 text-[9px] uppercase">${key.replace(/_/g, ' ')}</span><br><span class="text-2a-emerald text-[11px] font-bold italic">${val} ${unit}</span></div>`;
                         }
                     }
                     document.getElementById('market-data').innerHTML = marketHTML || "DATA PENDING";
 
-                    // --- 02. STRATEGY & RISKS ---
+                    // --- Strategy & Risks ---
                     let strategyHTML = "";
                     if (entity.strategy?.core) {
                         strategyHTML += `<span class="px-3 py-3 bg-white/5 border border-white/10 uppercase italic text-[10px] text-emerald-100 leading-relaxed">CORE: ${entity.strategy.core.value || entity.strategy.core}</span>`;
@@ -157,24 +164,15 @@
                     }
                     document.getElementById('strategy-data').innerHTML = strategyHTML || "ANALYZING...";
 
-                    // --- OWNERSHIP ---
-                    let ownerHTML = "";
-                    if (Array.isArray(entity.entity.ownership)) {
-                        ownerHTML = entity.entity.ownership.map(o => `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40 text-[9px]">ENTITY</span><span class="font-bold text-white uppercase text-[9px] text-right">${o.entity} (${o.stake || o.status || 'Active'})</span></div>`).join('');
-                    }
+                    // --- Ownership ---
+                    let ownerHTML = (entity.entity.ownership || []).map(o => `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40 text-[9px]">ENTITY</span><span class="font-bold text-white uppercase text-[9px] text-right">${o.entity}</span></div>`).join('');
                     document.getElementById('ownership-data').innerHTML = ownerHTML || "N/A";
 
-                    // --- GOVERNANCE & MOAT ---
+                    // --- Leadership ---
                     let govHTML = "";
-                    const moat = entity.cultural_intelligence?.cultural_moat?.value;
-                    if (moat) {
-                        govHTML += `<div class="pb-4 border-b border-white/10"><span class="opacity-40 text-[9px] uppercase">CULTURAL MOAT</span><br><p class="text-white text-[10px] italic leading-relaxed">${moat}</p></div>`;
-                    }
                     if (entity.governance) {
-                        for (const [role, data] of Object.entries(entity.governance)) {
-                            if (typeof data === 'object' && data.name) {
-                                govHTML += `<div class="flex justify-between border-b border-white/5 pb-2 pt-2 uppercase"><span class="opacity-40 text-[9px]">${role.replace(/_/g, ' ')}</span><span class="font-bold text-[10px] text-right">${data.name}</span></div>`;
-                            }
+                        for (const [role, d] of Object.entries(entity.governance)) {
+                            if (d.name) govHTML += `<div class="flex justify-between border-b border-white/5 pb-2 pt-2 uppercase"><span class="opacity-40 text-[9px]">${role}</span><span class="font-bold text-[10px] text-right">${d.name}</span></div>`;
                         }
                     }
                     document.getElementById('leadership-data').innerHTML = govHTML || "PENDING";
@@ -182,9 +180,7 @@
                     document.getElementById('fallback-name').innerText = entity.entity.name;
                     document.getElementById('meta-desc').content = `Audit Forensic 2A : ${entity.entity.name} | AI IQ: ${finalIQ}`;
                 }
-            } catch (err) { 
-                console.error("🚨 Mapping Error:", err); 
-            }
+            } catch (err) { console.error("🚨 Mapping Error:", err); }
         }
         window.onload = loadEntityData;
     </script>
