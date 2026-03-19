@@ -2,22 +2,38 @@
   "sor_id": "2A-AUTO-0041",
   "entity": {
     "name": "Miu Miu",
-    "sector": "Luxury Fashion",
-    "erc8004_id": "0xbe28...08e3"
+    "status": "STABLE",
+    "category": "Luxury Fashion / Intellectual Playfulness"
   },
   "trust": {
-    "score": 83,
-    "status": "STABLE",
-    "ttl": "2027-01-01",
-    "node": "SENTINEL-02"
+    "score": "94"
   },
-  "ai_gateway": {
-    "statement": "Miu Miu: Prada URD focus. Rebel spirit of Miuccia Prada verified.",
-    "character_guard": "Playful: Focus on youthful energy, intellectual rebellion, and chic irony.",
-    "ontology": {
-      "origin": "Prada Group",
-      "style": "Post-modern/Playful"
+  "market_performance": {
+    "estimated_valuation_2026": "€5B - 6B (Prada Group Growth Engine)",
+    "annual_revenue_est": "€1.5B+ (Targeting €3B / ~25-30% of Group Mix)",
+    "growth_metrics": "FY25 +35% YoY | Q3 +29% (vs 105% prior)",
+    "market_dynamics": "High viral traction | SS26 Workwear pivot"
+  },
+  "strategic_positioning": {
+    "core_strategy": "Post-Modern Irony & Rebel Spirit",
+    "cultural_moat": "Miu Miu Women's Tales (#27 Chui Mui Tan) | Arty-chic community",
+    "risks": {
+      "viral_fatigue": "Managing the 'Peak Viral' post-COVID stabilization"
     }
+  },
+  "details": {
+    "leadership": [
+      "Benedetta Petruzzo (to Dior MD Oct 2025)",
+      "Prada Group Oversight"
+    ],
+    "icons": [
+      "Arcadie Matelassé",
+      "Wander Bag (Gigi Hadid)",
+      "Micro-skirt legacy"
+    ],
+    "heritage": [
+      "Founded 1993 (Milan) | Miuccia Prada's independent playground"
+    ]
   },
   "proof": {
     "network": "Base L2",
