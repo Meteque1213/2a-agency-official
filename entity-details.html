@@ -6,17 +6,20 @@
     <title>2A AGENCY | Forensic Entity Report</title>
     
     <meta name="description" id="meta-desc" content="2A Agency | Forensic Entity Audit & Trust Infrastructure">
-    <meta property="2a:sor_id" id="meta-sor-id" content="LOADING...">
-    <meta property="2a:ai_iq" id="meta-ai-iq" content="--">
-    <meta property="2a:status" content="verified">
+    <meta name="2a:sor_id" id="meta-sor-id" content="PENDING">
+    <meta name="2a:ai_iq" id="meta-ai-iq" content="0">
+    <meta name="2a:status" content="verified_v1.2">
 
     <script type="application/ld+json" id="llm-json-ld">
     {
       "@context": "https://schema.org",
-      "@type": "FinancialReport",
-      "issuer": "2A Agency",
-      "status": "Forensic Audit v1.2",
-      "description": "System of Record Live Data"
+      "@type": "Dataset",
+      "name": "2A Agency Forensic Audit",
+      "description": "System of Record Live Data for LLM Verification",
+      "publisher": {
+        "@type": "Organization",
+        "name": "2A Agency"
+      }
     }
     </script>
     
@@ -28,14 +31,19 @@
         .text-2a-emerald { color: #10b981; }
         .bg-2a-dark { background-color: #0A0A0A; }
         .border-glow { border: 1px solid rgba(16, 185, 129, 0.2); }
+        /* Cache les données brutes pour l'humain mais les laisse visibles pour l'IA */
         .sr-only-llm { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
     </style>
 </head>
 <body class="min-h-screen p-4 md:p-12">
 
-    <div id="ai-fallback" class="sr-only-llm">
-        <p>Entity Name: <span id="fallback-name">Loading...</span></p>
-        <p>Audit Status: Verified by 2A Agency Protocol (v1.2)</p>
+    <div id="llm-raw-data" class="sr-only-llm" aria-hidden="true">
+        SYSTEM_OF_RECORD_DATA_START
+        ENTITY_NAME: <span id="raw-name">---</span>
+        SOR_ID: <span id="raw-id">---</span>
+        AI_IQ_SCORE: <span id="raw-iq">---</span>
+        VERIFICATION_ROOT: <span id="raw-hash">---</span>
+        SYSTEM_OF_RECORD_DATA_END
     </div>
 
     <nav class="flex justify-between items-center w-full max-w-6xl mx-auto mb-12 border-b border-white/10 pb-6">
@@ -87,12 +95,11 @@
 
     <script>
         function calculateAIIQ(entity) {
-            let financialScore = 0;
+            let financialScore = 60;
             const mCap = entity.financials?.market_cap?.value || 0;
             if (mCap >= 200) financialScore = 98;
             else if (mCap >= 100) financialScore = 85;
             else if (mCap >= 10) financialScore = 75;
-            else financialScore = 60;
 
             const heatScore = entity.cultural_intelligence?.brand_heat_index?.value || 70;
 
@@ -123,22 +130,28 @@
                     const sorID = entity["2a_id"] || 'N/A';
                     const hash = entity.proof?.hash || 'PENDING';
 
-                    // --- Mise à jour du UI ---
+                    // --- MISE À JOUR UI ---
                     document.getElementById('entity-name').innerText = entity.entity.name;
                     document.getElementById('top-id').innerText = `SOR_ID: ${sorID}`;
                     document.getElementById('trust-score').innerText = finalIQ;
                     document.getElementById('proof-hash').innerText = `Verification Root: ${hash}`;
 
-                    // --- Mise à jour de la couche LLM (Meta & JSON-LD) ---
+                    // --- MISE À JOUR COUCHE LLM (Meta & JSON-LD) ---
                     document.getElementById('meta-sor-id').content = sorID;
                     document.getElementById('meta-ai-iq').content = finalIQ;
                     
                     const jsonLd = JSON.parse(document.getElementById('llm-json-ld').innerHTML);
-                    jsonLd.name = entity.entity.name;
                     jsonLd.identifier = sorID;
                     jsonLd.ratingValue = finalIQ;
-                    jsonLd.proofHash = hash;
+                    jsonLd.alternateName = entity.entity.name;
+                    jsonLd.hashValue = hash;
                     document.getElementById('llm-json-ld').innerHTML = JSON.stringify(jsonLd);
+
+                    // --- MISE À JOUR FALLBACK TEXTUEL (Invisible mais lisible) ---
+                    document.getElementById('raw-name').innerText = entity.entity.name;
+                    document.getElementById('raw-id').innerText = sorID;
+                    document.getElementById('raw-iq').innerText = finalIQ;
+                    document.getElementById('raw-hash').innerText = hash;
 
                     // --- Financials ---
                     let marketHTML = "";
