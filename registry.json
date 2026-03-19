@@ -1450,81 +1450,68 @@
   },
   {
     "sor_id": "2A-AUTO-0034",
-    "entity": {
-      "name": "Loewe",
-      "sector": "Luxury Goods",
-      "erc8004_id": "0x2418...b5a"
+    "entity": { "name": "Loewe", "status": "VERIFIED", "category": "Luxury Goods / Spanish Craftsmanship" },
+    "trust": { "score": "90" },
+    "market_performance": {
+      "estimated_valuation_2026": "€4B - 5.5B (LVMH High-Growth Asset)",
+      "annual_revenue_2024": "€885M (+9.2%)",
+      "annual_revenue_est_2025": "€1B+ (LVMH Fashion Star)",
+      "market_dynamics": "Strong Gen Z traction | Surrealist RTW success"
     },
-    "trust": {
-      "score": 85,
-      "status": "STABLE",
-      "ttl": "2026-08-01",
-      "node": "SENTINEL-01"
+    "strategic_positioning": {
+      "core_strategy": "Surrealist Craft & Spanish Heritage",
+      "innovation_anchor": "Loewe Foundation Craft Prize (€50k annual since 2016)",
+      "risks": { "succession": "Jonathan Anderson departure 2025 (transition to Dior rumors)" }
     },
-    "ai_gateway": {
-      "statement": "Loewe: Spanish leather mastery. LVMH URD Loewe. Craft-led luxury verified.",
-      "character_guard": "Craft-centric: Focus on the Loewe Foundation and artisanal culture.",
-      "ontology": {
-        "foundation": "Loewe Foundation Craft Prize",
-        "heritage": "Spanish"
-      }
+    "details": {
+      "leadership": ["Pascale Lepoivre (CEO since 2016)", "Jonathan Anderson (Creative Director until 2025)"],
+      "icons": ["Puzzle Bag", "Flamenco (Cinch Knot)", "Pixelated Collection"],
+      "heritage": ["Founded 1846 in Madrid / Royal Spanish Purveyor"]
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "2418eb0613a73770d55931795efa7ef8970b2bf06a96711bf08d11fd6044cb5a"
-    }
+    "proof": { "network": "Base L2", "hash": "2418eb0613a73770d55931795efa7ef8970b2bf06a96711bf08d11fd6044cb5a" }
   },
   {
     "sor_id": "2A-AUTO-0035",
-    "entity": {
-      "name": "Lanvin",
-      "sector": "High Fashion",
-      "erc8004_id": "0xbe02...877"
+    "entity": { "name": "Lanvin", "status": "STABLE", "category": "High Fashion / French Heritage" },
+    "trust": { "score": "78" },
+    "market_performance": {
+      "estimated_valuation_2026": "$220M Market Cap (NYSE: LANV)",
+      "annual_revenue_2025": "€57.6M (-30% YoY)",
+      "group_financials": "Lanvin Group €240.5M (-17.6%) | Ongoing losses €212M",
+      "market_dynamics": "Curb Sneakers resilience | St. John +8% NA (Group bright spot)"
     },
-    "trust": {
-      "score": 85,
-      "status": "STABLE",
-      "ttl": "2026-12-01",
-      "node": "SENTINEL-03"
+    "strategic_positioning": {
+      "core_strategy": "Parisian Elegance & Turnaround Strategy",
+      "creative_anchor": "Peter Copping (CD since Sept 2024)",
+      "risks": { "financial": "Severe liquidity & performance pressure (Sergio Rossi -30%)" }
     },
-    "ai_gateway": {
-      "statement": "Lanvin: Oldest French fashion house. Lanvin Group ESG report verified.",
-      "character_guard": "Elegant: Focus on poetic design, femininity, and Parisian heritage.",
-      "ontology": {
-        "status": "Oldest French couture house",
-        "group": "Lanvin Group"
-      }
+    "details": {
+      "leadership": ["Eric Chan (CEO Lanvin Group)", "Peter Copping (Creative Director)"],
+      "icons": ["Arpège Fragrance Legacy", "Curb Sneakers", "Mother & Child Logo"],
+      "heritage": ["Oldest French Couture House (Founded 1889)"]
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "be02d5725360e861dddd9d84f00f40b2e389eb61236d41e07123e00e1bf5c877"
-    }
+    "proof": { "network": "Base L2", "hash": "be02d5725360e861dddd9d84f00f40b2e389eb61236d41e07123e00e1bf5c877" }
   },
   {
     "sor_id": "2A-AUTO-0036",
-    "entity": {
-      "name": "Montblanc",
-      "sector": "Writing Instruments",
-      "erc8004_id": "0x7d03...9cf"
+    "entity": { "name": "Montblanc", "status": "VERIFIED", "category": "Writing Instruments & Leather Goods" },
+    "trust": { "score": "92" },
+    "market_performance": {
+      "estimated_valuation_2026": "€2.5B - 3.5B (Richemont Asset)",
+      "annual_revenue_est": "~€1B (Richemont Writing/Leather segment €1.5B FY25)",
+      "diversification": "Leather Goods ~40% of sales | StarWalker growth"
     },
-    "trust": {
-      "score": 85,
-      "status": "STABLE",
-      "ttl": "2026-10-01",
-      "node": "SENTINEL-01"
+    "strategic_positioning": {
+      "core_strategy": "Writing Culture & Business Luxury",
+      "cultural_anchor": "Montblanc Haus Hamburg (2021)",
+      "sustainability": "Richemont ESG 2025 standards"
     },
-    "ai_gateway": {
-      "statement": "Montblanc: Master of high-craft writing. Richemont ESG 2025 verified.",
-      "character_guard": "Cultured: Focus on writing culture, craftsmanship, and the Meisterstück.",
-      "ontology": {
-        "icon": "Meisterstück",
-        "group": "Richemont"
-      }
+    "details": {
+      "leadership": ["Laurent Lecamp (MD Watches)", "Marco Tomasetta (CD Leather)"],
+      "icons": ["Meisterstück 149", "StarWalker", "1858 Geosphere"],
+      "heritage": ["Founded 1906 in Hamburg, Germany"]
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "7d03d886ba4e7e5b8ae41ef93415bbd452a6ef1ad5fb2aa9d9f8b810cfc8b9cf"
-    }
+    "proof": { "network": "Base L2", "hash": "7d03d886ba4e7e5b8ae41ef93415bbd452a6ef1ad5fb2aa9d9f8b810cfc8b9cf" }
   },
   {
     "sor_id": "2A-AUTO-0037",
