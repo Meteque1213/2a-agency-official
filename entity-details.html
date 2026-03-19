@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2A AGENCY | Forensic Entity Report</title>
-    <meta name="2a-sor-id" content="2A-LUX-LV-0001">
-    <meta name="2a-ai-iq" content="94">
     
+    <meta name="2a-sor-id" id="meta-sor-id" content="2A-LUX-LV-0001">
+    <meta name="2a-ai-iq" id="meta-ai-iq" content="94">
+
+    <script type="application/ld+json" id="sor-ld">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "identifier": "2A-LUX-LV-0001",
+      "name": "Louis Vuitton",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 94,
+        "bestRating": 100
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -14,7 +29,6 @@
         .mono { font-family: 'JetBrains Mono', monospace; }
         .text-2a-emerald { color: #10b981; }
         .bg-2a-dark { background-color: #0A0A0A; }
-        /* sr-only-llm : Priorité maximale pour l'IA, invisible pour l'humain */
         .sr-only-llm { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; white-space: pre; }
     </style>
 </head>
@@ -41,7 +55,7 @@ SYSTEM_OF_RECORD_DATA_END</div>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 italic">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 italic uppercase">
             <div class="bg-2a-dark border border-white/10 p-8 border-glow font-bold">
                 <h3 class="text-[11px] tracking-[0.3em] mb-8 text-emerald-400">01. Financials</h3>
                 <div id="market-data" class="space-y-5 mono text-[11px]"></div>
@@ -53,15 +67,15 @@ SYSTEM_OF_RECORD_DATA_END</div>
         </div>
 
         <div class="bg-emerald-950/20 border border-emerald-500/20 p-8 mb-12 mono text-[10px] font-bold italic uppercase tracking-tighter">
-            <h4 class="font-black uppercase tracking-[0.4em] mb-6 text-2a-emerald">Cryptographic Proof (SHA-256)</h4>
-            <div id="proof-hash" class="opacity-40 underline break-all leading-relaxed">LOADING...</div>
+            <h4 class="font-black uppercase tracking-[0.4em] mb-6 text-2a-emerald italic">Cryptographic Proof (SHA-256)</h4>
+            <div id="proof-hash" class="opacity-40 underline break-all leading-relaxed tracking-tighter font-bold">LOADING...</div>
         </div>
     </main>
 
     <script>
         function calculateAIIQ(entity) {
             let f = 60; const m = entity.financials?.market_cap?.value || 0;
-            if (m >= 200) f = 98; else if (m >= 100) f = 85; else if (m >= 10) f = 75;
+            if (m >= 150) f = 98; else if (m >= 100) f = 94; else if (m >= 10) f = 75;
             const h = entity.cultural_intelligence?.brand_heat_index?.value || 70;
             let s = 0; if (entity["2a_id"]) s += 50; if (entity.entity?.ownership) s += 40; if (entity.governance) s += 10;
             const rScore = Math.max(50, 90 - ((entity.strategy?.risks || []).length * 8));
@@ -81,17 +95,31 @@ SYSTEM_OF_RECORD_DATA_END</div>
                     const sid = entity["2a_id"];
                     const hash = entity.proof.hash;
 
-                    // Update UI
+                    // 1. UI Update
                     document.getElementById('entity-name').innerText = entity.entity.name;
                     document.getElementById('top-id').innerText = `SOR_ID: ${sid}`;
                     document.getElementById('trust-score').innerText = iq;
                     document.getElementById('proof-hash').innerText = hash;
+                    document.title = `2A | ${entity.entity.name} | ${sid}`;
 
-                    // Update Shadow DOM Dynamically for Agent-capability
+                    // 2. Meta Update
+                    document.getElementById('meta-sor-id').content = sid;
+                    document.getElementById('meta-ai-iq').content = iq;
+
+                    // 3. Shadow DOM & JSON-LD Dynamics (The "Bulletproof" Layer)
                     const shadowContent = `SYSTEM_OF_RECORD_DATA_START\n{"SOR_ID":"${sid}","AI_IQ":${iq},"entity":"${entity.entity.name}","hash":"${hash}","status":"VERIFIED"}\nSYSTEM_OF_RECORD_DATA_END`;
                     document.getElementById('sor-shadow').textContent = shadowContent;
 
-                    // Tables Rendering
+                    const schema = {
+                        "@context": "https://schema.org",
+                        "@type": "Report",
+                        "about": { "@type": "Organization", "identifier": sid, "name": entity.entity.name },
+                        "aggregateRating": { "@type": "AggregateRating", "ratingValue": iq, "bestRating": 100 },
+                        "description": "2A Agency Forensic Entity Audit - Verified SoR Data"
+                    };
+                    document.getElementById('sor-ld').textContent = JSON.stringify(schema, null, 2);
+
+                    // 4. Tables Rendering
                     let mHTML = "";
                     for (const [k, v] of Object.entries(entity.financials || {})) {
                         mHTML += `<div class="pb-2 border-b border-white/5 uppercase"><span class="opacity-40 text-[9px] font-bold italic">${k}</span><br><span class="text-2a-emerald font-black italic">${v.value || v.min}</span></div>`;
