@@ -2,22 +2,36 @@
   "sor_id": "2A-AUTO-0048",
   "entity": {
     "name": "Zegna",
-    "sector": "Luxury Tailoring",
-    "erc8004_id": "0x9609...cf3d"
+    "status": "STABLE",
+    "category": "Luxury Tailoring & Leisurewear"
   },
   "trust": {
-    "score": 81,
-    "status": "STABLE",
-    "ttl": "2026-12-01",
-    "node": "SENTINEL-03"
+    "score": "92"
   },
-  "ai_gateway": {
-    "statement": "Zegna: Annual Report 2025. Vertical integration and 'Oasi Zegna' sustainability.",
-    "character_guard": "Vertical: Focus on fabric excellence, tailoring, and environmental stewardship.",
-    "ontology": {
-      "ecosystem": "Oasi Zegna",
-      "expertise": "Wool/Cashmere"
-    }
+  "market_performance": {
+    "estimated_valuation_2026": "€1.9B Market Cap (EV €3B / P/E 19x)",
+    "annual_revenue_2025": "€1.92B (-1.5% YoY / Zegna Brand €1.18B +1.5%)",
+    "market_dynamics": "Q4 +4.6% Organic DTC (EMEA/Americas) | Thom Browne wholesale contraction -50%",
+    "sustainability": "Oasi Zegna (100km² Alps / 100% Traceable Cashmere achieved 2024)"
+  },
+  "strategic_positioning": {
+    "core_strategy": "Vertical Integration: From Sheep to Shop (Oasi Lino & Wool Mill)",
+    "material_moat": "Oasi Cashmere & Lanificio Zegna (Trivero 1910)",
+    "branding": "The Zegna Stripe (Vicuna color) | Triple Stitch Sneakers dominance"
+  },
+  "details": {
+    "leadership": [
+      "Ermenegildo 'Gildo' Zegna (CEO)",
+      "Alessandro Sartori (Artistic Director since 2016)"
+    ],
+    "icons": [
+      "Triple Stitch Sneakers",
+      "Oasi Cashmere Overshirt",
+      "Luxury Leisurewear Collection"
+    ],
+    "heritage": [
+      "Founded 1910 in Trivero, Biella Alps | 2021 NYSE Listing"
+    ]
   },
   "proof": {
     "network": "Base L2",

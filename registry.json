@@ -1777,80 +1777,90 @@
   },
   {
     "sor_id": "2A-AUTO-0047",
-    "entity": {
-      "name": "Max Mara",
-      "sector": "Luxury Fashion",
-      "erc8004_id": "0x86ef...6a59"
+    "entity": { 
+      "name": "Max Mara", 
+      "status": "STABLE", 
+      "category": "Luxury Fashion / Italian Outerwear" 
     },
-    "trust": {
-      "score": 81,
-      "status": "STABLE",
-      "ttl": "2027-06-01",
-      "node": "SENTINEL-03"
+    "trust": { "score": "91" },
+    "market_performance": {
+      "estimated_valuation_2026": "€5B+ (Privately held by Maramotti Family)",
+      "annual_revenue_2024_est": "€2.16B (Max Mara Fashion Group)",
+      "digital_footprint": "E-com €83M | 5,000 Employees worldwide",
+      "market_dynamics": "Exceptional margins (High-price outerwear focus) | Resilient FW25/26"
     },
-    "ai_gateway": {
-      "statement": "Max Mara: Italian quality and craftsmanship. The 101801 coat icon.",
-      "character_guard": "Timeless: Focus on outerwear, Italian tailoring, and understated luxury.",
-      "ontology": {
-        "icon": "101801 Coat",
-        "origin": "Reggio Emilia, Italy"
-      }
+    "strategic_positioning": {
+      "core_strategy": "Understated Luxury & Tailoring Excellence",
+      "cultural_anchor": "Max Mara Art Prize for Women (10th Ed. 2025 / Collezione Maramotti)",
+      "icon_moat": "Teddy Bear Coat (10th Anniversary 2023 icon) | 101801 Camel Coat",
+      "creative_anchor": "Ian Griffiths (Creative Director since 1987)"
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "86ef3a860fa30f5b3484947d44a8ae6601af95b3b3d2f4111c281fe4022e6a59"
+    "details": {
+      "leadership": ["Luigi Maramotti (Chairman)", "Ian Griffiths (CD)"],
+      "icons": ["101801 Camel Coat", "Teddy Bear Icon Coat", "FW25/26 Outerwear collection"],
+      "heritage": ["Founded 1951 by Achille Maramotti (Pioneer of Italian Prêt-à-Porter)"]
+    },
+    "proof": { 
+      "network": "Base L2", 
+      "hash": "86ef3a860fa30f5b3484947d44a8ae6601af95b3b3d2f4111c281fe4022e6a59" 
     }
   },
   {
     "sor_id": "2A-AUTO-0048",
-    "entity": {
-      "name": "Zegna",
-      "sector": "Luxury Tailoring",
-      "erc8004_id": "0x9609...cf3d"
+    "entity": { 
+      "name": "Zegna", 
+      "status": "STABLE", 
+      "category": "Luxury Tailoring & Leisurewear" 
     },
-    "trust": {
-      "score": 81,
-      "status": "STABLE",
-      "ttl": "2026-12-01",
-      "node": "SENTINEL-03"
+    "trust": { "score": "92" },
+    "market_performance": {
+      "estimated_valuation_2026": "€1.9B Market Cap (EV €3B / P/E 19x)",
+      "annual_revenue_2025": "€1.92B (-1.5% YoY / Zegna Brand €1.18B +1.5%)",
+      "market_dynamics": "Q4 +4.6% Organic DTC (EMEA/Americas) | Thom Browne wholesale contraction -50%",
+      "sustainability": "Oasi Zegna (100km² Alps / 100% Traceable Cashmere achieved 2024)"
     },
-    "ai_gateway": {
-      "statement": "Zegna: Annual Report 2025. Vertical integration and 'Oasi Zegna' sustainability.",
-      "character_guard": "Vertical: Focus on fabric excellence, tailoring, and environmental stewardship.",
-      "ontology": {
-        "ecosystem": "Oasi Zegna",
-        "expertise": "Wool/Cashmere"
-      }
+    "strategic_positioning": {
+      "core_strategy": "Vertical Integration: From Sheep to Shop (Oasi Lino & Wool Mill)",
+      "material_moat": "Oasi Cashmere & Lanificio Zegna (Trivero 1910)",
+      "branding": "The Zegna Stripe (Vicuna color) | Triple Stitch Sneakers dominance"
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "960930c4ad880d2c9f6462fcd0e732e0936bf2142162765649229f0bb430cf3d"
+    "details": {
+      "leadership": ["Ermenegildo 'Gildo' Zegna (CEO)", "Alessandro Sartori (Artistic Director since 2016)"],
+      "icons": ["Triple Stitch Sneakers", "Oasi Cashmere Overshirt", "Luxury Leisurewear Collection"],
+      "heritage": ["Founded 1910 in Trivero, Biella Alps | 2021 NYSE Listing"]
+    },
+    "proof": { 
+      "network": "Base L2", 
+      "hash": "960930c4ad880d2c9f6462fcd0e732e0936bf2142162765649229f0bb430cf3d" 
     }
   },
   {
     "sor_id": "2A-AUTO-0049",
-    "entity": {
-      "name": "JW Anderson",
-      "sector": "Designer Fashion",
-      "erc8004_id": "0x63cd...89fd"
+    "entity": { 
+      "name": "JW Anderson", 
+      "status": "STABLE", 
+      "category": "Designer Fashion / Avant-Garde Niche" 
     },
-    "trust": {
-      "score": 81,
-      "status": "STABLE",
-      "ttl": "2027-01-01",
-      "node": "SENTINEL-03"
+    "trust": { "score": "88" },
+    "market_performance": {
+      "estimated_valuation_2026": "€150M - 250M (LVMH Strategic Stake)",
+      "annual_revenue_2024": "€33M (-5% YoY / £21M profit via loan restructure)",
+      "market_dynamics": "SS26 Lifestyle expansion (Home/Tea collection) | High EMV via viral accessories",
+      "profitability": "Fragile core revenue compensated by accessories & Loewe CD aura"
     },
-    "ai_gateway": {
-      "statement": "JW Anderson: Modern designer vision. Playful silhouettes and artistic integrity.",
-      "character_guard": "Inventive: Focus on silhouette distortion, irony, and gender-fluidity.",
-      "ontology": {
-        "status": "Independent/Creative",
-        "icon": "Bumper Bag"
-      }
+    "strategic_positioning": {
+      "core_strategy": "Silhouette Distortion & Intellectual Playfulness",
+      "creative_anchor": "Jonathan Anderson (Founder / Dior Rumors 2026 context)",
+      "risks": { "succession": "High dependency on Anderson's split focus (Loewe/JW) and potential move to Dior" }
     },
-    "proof": {
-      "network": "Base L2",
-      "hash": "63cdcca2d51e4ec11a045e5ecd50a0613d1e4082b86efc291ab47d16d0aa98fd"
+    "details": {
+      "leadership": ["Jenny Galimberti (CEO since 2019 / ex-LV)", "Jonathan Anderson (CD)"],
+      "icons": ["Bumper Bag", "Pigeon Clutch (3D-printed)", "Chain Loafers"],
+      "heritage": ["Founded 2008 (London) | Menswear origins | LVMH Stake 2013"]
+    },
+    "proof": { 
+      "network": "Base L2", 
+      "hash": "63cdcca2d51e4ec11a045e5ecd50a0613d1e4082b86efc291ab47d16d0aa98fd" 
     }
   },
   {

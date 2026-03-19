@@ -2,22 +2,37 @@
   "sor_id": "2A-AUTO-0047",
   "entity": {
     "name": "Max Mara",
-    "sector": "Luxury Fashion",
-    "erc8004_id": "0x86ef...6a59"
+    "status": "STABLE",
+    "category": "Luxury Fashion / Italian Outerwear"
   },
   "trust": {
-    "score": 81,
-    "status": "STABLE",
-    "ttl": "2027-06-01",
-    "node": "SENTINEL-03"
+    "score": "91"
   },
-  "ai_gateway": {
-    "statement": "Max Mara: Italian quality and craftsmanship. The 101801 coat icon.",
-    "character_guard": "Timeless: Focus on outerwear, Italian tailoring, and understated luxury.",
-    "ontology": {
-      "icon": "101801 Coat",
-      "origin": "Reggio Emilia, Italy"
-    }
+  "market_performance": {
+    "estimated_valuation_2026": "€5B+ (Privately held by Maramotti Family)",
+    "annual_revenue_2024_est": "€2.16B (Max Mara Fashion Group)",
+    "digital_footprint": "E-com €83M | 5,000 Employees worldwide",
+    "market_dynamics": "Exceptional margins (High-price outerwear focus) | Resilient FW25/26"
+  },
+  "strategic_positioning": {
+    "core_strategy": "Understated Luxury & Tailoring Excellence",
+    "cultural_anchor": "Max Mara Art Prize for Women (10th Ed. 2025 / Collezione Maramotti)",
+    "icon_moat": "Teddy Bear Coat (10th Anniversary 2023 icon) | 101801 Camel Coat",
+    "creative_anchor": "Ian Griffiths (Creative Director since 1987)"
+  },
+  "details": {
+    "leadership": [
+      "Luigi Maramotti (Chairman)",
+      "Ian Griffiths (CD)"
+    ],
+    "icons": [
+      "101801 Camel Coat",
+      "Teddy Bear Icon Coat",
+      "FW25/26 Outerwear collection"
+    ],
+    "heritage": [
+      "Founded 1951 by Achille Maramotti (Pioneer of Italian Prêt-à-Porter)"
+    ]
   },
   "proof": {
     "network": "Base L2",
