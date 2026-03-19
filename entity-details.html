@@ -75,30 +75,39 @@
     <script>
         // --- ALGORITHME DE CALCUL AI IQ (2A PROTOCOL) ---
         function calculateAIIQ(entity) {
-    let iq = 15; // Base de départ
+    // --- PILIER A: Financial Power (30%) ---
+    // On base ça sur la Market Cap (LVMH = 100%, les autres au prorata ou paliers)
+    let financialScore = 0;
+    const mCap = entity.financials?.market_cap?.value || 0;
+    if (mCap >= 200) financialScore = 98;
+    else if (mCap >= 100) financialScore = 85;
+    else if (mCap >= 10) financialScore = 75;
+    else financialScore = 60;
 
-    // A. VALORISATION DES DONNÉES FINANCIÈRES (Max 45 pts)
-    const finData = entity.financials || {};
-    const keys = Object.keys(finData);
-    
-    // Si on a de la Market Cap ou du Revenue > +30 d'un coup
-    if (finData.market_cap || finData.annual_revenue) iq += 30;
-    // +5 par indicateur supplémentaire (croissance, rétention, etc.)
-    iq += (keys.length * 5);
+    // --- PILIER B: Cultural Heat (30%) ---
+    // On utilise ton Brand Heat Index du JSON
+    const heatScore = entity.cultural_intelligence?.brand_heat_index?.value || 70;
 
-    // B. AUTHENTICITÉ & PREUVE (Max 25 pts)
-    // On est plus généreux si un ID 2A est présent
-    if (entity["2a_id"]) iq += 10;
-    // Hash cryptographique présent et non-pending
-    if (entity.proof?.hash && entity.proof.hash !== "PENDING") iq += 15;
+    // --- PILIER C: Structural Strength (20%) ---
+    // Basé sur la clarté de l'Ownership et la présence du SOR_ID
+    let structuralScore = 0;
+    if (entity["2a_id"]) structuralScore += 50;
+    if (entity.entity?.ownership) structuralScore += 40;
+    if (entity.governance) structuralScore += 10;
 
-    // C. ANALYSE STRATÉGIQUE (Max 15 pts)
+    // --- PILIER D: Risk & Resilience (20%) ---
+    // On part de 90 et on dégrade selon le nombre de risques listés
     const risks = entity.strategy?.risks || [];
-    if (Array.isArray(risks) && risks.length > 0) {
-        iq += 15; // Un audit qui identifie des risques est un meilleur audit
-    }
+    let riskScore = Math.max(50, 90 - (risks.length * 8));
 
-    return Math.min(iq, 100);
+    // --- CALCUL FINAL PONDÉRÉ ---
+    const finalScore = 
+        (financialScore * 0.30) + 
+        (heatScore * 0.30) + 
+        (structuralScore * 0.20) + 
+        (riskScore * 0.20);
+
+    return Math.round(finalScore);
 }
     
 
