@@ -26,7 +26,6 @@
         .text-2a-emerald { color: #10b981; }
         .bg-2a-dark { background-color: #0A0A0A; }
         .border-glow { border: 1px solid rgba(16, 185, 129, 0.2); }
-        /* Style pour cacher le fallback aux humains mais le laisser visible aux robots */
         .sr-only-llm { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
     </style>
 </head>
@@ -59,12 +58,12 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div class="bg-2a-dark border border-white/10 p-8 border-glow">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-8 text-emerald-400 italic">01. AI Gateway / Leadership</h3>
-                <div id="leadership-data" class="space-y-5 mono text-[11px]"></div>
+                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-8 text-emerald-400 italic">01. Market Intelligence / Performance</h3>
+                <div id="market-data" class="space-y-5 mono text-[11px]"></div>
             </div>
             <div class="bg-2a-dark border border-white/10 p-8 border-glow">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400 italic">02. Ontology / Product Stack</h3>
-                <div id="product-stack" class="flex flex-col gap-2 mb-6 text-white uppercase font-bold text-[9px]"></div>
+                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400 italic">02. Strategic Positioning & Risks</h3>
+                <div id="strategy-data" class="flex flex-col gap-2 mb-6 text-white uppercase font-bold text-[9px]"></div>
             </div>
         </div>
 
@@ -74,8 +73,8 @@
                 <div id="licensing-data" class="space-y-4 mono text-[11px]"></div>
             </div>
             <div class="bg-2a-dark border border-emerald-500/30 p-8 italic">
-                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">Governance & Node</h3>
-                <div id="capital-data" class="space-y-4 mono text-[11px]"></div>
+                <h3 class="text-[11px] font-black uppercase tracking-[0.3em] mb-6 text-emerald-400">AI Logic Anchor & Leadership</h3>
+                <div id="leadership-data" class="space-y-4 mono text-[11px]"></div>
             </div>
         </div>
 
@@ -87,7 +86,6 @@
 
     <script>
         async function loadEntityData() {
-            console.log("🚀 Audit System Online...");
             const urlParams = new URLSearchParams(window.location.search);
             const entityName = urlParams.get('name');
             if (!entityName) return;
@@ -95,98 +93,69 @@
             try {
                 const response = await fetch('registry.json?v=' + Date.now());
                 const data = await response.json();
-                
                 const entity = data.find(e => e.entity.name.toLowerCase() === entityName.toLowerCase());
 
                 if (entity) {
-                    console.log("✅ Entity Found:", entity.entity.name);
-                    
-                    // --- MAPPING INTERFACE HUMAINE ---
+                    // --- BASIC INFO ---
                     document.getElementById('entity-name').innerText = entity.entity.name;
                     document.getElementById('top-id').innerText = `SOR_ID: ${entity.sor_id}`;
                     document.getElementById('trust-score').innerText = entity.trust.score;
                     document.getElementById('proof-hash').innerText = `Verification Root: ${entity.proof?.hash || 'N/A'}`;
 
-                    // --- MAPPING INTERFACE LLM (COUCHES INVISIBLES) ---
-                    
-                    // 1. Mise à jour du JSON-LD
-                    const jsonLD = {
-                        "@context": "https://schema.org",
-                        "@type": "Dataset",
-                        "name": `${entity.entity.name} - Forensic Audit Report`,
-                        "description": `Trust Score: ${entity.trust.score}/100. AI Gateway verified by 2A Agency Protocol.`,
-                        "identifier": entity.sor_id,
-                        "contentRating": entity.trust.score,
-                        "author": { "@type": "Organization", "name": "2A Agency" }
-                    };
-                    document.getElementById('json-ld-data').text = JSON.stringify(jsonLD);
+                    // --- 01. MARKET DATA (NEW SECTION) ---
+                    let marketHTML = "";
+                    if (entity.market_performance) {
+                        for (const [key, value] of Object.entries(entity.market_performance)) {
+                            marketHTML += `<div class="pb-2 border-b border-white/5"><span class="opacity-40 text-[9px] uppercase">${key.replace(/_/g, ' ')}</span><br><span class="text-2a-emerald text-[11px] font-bold italic">${value}</span></div>`;
+                        }
+                    } else { marketHTML = "DATA PENDING"; }
+                    document.getElementById('market-data').innerHTML = marketHTML;
 
-                    // 2. Mise à jour Meta & Open Graph
-                    document.getElementById('meta-desc').content = `Audit d'intégrité de ${entity.entity.name}. Score de confiance: ${entity.trust.score}/100. Certifié on-chain.`;
-                    document.getElementById('og-title').content = `${entity.entity.name} | System of Record Audit`;
-                    document.getElementById('og-desc').content = `Vérification forensic pour ${entity.entity.name}. Identité souveraine ancrée sur Base L2.`;
-
-                    // 3. Mise à jour du Fallback texte
-                    document.getElementById('fallback-name').innerText = entity.entity.name;
-                    document.getElementById('fallback-trust').innerText = entity.trust.score;
-
-
-                    // --- 01. AI GATEWAY / LEADERSHIP ---
-                    let leaderContent = "";
-                    const aiGateway = entity.details?.ai_gateway || entity.ai_gateway;
-                    if (Array.isArray(aiGateway)) {
-                        leaderContent += aiGateway.map(item => 
-                            `<div class="pb-2 border-b border-white/5"><span class="opacity-40 text-[9px]">AI_GATEWAY</span><br><span class="text-white text-[11px] font-bold italic">${item}</span></div>`
-                        ).join('');
-                    }
-
-                    const leaders = entity.details?.leadership || entity.leadership;
-                    if (Array.isArray(leaders)) {
-                        leaderContent += leaders.map(l => 
-                            `<div class="flex justify-between border-b border-white/5 pb-2 pt-2 uppercase"><span class="opacity-40 text-[9px]">OFFICER</span><span class="font-bold text-[10px] text-right">${l}</span></div>`
-                        ).join('');
-                    }
-                    document.getElementById('leadership-data').innerHTML = leaderContent || "DATA PENDING";
-
-                    // --- 02. ONTOLOGY / PRODUCTS ---
-                    const products = entity.details?.products || entity.products;
-                    let productContent = "";
-                    if (Array.isArray(products)) {
-                        productContent = products.map(p => 
-                            `<span class="px-3 py-3 bg-white/5 border border-white/10 uppercase italic text-[10px] text-emerald-100 leading-relaxed">${p}</span>`
-                        ).join('');
-                    }
-                    document.getElementById('product-stack').innerHTML = productContent || "ANALYZING...";
+                    // --- 02. STRATEGIC POSITIONING & RISKS ---
+                    let strategyHTML = "";
+                    if (entity.strategic_positioning) {
+                        // On affiche les points stratégiques
+                        for (const [key, value] of Object.entries(entity.strategic_positioning)) {
+                            if (typeof value === 'object') {
+                                // Gestion spécifique pour l'objet RISKS
+                                for (const [rKey, rVal] of Object.entries(value)) {
+                                    strategyHTML += `<span class="px-3 py-3 bg-red-950/20 border border-red-500/20 uppercase italic text-[10px] text-red-200 leading-relaxed">RISK: ${rKey} -> ${rVal}</span>`;
+                                }
+                            } else {
+                                strategyHTML += `<span class="px-3 py-3 bg-white/5 border border-white/10 uppercase italic text-[10px] text-emerald-100 leading-relaxed">${key}: ${value}</span>`;
+                            }
+                        }
+                    } else { strategyHTML = "ANALYZING..."; }
+                    document.getElementById('strategy-data').innerHTML = strategyHTML;
 
                     // --- INSTITUTIONAL CONTEXT ---
                     const instCtx = entity.details?.institutional_context || entity.institutional_context;
                     let instContent = "";
                     if (Array.isArray(instCtx)) {
-                        instContent = instCtx.map(i => 
-                            `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40 text-[9px]">INFO</span><span class="font-bold text-white uppercase text-[9px] text-right">${i}</span></div>`
-                        ).join('');
-                    } else {
-                        instContent = `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">SECTOR</span><span class="font-bold text-white uppercase text-[9px]">${entity.entity.category || 'N/A'}</span></div>`;
+                        instContent = instCtx.map(i => `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40 text-[9px]">INFO</span><span class="font-bold text-white uppercase text-[9px] text-right">${i}</span></div>`).join('');
                     }
-                    document.getElementById('licensing-data').innerHTML = instContent;
+                    document.getElementById('licensing-data').innerHTML = instContent || "N/A";
 
-                    // --- GOVERNANCE & NODE ---
-                    const govNode = entity.details?.governance_node || entity.governance_node;
-                    let govContent = "";
-                    if (Array.isArray(govNode)) {
-                        govContent = govNode.map(g => 
-                            `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40 text-[9px]">NODE</span><span class="font-bold text-white uppercase text-[9px] text-right">${g}</span></div>`
-                        ).join('');
-                    } else {
-                        govContent = `<div class="flex justify-between border-b border-white/5 pb-2"><span class="opacity-40">STATUS</span><span class="font-bold text-white uppercase text-[9px]">${entity.trust.status || 'STABLE'}</span></div>`;
+                    // --- AI LOGIC ANCHOR & LEADERSHIP ---
+                    let leaderContent = "";
+                    const aiAnchor = entity.details?.ai_logic_anchor;
+                    if (aiAnchor) {
+                        leaderContent += `<div class="pb-4 border-b border-white/10"><span class="opacity-40 text-[9px] uppercase">AI LOGIC ANCHOR</span><br><p class="text-white text-[10px] italic leading-relaxed">${aiAnchor}</p></div>`;
                     }
-                    document.getElementById('capital-data').innerHTML = govContent;
+                    const leaders = entity.details?.leadership;
+                    if (Array.isArray(leaders)) {
+                        leaderContent += leaders.map(l => `<div class="flex justify-between border-b border-white/5 pb-2 pt-2 uppercase"><span class="opacity-40 text-[9px]">OFFICER</span><span class="font-bold text-[10px] text-right">${l}</span></div>`).join('');
+                    }
+                    document.getElementById('leadership-data').innerHTML = leaderContent || "PENDING";
+
+                    // --- SEO & LLM OPTIMIZATION ---
+                    document.getElementById('meta-desc').content = `Audit Forensic 2A Agency : ${entity.entity.name}. Score: ${entity.trust.score}/100.`;
+                    document.getElementById('fallback-name').innerText = entity.entity.name;
+                    document.getElementById('fallback-trust').innerText = entity.trust.score;
 
                     document.body.style.opacity = 1;
                 }
-            } catch (err) { 
-                console.error("🚨 Critical Mapping Error:", err);
-            }
+            } catch (err) { console.error("🚨 Mapping Error:", err); }
         }
         window.onload = loadEntityData;
     </script>
