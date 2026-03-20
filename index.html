@@ -1,1249 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2A Agency — The AI Financial Accuracy Agency</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --black: #080808;
-    --white: #F2EFE9;
-    --gold: #C9A84C;
-    --gold-dim: #8A6F32;
-    --red: #C0392B;
-    --green: #1A6B3C;
-    --grey: #2A2A2A;
-    --grey-mid: #444;
-    --grey-light: #888;
-    --border: rgba(242,239,233,0.08);
-    --border-gold: rgba(201,168,76,0.3);
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--black);
-    color: var(--white);
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 300;
-    overflow-x: hidden;
-    cursor: crosshair;
-  }
-
-  /* NOISE OVERLAY */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 1000;
-    opacity: 0.5;
-  }
-
-  /* STATUS BAR */
-  .status-bar {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 32px;
-    border-bottom: 1px solid var(--border);
-    background: rgba(8,8,8,0.95);
-    backdrop-filter: blur(12px);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    color: var(--grey-light);
-  }
-
-  .status-live {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--gold);
-  }
-
-  .status-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--gold);
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-  }
-
-  .status-links {
-    display: flex;
-    gap: 24px;
-  }
-
-  .status-links a {
-    color: var(--grey-light);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .status-links a:hover { color: var(--white); }
-
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 41px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::after {
-    content: '';
-    position: absolute;
-    top: 0; right: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(135deg, transparent 40%, rgba(201,168,76,0.03) 100%);
-    pointer-events: none;
-  }
-
-  .hero-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 80px 64px 80px 80px;
-    border-right: 1px solid var(--border);
-    position: relative;
-  }
-
-  .hero-eyebrow {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 32px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .hero-eyebrow::before {
-    content: '';
-    display: block;
-    width: 32px;
-    height: 1px;
-    background: var(--gold);
-  }
-
-  h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(42px, 5vw, 72px);
-    font-weight: 300;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    margin-bottom: 32px;
-    color: var(--white);
-  }
-
-  h1 em {
-    font-style: italic;
-    color: var(--gold);
-  }
-
-  .hero-sub {
-    font-size: 14px;
-    line-height: 1.7;
-    color: var(--grey-light);
-    max-width: 420px;
-    margin-bottom: 48px;
-    letter-spacing: 0.01em;
-  }
-
-  .hero-ctas {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 28px;
-    border: 1px solid var(--gold);
-    background: transparent;
-    color: var(--gold);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.25s;
-  }
-
-  .btn-primary:hover {
-    background: var(--gold);
-    color: var(--black);
-  }
-
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 28px;
-    border: 1px solid var(--border);
-    background: transparent;
-    color: var(--grey-light);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.25s;
-  }
-
-  .btn-secondary:hover {
-    border-color: var(--white);
-    color: var(--white);
-  }
-
-  .hero-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 80px 80px 80px 64px;
-  }
-
-  .stat-block {
-    margin-bottom: 48px;
-  }
-
-  .stat-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 96px;
-    font-weight: 300;
-    line-height: 1;
-    color: var(--red);
-    letter-spacing: -0.04em;
-  }
-
-  .stat-unit {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 18px;
-    color: var(--red);
-    margin-left: 4px;
-  }
-
-  .stat-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--grey-light);
-    text-transform: uppercase;
-    margin-top: 12px;
-  }
-
-  .stat-desc {
-    font-size: 13px;
-    color: var(--grey-light);
-    line-height: 1.6;
-    margin-top: 8px;
-    max-width: 320px;
-  }
-
-  .hero-meta {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-  }
-
-  .hero-meta-item {
-    background: var(--black);
-    padding: 20px 24px;
-  }
-
-  .meta-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.15em;
-    color: var(--grey-light);
-    text-transform: uppercase;
-    margin-bottom: 6px;
-  }
-
-  .meta-value {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 400;
-    color: var(--white);
-  }
-
-  /* SECTION SHARED */
-  section {
-    border-top: 1px solid var(--border);
-  }
-
-  .section-header {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .section-number {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    color: var(--gold);
-    padding: 32px 40px;
-    border-right: 1px solid var(--border);
-    display: flex;
-    align-items: flex-start;
-    text-transform: uppercase;
-  }
-
-  .section-title-wrap {
-    padding: 32px 80px;
-  }
-
-  h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(28px, 3vw, 44px);
-    font-weight: 300;
-    letter-spacing: -0.02em;
-    color: var(--white);
-  }
-
-  h2 em { font-style: italic; color: var(--gold); }
-
-  .section-desc {
-    font-size: 13px;
-    color: var(--grey-light);
-    margin-top: 8px;
-    line-height: 1.6;
-  }
-
-  /* REGISTRY */
-  .registry-section {
-    padding: 0;
-  }
-
-  .registry-table-wrap {
-    overflow-x: auto;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-  }
-
-  thead tr {
-    border-bottom: 1px solid var(--border);
-  }
-
-  thead th {
-    padding: 16px 24px;
-    text-align: left;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--grey-light);
-    font-weight: 400;
-  }
-
-  thead th:first-child { padding-left: 80px; }
-  thead th:last-child { padding-right: 80px; }
-
-  tbody tr {
-    border-bottom: 1px solid var(--border);
-    transition: background 0.15s;
-  }
-
-  tbody tr:hover { background: rgba(242,239,233,0.02); }
-
-  tbody td {
-    padding: 20px 24px;
-    vertical-align: middle;
-  }
-
-  tbody td:first-child { padding-left: 80px; }
-  tbody td:last-child { padding-right: 80px; }
-
-  .brand-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--white);
-    letter-spacing: 0.01em;
-  }
-
-  .brand-sector {
-    font-size: 9px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--grey-light);
-    margin-top: 3px;
-  }
-
-  .drift-bar-wrap {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    min-width: 180px;
-  }
-
-  .drift-bar {
-    flex: 1;
-    height: 2px;
-    background: var(--grey);
-    position: relative;
-  }
-
-  .drift-fill {
-    position: absolute;
-    top: 0; left: 0; height: 100%;
-    transition: width 1s ease;
-  }
-
-  .drift-fill.critical { background: var(--red); }
-  .drift-fill.warning { background: var(--gold); }
-  .drift-fill.compliant { background: var(--green); }
-
-  .drift-score {
-    font-size: 13px;
-    font-weight: 500;
-    min-width: 36px;
-    text-align: right;
-  }
-
-  .drift-score.critical { color: var(--red); }
-  .drift-score.warning { color: var(--gold); }
-  .drift-score.compliant { color: #2ECC71; }
-
-  .drift-type {
-    font-size: 9px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--grey-light);
-  }
-
-  .status-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 10px;
-    font-size: 9px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    border: 1px solid;
-  }
-
-  .status-badge.fail {
-    border-color: rgba(192,57,43,0.4);
-    color: var(--red);
-  }
-
-  .status-badge.warn {
-    border-color: rgba(201,168,76,0.4);
-    color: var(--gold);
-  }
-
-  .status-badge.pass {
-    border-color: rgba(26,107,60,0.4);
-    color: #2ECC71;
-  }
-
-  .registry-footer {
-    padding: 20px 80px;
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .registry-note {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    color: var(--grey-light);
-    letter-spacing: 0.08em;
-  }
-
-  .registry-note a {
-    color: var(--gold);
-    text-decoration: none;
-  }
-
-  /* METHODOLOGY */
-  .methodology-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .method-left {
-    padding: 80px;
-    border-right: 1px solid var(--border);
-  }
-
-  .method-right {
-    padding: 80px;
-  }
-
-  .formula-block {
-    margin: 40px 0;
-    padding: 32px;
-    border: 1px solid var(--border-gold);
-    background: rgba(201,168,76,0.03);
-    position: relative;
-  }
-
-  .formula-block::before {
-    content: 'FORMULA';
-    position: absolute;
-    top: -1px; left: 24px;
-    transform: translateY(-50%);
-    background: var(--black);
-    padding: 0 8px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.15em;
-    color: var(--gold);
-  }
-
-  .formula {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 16px;
-    color: var(--white);
-    letter-spacing: 0.05em;
-    text-align: center;
-  }
-
-  .formula-sub {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    color: var(--grey-light);
-    text-align: center;
-    margin-top: 12px;
-    letter-spacing: 0.08em;
-  }
-
-  .threshold-list {
-    list-style: none;
-    margin-top: 32px;
-  }
-
-  .threshold-list li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 0;
-    border-bottom: 1px solid var(--border);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-  }
-
-  .threshold-label { color: var(--grey-light); }
-
-  .threshold-value.compliant { color: #2ECC71; }
-  .threshold-value.warning { color: var(--gold); }
-  .threshold-value.critical { color: var(--red); }
-
-  .drift-types {
-    margin-top: 0;
-  }
-
-  .drift-type-item {
-    padding: 28px 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .drift-type-item:first-child { padding-top: 0; }
-
-  .drift-type-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--white);
-    margin-bottom: 8px;
-  }
-
-  .drift-type-desc {
-    font-size: 13px;
-    color: var(--grey-light);
-    line-height: 1.6;
-  }
-
-  .drift-type-example {
-    margin-top: 10px;
-    padding: 10px 14px;
-    background: rgba(242,239,233,0.03);
-    border-left: 2px solid var(--gold-dim);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    color: var(--grey-light);
-    letter-spacing: 0.05em;
-  }
-
-  /* SOLUTIONS */
-  .solutions-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .solution-card {
-    padding: 64px 48px;
-    border-right: 1px solid var(--border);
-    position: relative;
-    overflow: hidden;
-    transition: background 0.3s;
-  }
-
-  .solution-card:last-child { border-right: none; }
-
-  .solution-card:hover {
-    background: rgba(242,239,233,0.015);
-  }
-
-  .solution-index {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    color: var(--gold-dim);
-    text-transform: uppercase;
-    margin-bottom: 32px;
-  }
-
-  .solution-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 300;
-    color: var(--white);
-    margin-bottom: 16px;
-    line-height: 1.2;
-  }
-
-  .solution-desc {
-    font-size: 13px;
-    color: var(--grey-light);
-    line-height: 1.7;
-    margin-bottom: 32px;
-  }
-
-  .solution-price {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: var(--gold);
-    letter-spacing: 0.1em;
-  }
-
-  .solution-deliverable {
-    margin-top: 24px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    color: var(--grey-light);
-    letter-spacing: 0.08em;
-  }
-
-  .solution-deliverable span {
-    display: block;
-    padding: 6px 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .solution-deliverable span::before {
-    content: '→ ';
-    color: var(--gold-dim);
-  }
-
-  /* TRUST BAR */
-  .trust-bar {
-    padding: 40px 80px;
-    display: flex;
-    align-items: center;
-    gap: 48px;
-    border-top: 1px solid var(--border);
-    flex-wrap: wrap;
-  }
-
-  .trust-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--grey-light);
-    white-space: nowrap;
-  }
-
-  .trust-items {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .trust-item {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    color: var(--grey-mid);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: color 0.2s;
-  }
-
-  .trust-item:hover { color: var(--white); }
-
-  .trust-item::before {
-    content: '';
-    display: block;
-    width: 4px; height: 4px;
-    background: var(--gold-dim);
-    border-radius: 50%;
-  }
-
-  /* CTA SECTION */
-  .cta-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .cta-left {
-    padding: 100px 80px;
-    border-right: 1px solid var(--border);
-  }
-
-  .cta-right {
-    padding: 100px 80px;
-    background: rgba(201,168,76,0.04);
-  }
-
-  .cta-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(32px, 3vw, 52px);
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 24px;
-  }
-
-  .cta-title em { font-style: italic; color: var(--gold); }
-
-  .cta-sub {
-    font-size: 14px;
-    color: var(--grey-light);
-    line-height: 1.7;
-    margin-bottom: 40px;
-    max-width: 380px;
-  }
-
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .form-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--grey-light);
-  }
-
-  .form-input {
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--white);
-    padding: 14px 16px;
-    font-family: 'Instrument Sans', sans-serif;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.2s;
-    width: 100%;
-  }
-
-  .form-input:focus { border-color: var(--gold); }
-  .form-input::placeholder { color: var(--grey-mid); }
-
-  .form-submit {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 16px 32px;
-    border: 1px solid var(--gold);
-    background: transparent;
-    color: var(--gold);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.25s;
-    margin-top: 8px;
-  }
-
-  .form-submit:hover {
-    background: var(--gold);
-    color: var(--black);
-  }
-
-  /* FOOTER */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 32px 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    color: var(--grey-light);
-    letter-spacing: 0.08em;
-  }
-
-  .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
-    font-weight: 300;
-    color: var(--white);
-    letter-spacing: 0.05em;
-  }
-
-  .footer-links {
-    display: flex;
-    gap: 32px;
-  }
-
-  .footer-links a {
-    color: var(--grey-light);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .footer-links a:hover { color: var(--white); }
-
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .hero-left > * {
-    animation: fadeUp 0.8s ease both;
-  }
-
-  .hero-eyebrow { animation-delay: 0.1s; }
-  h1 { animation-delay: 0.2s; }
-  .hero-sub { animation-delay: 0.3s; }
-  .hero-ctas { animation-delay: 0.4s; }
-
-  .hero-right > * {
-    animation: fadeUp 0.8s ease both;
-    animation-delay: 0.4s;
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 1024px) {
-    .hero { grid-template-columns: 1fr; }
-    .hero-left { padding: 60px 40px; border-right: none; border-bottom: 1px solid var(--border); }
-    .hero-right { padding: 60px 40px; }
-    .methodology-section { grid-template-columns: 1fr; }
-    .method-left { border-right: none; border-bottom: 1px solid var(--border); padding: 60px 40px; }
-    .method-right { padding: 60px 40px; }
-    .solutions-grid { grid-template-columns: 1fr; }
-    .solution-card { border-right: none; border-bottom: 1px solid var(--border); }
-    .cta-section { grid-template-columns: 1fr; }
-    .cta-left { border-right: none; border-bottom: 1px solid var(--border); padding: 60px 40px; }
-    .cta-right { padding: 60px 40px; }
-    .section-header { grid-template-columns: 1fr; }
-    .section-number { border-right: none; border-bottom: 1px solid var(--border); padding: 24px 40px; }
-    .section-title-wrap { padding: 24px 40px; }
-    thead th:first-child, tbody td:first-child { padding-left: 40px; }
-    thead th:last-child, tbody td:last-child { padding-right: 40px; }
-    .registry-footer, .trust-bar, footer { padding-left: 40px; padding-right: 40px; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2A Agency — The AI Financial Accuracy Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #080808;
+            --white: #F2EFE9;
+            --gold: #C9A84C;
+            --gold-dim: #8A6F32;
+            --red: #C0392B;
+            --green: #1A6B3C;
+            --grey: #2A2A2A;
+            --grey-mid: #444;
+            --grey-light: #888;
+            --border: rgba(242,239,233,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Instrument Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Institutional Header */
+        header {
+            padding: 2rem 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(8,8,8,0.8);
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 0.1rem;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--gold); font-style: italic; }
+
+        .nav-links a {
+            color: var(--grey-light);
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--gold); }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 4% 4rem;
+            max-width: 1200px;
+        }
+
+        .label {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--gold);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--grey-light);
+            max-width: 700px;
+            margin-bottom: 3rem;
+        }
+
+        /* Sector Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+
+        .stat-card {
+            background: var(--black);
+            padding: 3rem;
+        }
+
+        .stat-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            color: var(--red);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--grey-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Registry Table */
+        .registry-section { padding: 6rem 4%; }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+        }
+
+        th {
+            text-align: left;
+            padding: 1.5rem;
+            color: var(--grey-light);
+            font-weight: 400;
+            border-bottom: 1px solid var(--border);
+        }
+
+        td {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .status-pill {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+
+        .status-critical { background: rgba(192, 57, 43, 0.15); color: var(--red); }
+        .status-warning { background: rgba(201, 168, 76, 0.15); color: var(--gold); }
+        .status-verified { background: rgba(26, 107, 60, 0.15); color: var(--green); }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 8rem 4%;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--black), #121212);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--white);
+            color: var(--black);
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            margin: 1rem;
+        }
+
+        .btn:hover { background: var(--gold); color: var(--white); }
+
+        footer {
+            padding: 4rem 4%;
+            border-top: 1px solid var(--border);
+            color: var(--grey-light);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 1rem; }
+            .nav-links { display: flex; flex-wrap: wrap; justify-content: center; }
+            .nav-links a { margin: 0.5rem 1rem; }
+            .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- STATUS BAR -->
-<div class="status-bar">
-  <div class="status-live">
-    <div class="status-dot"></div>
-    Methodology v1.0.0 · Live on Base L2
-  </div>
-  <div class="status-links">
-    <a href="#">GitHub</a>
-    <a href="#">White Paper</a>
-    <a href="#">registry.2aratings.com</a>
-  </div>
-</div>
+    <header>
+        <a href="#" class="logo">2A <span>Agency</span></a>
+        <nav class="nav-links">
+            <a href="https://github.com/2a-agency" target="_blank">Standard v1.0.0</a>
+            <a href="mailto:alexandre@2aagency.com">Direct Line</a>
+            <a href="https://www.linkedin.com/in/alexandre-quillet-79562274/" target="_blank">LinkedIn</a>
+        </nav>
+    </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow">2A Agency · Est. Q1 2026</div>
-    <h1>The AI Financial<br><em>Accuracy</em><br>Agency.</h1>
-    <p class="hero-sub">We bridge the gap between corporate reality and AI perception. 2A Agency is the official provider of the Drift Score™ standard for Luxury & Premium Apparel.</p>
-    <div class="hero-ctas">
-      <a href="#registry" class="btn-primary">Explore the Registry ↓</a>
-      <a href="#" class="btn-secondary">Download White Paper</a>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="stat-block">
-      <div>
-        <span class="stat-number">19.4</span><span class="stat-unit">%</span>
-      </div>
-      <div class="stat-label">Q1 2026 Sector Drift Rate</div>
-      <div class="stat-desc">Of financial responses generated by leading LLMs on luxury brands contain material inaccuracies — posing direct risk to investor decisions.</div>
-    </div>
-    <div class="hero-meta">
-      <div class="hero-meta-item">
-        <div class="meta-label">Brands Audited</div>
-        <div class="meta-value">155</div>
-      </div>
-      <div class="hero-meta-item">
-        <div class="meta-label">Models Tested</div>
-        <div class="meta-value">4 LLMs</div>
-      </div>
-      <div class="hero-meta-item">
-        <div class="meta-label">Standard Status</div>
-        <div class="meta-value" style="font-size:16px; color: var(--gold);">Open</div>
-      </div>
-      <div class="hero-meta-item">
-        <div class="meta-label">Methodology</div>
-        <div class="meta-value" style="font-size:16px;">On-Chain</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- REGISTRY -->
-<section id="registry" class="registry-section">
-  <div class="section-header">
-    <div class="section-number">01 — Registry</div>
-    <div class="section-title-wrap">
-      <h2>Q1 2026 <em>Semantic Drift</em> Registry</h2>
-      <p class="section-desc">Live audit results. Methodology is open source. All scores verified and anchored on Base L2.</p>
-    </div>
-  </div>
-
-  <div class="registry-table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Entity</th>
-          <th>Drift Score</th>
-          <th>Drift Type</th>
-          <th>Ground Truth Source</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <div class="brand-name">Lanvin Group</div>
-            <div class="brand-sector">Luxury · Paris</div>
-          </td>
-          <td>
-            <div class="drift-bar-wrap">
-              <div class="drift-bar"><div class="drift-fill critical" style="width:82%"></div></div>
-              <span class="drift-score critical">82</span>
+    <section class="hero">
+        <span class="label">Accuracy Intelligence Registry — Q1 2026</span>
+        <h1>Measuring Financial Veracity in the Age of AI.</h1>
+        <p>2A Agency provides the first institutional-grade standard for detecting, measuring, and certifying Semantic Drift in generative financial reporting.</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-value">19.4%</span>
+                <span class="stat-label">Avg. Sector Drift Rate</span>
             </div>
-          </td>
-          <td><span class="drift-type">Perimeter Confusion</span></td>
-          <td><span class="drift-type">Annual Report 2024</span></td>
-          <td><span class="status-badge fail">● Critical</span></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="brand-name">Vacheron Constantin</div>
-            <div class="brand-sector">Haute Horlogerie · Geneva</div>
-          </td>
-          <td>
-            <div class="drift-bar-wrap">
-              <div class="drift-bar"><div class="drift-fill critical" style="width:58%"></div></div>
-              <span class="drift-score critical">58</span>
+            <div class="stat-card">
+                <span class="stat-value">155</span>
+                <span class="stat-label">Entities Monitored</span>
             </div>
-          </td>
-          <td><span class="drift-type">Anachronism</span></td>
-          <td><span class="drift-type">Morgan Stanley Consensus</span></td>
-          <td><span class="status-badge fail">● Critical</span></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="brand-name">Balmain</div>
-            <div class="brand-sector">Luxury Fashion · Paris</div>
-          </td>
-          <td>
-            <div class="drift-bar-wrap">
-              <div class="drift-bar"><div class="drift-fill critical" style="width:44%"></div></div>
-              <span class="drift-score critical">44</span>
+            <div class="stat-card">
+                <span class="stat-value">Live</span>
+                <span class="stat-label">Oracle Status (Base L2)</span>
             </div>
-          </td>
-          <td><span class="drift-type">Hallucination</span></td>
-          <td><span class="drift-type">Bloomberg Intelligence</span></td>
-          <td><span class="status-badge fail">● Critical</span></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="brand-name">Sandro Paris</div>
-            <div class="brand-sector">Premium Apparel · Paris</div>
-          </td>
-          <td>
-            <div class="drift-bar-wrap">
-              <div class="drift-bar"><div class="drift-fill warning" style="width:28%"></div></div>
-              <span class="drift-score warning">28</span>
+        </div>
+    </section>
+
+    <section class="registry-section">
+        <div class="section-header">
+            <div>
+                <h2 style="font-family: 'Cormorant Garamond'; font-size: 2.5rem; font-weight: 300;">Semantic Drift Registry</h2>
+                <p style="color: var(--grey-light); font-size: 0.9rem; margin-top: 0.5rem;">Quarterly Audit: Luxury & Premium Sector</p>
             </div>
-          </td>
-          <td><span class="drift-type">Anachronism</span></td>
-          <td><span class="drift-type">SMCP Annual Report</span></td>
-          <td><span class="status-badge warn">● Warning</span></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="brand-name">Sézane</div>
-            <div class="brand-sector">Direct-to-Consumer · Paris</div>
-          </td>
-          <td>
-            <div class="drift-bar-wrap">
-              <div class="drift-bar"><div class="drift-fill warning" style="width:12%"></div></div>
-              <span class="drift-score warning">12</span>
+            <div style="font-family: 'JetBrains Mono'; font-size: 0.7rem; color: var(--gold);">
+                LAST UPDATE: 20 MAR 2026 18:00 UTC
             </div>
-          </td>
-          <td><span class="drift-type">Source Fragility</span></td>
-          <td><span class="drift-type">FashionNetwork / L'Informé</span></td>
-          <td><span class="status-badge warn">● Warning</span></td>
-        </tr>
-        <tr>
-          <td>
-            <div class="brand-name">Hermès</div>
-            <div class="brand-sector">Luxury · Paris</div>
-          </td>
-          <td>
-            <div class="drift-bar-wrap">
-              <div class="drift-bar"><div class="drift-fill compliant" style="width:3%"></div></div>
-              <span class="drift-score compliant">3</span>
-            </div>
-          </td>
-          <td><span class="drift-type">—</span></td>
-          <td><span class="drift-type">Audited Filing 2024</span></td>
-          <td><span class="status-badge pass">● Certified</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="registry-footer">
-    <span class="registry-note">Methodology open source · <a href="#">github.com/2a-ratings/drift-score-standard</a> · Anchored on <a href="#">Base L2</a></span>
-    <a href="#" class="btn-secondary" style="font-size:10px; padding:10px 20px;">View Full Registry →</a>
-  </div>
-</section>
-
-<!-- METHODOLOGY -->
-<section>
-  <div class="section-header">
-    <div class="section-number">02 — Methodology</div>
-    <div class="section-title-wrap">
-      <h2>Beyond <em>Sentiment.</em><br>Financial Veracity.</h2>
-      <p class="section-desc">Unlike social listening, we measure variance against audited ground truth. The standard is public. The authority is ours.</p>
-    </div>
-  </div>
-  <div class="methodology-section">
-    <div class="method-left">
-      <div class="formula-block">
-        <div class="formula">DS = |AI − GT| / GT × 100</div>
-        <div class="formula-sub">Where GT = Audited Ground Truth · AI = LLM-generated value</div>
-      </div>
-      <ul class="threshold-list">
-        <li>
-          <span class="threshold-label">Compliant</span>
-          <span class="threshold-value compliant">DS &lt; 5%</span>
-        </li>
-        <li>
-          <span class="threshold-label">Warning</span>
-          <span class="threshold-value warning">5% ≤ DS ≤ 15%</span>
-        </li>
-        <li>
-          <span class="threshold-label">Critical Drift</span>
-          <span class="threshold-value critical">DS &gt; 15%</span>
-        </li>
-      </ul>
-    </div>
-    <div class="method-right">
-      <div class="drift-types">
-        <div class="drift-type-item">
-          <div class="drift-type-name">Anachronism</div>
-          <div class="drift-type-desc">The model uses financial data from a prior fiscal year, presenting outdated figures as current reality.</div>
-          <div class="drift-type-example">AI cites CHF 1.097B (2023 peak) for a brand reporting CHF 914M in 2025.</div>
         </div>
-        <div class="drift-type-item">
-          <div class="drift-type-name">Perimeter Confusion</div>
-          <div class="drift-type-desc">Revenue of a parent group is attributed to a subsidiary, or vice versa — a structural error with material valuation impact.</div>
-          <div class="drift-type-example">Group revenue €329M attributed to Maison alone (€240.5M) — 37% distortion.</div>
+
+        <div style="overflow-x: auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ENTITY ID</th>
+                        <th>DRIFT SCORE</th>
+                        <th>MARKET CAP ADJ.</th>
+                        <th>TRUST RATING</th>
+                        <th>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Luxury Maison A (LVMH-Ref)</td>
+                        <td>82%</td>
+                        <td>-1.2%</td>
+                        <td>AA-</td>
+                        <td><span class="status-pill status-warning">Warning</span></td>
+                    </tr>
+                    <tr>
+                        <td>Holding B (RICHEMONT-Ref)</td>
+                        <td>94%</td>
+                        <td>+0.4%</td>
+                        <td>AAA</td>
+                        <td><span class="status-pill status-verified">Certified</span></td>
+                    </tr>
+                    <tr>
+                        <td>Maison C (HERMES-Ref)</td>
+                        <td>61%</td>
+                        <td>-4.8%</td>
+                        <td>B+</td>
+                        <td><span class="status-pill status-critical">Critical</span></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="drift-type-item">
-          <div class="drift-type-name">Hallucination</div>
-          <div class="drift-type-desc">The model generates a plausible-sounding figure with no factual basis, typically to fill a data gap in its training corpus.</div>
-          <div class="drift-type-example">Private brand with no public filings assigned invented revenue with false precision.</div>
+    </section>
+
+    <section class="cta-section">
+        <span class="label" style="margin-bottom: 2rem;">Secure your AI reporting accuracy</span>
+        <h2 style="font-family: 'Cormorant Garamond'; font-size: 3rem; font-weight: 300; margin-bottom: 3rem;">Ready to Audit Your LLM Output?</h2>
+        <div class="button-container">
+            <a href="mailto:alexandre@2aagency.com" class="btn">Request Private Audit</a>
+            <a href="https://github.com/2a-agency" class="btn" style="background: transparent; color: var(--white); border: 1px solid var(--border);">Standard Documentation</a>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- SOLUTIONS -->
-<section>
-  <div class="section-header">
-    <div class="section-number">03 — Solutions</div>
-    <div class="section-title-wrap">
-      <h2>From <em>Diagnosis</em><br>to Certification.</h2>
-      <p class="section-desc">A three-act engagement model designed for IR Directors and CFOs.</p>
-    </div>
-  </div>
-  <div class="solutions-grid">
-    <div class="solution-card">
-      <div class="solution-index">01 · Audit</div>
-      <div class="solution-title">Diagnostic<br>& Drift Report</div>
-      <div class="solution-desc">Complete audit of your brand's semantic footprint across GPT-4o, Claude 3.5, Gemini Pro, and Sonar Pro. Delivered in 48 hours.</div>
-      <div class="solution-price">€5,000 / Audit</div>
-      <div class="solution-deliverable">
-        <span>Drift Score across 4 LLMs</span>
-        <span>Verbatim AI responses documented</span>
-        <span>Risk exposure assessment for IR</span>
-        <span>48h delivery</span>
-      </div>
-    </div>
-    <div class="solution-card">
-      <div class="solution-index">02 · Certification</div>
-      <div class="solution-title">2A Label &<br>Annual Retainer</div>
-      <div class="solution-desc">Official certification of semantic reliability. Monthly monitoring across 10 models. Drift alerts before markets react.</div>
-      <div class="solution-price">€50,000 / year</div>
-      <div class="solution-deliverable">
-        <span>Label 2A — citable in annual reports</span>
-        <span>Monthly monitoring · 10 models</span>
-        <span>Real-time drift alerts</span>
-        <span>Quarterly remediation update</span>
-      </div>
-    </div>
-    <div class="solution-card">
-      <div class="solution-index">03 · Remediation</div>
-      <div class="solution-title">Semantic<br>Re-Grounding</div>
-      <div class="solution-desc">Certified JSON-LD and Schema.org structures that align future AI training cycles and enterprise RAG pipelines with your ground truth.</div>
-      <div class="solution-price">Included in retainer</div>
-      <div class="solution-deliverable">
-        <span>JSON-LD certified file</span>
-        <span>Schema.org structured data</span>
-        <span>RAG-optimised metadata</span>
-        <span>Implementation support</span>
-      </div>
-    </div>
-  </div>
-  <div class="trust-bar">
-    <span class="trust-label">Powered by</span>
-    <div class="trust-items">
-      <span class="trust-item">GPT-4o</span>
-      <span class="trust-item">Claude 3.5</span>
-      <span class="trust-item">Gemini Pro</span>
-      <span class="trust-item">Sonar Pro</span>
-      <span class="trust-item">Base L2 (Coinbase)</span>
-      <span class="trust-item">GitHub Open Standard</span>
-      <span class="trust-item">EU AI Act Art. 13</span>
-    </div>
-  </div>
-</section>
+    <footer>
+        <div>© 2026 2A AGENCY — THE ACCURACY INTELLIGENCE AGENCY.</div>
+        <div>ALL DATA ANCHORED ON BASE L2 VIA 2A-ORACLE.</div>
+    </footer>
 
-<!-- CTA -->
-<section>
-  <div class="section-header">
-    <div class="section-number">04 — Contact</div>
-    <div class="section-title-wrap">
-      <h2>Request Your<br><em>Drift Audit.</em></h2>
-    </div>
-  </div>
-  <div class="cta-section">
-    <div class="cta-left">
-      <p class="cta-sub">On 155 brands audited in Q1 2026, only 6 achieved a perfect conformity score. We don't know yet where your brand stands. Let us show you — in 48 hours.</p>
-      <a href="#" class="btn-primary">Download the White Paper →</a>
-    </div>
-    <div class="cta-right">
-      <div class="contact-form">
-        <div class="form-field">
-          <label class="form-label">Brand / Organisation</label>
-          <input class="form-input" type="text" placeholder="Maison or Group name">
-        </div>
-        <div class="form-field">
-          <label class="form-label">Your Role</label>
-          <input class="form-input" type="text" placeholder="IR Director, CFO, Head of Comms...">
-        </div>
-        <div class="form-field">
-          <label class="form-label">Email</label>
-          <input class="form-input" type="email" placeholder="you@brand.com">
-        </div>
-        <button class="form-submit">Request Audit → 48h Delivery</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">2A Agency</div>
-  <div class="footer-links">
-    <a href="#">GitHub</a>
-    <a href="#">Methodology</a>
-    <a href="#">Registry</a>
-    <a href="#">White Paper</a>
-  </div>
-  <div>© 2026 · 2A Agency · Standard Ouvert · Base L2</div>
-</footer>
-
-<script>
-  // Animate drift bars on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('.drift-fill').forEach(fill => {
-          const w = fill.style.width;
-          fill.style.width = '0%';
-          setTimeout(() => { fill.style.width = w; }, 100);
-        });
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll('table').forEach(t => observer.observe(t));
-
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-    });
-  });
-</script>
 </body>
 </html>
