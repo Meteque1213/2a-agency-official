@@ -12,6 +12,17 @@ const escapeHtml = (str) => String(str || "")
 // --- CONFIGURATION DU DOMAINE (L'ANCRE DE CONFIANCE) ---
 const BASE_URL = "https://www.2aagency.com";
 
+// --- FONCTION DE SLUGGING PRO (Nettoyage des accents et tirets) ---
+const generateSlug = (name) => {
+    return name
+        .toLowerCase()
+        .normalize("NFD")               // Décompose les accents (ë -> e + ¨)
+        .replace(/[\u0300-\u036f]/g, "") // Supprime les accents restants
+        .replace(/[^a-z0-9]/g, '-')     // Tout ce qui n'est pas alphanumérique devient un tiret
+        .replace(/-+/g, '-')            // Remplace les doubles tirets par un seul
+        .replace(/^-|-$/g, '');         // Supprime les tirets aux extrémités
+};
+
 // Chargement de la base de données
 const registry = JSON.parse(fs.readFileSync('registry.json', 'utf8'));
 const outputDir = path.join(__dirname, 'public');
@@ -57,10 +68,13 @@ registry.forEach(brand => {
         eventsHtml += `<div class="mb-4"><p class="text-[#065f46] text-[10px] font-black italic uppercase">${e.year} | ${e.type.toUpperCase()}</p><p class="text-xs normal-case font-normal leading-tight">${escapeHtml(e.description)}</p></div>`;
     });
 
-    // --- LOGIQUE DE NOM DE FICHIER (SLUG) ---
-    let slug = String(rawName).toLowerCase().replace(/[^a-z0-9]/g, '-');
+    // --- LOGIQUE DE NOM DE FICHIER (SLUG PRO) ---
+    // Utilise entity.slug si présent dans le JSON, sinon génère proprement
+    let slug = entity.slug || generateSlug(rawName);
+    
     slugCount[slug] = (slugCount[slug] || 0) + 1;
     if (slugCount[slug] > 1) slug = `${slug}-${slugCount[slug]}`;
+    
     const fileName = `${slug}.html`;
     const filePath = path.join(outputDir, fileName);
 
@@ -181,7 +195,7 @@ registry.forEach(brand => {
         <td class="p-6 text-sm uppercase font-bold text-[#065f46]">${escapeHtml(rawName)}</td>
         <td class="p-6 text-[#065f46] text-2xl font-black tracking-tighter italic">${iqScore}</td>
         <td class="p-6 opacity-40 text-[10px] font-mono tracking-tighter text-black font-mono uppercase">${sorId}</td>
-        <td class="p-6 text-right"><span class="border border-[#065f46]/30 text-[#065f46] text-[9px] px-3 py-1 group-hover:bg-[#065f46] group-hover:text-white transition-all italic tracking-widest uppercase">ACCESS_DATA</span></td>
+        <td class="p-6 text-right"><span class="border border-[#065f46]/30 text-[#065f46] text-[9px] px-3 py-1 group-hover:bg-[#065f46] group-hover:text-white transition-all italic tracking-widest uppercase font-bold">ACCESS_DATA</span></td>
     </tr>`;
     sitemapUrls += `<url><loc>${BASE_URL}/${fileName}</loc></url>\n`;
 });
@@ -225,4 +239,4 @@ fs.writeFileSync(path.join(outputDir, 'index.html'), indexHtml);
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${BASE_URL}/</loc></url>${sitemapUrls}</urlset>`;
 fs.writeFileSync(path.join(outputDir, 'sitemap.xml'), sitemapXml);
 
-console.log(`✅ SUCCESS: Fully optimized System of Record deployed for ${registry.length} entities on ${BASE_URL}.`);
+console.log(`✅ SUCCESS: Fully optimized System of Record for ${registry.length} entities on ${BASE_URL}.`);
