@@ -9,6 +9,9 @@ const escapeHtml = (str) => String(str || "")
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
 
+// --- CONFIGURATION DU DOMAINE (L'ANCRE DE CONFIANCE) ---
+const BASE_URL = "https://www.2aagency.com";
+
 // Chargement de la base de données
 const registry = JSON.parse(fs.readFileSync('registry.json', 'utf8'));
 const outputDir = path.join(__dirname, 'public');
@@ -71,6 +74,9 @@ registry.forEach(brand => {
     <title>${escapeHtml(rawName)} | AI IQ & Forensic Audit | 2A Agency</title>
     <meta name="description" content="Official 2A Agency Forensic Audit for ${escapeHtml(rawName)}. AI IQ Score: ${iqScore}. Strategic risk assessment, ownership structure, and cultural moat analysis.">
     
+    <meta property="og:title" content="${escapeHtml(rawName)} - System of Record Audit">
+    <meta property="og:url" content="${BASE_URL}/${fileName}">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -177,7 +183,7 @@ registry.forEach(brand => {
         <td class="p-6 opacity-40 text-[10px] font-mono tracking-tighter text-black font-mono uppercase">${sorId}</td>
         <td class="p-6 text-right"><span class="border border-[#065f46]/30 text-[#065f46] text-[9px] px-3 py-1 group-hover:bg-[#065f46] group-hover:text-white transition-all italic tracking-widest uppercase">ACCESS_DATA</span></td>
     </tr>`;
-    sitemapUrls += `<url><loc>https://2a-agency-official.vercel.app/${fileName}</loc></url>\n`;
+    sitemapUrls += `<url><loc>${BASE_URL}/${fileName}</loc></url>\n`;
 });
 
 // --- GÉNÉRATION DE L'INDEX ---
@@ -215,7 +221,8 @@ const indexHtml = `<!DOCTYPE html>
 
 fs.writeFileSync(path.join(outputDir, 'index.html'), indexHtml);
 
-const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://2a-agency-official.vercel.app/</loc></url>${sitemapUrls}</urlset>`;
+// --- SITEMAP XML (ALIGNÉ SUR LE DOMAINE PRO) ---
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${BASE_URL}/</loc></url>${sitemapUrls}</urlset>`;
 fs.writeFileSync(path.join(outputDir, 'sitemap.xml'), sitemapXml);
 
-console.log(`✅ SUCCESS: Fully optimized System of Record deployed for ${registry.length} entities.`);
+console.log(`✅ SUCCESS: Fully optimized System of Record deployed for ${registry.length} entities on ${BASE_URL}.`);
