@@ -7,94 +7,80 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        :root { --emerald: #10b981; --off-white: #fcfcfc; }
+        :root { --emerald: #065f46; --off-white: #fcfcfc; }
         body { background-color: var(--off-white); color: #1a1a1a; font-family: 'Space Grotesk', sans-serif; line-height: 1.8; }
         .serif { font-family: 'Playfair Display', serif; }
         .emerald-highlight { color: var(--emerald); font-weight: 700; }
         .section-border { border-left: 2px solid #eee; padding-left: 2rem; margin-bottom: 5rem; }
         .highlight-box { background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%); border: 1px solid #dcfce7; padding: 2rem; }
-        .math-container { width: 100%; overflow-x: auto; text-align: center; padding: 1.5rem 0; font-family: serif; font-size: 1.5rem; color: #fff; }
+        .math-container { width: 100%; overflow-x: auto; text-align: center; padding: 1.5rem 0; font-family: serif; font-size: 1.5rem; color: var(--emerald); }
         pre { background: #1a1a1a; color: #adbac7; padding: 1.5rem; border-radius: 4px; font-size: 0.75rem; border: 1px solid #333; }
-        .stat-badge { font-size: 9px; font-weight: bold; background: #10b981; color: white; padding: 2px 8px; border-radius: 2px; }
+        .stat-badge { font-size: 9px; font-weight: bold; background: #065f46; color: white; padding: 2px 8px; border-radius: 2px; }
     </style>
 </head>
-<body class="p-6 md:p-12">
-    <nav class="max-w-5xl mx-auto flex justify-between items-center mb-24 border-b border-black/5 pb-8">
+<body class="p-6 md:p-12 italic font-bold">
+    <nav class="max-w-5xl mx-auto flex justify-between items-center mb-24 border-b border-black/5 pb-8 uppercase">
         <div class="flex items-center gap-2">
-            <div class="w-3 h-3 bg-[#10b981] rounded-full"></div>
-            <span class="font-bold text-sm tracking-tight uppercase">2A AGENCY</span>
+            <div class="w-3 h-3 bg-[#065f46] rounded-full"></div>
+            <span class="font-bold text-sm tracking-tight">2A AGENCY</span>
         </div>
-        <div class="flex gap-8 items-center text-[10px] font-bold uppercase tracking-widest">
+        <div class="flex gap-8 items-center text-[10px] tracking-widest">
             <a href="index.html" class="opacity-40 hover:opacity-100 italic transition-opacity">Home</a>
-            <a href="audits.html" class="opacity-40 hover:opacity-100 italic transition-opacity">Audits</a>
-            <a href="whitepaper.html" class="text-[#10b981] border-b-2 border-[#10b981] italic pb-1">Protocol</a>
+            <a href="index.html" class="opacity-40 hover:opacity-100 italic transition-opacity">Audits</a>
+            <a href="whitepaper.html" class="text-[#065f46] border-b-2 border-[#065f46] italic pb-1">Protocol</a>
         </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-4xl mx-auto uppercase">
         <header class="mb-32">
             <div class="flex items-center gap-4 mb-8">
-                <h3 class="text-[11px] uppercase tracking-[0.6em] text-black/30 font-bold italic">Technical Specification — v2.1.0</h3>
+                <h3 class="text-[11px] tracking-[0.6em] text-black/30 font-bold italic uppercase">Technical Specification — v2.1.0</h3>
                 <span class="stat-badge animate-pulse">LIVE ON BASE L2</span>
             </div>
-            <h1 class="serif text-6xl md:text-8xl text-black italic mb-10 leading-none tracking-tighter">
+            <h1 class="serif text-6xl md:text-8xl text-black italic mb-10 leading-none tracking-tighter uppercase">
                 The <span class="emerald-highlight">SoR</span> Protocol
             </h1>
             <p class="text-xl md:text-2xl font-light text-black/60 italic leading-relaxed max-w-2xl font-serif">
-                System of Record: The global truth infrastructure for 1,056+ verified entities.
+                System of Record: The global truth infrastructure for 2,700+ verified entities.
             </p>
         </header>
 
         <section class="section-border">
-            <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 01. Abstract</h2>
+            <h2 class="text-[#065f46] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 01. Abstract</h2>
             <div class="text-lg text-black/80 font-medium italic mb-12 space-y-6 serif">
-                <p>The <strong>System of Record (SoR)</strong> protocol solves the crisis of LLM hallucinations. By anchoring 1,056 Trust Nodes on the Base (L2) blockchain, we provide a decentralized source of truth. AI agents can now verify the integrity of their training data via cryptographic Proof-of-Origin.</p>
+                <p>The <strong>System of Record (SoR)</strong> protocol solves the crisis of LLM hallucinations. By anchoring Trust Nodes on the Base (L2) blockchain, we provide a decentralized source of truth. AI agents can now verify the integrity of their training data via cryptographic Proof-of-Origin.</p>
             </div>
         </section>
 
         <section class="section-border">
-            <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 02. Integrity Verification</h2>
-            <p class="mb-8 text-black/70 italic">Contrairement aux bases de données centralisées, le protocole SoR permet une vérification <strong>Zero-Trust</strong> via le Root Hash global :</p>
-            <div class="bg-black text-white py-12 px-10 rounded-sm shadow-2xl mb-12 relative overflow-hidden text-center">
-                <div class="math-container italic text-[#10b981]">H(registry) = fb1206...2802</div>
-                <p class="text-[9px] text-gray-400 tracking-widest mt-4 uppercase">Ce Hash certifie l'intégrité de 1,056 entités simultanément.</p>
+            <h2 class="text-[#065f46] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 02. Integrity Verification</h2>
+            <p class="mb-8 text-black/70 italic uppercase">Vérification Zero-Trust via le Root Hash global :</p>
+            <div class="bg-gray-50 border border-black/10 py-12 px-10 rounded-sm mb-12 text-center">
+                <div class="math-container italic uppercase">H(registry) = fb1206...2802</div>
+                <p class="text-[9px] text-gray-400 tracking-widest mt-4 uppercase font-normal">Ce Hash certifie l'intégrité des 2,700 entités.</p>
             </div>
         </section>
 
-        <section class="section-border">
-            <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 03. Architecture of a Trust Node</h2>
-            <div class="space-y-8 text-sm">
+        <section class="section-border" id="architecture">
+            <h2 class="text-[#065f46] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 03. Architecture of a Trust Node</h2>
+            <div class="space-y-8 text-sm italic uppercase">
                 <div class="highlight-box">
-                    <h4 class="font-bold uppercase mb-2">I. JSON-LD Structuring</h4>
-                    <p class="text-gray-600">Données lisibles par machine (Semantic Web) incluant le SOR_ID et le score d'intégrité (0-100).</p>
+                    <h4 class="font-bold mb-2">I. JSON-LD Structuring</h4>
+                    <p class="text-gray-600 font-normal">Données lisibles par machine incluant le SOR_ID et le score d'intégrité.</p>
                 </div>
                 <div class="highlight-box">
-                    <h4 class="font-bold uppercase mb-2">II. Character Guard Directives</h4>
-                    <p class="text-gray-600">Instructions métasémantiques forçant les LLM à respecter un périmètre de réponse certifié.</p>
+                    <h4 class="font-bold mb-2">II. Character Guard Directives</h4>
+                    <p class="text-gray-600 font-normal">Instructions métasémantiques forçant les LLM à respecter un périmètre certifié.</p>
                 </div>
                 <div class="highlight-box">
-                    <h4 class="font-bold uppercase mb-2">III. On-Chain Notarization</h4>
-                    <p class="text-gray-600">Ancrage permanent sur Base L2 via la fonction <code>issueCertificate()</code> du contrat intelligent 2A.</p>
+                    <h4 class="font-bold mb-2">III. On-Chain Notarization</h4>
+                    <p class="text-gray-600 font-normal">Ancrage permanent sur Base L2 via la fonction issueCertificate().</p>
                 </div>
             </div>
-        </section>
-
-        <section class="section-border">
-            <h2 class="text-[#10b981] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 04. Current Registry State</h2>
-            <div class="serif text-lg italic text-black/80 mb-8 leading-relaxed">
-                <p>Au 17 mars 2026, le registre a atteint sa maturité opérationnelle avec le déploiement du Jalon 1056.</p>
-            </div>
-            <pre><code>{
-  "protocol": "2A-SoR-v2.1",
-  "active_nodes": 1056,
-  "blockchain": "Base (Coinchain L2)",
-  "root_hash": "fb120608bcafe0960e3bda9b88466299928f8ab9862046153abca1b4d3f42802",
-  "tx": "0xf32099e9a1219a5d82944a239388f8ee3f05127c45575a6dbac88b9c98ebfcd0"
-}</code></pre>
         </section>
 
         <footer class="mt-32 pt-16 border-t border-black/5 text-[11px] uppercase tracking-[0.5em] text-black/20 font-bold text-center italic pb-12">
-            2A AGENCY — SOR PROTOCOL — 1056 NODES CERTIFIED
+            2A AGENCY — SOR PROTOCOL — 2700 NODES CERTIFIED
         </footer>
     </div>
 </body>
