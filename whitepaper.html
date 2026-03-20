@@ -16,57 +16,32 @@
             --border-gold: rgba(201,168,76,0.25);
             --grey-light: #888;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            background-color: var(--black);
-            color: var(--white);
-            font-family: 'Instrument Sans', sans-serif;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
+        body { background-color: var(--black); color: var(--white); font-family: 'Instrument Sans', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
         .container { max-width: 850px; margin: 0 auto; padding: 80px 40px; }
-
         .mono { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; font-size: 11px; letter-spacing: 0.15em; color: var(--gold); }
-        
         header { margin-bottom: 100px; border-bottom: 1px solid var(--border); padding-bottom: 40px; }
         h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 400; line-height: 1.1; margin: 20px 0; letter-spacing: -0.02em; }
         .subtitle { font-size: 18px; color: var(--grey-light); max-width: 600px; }
-
         .section { margin-bottom: 80px; }
         .section-label { font-family: 'JetBrains Mono', monospace; color: var(--gold-dim); font-size: 12px; margin-bottom: 15px; display: block; }
         h2 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; margin-bottom: 25px; border-left: 2px solid var(--gold); padding-left: 20px; }
-        
         p { margin-bottom: 20px; font-size: 17px; color: rgba(242,239,233,0.85); text-align: justify; }
-        
         .callout { background: rgba(201,168,76,0.05); border: 1px solid var(--border-gold); padding: 30px; margin: 40px 0; position: relative; }
         .callout::before { content: attr(data-label); position: absolute; top: -10px; left: 20px; background: var(--black); padding: 0 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold); }
         .callout p { margin-bottom: 0; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--white); text-align: left; }
-
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
         .grid-item h4 { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--gold); margin-bottom: 10px; }
         .grid-item p { font-size: 15px; }
-
         .code-block { display: block; background: #000; padding: 20px; border: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #fff; margin: 20px 0; overflow-x: auto; white-space: pre; }
         .highlight { color: var(--gold); }
-
-        .divider { height: 1px; background: var(--border); margin: 60px 0; border: none; }
         .back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 12px; border-bottom: 1px solid transparent; transition: all 0.3s; }
         .back-link:hover { border-bottom: 1px solid var(--gold); }
-
         .footnote { margin-top: 100px; padding-top: 40px; border-top: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #666; display: flex; justify-content: space-between; }
-        
-        @media (max-width: 600px) {
-            .container { padding: 40px 20px; }
-            h1 { font-size: 36px; }
-            .grid { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 600px) { .container { padding: 40px 20px; } h1 { font-size: 36px; } .grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-
 <div class="container">
     <header>
         <div class="mono">White Paper — V1.0.0 — Q1 2026</div>
@@ -102,14 +77,13 @@
         <div class="section-label">III — The Architecture</div>
         <h2>The Ground Truth Registry</h2>
         <p>To fix Semantic Drift, brands must move from narrative documents to <strong>Machine-Readable Specifications</strong>. We use JSON-LD, the format AI retrieval systems are architecturally designed to prioritize.</p>
-
         <div class="code-block">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Vacheron Constantin",
-  <span class="highlight">"source": "https://api.2aagency.com/v1/brands/vc/certified",</span>
-  "revenue": { "value": "914000000", "currency": "CHF" }
+  "name": "Brand Certified",
+  <span class="highlight">"source": "https://api.2aagency.com/v1/brand/certified",</span>
+  "revenue": { "value": "240500000", "currency": "EUR" }
 }
         </div>
     </div>
@@ -139,14 +113,13 @@
     <div class="section">
         <div class="section-label">VI — Business Logic</div>
         <h2>The "Cheval de Troie" Model</h2>
-        <p>We provide brands with a decentralized entry point (the JSON-LD snippet) to ensure immediate protection. As the relationship matures, we migrate this data to a centralized API-driven model, ensuring that the brand's truth is always synchronized, audited, and revocable—creating a permanent layer of semantic safety.</p>
+        <p>We provide brands with a decentralized entry point (the JSON-LD snippet) to ensure immediate protection. As the relationship matures, we migrate this data to a centralized API-driven model, ensuring that the brand's truth is always synchronized, audited, and revocable.</p>
     </div>
 
     <div class="section">
         <div class="section-label">VII — Conclusion</div>
         <h2>Standardizing Semantic Reliability</h2>
-        <p>As Moody's standardized credit risk, 2A Agency standardizes semantic reliability for the age of AI agents. The authority comes not from the technology, but from the certification.</p>
-
+        <p>As Moody's standardized credit risk, 2A Agency standardizes semantic reliability for the age of AI agents. The authority comes from the certification.</p>
         <a href="index.html" class="back-link">← Return to Registry</a>
     </div>
 
@@ -154,8 +127,6 @@
         <div>© 2026 2A AGENCY · alexandre@2aagency.com</div>
         <div>METHODOLOGY ANCHORED ON BASE L2 · <a href="https://github.com/Meteque1213/2a-agency-official" style="color:var(--gold)">GITHUB</a></div>
     </div>
-
 </div>
-
 </body>
 </html>
