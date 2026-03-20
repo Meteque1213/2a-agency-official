@@ -11,204 +11,64 @@
             --black: #080808;
             --white: #F2EFE9;
             --gold: #C9A84C;
-            --gold-dim: #8A6F32;
             --red: #C0392B;
             --green: #1A6B3C;
-            --grey: #2A2A2A;
-            --grey-mid: #444;
-            --grey-light: #888;
             --border: rgba(242,239,233,0.08);
+            --grey-light: #888;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--black); color: var(--white); font-family: 'Instrument Sans', sans-serif; line-height: 1.6; overflow-x: hidden; }
 
-        body {
-            background-color: var(--black);
-            color: var(--white);
-            font-family: 'Instrument Sans', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Institutional Header */
-        header {
-            padding: 2rem 4%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(8,8,8,0.8);
-        }
-
-        .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            font-weight: 300;
-            letter-spacing: 0.1rem;
-            color: var(--white);
-            text-decoration: none;
-        }
-
+        header { padding: 2rem 4%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; background: rgba(8,8,8,0.8); backdrop-filter: blur(10px); }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; text-decoration: none; color: var(--white); }
         .logo span { color: var(--gold); font-style: italic; }
-
-        .nav-links a {
-            color: var(--grey-light);
-            text-decoration: none;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            margin-left: 2rem;
-            transition: color 0.3s;
-        }
-
+        .nav-links a { color: var(--grey-light); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; text-transform: uppercase; margin-left: 2rem; transition: 0.3s; }
         .nav-links a:hover { color: var(--gold); }
 
-        /* Hero Section */
-        .hero {
-            padding: 8rem 4% 4rem;
-            max-width: 1200px;
-        }
+        .hero { padding: 8rem 4% 4rem; max-width: 1200px; }
+        .label { font-family: 'JetBrains Mono', monospace; color: var(--gold); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 1.5rem; display: block; }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; font-weight: 300; margin-bottom: 2rem; }
+        .hero p { font-size: 1.25rem; color: var(--grey-light); max-width: 700px; margin-bottom: 3rem; }
 
-        .label {
-            font-family: 'JetBrains Mono', monospace;
-            color: var(--gold);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 4rem; }
+        .stat-card { background: var(--black); padding: 3rem; }
+        .stat-value { font-family: 'Cormorant Garamond', serif; font-size: 4rem; color: var(--red); display: block; }
+        .stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--grey-light); text-transform: uppercase; }
 
-        h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            line-height: 1.1;
-            font-weight: 300;
-            margin-bottom: 2rem;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--grey-light);
-            max-width: 700px;
-            margin-bottom: 3rem;
-        }
-
-        /* Sector Stats */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1px;
-            background: var(--border);
-            border: 1px solid var(--border);
-            margin-top: 4rem;
-        }
-
-        .stat-card {
-            background: var(--black);
-            padding: 3rem;
-        }
-
-        .stat-value {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 4rem;
-            color: var(--red);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            color: var(--grey-light);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Registry Table */
         .registry-section { padding: 6rem 4%; }
+        .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; }
+        table { width: 100%; border-collapse: collapse; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; }
+        th { text-align: left; padding: 1.5rem; color: var(--grey-light); font-weight: 400; border-bottom: 1px solid var(--border); }
+        td { padding: 1.5rem; border-bottom: 1px solid var(--border); }
 
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 3rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 1rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-        }
-
-        th {
-            text-align: left;
-            padding: 1.5rem;
-            color: var(--grey-light);
-            font-weight: 400;
-            border-bottom: 1px solid var(--border);
-        }
-
-        td {
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .status-pill {
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-        }
-
+        .status-pill { padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; }
         .status-critical { background: rgba(192, 57, 43, 0.15); color: var(--red); }
-        .status-warning { background: rgba(201, 168, 76, 0.15); color: var(--gold); }
-        .status-verified { background: rgba(26, 107, 60, 0.15); color: var(--green); }
+        .status-compliant { background: rgba(26, 107, 60, 0.15); color: var(--green); }
 
-        /* CTA Section */
-        .cta-section {
-            padding: 8rem 4%;
-            text-align: center;
-            background: linear-gradient(to bottom, var(--black), #121212);
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1.2rem 3rem;
-            background: var(--white);
-            color: var(--black);
-            text-decoration: none;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            transition: all 0.3s;
-            margin: 1rem;
-        }
-
+        .cta-section { padding: 8rem 4%; text-align: center; background: linear-gradient(to bottom, var(--black), #121212); }
+        .btn { cursor: pointer; display: inline-block; padding: 1.2rem 3rem; background: var(--white); color: var(--black); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; transition: 0.3s; margin: 1rem; border: none; }
         .btn:hover { background: var(--gold); color: var(--white); }
 
-        footer {
-            padding: 4rem 4%;
-            border-top: 1px solid var(--border);
-            color: var(--grey-light);
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            display: flex;
-            justify-content: space-between;
-        }
+        /* Modal Styles */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(8,8,8,0.98); z-index: 1000; justify-content: center; align-items: center; }
+        .modal-content { background: var(--black); border: 1px solid var(--border); padding: 3rem; width: 90%; max-width: 500px; position: relative; }
+        .close-modal { position: absolute; top: 1.5rem; right: 1.5rem; color: var(--grey-light); cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; }
+        .modal-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin-bottom: 2rem; font-weight: 300; }
+        .form-group { margin-bottom: 2rem; }
+        .form-group label { display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--gold); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 1px; }
+        .form-group input { width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--border); color: var(--white); padding: 0.8rem 0; font-family: 'Instrument Sans', sans-serif; outline: none; transition: 0.3s; font-size: 1rem; }
+        .form-group input:focus { border-bottom: 1px solid var(--gold); }
+        .submit-btn { width: 100%; padding: 1.2rem; background: var(--white); color: var(--black); border: none; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; font-weight: 600; cursor: pointer; margin-top: 1rem; transition: 0.3s; font-size: 0.8rem; }
+        .submit-btn:hover { background: var(--gold); color: var(--white); }
+
+        footer { padding: 4rem 4%; border-top: 1px solid var(--border); color: var(--grey-light); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; display: flex; justify-content: space-between; }
 
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 1rem; }
             .nav-links { display: flex; flex-wrap: wrap; justify-content: center; }
             .nav-links a { margin: 0.5rem 1rem; }
-            .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            .hero { padding-top: 4rem; }
         }
     </style>
 </head>
@@ -226,7 +86,7 @@
     <section class="hero">
         <span class="label">Accuracy Intelligence Registry — Q1 2026</span>
         <h1>Measuring Financial Veracity in the Age of AI.</h1>
-        <p>2A Agency provides the first institutional-grade standard for detecting, measuring, and certifying Semantic Drift in generative financial reporting.</p>
+        <p>2A Agency provides the first institutional-grade standard for detecting and certifying Semantic Drift in generative financial reporting.</p>
         
         <div class="stats-grid">
             <div class="stat-card">
@@ -239,7 +99,7 @@
             </div>
             <div class="stat-card">
                 <span class="stat-value">Live</span>
-                <span class="stat-label">Oracle Status (Base L2)</span>
+                <span class="stat-label">Network Status (Base L2)</span>
             </div>
         </div>
     </section>
@@ -260,33 +120,35 @@
                 <thead>
                     <tr>
                         <th>ENTITY ID</th>
+                        <th>LOCATION</th>
                         <th>DRIFT SCORE</th>
-                        <th>MARKET CAP ADJ.</th>
-                        <th>TRUST RATING</th>
                         <th>STATUS</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Luxury Maison A (LVMH-Ref)</td>
-                        <td>82%</td>
-                        <td>-1.2%</td>
-                        <td>AA-</td>
-                        <td><span class="status-pill status-warning">Warning</span></td>
-                    </tr>
-                    <tr>
-                        <td>Holding B (RICHEMONT-Ref)</td>
-                        <td>94%</td>
-                        <td>+0.4%</td>
-                        <td>AAA</td>
-                        <td><span class="status-pill status-verified">Certified</span></td>
-                    </tr>
-                    <tr>
-                        <td>Maison C (HERMES-Ref)</td>
-                        <td>61%</td>
-                        <td>-4.8%</td>
-                        <td>B+</td>
+                        <td>Luxury Maison A</td>
+                        <td>Paris</td>
+                        <td style="color: var(--red);">82%</td>
                         <td><span class="status-pill status-critical">Critical</span></td>
+                    </tr>
+                    <tr>
+                        <td>Haute Horlogerie B</td>
+                        <td>Geneva</td>
+                        <td style="color: var(--red);">58%</td>
+                        <td><span class="status-pill status-critical">Critical</span></td>
+                    </tr>
+                    <tr>
+                        <td>Premium Apparel C</td>
+                        <td>Paris</td>
+                        <td style="color: var(--red);">12%</td>
+                        <td><span class="status-pill status-critical">Critical</span></td>
+                    </tr>
+                    <tr>
+                        <td>Ultra-Luxe Maison D</td>
+                        <td>Paris</td>
+                        <td style="color: var(--green);">0.8%</td>
+                        <td><span class="status-pill status-compliant">Compliant</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -294,18 +156,91 @@
     </section>
 
     <section class="cta-section">
-        <span class="label" style="margin-bottom: 2rem;">Secure your AI reporting accuracy</span>
-        <h2 style="font-family: 'Cormorant Garamond'; font-size: 3rem; font-weight: 300; margin-bottom: 3rem;">Ready to Audit Your LLM Output?</h2>
+        <span class="label">Defend your financial integrity</span>
+        <h2 style="font-family: 'Cormorant Garamond'; font-size: 3rem; font-weight: 300; margin-bottom: 3rem;">Audit Your LLM Output.</h2>
         <div class="button-container">
-            <a href="mailto:alexandre@2aagency.com" class="btn">Request Private Audit</a>
-            <a href="https://github.com/2a-agency" class="btn" style="background: transparent; color: var(--white); border: 1px solid var(--border);">Standard Documentation</a>
+            <button onclick="openModal()" class="btn">Request Private Audit</button>
+            <a href="https://github.com/2a-agency" class="btn" style="background: transparent; color: var(--white); border: 1px solid var(--border);">Methodology v1.0</a>
         </div>
     </section>
 
+    <div id="auditModal" class="modal">
+        <div class="modal-content" id="modalContent">
+            <span class="close-modal" onclick="closeModal()">CLOSE [ESC]</span>
+            
+            <div id="formContainer">
+                <h2>Private Audit Request</h2>
+                <form id="auditForm" action="https://formspree.io/f/xykngdbz" method="POST">
+                    <div class="form-group">
+                        <label>Brand / Organisation</label>
+                        <input type="text" name="brand" required placeholder="Ex: Maison de Luxe">
+                    </div>
+                    <div class="form-group">
+                        <label>Your Role</label>
+                        <input type="text" name="role" required placeholder="Ex: CFO, Investor Relations">
+                    </div>
+                    <div class="form-group">
+                        <label>Professional Email</label>
+                        <input type="email" name="email" required placeholder="name@company.com">
+                    </div>
+                    <button type="submit" class="submit-btn">Request Audit → 48h Delivery</button>
+                </form>
+            </div>
+
+            <div id="successMessage" style="display:none; text-align: center; padding: 2rem 0;">
+                <span class="label" style="color: var(--green);">Request Received</span>
+                <h2 style="font-family: 'Cormorant Garamond'; font-size: 2.2rem; margin-top: 1rem; font-weight: 300;">Thank you.</h2>
+                <p style="color: var(--grey-light); font-size: 1rem; margin-top: 1rem;">
+                    Our audit team has been notified.<br>
+                    Your preliminary report will be delivered via secure email within <strong>48 hours</strong>.
+                </p>
+                <button onclick="closeModal()" class="submit-btn" style="background: transparent; color: var(--gold); border: 1px solid var(--gold); margin-top: 2rem; width: auto; padding: 1rem 2rem;">Return to Registry</button>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <div>© 2026 2A AGENCY — THE ACCURACY INTELLIGENCE AGENCY.</div>
-        <div>ALL DATA ANCHORED ON BASE L2 VIA 2A-ORACLE.</div>
+        <div>© 2026 2A AGENCY.</div>
+        <div>METHODOLOGY ANCHORED ON BASE L2 · HASH: 0x2a...f9ed</div>
     </footer>
+
+    <script>
+        function openModal() { 
+            document.getElementById('auditModal').style.display = 'flex'; 
+            document.getElementById('formContainer').style.display = 'block';
+            document.getElementById('successMessage').style.display = 'none';
+        }
+        function closeModal() { document.getElementById('auditModal').style.display = 'none'; }
+        
+        var form = document.getElementById("auditForm");
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          }).then(response => {
+            if (response.ok) {
+              document.getElementById('formContainer').style.display = 'none';
+              document.getElementById('successMessage').style.display = 'block';
+              form.reset();
+            } else {
+              alert("Error submitting form. Please try again.");
+            }
+          }).catch(error => {
+            alert("Connection error. Please try again.");
+          });
+        }
+        form.addEventListener("submit", handleSubmit);
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('auditModal')) { closeModal(); }
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") { closeModal(); }
+        });
+    </script>
 
 </body>
 </html>
