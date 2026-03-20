@@ -5,101 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>White Paper — 2A Agency</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600&family=JetBrains+Mono:wght@300;400&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --black: #080808; 
-            --white: #F2EFE9; 
-            --gold: #C9A84C; 
-            --red: #C0392B;
-            --border: rgba(242,239,233,0.08); 
+        :root {
+            --black: #080808;
+            --white: #F2EFE9;
+            --gold: #C9A84C;
+            --gold-dim: #8A6F32;
+            --border: rgba(242,239,233,0.08);
+            --border-gold: rgba(201,168,76,0.25);
             --grey-light: #888;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            background: var(--black); 
-            color: var(--white); 
-            font-family: 'Instrument Sans', sans-serif; 
-            line-height: 1.8; 
-            overflow-x: hidden;
-        }
-        
-        header { 
-            padding: 2rem 4%; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            border-bottom: 1px solid var(--border); 
-            background: rgba(8,8,8,0.8);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; text-decoration: none; color: var(--white); font-weight: 300; }
-        .logo span { color: var(--gold); font-style: italic; }
-        
-        .content { max-width: 800px; margin: 0 auto; padding: 6rem 4%; }
-        h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; margin-bottom: 1rem; line-height: 1.1; }
-        .version { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--gold); margin-bottom: 4rem; display: block; letter-spacing: 2px; text-transform: uppercase; }
-        
-        h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold); margin-top: 5rem; margin-bottom: 1.5rem; font-weight: 300; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
-        h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; text-transform: uppercase; color: var(--white); margin: 2.5rem 0 1rem; letter-spacing: 1px; }
-        
-        p { color: #BBB; margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 300; }
-        
-        .highlight-block { color: var(--white); font-weight: 400; border-left: 1px solid var(--gold); padding-left: 1.5rem; margin: 2.5rem 0; font-style: italic; }
-        .highlight-inline { color: var(--white); font-weight: 400; }
-        
-        .back-link { display: inline-block; margin-top: 6rem; color: var(--gold); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; border: 1px solid var(--gold); padding: 1rem 2rem; transition: 0.3s; text-transform: uppercase; }
-        .back-link:hover { background: var(--gold); color: var(--black); }
-
-        footer { margin-top: 8rem; padding: 4rem 0; border-top: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--grey-light); display: flex; justify-content: space-between; }
-        
-        @media (max-width: 768px) { h1 { font-size: 2.5rem; } footer { flex-direction: column; gap: 1rem; text-align: center; } }
+        body { background-color: var(--black); color: var(--white); font-family: 'Instrument Sans', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 850px; margin: 0 auto; padding: 80px 40px; }
+        .mono { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; font-size: 11px; letter-spacing: 0.15em; color: var(--gold); }
+        header { margin-bottom: 100px; border-bottom: 1px solid var(--border); padding-bottom: 40px; }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 400; line-height: 1.1; margin: 20px 0; letter-spacing: -0.02em; }
+        .subtitle { font-size: 18px; color: var(--grey-light); max-width: 600px; }
+        .section { margin-bottom: 80px; }
+        .section-label { font-family: 'JetBrains Mono', monospace; color: var(--gold-dim); font-size: 12px; margin-bottom: 15px; display: block; }
+        h2 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; margin-bottom: 25px; border-left: 2px solid var(--gold); padding-left: 20px; }
+        p { margin-bottom: 20px; font-size: 17px; color: rgba(242,239,233,0.85); text-align: justify; }
+        .callout { background: rgba(201,168,76,0.05); border: 1px solid var(--border-gold); padding: 30px; margin: 40px 0; position: relative; }
+        .callout::before { content: attr(data-label); position: absolute; top: -10px; left: 20px; background: var(--black); padding: 0 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold); }
+        .callout p { margin-bottom: 0; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--white); text-align: left; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .grid-item h4 { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--gold); margin-bottom: 10px; }
+        .grid-item p { font-size: 15px; }
+        .code-block { display: block; background: #000; padding: 20px; border: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #fff; margin: 20px 0; overflow-x: auto; white-space: pre; }
+        .highlight { color: var(--gold); }
+        .back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 12px; border-bottom: 1px solid transparent; transition: all 0.3s; }
+        .back-link:hover { border-bottom: 1px solid var(--gold); }
+        .footnote { margin-top: 100px; padding-top: 40px; border-top: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #666; display: flex; justify-content: space-between; }
+        @media (max-width: 600px) { .container { padding: 40px 20px; } h1 { font-size: 36px; } .grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
+<div class="container">
     <header>
-        <a href="index.html" class="logo">2A <span>Agency</span></a>
-        <a href="index.html" style="color: var(--grey-light); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase;">Back to Registry</a>
+        <div class="mono">White Paper — V1.0.0 — Q1 2026</div>
+        <h1>Mapping the Truth Gap:<br>How AI Agents Misrepresent Brands.</h1>
+        <p class="subtitle">A strategic memorandum on Semantic Drift and the architectural solution for machine-readable brand integrity.</p>
     </header>
 
-    <div class="content">
-        <span class="version">V1.0.0 — STRATEGIC MEMORANDUM</span>
-        <h1>The Cost of Semantic Drift in Financial Markets</h1>
-        
-        <h2>1. Executive Summary</h2>
-        <p>As Generative AI becomes the primary interface for financial data consumption, a new systemic risk has emerged: <span class="highlight-inline">Semantic Drift</span>. This is the measurable divergence between an organization's "System of Record" (annual reports, audited filings) and its "AI Perception" (responses generated by LLMs).</p>
-        <p>In the current market environment, institutional trust is no longer solely dependent on what a company publishes, but on how that data is interpreted and redistributed by autonomous agents.</p>
-
-        <h2>2. The 19.4% Drift Reality</h2>
-        <p>Our audit of 155 luxury and premium entities reveals that <span class="highlight-inline">19.4% of financial queries</span> addressed to leading Large Language Models result in material inaccuracies. These drift events directly impact investor relations by disseminating false metrics regarding EBITDA, sustainability targets, and organic growth forecasts.</p>
-
-        <h2>3. Technical Methodology</h2>
-        <p>2A Agency employs a rigorous audit protocol to ensure results are repeatable and mathematically sound:</p>
-        
-        <h3>A. Ground Truth Extraction</h3>
-        <p>We establish a "Golden Dataset" derived exclusively from audited annual reports and official investor presentations. This serves as the absolute reference for all comparisons.</p>
-
-        <h3>B. Multi-Model Stress Test</h3>
-        <p>We execute standardized, high-precision queries across four leading LLMs. All tests are conducted at <span class="highlight-inline">Temperature 0.1</span> to minimize stochastic noise and ensure maximum determinism.</p>
-
-        <h3>C. Drift Score Calculation</h3>
-        <p>Mathematical variance is calculated between the Ground Truth and the AI output. Any divergence exceeding 10% on a core financial metric is flagged as <span style="color:var(--red)">CRITICAL</span> in the Semantic Drift Registry.</p>
-
-        <h2>4. Case Study: Perimeter Confusion</h2>
-        <div class="highlight-block">
-            In our Q1 2026 audit, we observed a critical drift pattern: Perimeter Confusion. LLMs systematically attribute consolidated group revenue to individual maisons, creating distortions (up to 37%) in perceived brand-level performance.
-        </div>
-        <p>For wealth managers, receiving group-level figures presented with false precision for a specific brand creates a direct and measurable investment decision risk.</p>
-
-        <a href="index.html" class="back-link">Return to Registry</a>
-
-        <footer>
-            <div>© 2026 2A AGENCY</div>
-            <div>METHODOLOGY ANCHORED ON BASE L2 · HASH: 0x2a...f9ed</div>
-        </footer>
+    <div class="section">
+        <div class="section-label">I — Executive Summary</div>
+        <h2>The Emergence of Semantic Drift</h2>
+        <p>As generative AI becomes the primary interface for financial information, a new category of institutional risk has emerged: <strong>Semantic Drift</strong>. This is the measurable divergence between a brand's official record and what AI models tell the world about that brand.</p>
+        <p>Our audit of 155 luxury and premium entities reveals that 19.4% of financial queries return materially false information. This structural failure has direct consequences for investor relations and valuation.</p>
     </div>
+
+    <div class="section">
+        <div class="section-label">II — The Diagnostic</div>
+        <h2>Corporate AI Is Frozen by Design</h2>
+        <p>While public LLMs improve, corporate AI deployments are increasingly "frozen" for 6 to 18 months due to compliance frameworks like <strong>DORA</strong> and the <strong>EU AI Act</strong>. Institutions prioritize stability over real-time updates, meaning that once an AI model "learns" a wrong figure about your brand, that error is locked into the professional decision-making loop for an entire fiscal cycle.</p>
+        
+        <div class="grid">
+            <div class="grid-item">
+                <h4>Perimeter Confusion</h4>
+                <p>Models fail to distinguish between group-level consolidation and maison-level performance (37% distortion observed).</p>
+            </div>
+            <div class="grid-item">
+                <h4>Anachronism</h4>
+                <p>Knowledge cut-offs lead models to cite outdated 2022/23 data as current 2025 reality.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-label">III — The Architecture</div>
+        <h2>The Ground Truth Registry</h2>
+        <p>To fix Semantic Drift, brands must move from narrative documents to <strong>Machine-Readable Specifications</strong>. We use JSON-LD, the format AI retrieval systems are architecturally designed to prioritize.</p>
+        <div class="code-block">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Brand Certified",
+  <span class="highlight">"source": "https://api.2aagency.com/v1/brand/certified",</span>
+  "revenue": { "value": "240500000", "currency": "EUR" }
+}
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-label">IV — Retrieval Mechanics</div>
+        <h2>RAG, Fine-Tuning, and Live APIs</h2>
+        <p>Our registry operates across the three ways enterprise AI consumes data:</p>
+        <div class="grid">
+            <div class="grid-item">
+                <h4>1. RAG (Immediate)</h4>
+                <p>Standardized JSON-LD wins over unstructured text in Retrieval-Augmented Generation pipelines.</p>
+            </div>
+            <div class="grid-item">
+                <h4>2. API Live (Future)</h4>
+                <p>The "Kill-Switch" model where agents query our Resolution Engine in real-time before answering.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-label">V — Verification Protocol</div>
+        <h2>S-Tier Forensic Methodology</h2>
+        <p>Authority in the age of AI comes from the source. Our registry is cross-referenced against audited filings and Tier-1 analyst consensus. Every data point is hashed and anchored on <strong>Base L2</strong> to provide immutable proof of integrity.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-label">VI — Business Logic</div>
+        <h2>The "Cheval de Troie" Model</h2>
+        <p>We provide brands with a decentralized entry point (the JSON-LD snippet) to ensure immediate protection. As the relationship matures, we migrate this data to a centralized API-driven model, ensuring that the brand's truth is always synchronized, audited, and revocable.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-label">VII — Conclusion</div>
+        <h2>Standardizing Semantic Reliability</h2>
+        <p>As Moody's standardized credit risk, 2A Agency standardizes semantic reliability for the age of AI agents. The authority comes from the certification.</p>
+        <a href="index.html" class="back-link">← Return to Registry</a>
+    </div>
+
+    <div class="footnote">
+        <div>© 2026 2A AGENCY · alexandre@2aagency.com</div>
+        <div>METHODOLOGY ANCHORED ON BASE L2 · <a href="https://github.com/Meteque1213/2a-agency-official" style="color:var(--gold)">GITHUB</a></div>
+    </div>
+</div>
 </body>
 </html>
