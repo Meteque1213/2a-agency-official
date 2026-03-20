@@ -11,6 +11,7 @@
             --black: #080808; 
             --white: #F2EFE9; 
             --gold: #C9A84C; 
+            --red: #C0392B;
             --border: rgba(242,239,233,0.08); 
             --grey-light: #888;
         }
@@ -19,39 +20,49 @@
             background: var(--black); 
             color: var(--white); 
             font-family: 'Instrument Sans', sans-serif; 
-            padding: 4% 10%; 
             line-height: 1.8; 
             overflow-x: hidden;
         }
-        header { border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 4rem; display: flex; justify-content: space-between; align-items: center; }
+        
+        header { 
+            padding: 2rem 4%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid var(--border); 
+            background: rgba(8,8,8,0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
         .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; text-decoration: none; color: var(--white); font-weight: 300; }
         .logo span { color: var(--gold); font-style: italic; }
         
-        .content { max-width: 850px; margin: 0 auto; }
+        .content { max-width: 800px; margin: 0 auto; padding: 6rem 4%; }
         h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; margin-bottom: 1rem; line-height: 1.1; }
-        .version { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--gold); margin-bottom: 4rem; display: block; letter-spacing: 2px; }
+        .version { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--gold); margin-bottom: 4rem; display: block; letter-spacing: 2px; text-transform: uppercase; }
         
-        h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--gold); margin-top: 4rem; margin-bottom: 1.5rem; font-weight: 300; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
-        h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; text-transform: uppercase; color: var(--white); margin: 2rem 0 1rem; letter-spacing: 1px; }
+        h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold); margin-top: 5rem; margin-bottom: 1.5rem; font-weight: 300; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+        h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; text-transform: uppercase; color: var(--white); margin: 2.5rem 0 1rem; letter-spacing: 1px; }
         
-        p { color: #BBB; margin-bottom: 1.5rem; font-size: 1.05rem; }
-        .highlight { color: var(--white); font-weight: 400; border-left: 2px solid var(--gold); padding-left: 1.5rem; margin: 2rem 0; font-style: italic; }
+        p { color: #BBB; margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 300; }
         
-        ul { list-style: none; margin-bottom: 2rem; }
-        ul li { margin-bottom: 1rem; padding-left: 1.5rem; position: relative; color: #BBB; }
-        ul li::before { content: "→"; position: absolute; left: 0; color: var(--gold); }
+        .highlight-block { color: var(--white); font-weight: 400; border-left: 1px solid var(--gold); padding-left: 1.5rem; margin: 2.5rem 0; font-style: italic; }
+        .highlight-inline { color: var(--white); font-weight: 400; }
         
-        .back-link { display: inline-block; margin-top: 6rem; color: var(--gold); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; border: 1px solid var(--gold); padding: 1rem 2rem; transition: 0.3s; }
+        .back-link { display: inline-block; margin-top: 6rem; color: var(--gold); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; border: 1px solid var(--gold); padding: 1rem 2rem; transition: 0.3s; text-transform: uppercase; }
         .back-link:hover { background: var(--gold); color: var(--black); }
 
-        footer { margin-top: 8rem; padding-top: 2rem; border-top: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--grey-light); }
-
-        @media (max-width: 768px) { body { padding: 10% 5%; } h1 { font-size: 2.5rem; } }
+        footer { margin-top: 8rem; padding: 4rem 0; border-top: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--grey-light); display: flex; justify-content: space-between; }
+        
+        @media (max-width: 768px) { h1 { font-size: 2.5rem; } footer { flex-direction: column; gap: 1rem; text-align: center; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">2A <span>Agency</span></a>
+        <a href="index.html" style="color: var(--grey-light); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase;">Back to Registry</a>
     </header>
 
     <div class="content">
@@ -59,32 +70,35 @@
         <h1>The Cost of Semantic Drift in Financial Markets</h1>
         
         <h2>1. Executive Summary</h2>
-        <p>As Generative AI becomes the primary interface for financial data consumption, a new systemic risk has emerged: <span class="highlight">Semantic Drift</span>. This is the measurable divergence between an organization's "System of Record" (annual reports, audited filings) and its "AI Perception" (responses generated by LLMs).</p>
+        <p>As Generative AI becomes the primary interface for financial data consumption, a new systemic risk has emerged: <span class="highlight-inline">Semantic Drift</span>. This is the measurable divergence between an organization's "System of Record" (annual reports, audited filings) and its "AI Perception" (responses generated by LLMs).</p>
         <p>In the current market environment, institutional trust is no longer solely dependent on what a company publishes, but on how that data is interpreted and redistributed by autonomous agents.</p>
 
         <h2>2. The 19.4% Drift Reality</h2>
-        <p>Our audit of 155 luxury and premium entities reveals that <span class="highlight">19.4% of financial queries</span> addressed to leading Large Language Models result in material inaccuracies. These drift events directly impact investor relations by disseminating false metrics regarding EBITDA, sustainability targets, and organic growth forecasts.</p>
+        <p>Our audit of 155 luxury and premium entities reveals that <span class="highlight-inline">19.4% of financial queries</span> addressed to leading Large Language Models result in material inaccuracies. These drift events directly impact investor relations by disseminating false metrics regarding EBITDA, sustainability targets, and organic growth forecasts.</p>
 
         <h2>3. Technical Methodology</h2>
-        <p>To ensure total veracity, 2A Agency employs a rigorous three-step audit protocol, ensuring results are repeatable and mathematically sound:</p>
+        <p>2A Agency employs a rigorous audit protocol to ensure results are repeatable and mathematically sound:</p>
         
         <h3>A. Ground Truth Extraction</h3>
-        <p>We establish a "Golden Dataset" derived exclusively from audited annual reports, SEC/AMF filings, and official investor presentations. This serves as the absolute reference for all comparisons.</p>
+        <p>We establish a "Golden Dataset" derived exclusively from audited annual reports and official investor presentations. This serves as the absolute reference for all comparisons.</p>
 
         <h3>B. Multi-Model Stress Test</h3>
-        <p>We execute five standardized, high-precision queries across four leading LLMs. All tests are conducted at <span class="highlight" style="display:inline; border:none; padding:0; margin:0;">Temperature 0.1</span> to minimize stochastic noise and ensure maximum determinism in responses.</p>
+        <p>We execute standardized, high-precision queries across four leading LLMs. All tests are conducted at <span class="highlight-inline">Temperature 0.1</span> to minimize stochastic noise and ensure maximum determinism.</p>
 
         <h3>C. Drift Score Calculation</h3>
         <p>Mathematical variance is calculated between the Ground Truth and the AI output. Any divergence exceeding 10% on a core financial metric is flagged as <span style="color:var(--red)">CRITICAL</span> in the Semantic Drift Registry.</p>
 
         <h2>4. Case Study: Perimeter Confusion</h2>
-        <p>In our Q1 2026 audit, one of the most critical drift patterns observed was <span class="highlight" style="display:inline; border:none; padding:0; margin:0;">Perimeter Confusion</span> — where LLMs systematically attributed consolidated group revenue to an individual maison, creating a 37% distortion in perceived brand-level performance.</p>
-        <p>When wealth managers or retail investors query AI models for brand-specific financials, they frequently receive group-level figures presented with false precision. The investment decision risk is direct, measurable, and potentially litigious.</p>
+        <div class="highlight-block">
+            In our Q1 2026 audit, we observed a critical drift pattern: Perimeter Confusion. LLMs systematically attribute consolidated group revenue to individual maisons, creating distortions (up to 37%) in perceived brand-level performance.
+        </div>
+        <p>For wealth managers, receiving group-level figures presented with false precision for a specific brand creates a direct and measurable investment decision risk.</p>
 
-        <a href="index.html" class="back-link">RETURN TO REGISTRY</a>
+        <a href="index.html" class="back-link">Return to Registry</a>
 
         <footer>
-            © 2026 2A AGENCY · METHODOLOGY ANCHORED ON BASE L2 · HASH: 0x2a...f9ed
+            <div>© 2026 2A AGENCY</div>
+            <div>METHODOLOGY ANCHORED ON BASE L2 · HASH: 0x2a...f9ed</div>
         </footer>
     </div>
 </body>

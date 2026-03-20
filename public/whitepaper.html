@@ -3,84 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A AGENCY | SoR Protocol Technical Specification</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <title>White Paper — 2A Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600&family=JetBrains+Mono:wght@300;400&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        :root { --emerald: #065f46; --off-white: #fcfcfc; }
-        body { background-color: var(--off-white); color: #1a1a1a; font-family: 'Space Grotesk', sans-serif; line-height: 1.8; }
-        .serif { font-family: 'Playfair Display', serif; }
-        .emerald-highlight { color: var(--emerald); font-weight: 700; }
-        .section-border { border-left: 2px solid #eee; padding-left: 2rem; margin-bottom: 5rem; }
-        .highlight-box { background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%); border: 1px solid #dcfce7; padding: 2rem; }
-        .math-container { width: 100%; overflow-x: auto; text-align: center; padding: 1.5rem 0; font-family: serif; font-size: 1.5rem; color: var(--emerald); }
-        pre { background: #1a1a1a; color: #adbac7; padding: 1.5rem; border-radius: 4px; font-size: 0.75rem; border: 1px solid #333; }
-        .stat-badge { font-size: 9px; font-weight: bold; background: #065f46; color: white; padding: 2px 8px; border-radius: 2px; }
+        :root { 
+            --black: #080808; 
+            --white: #F2EFE9; 
+            --gold: #C9A84C; 
+            --red: #C0392B;
+            --border: rgba(242,239,233,0.08); 
+            --grey-light: #888;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: var(--black); 
+            color: var(--white); 
+            font-family: 'Instrument Sans', sans-serif; 
+            line-height: 1.8; 
+            overflow-x: hidden;
+        }
+        
+        header { 
+            padding: 2rem 4%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid var(--border); 
+            background: rgba(8,8,8,0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; text-decoration: none; color: var(--white); font-weight: 300; }
+        .logo span { color: var(--gold); font-style: italic; }
+        
+        .content { max-width: 800px; margin: 0 auto; padding: 6rem 4%; }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; margin-bottom: 1rem; line-height: 1.1; }
+        .version { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--gold); margin-bottom: 4rem; display: block; letter-spacing: 2px; text-transform: uppercase; }
+        
+        h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold); margin-top: 5rem; margin-bottom: 1.5rem; font-weight: 300; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+        h3 { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; text-transform: uppercase; color: var(--white); margin: 2.5rem 0 1rem; letter-spacing: 1px; }
+        
+        p { color: #BBB; margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 300; }
+        
+        .highlight-block { color: var(--white); font-weight: 400; border-left: 1px solid var(--gold); padding-left: 1.5rem; margin: 2.5rem 0; font-style: italic; }
+        .highlight-inline { color: var(--white); font-weight: 400; }
+        
+        .back-link { display: inline-block; margin-top: 6rem; color: var(--gold); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; border: 1px solid var(--gold); padding: 1rem 2rem; transition: 0.3s; text-transform: uppercase; }
+        .back-link:hover { background: var(--gold); color: var(--black); }
+
+        footer { margin-top: 8rem; padding: 4rem 0; border-top: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--grey-light); display: flex; justify-content: space-between; }
+        
+        @media (max-width: 768px) { h1 { font-size: 2.5rem; } footer { flex-direction: column; gap: 1rem; text-align: center; } }
     </style>
 </head>
-<body class="p-6 md:p-12 italic font-bold">
-    <nav class="max-w-5xl mx-auto flex justify-between items-center mb-24 border-b border-black/5 pb-8 uppercase">
-        <div class="flex items-center gap-2">
-            <div class="w-3 h-3 bg-[#065f46] rounded-full"></div>
-            <span class="font-bold text-sm tracking-tight">2A AGENCY</span>
+<body>
+    <header>
+        <a href="index.html" class="logo">2A <span>Agency</span></a>
+        <a href="index.html" style="color: var(--grey-light); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase;">Back to Registry</a>
+    </header>
+
+    <div class="content">
+        <span class="version">V1.0.0 — STRATEGIC MEMORANDUM</span>
+        <h1>The Cost of Semantic Drift in Financial Markets</h1>
+        
+        <h2>1. Executive Summary</h2>
+        <p>As Generative AI becomes the primary interface for financial data consumption, a new systemic risk has emerged: <span class="highlight-inline">Semantic Drift</span>. This is the measurable divergence between an organization's "System of Record" (annual reports, audited filings) and its "AI Perception" (responses generated by LLMs).</p>
+        <p>In the current market environment, institutional trust is no longer solely dependent on what a company publishes, but on how that data is interpreted and redistributed by autonomous agents.</p>
+
+        <h2>2. The 19.4% Drift Reality</h2>
+        <p>Our audit of 155 luxury and premium entities reveals that <span class="highlight-inline">19.4% of financial queries</span> addressed to leading Large Language Models result in material inaccuracies. These drift events directly impact investor relations by disseminating false metrics regarding EBITDA, sustainability targets, and organic growth forecasts.</p>
+
+        <h2>3. Technical Methodology</h2>
+        <p>2A Agency employs a rigorous audit protocol to ensure results are repeatable and mathematically sound:</p>
+        
+        <h3>A. Ground Truth Extraction</h3>
+        <p>We establish a "Golden Dataset" derived exclusively from audited annual reports and official investor presentations. This serves as the absolute reference for all comparisons.</p>
+
+        <h3>B. Multi-Model Stress Test</h3>
+        <p>We execute standardized, high-precision queries across four leading LLMs. All tests are conducted at <span class="highlight-inline">Temperature 0.1</span> to minimize stochastic noise and ensure maximum determinism.</p>
+
+        <h3>C. Drift Score Calculation</h3>
+        <p>Mathematical variance is calculated between the Ground Truth and the AI output. Any divergence exceeding 10% on a core financial metric is flagged as <span style="color:var(--red)">CRITICAL</span> in the Semantic Drift Registry.</p>
+
+        <h2>4. Case Study: Perimeter Confusion</h2>
+        <div class="highlight-block">
+            In our Q1 2026 audit, we observed a critical drift pattern: Perimeter Confusion. LLMs systematically attribute consolidated group revenue to individual maisons, creating distortions (up to 37%) in perceived brand-level performance.
         </div>
-        <div class="flex gap-8 items-center text-[10px] tracking-widest">
-            <a href="index.html" class="opacity-40 hover:opacity-100 italic transition-opacity">Home</a>
-            <a href="index.html" class="opacity-40 hover:opacity-100 italic transition-opacity">Audits</a>
-            <a href="whitepaper.html" class="text-[#065f46] border-b-2 border-[#065f46] italic pb-1">Protocol</a>
-        </div>
-    </nav>
+        <p>For wealth managers, receiving group-level figures presented with false precision for a specific brand creates a direct and measurable investment decision risk.</p>
 
-    <div class="max-w-4xl mx-auto uppercase">
-        <header class="mb-32">
-            <div class="flex items-center gap-4 mb-8">
-                <h3 class="text-[11px] tracking-[0.6em] text-black/30 font-bold italic">Technical Specification — v2.1.0</h3>
-                <span class="stat-badge animate-pulse">LIVE ON BASE L2</span>
-            </div>
-            <h1 class="serif text-6xl md:text-8xl text-black italic mb-10 leading-none tracking-tighter">
-                The <span class="emerald-highlight">SoR</span> Protocol
-            </h1>
-            <p class="text-xl md:text-2xl font-light text-black/60 italic leading-relaxed max-w-2xl font-serif">
-                System of Record: The global truth infrastructure for 2,700+ verified entities.
-            </p>
-        </header>
+        <a href="index.html" class="back-link">Return to Registry</a>
 
-        <section class="section-border">
-            <h2 class="text-[#065f46] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 01. Abstract</h2>
-            <div class="text-lg text-black/80 font-medium italic mb-12 space-y-6 serif">
-                <p>The <strong>System of Record (SoR)</strong> protocol solves the crisis of LLM hallucinations. By anchoring Trust Nodes on the Base (L2) blockchain, we provide a decentralized source of truth. AI agents can now verify the integrity of their training data via cryptographic Proof-of-Origin.</p>
-            </div>
-        </section>
-
-        <section class="section-border">
-            <h2 class="text-[#065f46] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 02. Integrity Verification</h2>
-            <p class="mb-8 text-black/70 italic uppercase">Vérification Zero-Trust via le Root Hash global :</p>
-            <div class="bg-gray-50 border border-black/10 py-12 px-10 rounded-sm mb-12 text-center">
-                <div class="math-container italic">H(registry) = fb1206...2802</div>
-                <p class="text-[9px] text-gray-400 tracking-widest mt-4 uppercase font-normal">Ce Hash certifie l'intégrité des 2,700 entités.</p>
-            </div>
-        </section>
-
-        <section class="section-border" id="architecture">
-            <h2 class="text-[#065f46] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 03. Architecture of a Trust Node</h2>
-            <div class="space-y-8 text-sm italic">
-                <div class="highlight-box">
-                    <h4 class="font-bold mb-2 uppercase">I. JSON-LD Structuring</h4>
-                    <p class="text-gray-600 font-normal">Données lisibles par machine (Semantic Web) incluant le SOR_ID et le score d'intégrité.</p>
-                </div>
-                <div class="highlight-box">
-                    <h4 class="font-bold mb-2 uppercase">II. Character Guard Directives</h4>
-                    <p class="text-gray-600 font-normal">Instructions métasémantiques forçant les LLM à respecter un périmètre certifié.</p>
-                </div>
-                <div class="highlight-box">
-                    <h4 class="font-bold mb-2 uppercase">III. On-Chain Notarization</h4>
-                    <p class="text-gray-600 font-normal">Ancrage permanent sur Base L2 via la fonction issueCertificate() du contrat 2A.</p>
-                </div>
-            </div>
-        </section>
-
-        <footer class="mt-32 pt-16 border-t border-black/5 text-[11px] uppercase tracking-[0.5em] text-black/20 font-bold text-center italic pb-12">
-            2A AGENCY — SOR PROTOCOL — 2700 NODES CERTIFIED
+        <footer>
+            <div>© 2026 2A AGENCY</div>
+            <div>METHODOLOGY ANCHORED ON BASE L2 · HASH: 0x2a...f9ed</div>
         </footer>
     </div>
 </body>
