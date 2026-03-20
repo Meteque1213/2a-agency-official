@@ -1,3 +1,5 @@
+*.json
+*.cjs
+*.txt
+*.csv
 .env
-node_modules/
-archive/MEMO_*.txt

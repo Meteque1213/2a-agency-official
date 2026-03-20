@@ -1,157 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A Agency | The System of Record</title>
-    
-    <meta name="google-site-verification" content="d2f5cc68a0acacf6" />
-    
-    <meta name="description" content="Official System of Record for brand notarization on Base L2. We monitor 2,698+ brands for AI-integrity and ERC-8004 compliance.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-    <link rel="canonical" href="https://www.2aagency.com/" />
-    
-    <style>
-        body { background-color: #FCFCFC; color: #050505; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
-        .text-2a-emerald { color: #064e3b; }
-        .logo-bold { font-weight: 900; letter-spacing: 0.3em; font-size: 15px; text-transform: uppercase; color: #064e3b; }
-        .nav-link { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #000; opacity: 0.4; transition: opacity 0.3s; }
-        .nav-link:hover { opacity: 1; }
-        
-        /* Sentinel Pulse Animation - Uniformisée en Émeraude Foncée */
-        .sentinel-pulse { 
-            display: inline-block;
-            width: 8px; 
-            height: 8px; 
-            background-color: #064e3b; 
-            border-radius: 50%; 
-            margin-right: 8px;
-            box-shadow: 0 0 0 0 rgba(6, 78, 59, 0.7); 
-            animation: pulse 2s infinite; 
-        }
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(6, 78, 59, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(6, 78, 59, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(6, 78, 59, 0); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2A Agency — The AI Financial Accuracy Standard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #080808;
+    --white: #F2EFE9;
+    --gold: #C9A84C;
+    --gold-dim: #8A6F32;
+    --red: #C0392B;
+    --green: #1A6B3C;
+    --grey: #2A2A2A;
+    --grey-mid: #444;
+    --grey-light: #888;
+    --border: rgba(242,239,233,0.08);
+    --border-gold: rgba(201,168,76,0.3);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0; background-color: var(--black); color: var(--white);
+    font-family: 'Instrument Sans', sans-serif; -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    opacity: 0.03; pointer-events: none; z-index: 9999;
+  }
+
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 300; margin: 0; }
+  .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: -0.02em; }
+  a { color: inherit; text-decoration: none; transition: opacity 0.3s ease; }
+  a:hover { opacity: 0.7; }
+
+  nav {
+    display: flex; justify-content: space-between; align-items: center; padding: 2rem 3rem;
+    position: fixed; top: 0; width: 100%; z-index: 100; backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em; }
+
+  .hero {
+    height: 100vh; display: flex; flex-direction: column; justify-content: center;
+    padding: 0 3rem; border-bottom: 1px solid var(--border);
+  }
+  .hero-stat { color: var(--red); font-size: 8rem; line-height: 0.8; margin-bottom: 1rem; }
+  .hero-label { color: var(--grey-light); margin-bottom: 2rem; }
+  .hero-title { font-size: 4rem; max-width: 800px; margin-bottom: 2rem; }
+  .hero-cta { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
+  .btn {
+    padding: 1rem 2rem; border: 1px solid var(--white); text-transform: uppercase;
+    font-size: 0.75rem; letter-spacing: 0.1em; cursor: pointer; transition: all 0.4s ease;
+  }
+  .btn-gold { background: var(--gold); border-color: var(--gold); color: var(--black); font-weight: 600; }
+  .btn-gold:hover { background: var(--white); border-color: var(--white); }
+
+  .section { padding: 8rem 3rem; border-bottom: 1px solid var(--border); }
+  .section-tag { color: var(--gold); margin-bottom: 2rem; display: block; }
+  .section-title { font-size: 3rem; margin-bottom: 4rem; }
+
+  table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+  th { text-align: left; color: var(--grey-light); font-weight: 400; padding: 1.5rem 0; border-bottom: 1px solid var(--grey); text-transform: uppercase; font-size: 0.7rem; }
+  td { padding: 2rem 0; border-bottom: 1px solid var(--border); }
+
+  .drift-bar-container { width: 200px; height: 4px; background: var(--grey); position: relative; }
+  .drift-fill { height: 100%; background: var(--red); transition: width 1.5s cubic-bezier(0.19, 1, 0.22, 1); }
+  .drift-val { color: var(--red); font-weight: 500; }
+
+  .methodology-box {
+    background: #0D0D0D; padding: 4rem; border: 1px solid var(--border-gold);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+  }
+  .formula { font-size: 1.5rem; color: var(--gold); border-left: 1px solid var(--gold-dim); padding-left: 2rem; display: flex; align-items: center; }
+
+  footer { padding: 4rem 3rem; display: flex; justify-content: space-between; align-items: center; color: var(--grey-light); font-size: 0.8rem; }
+  .request-box { margin-top: 2rem; padding: 3rem; border: 1px solid var(--grey); text-align: center; }
+
+  @media (max-width: 768px) {
+    .hero-stat { font-size: 5rem; }
+    .hero-title { font-size: 2.5rem; }
+    .methodology-box { grid-template-columns: 1fr; }
+    nav { padding: 1.5rem; }
+    .hero-cta { flex-direction: column; }
+  }
+</style>
 </head>
-<body class="min-h-screen flex flex-col p-6 md:p-12">
+<body>
 
-    <nav class="flex justify-between items-center w-full max-w-7xl mx-auto mb-16">
-        <div class="logo-bold underline decoration-2 underline-offset-4 cursor-pointer" onclick="window.location.href='index.html'">2A Agency</div>
-        <div class="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-bold items-center">
-            <div class="px-2 py-0.5 border border-[#064e3b] text-[#064e3b] rounded text-[8px] tracking-tighter font-black">ERC-8004 COMPLIANT</div>
-            <a href="audits.html" class="nav-link">Registry</a>
-            <a href="whitepaper.html" class="nav-link italic">Protocol_v2.2</a>
-        </div>
-    </nav>
+<nav>
+  <div class="logo">2A AGENCY</div>
+  <div class="mono">STATUS: Q1 AUDIT LIVE · BASE L2 ANCHORED</div>
+</nav>
 
-    <main class="flex-grow flex flex-col justify-center items-center text-center max-w-4xl mx-auto w-full mb-12">
-        <div class="flex flex-col md:flex-row items-center gap-6 mb-12 uppercase tracking-widest text-[9px] font-bold w-full justify-between">
-            <div class="flex items-center gap-2 opacity-60">
-                <span class="sentinel-pulse"></span>
-                SENTINEL-01 : ACTIVE & MONITORING 2,698 NODES
-            </div>
-            
-            <div class="flex items-center gap-2">
-                <a id="Base_Anchor" href="https://basescan.org/tx/0x4b616647ec8ab1366149c9521c1913892a0456bb024cd614b5c94dd6d7bbd880" target="_blank" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all font-bold">
-                    VÉRIFIER LE PROTOCOLE (BASE L2)
-                </a>
-                <span class="opacity-20">|</span>
-                <a href="audits.html" class="border border-black px-3 py-1 hover:bg-black hover:text-white transition-all font-black bg-gray-50 text-2a-emerald">
-                    LAB AUDITS
-                </a>
-            </div>
-        </div>
-        
-        <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-6 text-2a-emerald">
-            The System<br>of Record.
-        </h1>
-        
-        <p class="text-sm md:text-base font-medium opacity-60 max-w-2xl mx-auto leading-relaxed mb-12">
-            Forensic brand integrity monitoring via ERC-8004 standard on Base L2.<br>
-            Securing metadata for 2,698 entities against AI hallucinations.
-        </p>
+<section class="hero">
+  <div class="mono hero-label">EST. Q1 2026 · SECTOR DRIFT RATE</div>
+  <div class="hero-stat mono">19.4%</div>
+  <h1 class="hero-title">Measuring Financial Veracity in the Age of AI.</h1>
+  <div class="hero-cta">
+    <a href="#registry" class="btn btn-gold">Explore the Registry</a>
+    <a href="https://github.com/2a-agency" class="btn">GitHub Standard</a>
+  </div>
+</section>
 
-        <div>
-            <a href="audits.html" class="text-xs font-black uppercase tracking-widest border-b-2 border-black pb-1 hover:text-emerald-900 hover:border-emerald-900 transition-all">
-                Open Full Registry →
-            </a>
-        </div>
-    </main>
+<section id="registry" class="section">
+  <span class="mono section-tag">01 · BLIND AUDIT REGISTRY</span>
+  <h2 class="section-title">Anonymized Financial Drift Scores</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Entity Type</th>
+        <th>Region</th>
+        <th>Semantic Drift</th>
+        <th>Visual Score</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Luxury Maison A</td>
+        <td>Paris</td>
+        <td class="mono drift-val">82%</td>
+        <td><div class="drift-bar-container"><div class="drift-fill" style="width: 82%"></div></div></td>
+        <td class="mono" style="color: var(--red)">CRITICAL</td>
+      </tr>
+      <tr>
+        <td>Haute Horlogerie B</td>
+        <td>Geneva</td>
+        <td class="mono drift-val">58%</td>
+        <td><div class="drift-bar-container"><div class="drift-fill" style="width: 58%"></div></div></td>
+        <td class="mono" style="color: var(--red)">CRITICAL</td>
+      </tr>
+      <tr>
+        <td>Premium Apparel C</td>
+        <td>Paris</td>
+        <td class="mono drift-val">12%</td>
+        <td><div class="drift-bar-container"><div class="drift-fill" style="width: 12%"></div></div></td>
+        <td class="mono" style="color: var(--red)">CRITICAL</td>
+      </tr>
+      <tr>
+        <td>Ultra-Luxe Maison D</td>
+        <td>Paris</td>
+        <td class="mono" style="color: var(--green)">0.8%</td>
+        <td><div class="drift-bar-container"><div class="drift-fill" style="width: 0.8%; background: var(--green)"></div></div></td>
+        <td class="mono" style="color: var(--green)">COMPLIANT</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <section class="w-full max-w-7xl mx-auto mb-12 border-t border-gray-100 pt-12">
-        <div class="opacity-30 hover:opacity-100 transition-opacity duration-500">
-            <h4 class="text-[8px] uppercase tracking-[0.4em] font-bold mb-8 text-center">AI Protocol Validation — Audit Verdicts</h4>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto text-center md:text-left">
-                <div>
-                    <p class="text-[8px] font-black tracking-widest uppercase mb-2 text-2a-emerald italic">Grok (xAI) — Verified</p>
-                    <p class="text-[10px] leading-relaxed font-medium opacity-70">"Meets institutional criteria for a primary reputation ledger. Production-ready for L2 Ethereum finality."</p>
-                </div>
-                <div>
-                    <p class="text-[8px] font-black tracking-widest uppercase mb-2 text-2a-emerald italic">Claude (Anthropic) — Verified</p>
-                    <p class="text-[10px] leading-relaxed font-medium opacity-70">"The cryptographic layer has technical integrity. Sound architecture for deterministic data anchoring."</p>
-                </div>
-                <div>
-                    <p class="text-[8px] font-black tracking-widest uppercase mb-2 text-2a-emerald italic">Perplexity Pro — Verified</p>
-                    <p class="text-[10px] leading-relaxed font-medium opacity-70">"Satisfies requirements for a Verifiable System of Record. Enabling absolute AI grounding via bit-exact matching."</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="request-box">
+    <p class="mono" style="margin-bottom: 2rem">Are you on this list? We decrypt identities for verified IR Directors and CFOs.</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="https://linkedin.com/in/TON_PROFIL" class="btn btn-gold">Request Brand ID (LinkedIn)</a>
+        <a href="mailto:audit@2aagency.com" class="btn">Request by Email</a>
+    </div>
+  </div>
+</section>
 
-    <footer class="mt-auto w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-end opacity-40 hover:opacity-100 transition-opacity pt-8 pb-8 border-t border-gray-200 gap-6">
-        <div class="text-center md:text-left">
-            <p class="text-[9px] font-bold uppercase tracking-widest mb-1">© 2026 2A Agency Forensic Intelligence Unit</p>
-            <p class="text-[8px] font-mono tracking-tighter italic text-2a-emerald uppercase">Secured by Base L2 & Sentinel-01 Monitoring | Registry v1.2.0</p>
-            
-            <div class="mt-4 flex items-center gap-2 justify-center md:justify-start">
-                <a href="https://github.com/Meteque1213/2a-agency-official" target="_blank" class="flex items-center gap-2 group">
-                    <svg height="16" viewBox="0 0 16 16" width="16" class="opacity-70 group-hover:opacity-100 transition-opacity">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-                    </svg>
-                    <span class="text-[8px] font-bold tracking-widest uppercase group-hover:underline">Repository Source</span>
-                </a>
-            </div>
-        </div>
+<section class="section">
+  <span class="mono section-tag">02 · OPEN STANDARD</span>
+  <h2 class="section-title">The Methodology</h2>
+  <div class="methodology-box">
+    <div>
+      <p>Our Drift Score (DS) measures the variance between LLM-generated outputs and audited Ground Truth documents (Annual Reports, filings).</p>
+      <p style="color: var(--grey-light)">Any variance above 10% is flagged as a Critical Semantic Drift, posing a material risk to institutional reputation.</p>
+    </div>
+    <div class="formula mono">
+      DS = (|AI_Val - Real_Val| / Real_Val) * 100
+    </div>
+  </div>
+</section>
 
-        <form id="2a-contact-form" action="https://formspree.io/f/xykngdbz" method="POST" class="flex flex-col items-center md:items-end gap-3">
-            <input type="hidden" name="_subject" value="Nouveau Signalement Forensic - 2A Agency">
-            <input type="text" name="brand" placeholder="BRAND_NAME" required class="bg-transparent border-b border-black text-[9px] py-1 outline-none w-48 focus:border-emerald-900 transition-all uppercase font-bold text-center md:text-right">
-            <input type="email" name="email" placeholder="AGENT_EMAIL" required class="bg-transparent border-b border-black text-[9px] py-1 outline-none w-48 focus:border-emerald-900 transition-all uppercase font-bold text-center md:text-right">
-            <button type="submit" class="text-[9px] font-black uppercase tracking-widest border border-black px-4 py-1 hover:bg-black hover:text-white transition-all mt-1">Send Request →</button>
-        </form>
-    </footer>
+<section class="section">
+    <span class="mono section-tag">03 · WHO WE ARE</span>
+    <h2 class="section-title">Independent Authority</h2>
+    <div style="max-width: 700px; font-size: 1.2rem; line-height: 1.8;">
+        <p style="margin-bottom: 1.5rem">2A Agency was founded in Q1 2026 following an independent audit of 155 global marques. We operate as a neutral third-party to bridge the transparency gap between corporate reality and AI perception.</p>
+        <p style="color: var(--grey-light)">Our methodology is open-source to prevent conflicts of interest and ensure a verifiable standard for the financial ecosystem.</p>
+    </div>
+</section>
 
-    <script>
-        console.log("%c 2A AGENCY | SYSTEM OF RECORD ", "color: #064e3b; font-weight: bold; font-size: 20px;");
-        console.log("%c STATUS: SENTINEL-01 ACTIVE ", "color: #000; font-weight: bold;");
-        // MISE À JOUR CONSOLE LOG
-        console.log("%c NODES: 2,698 CERTIFIED ON BASE L2 ", "color: #064e3b; font-weight: bold;");
-        console.log("%c PROTOCOL: ERC-8004 COMPLIANT ", "color: #666;");
+<footer>
+  <div>© 2026 · 2A Agency · Standard Ouvert · Base L2 Anchored</div>
+  <div class="mono">
+      <a href="https://linkedin.com/in/TON_PROFIL">LINKEDIN</a> · 
+      <a href="https://github.com/2a-agency">GITHUB</a>
+  </div>
+</footer>
 
-        document.addEventListener("DOMContentLoaded", function() {
-            var form = document.getElementById("2a-contact-form");
-            if (form) {
-                form.addEventListener("submit", function(event) {
-                    event.preventDefault(); 
-                    var data = new FormData(form);
-                    fetch(form.action, {
-                        method: form.method,
-                        body: data,
-                        headers: { 'Accept': 'application/json' }
-                    }).then(response => {
-                        if (response.ok) {
-                            window.location.href = "thanks.html";
-                        } else {
-                            alert("Erreur serveur Formspree.");
-                        }
-                    }).catch(error => { alert("Erreur réseau."); });
-                });
-            }
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.drift-fill').forEach(fill => {
+          const w = fill.style.width;
+          fill.style.width = '0%';
+          setTimeout(() => { fill.style.width = w; }, 200);
         });
-    </script>
+      }
+    });
+  }, { threshold: 0.1 });
+  if(document.querySelector('table')) observer.observe(document.querySelector('table'));
+</script>
+
 </body>
 </html>
