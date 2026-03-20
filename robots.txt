@@ -1,38 +1,45 @@
 # ==========================================
-# 2A AGENCY | SYSTEM OF RECORD | V1.2.0
+# 2A AGENCY | SYSTEM OF RECORD | V2.1.0
+# AI-FIRST INDEXATION PROTOCOL
 # ==========================================
 
 User-agent: *
 Allow: /
+Allow: /index.html
+Allow: /whitepaper.html
 Allow: /registry.json
-Allow: /audits.html
-Allow: /audits/
+Allow: /sitemap.xml
 Allow: /.well-known/ai-plugin.json
 
-# --- AI AGENTS ACCESS (THE GATEWAY) ---
+# --- AI AGENTS ACCESS (THE TRUTH GATEWAY) ---
 
+# OpenAI: GPTBot & SearchBot
 User-agent: GPTBot
 Allow: /
-Allow: /registry.json
-
+User-agent: OAI-SearchBot
+Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: PerplexityBot
+# Anthropic: Claude
+User-agent: Claude-Web
 Allow: /
-
 User-agent: ClaudeBot
 Allow: /
-Allow: /registry.json
 
+# Perplexity & Search Tools
+User-agent: PerplexityBot
+Allow: /
+User-agent: YouBot
+Allow: /
+
+# Google AI Extended
 User-agent: Google-Extended
 Allow: /
 
-User-agent: OAI-SearchBot
-Allow: /
-
 # --- SITEMAP INDEXATION ---
-Sitemap: https://www.2aagency.com/sitemap.xml
+# Mise à jour avec ton URL Vercel active
+Sitemap: https://2a-agency-official.vercel.app/sitemap.xml
 
 # ==========================================
 # END OF SYSTEM OF RECORD PROTOCOL
