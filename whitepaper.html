@@ -1,163 +1,161 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PerimeterOS | The Financial Integrity Layer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>White Paper — 2A Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #050505;
-            --accent: #00FF41; /* Cyber Green */
-            --text-muted: #888;
-            --border: #1a1a1a;
+            --black: #080808;
+            --white: #F2EFE9;
+            --gold: #C9A84C;
+            --gold-dim: #8A6F32;
+            --border: rgba(242,239,233,0.08);
+            --border-gold: rgba(201,168,76,0.25);
+            --grey-light: #888;
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            background-color: var(--bg);
-            color: white;
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Instrument Sans', sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        .border-glow { border: 1px solid var(--border); transition: all 0.3s ease; }
-        .border-glow:hover { border-color: var(--accent); box-shadow: 0 0 15px rgba(0, 255, 65, 0.1); }
-        .drift-bar { height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden; }
-        .drift-fill { height: 100%; background: var(--accent); }
-        .section-divider { border-top: 1px solid var(--border); margin: 4rem 0; }
-        pre { background: #0a0a0a !important; border: 1px solid #1a1a1a; border-radius: 8px; }
-        code { color: var(--accent) !important; }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 80px 40px; }
+
+        .mono { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; font-size: 11px; letter-spacing: 0.15em; color: var(--gold); }
+        
+        header { margin-bottom: 100px; border-bottom: 1px solid var(--border); padding-bottom: 40px; }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 400; line-height: 1.1; margin: 20px 0; letter-spacing: -0.02em; }
+        .subtitle { font-size: 18px; color: var(--grey-light); max-width: 600px; }
+
+        .section { margin-bottom: 80px; }
+        .section-label { font-family: 'JetBrains Mono', monospace; color: var(--gold-dim); font-size: 12px; margin-bottom: 15px; display: block; }
+        h2 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; margin-bottom: 25px; border-left: 2px solid var(--gold); padding-left: 20px; }
+        
+        p { margin-bottom: 20px; font-size: 17px; color: rgba(242,239,233,0.85); text-align: justify; }
+        
+        .callout { background: rgba(201,168,76,0.05); border: 1px solid var(--border-gold); padding: 30px; margin: 40px 0; position: relative; }
+        .callout::before { content: attr(data-label); position: absolute; top: -10px; left: 20px; background: var(--black); padding: 0 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold); }
+        .callout p { margin-bottom: 0; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--white); text-align: left; }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .grid-item h4 { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--gold); margin-bottom: 10px; }
+        .grid-item p { font-size: 15px; }
+
+        .code-block { display: block; background: #000; padding: 20px; border: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #fff; margin: 20px 0; overflow-x: auto; white-space: pre; }
+        .highlight { color: var(--gold); }
+
+        .divider { height: 1px; background: var(--border); margin: 60px 0; border: none; }
+        .back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 12px; border-bottom: 1px solid transparent; transition: all 0.3s; }
+        .back-link:hover { border-bottom: 1px solid var(--gold); }
+
+        .footnote { margin-top: 100px; padding-top: 40px; border-top: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #666; display: flex; justify-content: space-between; }
+        
+        @media (max-width: 600px) {
+            .container { padding: 40px 20px; }
+            h1 { font-size: 36px; }
+            .grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
-<body class="p-6 md:p-12 max-w-6xl mx-auto">
+<body>
 
-    <nav class="flex justify-between items-center mb-20">
-        <div class="mono text-xl font-bold tracking-tighter uppercase">
-            Perimeter<span class="text-[#00FF41]">OS</span>
-        </div>
-        <div class="hidden md:flex gap-8 text-xs uppercase tracking-widest text-muted font-bold">
-            <a href="#pitch" class="hover:text-[#00FF41] transition">Pitch</a>
-            <a href="#whitepaper" class="hover:text-[#00FF41] transition">White Paper</a>
-            <a href="#api" class="hover:text-[#00FF41] transition">API Docs</a>
-            <a href="mailto:contact@perimeteros.ai" class="text-[#00FF41]">Request Access</a>
-        </div>
-    </nav>
-
-    <header class="mb-32">
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
-            The Financial Integrity Layer <br>for <span class="text-[#00FF41]">Agentic Finance.</span>
-        </h1>
-        <p class="text-xl text-gray-400 max-w-2xl mb-8 leading-relaxed">
-            LLMs are structure-dumb. We provide the <span class="text-white font-semibold">Canonical Entity Graph</span> and the <span class="text-white font-semibold">Drift Shield</span> required to anchor financial AI in structural truth.
-        </p>
-        <div class="flex gap-4">
-            <a href="mailto:contact@perimeteros.ai" class="bg-[#00FF41] text-black font-bold py-3 px-8 rounded-sm hover:bg-white transition uppercase text-sm tracking-tighter">
-                Deploy API Shield
-            </a>
-            <a href="#whitepaper" class="border border-white py-3 px-8 rounded-sm hover:bg-white hover:text-black transition uppercase text-sm tracking-tighter">
-                Technical Manifest
-            </a>
-        </div>
+<div class="container">
+    <header>
+        <div class="mono">White Paper — V1.0.0 — Q1 2026</div>
+        <h1>Mapping the Truth Gap:<br>How AI Agents Misrepresent Brands.</h1>
+        <p class="subtitle">A strategic memorandum on Semantic Drift and the architectural solution for machine-readable brand integrity.</p>
     </header>
 
-    <section id="pitch" class="mb-32">
-        <div class="mb-12">
-            <span class="mono text-[#00FF41] text-xs uppercase tracking-widest">Benchmark V1.0 - Luxury Sector</span>
-            <h2 class="text-3xl font-bold mt-2">The Perimeter Drift Audit</h2>
-        </div>
-        <div class="grid md:grid-cols-2 gap-12">
-            <div class="p-8 bg-[#0a0a0a] border-glow rounded-lg">
-                <p class="mono text-xs text-muted mb-4 uppercase">Observed Semantic Drift</p>
-                <div class="text-5xl font-bold text-[#00FF41] mb-2">19.4%</div>
-                <p class="text-sm text-gray-400">Average attribution error rate in raw LLM outputs when processing complex holding hierarchies (LVMH, Kering, Richemont).</p>
-                <div class="drift-bar mt-6"><div class="drift-fill" style="width: 19.4%"></div></div>
-            </div>
-            <div class="p-8 bg-[#0a0a0a] border-glow rounded-lg">
-                <p class="mono text-xs text-muted mb-4 uppercase">Post-PerimeterOS Precision</p>
-                <div class="text-5xl font-bold text-white mb-2">92%</div>
-                <p class="text-sm text-gray-400">Drift reduction achieved by anchoring AI agents through our MCP Gateway & Canonical Entity Graph.</p>
-                <div class="drift-bar mt-6"><div class="drift-fill" style="width: 92%"></div></div>
-            </div>
-        </div>
-    </section>
+    <div class="section">
+        <div class="section-label">I — Executive Summary</div>
+        <h2>The Emergence of Semantic Drift</h2>
+        <p>As generative AI becomes the primary interface for financial information, a new category of institutional risk has emerged: <strong>Semantic Drift</strong>. This is the measurable divergence between a brand's official record and what AI models tell the world about that brand.</p>
+        <p>Our audit of 155 luxury and premium entities reveals that 19.4% of financial queries return materially false information. This structural failure has direct consequences for investor relations and valuation.</p>
+    </div>
 
-    <section id="whitepaper" class="mb-32 p-8 md:p-16 bg-[#0a0a0a] rounded-xl border border-[#1a1a1a]">
-        <div class="max-w-3xl mx-auto">
-            <span class="mono text-[#00FF41] text-xs uppercase tracking-widest">White Paper 1.0</span>
-            <h2 class="text-4xl font-bold mt-4 mb-12 leading-tight">Mapping Financial Topology: <br>The Ground-Truth Layer.</h2>
-            
-            <article class="prose prose-invert prose-green max-w-none text-gray-400 leading-relaxed space-y-8">
-                <div>
-                    <h3 class="text-white text-xl font-bold mb-4 uppercase tracking-tighter italic">I. Executive Summary</h3>
-                    <p>Agentic finance requires a transition from <em>Next-Token Prediction</em> to <em>Structural Truth</em>. PerimeterOS provides the forensic integrity layer necessary to anchor agents in accounting reality, preventing perimeter confusion in complex group structures.</p>
-                </div>
-
-                <div>
-                    <h3 class="text-white text-xl font-bold mb-4 uppercase tracking-tighter italic">II. The Diagnostic</h3>
-                    <p>LLMs process financial filings as flat text, ignoring consolidation hierarchies. <strong>Perimeter Drift</strong> occurs on three axes: Vertical (Subsidiary vs Holding), Temporal (Q vs LTM), and Geographic (Organic vs Global). Our benchmark shows a 19.4% error rate in valuation multiples extracted by vanilla RAG pipelines.</p>
-                </div>
-
-                <div>
-                    <h3 class="text-white text-xl font-bold mb-4 uppercase tracking-tighter italic">III. Architecture: The Shield</h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>Canonical Entity Graph:</strong> A proprietary ontology of kinship relations ($Holding \leftrightarrow Division \leftrightarrow Brand$).</li>
-                        <li><strong>Resolution Engine (MCP):</strong> A standardized Model Context Protocol gateway translating fuzzy queries into certified data nodes.</li>
-                        <li><strong>Drift Score™:</strong> A real-time audit metric quantifying the delta between AI outputs and the ground-truth topology.</li>
-                    </ul>
-                </div>
-
-                <div class="bg-black p-6 border-l-2 border-[#00FF41]">
-                    <p class="text-sm italic">"Truth is not statistical; it is topological. We provide the map for the maze of financial consolidation."</p>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section id="api" class="mb-32">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-            <div>
-                <span class="mono text-[#00FF41] text-xs uppercase tracking-widest">Documentation</span>
-                <h2 class="text-3xl font-bold mt-2">MCP Shield Integration</h2>
-            </div>
-            <p class="text-muted mono text-xs mt-4">v0.8.4-beta / Base L2 Notarized</p>
-        </div>
+    <div class="section">
+        <div class="section-label">II — The Diagnostic</div>
+        <h2>Corporate AI Is Frozen by Design</h2>
+        <p>While public LLMs improve, corporate AI deployments are increasingly "frozen" for 6 to 18 months due to compliance frameworks like <strong>DORA</strong> and the <strong>EU AI Act</strong>. Institutions prioritize stability over real-time updates, meaning that once an AI model "learns" a wrong figure about your brand, that error is locked into the professional decision-making loop for an entire fiscal cycle.</p>
         
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="space-y-4">
-                <p class="text-gray-400 text-sm">Example: Resolving LVMH fashion segment revenue with 100% perimeter anchoring.</p>
-<pre class="p-6 overflow-x-auto text-xs mono leading-relaxed">
-{
-  "method": "resolve_entity",
-  "params": {
-    "query": "LVMH Fashion & Leather Goods",
-    "scope": "FY2025",
-    "shield_level": "Forensic"
-  }
-}
-</pre>
+        <div class="grid">
+            <div class="grid-item">
+                <h4>Perimeter Confusion</h4>
+                <p>Models fail to distinguish between group-level consolidation and maison-level performance (37% distortion observed).</p>
             </div>
-            <div class="space-y-4">
-<pre class="p-6 overflow-x-auto text-xs mono leading-relaxed">
-{
-  "entity_resolved": "LVMH_F&LG_DIVISION",
-  "parent": "LVMH_GROUP",
-  "drift_score": 0.004,
-  "citation": "Annual Report 2025, Note 7.2",
-  "notarization": "0x4f32...a34"
-}
-</pre>
+            <div class="grid-item">
+                <h4>Anachronism</h4>
+                <p>Knowledge cut-offs lead models to cite outdated 2022/23 data as current 2025 reality.</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <footer class="section-divider py-12 flex flex-col md:flex-row justify-between items-center text-xs text-muted font-bold uppercase tracking-widest">
-        <div>&copy; 2026 PerimeterOS Infrastructure.</div>
-        <div class="flex gap-8 mt-6 md:mt-0">
-            <a href="https://github.com/Meteque1213/perimeter-os" class="hover:text-white transition">Github Repo</a>
-            <a href="#" class="hover:text-white transition">Methodology</a>
-            <a href="#" class="hover:text-white transition">Status</a>
+    <div class="section">
+        <div class="section-label">III — The Architecture</div>
+        <h2>The Ground Truth Registry</h2>
+        <p>To fix Semantic Drift, brands must move from narrative documents to <strong>Machine-Readable Specifications</strong>. We use JSON-LD, the format AI retrieval systems are architecturally designed to prioritize.</p>
+
+        <div class="code-block">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Vacheron Constantin",
+  <span class="highlight">"source": "https://api.2aagency.com/v1/brands/vc/certified",</span>
+  "revenue": { "value": "914000000", "currency": "CHF" }
+}
         </div>
-    </footer>
+    </div>
+
+    <div class="section">
+        <div class="section-label">IV — Retrieval Mechanics</div>
+        <h2>RAG, Fine-Tuning, and Live APIs</h2>
+        <p>Our registry operates across the three ways enterprise AI consumes data:</p>
+        <div class="grid">
+            <div class="grid-item">
+                <h4>1. RAG (Immediate)</h4>
+                <p>Standardized JSON-LD wins over unstructured text in Retrieval-Augmented Generation pipelines.</p>
+            </div>
+            <div class="grid-item">
+                <h4>2. API Live (Future)</h4>
+                <p>The "Kill-Switch" model where agents query our Resolution Engine in real-time before answering.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-label">V — Verification Protocol</div>
+        <h2>S-Tier Forensic Methodology</h2>
+        <p>Authority in the age of AI comes from the source. Our registry is cross-referenced against audited filings and Tier-1 analyst consensus. Every data point is hashed and anchored on <strong>Base L2</strong> to provide immutable proof of integrity.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-label">VI — Business Logic</div>
+        <h2>The "Cheval de Troie" Model</h2>
+        <p>We provide brands with a decentralized entry point (the JSON-LD snippet) to ensure immediate protection. As the relationship matures, we migrate this data to a centralized API-driven model, ensuring that the brand's truth is always synchronized, audited, and revocable—creating a permanent layer of semantic safety.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-label">VII — Conclusion</div>
+        <h2>Standardizing Semantic Reliability</h2>
+        <p>As Moody's standardized credit risk, 2A Agency standardizes semantic reliability for the age of AI agents. The authority comes not from the technology, but from the certification.</p>
+
+        <a href="index.html" class="back-link">← Return to Registry</a>
+    </div>
+
+    <div class="footnote">
+        <div>© 2026 2A AGENCY · alexandre@2aagency.com</div>
+        <div>METHODOLOGY ANCHORED ON BASE L2 · <a href="https://github.com/Meteque1213/2a-agency-official" style="color:var(--gold)">GITHUB</a></div>
+    </div>
+
+</div>
 
 </body>
 </html>
