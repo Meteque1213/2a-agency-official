@@ -34,10 +34,10 @@
     <div class="max-w-4xl mx-auto uppercase">
         <header class="mb-32">
             <div class="flex items-center gap-4 mb-8">
-                <h3 class="text-[11px] tracking-[0.6em] text-black/30 font-bold italic uppercase">Technical Specification — v2.1.0</h3>
+                <h3 class="text-[11px] tracking-[0.6em] text-black/30 font-bold italic">Technical Specification — v2.1.0</h3>
                 <span class="stat-badge animate-pulse">LIVE ON BASE L2</span>
             </div>
-            <h1 class="serif text-6xl md:text-8xl text-black italic mb-10 leading-none tracking-tighter uppercase">
+            <h1 class="serif text-6xl md:text-8xl text-black italic mb-10 leading-none tracking-tighter">
                 The <span class="emerald-highlight">SoR</span> Protocol
             </h1>
             <p class="text-xl md:text-2xl font-light text-black/60 italic leading-relaxed max-w-2xl font-serif">
@@ -56,25 +56,25 @@
             <h2 class="text-[#065f46] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 02. Integrity Verification</h2>
             <p class="mb-8 text-black/70 italic uppercase">Vérification Zero-Trust via le Root Hash global :</p>
             <div class="bg-gray-50 border border-black/10 py-12 px-10 rounded-sm mb-12 text-center">
-                <div class="math-container italic uppercase">H(registry) = fb1206...2802</div>
+                <div class="math-container italic">H(registry) = fb1206...2802</div>
                 <p class="text-[9px] text-gray-400 tracking-widest mt-4 uppercase font-normal">Ce Hash certifie l'intégrité des 2,700 entités.</p>
             </div>
         </section>
 
         <section class="section-border" id="architecture">
             <h2 class="text-[#065f46] font-bold uppercase text-xs tracking-[0.3em] mb-12 italic">// 03. Architecture of a Trust Node</h2>
-            <div class="space-y-8 text-sm italic uppercase">
+            <div class="space-y-8 text-sm italic">
                 <div class="highlight-box">
-                    <h4 class="font-bold mb-2">I. JSON-LD Structuring</h4>
-                    <p class="text-gray-600 font-normal">Données lisibles par machine incluant le SOR_ID et le score d'intégrité.</p>
+                    <h4 class="font-bold mb-2 uppercase">I. JSON-LD Structuring</h4>
+                    <p class="text-gray-600 font-normal">Données lisibles par machine (Semantic Web) incluant le SOR_ID et le score d'intégrité.</p>
                 </div>
                 <div class="highlight-box">
-                    <h4 class="font-bold mb-2">II. Character Guard Directives</h4>
+                    <h4 class="font-bold mb-2 uppercase">II. Character Guard Directives</h4>
                     <p class="text-gray-600 font-normal">Instructions métasémantiques forçant les LLM à respecter un périmètre certifié.</p>
                 </div>
                 <div class="highlight-box">
-                    <h4 class="font-bold mb-2">III. On-Chain Notarization</h4>
-                    <p class="text-gray-600 font-normal">Ancrage permanent sur Base L2 via la fonction issueCertificate().</p>
+                    <h4 class="font-bold mb-2 uppercase">III. On-Chain Notarization</h4>
+                    <p class="text-gray-600 font-normal">Ancrage permanent sur Base L2 via la fonction issueCertificate() du contrat 2A.</p>
                 </div>
             </div>
         </section>

@@ -12,7 +12,7 @@ const registry = JSON.parse(fs.readFileSync('registry.json', 'utf8'));
 const outputDir = path.join(__dirname, 'public');
 fs.mkdirSync(outputDir, { recursive: true });
 
-// COPIE DU WHITEPAPER DANS LE DOSSIER DE PRODUCTION
+// Copie du Whitepaper HTML vers public
 if (fs.existsSync('whitepaper.html')) {
     fs.copyFileSync('whitepaper.html', path.join(outputDir, 'whitepaper.html'));
 }
@@ -58,7 +58,7 @@ registry.forEach(brand => {
             </div>
             <div class="space-y-6 italic">
                 <div><p class="text-[10px] opacity-40 mb-1 font-normal tracking-widest">CULTURAL MOAT</p><p class="normal-case font-medium text-sm leading-relaxed">${escapeHtml(moat)}</p></div>
-                <div><p class="text-[10px] opacity-40 mb-1 font-normal tracking-widest text-black">SOR_ID</p><p class="text-xl text-black">${sorId}</p></div>
+                <div><p class="text-[10px] opacity-40 mb-1 font-normal tracking-widest text-black uppercase">SOR_ID</p><p class="text-xl text-black font-mono">${sorId}</p></div>
             </div>
         </div>
     </main>
@@ -71,7 +71,7 @@ registry.forEach(brand => {
     <tr class="border-b border-black/5 hover:bg-emerald-50 transition-all cursor-pointer group" onclick="window.location.href='${fileName}'">
         <td class="p-6 text-sm uppercase font-bold text-[#065f46]">${escapeHtml(rawName)}</td>
         <td class="p-6 text-[#065f46] text-2xl font-black tracking-tighter italic">${iqScore}</td>
-        <td class="p-6 opacity-40 text-[10px] font-mono tracking-tighter font-normal text-black">${sorId}</td>
+        <td class="p-6 opacity-40 text-[10px] font-mono tracking-tighter font-normal text-black font-mono">${sorId}</td>
         <td class="p-6 text-right"><span class="border border-[#065f46]/30 text-[#065f46] text-[9px] px-3 py-1 group-hover:bg-[#065f46] group-hover:text-white transition-all italic tracking-widest uppercase">ACCESS_DATA</span></td>
     </tr>`;
     sitemapUrls += `<url><loc>https://2a-agency-official.vercel.app/${fileName}</loc></url>\n`;
@@ -91,16 +91,16 @@ const indexHtml = `<!DOCTYPE html>
             <p class="opacity-40 text-[10px] tracking-[0.5em] mt-4 font-normal text-black">GLOBAL BRAND INTELLIGENCE REGISTRY • ${registry.length} ENTITIES</p>
         </div>
         
-        <div class="flex gap-4 mt-8 md:mt-0 font-bold">
-            <a href="whitepaper.html" class="bg-[#065f46] text-white text-[10px] px-6 py-3 tracking-widest hover:bg-black transition-all italic uppercase">READ_PROTOCOL</a>
-            <a href="whitepaper.html#architecture" class="border border-[#065f46] text-[#065f46] text-[10px] px-6 py-3 tracking-widest hover:bg-emerald-50 transition-all italic uppercase">AGENCY_STRUCTURE</a>
+        <div class="flex gap-4 mt-8 md:mt-0 font-bold uppercase">
+            <a href="whitepaper.html" class="bg-[#065f46] text-white text-[10px] px-6 py-3 tracking-widest hover:bg-black transition-all italic">READ_PROTOCOL</a>
+            <a href="whitepaper.html#architecture" class="border border-[#065f46] text-[#065f46] text-[10px] px-6 py-3 tracking-widest hover:bg-emerald-50 transition-all italic">AGENCY_STRUCTURE</a>
         </div>
     </header>
 
     <main>
         <table class="w-full text-left uppercase">
             <thead class="opacity-30 text-[9px] tracking-widest border-b border-black/10 font-normal text-black">
-                <tr><th class="p-6">ENTITY NAME</th><th class="p-6">AI_IQ</th><th class="p-6">SOR_ID</th><th class="p-6 text-right uppercase">STATUS</th></tr>
+                <tr><th class="p-6">ENTITY NAME</th><th class="p-6">AI_IQ</th><th class="p-6">SOR_ID</th><th class="p-6 text-right">STATUS</th></tr>
             </thead>
             <tbody>${tableRows}</tbody>
         </table>
@@ -113,4 +113,4 @@ fs.writeFileSync(path.join(outputDir, 'index.html'), indexHtml);
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://2a-agency-official.vercel.app/</loc></url>${sitemapUrls}</urlset>`;
 fs.writeFileSync(path.join(outputDir, 'sitemap.xml'), sitemapXml);
 
-console.log(`✅ Fixed! Protocol Navigation and Home Routing are now 100% operational.`);
+console.log(`✅ Fixed! Protocol Navigation and Deep-Linking (Structure) are now operational.`);
