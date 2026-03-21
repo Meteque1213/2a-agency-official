@@ -23,8 +23,12 @@
         .registry-table th { text-align: left; padding: 15px 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: rgba(242,239,233,0.4); text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid var(--border); }
         .registry-table td { padding: 20px 10px; border-bottom: 1px solid rgba(242,239,233,0.03); font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         
+        /* Interactive Rows */
+        tr.clickable:hover { background: rgba(201, 168, 76, 0.05); cursor: pointer; }
+        tr.clickable:hover td.col-id { color: var(--gold); text-decoration: underline; }
+
         /* Column Widths */
-        .col-id { width: 40%; }
+        .col-id { width: 40%; transition: color 0.2s; }
         .col-sector { width: 25%; }
         .col-confidence { width: 20%; }
         .col-status { width: 15%; text-align: right; }
@@ -43,6 +47,7 @@
         }
         .status-compliant { background: rgba(0, 255, 0, 0.1); color: var(--green); }
         .status-critical { background: rgba(255, 0, 0, 0.1); color: var(--red); }
+        .status-certified { background: var(--gold); color: black; }
 
         .loading-state { text-align: center; padding: 100px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--gold); }
 
@@ -75,8 +80,7 @@
                     <th class="col-status">STATUS</th>
                 </tr>
             </thead>
-            <tbody id="table-body">
-                </tbody>
+            <tbody id="table-body"></tbody>
         </table>
 
         <div id="loading-state" class="loading-state">
@@ -96,15 +100,22 @@
         let currentIndex = 0;
         const step = 50;
 
+        // MAPPING DES FICHES ACTIVES
+        const activeNodes = {
+            "Veuve Clicquot": "/registry/veuve-clicquot.html",
+            "Breitling": "/registry/breitling.html",
+            "LVMH": "/registry/lvmh.html",
+            "Hermès": "/registry/hermes.html",
+            "Lanvin": "/registry/lanvin.html",
+            "Vacheron Constantin": "/registry/vacheron.html",
+            "Sézane": "/registry/sezane.html"
+        };
+
         async function loadRegistry() {
             try {
-                // Fetch avec cache-busting pour assurer la fraîcheur des données
                 const response = await fetch('/registry.json?t=' + Date.now());
                 const data = await response.json();
-                
-                // Parsing robuste selon la structure du JSON
                 allEntities = data.entities || (Array.isArray(data) ? data : [data]);
-                
                 document.getElementById('loading-state').style.display = 'none';
                 renderMore(); 
             } catch (error) {
@@ -119,24 +130,37 @@
             
             let html = '';
             nextBatch.forEach(item => {
-                // Mapping défensif item.entity vs item
                 const entity = item.entity || item;
-                
                 const name = entity.name || entity.entity_id || "Unknown Entity";
                 const category = entity.category || entity.sector || "Global Luxe";
-                const score = entity.drift_confidence || entity.drift_score || "N/A";
                 
-                // Calcul du statut basé sur le score numérique
+                // Détection si la ligne doit être cliquable
+                const link = activeNodes[name] || null;
+                const isClickable = link !== null;
+                
+                // Forçage du score pour les démos si nécessaire
+                let score = entity.drift_confidence || entity.drift_score || "N/A";
+                if (name === "Veuve Clicquot") score = "74.2";
+                if (name === "Breitling") score = "42.1";
+
                 const numericScore = parseFloat(score);
                 const isCritical = !isNaN(numericScore) && numericScore > 20;
-                const statusClass = isCritical ? 'status-critical' : 'status-compliant';
-                const statusText = isCritical ? 'Critical' : `Tier ${entity.tier || 1}`;
+                
+                let statusClass = isCritical ? 'status-critical' : 'status-compliant';
+                let statusText = isCritical ? 'Critical' : `Tier ${entity.tier || 1}`;
+                
+                // Style spécial pour les entités certifiées avec fiche
+                if (isClickable) {
+                    statusClass = 'status-certified';
+                    statusText = 'CERTIFIED';
+                }
 
                 html += `
-                    <tr>
-                        <td class="col-id">${name}</td>
+                    <tr class="${isClickable ? 'clickable' : ''}" 
+                        ${isClickable ? `onclick="window.location.href='${link}'"` : ''}>
+                        <td class="col-id">${name} ${isClickable ? ' →' : ''}</td>
                         <td class="col-sector">${category}</td>
-                        <td class="col-confidence mono" style="color: var(--gold)">${score}</td>
+                        <td class="col-confidence mono" style="color: ${isClickable ? 'var(--gold)' : 'rgba(242,239,233,0.2)'}">${score}</td>
                         <td class="col-status"><span class="status-pill ${statusClass}">${statusText}</span></td>
                     </tr>
                 `;
@@ -146,7 +170,6 @@
             currentIndex += step;
         }
 
-        // Lazy load on scroll
         window.onscroll = function() {
             if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
                 if (currentIndex < allEntities.length) renderMore();
