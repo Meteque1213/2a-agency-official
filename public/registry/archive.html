@@ -9,234 +9,86 @@
         :root { --black: #080808; --white: #F2EFE9; --gold: #C9A84C; --border: rgba(242,239,233,0.1); --red: #ff4444; --green: #00ff00; }
         body { background: var(--black); color: var(--white); font-family: 'Instrument Sans', sans-serif; margin: 0; padding: 0; line-height: 1.6; overflow-x: hidden; }
         .container { max-width: 1200px; margin: 0 auto; padding: 40px; }
-        
         header { border-bottom: 1px solid var(--border); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: var(--white); }
         .mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
-        
         .hero { padding: 80px 0 60px 0; }
         h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; margin-bottom: 10px; }
         .subtitle { color: rgba(242,239,233,0.6); font-size: 16px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; }
-
-        /* Search Section Design */
         .search-container { margin-bottom: 60px; border-bottom: 1px solid var(--border); padding-bottom: 40px; }
         .search-bar { width: 100%; position: relative; }
-        
-        #registrySearch { width: 100%; padding: 18px 24px 18px 60px; background: rgba(242,239,233,0.03); border: 1px solid var(--border); color: var(--white); font-family: 'Instrument Sans', sans-serif; font-size: 16px; border-radius: 4px; box-sizing: border-box; transition: border-color 0.3s, background 0.3s; }
-        
+        #registrySearch { width: 100%; padding: 18px 24px 18px 60px; background: rgba(242,239,233,0.03); border: 1px solid var(--border); color: var(--white); font-family: 'Instrument Sans', sans-serif; font-size: 16px; border-radius: 4px; box-sizing: border-box; transition: all 0.3s; }
         #registrySearch:focus { outline: none; border-color: rgba(201, 168, 76, 0.4); background: rgba(242,239,233,0.05); }
-        
         .search-icon { position: absolute; left: 24px; top: 50%; transform: translateY(-50%); color: rgba(242,239,233,0.2); pointer-events: none; transition: color 0.3s; }
-        
         #registrySearch:focus + .search-icon { color: var(--gold); }
-
-        /* Table Design */
         .registry-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
         .registry-table th { text-align: left; padding: 15px 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: rgba(242,239,233,0.4); text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid var(--border); }
         .registry-table td { padding: 20px 10px; border-bottom: 1px solid rgba(242,239,233,0.03); font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        
-        /* Interactive Rows */
         tr.clickable:hover { background: rgba(201, 168, 76, 0.05); cursor: pointer; }
         tr.clickable:hover td.col-id { color: var(--gold); text-decoration: underline; }
-
-        /* Column Widths */
         .col-id { width: 40%; transition: color 0.2s; }
         .col-sector { width: 25%; }
         .col-confidence { width: 20%; }
         .col-status { width: 15%; text-align: right; }
-
-        /* Status Pills */
-        .status-pill { display: inline-block; padding: 6px 14px; border-radius: 20px; font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; white-space: nowrap; }
+        .status-pill { display: inline-block; padding: 6px 14px; border-radius: 20px; font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; }
         .status-compliant { background: rgba(0, 255, 0, 0.1); color: var(--green); }
         .status-critical { background: rgba(255, 0, 0, 0.1); color: var(--red); }
         .status-certified { background: var(--gold); color: black; }
-
-        .loading-state { text-align: center; padding: 100px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--gold); }
         .no-results { display: none; text-align: center; padding: 60px; font-family: 'JetBrains Mono', monospace; font-size: 14px; color: rgba(242,239,233,0.4); text-transform: uppercase; }
-
         footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid var(--border); color: rgba(242,239,233,0.4); font-size: 11px; }
-        nav a { text-decoration: none; transition: opacity 0.3s; color: var(--white); margin-left: 24px; }
-        nav a:hover { opacity: 0.7; }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <a href="/" class="logo">2A Agency</a>
-            <nav class="mono">
-                <a href="/whitepaper.html">White Paper</a>
-                <a href="mailto:alexandre@2aagency.com">Direct Line</a>
-            </nav>
-        </header>
-
-        <section class="hero">
-            <h1>Global Semantic Registry</h1>
-            <div class="subtitle">2,701 Certified Audit Nodes / Q1 2026 Batch</div>
-        </section>
-
-        <section class="search-container">
-            <div class="search-bar">
-                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                
-                <input type="text" id="registrySearch" placeholder="SEARCH ENTITY ID (e.g. Breitling)" onkeyup="filterTable()">
-            </div>
-        </section>
-
-        <table class="registry-table" id="registryTable">
-            <thead>
-                <tr>
-                    <th class="col-id">ENTITY ID</th>
-                    <th class="col-sector">SECTOR</th>
-                    <th class="col-confidence">DRIFT CONFIDENCE</th>
-                    <th class="col-status">STATUS</th>
-                </tr>
-            </thead>
-            <tbody id="table-body">
-                </tbody>
-        </table>
-
-        <div id="loading-state" class="loading-state">SYNCING DATA STREAM...</div>
-        <div id="no-results" class="no-results">NO ENTITY MATCHING YOUR SEARCH FOUND IN Q1 BATCH</div>
-
-        <footer>
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <div>© 2026 2A Agency. All rights reserved.</div>
-                <div class="mono">Protocol Layer: Base L2 Verified</div>
-            </div>
-        </footer>
+        <header><a href="/" class="logo">2A Agency</a><nav class="mono"><a href="/whitepaper.html">White Paper</a></nav></header>
+        <section class="hero"><h1>Global Semantic Registry</h1><div class="subtitle">2,701 Certified Audit Nodes / Q1 2026 Batch</div></section>
+        <section class="search-container"><div class="search-bar"><svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input type="text" id="registrySearch" placeholder="SEARCH ENTITY ID..." onkeyup="filterTable()"></div></section>
+        <table class="registry-table" id="registryTable"><thead><tr><th class="col-id">ENTITY ID</th><th class="col-sector">SECTOR</th><th class="col-confidence">DRIFT CONFIDENCE</th><th class="col-status">STATUS</th></tr></thead><tbody id="table-body"></tbody></table>
+        <div id="no-results" class="no-results">NO ENTITY MATCHING YOUR SEARCH FOUND</div>
+        <footer><div style="display: flex; justify-content: space-between; align-items: center;"><div>© 2026 2A Agency</div><div class="mono">Protocol Layer: Base L2 Verified</div></div></footer>
     </div>
-
     <script>
-        let allEntities = [];
-        let currentIndex = 0;
-        const step = 50; // Nombre d'entités par batch pour le lazy loading
-
-        // MAPPING DES FICHES ACTIVES
-        const activeNodes = {
-            "Veuve Clicquot": "/registry/veuve-clicquot.html",
-            "Breitling": "/registry/breitling.html",
-            "LVMH": "/registry/lvmh.html",
-            "Hermès": "/registry/hermes.html",
-            "Lanvin": "/registry/lanvin.html",
-            "Vacheron Constantin": "/registry/vacheron.html",
-            "Sézane": "/registry/sezane.html"
-        };
-
+        let allEntities = []; let currentIndex = 0; const step = 50;
+        const activeNodes = { "Veuve Clicquot": "/registry/veuve-clicquot.html", "Breitling": "/registry/breitling.html" };
         async function loadRegistry() {
-            try {
-                const response = await fetch('/registry.json?t=' + Date.now());
-                const data = await response.json();
-                allEntities = data.entities || (Array.isArray(data) ? data : [data]);
-                document.getElementById('loading-state').style.display = 'none';
-                renderMore(); 
-            } catch (error) {
-                console.error("Registry load error:", error);
-                document.getElementById('loading-state').innerHTML = 'OFFLINE DATA STREAM';
-            }
+            const resp = await fetch('/registry.json?t=' + Date.now());
+            const data = await resp.json();
+            allEntities = data.entities || data;
+            renderMore();
         }
-
-        // Modifié pour supporter le filtre
         function generateRowHtml(item) {
             const entity = item.entity || item;
-            const name = entity.name || entity.entity_id || "Unknown Entity";
-            const category = entity.category || entity.sector || "Global Luxe";
-            
-            const link = activeNodes[name] || null;
-            const isClickable = link !== null;
-            
-            // Forçage du score pour les démos si nécessaire
-            let score = entity.drift_confidence || entity.drift_score || "N/A";
+            const name = entity.name || "Unknown";
+            const link = activeNodes[name];
+            let score = entity.drift_confidence || "N/A";
             if (name === "Veuve Clicquot") score = "74.2";
             if (name === "Breitling") score = "42.1";
-
-            const numericScore = parseFloat(score);
-            const isCritical = !isNaN(numericScore) && numericScore > 20;
-            
-            let statusClass = isCritical ? 'status-critical' : 'status-compliant';
-            let statusText = isCritical ? 'Critical' : `Tier ${entity.tier || 1}`;
-            
-            if (isClickable) {
-                statusClass = 'status-certified';
-                statusText = 'CERTIFIED';
-            }
-
-            return `
-                <tr class="${isClickable ? 'clickable' : ''}" 
-                    ${isClickable ? `onclick="window.location.href='${link}'"` : ''}>
-                    <td class="col-id">${name} ${isClickable ? ' →' : ''}</td>
-                    <td class="col-sector">${category}</td>
-                    <td class="col-confidence mono" style="color: ${isClickable ? 'var(--gold)' : 'rgba(242,239,233,0.2)'}">${score}</td>
-                    <td class="col-status"><span class="status-pill ${statusClass}">${statusText}</span></td>
-                </tr>
-            `;
+            const isCritical = parseFloat(score) > 20;
+            return `<tr class="${link ? 'clickable' : ''}" ${link ? `onclick="window.location.href='${link}'"` : ''}>
+                <td class="col-id">${name} ${link ? ' →' : ''}</td>
+                <td>${entity.category || "Luxury"}</td>
+                <td class="mono" style="color: ${link ? 'var(--gold)' : 'inherit'}">${score}</td>
+                <td class="col-status"><span class="status-pill ${link ? 'status-certified' : (isCritical ? 'status-critical' : 'status-compliant')}">${link ? 'CERTIFIED' : (isCritical ? 'CRITICAL' : 'OK')}</span></td>
+            </tr>`;
         }
-
         function renderMore() {
-            // Ne pas lazy-load si une recherche est en cours
-            const searchInput = document.getElementById('registrySearch').value;
-            if (searchInput !== "") return;
-
+            if (document.getElementById('registrySearch').value !== "") return;
             const tableBody = document.getElementById('table-body');
             const nextBatch = allEntities.slice(currentIndex, currentIndex + step);
-            
-            let html = '';
-            nextBatch.forEach(item => { html += generateRowHtml(item); });
-            
-            tableBody.insertAdjacentHTML('beforeend', html);
-            currentIndex += step;
+            let html = ''; nextBatch.forEach(item => { html += generateRowHtml(item); });
+            tableBody.insertAdjacentHTML('beforeend', html); currentIndex += step;
         }
-
-        // FONCTION DE FILTRE (SEARCH)
         function filterTable() {
-            const input = document.getElementById('registrySearch');
+            const filter = document.getElementById('registrySearch').value.toUpperCase();
             const tableBody = document.getElementById('table-body');
-            const loadingState = document.getElementById('loading-state');
             const noResults = document.getElementById('no-results');
-            const filter = input.value.toUpperCase();
-            
-            // Désactiver le lazy load
-            currentIndex = 0; 
-            tableBody.innerHTML = ''; 
-
-            if (filter === "") {
-                // Si la recherche est vide, on reset le lazy load
-                noResults.style.display = 'none';
-                renderMore(); 
-                return;
-            }
-
-            // Filtrage synchrone sur l'ensemble des données
-            let filteredHtml = '';
-            let resultsCount = 0;
-
-            allEntities.forEach(item => {
-                const entity = item.entity || item;
-                const name = entity.name || entity.entity_id || "";
-                
-                if (name.toUpperCase().indexOf(filter) > -1) {
-                    filteredHtml += generateRowHtml(item);
-                    resultsCount++;
-                }
-            });
-
-            if (resultsCount > 0) {
-                noResults.style.display = 'none';
-                tableBody.innerHTML = filteredHtml;
-            } else {
-                noResults.style.display = 'block';
-            }
+            tableBody.innerHTML = '';
+            if (filter === "") { noResults.style.display = 'none'; currentIndex = 0; renderMore(); return; }
+            let results = allEntities.filter(i => (i.entity?.name || i.name || "").toUpperCase().includes(filter));
+            if (results.length > 0) { noResults.style.display = 'none'; results.forEach(r => { tableBody.innerHTML += generateRowHtml(r); }); }
+            else { noResults.style.display = 'block'; }
         }
-
-        // Lazy load on scroll
-        window.onscroll = function() {
-            const searchInput = document.getElementById('registrySearch').value;
-            if (searchInput !== "") return; // Désactiver le scroll-load pendant la recherche
-
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
-                if (currentIndex < allEntities.length) renderMore();
-            }
-        };
-
+        window.onscroll = () => { if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) renderMore(); };
         window.onload = loadRegistry;
     </script>
 </body>
