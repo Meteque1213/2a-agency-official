@@ -55291,65 +55291,6 @@
       }
     },
     "entity": {
-      "name": "Vanessa Bruno",
-      "slug": null,
-      "category": "Uncategorized",
-      "ownership": {
-        "type": "independent",
-        "stake_percent": 100
-      },
-      "parent_group": null,
-      "subsidiaries": [],
-      "sector": "Contemporary Apparel",
-      "erc8004_id": "0x14...vnb"
-    },
-    "proof": {
-      "sources": [],
-      "disclaimer": null,
-      "network": "Base L2",
-      "hash": "0x4e5f...apr04"
-    },
-    "sor_id": "2A-AUTO-0805",
-    "trust": {
-      "score": 90,
-      "status": "STABLE",
-      "ttl": "2027-10-01",
-      "node": "SENTINEL-03"
-    },
-    "ai_gateway": {
-      "statement": "Vanessa Bruno: The art of effortless French style. 'Cabas' traceability and artisan craft integrity verified.",
-      "character_guard": "Natural-Artisanal: Focus on the iconic Cabas bag, linen and cotton quality, and local craftsmanship.",
-      "ontology": {
-        "tech": "Independent House",
-        "origin": "France"
-      }
-    }
-  },
-  {
-    "schema_version": "3.1",
-    "data_meta": {
-      "entity_type": "brand",
-      "tier": 3,
-      "confidence_score": 0,
-      "last_updated": null,
-      "fiscal_year": null,
-      "data_origin": "pending"
-    },
-    "financials": {
-      "annual_revenue": {
-        "value": null,
-        "currency": null,
-        "unit": null,
-        "is_estimated": true,
-        "status": "pending"
-      },
-      "market_cap": {
-        "value": null,
-        "status": "not_applicable",
-        "status_reason": "data_pending_initialization"
-      }
-    },
-    "entity": {
       "name": "A.P.C.",
       "slug": null,
       "category": "Uncategorized",
@@ -167353,5 +167294,14 @@
         "verified": true
       }
     }
+  },
+
+  {
+    "id": "VB-001",
+    "entity": "Vanessa Bruno",
+    "sector": "Luxury Fashion",
+    "drift_confidence": "38.4%",
+    "status": "OK",
+    "url": "/registry/vanessa-bruno.html"
   }
 ]
