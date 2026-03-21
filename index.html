@@ -14,11 +14,10 @@
         .logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: var(--white); }
         .mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
         
-        .hero { padding: 120px 0 100px 0; border-bottom: 1px solid var(--border); }
+        .hero { padding: 120px 0 80px 0; border-bottom: 1px solid var(--border); }
         h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 8vw, 72px); font-weight: 300; line-height: 1.1; margin-bottom: 30px; }
         .subtitle { max-width: 600px; font-size: 18px; color: rgba(242,239,233,0.7); margin-bottom: 40px; }
         
-        .cta-container { margin: 60px 0; }
         .btn-registry {
             display: inline-block;
             padding: 20px 40px;
@@ -34,16 +33,19 @@
         }
         .btn-registry:hover { background: var(--gold); color: var(--black); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201, 168, 76, 0.2); }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; padding: 100px 0; }
-        .card { border: 1px solid var(--border); padding: 40px; transition: border 0.3s; position: relative; }
-        .card:hover { border-color: var(--gold); }
-        .card h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; margin: 20px 0; }
-        .card p { color: rgba(242,239,233,0.6); font-size: 15px; }
+        /* Metrics Section */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--border); margin-top: 80px; border: 1px solid var(--border); }
+        .card { background: var(--black); padding: 60px 40px; transition: all 0.3s; }
+        .card:hover { background: rgba(201, 168, 76, 0.02); }
+        .card .metric { font-family: 'Cormorant Garamond', serif; font-size: 64px; color: var(--gold); line-height: 1; margin: 20px 0; }
+        .card p { color: rgba(242,239,233,0.5); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
         
-        .infra-section { padding: 80px 40px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); margin-top: 40px; }
-        
-        footer { margin-top: 120px; padding: 40px 0; border-top: 1px solid var(--border); color: rgba(242,239,233,0.4); font-size: 12px; }
-        a { text-decoration: none; color: inherit; }
+        .status-bar { padding: 40px; border: 1px solid var(--border); border-top: none; display: flex; align-items: center; gap: 20px; background: rgba(255,255,255,0.01); }
+        .dot { width: 8px; height: 8px; background: #00ff00; border-radius: 50%; box-shadow: 0 0 10px #00ff00; }
+
+        footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid var(--border); color: rgba(242,239,233,0.4); font-size: 11px; }
+        nav a { text-decoration: none; transition: opacity 0.3s; }
+        nav a:hover { opacity: 0.7; }
     </style>
 </head>
 <body>
@@ -51,60 +53,52 @@
         <header>
             <a href="/" class="logo">2A Agency</a>
             <nav class="mono">
-                <a href="/whitepaper.html" style="color: var(--gold); margin-left: 24px;">Whitepaper</a>
+                <a href="/whitepaper.html" style="color: var(--gold); margin-left: 24px;">White Paper</a>
                 <a href="/registry/archive.html" style="color: var(--gold); margin-left: 24px;">Registry</a>
+                <a href="mailto:alexandre@2aagency.com" style="color: var(--white); margin-left: 24px;">Direct Line</a>
             </nav>
         </header>
 
         <section class="hero">
-            <div class="mono">Verification Protocol v1.0</div>
+            <div class="mono" style="margin-bottom: 20px;">Standard v1.0.0 / Agentic Era</div>
             <h1>The Ground Truth Layer <br>for AI Entities.</h1>
             <p class="subtitle">
-                As Large Language Models drift, 2A Agency provides the immutable anchor for brand integrity. We monitor, notarize, and certify 2,701 global entities across the agentic ecosystem.
+                2A Agency provides the first institutional-grade standard for detecting and certifying Semantic Drift in generative financial reporting.
             </p>
-
-            <div class="cta-container">
-                <a href="/registry/archive.html" class="btn-registry">
-                    Access 2,701 Certified Audit Nodes →
-                </a>
-                <div class="mono" style="margin-top: 15px; font-size: 9px; opacity: 0.6;">
-                    Infrastructure: PerimeterOS Enabled · Base L2 Verified
-                </div>
-            </div>
+            <a href="/registry/archive.html" class="btn-registry">
+                Access 2,701 Certified Audit Nodes →
+            </a>
         </section>
 
         <div class="grid">
             <div class="card">
-                <div class="mono">Audit</div>
-                <h3>Semantic Drift Analysis</h3>
-                <p>We detect financial and conceptual hallucinations in real-time. Our proprietary algorithms identify discrepancies between ground truth data and AI model outputs.</p>
+                <p class="mono">Avg. Sector Drift Rate</p>
+                <div class="metric">19.4%</div>
+                <p>Calculated variance across monitored LLM outputs.</p>
             </div>
             <div class="card">
-                <div class="mono">Infrastructure</div>
-                <h3>The Registry API</h3>
-                <p>A serverless infrastructure serving certified JSON-LD fragments directly to agents. Ensure your brand is represented with 100% accuracy in the latent space.</p>
+                <p class="mono">Entities Monitored</p>
+                <div class="metric">2,701</div>
+                <p>Live nodes in the 2A Global Semantic Registry.</p>
             </div>
             <div class="card">
-                <div class="mono">Compliance</div>
-                <h3>Institutional Proof</h3>
-                <p>Certified audit trails for DORA and EU AI Act compliance. We provide the third-party verification required for high-risk AI deployments in finance and luxury.</p>
+                <p class="mono">Network Status</p>
+                <div class="metric">Live</div>
+                <p>Infrastructure: Base L2 · SHA-256 Provenance.</p>
             </div>
         </div>
 
-        <section class="infra-section">
-            <div class="mono" style="margin-bottom: 20px;">Live API Status</div>
-            <div style="display: flex; align-items: center; gap: 20px;">
-                <div style="width: 10px; height: 10px; background: #00ff00; border-radius: 50%; box-shadow: 0 0 10px #00ff00;"></div>
-                <div style="font-family: 'JetBrains Mono'; font-size: 13px;">
-                    endpoint: <span style="color: var(--gold);">2aagency.com/api/audit</span> | status: <span style="color: var(--gold);">verified_operational</span>
-                </div>
+        <div class="status-bar">
+            <div class="dot"></div>
+            <div class="mono" style="font-size: 13px;">
+                API Endpoint: <span style="color: var(--white);">2aagency.com/api/audit</span> — <span style="color: #00ff00;">Verified Operational</span>
             </div>
-        </section>
+        </div>
 
         <footer>
             <div style="display: flex; justify-content: space-between; align-items: center;">
-                <div>© 2026 2A Agency. Built for the Agentic Era.</div>
-                <div class="mono">Notary: <span style="color: var(--white);">SHA256-PROVENANCE</span></div>
+                <div>© 2026 2A Agency. All rights reserved.</div>
+                <div class="mono">Semantic Integrity Protocol</div>
             </div>
         </footer>
     </div>
