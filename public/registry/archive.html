@@ -4,38 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Entity Registry | 2A Agency</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=JetBrains+Mono:wght@300;400&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root { --black: #080808; --white: #F2EFE9; --gold: #C9A84C; --border: rgba(242,239,233,0.1); }
-        body { background: var(--black); color: var(--white); font-family: 'Instrument Sans', sans-serif; padding: 40px; }
+        body { background: var(--black); color: var(--white); font-family: 'Instrument Sans', sans-serif; padding: 40px; margin: 0; }
         .container { max-width: 1100px; margin: 0 auto; }
         .mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
-        h1 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; margin: 20px 0; }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 300; margin: 20px 0; color: var(--white); }
         
-        #searchBar { width: 100%; padding: 15px; background: transparent; border: 1px solid var(--border); color: var(--white); font-family: 'JetBrains Mono'; margin-bottom: 30px; outline: none; }
+        #searchBar { 
+            width: 100%; padding: 20px; background: rgba(255,255,255,0.03); 
+            border: 1px solid var(--border); color: var(--white); 
+            font-family: 'JetBrains Mono'; margin-bottom: 40px; outline: none; box-sizing: border-box;
+        }
         #searchBar:focus { border-color: var(--gold); }
 
-        table { width: 100%; border-collapse: collapse; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th { text-align: left; padding: 15px; color: var(--gold); border-bottom: 1px solid var(--border); font-size: 10px; }
-        td { padding: 15px; border-bottom: 1px solid var(--border); font-size: 13px; }
-        tr:hover td { background: rgba(255,255,255,0.02); }
-        .tier-pill { padding: 2px 8px; border: 1px solid var(--gold); font-size: 9px; border-radius: 4px; }
+        td { padding: 18px 15px; border-bottom: 1px solid var(--border); font-size: 14px; transition: all 0.2s; }
+        tr:hover td { background: rgba(201, 168, 76, 0.05); color: var(--gold); }
+        .tier-pill { padding: 4px 10px; border: 1px solid var(--gold); font-size: 9px; border-radius: 4px; }
+        
+        .loading { font-family: 'JetBrains Mono'; color: var(--gold); padding: 40px; text-align: center; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="mono">Institutional Archive · 2701 Entities</div>
-        <h1>Ground Truth Index</h1>
+        <div class="mono">Institutional Archive · 2701 Entities Index</div>
+        <h1>Ground Truth Registry</h1>
         
-        <input type="text" id="searchBar" placeholder="SEARCH BY ENTITY NAME OR SECTOR..." onkeyup="filterTable()">
+        <input type="text" id="searchBar" placeholder="SEARCH BY BRAND, GROUP OR SECTOR..." onkeyup="filterTable()">
 
-        <table id="registryTable">
+        <div id="loader" class="loading">SYNCING DATA STREAM...</div>
+
+        <table id="registryTable" style="display:none;">
             <thead>
                 <tr class="mono">
-                    <th>Entity</th>
-                    <th>Sector</th>
+                    <th>Entity Name</th>
+                    <th>Category</th>
                     <th>Fiscal Year</th>
-                    <th>Confidence</th>
+                    <th>Drift Confidence</th>
                     <th>Status</th>
                 </tr>
             </thead>
@@ -45,31 +53,57 @@
     </div>
 
     <script>
-        // On charge le fichier JSON
+        // Chargement du fichier JSON massif
         fetch('/registry.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) throw new Error("JSON not found");
+                return response.json();
+            })
             .then(data => {
                 const body = document.getElementById('tableBody');
+                const loader = document.getElementById('loader');
+                const table = document.getElementById('registryTable');
+                
                 data.forEach(item => {
+                    // Extraction précise selon ta structure de données
+                    const entityName = item.entity?.name || "Unknown Entity";
+                    const category = item.entity?.category || "N/A";
+                    const fiscalYear = item.data_meta?.fiscal_year || "2024";
+                    const confidence = (item.data_meta?.confidence_score * 100).toFixed(1) || "0.0";
+                    const tier = item.data_meta?.tier || "3";
+
                     const row = `<tr>
-                        <td style="font-weight:500">${item.data_meta.entity_type === 'brand' ? 'Maison ' : ''} ${item.data_meta.entity_type}</td>
-                        <td class="mono">${item.data_meta.entity_type}</td>
-                        <td class="mono">${item.data_meta.fiscal_year}</td>
-                        <td class="mono" style="color:var(--gold)">${(item.data_meta.confidence_score * 100).toFixed(1)}%</td>
-                        <td><span class="tier-pill mono">Tier ${item.data_meta.tier}</span></td>
+                        <td style="font-weight:400; letter-spacing: 0.5px;">${entityName}</td>
+                        <td class="mono" style="font-size:10px">${category}</td>
+                        <td class="mono">${fiscalYear}</td>
+                        <td class="mono" style="color:var(--gold)">${confidence}%</td>
+                        <td><span class="tier-pill mono">Tier ${tier}</span></td>
                     </tr>`;
                     body.innerHTML += row;
                 });
+
+                loader.style.display = 'none';
+                table.style.display = 'table';
+            })
+            .catch(err => {
+                document.getElementById('loader').innerText = "ERROR LOADING REGISTRY DATA";
+                console.error(err);
             });
 
         function filterTable() {
             let input = document.getElementById('searchBar').value.toUpperCase();
             let tr = document.getElementById('tableBody').getElementsByTagName('tr');
             for (let i = 0; i < tr.length; i++) {
-                let td = tr[i].getElementsByTagName('td')[0];
-                if (td) {
-                    let textValue = td.textContent || td.innerText;
-                    tr[i].style.display = textValue.toUpperCase().indexOf(input) > -1 ? "" : "none";
+                let tdName = tr[i].getElementsByTagName('td')[0];
+                let tdCat = tr[i].getElementsByTagName('td')[1];
+                if (tdName || tdCat) {
+                    let nameText = tdName.textContent || tdName.innerText;
+                    let catText = tdCat.textContent || tdCat.innerText;
+                    if (nameText.toUpperCase().indexOf(input) > -1 || catText.toUpperCase().indexOf(input) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
                 }
             }
         }
