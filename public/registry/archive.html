@@ -90,7 +90,7 @@
         async function loadRegistry() {
             try {
                 // Utilisation du cache-buster t=Date.now() pour éviter les problèmes de mise à jour
-                const resp = await fetch('/registry.json?t=' + Date.now());
+                const resp = await fetch('/registry.json?v=' + new Date().getTime());
                 const data = await resp.json();
                 
                 // On s'adapte au format du JSON (tableau plat ou objet .entities)
