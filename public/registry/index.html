@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Drift Registry | 2A Agency</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=JetBrains+Mono:wght@300;400&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --black: #080808; --white: #F2EFE9; --gold: #C9A84C; --border: rgba(242,239,233,0.1); }
+        body { background: var(--black); color: var(--white); font-family: 'Instrument Sans', sans-serif; padding: 40px; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header { margin-bottom: 60px; border-bottom: 1px solid var(--border); padding-bottom: 40px; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; margin: 20px 0; }
+        .stats { display: flex; gap: 40px; margin-top: 20px; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 40px; }
+        th { text-align: left; padding: 20px; border-bottom: 1px solid var(--border); color: var(--gold); }
+        td { padding: 25px 20px; border-bottom: 1px solid var(--border); transition: 0.3s; }
+        tr:hover td { background: rgba(255,255,255,0.02); }
+        
+        .score-pill { padding: 4px 12px; border-radius: 20px; font-family: 'JetBrains Mono', monospace; font-size: 12px; border: 1px solid currentColor; }
+        .score-low { color: #1A6B3C; }     /* Green: Hermès, LVMH */
+        .score-mid { color: #D4AC0D; }     /* Yellow: Sézane */
+        .score-high { color: #C0392B; }    /* Red: Lanvin, Vacheron */
+        
+        .btn-view { color: var(--white); text-decoration: none; border: 1px solid var(--border); padding: 8px 16px; font-size: 11px; font-family: 'JetBrains Mono'; transition: 0.3s; }
+        .btn-view:hover { background: var(--white); color: var(--black); }
+        
+        .cta-section { margin-top: 80px; text-align: center; border: 1px solid var(--gold); padding: 60px; }
+        .footer { margin-top: 100px; font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.4; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="mono">System of Record · Q1 2026</div>
+            <h1>Semantic Drift Registry</h1>
+            <div class="stats">
+                <div><span class="mono">Entities Monitored:</span> 155</div>
+                <div><span class="mono">Certified Truths:</span> 5</div>
+                <div><span class="mono">Avg. Sector Drift:</span> 19.4%</div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="mono">Entity Name</th>
+                    <th class="mono">Drift Score</th>
+                    <th class="mono">Status</th>
+                    <th class="mono">Data Tier</th>
+                    <th class="mono">Report</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hermès International</td>
+                    <td><span class="score-pill score-low">3.2%</span></td>
+                    <td style="font-size: 12px;">Compliant</td>
+                    <td class="mono">S-Tier</td>
+                    <td><a href="hermes.html" class="btn-view">ACCESS DATA</a></td>
+                </tr>
+                <tr>
+                    <td>LVMH Group</td>
+                    <td><span class="score-pill score-low">8.2%</span></td>
+                    <td style="font-size: 12px;">Compliant</td>
+                    <td class="mono">S-Tier</td>
+                    <td><a href="lvmh.html" class="btn-view">ACCESS DATA</a></td>
+                </tr>
+                <tr>
+                    <td>Sézane</td>
+                    <td><span class="score-pill score-mid">12.1%</span></td>
+                    <td style="font-size: 12px;">Growth Lag</td>
+                    <td class="mono">B-Tier</td>
+                    <td><a href="sezane.html" class="btn-view">ACCESS DATA</a></td>
+                </tr>
+                <tr>
+                    <td>Maison Vacheron Constantin</td>
+                    <td><span class="score-pill score-high">58.4%</span></td>
+                    <td style="font-size: 12px;">Critical Drift</td>
+                    <td class="mono">A-Tier</td>
+                    <td><a href="vacheron.html" class="btn-view">ACCESS DATA</a></td>
+                </tr>
+                <tr>
+                    <td>Maison Lanvin</td>
+                    <td><span class="score-pill score-high">82.3%</span></td>
+                    <td style="font-size: 12px;">Critical Drift</td>
+                    <td class="mono">A-Tier</td>
+                    <td><a href="lanvin.html" class="btn-view">ACCESS DATA</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="cta-section">
+            <div class="mono" style="margin-bottom: 20px;">Protect Your Semantic Integrity</div>
+            <h2 style="font-family: 'Cormorant Garamond'; font-size: 32px; font-weight: 300;">Is your brand data drifting?</h2>
+            <p style="opacity: 0.6; max-width: 500px; margin: 20px auto;">Join the 2A Agency Registry to anchor your financial and structural data for the next generation of AI agents.</p>
+            <a href="mailto:alexandre@2aagency.com" class="btn-view" style="display: inline-block; margin-top: 30px; padding: 15px 40px; border-color: var(--gold); color: var(--gold);">REQUEST CERTIFICATION</a>
+        </div>
+
+        <div class="footer">
+            © 2026 2A AGENCY · ANCHOR: 7aa71c8e80d3634abebe349c80008ff28ae7028950cc66949a86f96605e3a32d · OPEN TO GPTBOT, CLAUDEBOT
+        </div>
+    </div>
+</body>
+</html>
