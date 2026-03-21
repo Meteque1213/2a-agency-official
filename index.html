@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2A Agency — High-Integrity Brand Registry</title>
+    <meta name="msvalidate.01" content="CB7339AD00A7F35B8190AD51361FA47EA" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
@@ -45,40 +47,23 @@
         .status-pill { padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; }
         .status-critical { background: rgba(192, 57, 43, 0.15); color: var(--red); }
         .status-compliant { background: rgba(26, 107, 60, 0.15); color: var(--green); }
+        .btn-link { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
+        .btn-link:hover { border-bottom: 1px solid var(--gold); }
 
         .cta-section { padding: 8rem 4%; text-align: center; background: linear-gradient(to bottom, var(--black), #121212); }
         .btn { cursor: pointer; display: inline-block; padding: 1.2rem 3rem; background: var(--white); color: var(--black); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; transition: 0.3s; margin: 1rem; border: none; }
         .btn:hover { background: var(--gold); color: var(--white); }
 
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(8,8,8,0.98); z-index: 1000; justify-content: center; align-items: center; }
-        .modal-content { background: var(--black); border: 1px solid var(--border); padding: 3rem; width: 90%; max-width: 500px; position: relative; }
-        .close-modal { position: absolute; top: 1.5rem; right: 1.5rem; color: var(--grey-light); cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; }
-        .modal-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin-bottom: 2rem; font-weight: 300; }
-        .form-group { margin-bottom: 2rem; }
-        .form-group label { display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--gold); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 1px; }
-        .form-group input { width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--border); color: var(--white); padding: 0.8rem 0; font-family: 'Instrument Sans', sans-serif; outline: none; transition: 0.3s; font-size: 1rem; }
-        .form-group input:focus { border-bottom: 1px solid var(--gold); }
-        .submit-btn { width: 100%; padding: 1.2rem; background: var(--white); color: var(--black); border: none; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; font-weight: 600; cursor: pointer; margin-top: 1rem; transition: 0.3s; font-size: 0.8rem; }
-        .submit-btn:hover { background: var(--gold); color: var(--white); }
-
         footer { padding: 4rem 4%; border-top: 1px solid var(--border); color: var(--grey-light); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; }
-        .footer-content { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; }
-        .hash-box { color: var(--gold-dim); font-size: 9px; word-break: break-all; max-width: 500px; opacity: 0.6; margin-top: 10px; }
-
-        @media (max-width: 768px) {
-            header { flex-direction: column; gap: 1rem; }
-            .nav-links { display: flex; flex-wrap: wrap; justify-content: center; }
-            .nav-links a { margin: 0.5rem 1rem; }
-            .footer-content { flex-direction: column; gap: 1.5rem; }
-        }
+        .hash-box { color: var(--gold); font-size: 9px; word-break: break-all; max-width: 500px; opacity: 0.6; margin-top: 10px; }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="#" class="logo">2A <span>Agency</span></a>
+        <a href="/" class="logo">2A <span>Agency</span></a>
         <nav class="nav-links">
-            <a href="https://github.com/Meteque1213/2a-agency-official" target="_blank">Standard V1.0.0</a>
+            <a href="/registry/index.html">Registry</a>
             <a href="whitepaper.html">White Paper</a>
             <a href="mailto:alexandre@2aagency.com">Direct Line</a>
         </nav>
@@ -91,8 +76,8 @@
         
         <div class="stats-grid">
             <div class="stat-card">
-                <span class="stat-value">19.4%</span>
-                <span class="stat-label">Avg. Semantic Drift Rate</span>
+                <span class="stat-value">82.3%</span>
+                <span class="stat-label">Max Detected Drift (Lanvin)</span>
             </div>
             <div class="stat-card">
                 <span class="stat-value">500+</span>
@@ -100,7 +85,7 @@
             </div>
             <div class="stat-card">
                 <span class="stat-value" style="color:var(--gold)">Active</span>
-                <span class="stat-label">Notarization (Base L2)</span>
+                <span class="stat-label">Semantic Notarization</span>
             </div>
         </div>
     </section>
@@ -120,39 +105,48 @@
             <table>
                 <thead>
                     <tr>
-                        <th>REGISTRY ID</th>
-                        <th>SECTOR</th>
+                        <th>ENTITY NAME</th>
                         <th>DRIFT SCORE</th>
-                        <th>CERTIFICATION</th>
+                        <th>STATUS</th>
+                        <th>REPORT</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Maison de Haute Maroquinerie</td>
-                        <td>Leather Goods</td>
-                        <td style="color: var(--red);">82%</td>
-                        <td><span class="status-pill status-critical">Drift Detected</span></td>
+                        <td>Maison Lanvin</td>
+                        <td style="color: var(--red);">82.3%</td>
+                        <td><span class="status-pill status-critical">Critical Drift</span></td>
+                        <td><a href="/registry/lanvin.html" class="btn-link">VIEW AUDIT</a></td>
                     </tr>
                     <tr>
-                        <td>Manufacture Horlogère Genevoise</td>
-                        <td>Watches</td>
-                        <td style="color: var(--red);">58%</td>
-                        <td><span class="status-pill status-critical">Drift Detected</span></td>
+                        <td>Vacheron Constantin</td>
+                        <td style="color: var(--red);">58.4%</td>
+                        <td><span class="status-pill status-critical">Critical Drift</span></td>
+                        <td><a href="/registry/vacheron.html" class="btn-link">VIEW AUDIT</a></td>
                     </tr>
                     <tr>
-                        <td>Grande Maison de Couture</td>
-                        <td>Fashion</td>
-                        <td style="color: var(--red);">12%</td>
-                        <td><span class="status-pill status-critical">Drift Detected</span></td>
+                        <td>Sézane</td>
+                        <td style="color: #D4AC0D;">12.1%</td>
+                        <td><span class="status-pill" style="background:rgba(212,172,13,0.15); color:#D4AC0D;">Growth Lag</span></td>
+                        <td><a href="/registry/sezane.html" class="btn-link">VIEW AUDIT</a></td>
                     </tr>
                     <tr>
-                        <td>Maison V.C. (Reference Model)</td>
-                        <td>High Jewelry</td>
-                        <td style="color: var(--green);">0.8%</td>
-                        <td><span class="status-pill status-compliant">Certified</span></td>
+                        <td>LVMH Group</td>
+                        <td style="color: var(--green);">8.2%</td>
+                        <td><span class="status-pill status-compliant">Compliant</span></td>
+                        <td><a href="/registry/lvmh.html" class="btn-link">VIEW AUDIT</a></td>
+                    </tr>
+                    <tr>
+                        <td>Hermès International</td>
+                        <td style="color: var(--green);">3.2%</td>
+                        <td><span class="status-pill status-compliant">Compliant</span></td>
+                        <td><a href="/registry/hermes.html" class="btn-link">VIEW AUDIT</a></td>
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div style="margin-top: 2rem; text-align: center;">
+            <a href="/registry/index.html" class="btn-link" style="font-size: 0.7rem;">+ VIEW ALL ENTITIES IN REGISTRY</a>
         </div>
     </section>
 
@@ -160,46 +154,17 @@
         <span class="label">Secure your AI-native identity</span>
         <h2 style="font-family: 'Cormorant Garamond'; font-size: 3rem; font-weight: 300; margin-bottom: 3rem;">Protect Your Brand Narrative.</h2>
         <div class="button-container">
-            <button onclick="openModal()" class="btn">Request Private Audit</button>
+            <a href="mailto:alexandre@2aagency.com" class="btn">Request Private Audit</a>
             <a href="whitepaper.html" class="btn" style="background: transparent; color: var(--white); border: 1px solid var(--border);">Read the Thesis</a>
         </div>
     </section>
-
-    <div id="auditModal" class="modal">
-        <div class="modal-content" id="modalContent">
-            <span class="close-modal" onclick="closeModal()">CLOSE [ESC]</span>
-            <div id="formContainer">
-                <h2>Private Audit Request</h2>
-                <form id="auditForm" action="https://formspree.io/f/xykngdbz" method="POST">
-                    <div class="form-group">
-                        <label>Brand / Organisation</label>
-                        <input type="text" name="brand" required placeholder="Ex: Maison de Luxe">
-                    </div>
-                    <div class="form-group">
-                        <label>Professional Email</label>
-                        <input type="email" name="email" required placeholder="name@company.com">
-                    </div>
-                    <button type="submit" class="submit-btn">Request Analysis → 48h Delivery</button>
-                </form>
-            </div>
-            <div id="successMessage" style="display:none; text-align: center; padding: 2rem 0;">
-                <span class="label" style="color: var(--green);">Request Logged</span>
-                <h2 style="font-family: 'Cormorant Garamond'; font-size: 2.2rem; margin-top: 1rem; font-weight: 300;">Confirmed.</h2>
-                <p style="color: var(--grey-light); font-size: 1rem; margin-top: 1rem;">
-                    Your audit trail is being prepared.<br>
-                    You will be notified via email within 48 hours.
-                </p>
-                <button onclick="closeModal()" class="submit-btn" style="background: transparent; color: var(--gold); border: 1px solid var(--gold); margin-top: 2rem; width: auto; padding: 1rem 2rem;">Return to Registry</button>
-            </div>
-        </div>
-    </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-left">
                 © 2026 2A AGENCY · TRUSTED IDENTITY FOR AI AGENTS
                 <div class="hash-box">
-                    METHODOLOGY ANCHORED ON BASE L2 · GENESIS HASH: 7aa71c8e80d3634abebe349c80008ff28ae7028950cc66949a86f96605e3a32d
+                    METHODOLOGY ANCHORED · GENESIS HASH: 7aa71c8e80d3634abebe349c80008ff28ae7028950cc66949a86f96605e3a32d
                 </div>
             </div>
             <div class="footer-right">
@@ -208,42 +173,5 @@
         </div>
     </footer>
 
-    <script>
-        function openModal() { 
-            document.getElementById('auditModal').style.display = 'flex'; 
-            document.getElementById('formContainer').style.display = 'block';
-            document.getElementById('successMessage').style.display = 'none';
-        }
-        function closeModal() { document.getElementById('auditModal').style.display = 'none'; }
-        
-        var form = document.getElementById("auditForm");
-        async function handleSubmit(event) {
-          event.preventDefault();
-          var data = new FormData(event.target);
-          fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: { 'Accept': 'application/json' }
-          }).then(response => {
-            if (response.ok) {
-              document.getElementById('formContainer').style.display = 'none';
-              document.getElementById('successMessage').style.display = 'block';
-              form.reset();
-            } else {
-              alert("Submission error.");
-            }
-          }).catch(error => {
-            alert("Network error.");
-          });
-        }
-        form.addEventListener("submit", handleSubmit);
-
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('auditModal')) { closeModal(); }
-        }
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") { closeModal(); }
-        });
-    </script>
 </body>
 </html>
