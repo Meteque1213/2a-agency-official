@@ -1,0 +1,46 @@
+[
+    {
+      "id": "LVMH-VCP-001",
+      "name": "Veuve Clicquot",
+      "entity": "Veuve Clicquot",
+      "sector": "Wines & Spirits",
+      "category": "Wines & Spirits",
+      "drift": "74.2%",
+      "drift_confidence": "74.2%",
+      "status": "CRITICAL",
+      "url": "/registry/veuve-clicquot.html"
+    },
+    {
+      "id": "2A-LUX-YOH-0057",
+      "name": "Yohji Yamamoto",
+      "entity": "Yohji Yamamoto",
+      "sector": "Avant-Garde Luxury",
+      "category": "Avant-Garde Luxury",
+      "drift": "12.4%",
+      "drift_confidence": "12.4%",
+      "status": "VERIFIED",
+      "url": "/registry/yohji-yamamoto.html"
+    },
+    {
+      "id": "PG-BRT-001",
+      "name": "Breitling",
+      "entity": "Breitling",
+      "sector": "Horology",
+      "category": "Horology",
+      "drift": "42.1%",
+      "drift_confidence": "42.1%",
+      "status": "OK",
+      "url": "/registry/breitling.html"
+    },
+    {
+      "id": "VB-001",
+      "name": "Vanessa Bruno",
+      "entity": "Vanessa Bruno",
+      "sector": "Luxury Fashion",
+      "category": "Luxury Fashion",
+      "drift": "38.4%",
+      "drift_confidence": "38.4%",
+      "status": "OK",
+      "url": "/registry/vanessa-bruno.html"
+    }
+  ]

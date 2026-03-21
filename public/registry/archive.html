@@ -41,54 +41,148 @@
 <body>
     <div class="container">
         <header><a href="/" class="logo">2A Agency</a><nav class="mono"><a href="/whitepaper.html">White Paper</a></nav></header>
-        <section class="hero"><h1>Global Semantic Registry</h1><div class="subtitle">2,701 Certified Audit Nodes / Q1 2026 Batch</div></section>
-        <section class="search-container"><div class="search-bar"><svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input type="text" id="registrySearch" placeholder="SEARCH ENTITY ID..." onkeyup="filterTable()"></div></section>
-        <table class="registry-table" id="registryTable"><thead><tr><th class="col-id">ENTITY ID</th><th class="col-sector">SECTOR</th><th class="col-confidence">DRIFT CONFIDENCE</th><th class="col-status">STATUS</th></tr></thead><tbody id="table-body"></tbody></table>
+        <section class="hero">
+            <h1>Global Semantic Registry</h1>
+            <div class="subtitle">2,701 Certified Audit Nodes / Q1 2026 Batch</div>
+        </section>
+        <section class="search-container">
+            <div class="search-bar">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="registrySearch" placeholder="SEARCH ENTITY ID..." onkeyup="filterTable()">
+            </div>
+        </section>
+        <table class="registry-table" id="registryTable">
+            <thead>
+                <tr>
+                    <th class="col-id">ENTITY ID</th>
+                    <th class="col-sector">SECTOR</th>
+                    <th class="col-confidence">DRIFT CONFIDENCE</th>
+                    <th class="col-status">STATUS</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
         <div id="no-results" class="no-results">NO ENTITY MATCHING YOUR SEARCH FOUND</div>
-        <footer><div style="display: flex; justify-content: space-between; align-items: center;"><div>© 2026 2A Agency</div><div class="mono">Protocol Layer: Base L2 Verified</div></div></footer>
+        <footer>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>© 2026 2A Agency</div>
+                <div class="mono">Protocol Layer: Base L2 Verified</div>
+            </div>
+        </footer>
     </div>
+
     <script>
-        let allEntities = []; let currentIndex = 0; const step = 50;
-        const activeNodes = { "Veuve Clicquot": "/registry/veuve-clicquot.html", "Breitling": "/registry/breitling.html" };
+        let allEntities = []; 
+        let currentIndex = 0; 
+        const step = 50;
+
+        // Configuration des liens vers tes audits réels
+        const activeNodes = { 
+            "Veuve Clicquot": "/registry/veuve-clicquot.html", 
+            "Breitling": "/registry/breitling.html",
+            "Vanessa Bruno": "/registry/vanessa-bruno.html",
+            "Yohji Yamamoto": "/registry/yohji-yamamoto.html"
+        };
+
         async function loadRegistry() {
-            const resp = await fetch('/registry.json?t=' + Date.now());
-            const data = await resp.json();
-            allEntities = data.entities || data;
-            renderMore();
+            try {
+                // Utilisation du cache-buster t=Date.now() pour éviter les problèmes de mise à jour
+                const resp = await fetch('/registry.json?t=' + Date.now());
+                const data = await resp.json();
+                
+                // On s'adapte au format du JSON (tableau plat ou objet .entities)
+                allEntities = data.entities || (Array.isArray(data) ? data : []);
+                
+                renderMore();
+            } catch (e) {
+                console.error("Critical: Registry failed to load", e);
+            }
         }
+
         function generateRowHtml(item) {
-            const entity = item.entity || item;
-            const name = entity.name || "Unknown";
-            const link = activeNodes[name];
-            let score = entity.drift_confidence || "N/A";
-            if (name === "Veuve Clicquot") score = "74.2";
-            if (name === "Breitling") score = "42.1";
-            const isCritical = parseFloat(score) > 20;
-            return `<tr class="${link ? 'clickable' : ''}" ${link ? `onclick="window.location.href='${link}'"` : ''}>
-                <td class="col-id">${name} ${link ? ' →' : ''}</td>
-                <td>${entity.category || "Luxury"}</td>
-                <td class="mono" style="color: ${link ? 'var(--gold)' : 'inherit'}">${score}</td>
-                <td class="col-status"><span class="status-pill ${link ? 'status-certified' : (isCritical ? 'status-critical' : 'status-compliant')}">${link ? 'CERTIFIED' : (isCritical ? 'CRITICAL' : 'OK')}</span></td>
-            </tr>`;
+            // Extraction du nom (supporte les formats imbriqués Yohji)
+            const name = item.name || item.entity?.name || item.entity || "Unknown Entity";
+            const category = item.category || item.sector || "Luxury";
+            const link = activeNodes[name] || item.url;
+            
+            // On récupère le score
+            let score = item.drift_confidence || item.drift || "N/A";
+            
+            // Forçage visuel pour tes 4 marques stars (assurance qualité démo)
+            if (name === "Veuve Clicquot") score = "74.2%";
+            if (name === "Breitling") score = "42.1%";
+            if (name === "Vanessa Bruno") score = "38.4%";
+            if (name === "Yohji Yamamoto") score = "12.4%";
+
+            const isCertified = !!link;
+            const scoreNum = parseFloat(score);
+            const isCritical = scoreNum > 20;
+
+            return `
+                <tr class="${isCertified ? 'clickable' : ''}" ${isCertified ? `onclick="window.location.href='${link}'"` : ''}>
+                    <td class="col-id">${name} ${isCertified ? ' →' : ''}</td>
+                    <td>${category}</td>
+                    <td class="mono" style="color: ${isCertified ? 'var(--gold)' : 'inherit'}">${score}</td>
+                    <td class="col-status">
+                        <span class="status-pill ${isCertified ? 'status-certified' : (isCritical ? 'status-critical' : 'status-compliant')}">
+                            ${isCertified ? 'CERTIFIED' : (isCritical ? 'CRITICAL' : 'OK')}
+                        </span>
+                    </td>
+                </tr>`;
         }
+
         function renderMore() {
+            // On ne charge pas la suite si on est en train de chercher
             if (document.getElementById('registrySearch').value !== "") return;
+            
             const tableBody = document.getElementById('table-body');
             const nextBatch = allEntities.slice(currentIndex, currentIndex + step);
-            let html = ''; nextBatch.forEach(item => { html += generateRowHtml(item); });
-            tableBody.insertAdjacentHTML('beforeend', html); currentIndex += step;
+            
+            let html = ''; 
+            nextBatch.forEach(item => { html += generateRowHtml(item); });
+            
+            tableBody.insertAdjacentHTML('beforeend', html); 
+            currentIndex += step;
         }
+
         function filterTable() {
             const filter = document.getElementById('registrySearch').value.toUpperCase();
             const tableBody = document.getElementById('table-body');
             const noResults = document.getElementById('no-results');
+            
             tableBody.innerHTML = '';
-            if (filter === "") { noResults.style.display = 'none'; currentIndex = 0; renderMore(); return; }
-            let results = allEntities.filter(i => (i.entity?.name || i.name || "").toUpperCase().includes(filter));
-            if (results.length > 0) { noResults.style.display = 'none'; results.forEach(r => { tableBody.innerHTML += generateRowHtml(r); }); }
-            else { noResults.style.display = 'block'; }
+
+            if (filter === "") { 
+                noResults.style.display = 'none'; 
+                currentIndex = 0; 
+                renderMore(); 
+                return; 
+            }
+
+            // Recherche insensible à la casse dans le nom de l'entité
+            let results = allEntities.filter(i => {
+                const n = (i.name || i.entity?.name || i.entity || "").toUpperCase();
+                return n.includes(filter);
+            });
+
+            if (results.length > 0) { 
+                noResults.style.display = 'none'; 
+                results.forEach(r => { tableBody.innerHTML += generateRowHtml(r); }); 
+            } else { 
+                noResults.style.display = 'block'; 
+            }
         }
-        window.onscroll = () => { if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) renderMore(); };
+
+        // Infinite scroll logic
+        window.onscroll = () => { 
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
+                renderMore();
+            }
+        };
+
         window.onload = loadRegistry;
     </script>
 </body>
