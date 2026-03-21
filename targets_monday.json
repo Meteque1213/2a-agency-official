@@ -1,0 +1,182 @@
+[
+  {
+    "entity": {
+      "name": "SMCP (Sandro Maje Claudie Pierlot)"
+    },
+    "financials": {
+      "annual_revenue": {
+        "value": 1230,
+        "unit": "M€",
+        "year": 2025
+      }
+    },
+    "data_meta": {
+      "tier": 2
+    }
+  },
+  {
+    "entity": {
+      "name": "Zadig & Voltaire"
+    },
+    "financials": {
+      "annual_revenue": {
+        "value": 450,
+        "unit": "M€",
+        "year": 2025
+      }
+    },
+    "data_meta": {
+      "tier": 2
+    }
+  },
+  {
+    "entity": {
+      "name": "Ba&sh"
+    },
+    "financials": {
+      "annual_revenue": {
+        "value": 310,
+        "unit": "M€",
+        "year": 2025
+      }
+    },
+    "data_meta": {
+      "tier": 2
+    }
+  },
+  {
+    "entity": {
+      "name": "Jacquemus"
+    },
+    "financials": {
+      "annual_revenue": {
+        "value": 280,
+        "unit": "M€",
+        "year": 2025
+      }
+    },
+    "data_meta": {
+      "tier": 2
+    }
+  },
+  {
+    "entity": {
+      "name": "Sezane"
+    },
+    "financials": {
+      "annual_revenue": {
+        "value": 400,
+        "unit": "M€",
+        "year": 2025
+      }
+    },
+    "data_meta": {
+      "tier": 2
+    }
+  },
+  {
+    "entity": {
+      "name": "Ami Paris"
+    },
+    "financials": {
+      "annual_revenue": {
+        "value": 230,
+        "unit": "M€",
+        "year": 2025
+      }
+    },
+    "data_meta": {
+      "tier": 2
+    }
+  },
+  {
+    "entity": {
+      "name": "Maison Kitsune"
+    },
+    "financials": {
+      "annual_revenue": {
+        "value": 120,
+        "unit": "M€",
+        "year": 2025
+      }
+    },
+    "data_meta": {
+      "tier": 2
+    }
+  },
+  {
+    "entity": {
+      "name": "Isabel Marant"
+    },
+    "financials": {
+      "annual_revenue": {
+        "value": 300,
+        "unit": "M€",
+        "year": 2025
+      }
+    },
+    "data_meta": {
+      "tier": 2
+    }
+  },
+  {
+    "entity": {
+      "name": "A.P.C."
+    },
+    "financials": {
+      "annual_revenue": {
+        "value": 80,
+        "unit": "M€",
+        "year": 2025
+      }
+    },
+    "data_meta": {
+      "tier": 2
+    }
+  },
+  {
+    "entity": {
+      "name": "The Kooples"
+    },
+    "financials": {
+      "annual_revenue": {
+        "value": 220,
+        "unit": "M€",
+        "year": 2025
+      }
+    },
+    "data_meta": {
+      "tier": 2
+    }
+  },
+  {
+    "entity": {
+      "name": "Vanessa Bruno"
+    },
+    "financials": {
+      "annual_revenue": {
+        "value": 60,
+        "unit": "M€",
+        "year": 2025
+      }
+    },
+    "data_meta": {
+      "tier": 2
+    }
+  },
+  {
+    "entity": {
+      "name": "Breitling"
+    },
+    "financials": {
+      "annual_revenue": {
+        "value": 950,
+        "unit": "MCHF",
+        "year": 2025
+      }
+    },
+    "data_meta": {
+      "tier": 2
+    }
+  }
+]

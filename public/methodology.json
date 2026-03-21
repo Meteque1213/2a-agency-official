@@ -1,0 +1,11 @@
+echo '{
+    "standard": "2A-Semantic-Drift-V1",
+    "methodology": {
+      "step_A": "Ground Truth Extraction from official filings",
+      "step_B": "Multi-Model Stress Test at Temperature 0.1",
+      "step_C": "Drift Score Calculation (Variance > 10% = Critical)"
+    },
+    "timestamp": "2026-03-20",
+    "hash_algorithm": "SHA-256"
+  }' > methodology.json
+  

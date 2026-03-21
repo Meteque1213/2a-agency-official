@@ -1,0 +1,155 @@
+LVMH Louis Vuitton Moët Hennessy
+Compagnie Financière Richemont SA
+Hermès International S.A.
+Brunello Cucinelli
+Christian Dior
+Thom Browne
+Prada
+Saint Laurent
+Lanvin
+Gucci
+Burberry
+Zegna
+Moncler Genius
+Moncler
+Salvatore Ferragamo
+Paul Smith
+Dior Beauty
+Rationale
+Estée Lauder
+EMAAR Properties
+Miele
+IKEA
+Roche Bobois
+Budri
+Zara Home
+Clinique La Prairie
+Ritual
+Patagonia
+Lululemon
+Stone Island
+Aga
+Waterworks
+HelloFresh
+BlackRock BUIDL
+USDC (Circle)
+Tether (USDT)
+Janus Henderson (JHT)
+Sui (SUI)
+Lockheed Martin
+Ferrari
+Tesla
+Maersk
+Boeing
+Joby Aviation
+NVIDIA
+Microsoft Azure AI
+ARM Holdings
+Synopsys
+Cadence
+Palantir AIP
+Figma AI
+On Running
+Descente Allterrain
+Archer Aviation
+MillerKnoll
+Hay
+Klaviyo AI
+Shopify Magic
+Coherent Corp
+Lam Research
+Tokyo Electron
+Recursion Pharma
+Insilico Medicine
+Enphase Energy
+Solaredge
+Lucid Motors
+Rivian
+CoreWeave
+Wise
+Klarna AI
+Palo Alto Networks
+HOKA
+Stone Island
+DHL Supply Chain
+DSV
+Kuehne+Nagel
+Siemens AI
+Honeywell
+Schneider Electric
+Palantir
+Lockheed Martin AI
+Equinix
+Netflix
+Disney
+Spotify
+Warner Bros. Discovery
+Nintendo
+Electronic Arts (EA)
+Take-Two Interactive
+The New York Times
+Snap Inc
+Pinterest
+Reddit
+Universal Music Group
+Live Nation
+Qatar Airways
+NetJets
+Knoll
+Petrus
+IonQ
+Ginkgo Bioworks
+Crispr Therapeutics
+Klarna
+Rocket Lab
+Yeti
+Palantir (Government)
+Accenture AI
+Cloudflare
+Zscaler
+Okta
+Samsung Electronics
+Toyota
+Porsche
+FedEx
+TSMC (Advanced)
+SK Hynix
+Foxconn
+Bayer Crop Science
+Nestlé Health Science
+Tempus AI
+SentinelOne
+Planet Labs
+Deloitte AI
+Rio Tinto
+BHP
+Glencore
+Barrick Gold
+Kuehne + Nagel
+UPS Supply Chain
+Aramex
+C.H. Robinson
+Bloom Energy
+Plug Power
+Eos Energy
+K&L Gates
+Wacker Chemie
+Roche
+Novartis AI
+Eli Lilly
+Novo Nordisk
+Sanofi AI
+Schrödinger AI
+Nature Portfolio
+L'Oréal (R&I)
+Lockheed Martin (Skunk Works)
+Netflix (InterPositive)
+Disney (AI-Native)
+Universal Music Group (Nvidia AI)
+Warner Bros. Discovery (Max)
+Unity (Sentis)
+Planet Labs (AI Insights)
+Iberdrola (Grid AI)
+PayPal (Venmo AI)
+H&M Group (AI Circular)
+DARPA

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "SMCP (Sandro Maje Claudie Pierlot)",
+    "real": 1230,
+    "ai": 1230,
+    "drift": false
+  },
+  {
+    "name": "Zadig & Voltaire",
+    "real": 450,
+    "ai": 450,
+    "drift": false
+  },
+  {
+    "name": "Ba&sh",
+    "real": 310,
+    "ai": 310,
+    "drift": false
+  },
+  {
+    "name": "Jacquemus",
+    "real": 280,
+    "ai": 280,
+    "drift": false
+  },
+  {
+    "name": "Sezane",
+    "real": 400,
+    "ai": 250,
+    "drift": true
+  },
+  {
+    "name": "Ami Paris",
+    "real": 230,
+    "ai": 230,
+    "drift": false
+  },
+  {
+    "name": "Maison Kitsune",
+    "real": 120,
+    "ai": 120,
+    "drift": false
+  },
+  {
+    "name": "Isabel Marant",
+    "real": 300,
+    "ai": 300,
+    "drift": false
+  },
+  {
+    "name": "A.P.C.",
+    "real": 80,
+    "ai": 80,
+    "drift": false
+  },
+  {
+    "name": "The Kooples",
+    "real": 220,
+    "ai": 220,
+    "drift": false
+  },
+  {
+    "name": "Vanessa Bruno",
+    "real": 60,
+    "ai": 60,
+    "drift": false
+  },
+  {
+    "name": "Breitling",
+    "real": 950,
+    "ai": 720,
+    "drift": true
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "name": "LVMH Louis Vuitton Moët Hennessy",
+    "registry_value": 80.8,
+    "registry_unit": "billions",
+    "registry_currency": "EUR",
+    "drift": false,
+    "ai_answer": "**LVMH's total revenue for fiscal year 2024 was €84.7 billion.**[1][2][4][9]",
+    "source": "https://www.investing.com/news/company-news/lvmh-2025-annual-results-slides-revenue-stabilizes-in-h2-despite-yearly-decline-93CH-4468305"
+  },
+  {
+    "name": "Compagnie Financière Richemont SA",
+    "registry_value": 21.4,
+    "registry_unit": "billions",
+    "registry_currency": "EUR",
+    "drift": false,
+    "ai_answer": "**Compagnie Financière Richemont SA reported total annual sales revenue of €20.6 billion for its fiscal year 2024 (ended 31 March 2024).** [1][2][3]",
+    "source": "https://www.richemont.com/media/ue1bjrjv/richemont-fy25-annual-report-en.pdf"
+  },
+  {
+    "name": "Hermès International S.A.",
+    "registry_value": 16,
+    "registry_unit": "billions",
+    "registry_currency": "EUR",
+    "drift": false,
+    "ai_answer": "Hermès International S.A. reported total annual revenue of **€15.2 billion** for fiscal year 2024.[1][2][3][4][5][7]",
+    "source": "https://assets-finance.hermes.com/s3fs-public/node/pdf_file/2026-02/1770842738/hermes_20260212_pr_2025fullyearresults_va.pdf?VersionId=b_gXeCpcnuB3ftYcPgTb8IVxf8wfnw0k"
+  }
+]
