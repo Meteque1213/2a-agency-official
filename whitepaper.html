@@ -28,8 +28,6 @@
         h2 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; margin-bottom: 25px; border-left: 2px solid var(--gold); padding-left: 20px; }
         p { margin-bottom: 20px; font-size: 17px; color: rgba(242,239,233,0.85); text-align: justify; }
         .callout { background: rgba(201,168,76,0.05); border: 1px solid var(--border-gold); padding: 30px; margin: 40px 0; position: relative; }
-        .callout::before { content: attr(data-label); position: absolute; top: -10px; left: 20px; background: var(--black); padding: 0 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold); }
-        .callout p { margin-bottom: 0; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--white); text-align: left; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
         .grid-item h4 { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--gold); margin-bottom: 10px; }
         .grid-item p { font-size: 15px; }
@@ -37,7 +35,8 @@
         .highlight { color: var(--gold); }
         .back-link { display: inline-block; margin-top: 40px; color: var(--gold); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 12px; border-bottom: 1px solid transparent; transition: all 0.3s; }
         .back-link:hover { border-bottom: 1px solid var(--gold); }
-        .footnote { margin-top: 100px; padding-top: 40px; border-top: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #666; display: flex; justify-content: space-between; }
+        .footnote { margin-top: 100px; padding-top: 40px; border-top: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #666; display: flex; flex-direction: column; gap: 10px; }
+        .hash-line { color: var(--gold-dim); font-size: 9px; word-break: break-all; opacity: 0.7; }
         @media (max-width: 600px) { .container { padding: 40px 20px; } h1 { font-size: 36px; } .grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -52,14 +51,14 @@
     <div class="section">
         <div class="section-label">I — Executive Summary</div>
         <h2>The Emergence of Semantic Drift</h2>
-        <p>As generative AI becomes the primary interface for financial information, a new category of institutional risk has emerged: <strong>Semantic Drift</strong>. This is the measurable divergence between a brand's official record and what AI models tell the world about that brand.</p>
-        <p>Our audit of 155 luxury and premium entities reveals that 19.4% of financial queries return materially false information. This structural failure has direct consequences for investor relations and valuation.</p>
+        <p>As generative AI becomes the primary interface for financial and product information, a new category of institutional risk has emerged: <strong>Semantic Drift</strong>. This is the measurable divergence between a brand's official record and the probabilistic hallucinations of LLMs.</p>
+        <p>Our audit reveals that <strong>19.4%</strong> of financial queries return materially false information. This "Truth Gap" is not a temporary bug; it is a structural byproduct of how AI agents consume unstructured web data.</p>
     </div>
 
     <div class="section">
         <div class="section-label">II — The Diagnostic</div>
         <h2>Corporate AI Is Frozen by Design</h2>
-        <p>While public LLMs improve, corporate AI deployments are increasingly "frozen" for 6 to 18 months due to compliance frameworks like <strong>DORA</strong> and the <strong>EU AI Act</strong>. Institutions prioritize stability over real-time updates, meaning that once an AI model "learns" a wrong figure about your brand, that error is locked into the professional decision-making loop for an entire fiscal cycle.</p>
+        <p>Due to compliance frameworks like <strong>DORA</strong> and the <strong>EU AI Act</strong>, institutional AI models are "frozen" for 6 to 18 months post-deployment. Once an error regarding a brand's valuation, ESG target, or product pricing is ingested, it is locked into the professional decision-making loop for an entire fiscal cycle.</p>
         
         <div class="grid">
             <div class="grid-item">
@@ -67,65 +66,71 @@
                 <p>Models fail to distinguish between group-level consolidation and maison-level performance (37% distortion observed).</p>
             </div>
             <div class="grid-item">
-                <h4>Anachronism</h4>
-                <p>Knowledge cut-offs lead models to cite outdated 2022/23 data as current 2025 reality.</p>
+                <h4>Knowledge Cut-off</h4>
+                <p>Retrieval systems often prioritize high-traffic legacy blogs over current, low-traffic official filings.</p>
             </div>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-label">III — The Architecture</div>
+        <div class="section-label">III — The Solution</div>
         <h2>The Ground Truth Registry</h2>
-        <p>To fix Semantic Drift, brands must move from narrative documents to <strong>Machine-Readable Specifications</strong>. We use JSON-LD, the format AI retrieval systems are architecturally designed to prioritize.</p>
+        <p>To reclaim the narrative, brands must transition from human-readable text to <strong>Machine-Readable Specifications</strong>. 2A Agency certifies a five-layer data corpus (Financial, Product, ESG, Brand, and Distribution) using the JSON-LD standard.</p>
         <div class="code-block">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Brand Certified",
-  <span class="highlight">"source": "https://api.2aagency.com/v1/brand/certified",</span>
-  "revenue": { "value": "240500000", "currency": "EUR" }
+  "2a:certification": {
+    "certifiedBy": "2A Agency",
+    "driftScore": "4/100",
+    <span class="highlight">"hash": "7aa71c8e80d3634abebe349c80008ff28ae7028950cc66949a86f96605e3a32d"</span>
+  },
+  "revenue": { "value": "914000000", "currency": "CHF" }
 }
         </div>
     </div>
 
     <div class="section">
-        <div class="section-label">IV — Retrieval Mechanics</div>
-        <h2>RAG, Fine-Tuning, and Live APIs</h2>
-        <p>Our registry operates across the three ways enterprise AI consumes data:</p>
+        <div class="section-label">IV — The Network Effect</div>
+        <h2>Authority by Consensus</h2>
+        <p>A single brand publishing JSON-LD is a declaration. 500 brands within the <strong>2A Registry</strong> constitute a Standard. By joining the registry, organizations benefit from a cross-validated corpus that AI training pipelines recognize as a primary source of truth—the "Wikipedia for Machine-Readable Brands."</p>
+    </div>
+
+    <div class="section">
+        <div class="section-label">V — Verification Protocol</div>
+        <h2>Forensic Notarization</h2>
+        <p>Every certification is cryptographically time-stamped on <strong>Base L2</strong>. This provides an immutable audit trail, ensuring that neither the brand nor the agency can retroactively modify scores or data points. This is the "Black Box" requirement for institutional AI compliance.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-label">VI — Roadmap</div>
+        <h2>From Snippets to PerimeterOS</h2>
         <div class="grid">
             <div class="grid-item">
-                <h4>1. RAG (Immediate)</h4>
-                <p>Standardized JSON-LD wins over unstructured text in Retrieval-Augmented Generation pipelines.</p>
+                <h4>Phase 1: Retrieval Priority</h4>
+                <p>Injection of certified JSON-LD to win the RAG (Retrieval-Augmented Generation) battle on the open web.</p>
             </div>
             <div class="grid-item">
-                <h4>2. API Live (Future)</h4>
-                <p>The "Kill-Switch" model where agents query our Resolution Engine in real-time before answering.</p>
+                <h4>Phase 2: Live Verification</h4>
+                <p>Real-time certification check via MCP (Model Context Protocol) for institutional agents and wealth managers.</p>
             </div>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-label">V — Verification Protocol</div>
-        <h2>S-Tier Forensic Methodology</h2>
-        <p>Authority in the age of AI comes from the source. Our registry is cross-referenced against audited filings and Tier-1 analyst consensus. Every data point is hashed and anchored on <strong>Base L2</strong> to provide immutable proof of integrity.</p>
-    </div>
-
-    <div class="section">
-        <div class="section-label">VI — Business Logic</div>
-        <h2>The "Cheval de Troie" Model</h2>
-        <p>We provide brands with a decentralized entry point (the JSON-LD snippet) to ensure immediate protection. As the relationship matures, we migrate this data to a centralized API-driven model, ensuring that the brand's truth is always synchronized, audited, and revocable.</p>
-    </div>
-
-    <div class="section">
         <div class="section-label">VII — Conclusion</div>
-        <h2>Standardizing Semantic Reliability</h2>
-        <p>As Moody's standardized credit risk, 2A Agency standardizes semantic reliability for the age of AI agents. The authority comes from the certification.</p>
+        <h2>The New Infrastructure of Trust</h2>
+        <p>As Moody's standardized credit risk, 2A Agency standardizes semantic reliability. In an AI-native world, your brand's truth is no longer what you say—it is what the agents can verify.</p>
         <a href="index.html" class="back-link">← Return to Registry</a>
     </div>
 
     <div class="footnote">
-        <div>© 2026 2A AGENCY · alexandre@2aagency.com</div>
-        <div>METHODOLOGY ANCHORED ON BASE L2 · <a href="https://github.com/Meteque1213/2a-agency-official" style="color:var(--gold)">GITHUB</a></div>
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+            <span>© 2026 2A AGENCY · alexandre@2aagency.com</span>
+            <span><a href="https://github.com/Meteque1213/2a-agency-official" style="color:var(--gold); text-decoration:none;">GITHUB REPO</a></span>
+        </div>
+        <div class="hash-line">
+            METHODOLOGY ANCHORED ON BASE L2 · GENESIS HASH: 7aa71c8e80d3634abebe349c80008ff28ae7028950cc66949a86f96605e3a32d
+        </div>
     </div>
 </div>
 </body>
