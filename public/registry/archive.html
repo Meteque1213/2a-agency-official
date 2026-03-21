@@ -3,110 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Entity Registry | 2A Agency</title>
+    <title>2A Agency | Global Semantic Registry — Q1 2026</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=JetBrains+Mono:wght@300;400&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        :root { --black: #080808; --white: #F2EFE9; --gold: #C9A84C; --border: rgba(242,239,233,0.1); }
-        body { background: var(--black); color: var(--white); font-family: 'Instrument Sans', sans-serif; padding: 40px; margin: 0; }
-        .container { max-width: 1100px; margin: 0 auto; }
+        :root { --black: #080808; --white: #F2EFE9; --gold: #C9A84C; --border: rgba(242,239,233,0.1); --red: #ff4444; --green: #00ff00; }
+        body { background: var(--black); color: var(--white); font-family: 'Instrument Sans', sans-serif; margin: 0; padding: 0; line-height: 1.6; overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px; }
+        
+        header { border-bottom: 1px solid var(--border); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: var(--white); }
         .mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
-        h1 { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 300; margin: 20px 0; color: var(--white); }
         
-        #searchBar { 
-            width: 100%; padding: 20px; background: rgba(255,255,255,0.03); 
-            border: 1px solid var(--border); color: var(--white); 
-            font-family: 'JetBrains Mono'; margin-bottom: 40px; outline: none; box-sizing: border-box;
-        }
-        #searchBar:focus { border-color: var(--gold); }
+        .hero { padding: 80px 0 60px 0; border-bottom: 1px solid var(--border); }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; margin-bottom: 10px; }
+        .subtitle { color: rgba(242,239,233,0.6); font-size: 16px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; }
 
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th { text-align: left; padding: 15px; color: var(--gold); border-bottom: 1px solid var(--border); font-size: 10px; }
-        td { padding: 18px 15px; border-bottom: 1px solid var(--border); font-size: 14px; transition: all 0.2s; }
-        tr:hover td { background: rgba(201, 168, 76, 0.05); color: var(--gold); }
-        .tier-pill { padding: 4px 10px; border: 1px solid var(--gold); font-size: 9px; border-radius: 4px; }
+        /* Table Design */
+        .registry-table { width: 100%; border-collapse: collapse; margin-top: 40px; table-layout: fixed; }
+        .registry-table th { text-align: left; padding: 15px 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: rgba(242,239,233,0.4); text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid var(--border); }
+        .registry-table td { padding: 20px 10px; border-bottom: 1px solid rgba(242,239,233,0.03); font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         
-        .loading { font-family: 'JetBrains Mono'; color: var(--gold); padding: 40px; text-align: center; }
+        /* Column Widths */
+        .col-id { width: 40%; }
+        .col-sector { width: 25%; }
+        .col-confidence { width: 20%; }
+        .col-status { width: 15%; text-align: right; }
+
+        /* Status Pills */
+        .status-pill {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .status-compliant { background: rgba(0, 255, 0, 0.1); color: var(--green); }
+        .status-critical { background: rgba(255, 0, 0, 0.1); color: var(--red); }
+
+        .loading-state { text-align: center; padding: 100px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--gold); }
+
+        footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid var(--border); color: rgba(242,239,233,0.4); font-size: 11px; }
+        nav a { text-decoration: none; transition: opacity 0.3s; color: var(--white); margin-left: 24px; }
+        nav a:hover { opacity: 0.7; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="mono">Institutional Archive · 2701 Entities Index</div>
-        <h1>Ground Truth Registry</h1>
-        
-        <input type="text" id="searchBar" placeholder="SEARCH BY BRAND, GROUP OR SECTOR..." onkeyup="filterTable()">
+        <header>
+            <a href="/" class="logo">2A Agency</a>
+            <nav class="mono">
+                <a href="/whitepaper.html">White Paper</a>
+                <a href="mailto:alexandre@2aagency.com">Direct Line</a>
+            </nav>
+        </header>
 
-        <div id="loader" class="loading">SYNCING DATA STREAM...</div>
+        <section class="hero">
+            <h1>Global Semantic Registry</h1>
+            <div class="subtitle">2,701 Certified Audit Nodes / Q1 2026 Batch</div>
+        </section>
 
-        <table id="registryTable" style="display:none;">
+        <table class="registry-table">
             <thead>
-                <tr class="mono">
-                    <th>Entity Name</th>
-                    <th>Category</th>
-                    <th>Fiscal Year</th>
-                    <th>Drift Confidence</th>
-                    <th>Status</th>
+                <tr>
+                    <th class="col-id">ENTITY ID</th>
+                    <th class="col-sector">SECTOR</th>
+                    <th class="col-confidence">DRIFT CONFIDENCE</th>
+                    <th class="col-status">STATUS</th>
                 </tr>
             </thead>
-            <tbody id="tableBody">
+            <tbody id="table-body">
                 </tbody>
         </table>
+
+        <div id="loading-state" class="loading-state">
+            SYNCING DATA STREAM...
+        </div>
+
+        <footer>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>© 2026 2A Agency. All rights reserved.</div>
+                <div class="mono">Protocol Layer: Base L2 Verified</div>
+            </div>
+        </footer>
     </div>
 
     <script>
-        // Chargement du fichier JSON massif
-        fetch('/registry.json')
-            .then(response => {
-                if (!response.ok) throw new Error("JSON not found");
-                return response.json();
-            })
-            .then(data => {
-                const body = document.getElementById('tableBody');
-                const loader = document.getElementById('loader');
-                const table = document.getElementById('registryTable');
+        let allEntities = [];
+        let currentIndex = 0;
+        const step = 50;
+
+        async function loadRegistry() {
+            try {
+                // Fetch avec cache-busting pour assurer la fraîcheur des données
+                const response = await fetch('/registry.json?t=' + Date.now());
+                const data = await response.json();
                 
-                data.forEach(item => {
-                    // Extraction précise selon ta structure de données
-                    const entityName = item.entity?.name || "Unknown Entity";
-                    const category = item.entity?.category || "N/A";
-                    const fiscalYear = item.data_meta?.fiscal_year || "2024";
-                    const confidence = (item.data_meta?.confidence_score * 100).toFixed(1) || "0.0";
-                    const tier = item.data_meta?.tier || "3";
-
-                    const row = `<tr>
-                        <td style="font-weight:400; letter-spacing: 0.5px;">${entityName}</td>
-                        <td class="mono" style="font-size:10px">${category}</td>
-                        <td class="mono">${fiscalYear}</td>
-                        <td class="mono" style="color:var(--gold)">${confidence}%</td>
-                        <td><span class="tier-pill mono">Tier ${tier}</span></td>
-                    </tr>`;
-                    body.innerHTML += row;
-                });
-
-                loader.style.display = 'none';
-                table.style.display = 'table';
-            })
-            .catch(err => {
-                document.getElementById('loader').innerText = "ERROR LOADING REGISTRY DATA";
-                console.error(err);
-            });
-
-        function filterTable() {
-            let input = document.getElementById('searchBar').value.toUpperCase();
-            let tr = document.getElementById('tableBody').getElementsByTagName('tr');
-            for (let i = 0; i < tr.length; i++) {
-                let tdName = tr[i].getElementsByTagName('td')[0];
-                let tdCat = tr[i].getElementsByTagName('td')[1];
-                if (tdName || tdCat) {
-                    let nameText = tdName.textContent || tdName.innerText;
-                    let catText = tdCat.textContent || tdCat.innerText;
-                    if (nameText.toUpperCase().indexOf(input) > -1 || catText.toUpperCase().indexOf(input) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
+                // Parsing robuste selon la structure du JSON
+                allEntities = data.entities || (Array.isArray(data) ? data : [data]);
+                
+                document.getElementById('loading-state').style.display = 'none';
+                renderMore(); 
+            } catch (error) {
+                console.error("Registry load error:", error);
+                document.getElementById('loading-state').innerHTML = 'OFFLINE DATA STREAM';
             }
         }
+
+        function renderMore() {
+            const tableBody = document.getElementById('table-body');
+            const nextBatch = allEntities.slice(currentIndex, currentIndex + step);
+            
+            let html = '';
+            nextBatch.forEach(item => {
+                // Mapping défensif item.entity vs item
+                const entity = item.entity || item;
+                
+                const name = entity.name || entity.entity_id || "Unknown Entity";
+                const category = entity.category || entity.sector || "Global Luxe";
+                const score = entity.drift_confidence || entity.drift_score || "N/A";
+                
+                // Calcul du statut basé sur le score numérique
+                const numericScore = parseFloat(score);
+                const isCritical = !isNaN(numericScore) && numericScore > 20;
+                const statusClass = isCritical ? 'status-critical' : 'status-compliant';
+                const statusText = isCritical ? 'Critical' : `Tier ${entity.tier || 1}`;
+
+                html += `
+                    <tr>
+                        <td class="col-id">${name}</td>
+                        <td class="col-sector">${category}</td>
+                        <td class="col-confidence mono" style="color: var(--gold)">${score}</td>
+                        <td class="col-status"><span class="status-pill ${statusClass}">${statusText}</span></td>
+                    </tr>
+                `;
+            });
+            
+            tableBody.insertAdjacentHTML('beforeend', html);
+            currentIndex += step;
+        }
+
+        // Lazy load on scroll
+        window.onscroll = function() {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
+                if (currentIndex < allEntities.length) renderMore();
+            }
+        };
+
+        window.onload = loadRegistry;
     </script>
 </body>
 </html>
