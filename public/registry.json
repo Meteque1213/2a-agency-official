@@ -167295,7 +167295,14 @@
       }
     }
   },
-
+  {
+    "id": "PG-BRT-001",
+    "entity": "Breitling",
+    "sector": "Horology",
+    "drift_confidence": "42.1%",
+    "status": "OK",
+    "url": "/registry/breitling.html"
+  },
   {
     "id": "VB-001",
     "entity": "Vanessa Bruno",
