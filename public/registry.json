@@ -167297,16 +167297,22 @@
   },
   {
     "id": "PG-BRT-001",
+    "name": "Breitling",
     "entity": "Breitling",
     "sector": "Horology",
+    "category": "Horology",
+    "drift": "42.1%",
     "drift_confidence": "42.1%",
     "status": "OK",
     "url": "/registry/breitling.html"
   },
   {
     "id": "VB-001",
+    "name": "Vanessa Bruno",
     "entity": "Vanessa Bruno",
     "sector": "Luxury Fashion",
+    "category": "Luxury Fashion",
+    "drift": "38.4%",
     "drift_confidence": "38.4%",
     "status": "OK",
     "url": "/registry/vanessa-bruno.html"
