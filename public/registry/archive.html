@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Entity Registry | 2A Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root { --black: #080808; --white: #F2EFE9; --gold: #C9A84C; --border: rgba(242,239,233,0.1); }
+        body { background: var(--black); color: var(--white); font-family: 'Instrument Sans', sans-serif; padding: 40px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; margin: 20px 0; }
+        
+        #searchBar { width: 100%; padding: 15px; background: transparent; border: 1px solid var(--border); color: var(--white); font-family: 'JetBrains Mono'; margin-bottom: 30px; outline: none; }
+        #searchBar:focus { border-color: var(--gold); }
+
+        table { width: 100%; border-collapse: collapse; }
+        th { text-align: left; padding: 15px; color: var(--gold); border-bottom: 1px solid var(--border); font-size: 10px; }
+        td { padding: 15px; border-bottom: 1px solid var(--border); font-size: 13px; }
+        tr:hover td { background: rgba(255,255,255,0.02); }
+        .tier-pill { padding: 2px 8px; border: 1px solid var(--gold); font-size: 9px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mono">Institutional Archive · 2701 Entities</div>
+        <h1>Ground Truth Index</h1>
+        
+        <input type="text" id="searchBar" placeholder="SEARCH BY ENTITY NAME OR SECTOR..." onkeyup="filterTable()">
+
+        <table id="registryTable">
+            <thead>
+                <tr class="mono">
+                    <th>Entity</th>
+                    <th>Sector</th>
+                    <th>Fiscal Year</th>
+                    <th>Confidence</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                </tbody>
+        </table>
+    </div>
+
+    <script>
+        // On charge le fichier JSON
+        fetch('/registry.json')
+            .then(response => response.json())
+            .then(data => {
+                const body = document.getElementById('tableBody');
+                data.forEach(item => {
+                    const row = `<tr>
+                        <td style="font-weight:500">${item.data_meta.entity_type === 'brand' ? 'Maison ' : ''} ${item.data_meta.entity_type}</td>
+                        <td class="mono">${item.data_meta.entity_type}</td>
+                        <td class="mono">${item.data_meta.fiscal_year}</td>
+                        <td class="mono" style="color:var(--gold)">${(item.data_meta.confidence_score * 100).toFixed(1)}%</td>
+                        <td><span class="tier-pill mono">Tier ${item.data_meta.tier}</span></td>
+                    </tr>`;
+                    body.innerHTML += row;
+                });
+            });
+
+        function filterTable() {
+            let input = document.getElementById('searchBar').value.toUpperCase();
+            let tr = document.getElementById('tableBody').getElementsByTagName('tr');
+            for (let i = 0; i < tr.length; i++) {
+                let td = tr[i].getElementsByTagName('td')[0];
+                if (td) {
+                    let textValue = td.textContent || td.innerText;
+                    tr[i].style.display = textValue.toUpperCase().indexOf(input) > -1 ? "" : "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
