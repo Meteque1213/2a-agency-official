@@ -3,177 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A Agency — High-Integrity Brand Registry</title>
-    
-    <meta name="msvalidate.01" content="CB7339AD00A7F35B8190AD51361FA47EA" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>2A Agency | Semantic Integrity for AI-Native Brands</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=JetBrains+Mono:wght@300;400&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --black: #080808;
-            --white: #F2EFE9;
-            --gold: #C9A84C;
-            --red: #C0392B;
-            --green: #1A6B3C;
-            --border: rgba(242,239,233,0.08);
-            --grey-light: #888;
+        :root { --black: #080808; --white: #F2EFE9; --gold: #C9A84C; --border: rgba(242,239,233,0.1); }
+        body { background: var(--black); color: var(--white); font-family: 'Instrument Sans', sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px; }
+        
+        header { border-bottom: 1px solid var(--border); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: var(--white); }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
+        
+        .hero { padding: 120px 0 100px 0; border-bottom: 1px solid var(--border); }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 8vw, 72px); font-weight: 300; line-height: 1.1; margin-bottom: 30px; }
+        .subtitle { max-width: 600px; font-size: 18px; color: rgba(242,239,233,0.7); margin-bottom: 40px; }
+        
+        .cta-container { margin: 60px 0; }
+        .btn-registry {
+            display: inline-block;
+            padding: 20px 40px;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: rgba(201, 168, 76, 0.05);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
+        .btn-registry:hover { background: var(--gold); color: var(--black); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201, 168, 76, 0.2); }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--black); color: var(--white); font-family: 'Instrument Sans', sans-serif; line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-
-        header { padding: 2rem 4%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; background: rgba(8,8,8,0.8); backdrop-filter: blur(10px); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; text-decoration: none; color: var(--white); }
-        .logo span { color: var(--gold); font-style: italic; }
-        .nav-links a { color: var(--grey-light); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; text-transform: uppercase; margin-left: 2rem; transition: 0.3s; }
-        .nav-links a:hover { color: var(--gold); }
-
-        .hero { padding: 8rem 4% 4rem; max-width: 1200px; }
-        .label { font-family: 'JetBrains Mono', monospace; color: var(--gold); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 1.5rem; display: block; letter-spacing: 0.1em; }
-        h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; font-weight: 300; margin-bottom: 2rem; letter-spacing: -0.02em; }
-        .hero p { font-size: 1.25rem; color: var(--grey-light); max-width: 700px; margin-bottom: 3rem; font-weight: 300; }
-
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 4rem; }
-        .stat-card { background: var(--black); padding: 3rem; }
-        .stat-value { font-family: 'Cormorant Garamond', serif; font-size: 4rem; color: var(--red); display: block; line-height: 1; margin-bottom: 0.5rem; }
-        .stat-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--grey-light); text-transform: uppercase; letter-spacing: 1px; }
-
-        .registry-section { padding: 6rem 4%; }
-        .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; }
-        table { width: 100%; border-collapse: collapse; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; }
-        th { text-align: left; padding: 1.5rem; color: var(--grey-light); font-weight: 400; border-bottom: 1px solid var(--border); }
-        td { padding: 1.5rem; border-bottom: 1px solid var(--border); }
-
-        .status-pill { padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; text-transform: uppercase; }
-        .status-critical { background: rgba(192, 57, 43, 0.15); color: var(--red); }
-        .status-compliant { background: rgba(26, 107, 60, 0.15); color: var(--green); }
-        .btn-link { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
-        .btn-link:hover { border-bottom: 1px solid var(--gold); }
-
-        .cta-section { padding: 8rem 4%; text-align: center; background: linear-gradient(to bottom, var(--black), #121212); }
-        .btn { cursor: pointer; display: inline-block; padding: 1.2rem 3rem; background: var(--white); color: var(--black); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; transition: 0.3s; margin: 1rem; border: none; }
-        .btn:hover { background: var(--gold); color: var(--white); }
-
-        footer { padding: 4rem 4%; border-top: 1px solid var(--border); color: var(--grey-light); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; }
-        .footer-content { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; }
-        .hash-box { color: var(--gold); font-size: 9px; word-break: break-all; max-width: 500px; opacity: 0.6; margin-top: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; padding: 100px 0; }
+        .card { border: 1px solid var(--border); padding: 40px; transition: border 0.3s; position: relative; }
+        .card:hover { border-color: var(--gold); }
+        .card h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; margin: 20px 0; }
+        .card p { color: rgba(242,239,233,0.6); font-size: 15px; }
+        
+        .infra-section { padding: 80px 40px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); margin-top: 40px; }
+        
+        footer { margin-top: 120px; padding: 40px 0; border-top: 1px solid var(--border); color: rgba(242,239,233,0.4); font-size: 12px; }
+        a { text-decoration: none; color: inherit; }
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <a href="/" class="logo">2A Agency</a>
+            <nav class="mono">
+                <a href="/whitepaper.html" style="color: var(--gold); margin-left: 24px;">Whitepaper</a>
+                <a href="/registry/archive.html" style="color: var(--gold); margin-left: 24px;">Registry</a>
+            </nav>
+        </header>
 
-    <header>
-        <a href="/" class="logo">2A <span>Agency</span></a>
-        <nav class="nav-links">
-            <a href="/registry/index.html">Registry</a>
-            <a href="whitepaper.html">White Paper</a>
-            <a href="mailto:alexandre@2aagency.com">Direct Line</a>
-        </nav>
-    </header>
+        <section class="hero">
+            <div class="mono">Verification Protocol v1.0</div>
+            <h1>The Ground Truth Layer <br>for AI Entities.</h1>
+            <p class="subtitle">
+                As Large Language Models drift, 2A Agency provides the immutable anchor for brand integrity. We monitor, notarize, and certify 2,701 global entities across the agentic ecosystem.
+            </p>
 
-    <section class="hero">
-        <span class="label">High-Integrity Brand Registry — Q1 2026</span>
-        <h1>Closing the Truth Gap in the Age of AI Agents.</h1>
-        <p>2A Agency provides the institutional standard for certifying brand specifications, ensuring semantic reliability across the Generative AI ecosystem.</p>
-        
-        <div class="stats-grid">
-            <div class="stat-card">
-                <span class="stat-value">82.3%</span>
-                <span class="stat-label">Max Detected Drift (Lanvin)</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-value">500+</span>
-                <span class="stat-label">Target Entities</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-value" style="color:var(--gold)">Active</span>
-                <span class="stat-label">Semantic Notarization</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="registry-section">
-        <div class="section-header">
-            <div>
-                <h2 style="font-family: 'Cormorant Garamond'; font-size: 2.5rem; font-weight: 300;">The Ground Truth Registry</h2>
-                <p style="color: var(--grey-light); font-size: 0.9rem; margin-top: 0.5rem;">Verified Machine-Readable Identifiers (Luxury Sector)</p>
-            </div>
-            <div style="font-family: 'JetBrains Mono'; font-size: 0.7rem; color: var(--gold);">
-                LAST NOTARIZATION: 21 MAR 2026 09:00 UTC
-            </div>
-        </div>
-
-        <div style="overflow-x: auto;">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ENTITY NAME</th>
-                        <th>DRIFT SCORE</th>
-                        <th>STATUS</th>
-                        <th>REPORT</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Maison Lanvin</td>
-                        <td style="color: var(--red);">82.3%</td>
-                        <td><span class="status-pill status-critical">Critical Drift</span></td>
-                        <td><a href="/registry/lanvin.html" class="btn-link">VIEW AUDIT</a></td>
-                    </tr>
-                    <tr>
-                        <td>Vacheron Constantin</td>
-                        <td style="color: var(--red);">58.4%</td>
-                        <td><span class="status-pill status-critical">Critical Drift</span></td>
-                        <td><a href="/registry/vacheron.html" class="btn-link">VIEW AUDIT</a></td>
-                    </tr>
-                    <tr>
-                        <td>Sézane</td>
-                        <td style="color: #D4AC0D;">12.1%</td>
-                        <td><span class="status-pill" style="background:rgba(212,172,13,0.15); color:#D4AC0D;">Growth Lag</span></td>
-                        <td><a href="/registry/sezane.html" class="btn-link">VIEW AUDIT</a></td>
-                    </tr>
-                    <tr>
-                        <td>LVMH Group</td>
-                        <td style="color: var(--green);">8.2%</td>
-                        <td><span class="status-pill status-compliant">Compliant</span></td>
-                        <td><a href="/registry/lvmh.html" class="btn-link">VIEW AUDIT</a></td>
-                    </tr>
-                    <tr>
-                        <td>Hermès International</td>
-                        <td style="color: var(--green);">3.2%</td>
-                        <td><span class="status-pill status-compliant">Compliant</span></td>
-                        <td><a href="/registry/hermes.html" class="btn-link">VIEW AUDIT</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div style="margin-top: 2rem; text-align: center;">
-            <a href="/registry/index.html" class="btn-link" style="font-size: 0.7rem;">+ VIEW ALL ENTITIES IN REGISTRY</a>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <span class="label">Secure your AI-native identity</span>
-        <h2 style="font-family: 'Cormorant Garamond'; font-size: 3rem; font-weight: 300; margin-bottom: 3rem;">Protect Your Brand Narrative.</h2>
-        <div class="button-container">
-            <a href="mailto:alexandre@2aagency.com" class="btn">Request Private Audit</a>
-            <a href="whitepaper.html" class="btn" style="background: transparent; color: var(--white); border: 1px solid var(--border);">Read the Thesis</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-left">
-                © 2026 2A AGENCY · TRUSTED IDENTITY FOR AI AGENTS
-                <div class="hash-box">
-                    GENESIS HASH: 7aa71c8e80d3634abebe349c80008ff28ae7028950cc66949a86f96605e3a32d
+            <div class="cta-container">
+                <a href="/registry/archive.html" class="btn-registry">
+                    Access 2,701 Certified Audit Nodes →
+                </a>
+                <div class="mono" style="margin-top: 15px; font-size: 9px; opacity: 0.6;">
+                    Infrastructure: PerimeterOS Enabled · Base L2 Verified
                 </div>
             </div>
-            <div class="footer-right">
-                <a href="https://www.linkedin.com/in/alexandre-quillet-79562274/" target="_blank">LinkedIn</a>
+        </section>
+
+        <div class="grid">
+            <div class="card">
+                <div class="mono">Audit</div>
+                <h3>Semantic Drift Analysis</h3>
+                <p>We detect financial and conceptual hallucinations in real-time. Our proprietary algorithms identify discrepancies between ground truth data and AI model outputs.</p>
+            </div>
+            <div class="card">
+                <div class="mono">Infrastructure</div>
+                <h3>The Registry API</h3>
+                <p>A serverless infrastructure serving certified JSON-LD fragments directly to agents. Ensure your brand is represented with 100% accuracy in the latent space.</p>
+            </div>
+            <div class="card">
+                <div class="mono">Compliance</div>
+                <h3>Institutional Proof</h3>
+                <p>Certified audit trails for DORA and EU AI Act compliance. We provide the third-party verification required for high-risk AI deployments in finance and luxury.</p>
             </div>
         </div>
-    </footer>
 
+        <section class="infra-section">
+            <div class="mono" style="margin-bottom: 20px;">Live API Status</div>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div style="width: 10px; height: 10px; background: #00ff00; border-radius: 50%; box-shadow: 0 0 10px #00ff00;"></div>
+                <div style="font-family: 'JetBrains Mono'; font-size: 13px;">
+                    endpoint: <span style="color: var(--gold);">2aagency.com/api/audit</span> | status: <span style="color: var(--gold);">verified_operational</span>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>© 2026 2A Agency. Built for the Agentic Era.</div>
+                <div class="mono">Notary: <span style="color: var(--white);">SHA256-PROVENANCE</span></div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
