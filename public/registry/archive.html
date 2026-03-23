@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2A Registry — Certified Brand Nodes | 2A Agency</title>
+<title>2A Registry — Certified Brand Nodes</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg-color: #0d0d0d; /* Retour au noir profond que tu aimes */
-  --text-main: #e0e0e0;
-  --text-dim: #888;
-  --gold-accent: #d4af37;
-  --border-color: #333;
-  --certified-green: #2ecc71;
+  --bg-color: #fdfcf9; /* Ton fond blanc cassé officiel */
+  --text-main: #1a1a1a;
+  --text-dim: #666;
+  --gold-accent: #b4975a; /* Ton Or officiel */
+  --border-color: #e5e0d5;
+  --certified-green: #2d5a27;
 }
 
 body {
@@ -25,57 +25,49 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.registry-container { max-width: 1100px; margin: 0 auto; }
+.registry-container { max-width: 1000px; margin: 0 auto; }
 
 header { border-bottom: 1px solid var(--border-color); padding-bottom: 40px; margin-bottom: 60px; text-align: center; }
 
-.logo-2a { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 600; color: var(--gold-accent); text-decoration: none; display: block; margin-bottom: 10px; }
-.logo-registry { font-size: 14px; text-transform: uppercase; letter-spacing: 0.3em; color: var(--text-dim); }
+.logo-2a { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 600; color: var(--text-main); text-decoration: none; display: block; }
+.logo-registry { font-size: 14px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold-accent); }
 
-.filter-bar { display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
-.filter-btn { background: none; border: none; color: var(--text-dim); cursor: pointer; font-family: inherit; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; padding: 5px 0; transition: 0.3s; }
-.filter-btn.active { color: var(--gold-accent); border-bottom: 1px solid var(--gold-accent); }
+.filter-bar { display: flex; justify-content: center; gap: 25px; margin-bottom: 40px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+.filter-btn { background: none; border: none; color: var(--text-dim); cursor: pointer; font-family: inherit; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; padding: 5px 0; }
+.filter-btn.active { color: var(--text-main); border-bottom: 1px solid var(--text-main); }
 
 .node-row {
   display: grid;
-  grid-template-columns: 100px 1fr 180px 150px;
+  grid-template-columns: 100px 1fr 180px 120px;
   align-items: center;
   padding: 25px 0;
   border-bottom: 1px solid var(--border-color);
   cursor: pointer;
-  transition: background 0.2s;
 }
-.node-row:hover { background-color: #1a1a1a; }
+.node-row:hover { background-color: #f9f7f2; }
 
-.node-id { font-size: 12px; color: #666; }
-.brand-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #fff; }
+.node-id { font-size: 12px; color: var(--text-dim); }
+.brand-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; }
 
-.status-pill {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 4px 10px;
-  border-radius: 2px;
-  border: 1px solid;
-}
+.status-pill { font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 8px; border: 1px solid; border-radius: 2px; }
 .status-certified-pill { color: var(--certified-green); border-color: var(--certified-green); }
-.status-pending-pill { color: #666; border-color: #444; }
+.status-pending-pill { color: var(--text-dim); border-color: var(--border-color); }
 
-.node-detail { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background-color: #111; }
+.node-detail { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background-color: #fff; }
 .node-detail.open { max-height: 800px; border-bottom: 1px solid var(--border-color); }
 
 .detail-content { padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.detail-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold-accent); margin-bottom: 8px; }
-.detail-value { font-size: 13px; margin-bottom: 20px; color: #ccc; }
+.detail-label { font-size: 10px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
+.detail-value { font-size: 14px; margin-bottom: 20px; }
 
-.drift-box { background: #000; border: 1px solid var(--gold-accent); padding: 25px; text-align: center; }
-.score-value { font-size: 42px; font-family: 'Cormorant Garamond', serif; color: var(--gold-accent); margin: 5px 0; }
+.drift-box { background: var(--bg-color); border: 1px solid var(--border-color); padding: 30px; text-align: center; }
+.score-value { font-size: 48px; font-family: 'Cormorant Garamond', serif; color: var(--gold-accent); margin: 10px 0; }
 
-footer { margin-top: 80px; padding: 40px; text-align: center; color: #444; font-size: 10px; letter-spacing: 0.2em; border-top: 1px solid var(--border-color); }
+footer { margin-top: 100px; padding: 40px; text-align: center; color: var(--text-dim); font-size: 11px; border-top: 1px solid var(--border-color); }
 
 @media (max-width: 768px) {
-  .node-row { grid-template-columns: 1fr 120px; padding: 20px 0; }
-  .node-id, .status-container { display: none; }
+  .node-row { grid-template-columns: 1fr 120px; }
+  .node-id, .audit-link { display: none; }
 }
 </style>
 </head>
@@ -83,8 +75,8 @@ footer { margin-top: 80px; padding: 40px; text-align: center; color: #444; font-
 
 <div class="registry-container">
   <header>
-    <a href="/" class="logo-2a">2A AGENCY</a>
-    <span class="logo-registry">Official Node Registry</span>
+    <a href="/" class="logo-2a">2A Agency</a>
+    <span class="logo-registry">Public Node Registry</span>
   </header>
 
   <div class="filter-bar">
@@ -120,20 +112,20 @@ footer { margin-top: 80px; padding: 40px; text-align: center; color: #444; font-
       <span class="node-id">VC1772</span>
       <span class="brand-name">Veuve Clicquot</span>
       <span class="status-pill status-pending-pill">Public Data</span>
-      <span style="font-size: 12px; color: #444;">→ Details</span>
+      <span style="font-size: 12px; color: var(--text-dim);">→ Details</span>
     </div>
     <div id="nVC1772" class="node-detail">
       <div class="detail-content">
         <div>
           <div class="detail-label">Heritage</div>
           <div class="detail-value">Maison fondée en 1772, Reims (FR)</div>
-          <div class="detail-label">Leadership</div>
-          <div class="detail-value">Chef de Cave: Didier Mariotti</div>
+          <div class="detail-label">Parent Group</div>
+          <div class="detail-value">LVMH</div>
         </div>
         <div class="drift-box">
           <div class="detail-label">Drift Score</div>
           <div class="score-value">--</div>
-          <div style="font-size: 10px; color: #666;">Scan pending</div>
+          <div style="font-size: 10px; color: var(--text-dim);">Scan pending</div>
         </div>
       </div>
     </div>
@@ -142,7 +134,7 @@ footer { margin-top: 80px; padding: 40px; text-align: center; color: #444; font-
       <span class="node-id">HR1837</span>
       <span class="brand-name">Hermès</span>
       <span class="status-pill status-pending-pill">Public Data</span>
-      <span style="font-size: 12px; color: #444;">→ Details</span>
+      <span style="font-size: 12px; color: var(--text-dim);">→ Details</span>
     </div>
     <div id="nHR1837" class="node-detail">
       <div class="detail-content">
@@ -155,7 +147,7 @@ footer { margin-top: 80px; padding: 40px; text-align: center; color: #444; font-
         <div class="drift-box">
           <div class="detail-label">Drift Score</div>
           <div class="score-value">--</div>
-          <div style="font-size: 10px; color: #666;">Scan pending</div>
+          <div style="font-size: 10px; color: var(--text-dim);">Scan pending</div>
         </div>
       </div>
     </div>
@@ -164,7 +156,7 @@ footer { margin-top: 80px; padding: 40px; text-align: center; color: #444; font-
       <span class="node-id">CH1910</span>
       <span class="brand-name">Chanel</span>
       <span class="status-pill status-pending-pill">Public Data</span>
-      <span style="font-size: 12px; color: #444;">→ Details</span>
+      <span style="font-size: 12px; color: var(--text-dim);">→ Details</span>
     </div>
     <div id="nCH1910" class="node-detail">
       <div class="detail-content">
@@ -177,7 +169,7 @@ footer { margin-top: 80px; padding: 40px; text-align: center; color: #444; font-
         <div class="drift-box">
           <div class="detail-label">Drift Score</div>
           <div class="score-value">--</div>
-          <div style="font-size: 10px; color: #666;">Scan pending</div>
+          <div style="font-size: 10px; color: var(--text-dim);">Scan pending</div>
         </div>
       </div>
     </div>
