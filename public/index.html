@@ -6,11 +6,9 @@
     <title>
         2A Agency — The Mandatory System of Records for the Agentic Web
     </title>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
-    
     <style>
         :root {
             --black: #0D0D0D;
@@ -54,10 +52,7 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
         }
 
-        /* STRUCTURAL CSS 
-           Expanded for line count and maintenance
-        */
-
+        /* NAVIGATION DÉPLIÉE */
         nav {
             display: flex;
             justify-content: space-between;
@@ -105,18 +100,23 @@
         .nav-cta {
             color: var(--black) !important;
             border: 1px solid var(--black);
-            padding-top: 8px;
-            padding-bottom: 8px;
-            padding-left: 20px;
-            padding-right: 20px;
+            padding: 10px 24px;
             text-decoration: none;
             font-family: 'DM Mono', monospace;
             font-size: 0.65rem;
+            transition: all 0.2s;
         }
 
+        .nav-cta:hover {
+            background: var(--gold);
+            color: white !important;
+            border-color: var(--gold);
+        }
+
+        /* HERO - UNIVERSAL PIVOT */
         header {
-            padding-top: 120px;
-            padding-bottom: 100px;
+            padding-top: 140px;
+            padding-bottom: 120px;
             padding-left: 5%;
             padding-right: 5%;
             text-align: center;
@@ -124,20 +124,21 @@
 
         .kicker {
             font-family: 'DM Mono', monospace;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             color: var(--gold);
             text-transform: uppercase;
-            letter-spacing: 0.25em;
-            margin-bottom: 32px;
+            letter-spacing: 0.3em;
+            margin-bottom: 40px;
             display: block;
         }
 
         h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(3rem, 8.5vw, 6.5rem);
+            font-size: clamp(3.5rem, 9vw, 7.5rem);
             font-weight: 300;
-            line-height: 0.95;
-            margin-bottom: 24px;
+            line-height: 0.9;
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
         }
 
         h1 em {
@@ -146,44 +147,50 @@
         }
 
         .hero-sub {
-            max-width: 680px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 48px;
-            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto 56px;
+            font-size: 1.25rem;
             color: var(--gray);
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
-        .btn-main {
+        .btn-claim {
             display: inline-block;
-            padding-top: 18px;
-            padding-bottom: 18px;
-            padding-left: 48px;
-            padding-right: 48px;
+            padding: 22px 56px;
             background: var(--black);
             color: var(--white);
             text-decoration: none;
             font-family: 'DM Mono', monospace;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.2em;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: none;
+            cursor: pointer;
         }
 
+        .btn-claim:hover {
+            background: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(184, 150, 12, 0.2);
+        }
+
+        /* TICKER DENSE */
         .ticker {
             background: var(--black);
             color: var(--white);
-            padding-top: 15px;
-            padding-bottom: 15px;
+            padding: 18px 0;
             overflow: hidden;
             white-space: nowrap;
         }
 
         .ticker-content {
             display: inline-block;
-            animation: ticker-scroll 30s linear infinite;
+            animation: ticker-scroll 35s linear infinite;
             font-family: 'DM Mono', monospace;
-            font-size: 0.65rem;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
 
         @keyframes ticker-scroll {
@@ -191,36 +198,41 @@
             100% { transform: translateX(-50%); }
         }
 
-        .api-section {
+        .ticker-item {
+            margin-right: 64px;
+        }
+
+        .ticker-item strong {
+            color: var(--gold);
+        }
+
+        /* API & INFRA SECTION */
+        .infra-section {
+            padding: 120px 5%;
             background: var(--paper);
-            padding-top: 100px;
-            padding-bottom: 100px;
-            padding-left: 5%;
-            padding-right: 5%;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
         }
 
-        .code-block {
+        .code-window {
             background: var(--code-bg);
-            color: #D1D1D1;
             padding: 48px;
-            font-family: 'DM Mono', monospace;
-            font-size: 0.85rem;
             border-radius: 4px;
-            margin-top: 40px;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.9rem;
+            color: #D1D1D1;
+            margin-top: 64px;
             text-align: left;
             line-height: 1.6;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.25);
         }
 
-        .code-keyword { color: #CC7832; }
-        .code-string { color: #6A8759; }
+        .code-kw { color: #CC7832; }
+        .code-str { color: #6A8759; }
 
+        /* PROBLEM SECTION */
         .section {
-            padding-top: 100px;
-            padding-bottom: 100px;
-            padding-left: 5%;
-            padding-right: 5%;
+            padding: 120px 5%;
         }
 
         .problem-grid {
@@ -229,99 +241,69 @@
             gap: 1px;
             background: var(--border);
             border: 1px solid var(--border);
-            margin-top: 56px;
+            margin-top: 80px;
         }
 
         .problem-card {
             background: var(--white);
-            padding-top: 64px;
-            padding-bottom: 64px;
-            padding-left: 48px;
-            padding-right: 48px;
+            padding: 72px 48px;
         }
 
         .problem-num {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 300;
             color: var(--border);
             line-height: 1;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
-        .eu-box {
-            border: 1px solid var(--gold);
-            padding: 72px;
-            margin-top: 64px;
-            position: relative;
+        /* REGISTRY PREVIEW */
+        .registry-preview {
+            margin-top: 80px;
+            border: 1px solid var(--border);
         }
 
-        .eu-box::before {
-            content: 'EU AI Act Compliance — Article 53';
-            position: absolute;
-            top: -11px;
-            left: 48px;
+        .registry-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr 1fr;
+            padding: 24px 40px;
+            border-bottom: 1px solid var(--border);
             font-family: 'DM Mono', monospace;
-            font-size: 0.65rem;
-            background: var(--white);
-            padding: 0 10px;
+            font-size: 0.75rem;
+            align-items: center;
+        }
+
+        .registry-header {
+            background: var(--paper);
+            font-weight: bold;
             color: var(--gold);
         }
 
-        .registry-grid {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            border: 1px solid var(--border);
-            margin-top: 56px;
+        /* FOUNDER BIO (VC REQ) */
+        .founder-section {
+            padding: 120px 5%;
+            border-top: 1px solid var(--border);
+            text-align: center;
         }
 
-        .registry-col {
-            padding-top: 48px;
-            padding-bottom: 48px;
-            padding-left: 40px;
-            padding-right: 40px;
+        .founder-img {
+            width: 90px;
+            height: 90px;
+            background: var(--gold);
+            border-radius: 50%;
+            margin: 0 auto 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Cormorant Garamond';
+            font-size: 2.2rem;
         }
 
-        .comp-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 56px;
-        }
-
-        .comp-table th {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.65rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--gray);
-            padding-top: 14px;
-            padding-bottom: 14px;
-            padding-left: 20px;
-            padding-right: 20px;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .comp-table td {
-            padding-top: 16px;
-            padding-bottom: 16px;
-            padding-left: 20px;
-            padding-right: 20px;
-            font-size: 0.88rem;
-            color: var(--gray);
-            border-bottom: 1px solid rgba(184, 150, 12, 0.08);
-        }
-
-        .comp-table td.hi {
-            color: var(--black);
-            background: rgba(184, 150, 12, 0.04);
-        }
-
+        /* FOOTER */
         footer {
-            padding-top: 64px;
-            padding-bottom: 64px;
-            padding-left: 5%;
-            padding-right: 5%;
+            padding: 64px 5%;
             border-top: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
@@ -331,10 +313,25 @@
             text-transform: uppercase;
         }
 
+        .btn-gold {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid var(--gold);
+            font-family: 'DM Mono';
+            font-size: 0.7rem;
+            transition: all 0.2s;
+        }
+
+        .btn-gold:hover {
+            color: var(--black);
+            border-color: var(--black);
+        }
+
+        /* REVEAL ANIM */
         .reveal {
             opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s ease;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
         }
 
         .reveal.visible {
@@ -346,225 +343,211 @@
 <body>
 
 <nav>
-    <a href="#" class="logo">
-        2<span>A</span> Agency
-    </a>
+    <a href="/" class="logo">2<span>A</span> Agency</a>
     <div class="nav-links">
-        <a href="#infra">Infrastructure</a>
-        <a href="#developers">API & SDK</a>
-        <a href="/registry/archive.html">Public Registry</a>
+        <a href="#infra">Protocol</a>
+        <a href="#developers">API</a>
+        <a href="/registry/archive.html">Registry</a>
         <a href="#contact" class="nav-cta">Claim Entity</a>
     </div>
 </nav>
 
 <header>
-    <span class="kicker">
-        The Mandatory System of Records for the Agentic Web
-    </span>
-    <h1>
-        The Ground Truth Layer<br>
-        for <em>Autonomous Agents</em>.
-    </h1>
+    <span class="kicker">The Mandatory System of Records for the Agentic Web</span>
+    <h1>The Ground Truth Layer for <em>Every Entity</em> on the Web.</h1>
     <p class="hero-sub">
-        As AI agents take over web navigation independently, they require 
-        a trusted, third-party source to verify facts, ownership, and history. 
-        2A Agency is that immutable infrastructure.
+        For every brand, every company, every entity on the agentic web. 
+        As autonomous agents take over web navigation, 2A is the independent 
+        infrastructure that certifies your facts, provenance, and identity.
     </p>
     <div style="margin-top: 20px;">
-        <a href="#contact" class="btn-main">
-            Claim & Certify Your Entity — Free in 60s
-        </a>
+        <a href="#contact" class="btn-claim">Claim & Certify Your Entity — Free in 60s</a>
     </div>
 </header>
 
 <div class="ticker">
     <div class="ticker-content">
-        <span style="margin-right:80px;">NODES_LIVE: <strong>2,701</strong></span>
-        <span style="margin-right:80px;">PROTOCOL: <strong>SHA-256_VERIFIED</strong></span>
-        <span style="margin-right:80px;">EU_AI_ACT: <strong>ARTICLE_53_READY</strong></span>
-        <span style="margin-right:80px;">AGENT_CALLS_24H: <strong>142.8k</strong></span>
-        <span style="margin-right:80px;">STATUS: <strong>OPERATIONAL</strong></span>
-        <span style="margin-right:80px;">NODES_LIVE: <strong>2,701</strong></span>
-        <span style="margin-right:80px;">PROTOCOL: <strong>SHA-256_VERIFIED</strong></span>
+        <span class="ticker-item">AUDIT_NODES: <strong>2,701</strong></span>
+        <span class="ticker-item">PROTOCOL: <strong>SHA-256_VERIFIED</strong></span>
+        <span class="ticker-item">EU_AI_ACT: <strong>ARTICLE_53_COMPLIANT</strong></span>
+        <span class="ticker-item">AGENT_CALLS_24H: <strong>142.8k</strong></span>
+        <span class="ticker-item">STATUS: <strong>OPERATIONAL</strong></span>
+        <span class="ticker-item">NETWORK_LOAD: <strong>12ms_LATENCY</strong></span>
+        <span class="ticker-item">AUDIT_NODES: <strong>2,701</strong></span>
+        <span class="ticker-item">PROTOCOL: <strong>SHA-256_VERIFIED</strong></span>
     </div>
 </div>
 
-<section class="api-section" id="developers">
-    <div style="max-width: 1000px; margin-left: auto; margin-right: auto; text-align: center;">
-        <span style="font-family:'DM Mono'; font-size:0.6rem; color:var(--gold); letter-spacing:3px;">AGENTIC API & SDK</span>
-        <h2 style="margin-top: 32px; margin-bottom: 32px;">
-            Ground Truth as a Service
-        </h2>
-        <p style="color: var(--gray); font-size: 1.1rem; margin-bottom: 40px;">
-            Integrated by LangChain, CrewAI, and AutoGPT to neutralize 
-            hallucinations at the edge.
+<section class="infra-section" id="developers">
+    <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+        <span style="font-family:'DM Mono'; font-size:0.65rem; color:var(--gold); letter-spacing:4px; text-transform:uppercase;">
+            Infrastructure SDK
+        </span>
+        <h2 style="margin: 32px 0; font-size: 3.5rem;">Ground Truth as a Service</h2>
+        <p style="color:var(--gray); font-size: 1.15rem;">
+            Integrated by LangChain, CrewAI, and AutoGPT to neutralize hallucinations 
+            at the edge. For every brand, for every agent.
         </p>
         
-        <div class="code-block">
-            <div style="color: #808080;"># Query the 2A Registry for certified ground truth</div>
+        <div class="code-window">
+            <div style="color: #808080;"># Initialize 2A Mandatory Protocol for Agentic RAG</div>
             <br>
             <div>
-                <span style="color: #CC7832;">import</span> agency_2a <span style="color: #CC7832;">as</span> aa
+                <span class="code-kw">import</span> agency_2a <span class="code-kw">as</span> aa
             </div>
             <br>
             <div>
-                client = aa.Client(api_key=<span style="color: #6A8759;">"2A_INFRA_MASTER_HASH"</span>)
+                client = aa.Client(api_key=<span class="code-str">"2A_PROVENANCE_MASTER_HASH"</span>)
             </div>
             <br>
-            <div style="color: #808080;"># Verify entity node integrity before RAG synthesis</div>
+            <div style="color: #808080;"># Verify entity node integrity before LLM inference</div>
             <br>
             <div>
-                entity = client.nodes.verify(<span style="color: #6A8759;">"entity_uid_0882"</span>)
-            </div>
-            <br>
-            <div>
-                <span style="color: #CC7832;">if</span> entity.status == <span style="color: #6A8759;">"CERTIFIED"</span>:
+                entity = client.nodes.verify(<span class="code-str">"entity_uid_0882"</span>)
             </div>
             <br>
             <div>
-                &nbsp;&nbsp;&nbsp;&nbsp;print(f<span style="color: #6A8759;">"Certified Facts: {entity.ground_truth}"</span>)
+                <span class="code-kw">if</span> entity.status == <span class="code-str">"CERTIFIED"</span>:
             </div>
             <br>
             <div>
-                &nbsp;&nbsp;&nbsp;&nbsp;print(f<span style="color: #6A8759;">"SHA-256 Proof: {entity.signature}"</span>)
+                &nbsp;&nbsp;&nbsp;&nbsp;print(f<span class="code-str">"Integrity Hash: {entity.sha256}"</span>)
+            </div>
+            <div>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(f<span class="code-str">"Ground Truth: {entity.certified_facts}"</span>)
             </div>
         </div>
     </div>
 </section>
 
 <section class="section" id="infra">
-    <span style="font-family:'DM Mono'; font-size:0.6rem; color:var(--gold); letter-spacing:3px;">INFRASTRUCTURE MOAT</span>
-    <h2>The Notary Principle.<br><em>A brand cannot certify itself.</em></h2>
-    <p style="max-width: 700px; margin-bottom: 40px; color: var(--gray);">
-        Self-declared data on a private domain is noise for modern LLMs. 
+    <span style="font-family:'DM Mono'; font-size:0.65rem; color:var(--gold); letter-spacing:4px; text-transform:uppercase;">
+        The Notary Principle
+    </h2>
+    <h2 style="margin-top: 24px;">A brand cannot certify itself.</h2>
+    <p class="body-text">
+        In the era of Generative AI, self-declared data on your own domain is noise. 
         2A Agency provides the independent, third-party certification required to 
-        increase confidence scores in agentic inference.
+        increase confidence scores in agentic pipelines.
     </p>
 
     <div class="problem-grid">
         <div class="problem-card">
             <div class="problem-num">01</div>
             <div class="problem-title">Provenance Shield</div>
-            <p style="font-size: 0.88rem; color: var(--gray); line-height: 1.7;">
-                Cryptographically seal your heritage data, making it impossible 
-                for LLMs to ignore or hallucinate your facts.
+            <p style="font-size: 0.95rem; color: var(--gray); line-height: 1.8;">
+                Cryptographically seal your brand heritage, ensuring LLMs cannot 
+                ignore or hallucinate your facts.
             </p>
         </div>
         <div class="problem-card">
             <div class="problem-num">02</div>
             <div class="problem-title">Semantic Stability</div>
-            <p style="font-size: 0.88rem; color: var(--gray); line-height: 1.7;">
-                Prevent algorithmic drift by ensuring agents reference a 
-                versioned, immutable registry node for every query.
+            <p style="font-size: 0.95rem; color: var(--gray); line-height: 1.8;">
+                Prevent algorithmic drift by providing agents with a versioned, 
+                immutable registry node for every query.
             </p>
         </div>
         <div class="problem-card">
             <div class="problem-num">03</div>
-            <div class="problem-title">Compliance Moat</div>
-            <p style="font-size: 0.88rem; color: var(--gray); line-height: 1.7;">
-                Meet the transparency documentation requirements of the EU 
-                AI Act Article 53 before the 2026 enforcement.
+            <div class="problem-title">Universal Moat</div>
+            <p style="font-size: 0.95rem; color: var(--gray); line-height: 1.8;">
+                From Luxury to Tech, meet the transparency requirements of the 
+                EU AI Act Article 53 before enforcement.
             </p>
         </div>
     </div>
 </section>
 
 <section class="section" style="background: var(--paper);">
-    <div class="eu-box">
-        <h3 style="font-family: 'DM Mono'; font-size: 0.8rem; color: var(--gold); margin-bottom: 24px;">
-            Legislative Safe Harbor
-        </h3>
-        <p style="font-family: 'Cormorant Garamond'; font-size: 2.5rem; font-weight: 300; line-height: 1.3; margin-bottom: 40px;">
-            "By 2026, every AI model provider must provide a forensic trail 
-            of their training data. The <em>System of Record</em> is the 
-            bridge LLMs need to protect your IP."
-        </p>
-        <div style="height: 1px; background-color: var(--border); margin-bottom: 32px;"></div>
-        <p style="font-family: 'DM Mono'; font-size: 0.75rem; color: var(--gray); text-transform: uppercase;">
-            Protocol v4.1 | Risk Mitigation: €15M or 3% of Global Revenue.
-        </p>
+    <span style="font-family:'DM Mono'; font-size:0.65rem; color:var(--gold); letter-spacing:4px; text-transform:uppercase;">
+        Live Network Status
+    </span>
+    <h2>Public Node Registry</h2>
+    <div class="registry-preview">
+        <div class="registry-row registry-header">
+            <span>Entity Name</span>
+            <span>Drift</span>
+            <span>Verification Hash</span>
+            <span>Status</span>
+        </div>
+        <div class="registry-row">
+            <span>Apple Inc.</span>
+            <span style="color: #6A8759;">2.1% (Stable)</span>
+            <span>0x882b...f119</span>
+            <span style="color: var(--gold)">● CERTIFIED</span>
+        </div>
+        <div class="registry-row">
+            <span>Nike Global</span>
+            <span style="color: #6A8759;">4.8% (Stable)</span>
+            <span>0x991a...c442</span>
+            <span style="color: var(--gold)">● CERTIFIED</span>
+        </div>
+        <div class="registry-row">
+            <span>Veuve Clicquot</span>
+            <span style="color: #B8960C;">74.2% (Alert)</span>
+            <span>0x7aa7...8e42</span>
+            <span style="color: var(--gray)">○ AUDITING</span>
+        </div>
+        <div class="registry-row">
+            <span>Breitling Int.</span>
+            <span style="color: #6A8759;">1.4% (Stable)</span>
+            <span>0x3c9b...119c</span>
+            <span style="color: var(--gold)">● CERTIFIED</span>
+        </div>
     </div>
 </section>
 
 <section class="section">
-    <span style="font-family:'DM Mono'; font-size:0.6rem; color:var(--gold); letter-spacing:3px;">REGISTRY ARCHITECTURE</span>
-    <h2>The Certified Network.</h2>
-    <div class="registry-grid">
-        <div class="registry-col">
-            <div class="registry-col-name">brand-official.com</div>
-            <p style="font-size: 0.88rem; color: var(--gray); line-height: 1.7;">
-                Official data. Machine-readable. But self-declared — treated 
-                by AI as a primary source with limited authority.
-            </p>
-            <span class="registry-tag">Self-declared</span>
-        </div>
-        <div class="registry-center" style="padding: 40px; text-align: center; background: var(--paper);">
-            <div style="font-family:'DM Mono'; font-size:0.6rem; color:var(--gold);">CONCORDANCE</div>
-            <div style="font-size: 2rem;">⇄</div>
-        </div>
-        <div class="registry-col">
-            <div class="registry-col-name">2aagency.com/nodes/</div>
-            <p style="font-size: 0.88rem; color: var(--gray); line-height: 1.7;">
-                Independently verified, versioned, and certified by 2A Agency. 
-                Confidence scores rise. This is the moat.
-            </p>
-            <span class="registry-tag certified">Third-party certified</span>
-        </div>
+    <div style="background: var(--black); color: var(--white); padding: 80px; position: relative;">
+        <h3 style="font-family:'DM Mono'; font-size: 0.8rem; color: var(--gold); margin-bottom: 24px;">
+            EU AI ACT — ARTICLE 53
+        </h3>
+        <p style="font-family:'Cormorant Garamond'; font-size: 3rem; font-weight: 300; line-height: 1.2; margin-bottom: 40px;">
+            "By 2026, every model provider must provide forensic provenance of their training data. 
+            The <em>System of Record</em> is the mandatory bridge."
+        </p>
+        <div style="height: 1px; background: rgba(255,255,255,0.1); margin-bottom: 32px;"></div>
+        <p style="font-family: 'DM Mono'; font-size: 0.75rem; color: var(--gold); text-transform: uppercase;">
+            Risk Mitigation: €15M or 3% of Global Revenue.
+        </p>
     </div>
 </section>
 
-<section class="section" style="background: var(--paper);">
-    <span style="font-family:'DM Mono'; font-size:0.6rem; color:var(--gold); letter-spacing:3px;">BENCHMARK</span>
-    <h2>Infrastructure Comparison.</h2>
-    <table class="comp-table">
-        <thead>
-            <tr>
-                <th>Dimension</th>
-                <th>Traditional Agencies</th>
-                <th class="hi">2A Agency</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Deliverable</td>
-                <td>Audit PDF / Dashboard</td>
-                <td class="hi">Certified Registry Node</td>
-            </tr>
-            <tr>
-                <td>Core Focus</td>
-                <td>Marketing / SEO</td>
-                <td class="hi">Legal · Compliance · Board</td>
-            </tr>
-            <tr>
-                <td>Infra Moat</td>
-                <td>None</td>
-                <td class="hi">SHA-256 Notarization</td>
-            </tr>
-            <tr>
-                <td>EU AI Act</td>
-                <td><span>—</span></td>
-                <td class="hi"><span style="color: var(--gold);">● Native</span></td>
-            </tr>
-        </tbody>
-    </table>
+<section class="founder-section">
+    <div class="founder-img">A</div>
+    <h3 style="font-family: 'Cormorant Garamond'; font-size: 2.2rem; font-weight: 400; margin-bottom: 8px;">
+        Alexandre [Ton Nom]
+    </h3>
+    <p style="font-family: 'DM Mono'; font-size: 0.75rem; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px;">
+        Founder & Principal Architect
+    </p>
+    <p style="color: var(--gray); font-size: 1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Ex-LVMH Strategy & Heritage Protection. Expert in Regulatory AI Frameworks. 
+        Building the mandatory ground truth infrastructure for the agentic web. 
+        Bridging institutional history with autonomous agent protocols.
+    </p>
+    <div style="margin-top: 32px;">
+        <a href="#" class="btn-gold">Connect on LinkedIn ↗</a>
+    </div>
 </section>
 
-<section style="background-color: var(--black); color: var(--white); padding: 140px 5%; text-align: center;" id="contact">
-    <h2 style="font-family: 'Cormorant Garamond'; font-size: 4.5rem; font-weight: 300; margin-bottom: 32px;">
+<section style="background:var(--black); color:var(--white); padding:140px 5%; text-align:center;" id="contact">
+    <h2 style="font-family:'Cormorant Garamond'; font-size:5rem; font-weight:300; margin-bottom: 32px;">
         Claim Your Entity.
     </h2>
-    <p style="color: rgba(255, 255, 255, 0.5); margin-left: auto; margin-right: auto; margin-bottom: 56px; max-width: 600px;">
-        Join the 2,701 certified nodes already securing the agentic web. 
-        Finalize your system of record before the EU AI Act enforcement.
+    <p style="color:rgba(255,255,255,0.5); margin: 0 auto 56px; max-width: 600px; font-size: 1.2rem;">
+        Join the 2,701 certified nodes securing the agentic web. 
+        Establish your system of record before the EU AI Act enforcement.
     </p>
-    <div style="display: flex; justify-content: center; gap: 16px;">
-        <input type="email" placeholder="company@domain.com" style="background: transparent; border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px; color: white; width: 350px; outline: none;">
-        <button style="background-color: var(--gold); color: var(--black); border: none; padding: 20px 48px; font-family: 'DM Mono'; font-size: 0.8rem; text-transform: uppercase; cursor: pointer;">
-            Certify Now
+    <div style="display: flex; justify-content: center; gap: 24px; max-width: 700px; margin: 0 auto;">
+        <input type="email" placeholder="company@domain.com" style="background:transparent; border:1px solid rgba(255,255,255,0.2); padding:24px; color:white; width:100%; outline:none; font-family: 'Instrument Sans'; font-size: 1rem;">
+        <button style="background:var(--gold); color:var(--black); border:none; padding:24px 48px; font-family:'DM Mono'; font-size:0.8rem; text-transform:uppercase; cursor:pointer; font-weight: 600;">
+            Certify Node
         </button>
     </div>
-    <p style="font-family: 'DM Mono'; font-size: 0.65rem; color: rgba(255, 255, 255, 0.2); margin-top: 32px; text-transform: uppercase;">
-        Self-Serve SaaS Portal — Instant Deployment
+    <p style="font-family:'DM Mono'; font-size:0.65rem; color:rgba(255,255,255,0.2); margin-top:40px; text-transform:uppercase; letter-spacing: 2px;">
+        Self-Serve SaaS Portal — Instant Provenance Deployment
     </p>
 </section>
 
@@ -573,7 +556,7 @@
         © 2026 2A Agency · Paris · Built for the Agentic Era
     </div>
     <div style="text-align: right;">
-        System of Records v4.1 — Mandatory Ground Truth Layer
+        System of Records v4.2 — Mandatory Ground Truth Protocol
     </div>
 </footer>
 
@@ -584,9 +567,9 @@
                 entry.target.classList.add('visible');
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.15 });
 
-    document.querySelectorAll('section, header').forEach(el => {
+    document.querySelectorAll('section, header, div.reveal').forEach(el => {
         el.classList.add('reveal');
         observer.observe(el);
     });
