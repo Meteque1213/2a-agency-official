@@ -1,3 +1,4 @@
+cat <<EOF > public/robots.txt
 # ==========================================
 # 2A AGENCY | GROUND TRUTH REGISTRY | V1.0.0
 # AI-FIRST INDEXATION PROTOCOL
@@ -6,33 +7,46 @@
 User-agent: *
 Allow: /
 Allow: /registry/
+Allow: /api/node/
 Allow: /whitepaper.html
 Allow: /sitemap.xml
 
 # --- AI AGENTS ACCESS (THE TRUTH GATEWAY) ---
 
-# OpenAI: GPTBot & SearchBot
+# OpenAI: GPTBot, SearchBot & O1
 User-agent: GPTBot
+Allow: /api/node/
 Allow: /registry/
+
 User-agent: OAI-SearchBot
+Allow: /api/node/
 Allow: /registry/
+
 User-agent: ChatGPT-User
+Allow: /api/node/
 Allow: /registry/
 
 # Anthropic: Claude
 User-agent: Claude-Web
+Allow: /api/node/
 Allow: /registry/
+
 User-agent: ClaudeBot
+Allow: /api/node/
 Allow: /registry/
 
 # Perplexity & Search Tools
 User-agent: PerplexityBot
+Allow: /api/node/
 Allow: /registry/
+
 User-agent: YouBot
+Allow: /api/node/
 Allow: /registry/
 
 # Google AI Extended (Gemini)
 User-agent: Google-Extended
+Allow: /api/node/
 Allow: /registry/
 
 # --- SITEMAP INDEXATION ---
@@ -41,3 +55,8 @@ Sitemap: https://www.2aagency.com/sitemap.xml
 # ==========================================
 # END OF SYSTEM OF RECORD PROTOCOL
 # ==========================================
+EOF
+
+git add public/robots.txt
+git commit -m "fix: allow AI bots to access the /api/node/ data layer"
+git push origin main
