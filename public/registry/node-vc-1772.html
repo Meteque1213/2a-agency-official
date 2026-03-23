@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2A Node — Veuve Clicquot (vc-1772-0882)</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://2aagency.com/node/vc-1772-0882",
+      "name": "Veuve Clicquot",
+      "alternateName": ["Maison Veuve Clicquot", "Yellow Label"],
+      "description": "Maison de champagne fondée en 1772 par Barbe-Nicole Ponsardin...",
+      "foundingDate": "1772-01-01",
+      "founder": {
+        "@type": "Person",
+        "name": "Barbe-Nicole Ponsardin (Madame Clicquot)",
+        "birthDate": "1777-12-16"
+      },
+      "ceo": {
+        "@type": "Person",
+        "name": "Jean-Marc Gallot",
+        "startDate": "2023-01-01"
+      },
+      "chefDeCave": {
+        "@type": "Person",
+        "name": "Didier Mariotti",
+        "startDate": "2019"
+      },
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "LVMH Moët Hennessy Louis Vuitton",
+        "@id": "https://2aagency.com/node/lvmh"
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "La Grande Dame"
+      },
+      "sustainability": {
+        "herbicideFree": true,
+        "ecoYellowProgram": "0% herbicides since 2021"
+      },
+      "sameAs": ["https://www.veuveclicquot.com", "https://www.wikidata.org/wiki/Q12345"],
+      "2a:certifiedAt": "2026-03-18T14:22:00Z",
+      "2a:version": "3.2.1",
+      "2a:integrityHash": "0x7aa71c8e80d3634abebe349c80008ff2bd5a929202672b026afad7b962e8a42",
+      "2a:onChainTx": "https://basescan.org/tx/0x7aa7...",
+      "2a:driftScore": 2.8,
+      "2a:euAiActArticle53Source": true,
+      "2a:lastAgentCall": "2026-03-23T15:47:00Z"
+    }
+    </script>
+
+    <style>
+        body { background: #F5F2EC; font-family: 'Instrument Sans', sans-serif; padding: 40px 10%; color: #0D0D0D; }
+        .back-link { font-family: 'DM Mono'; font-size: 0.7rem; text-decoration: none; color: #B8960C; }
+        .node-header { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 40px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 20px; }
+        .drift-badge { background: #B8960C; color: white; padding: 20px; text-align: center; }
+        .drift-value { font-size: 2.5rem; font-weight: bold; display: block; }
+        .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .meta-item { border-bottom: 1px solid rgba(0,0,0,0.05); padding: 15px 0; }
+        .label { font-family: 'DM Mono'; font-size: 0.6rem; color: #6B6B6B; text-transform: uppercase; }
+        .val { font-weight: bold; font-size: 0.9rem; }
+        .json-viewer { background: #0A0A0A; color: #6A8759; padding: 30px; font-family: 'DM Mono'; font-size: 0.8rem; margin-top: 60px; overflow-x: auto; position: relative; }
+        .copy-btn { position: absolute; top: 20px; right: 20px; background: #B8960C; border: none; color: white; padding: 8px 15px; cursor: pointer; font-family: 'DM Mono'; font-size: 0.6rem; }
+        .sdk-box { background: #F0EDE6; border: 1px solid #B8960C; padding: 30px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <a href="/registry/archive.html" class="back-link">← BACK TO EXPLORER</a>
+    
+    <div class="node-header">
+        <div>
+            <h1 style="font-family:'Cormorant Garamond'; font-size: 4rem; margin:0;">Veuve Clicquot</h1>
+            <p style="font-family:'DM Mono'; color: #B8960C;">Entity ID: vc-1772-0882</p>
+        </div>
+        <div class="drift-badge">
+            <span class="label" style="color: white;">Drift Score</span>
+            <span class="drift-value">2.8%</span>
+            <span style="font-size: 0.7rem;">Stable</span>
+        </div>
+    </div>
+
+    <div class="meta-grid">
+        <div class="meta-item"><div class="label">Chef de Cave</div><div class="val">Didier Mariotti (since 2019)</div></div>
+        <div class="meta-item"><div class="label">CEO</div><div class="val">Jean-Marc Gallot</div></div>
+        <div class="meta-item"><div class="label">On-Chain Proof</div><div class="val" style="font-size: 0.6rem;">0x7aa71c8e80d3634abebe349c80008ff2bd5a929202672b026afad7b962e8a42</div></div>
+        <div class="meta-item"><div class="label">Article 53 Provenance</div><div class="val" style="color: #6A8759;">● READY FOR GPAI LABS</div></div>
+    </div>
+
+    <div class="sdk-box">
+        <div class="label" style="margin-bottom: 15px;">Verify with SDK</div>
+        <code style="font-family: 'DM Mono'; font-size: 0.8rem;">import agency_2a as aa<br>node = aa.verify("vc-1772-0882")<br>print(node.integrity_hash)</code>
+    </div>
+
+    <div class="json-viewer">
+        <button class="copy-btn">COPY RAW JSON-LD</button>
+        <pre>{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Veuve Clicquot",
+  "chefDeCave": "Didier Mariotti",
+  "2a:integrityHash": "0x7aa7...8e42",
+  "2a:driftScore": 2.8,
+  "2a:euAiActArticle53Source": true
+}</pre>
+    </div>
+</body>
+</html>

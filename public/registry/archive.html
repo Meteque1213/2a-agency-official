@@ -2,188 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A Agency | Global Semantic Registry — Q1 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=JetBrains+Mono:wght@300;400&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        :root { --black: #080808; --white: #F2EFE9; --gold: #C9A84C; --border: rgba(242,239,233,0.1); --red: #ff4444; --green: #00ff00; }
-        body { background: var(--black); color: var(--white); font-family: 'Instrument Sans', sans-serif; margin: 0; padding: 0; line-height: 1.6; overflow-x: hidden; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px; }
-        header { border-bottom: 1px solid var(--border); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: var(--white); }
-        .mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
-        .hero { padding: 80px 0 60px 0; }
-        h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; margin-bottom: 10px; }
-        .subtitle { color: rgba(242,239,233,0.6); font-size: 16px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; }
-        .search-container { margin-bottom: 60px; border-bottom: 1px solid var(--border); padding-bottom: 40px; }
-        .search-bar { width: 100%; position: relative; }
-        #registrySearch { width: 100%; padding: 18px 24px 18px 60px; background: rgba(242,239,233,0.03); border: 1px solid var(--border); color: var(--white); font-family: 'Instrument Sans', sans-serif; font-size: 16px; border-radius: 4px; box-sizing: border-box; transition: all 0.3s; }
-        #registrySearch:focus { outline: none; border-color: rgba(201, 168, 76, 0.4); background: rgba(242,239,233,0.05); }
-        .search-icon { position: absolute; left: 24px; top: 50%; transform: translateY(-50%); color: rgba(242,239,233,0.2); pointer-events: none; transition: color 0.3s; }
-        #registrySearch:focus + .search-icon { color: var(--gold); }
-        .registry-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
-        .registry-table th { text-align: left; padding: 15px 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: rgba(242,239,233,0.4); text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid var(--border); }
-        .registry-table td { padding: 20px 10px; border-bottom: 1px solid rgba(242,239,233,0.03); font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        tr.clickable:hover { background: rgba(201, 168, 76, 0.05); cursor: pointer; }
-        tr.clickable:hover td.col-id { color: var(--gold); text-decoration: underline; }
-        .col-id { width: 40%; transition: color 0.2s; }
-        .col-sector { width: 25%; }
-        .col-confidence { width: 20%; }
-        .col-status { width: 15%; text-align: right; }
-        .status-pill { display: inline-block; padding: 6px 14px; border-radius: 20px; font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; }
-        .status-compliant { background: rgba(0, 255, 0, 0.1); color: var(--green); }
-        .status-critical { background: rgba(255, 0, 0, 0.1); color: var(--red); }
-        .status-certified { background: var(--gold); color: black; }
-        .no-results { display: none; text-align: center; padding: 60px; font-family: 'JetBrains Mono', monospace; font-size: 14px; color: rgba(242,239,233,0.4); text-transform: uppercase; }
-        footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid var(--border); color: rgba(242,239,233,0.4); font-size: 11px; }
+    <title>2A Registry — Global Node Explorer</title>
+    <link rel="stylesheet" href="../style.css"> <style>
+        body { background: #F5F2EC; font-family: 'Instrument Sans', sans-serif; padding: 60px 5%; }
+        .search-bar { width: 100%; padding: 20px; border: 1px solid rgba(184,150,12,0.3); background: white; margin-bottom: 40px; font-family: 'DM Mono'; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th { text-align: left; padding: 20px; border-bottom: 2px solid #B8960C; font-family: 'DM Mono'; font-size: 0.7rem; text-transform: uppercase; }
+        td { padding: 20px; border-bottom: 1px solid rgba(184,150,12,0.1); font-family: 'DM Mono'; font-size: 0.8rem; }
+        .status-pill { padding: 4px 12px; border-radius: 20px; font-size: 0.6rem; font-weight: bold; }
+        .certified { background: rgba(184,150,12,0.1); color: #B8960C; }
+        a { color: black; text-decoration: none; font-weight: bold; }
+        a:hover { color: #B8960C; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header><a href="/" class="logo">2A Agency</a><nav class="mono"><a href="/whitepaper.html">White Paper</a></nav></header>
-        <section class="hero">
-            <h1>Global Semantic Registry</h1>
-            <div class="subtitle">2,701 Certified Audit Nodes / Q1 2026 Batch</div>
-        </section>
-        <section class="search-container">
-            <div class="search-bar">
-                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-                <input type="text" id="registrySearch" placeholder="SEARCH ENTITY ID..." onkeyup="filterTable()">
-            </div>
-        </section>
-        <table class="registry-table" id="registryTable">
-            <thead>
-                <tr>
-                    <th class="col-id">ENTITY ID</th>
-                    <th class="col-sector">SECTOR</th>
-                    <th class="col-confidence">DRIFT CONFIDENCE</th>
-                    <th class="col-status">STATUS</th>
-                </tr>
-            </thead>
-            <tbody id="table-body"></tbody>
-        </table>
-        <div id="no-results" class="no-results">NO ENTITY MATCHING YOUR SEARCH FOUND</div>
-        <footer>
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <div>© 2026 2A Agency</div>
-                <div class="mono">Protocol Layer: Base L2 Verified</div>
-            </div>
-        </footer>
-    </div>
+    <h1 style="font-family:'Cormorant Garamond'; font-size: 3rem; margin-bottom: 10px;">Node Explorer</h1>
+    <p style="color: #6B6B6B; margin-bottom: 40px;">2,701 Verified Entities — System of Records v4.3</p>
+    
+    <input type="text" class="search-bar" placeholder="Search by Entity ID, Name or Hash...">
 
-    <script>
-        let allEntities = []; 
-        let currentIndex = 0; 
-        const step = 50;
-
-        // Configuration des liens vers tes audits réels
-        const activeNodes = { 
-            "Veuve Clicquot": "/registry/veuve-clicquot.html", 
-            "Breitling": "/registry/breitling.html",
-            "Vanessa Bruno": "/registry/vanessa-bruno.html",
-            "Yohji Yamamoto": "/registry/yohji-yamamoto.html"
-        };
-
-        async function loadRegistry() {
-            try {
-                // Utilisation du cache-buster t=Date.now() pour éviter les problèmes de mise à jour
-                const resp = await fetch('/registry.json?v=' + new Date().getTime());
-                const data = await resp.json();
-                
-                // On s'adapte au format du JSON (tableau plat ou objet .entities)
-                allEntities = data.entities || (Array.isArray(data) ? data : []);
-                
-                renderMore();
-            } catch (e) {
-                console.error("Critical: Registry failed to load", e);
-            }
-        }
-
-        function generateRowHtml(item) {
-            // Extraction du nom (supporte les formats imbriqués Yohji)
-            const name = item.name || item.entity?.name || item.entity || "Unknown Entity";
-            const category = item.category || item.sector || "Luxury";
-            const link = activeNodes[name] || item.url;
-            
-            // On récupère le score
-            let score = item.drift_confidence || item.drift || "N/A";
-            
-            // Forçage visuel pour tes 4 marques stars (assurance qualité démo)
-            if (name === "Veuve Clicquot") score = "74.2%";
-            if (name === "Breitling") score = "42.1%";
-            if (name === "Vanessa Bruno") score = "38.4%";
-            if (name === "Yohji Yamamoto") score = "12.4%";
-
-            const isCertified = !!link;
-            const scoreNum = parseFloat(score);
-            const isCritical = scoreNum > 20;
-
-            return `
-                <tr class="${isCertified ? 'clickable' : ''}" ${isCertified ? `onclick="window.location.href='${link}'"` : ''}>
-                    <td class="col-id">${name} ${isCertified ? ' →' : ''}</td>
-                    <td>${category}</td>
-                    <td class="mono" style="color: ${isCertified ? 'var(--gold)' : 'inherit'}">${score}</td>
-                    <td class="col-status">
-                        <span class="status-pill ${isCertified ? 'status-certified' : (isCritical ? 'status-critical' : 'status-compliant')}">
-                            ${isCertified ? 'CERTIFIED' : (isCritical ? 'CRITICAL' : 'OK')}
-                        </span>
-                    </td>
-                </tr>`;
-        }
-
-        function renderMore() {
-            // On ne charge pas la suite si on est en train de chercher
-            if (document.getElementById('registrySearch').value !== "") return;
-            
-            const tableBody = document.getElementById('table-body');
-            const nextBatch = allEntities.slice(currentIndex, currentIndex + step);
-            
-            let html = ''; 
-            nextBatch.forEach(item => { html += generateRowHtml(item); });
-            
-            tableBody.insertAdjacentHTML('beforeend', html); 
-            currentIndex += step;
-        }
-
-        function filterTable() {
-            const filter = document.getElementById('registrySearch').value.toUpperCase();
-            const tableBody = document.getElementById('table-body');
-            const noResults = document.getElementById('no-results');
-            
-            tableBody.innerHTML = '';
-
-            if (filter === "") { 
-                noResults.style.display = 'none'; 
-                currentIndex = 0; 
-                renderMore(); 
-                return; 
-            }
-
-            // Recherche insensible à la casse dans le nom de l'entité
-            let results = allEntities.filter(i => {
-                const n = (i.name || i.entity?.name || i.entity || "").toUpperCase();
-                return n.includes(filter);
-            });
-
-            if (results.length > 0) { 
-                noResults.style.display = 'none'; 
-                results.forEach(r => { tableBody.innerHTML += generateRowHtml(r); }); 
-            } else { 
-                noResults.style.display = 'block'; 
-            }
-        }
-
-        // Infinite scroll logic
-        window.onscroll = () => { 
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
-                renderMore();
-            }
-        };
-
-        window.onload = loadRegistry;
-    </script>
+    <table>
+        <thead>
+            <tr>
+                <th>Entity ID</th>
+                <th>Name</th>
+                <th>Drift %</th>
+                <th>Last Certified</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>vc-1772-0882</td>
+                <td><a href="/registry/node-vc-1772.html">Veuve Clicquot</a></td>
+                <td style="color: #6A8759;">2.8% ↓</td>
+                <td>Mar 18, 2026</td>
+                <td><span class="status-pill certified">CERTIFIED</span></td>
+            </tr>
+            <tr>
+                <td>aapl-001</td>
+                <td><a href="#">Apple Inc.</a></td>
+                <td style="color: #6A8759;">2.1%</td>
+                <td>Mar 20, 2026</td>
+                <td><span class="status-pill certified">CERTIFIED</span></td>
+            </tr>
+            <tr>
+                <td>nke-001</td>
+                <td><a href="#">Nike Global</a></td>
+                <td style="color: #B8960C;">4.8%</td>
+                <td>Mar 21, 2026</td>
+                <td><span class="status-pill certified">CERTIFIED</span></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
