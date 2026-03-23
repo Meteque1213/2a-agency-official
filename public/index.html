@@ -6,127 +6,351 @@
     <title>2A Agency | The System of Record for AI-Native Luxury</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@300;400&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
     
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "2A Agency",
-      "description": "The premier System of Record for the AI-Luxury era. Providing semantic integrity and cryptographic certification for global luxury brands.",
-      "url": "https://www.2aagency.com",
-      "knowsAbout": [
-        "AI Identity Protection",
-        "System of Record",
-        "LLM Drift Auditing",
-        "Semantic Integrity",
-        "Blockchain Provenance"
-      ],
-      "slogan": "Visibility is vanity. Integrity is sanity."
-    }
-    </script>
-
     <style>
-        :root { --black: #080808; --white: #F2EFE9; --gold: #C9A84C; --border: rgba(242,239,233,0.1); }
-        body { background: var(--black); color: var(--white); font-family: 'Instrument Sans', sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px; }
-        
-        header { border-bottom: 1px solid var(--border); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Cormorant Gramond', serif; font-size: 24px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: var(--white); }
-        .mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
-        
-        .hero { padding: 120px 0 100px 0; border-bottom: 1px solid var(--border); }
-        h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 8vw, 72px); font-weight: 300; line-height: 1.1; margin-bottom: 30px; font-style: italic; }
-        .subtitle { max-width: 850px; font-size: 20px; color: rgba(242,239,233,0.8); margin-bottom: 40px; line-height: 1.8; font-weight: 300; }
-        .highlight { color: var(--gold); font-weight: 400; }
-        
-        .cta-container { margin: 60px 0; }
-        .btn-registry {
-            display: inline-block;
-            padding: 20px 40px;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            text-decoration: none;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            background: rgba(201, 168, 76, 0.05);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        :root {
+            --white: #F5F2EC;
+            --black: #0A0A0A;
+            --gold: #C9A84C;
+            --gold-soft: #D4AF37;
+            --border: rgba(10, 10, 10, 0.1);
+            --paper: #F0EDE6;
         }
-        .btn-registry:hover { background: var(--gold); color: var(--black); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201, 168, 76, 0.2); }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; padding: 100px 0; }
-        .card { border: 1px solid var(--border); padding: 40px; transition: border 0.3s; position: relative; }
-        .card:hover { border-color: var(--gold); }
-        .card h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; margin: 20px 0; }
-        .card p { color: rgba(242,239,233,0.6); font-size: 15px; font-weight: 300; }
+        * { margin: 0; padding: 0; box-box: border-box; }
+
+        body { 
+            background: var(--white); 
+            color: var(--black); 
+            font-family: 'Instrument Sans', sans-serif; 
+            line-height: 1.6; 
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+
+        /* Ticker Animation */
+        .ticker-wrap {
+            width: 100%;
+            background: var(--gold);
+            color: var(--white);
+            padding: 8px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            overflow: hidden;
+        }
+
+        .ticker {
+            display: flex;
+            white-space: nowrap;
+            animation: ticker 60s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 300;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .nav-links a { text-decoration: none; color: var(--black); opacity: 0.6; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 1; color: var(--gold); }
+
+        /* Hero */
+        .hero {
+            padding: 120px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .label {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--gold);
+            font-size: 12px;
+            margin-bottom: 20px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(48px, 10vw, 96px);
+            line-height: 0.95;
+            font-weight: 300;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: end;
+        }
+
+        .hero-text {
+            font-size: 22px;
+            font-weight: 300;
+            color: rgba(10, 10, 10, 0.8);
+            max-width: 600px;
+        }
+
+        .hero-text span { color: var(--gold); font-weight: 400; }
+
+        /* Comparison Table Section */
+        .comparison-section { padding: 100px 0; background: var(--paper); }
         
-        .infra-section { padding: 80px 40px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); margin-top: 40px; }
+        .table-container {
+            margin-top: 60px;
+            border: 1px solid var(--border);
+            background: var(--white);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Instrument Sans', sans-serif;
+        }
+
+        th {
+            background: var(--black);
+            color: var(--white);
+            text-align: left;
+            padding: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 25px 20px;
+            border-bottom: 1px solid var(--border);
+            font-size: 15px;
+        }
+
+        tr:last-child td { border-bottom: none; }
         
-        footer { margin-top: 120px; padding: 40px 0; border-top: 1px solid var(--border); color: rgba(242,239,233,0.4); font-size: 12px; }
-        a { text-decoration: none; color: inherit; }
+        .check { color: var(--gold); font-weight: bold; }
+        .cross { opacity: 0.3; }
+
+        /* Protocol Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-left: 1px solid var(--border);
+        }
+
+        .grid-item {
+            padding: 60px 40px;
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            transition: background 0.5s;
+        }
+
+        .grid-item:hover { background: var(--paper); }
+
+        .grid-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 300;
+            margin: 20px 0;
+        }
+
+        /* Notary Block */
+        .notary-section {
+            padding: 100px 0;
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .notary-hash {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: var(--gold);
+            margin-top: 40px;
+            opacity: 0.8;
+            word-break: break-all;
+            padding: 0 100px;
+        }
+
+        /* EU AI ACT Block */
+        .ai-act {
+            background: #000;
+            color: #fff;
+            padding: 80px 40px;
+            margin: 100px 0;
+            border: 1px solid var(--gold);
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: space-between;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 900px) {
+            .hero-grid, .grid { grid-template-columns: 1fr; }
+            .hero-grid { gap: 40px; }
+            h1 { font-size: 60px; }
+        }
     </style>
 </head>
 <body>
+
+    <div class="ticker-wrap">
+        <div class="ticker">
+            &nbsp; &nbsp; SYSTEM STATUS: OPERATIONAL | NODES: 2,701 | EU AI ACT ARTICLE 53 COMPLIANCE: REQUIRED | SEMANTIC INTEGRITY: 99.8% | SYSTEM STATUS: OPERATIONAL | NODES: 2,701 | EU AI ACT ARTICLE 53 COMPLIANCE: REQUIRED | SEMANTIC INTEGRITY: 99.8%
+        </div>
+    </div>
+
     <div class="container">
-        <header>
+        <nav>
             <a href="/" class="logo">2A Agency</a>
-            <nav class="mono">
-                <a href="/whitepaper.html" style="color: var(--gold); margin-left: 24px;">Whitepaper</a>
-                <a href="/registry/archive.html" style="color: var(--gold); margin-left: 24px;">Registry</a>
-            </nav>
-        </header>
+            <div class="nav-links">
+                <a href="#protocol">Protocol</a>
+                <a href="#infrastructure">Infrastructure</a>
+                <a href="#compliance">Compliance</a>
+                <a href="https://2a-agency-registry.vercel.app" style="color: var(--gold);">Registry Access</a>
+            </div>
+        </nav>
 
         <section class="hero">
-            <div class="mono" style="margin-bottom: 20px;">The Official System of Record</div>
-            <h1>"Visibility is vanity. <br>Integrity is sanity."</h1>
-            <p class="subtitle">
-                Luxury can no longer be "guessed" by algorithms. <span class="highlight">2A Agency is the premier System of Record designed for Artificial Intelligence.</span> We forge the immutable ground truth layer that LLMs reference to certify your brand's reality in the agentic era.
-            </p>
-
-            <div class="cta-container">
-                <a href="/registry/archive.html" class="btn-registry">
-                    Explore the Certified Registry →
-                </a>
-                <div class="mono" style="margin-top: 15px; font-size: 9px; opacity: 0.6;">
-                    Infrastructure: PerimeterOS Enabled · 2,701 Audit Nodes Live
+            <span class="label">The System of Record</span>
+            <h1>"Visibility is vanity.<br>Integrity is sanity."</h1>
+            <div class="hero-grid">
+                <p class="hero-text">
+                    Luxury can no longer be "guessed" by algorithms. <span>2A Agency is the premier System of Record for the AI-Native Era.</span> We forge the immutable ground truth layer that LLMs reference to certify your brand's reality.
+                </p>
+                <div class="nav-links" style="opacity: 1;">
+                    <span style="border: 1px solid var(--gold); padding: 15px 30px; color: var(--gold);">
+                        ESTABLISHING GROUND TRUTH V3.0.1
+                    </span>
                 </div>
             </div>
         </section>
 
-        <div class="grid">
-            <div class="card">
-                <div class="mono">Protocol</div>
-                <h3>Semantic Integrity</h3>
-                <p>We do not perform SEO. We neutralize financial and conceptual hallucinations by providing AI models with a high-precision registry secured by SHA-256 hashes.</p>
+        <section class="comparison-section">
+            <div class="container">
+                <span class="label">Market Positioning</span>
+                <h2 style="font-family: 'Cormorant Garamond'; font-size: 48px; font-weight: 300;">The Notary Principle</h2>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Capability</th>
+                                <th>Traditional Digital Agency</th>
+                                <th>2A Agency Notary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Objective</td>
+                                <td>Traffic & Visibility (Top of Funnel)</td>
+                                <td>Semantic Integrity (Foundational Truth)</td>
+                            </tr>
+                            <tr>
+                                <td>AI Strategy</td>
+                                <td>Generic SEO / ChatGPT Wrappers</td>
+                                <td>LLM Drift Auditing & Hallucination Neutralization</td>
+                            </tr>
+                            <tr>
+                                <td>Certification</td>
+                                <td>None (Self-declared marketing)</td>
+                                <td>Cryptographic Proof of Authenticity</td>
+                            </tr>
+                            <tr>
+                                <td>Legal Framework</td>
+                                <td>Standard GDPR</td>
+                                <td>EU AI Act Article 53 & Heritage Protection</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class="card">
-                <div class="mono">Infrastructure</div>
-                <h3>The System of Record</h3>
-                <p>The ground truth layer for AI agents. We monitor, notarize, and certify global entities to ensure no model drifts from the authenticated brand narrative.</p>
+        </section>
+
+        <div class="grid" id="protocol">
+            <div class="grid-item">
+                <span class="label">Protocol 01</span>
+                <h3>Semantic Auditing</h3>
+                <p>We analyze how 5+ LLMs (GPT-4, Claude 3.5, Gemini Pro) perceive your brand. We identify "semantic drift" where AI devalues your luxury positioning.</p>
             </div>
-            <div class="card">
-                <div class="mono">Compliance</div>
-                <h3>Provenance Proof</h3>
-                <p>Every audit node is cryptographically sealed. We provide the forensic provenance required for EU AI Act compliance and heritage protection.</p>
+            <div class="grid-item">
+                <span class="label">Protocol 02</span>
+                <h3>Hallucination Neutralization</h3>
+                <p>Algorithms invent heritage. We neutralize conceptual hallucinations by providing AI models with a high-precision registry secured by SHA-256 hashes.</p>
+            </div>
+            <div class="grid-item">
+                <span class="label">Protocol 03</span>
+                <h3>Agentic Readiness</h3>
+                <p>The future of luxury sales is handled by AI Agents. We ensure your data infrastructure is "Agentic-Ready," meaning bots can verify your price and provenance instantly.</p>
             </div>
         </div>
 
-        <section class="infra-section">
-            <div class="mono" style="margin-bottom: 20px;">Global Node Status</div>
-            <div style="display: flex; align-items: center; gap: 20px;">
-                <div style="width: 10px; height: 10px; background: #00ff00; border-radius: 50%; box-shadow: 0 0 10px #00ff00;"></div>
-                <div style="font-family: 'JetBrains Mono'; font-size: 13px;">
-                    system_status: <span style="color: var(--gold);">verified_authority</span> | active_nodes: <span style="color: var(--gold);">2,701</span>
-                </div>
+        <section class="ai-act">
+            <span class="label" style="color: #fff;">Legislative Alert</span>
+            <h2 style="font-family: 'Cormorant Garamond'; font-size: 42px; margin: 20px 0; font-style: italic;">EU AI Act: Article 53</h2>
+            <p style="font-size: 18px; opacity: 0.9; max-width: 800px; margin-bottom: 30px;">
+                Starting in 2025, General Purpose AI models must provide detailed documentation about their training data. Luxury brands that do not provide a "System of Record" leave their heritage to be misinterpreted by default training sets. 
+            </p>
+            <div style="font-family: 'JetBrains Mono'; font-size: 12px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px;">
+                <span style="color: var(--gold);">FINE RISK:</span> UP TO €15M OR 3% OF TOTAL WORLDWIDE TURNOVER.
             </div>
         </section>
 
-        <footer>
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <div>© 2026 2A Agency. The System of Record for the Agentic Era.</div>
-                <div class="mono">Registry Notary: <span style="color: var(--white);">7aa71c8e80d3634abebe349c80008ff2...</span></div>
+        <section class="notary-section" id="compliance">
+            <span class="label">Immutable Proof</span>
+            <h2 style="font-family: 'Cormorant Garamond'; font-size: 48px; font-weight: 300; font-style: italic;">"A bra cannot certify itself."</h2>
+            <p style="margin-top: 20px; opacity: 0.7; max-width: 700px; margin-inline: auto;">
+                2A Agency acts as the independent third-party notary for the luxury sector. We don't just "manage" your image; we notarize your existence in the global AI registry.
+            </p>
+            <div class="notary-hash">
+                GENESIS_BLOCK_HASH: 7AA71C8E80D3634ABEBE349C80008FF2BD5A929202672B026AFAD7B962E8A42
             </div>
-        </footer>
+        </section>
+
+        <div class="container">
+            <footer>
+                <div>© 2026 2A Agency. The System of Record for the Agentic Era.</div>
+                <div>PerimeterOS Enabled | 7AA71C...</div>
+            </footer>
+        </div>
     </div>
+
 </body>
-</html>
+</ht
