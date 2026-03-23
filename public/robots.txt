@@ -1,0 +1,43 @@
+# ==========================================
+# 2A AGENCY | GROUND TRUTH REGISTRY | V1.0.0
+# AI-FIRST INDEXATION PROTOCOL
+# ==========================================
+
+User-agent: *
+Allow: /
+Allow: /registry/
+Allow: /whitepaper.html
+Allow: /sitemap.xml
+
+# --- AI AGENTS ACCESS (THE TRUTH GATEWAY) ---
+
+# OpenAI: GPTBot & SearchBot
+User-agent: GPTBot
+Allow: /registry/
+User-agent: OAI-SearchBot
+Allow: /registry/
+User-agent: ChatGPT-User
+Allow: /registry/
+
+# Anthropic: Claude
+User-agent: Claude-Web
+Allow: /registry/
+User-agent: ClaudeBot
+Allow: /registry/
+
+# Perplexity & Search Tools
+User-agent: PerplexityBot
+Allow: /registry/
+User-agent: YouBot
+Allow: /registry/
+
+# Google AI Extended (Gemini)
+User-agent: Google-Extended
+Allow: /registry/
+
+# --- SITEMAP INDEXATION ---
+Sitemap: https://www.2aagency.com/sitemap.xml
+
+# ==========================================
+# END OF SYSTEM OF RECORD PROTOCOL
+# ==========================================
