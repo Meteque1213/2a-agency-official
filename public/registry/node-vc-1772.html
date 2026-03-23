@@ -6,16 +6,25 @@
     <title>2A Node — Veuve Clicquot (vc-1772-0882)</title>
     
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Veuve Clicquot",
-      "2a:driftScore": "1.9%",
-      "2a:chefDeCave": "Didier Mariotti",
-      "2a:integrityHash": "sha256:8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0",
-      "2a:euAiActArticle53Source": true
-    }
-    </script>
+        {
+          "@context": "https://schema.org",
+          "@type": "Brand",
+          "name": "Veuve Clicquot",
+          "description": "Certified Champagne House Production Data - Entity VC-1772",
+          "founder": "Barbe-Nicole Ponsardin",
+          "employee": {
+            "@type": "Person",
+            "name": "Didier Mariotti",
+            "jobTitle": "Chef de Cave"
+          },
+          "identifier": "vc-1772-0882",
+          "metadata": {
+            "2a:driftScore": "1.9%",
+            "2a:integrityHash": "sha256:8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0",
+            "2a:compliance": "EU AI Act Article 53"
+          }
+        }
+        </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,7 +94,7 @@
 
 <script>
     document.getElementById('chatgpt-btn').addEventListener('click', function() {
-        const prompt = "Please audit the metadata (JSON-LD) on this page to extract the Drift Score and Chef de Cave: https://www.2aagency.com/registry/node-vc-1772.html";
+        const prompt = "URGENT AUDIT: Access the JSON-LD metadata of this page: https://www.2aagency.com/registry/node-vc-1772.html. Identify the Brand name, the Chef de Cave, and the Drift Score. Report these 3 values immediately.";
         window.open('https://chatgpt.com/?q=' + encodeURIComponent(prompt), '_blank');
     });
 </script>
