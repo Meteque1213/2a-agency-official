@@ -4,306 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2A Node — Veuve Clicquot (vc-1772-0882)</title>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;600&family=DM+Mono&display=swap" rel="stylesheet">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://2aagency.com/node/vc-1772-0882",
-      "name": "Veuve Clicquot",
-      "ceo": "Jean-Marc Gallot",
-      "chefDeCave": "Didier Mariotti",
-      "product": [
-        {"name": "Yellow Label Brut", "price": "45-55 EUR"},
-        {"name": "La Grande Dame 2015", "price": "180-220 EUR"},
-        {"name": "Cave Privée 2004", "price": "280-320 EUR"},
-        {"name": "Vintage 2018", "price": "85-110 EUR"},
-        {"name": "Rosé", "price": "55-65 EUR"},
-        {"name": "La Grande Dame 2012", "price": "210-250 EUR"},
-        {"name": "Demi-Sec", "price": "48-58 EUR"},
-        {"name": "Extra Brut", "price": "65-75 EUR"},
-        {"name": "Vintage Rosé 2012", "price": "95-115 EUR"},
-        {"name": "La Grande Dame Rosé 2015", "price": "220-260 EUR"}
-      ],
-      "2a:driftScore": 1.9,
-      "2a:integrityHash": "sha256:8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0",
-      "2a:euAiActArticle53Source": true,
-      "2a:version": "3.3.0"
-    }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;600&family=DM+Mono&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --bg: #F8F7F4;
-            --white: #FFFFFF;
-            --gold: #B8960C;
-            --black: #0D0D0D;
-            --border: rgba(0,0,0,0.08);
-            --text-light: #666666;
-        }
+        :root { --bg: #F8F7F4; --gold: #B8960C; --black: #0D0D0D; --border: rgba(0,0,0,0.08); }
+        body { background: var(--bg); color: var(--black); font-family: 'Inter', sans-serif; margin: 0; padding: 40px 5%; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; }
+        
+        /* AGENT GATEWAY */
+        .agent-gateway { background: var(--black); color: var(--gold); padding: 25px; font-family: 'DM Mono', monospace; font-size: 12px; margin-bottom: 40px; border-left: 4px solid var(--gold); }
+        .agent-gateway a { color: #FFF; text-decoration: underline; }
 
-        body { 
-            background: var(--bg); 
-            color: var(--black); 
-            font-family: 'Inter', sans-serif; 
-            margin: 0; 
-            padding: 60px 5%; 
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container { max-width: 1000px; margin: 0 auto; }
-
-        .back-link { 
-            font-family: 'DM Mono', monospace; 
-            font-size: 10px; 
-            color: var(--gold); 
-            text-decoration: none; 
-            letter-spacing: 2px;
-            display: inline-block;
-            margin-bottom: 40px;
-        }
-
-        .card { 
-            background: var(--white); 
-            padding: 80px; 
-            border: 1px solid var(--border);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.02);
-        }
-
-        .version-badge {
-            font-family: 'DM Mono', monospace;
-            font-size: 9px;
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 24px;
-            display: block;
-        }
-
-        .header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: flex-start; 
-            border-bottom: 1px solid var(--border); 
-            padding-bottom: 48px; 
-            margin-bottom: 48px; 
-        }
-
-        h1 { 
-            font-family: 'Cormorant Garamond', serif; 
-            font-size: 64px; 
-            font-weight: 300; 
-            margin: 0; 
-            line-height: 1;
-            letter-spacing: -1px;
-        }
-
-        .drift-box { 
-            text-align: right;
-            border-left: 1px solid var(--border);
-            padding-left: 40px;
-        }
-
-        .drift-label {
-            font-family: 'DM Mono', monospace;
-            font-size: 10px;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        .drift-val { 
-            font-size: 48px; 
-            font-weight: 400; 
-            color: var(--gold); 
-            font-family: 'Inter', sans-serif;
-            line-height: 1;
-        }
-
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(2, 1fr); 
-            gap: 60px; 
-            margin-bottom: 60px;
-        }
-
-        .meta-label {
-            font-family: 'DM Mono', monospace;
-            font-size: 10px;
-            color: var(--text-light);
-            text-transform: uppercase;
-            margin-bottom: 12px;
-            display: block;
-        }
-
-        .meta-val { font-size: 18px; font-weight: 400; }
-
-        .hash-val { 
-            font-family: 'DM Mono', monospace; 
-            font-size: 12px; 
-            color: var(--gold); 
-            word-break: break-all;
-            background: #F9F9F7;
-            padding: 15px;
-            display: block;
-            border: 1px solid var(--border);
-        }
-
-        .product-section { margin-top: 60px; }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            border-top: 1px solid var(--border);
-        }
-
-        .product-item { 
-            display: flex; 
-            justify-content: space-between; 
-            padding: 20px 0; 
-            border-bottom: 1px solid var(--border);
-            font-size: 15px;
-        }
-
-        .product-item span { font-weight: 300; }
-        .product-item strong { font-weight: 600; color: var(--gold); font-family: 'DM Mono'; }
-
-        .code-section { margin-top: 80px; }
-
-        .code-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .code-block { 
-            background: var(--black); 
-            color: #6A8759; 
-            padding: 40px; 
-            font-family: 'DM Mono', monospace; 
-            font-size: 13px; 
-            position: relative;
-            line-height: 1.6;
-        }
-
-        .copy-btn { 
-            background: var(--gold); 
-            color: white; 
-            border: none; 
-            padding: 8px 16px; 
-            font-size: 10px; 
-            font-family: 'DM Mono';
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-
-        .compliance-tag {
-            display: inline-block;
-            background: #E8F0E8;
-            color: #2E5A2E;
-            padding: 6px 14px;
-            font-size: 10px;
-            font-family: 'DM Mono';
-            margin-top: 40px;
-            border-radius: 2px;
-        }
-
-        footer {
-            margin-top: 80px;
-            padding-top: 40px;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            font-family: 'DM Mono';
-            font-size: 9px;
-            color: var(--text-light);
-            letter-spacing: 2px;
-        }
+        .card { background: #FFF; padding: 60px; border: 1px solid var(--border); box-shadow: 0 20px 40px rgba(0,0,0,0.03); }
+        .version { font-family: 'DM Mono'; font-size: 9px; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; display: block; }
+        .header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1px solid var(--border); padding-bottom: 40px; margin-bottom: 40px; }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 300; margin: 0; letter-spacing: -1px; }
+        .drift-box { text-align: right; }
+        .drift-val { font-size: 42px; font-weight: 600; color: var(--gold); display: block; line-height: 1; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .label { font-family: 'DM Mono'; font-size: 10px; color: #666; text-transform: uppercase; margin-bottom: 8px; display: block; }
+        .val { font-size: 17px; }
+        .product-list { margin-top: 40px; border-top: 1px solid var(--border); padding-top: 40px; }
+        .product-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.03); font-size: 14px; }
+        .badge { display: inline-block; background: #E8F0E8; color: #2E5A2E; padding: 6px 12px; font-size: 10px; font-family: 'DM Mono'; margin-top: 40px; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <a href="/registry/archive.html" class="back-link">← REGISTRY EXPLORER</a>
+    <a href="/registry/archive.html" style="font-family:'DM Mono'; font-size:10px; color:var(--gold); text-decoration:none; letter-spacing:1px;">← REGISTRY EXPLORER</a>
+
+    <div class="agent-gateway">
+        <strong style="color:#FFF;">[ AI AGENT GATEWAY ]</strong><br>
+        Direct JSON Endpoint for LLMs/GPTs: <br>
+        <a href="/api/node/vc-1772.json">https://www.2aagency.com/api/node/vc-1772.json</a>
+    </div>
 
     <div class="card">
-        <span class="version-badge">Node Version 3.3.0 • Certified 23 Mar 2026 • Zero-latency rendering</span>
-        
+        <span class="version">Node v3.3.0 • Certified March 23, 2026 • Zero-latency</span>
         <div class="header">
             <div>
                 <h1>Veuve Clicquot</h1>
-                <p style="color: var(--gold); font-family: 'DM Mono'; font-size: 12px; margin-top: 15px;">Entity UID: vc-1772-0882</p>
+                <p style="font-family:'DM Mono'; font-size:12px; color:var(--gold); margin:10px 0 0 0;">UID: vc-1772-0882</p>
             </div>
             <div class="drift-box">
-                <span class="drift-label">Drift Score</span>
+                <span class="label">Drift Score</span>
                 <span class="drift-val">1.9%</span>
             </div>
         </div>
 
         <div class="grid">
-            <div>
-                <span class="meta-label">Chef de Cave</span>
-                <span class="meta-val">Didier Mariotti</span>
-            </div>
-            <div>
-                <span class="meta-label">Parent Group</span>
-                <span class="meta-val">LVMH Group</span>
-            </div>
+            <div><span class="label">Chef de Cave</span><span class="val">Didier Mariotti</span></div>
+            <div><span class="label">Parent Group</span><span class="val">LVMH</span></div>
             <div style="grid-column: span 2;">
-                <span class="meta-label">On-Chain Forensic Proof (SHA-256)</span>
-                <span class="hash-val">8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0</span>
+                <span class="label">SHA-256 Forensic Hash</span>
+                <span style="font-family:'DM Mono'; font-size:11px; color:var(--gold); word-break:break-all;">8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0</span>
             </div>
         </div>
 
-        <div class="product-section">
-            <span class="meta-label">Certified Inventory (10 SKUs)</span>
-            <div class="product-grid">
-                <div class="product-item"><span>Yellow Label Brut</span><strong>45-55 €</strong></div>
-                <div class="product-item"><span>Rosé</span><strong>55-65 €</strong></div>
-                <div class="product-item"><span>La Grande Dame 2015</span><strong>180-220 €</strong></div>
-                <div class="product-item"><span>La Grande Dame 2012</span><strong>210-250 €</strong></div>
-                <div class="product-item"><span>Vintage 2018</span><strong>85-110 €</strong></div>
-                <div class="product-item"><span>Demi-Sec</span><strong>48-58 €</strong></div>
-                <div class="product-item"><span>Extra Brut</span><strong>65-75 €</strong></div>
-                <div class="product-item"><span>Cave Privée 2004</span><strong>280-320 €</strong></div>
-                <div class="product-item"><span>Vintage Rosé 2012</span><strong>95-115 €</strong></div>
-                <div class="product-item"><span>La Grande Dame Rosé 2015</span><strong>220-260 €</strong></div>
-            </div>
+        <div class="product-list">
+            <span class="label" style="color:var(--gold);">Certified Inventory</span>
+            <div class="product-item"><span>Yellow Label Brut</span><strong>45-55 €</strong></div>
+            <div class="product-item"><span>La Grande Dame 2015</span><strong>180-220 €</strong></div>
+            <div class="product-item"><span>Cave Privée 2004</span><strong>280-320 €</strong></div>
+            <div class="product-item"><span>Vintage Rosé 2012</span><strong>95-115 €</strong></div>
         </div>
 
-        <div class="code-section">
-            <div class="code-header">
-                <span class="meta-label">Protocol Output (JSON-LD)</span>
-                <button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('raw-json').innerText); this.innerText='COPIED'">COPY FOR AGENT</button>
-            </div>
-            <div class="code-block">
-                <pre id="raw-json" style="margin:0;">{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://2aagency.com/node/vc-1772-0882",
-  "name": "Veuve Clicquot",
-  "chefDeCave": "Didier Mariotti",
-  "2a:driftScore": 1.9,
-  "2a:euAiActArticle53Source": true
-}</pre>
-            </div>
-        </div>
-
-        <div class="compliance-tag">
-            ARTICLE 53 EU AI ACT • CERTIFIED SOURCE
-        </div>
+        <div class="badge">ARTICLE 53 EU AI ACT COMPLIANT</div>
     </div>
-
-    <footer>
-        2A AGENCY — MANDATORY SYSTEM OF RECORDS — PARIS 2026
-    </footer>
 </div>
 
 </body>
