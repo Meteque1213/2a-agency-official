@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2A Registry — Certified Brand Nodes | 2A Agency</title>
+<meta name="description" content="2A Agency Public Registry: structured, verified brand data for AI agents. Factual records for European luxury brands.">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalog",
+  "name": "2A Agency Brand Registry",
+  "description": "Public registry of structured, verified brand data for AI agents and LLM reference.",
+  "url": "https://www.2aagency.com/registry",
+  "publisher": {
+    "@type": "Organization",
+    "name": "2A Agency",
+    "url": "https://www.2aagency.com"
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-color: #fcf9;
+  --text-main: #1a1a1a;
+  --text-dim: #666;
+  --gold-accent: #b4975a;
+  --border-color: #e5e0d5;
+  --certified-green: #2d5a27;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'DM Mono', monospace;
+  margin: 0;
+  padding: 40px 20px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.registry-container { max-width: 1000px; margin: 0 auto; }
+
+header { border-bottom: 1px solid var(--border-color); padding-bottom: 40px; margin-bottom: 60px; }
+
+.logo-container { display: flex; align-items: baseline; gap: 10px; margin-bottom: 20px; }
+.logo-2a { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 600; color: var(--text-main); text-decoration: none; }
+.logo-registry { font-size: 14px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold-accent); }
+
+.intro-text { font-size: 16px; color: var(--text-dim); max-width: 600px; }
+
+.filter-bar { display: flex; gap: 20px; margin-bottom: 40px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+.filter-btn { background: none; border: none; color: var(--text-dim); cursor: pointer; font-family: inherit; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; padding: 0; }
+.filter-btn.active { color: var(--text-main); border-bottom: 1px solid var(--text-main); }
+
+.node-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 180px 120px;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.node-row:hover { background-color: #f9f7f2; }
+
+.node-id { font-size: 12px; color: var(--text-dim); }
+.brand-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; }
+.status-container { display: flex; align-items: center; gap: 8px; }
+
+.status-certified-pill { color: var(--certified-green); border: 1px solid var(--certified-green); padding: 4px 8px; border-radius: 2px; font-size: 11px; text-transform: uppercase; }
+.status-pending-pill { color: var(--text-dim); border: 1px solid var(--border-color); padding: 4px 8px; border-radius: 2px; font-size: 11px; text-transform: uppercase; }
+
+.node-detail { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background-color: #fff; }
+.node-detail.open { max-height: 800px; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); }
+
+.detail-content { padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.detail-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 10px; }
+.detail-value { font-size: 14px; margin-bottom: 25px; }
+
+.drift-box { background: #fdfcf9; border: 1px solid var(--border-color); padding: 30px; }
+.score-value { font-size: 48px; font-family: 'Cormorant Garamond', serif; color: var(--gold-accent); margin: 10px 0; }
+
+.footer-registry { margin-top: 100px; padding: 40px 0; border-top: 1px solid var(--border-color); font-size: 11px; color: var(--text-dim); text-align: center; }
+
+@media (max-width: 768px) {
+  .node-row { grid-template-columns: 1fr 120px; gap: 10px; }
+  .node-id, .audit-link { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="registry-container">
+  <header>
+    <div class="logo-container">
+      <a href="/" class="logo-2a">2A</a>
+      <span class="logo-registry">Registry</span>
+    </div>
+    <div class="intro-text">
+      The definitive system of record for brand integrity. Providing structured, verified data layers for AI agents and LLM verification.
+    </div>
+  </header>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All Entities</button>
+    <button class="filter-btn" data-filter="certified">Certified</button>
+    <button class="filter-btn" data-filter="luxury">Luxury</button>
+  </div>
+
+  <div class="nodes-list">
+    <div class="node-row" data-category="certified" onclick="toggleNode('node-001')">
+      <span class="node-id">001</span>
+      <span class="brand-name">2A Agency</span>
+      <div class="status-container">
+        <span class="status-pill status-certified-pill">Certified</span>
+      </div>
+      <span class="audit-link">→ Audit Report</span>
+    </div>
+    <div id="node-001" class="node-detail">
+      <div class="detail-content">
+        <div>
+          <div class="detail-label">Entity Verification</div>
+          <div class="detail-value">2A Agency — AI Integrity Protocol<br>Registered: Paris, France</div>
+          
+          <div class="detail-label">Compliance Layer</div>
+          <div class="detail-value">EU AI Act Compliant<br>ISO/IEC 42001 (AI Management System)</div>
+          
+          <div class="detail-label">Verification Type</div>
+          <div class="detail-value">Continuous Semantic Audit<br>Identity Proof: Verified Business Entity</div>
+        </div>
+        <div class="drift-box">
+          <div class="detail-label">Integrity Drift Score</div>
+          <div class="score-value">94</div>
+          <div class="detail-label">Stability Status</div>
+          <div class="detail-value" style="color: var(--certified-gree>Highly Resilient</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="node-row" data-category="luxury" onclick="toggleNode('node-vc1772')">
+      <span class="node-id">VC1772</span>
+      <span class="brand-name">Veuve Clicquot</span>
+      <div class="status-container">
+        <span class="status-pill status-pending-pill">Public Data</span>
+      </div>
+      <span class="audit-link">→ Full Record</span>
+    </div>
+    <div id="node-vc1772" class="node-detail">
+      <div class="detail-content">
+        <div>
+          <div class="detail-label">Heritage Record</div>
+          <div class="detail-value">Maison Veuve Clicquot Ponsardin<br>Founded: 1772, Reims</div>
+          
+          <div class="detail-label">Leadership (Factual)</div>
+          <div class="detail-value">Chef de Cave: Didier Mariotti<br>Parent: LVMH Moët Hennessy Louis Vuitton</div>
+        </div>
+        <div class="drift-box">
+          <div class="detail-label">Integrity Drift Score</div>
+          <div class="score-value">/div>
+          <div class="detail-label">Audit Status</div>
+          <div class="detail-value">Scan pending · Request certification</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-registry">
+    <div>2A AGENCY — THE SYSTEM OF RECORD FOR BRAND INTEGRITY</div>
+  </footer>
+</div>
+
+<script>
+function toggleNode(id) {
+  const detail = document.getElementById(id);
+  const isOpen = detail.classList.contains('open');
+  document.querySelectorAll('.node-detail').forEach(d => d.classList.remove('open'));
+  if (!isOpen) detail.classList.add('open');
+}
+</script>
+</body>
+</html>
