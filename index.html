@@ -1,803 +1,356 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2A Agency — The System of Records for the Agentic Web</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root {
-  --black: #0D0D0D;
-  --white: #F5F2EC;
-  --gold: #B8960C;
-  --gold-light: #D4AE2A;
-  --border: rgba(184,150,12,0.25);
-  --gray: #6B6B6B;
-  --paper: #F0EDE6;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-
-body {
-  background-color: var(--white);
-  color: var(--black);
-  font-family: 'Instrument Sans', sans-serif;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  opacity: 0.04;
-  pointer-events: none;
-  z-index: 9999;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* NAV */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 28px 5%;
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  background: rgba(245,242,236,0.95);
-  backdrop-filter: blur(8px);
-  z-index: 100;
-}
-
-.logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-  color: var(--black);
-}
-
-.logo span { color: var(--gold); }
-
-.nav-links { display: flex; align-items: center; gap: 32px; }
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--gray);
-  font-family: 'DM Mono', monospace;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover { color: var(--gold); }
-
-.nav-cta {
-  color: var(--black) !important;
-  border: 1px solid var(--black);
-  padding: 8px 20px;
-  transition: all 0.2s !important;
-}
-
-.nav-cta:hover {
-  background: var(--gold) !important;
-  color: var(--white) !important;
-  border-color: var(--gold) !important;
-}
-
-/* HERO */
-header {
-  padding: 100px 5% 80px;
-  text-align: center;
-  position: relative;
-}
-
-.kicker {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.7rem;
-  color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  margin-bottom: 32px;
-  display: block;
-}
-
-h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 300;
-  line-height: 1.0;
-  margin-bottom: 16px;
-  letter-spacing: -0.01em;
-}
-
-h1 em { font-style: italic; color: var(--gold); }
-
-.hero-positioning {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  color: rgba(184,150,12,0.8);
-  text-transform: uppercase;
-  margin-bottom: 36px;
-  display: block;
-}
-
-.hero-sub {
-  max-width: 580px;
-  margin: 0 auto 48px;
-  font-size: 1.05rem;
-  color: var(--gray);
-  line-height: 1.75;
-}
-
-.btn {
-  display: inline-block;
-  padding: 14px 40px;
-  background: var(--black);
-  color: var(--white);
-  text-decoration: none;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  transition: all 0.25s ease;
-}
-
-.btn:hover { background: var(--gold); transform: translateY(-2px); }
-
-.btn-outline {
-  background: transparent;
-  color: var(--black);
-  border: 1px solid var(--black);
-  margin-left: 16px;
-}
-
-.btn-outline:hover { background: var(--black); color: var(--white); }
-
-/* TICKER */
-.ticker {
-  background: var(--black);
-  color: var(--white);
-  padding: 14px 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.ticker-content {
-  display: inline-block;
-  animation: ticker-scroll 28s linear infinite;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.ticker-item { margin-right: 56px; color: rgba(245,242,236,0.4); }
-.ticker-item strong { color: var(--white); font-weight: 400; }
-.ticker-item .alert { color: var(--gold); }
-
-@keyframes ticker-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* SECTIONS */
-.section { padding: 100px 5%; }
-.section-alt { background: var(--paper); }
-
-.section-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 20px;
-  display: block;
-}
-
-h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
-  font-weight: 300;
-  line-height: 1.1;
-  margin-bottom: 32px;
-  letter-spacing: -0.01em;
-}
-
-h2 em { font-style: italic; color: var(--gold); }
-
-.body-text {
-  font-size: 1.05rem;
-  color: var(--gray);
-  line-height: 1.8;
-  max-width: 560px;
-}
-
-/* PROBLEM CARDS */
-.problem-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  margin-top: 56px;
-}
-
-.problem-card {
-  background: var(--white);
-  padding: 48px 36px;
-  transition: background 0.2s;
-}
-
-.section-alt .problem-card { background: var(--paper); }
-.problem-card:hover { background: #ECEAE4; }
-
-.problem-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3.5rem;
-  font-weight: 300;
-  color: var(--border);
-  line-height: 1;
-  margin-bottom: 20px;
-}
-
-.problem-title {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--black);
-  margin-bottom: 12px;
-  letter-spacing: 0.02em;
-}
-
-.problem-desc { font-size: 0.9rem; color: var(--gray); line-height: 1.7; }
-
-/* EU AI ACT BOX */
-.eu-box {
-  border: 1px solid var(--gold);
-  padding: 56px;
-  margin-top: 64px;
-  position: relative;
-}
-
-.eu-box::before {
-  content: 'EU AI Act — Article 53';
-  position: absolute;
-  top: -11px; left: 40px;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  background: var(--white);
-  padding: 0 10px;
-}
-
-.section-alt .eu-box::before { background: var(--paper); }
-
-.eu-dates {
-  display: flex;
-  gap: 48px;
-  margin-bottom: 40px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid var(--border);
-}
-
-.eu-date { display: flex; flex-direction: column; gap: 6px; }
-
-.eu-date-val {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  font-weight: 300;
-  color: var(--gold);
-  line-height: 1;
-}
-
-.eu-date-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gray);
-  max-width: 180px;
-  line-height: 1.6;
-}
-
-.eu-sep { width: 1px; background: var(--border); align-self: stretch; }
-
-.eu-statement {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.3rem, 2vw, 1.8rem);
-  font-weight: 300;
-  line-height: 1.45;
-  color: var(--black);
-  max-width: 700px;
-  margin-bottom: 28px;
-}
-
-.eu-statement em { font-style: italic; color: var(--gold); }
-
-.eu-note {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.68rem;
-  color: var(--gray);
-  letter-spacing: 0.05em;
-  line-height: 1.8;
-  border-left: 2px solid var(--border);
-  padding-left: 16px;
-  max-width: 580px;
-}
-
-/* REGISTRY SECTION */
-.registry-grid {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  border: 1px solid var(--border);
-  margin-top: 56px;
-}
-
-.registry-col { padding: 48px 40px; }
-
-.registry-col-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 16px;
-  display: block;
-}
-
-.registry-col-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem;
-  font-weight: 300;
-  color: var(--black);
-  margin-bottom: 16px;
-  line-height: 1.2;
-}
-
-.registry-col-desc { font-size: 0.9rem; color: var(--gray); line-height: 1.7; }
-
-.registry-tag {
-  display: inline-block;
-  margin-top: 20px;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  border: 1px solid var(--border);
-  color: var(--gray);
-}
-
-.registry-tag.certified {
-  border-color: var(--gold);
-  color: var(--gold);
-}
-
-.registry-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 48px 32px;
-  background: var(--paper);
-  border-left: 1px solid var(--border);
-  border-right: 1px solid var(--border);
-  min-width: 180px;
-  gap: 12px;
-}
-
-.registry-center-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  text-align: center;
-}
-
-.registry-center-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
-  font-weight: 300;
-  text-align: center;
-  color: var(--black);
-}
-
-.registry-badge {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold);
-  border: 1px solid var(--gold);
-  padding: 5px 12px;
-  text-align: center;
-}
-
-.registry-arrow { font-size: 1.2rem; color: var(--gold); }
-
-/* METHOD GRID */
-.method-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
-  align-items: start;
-  margin-top: 56px;
-}
-
-.method-steps {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  border: 1px solid var(--border);
-  background: var(--border);
-}
-
-.method-step {
-  background: var(--white);
-  padding: 32px 36px;
-  transition: background 0.2s;
-}
-
-.method-step:hover { background: var(--paper); }
-
-.method-step-num {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 10px;
-  display: block;
-}
-
-.method-step-title {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--black);
-  margin-bottom: 8px;
-}
-
-.method-step-desc { font-size: 0.88rem; color: var(--gray); line-height: 1.7; }
-
-.method-step-price {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.72rem;
-  color: var(--gold);
-  margin-top: 14px;
-  letter-spacing: 0.04em;
-}
-
-.vision-pull {
-  background: var(--paper);
-  border-left: 3px solid var(--gold);
-  padding: 36px 40px;
-  margin-top: 40px;
-}
-
-.vision-pull-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  font-weight: 300;
-  font-style: italic;
-  line-height: 1.55;
-  color: var(--black);
-}
-
-.vision-pull-source {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-top: 16px;
-  display: block;
-}
-
-/* COMPARISON */
-.comp-table { width: 100%; border-collapse: collapse; margin-top: 56px; }
-
-.comp-table th {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gray);
-  font-weight: 300;
-  padding: 14px 20px;
-  text-align: left;
-  border-bottom: 1px solid var(--border);
-}
-
-.comp-table th.hi { color: var(--gold); border-bottom: 2px solid var(--gold); }
-
-.comp-table td {
-  padding: 16px 20px;
-  font-size: 0.88rem;
-  color: var(--gray);
-  border-bottom: 1px solid rgba(184,150,12,0.08);
-  vertical-align: top;
-  line-height: 1.6;
-}
-
-.comp-table td.hi { color: var(--black); background: rgba(184,150,12,0.04); }
-.comp-table td.dim { color: rgba(107,107,107,0.4); }
-.chk { color: var(--gold); font-family: 'DM Mono', monospace; font-size: 0.8rem; }
-.crs { color: rgba(107,107,107,0.25); font-family: 'DM Mono', monospace; font-size: 0.8rem; }
-
-/* CTA */
-.cta-section {
-  background: var(--black);
-  color: var(--white);
-  padding: 120px 5%;
-  text-align: center;
-}
-
-.cta-section h2 {
-  color: var(--white);
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  margin-bottom: 24px;
-}
-
-.cta-section h2 em { color: var(--gold); }
-
-.cta-sub {
-  font-size: 1rem;
-  color: rgba(245,242,236,0.55);
-  max-width: 460px;
-  margin: 0 auto 48px;
-  line-height: 1.75;
-}
-
-.cta-form {
-  display: flex;
-  max-width: 440px;
-  margin: 0 auto;
-  border: 1px solid rgba(184,150,12,0.3);
-}
-
-.cta-input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  padding: 14px 20px;
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 0.9rem;
-  color: var(--white);
-  outline: none;
-}
-
-.cta-input::placeholder { color: rgba(245,242,236,0.3); }
-
-.cta-submit {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  background: var(--gold);
-  color: var(--black);
-  border: none;
-  padding: 14px 24px;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.2s;
-}
-
-/* FOOTER */
-footer {
-  padding: 32px 5%;
-  border-top: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; }
-.footer-logo span { color: var(--gold); }
-
-.footer-tagline {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gray);
-}
-
-.footer-copy {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(107,107,107,0.4);
-}
-
-/* REVEAL */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
-}
-
-.reveal.visible { opacity: 1; transform: translateY(0); }
-
-@media (max-width: 768px) {
-  .problem-grid, .method-grid, .registry-grid { grid-template-columns: 1fr; }
-  .registry-center { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); border-left: none; border-right: none; }
-  .eu-dates { flex-direction: column; gap: 24px; }
-  footer { flex-direction: column; gap: 16px; text-align: center; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2A Agency | The System of Record for AI-Native Luxury</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@300;400&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --white: #F5F2EC;
+            --black: #0A0A0A;
+            --gold: #C9A84C;
+            --gold-soft: #D4AF37;
+            --border: rgba(10, 10, 10, 0.1);
+            --paper: #F0EDE6;
+        }
+
+        * { margin: 0; padding: 0; box-box: border-box; }
+
+        body { 
+            background: var(--white); 
+            color: var(--black); 
+            font-family: 'Instrument Sans', sans-serif; 
+            line-height: 1.6; 
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+
+        /* Ticker Animation */
+        .ticker-wrap {
+            width: 100%;
+            background: var(--gold);
+            color: var(--white);
+            padding: 8px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            overflow: hidden;
+        }
+
+        .ticker {
+            display: flex;
+            white-space: nowrap;
+            animation: ticker 60s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 300;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .nav-links a { text-decoration: none; color: var(--black); opacity: 0.6; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 1; color: var(--gold); }
+
+        /* Hero */
+        .hero {
+            padding: 120px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .label {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--gold);
+            font-size: 12px;
+            margin-bottom: 20px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(48px, 10vw, 96px);
+            line-height: 0.95;
+            font-weight: 300;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: end;
+        }
+
+        .hero-text {
+            font-size: 22px;
+            font-weight: 300;
+            color: rgba(10, 10, 10, 0.8);
+            max-width: 600px;
+        }
+
+        .hero-text span { color: var(--gold); font-weight: 400; }
+
+        /* Comparison Table Section */
+        .comparison-section { padding: 100px 0; background: var(--paper); }
+        
+        .table-container {
+            margin-top: 60px;
+            border: 1px solid var(--border);
+            background: var(--white);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Instrument Sans', sans-serif;
+        }
+
+        th {
+            background: var(--black);
+            color: var(--white);
+            text-align: left;
+            padding: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 25px 20px;
+            border-bottom: 1px solid var(--border);
+            font-size: 15px;
+        }
+
+        tr:last-child td { border-bottom: none; }
+        
+        .check { color: var(--gold); font-weight: bold; }
+        .cross { opacity: 0.3; }
+
+        /* Protocol Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-left: 1px solid var(--border);
+        }
+
+        .grid-item {
+            padding: 60px 40px;
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            transition: background 0.5s;
+        }
+
+        .grid-item:hover { background: var(--paper); }
+
+        .grid-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 300;
+            margin: 20px 0;
+        }
+
+        /* Notary Block */
+        .notary-section {
+            padding: 100px 0;
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .notary-hash {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: var(--gold);
+            margin-top: 40px;
+            opacity: 0.8;
+            word-break: break-all;
+            padding: 0 100px;
+        }
+
+        /* EU AI ACT Block */
+        .ai-act {
+            background: #000;
+            color: #fff;
+            padding: 80px 40px;
+            margin: 100px 0;
+            border: 1px solid var(--gold);
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: space-between;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 900px) {
+            .hero-grid, .grid { grid-template-columns: 1fr; }
+            .hero-grid { gap: 40px; }
+            h1 { font-size: 60px; }
+        }
+    </style>
 </head>
 <body>
 
-<nav>
-  <a href="#" class="logo">2<span>A</span> Agency</a>
-  <div class="nav-links">
-    <a href="#problem">The Problem</a>
-    <a href="#registry">The Registry</a>
-    <a href="#method">Method</a>
-    <a href="#contact" class="nav-cta">Request Audit</a>
-  </div>
-</nav>
-
-<header>
-  <span class="kicker">The System of Records for brand truth in the agentic web</span>
-  <h1>Visibility is <em>vanity</em>.<br>Integrity is <em>sanity</em>.</h1>
-  <span class="hero-positioning">The certified ground truth layer every agent calls first</span>
-  <p class="hero-sub">
-    AI agents now decide which brands get recommended, trusted and bought.
-    2A Agency is the independent System of Records that certifies brand truth —
-    pour les agents, pour la compliance, pour le EU AI Act.
-  </p>
-  <a href="#contact" class="btn">Request a Free Scan</a>
-  <a href="#registry" class="btn btn-outline">Explore the Registry</a>
-</header>
-
-<div class="ticker">
-  <div class="ticker-content">
-    <span class="ticker-item">Chef de cave — <strong class="alert">hallucinated in 3/5 LLMs</strong></span>
-    <span class="ticker-item">Sustainability data — <strong>absent from AI responses</strong></span>
-    <span class="ticker-item">Prestige cuvée — <strong class="alert">confused with competitor</strong></span>
-    <span class="ticker-item">EU AI Act Art. 53 — <strong>in force since Aug 2025</strong></span>
-    <span class="ticker-item">Brand leadership — <strong class="alert">name hallucinated</strong></span>
-    <span class="ticker-item">Founding date — <strong>incorrect in 2/5 models</strong></span>
-  </div>
-</div>
-
-<section class="section" id="problem">
-  <span class="section-label">Le Problème</span>
-  <h2 class="reveal">What AI says about<br>your brand <em>is</em> your brand.</h2>
-  <p class="body-text reveal">
-    Lorsqu'un agent recherche une maison de Champagne ou une marque de montre, il ne lit plus votre site web. Il synthétise des sources fragmentées. Si vos données officielles sont absentes ou hallucinées, l'agent comble le vide par la confabulation.
-  </p>
-
-  <div class="problem-grid reveal">
-    <div class="problem-card">
-      <div class="problem-num">01</div>
-      <div class="problem-title">Factual hallucinations</div>
-      <div class="problem-desc">Mauvais chef de cave. Date de fondation erronée. Engagements ESG inventés. L'IA confabule avec une confiance totale.</div>
+    <div class="ticker-wrap">
+        <div class="ticker">
+            &nbsp; &nbsp; SYSTEM STATUS: OPERATIONAL | NODES: 2,701 | EU AI ACT ARTICLE 53 COMPLIANCE: REQUIRED | SEMANTIC INTEGRITY: 99.8% | SYSTEM STATUS: OPERATIONAL | NODES: 2,701 | EU AI ACT ARTICLE 53 COMPLIANCE: REQUIRED | SEMANTIC INTEGRITY: 99.8%
+        </div>
     </div>
-    <div class="problem-card">
-      <div class="problem-num">02</div>
-      <div class="problem-title">Semantic drift</div>
-      <div class="problem-desc">Une maison artisanale décrite comme industrielle. Vos signaux premium s'érodent silencieusement dans les réponses de l'IA.</div>
-    </div>
-    <div class="problem-card">
-      <div class="problem-num">03</div>
-      <div class="problem-title">Entity confusion</div>
-      <div class="problem-desc">Les attributs migrent vers la concurrence. Le nom du fondateur devient une biographie de mannequin. L'identité se perd.</div>
-    </div>
-  </div>
 
-  <div class="eu-box reveal">
-    <div class="eu-dates">
-      <div class="eu-date"><div class="eu-date-val">Août 2025</div><div class="eu-date-label">Obligations de transparence GPAI — déjà en vigueur</div></div>
-      <div class="eu-sep"></div>
-      <div class="eu-date"><div class="eu-date-val">Août 2026</div><div class="eu-date-label">Application complète pour les systèmes à haut risque</div></div>
-    </div>
-    <div class="eu-statement">
-      L'Article 53 exige que les fournisseurs de LLM documentent les sources de leurs données.
-      <em>Cela crée un vide structurel</em> — et un marché pour une infrastructure de vérité certifiée.
-    </div>
-  </div>
-</section>
+    <div class="container">
+        <nav>
+            <a href="/" class="logo">2A Agency</a>
+            <div class="nav-links">
+                <a href="#protocol">Protocol</a>
+                <a href="#infrastructure">Infrastructure</a>
+                <a href="#compliance">Compliance</a>
+                <a href="https://2a-agency-registry.vercel.app" style="color: var(--gold);">Registry Access</a>
+            </div>
+        </nav>
 
-<section class="section section-alt" id="registry">
-  <span class="section-label">The Registry — Our Moat</span>
-  <h2 class="reveal">The notary principle.<br><em>A brand cannot certify itself.</em></h2>
-  <p class="body-text reveal">
-    Une marque ne peut pas être son propre notaire. Quand un agent voit deux sources indépendantes concordantes (votre domaine + registre 2A), le score de confiance monte.
-  </p>
-  <div class="registry-grid reveal">
-    <div class="registry-col">
-      <span class="registry-col-label">Domaine de marque</span>
-      <div class="registry-col-name">veuveclicquot.com</div>
-      <span class="registry-tag">Auto-déclaré</span>
-    </div>
-    <div class="registry-center">
-      <span class="registry-arrow">⇄</span>
-      <div class="registry-center-name">2A Registry</div>
-      <span class="registry-badge">Node Certifié</span>
-    </div>
-    <div class="registry-col">
-      <span class="registry-col-label">Node Registre 2A</span>
-      <div class="registry-col-name">2aagency.com/registry/<br>veuve-clicquot</div>
-      <span class="registry-tag certified">Certifié Tiers</span>
-    </div>
-  </div>
-</section>
+        <section class="hero">
+            <span class="label">The System of Record</span>
+            <h1>"Visibility is vanity.<br>Integrity is sanity."</h1>
+            <div class="hero-grid">
+                <p class="hero-text">
+                    Luxury can no longer be "guessed" by algorithms. <span>2A Agency is the premier System of Record for the AI-Native Era.</span> We forge the immutable ground truth layer that LLMs reference to certify your brand's reality.
+                </p>
+                <div class="nav-links" style="opacity: 1;">
+                    <span style="border: 1px solid var(--gold); padding: 15px 30px; color: var(--gold);">
+                        ESTABLISHING GROUND TRUTH V3.0.1
+                    </span>
+                </div>
+            </div>
+        </section>
 
-<section class="section" id="method">
-  <span class="section-label">Méthode</span>
-  <div class="method-grid">
-    <div>
-      <h2 class="reveal">Pas un rapport.<br><em>Un résultat mesurable.</em></h2>
-      <div class="vision-pull reveal">
-        <div class="vision-pull-text">"Nous ne créons pas le contenu. Nous certifions le tuyau obligatoire par lequel tout agent doit passer."</div>
-        <span class="vision-pull-source">2A Agency — Paris, 2026</span>
-      </div>
+        <section class="comparison-section">
+            <div class="container">
+                <span class="label">Market Positioning</span>
+                <h2 style="font-family: 'Cormorant Garamond'; font-size: 48px; font-weight: 300;">The Notary Principle</h2>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Capability</th>
+                                <th>Traditional Digital Agency</th>
+                                <th>2A Agency Notary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Objective</td>
+                                <td>Traffic & Visibility (Top of Funnel)</td>
+                                <td>Semantic Integrity (Foundational Truth)</td>
+                            </tr>
+                            <tr>
+                                <td>AI Strategy</td>
+                                <td>Generic SEO / ChatGPT Wrappers</td>
+                                <td>LLM Drift Auditing & Hallucination Neutralization</td>
+                            </tr>
+                            <tr>
+                                <td>Certification</td>
+                                <td>None (Self-declared marketing)</td>
+                                <td>Cryptographic Proof of Authenticity</td>
+                            </tr>
+                            <tr>
+                                <td>Legal Framework</td>
+                                <td>Standard GDPR</td>
+                                <td>EU AI Act Article 53 & Heritage Protection</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid" id="protocol">
+            <div class="grid-item">
+                <span class="label">Protocol 01</span>
+                <h3>Semantic Auditing</h3>
+                <p>We analyze how 5+ LLMs (GPT-4, Claude 3.5, Gemini Pro) perceive your brand. We identify "semantic drift" where AI devalues your luxury positioning.</p>
+            </div>
+            <div class="grid-item">
+                <span class="label">Protocol 02</span>
+                <h3>Hallucination Neutralization</h3>
+                <p>Algorithms invent heritage. We neutralize conceptual hallucinations by providing AI models with a high-precision registry secured by SHA-256 hashes.</p>
+            </div>
+            <div class="grid-item">
+                <span class="label">Protocol 03</span>
+                <h3>Agentic Readiness</h3>
+                <p>The future of luxury sales is handled by AI Agents. We ensure your data infrastructure is "Agentic-Ready," meaning bots can verify your price and provenance instantly.</p>
+            </div>
+        </div>
+
+        <section class="ai-act">
+            <span class="label" style="color: #fff;">Legislative Alert</span>
+            <h2 style="font-family: 'Cormorant Garamond'; font-size: 42px; margin: 20px 0; font-style: italic;">EU AI Act: Article 53</h2>
+            <p style="font-size: 18px; opacity: 0.9; max-width: 800px; margin-bottom: 30px;">
+                Starting in 2025, General Purpose AI models must provide detailed documentation about their training data. Luxury brands that do not provide a "System of Record" leave their heritage to be misinterpreted by default training sets. 
+            </p>
+            <div style="font-family: 'JetBrains Mono'; font-size: 12px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px;">
+                <span style="color: var(--gold);">FINE RISK:</span> UP TO €15M OR 3% OF TOTAL WORLDWIDE TURNOVER.
+            </div>
+        </section>
+
+        <section class="notary-section" id="compliance">
+            <span class="label">Immutable Proof</span>
+            <h2 style="font-family: 'Cormorant Garamond'; font-size: 48px; font-weight: 300; font-style: italic;">"A bra cannot certify itself."</h2>
+            <p style="margin-top: 20px; opacity: 0.7; max-width: 700px; margin-inline: auto;">
+                2A Agency acts as the independent third-party notary for the luxury sector. We don't just "manage" your image; we notarize your existence in the global AI registry.
+            </p>
+            <div class="notary-hash">
+                GENESIS_BLOCK_HASH: 7AA71C8E80D3634ABEBE349C80008FF2BD5A929202672B026AFAD7B962E8A42
+            </div>
+        </section>
+
+        <div class="container">
+            <footer>
+                <div>© 2026 2A Agency. The System of Record for the Agentic Era.</div>
+                <div>PerimeterOS Enabled | 7AA71C...</div>
+            </footer>
+        </div>
     </div>
-    <div class="method-steps reveal">
-      <div class="method-step">
-        <span class="method-step-num">Step 01</span>
-        <div class="method-step-title">Semantic Audit</div>
-        <div class="method-step-desc">5 LLMs × 20+ questions. Score d'Intégrité. Matrice de risques.</div>
-        <div class="method-step-price">3 500 – 5 000 € · 5 jours ouvrés</div>
-      </div>
-      <div class="method-step">
-        <span class="method-step-num">Step 02</span>
-        <div class="method-step-title">Node & Remédiation</div>
-        <div class="method-step-desc">Correction Wikidata. Audit Knowledge Graph. Déploiement JSON-LD certifié.</div>
-        <div class="method-step-price">15 000 – 25 000 € · Programme 3 mois</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="section section-alt">
-  <table class="comp-table reveal">
-    <thead>
-      <tr><th>Dimension</th><th>Agences GEO</th><th class="hi">2A Agency</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Acheteur Principal</td><td>Marketing</td><td class="hi">Juridique · Compliance · DG</td></tr>
-      <tr><td>Livrable Central</td><td>Audit PDF</td><td class="hi">Registre Certifié + Remédiation</td></tr>
-      <tr><td>EU AI Act (Art. 53)</td><td>—</td><td class="hi"><span class="chk">Fonctionnalité Centrale</span></td></tr>
-      <tr><td>API Agent-native</td><td>—</td><td class="hi"><span class="chk">Ready for the Agentic Web</span></td></tr>
-    </tbody>
-  </table>
-</section>
-
-<section class="cta-section" id="contact">
-  <h2 class="reveal">Que dit l'IA de <em>votre marque</em> ?</h2>
-  <div class="cta-form">
-    <input type="email" class="cta-input" placeholder="votre@marque.com">
-    <button class="cta-submit">Demander un scan</button>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-logo">2<span>A</span> Agency</div>
-  <div class="footer-tagline">System of Records for brand truth — integrity is sanity</div>
-  <div class="footer-copy">© 2026 · Paris</div>
-</footer>
-
-<script>
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-  });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script>
 </body>
-</html>
+</ht
