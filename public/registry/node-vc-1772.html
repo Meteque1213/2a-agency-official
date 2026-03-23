@@ -2,79 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2A Node — Veuve Clicquot (vc-1772-0882)</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;600&family=DM+Mono&display=swap" rel="stylesheet">
-
+    <title>2A Node - Veuve Clicquot</title>
     <style>
-        :root { --bg: #F8F7F4; --gold: #B8960C; --black: #0D0D0D; --border: rgba(0,0,0,0.08); }
-        body { background: var(--bg); color: var(--black); font-family: 'Inter', sans-serif; margin: 0; padding: 40px 5%; line-height: 1.6; }
-        .container { max-width: 900px; margin: 0 auto; }
-        
-        /* AGENT GATEWAY */
-        .agent-gateway { background: var(--black); color: var(--gold); padding: 25px; font-family: 'DM Mono', monospace; font-size: 12px; margin-bottom: 40px; border-left: 4px solid var(--gold); }
-        .agent-gateway a { color: #FFF; text-decoration: underline; }
-
-        .card { background: #FFF; padding: 60px; border: 1px solid var(--border); box-shadow: 0 20px 40px rgba(0,0,0,0.03); }
-        .version { font-family: 'DM Mono'; font-size: 9px; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; display: block; }
-        .header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1px solid var(--border); padding-bottom: 40px; margin-bottom: 40px; }
-        h1 { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 300; margin: 0; letter-spacing: -1px; }
-        .drift-box { text-align: right; }
-        .drift-val { font-size: 42px; font-weight: 600; color: var(--gold); display: block; line-height: 1; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .label { font-family: 'DM Mono'; font-size: 10px; color: #666; text-transform: uppercase; margin-bottom: 8px; display: block; }
-        .val { font-size: 17px; }
-        .product-list { margin-top: 40px; border-top: 1px solid var(--border); padding-top: 40px; }
-        .product-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.03); font-size: 14px; }
-        .badge { display: inline-block; background: #E8F0E8; color: #2E5A2E; padding: 6px 12px; font-size: 10px; font-family: 'DM Mono'; margin-top: 40px; }
+        body { background: #F8F7F4; color: #0D0D0D; font-family: sans-serif; padding: 40px; }
+        .bridge { background: #000; color: #B8960C; padding: 20px; text-align: center; border: 1px solid #B8960C; margin-bottom: 20px; }
+        .card { background: #FFF; padding: 30px; border: 1px solid #DDD; }
+        button { background: #B8960C; color: #FFF; border: none; padding: 10px; cursor: pointer; font-weight: bold; margin-top:10px; }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <a href="/registry/archive.html" style="font-family:'DM Mono'; font-size:10px; color:var(--gold); text-decoration:none; letter-spacing:1px;">← REGISTRY EXPLORER</a>
-
-    <div class="agent-gateway">
-        <strong style="color:#FFF;">[ AI AGENT GATEWAY ]</strong><br>
-        Direct JSON Endpoint for LLMs/GPTs: <br>
-        <a href="/api/node/vc-1772.json">https://www.2aagency.com/api/node/vc-1772.json</a>
+    <div class="bridge">
+        <strong>AGENT ACCESS</strong><br>
+        <button id="btn">TEST IN CHATGPT</button>
     </div>
-
     <div class="card">
-        <span class="version">Node v3.3.0 • Certified March 23, 2026 • Zero-latency</span>
-        <div class="header">
-            <div>
-                <h1>Veuve Clicquot</h1>
-                <p style="font-family:'DM Mono'; font-size:12px; color:var(--gold); margin:10px 0 0 0;">UID: vc-1772-0882</p>
-            </div>
-            <div class="drift-box">
-                <span class="label">Drift Score</span>
-                <span class="drift-val">1.9%</span>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div><span class="label">Chef de Cave</span><span class="val">Didier Mariotti</span></div>
-            <div><span class="label">Parent Group</span><span class="val">LVMH</span></div>
-            <div style="grid-column: span 2;">
-                <span class="label">SHA-256 Forensic Hash</span>
-                <span style="font-family:'DM Mono'; font-size:11px; color:var(--gold); word-break:break-all;">8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0</span>
-            </div>
-        </div>
-
-        <div class="product-list">
-            <span class="label" style="color:var(--gold);">Certified Inventory</span>
-            <div class="product-item"><span>Yellow Label Brut</span><strong>45-55 €</strong></div>
-            <div class="product-item"><span>La Grande Dame 2015</span><strong>180-220 €</strong></div>
-            <div class="product-item"><span>Cave Privée 2004</span><strong>280-320 €</strong></div>
-            <div class="product-item"><span>Vintage Rosé 2012</span><strong>95-115 €</strong></div>
-        </div>
-
-        <div class="badge">ARTICLE 53 EU AI ACT COMPLIANT</div>
+        <h1>Veuve Clicquot</h1>
+        <p>Drift Score: <strong style="color:#B8960C">1.9%</strong></p>
     </div>
-</div>
-
+    <script>
+        document.getElementById('btn').onclick = function() {
+            var q = encodeURIComponent("Analyze this: https://www.2aagency.com/api/node/vc-1772.json");
+            window.open("https://chatgpt.com/?q=" + q, "_blank");
+        };
+    </script>
 </body>
 </html>

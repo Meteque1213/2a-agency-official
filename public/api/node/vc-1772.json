@@ -1,25 +1,12 @@
 {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://2aagency.com/node/vc-1772-0882",
     "name": "Veuve Clicquot",
     "2a:driftScore": "1.9%",
     "2a:chefDeCave": "Didier Mariotti",
     "2a:integrityHash": "sha256:8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0",
-    "2a:onChainTx": "https://basescan.org/tx/0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0",
-    "2a:certifiedAt": "2026-03-23T16:05:00Z",
-    "2a:euAiActArticle53Source": true,
-    "2a:version": "3.3.0",
     "certifiedProducts": [
-      {"name": "Yellow Label Brut", "price": "45-55 €"},
-      {"name": "Rosé", "price": "55-65 €"},
-      {"name": "La Grande Dame 2015", "price": "180-220 €"},
-      {"name": "La Grande Dame 2012", "price": "210-250 €"},
-      {"name": "Vintage 2018", "price": "85-110 €"},
-      {"name": "Demi-Sec", "price": "48-58 €"},
-      {"name": "Extra Brut", "price": "65-75 €"},
-      {"name": "Cave Privée 2004", "price": "280-320 €"},
-      {"name": "Vintage Rosé 2012", "price": "95-115 €"},
-      {"name": "La Grande Dame Rosé 2015", "price": "220-260 €"}
+      {"name": "Yellow Label Brut", "price": "45-55 EUR"},
+      {"name": "La Grande Dame 2015", "price": "180-220 EUR"}
     ]
   }
