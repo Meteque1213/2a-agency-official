@@ -2,30 +2,201 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2A Registry — Global Node Explorer</title>
-    <link rel="stylesheet" href="../style.css"> <style>
-        body { background: #F5F2EC; font-family: 'Instrument Sans', sans-serif; padding: 60px 5%; }
-        .search-bar { width: 100%; padding: 20px; border: 1px solid rgba(184,150,12,0.3); background: white; margin-bottom: 40px; font-family: 'DM Mono'; }
-        table { width: 100%; border-collapse: collapse; background: white; }
-        th { text-align: left; padding: 20px; border-bottom: 2px solid #B8960C; font-family: 'DM Mono'; font-size: 0.7rem; text-transform: uppercase; }
-        td { padding: 20px; border-bottom: 1px solid rgba(184,150,12,0.1); font-family: 'DM Mono'; font-size: 0.8rem; }
-        .status-pill { padding: 4px 12px; border-radius: 20px; font-size: 0.6rem; font-weight: bold; }
-        .certified { background: rgba(184,150,12,0.1); color: #B8960C; }
-        a { color: black; text-decoration: none; font-weight: bold; }
-        a:hover { color: #B8960C; }
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;600&family=DM+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #F8F7F4;
+            --white: #FFFFFF;
+            --gold: #B8960C;
+            --black: #0D0D0D;
+            --border: rgba(0,0,0,0.06);
+            --text-light: #666666;
+        }
+
+        body { 
+            background: var(--bg); 
+            color: var(--black); 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            padding: 80px 5%; 
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        /* HEADER */
+        .explorer-header {
+            margin-bottom: 60px;
+        }
+
+        h1 { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 72px; 
+            font-weight: 300; 
+            margin: 0; 
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        .stats-line {
+            font-family: 'DM Mono', monospace;
+            font-size: 11px;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            display: block;
+        }
+
+        /* SEARCH AREA */
+        .search-container {
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 24px 30px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            color: var(--black);
+            outline: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--gold);
+        }
+
+        .search-input::placeholder {
+            color: #AAA;
+            font-weight: 300;
+        }
+
+        /* TABLE DESIGN */
+        .registry-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.03);
+        }
+
+        thead th {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 25px 30px;
+            text-align: left;
+            border-bottom: 2px solid var(--bg);
+            background: #FDFDFB;
+        }
+
+        tbody td {
+            padding: 25px 30px;
+            border-bottom: 1px solid var(--bg);
+            font-size: 14px;
+            vertical-align: middle;
+        }
+
+        /* DATA STYLING */
+        .entity-id {
+            font-family: 'DM Mono', monospace;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .entity-name {
+            font-weight: 500;
+            color: var(--black);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .entity-name:hover {
+            color: var(--gold);
+        }
+
+        .drift-value {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        .drift-up { color: #C44545; }
+        .drift-down { color: #458B45; }
+
+        .date-cell {
+            color: var(--text-light);
+            font-size: 13px;
+        }
+
+        /* STATUS PILLS */
+        .status-pill {
+            display: inline-block;
+            padding: 5px 12px;
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: #F4F4F2;
+            color: var(--text-light);
+            border-radius: 2px;
+        }
+
+        .status-certified {
+            background: #E8F0E8;
+            color: #2E5A2E;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            color: var(--text-light);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            h1 { font-size: 48px; }
+            .registry-table { display: block; overflow-x: auto; }
+        }
     </style>
 </head>
 <body>
-    <h1 style="font-family:'Cormorant Garamond'; font-size: 3rem; margin-bottom: 10px;">Node Explorer</h1>
-    <p style="color: #6B6B6B; margin-bottom: 40px;">2,701 Verified Entities — System of Records v4.3</p>
-    
-    <input type="text" class="search-bar" placeholder="Search by Entity ID, Name or Hash...">
 
-    <table>
+<div class="container">
+    <div class="explorer-header">
+        <h1>Node Explorer</h1>
+        <span class="stats-line">2,701 Verified Entities — System of Records v4.3</span>
+    </div>
+
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search by Entity ID, Brand Name or Forensic Hash...">
+    </div>
+
+    <table class="registry-table">
         <thead>
             <tr>
                 <th>Entity ID</th>
-                <th>Name</th>
+                <th>Brand Name</th>
                 <th>Drift %</th>
                 <th>Last Certified</th>
                 <th>Status</th>
@@ -33,27 +204,40 @@
         </thead>
         <tbody>
             <tr>
-                <td>vc-1772-0882</td>
-                <td><a href="/registry/node-vc-1772.html">Veuve Clicquot</a></td>
-                <td style="color: #6A8759;">2.8% ↓</td>
-                <td>Mar 18, 2026</td>
-                <td><span class="status-pill certified">CERTIFIED</span></td>
+                <td class="entity-id">vc-1772-0882</td>
+                <td><a href="/registry/node-vc-1772.html" class="entity-name">Veuve Clicquot</a></td>
+                <td class="drift-value drift-down">1.9% ↓</td>
+                <td class="date-cell">Mar 23, 2026</td>
+                <td><span class="status-pill status-certified">CERTIFIED</span></td>
             </tr>
             <tr>
-                <td>aapl-001</td>
-                <td><a href="#">Apple Inc.</a></td>
-                <td style="color: #6A8759;">2.1%</td>
-                <td>Mar 20, 2026</td>
-                <td><span class="status-pill certified">CERTIFIED</span></td>
+                <td class="entity-id">aapl-001-usa</td>
+                <td><a href="#" class="entity-name">Apple Inc.</a></td>
+                <td class="drift-value">2.1%</td>
+                <td class="date-cell">Mar 20, 2026</td>
+                <td><span class="status-pill status-certified">CERTIFIED</span></td>
             </tr>
             <tr>
-                <td>nke-001</td>
-                <td><a href="#">Nike Global</a></td>
-                <td style="color: #B8960C;">4.8%</td>
-                <td>Mar 21, 2026</td>
-                <td><span class="status-pill certified">CERTIFIED</span></td>
+                <td class="entity-id">nke-glo-992</td>
+                <td><a href="#" class="entity-name">Nike Global</a></td>
+                <td class="drift-value" style="color: var(--gold);">4.8%</td>
+                <td class="date-cell">Mar 21, 2026</td>
+                <td><span class="status-pill status-certified">CERTIFIED</span></td>
+            </tr>
+            <tr>
+                <td class="entity-id">brt-044-chf</td>
+                <td><a href="#" class="entity-name">Breitling Int.</a></td>
+                <td class="drift-value drift-down">1.4% ↓</td>
+                <td class="date-cell">Mar 15, 2026</td>
+                <td><span class="status-pill status-certified">CERTIFIED</span></td>
             </tr>
         </tbody>
     </table>
+
+    <footer>
+        2A AGENCY — MANDATORY TRUTH LAYER — GLOBAL REGISTRY
+    </footer>
+</div>
+
 </body>
 </html>
