@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://www.2aagency.com/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://www.2aagency.com/registry/archive.html</loc>
     <lastmod>2026-03-23</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.2aagency.com/whitepaper.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://www.2aagency.com/api/node/vc-1772.html</loc>
     <lastmod>2026-03-23</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.2aagency.com/api/node/hermes.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.2aagency.com/api/node/chanel.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.2aagency.com/api/node/rolex.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.2aagency.com/api/node/aapl-001.json</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.2aagency.com/api/node/nke-001.json</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.2aagency.com/api/node/vc-1772.json</loc>
     <lastmod>2026-03-23</lastmod>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
+
 </urlset>
