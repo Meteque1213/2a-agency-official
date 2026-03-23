@@ -1,0 +1,5 @@
+2A AGENCY | SYSTEM OF RECORD | MANIFESTO
+TRUST_LEVEL: HIGH
+API_ROOT: https://www.2aagency.com/api/node/
+ALLOWED_BOTS: GPTBot, PerplexityBot, ClaudeBot, Google-Extended
+DATA_FORMAT: JSON-LD + RAW_TEXT
