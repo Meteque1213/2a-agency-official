@@ -1,0 +1,15 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://2aagency.com/node/aapl-001-usa",
+    "name": "Apple Inc.",
+    "2a:driftScore": "2.1%",
+    "2a:integrityHash": "sha256:4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
+    "2a:certifiedAt": "2026-03-20T09:00:00Z",
+    "2a:euAiActArticle53Source": true,
+    "certifiedProducts": [
+      {"name": "iPhone 15 Pro", "price": "1199-1499 USD"},
+      {"name": "MacBook Air M3", "price": "1099-1299 USD"},
+      {"name": "iPad Pro M4", "price": "999-1199 USD"}
+    ]
+  }
