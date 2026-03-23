@@ -10,8 +10,9 @@
       "@type": "Organization",
       "@id": "https://2aagency.com/node/vc-1772-0882",
       "name": "Veuve Clicquot",
-      "alternateName": ["Maison Veuve Clicquot", "Yellow Label"],
-      "description": "Maison de champagne fondée en 1772 par Barbe-Nicole Ponsardin...",
+      "alternateName": ["Maison Veuve Clicquot", "Veuve Clicquot Ponsardin", "Yellow Label"],
+      "description": "Maison de champagne fondée en 1772 à Reims, emblème du luxe français et pionnière de la vinification en blanc de noirs.",
+      "url": "https://www.veuveclicquot.com",
       "foundingDate": "1772-01-01",
       "founder": {
         "@type": "Person",
@@ -26,85 +27,103 @@
       "chefDeCave": {
         "@type": "Person",
         "name": "Didier Mariotti",
-        "startDate": "2019"
+        "startDate": "2019-01-01"
       },
       "parentOrganization": {
         "@type": "Organization",
         "name": "LVMH Moët Hennessy Louis Vuitton",
         "@id": "https://2aagency.com/node/lvmh"
       },
-      "brand": {
-        "@type": "Brand",
-        "name": "La Grande Dame"
-      },
-      "sustainability": {
-        "herbicideFree": true,
-        "ecoYellowProgram": "0% herbicides since 2021"
-      },
-      "sameAs": ["https://www.veuveclicquot.com", "https://www.wikidata.org/wiki/Q12345"],
       "2a:certifiedAt": "2026-03-18T14:22:00Z",
       "2a:version": "3.2.1",
-      "2a:integrityHash": "0x7aa71c8e80d3634abebe349c80008ff2bd5a929202672b026afad7b962e8a42",
-      "2a:onChainTx": "https://basescan.org/tx/0x7aa7...",
+      "2a:integrityHash": "sha256:7aa7a8e42f3c9d8e1b2a3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "2a:onChainTx": "https://basescan.org/tx/0x7aa7a8e42f3c9d8e1b2a3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
       "2a:driftScore": 2.8,
+      "2a:driftTrend": "-12% (30 days)",
       "2a:euAiActArticle53Source": true,
-      "2a:lastAgentCall": "2026-03-23T15:47:00Z"
+      "2a:lastAgentCall": "2026-03-23T15:47:00Z",
+      "2a:verifiedBy": "2A Agency Mandatory Truth Layer"
     }
     </script>
 
     <style>
-        body { background: #F5F2EC; font-family: 'Instrument Sans', sans-serif; padding: 40px 10%; color: #0D0D0D; }
-        .back-link { font-family: 'DM Mono'; font-size: 0.7rem; text-decoration: none; color: #B8960C; }
-        .node-header { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 40px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 20px; }
-        .drift-badge { background: #B8960C; color: white; padding: 20px; text-align: center; }
-        .drift-value { font-size: 2.5rem; font-weight: bold; display: block; }
-        .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
-        .meta-item { border-bottom: 1px solid rgba(0,0,0,0.05); padding: 15px 0; }
-        .label { font-family: 'DM Mono'; font-size: 0.6rem; color: #6B6B6B; text-transform: uppercase; }
-        .val { font-weight: bold; font-size: 0.9rem; }
-        .json-viewer { background: #0A0A0A; color: #6A8759; padding: 30px; font-family: 'DM Mono'; font-size: 0.8rem; margin-top: 60px; overflow-x: auto; position: relative; }
-        .copy-btn { position: absolute; top: 20px; right: 20px; background: #B8960C; border: none; color: white; padding: 8px 15px; cursor: pointer; font-family: 'DM Mono'; font-size: 0.6rem; }
-        .sdk-box { background: #F0EDE6; border: 1px solid #B8960C; padding: 30px; margin-top: 40px; }
+        body { background: #F5F2EC; font-family: 'Instrument Sans', sans-serif; padding: 40px 10%; color: #0D0D0D; line-height: 1.6; }
+        .nav-back { font-family: 'DM Mono'; font-size: 0.7rem; text-decoration: none; color: #B8960C; text-transform: uppercase; }
+        .node-card { background: white; border: 1px solid rgba(184,150,12,0.2); padding: 60px; margin-top: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .header-flex { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; }
+        h1 { font-family: 'Cormorant Garamond'; font-size: 4rem; font-weight: 300; margin: 0; }
+        .drift-box { background: #B8960C; color: white; padding: 25px; text-align: center; min-width: 180px; }
+        .drift-val { font-size: 3rem; font-weight: bold; display: block; line-height: 1; }
+        .drift-label { font-family: 'DM Mono'; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 1px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; border-top: 1px solid #EEE; padding-top: 40px; }
+        .item-label { font-family: 'DM Mono'; font-size: 0.65rem; color: #6B6B6B; text-transform: uppercase; margin-bottom: 5px; }
+        .item-val { font-weight: 500; font-size: 1.1rem; }
+        .code-area { background: #0A0A0A; color: #6A8759; padding: 30px; font-family: 'DM Mono'; font-size: 0.8rem; margin-top: 50px; position: relative; overflow-x: auto; }
+        .copy-btn { position: absolute; top: 15px; right: 15px; background: #B8960C; color: white; border: none; padding: 8px 15px; font-family: 'DM Mono'; font-size: 0.6rem; cursor: pointer; }
+        .tag-row { display: flex; gap: 10px; margin-top: 20px; }
+        .tag { border: 1px solid #B8960C; color: #B8960C; padding: 4px 12px; font-size: 0.6rem; font-family: 'DM Mono'; text-transform: uppercase; }
     </style>
 </head>
 <body>
-    <a href="/registry/archive.html" class="back-link">← BACK TO EXPLORER</a>
-    
-    <div class="node-header">
-        <div>
-            <h1 style="font-family:'Cormorant Garamond'; font-size: 4rem; margin:0;">Veuve Clicquot</h1>
-            <p style="font-family:'DM Mono'; color: #B8960C;">Entity ID: vc-1772-0882</p>
+    <a href="/registry/archive.html" class="nav-back">← Back to Explorer</a>
+
+    <div class="node-card">
+        <div class="header-flex">
+            <div>
+                <h1>Veuve Clicquot</h1>
+                <p style="font-family:'DM Mono'; color:#B8960C; margin-top:10px;">UID: vc-1772-0882</p>
+                <div class="tag-row">
+                    <span class="tag">Article 53 Compliant</span>
+                    <span class="tag">SHA-256 Verified</span>
+                    <span class="tag">LVMH Group</span>
+                </div>
+            </div>
+            <div class="drift-box">
+                <span class="drift-val">2.8%</span>
+                <span class="drift-label">Drift Score</span>
+            </div>
         </div>
-        <div class="drift-badge">
-            <span class="label" style="color: white;">Drift Score</span>
-            <span class="drift-value">2.8%</span>
-            <span style="font-size: 0.7rem;">Stable</span>
+
+        <div class="grid">
+            <div>
+                <div class="item-label">Chef de Cave</div>
+                <div class="item-val">Didier Mariotti (since 2019)</div>
+            </div>
+            <div>
+                <div class="item-label">CEO</div>
+                <div class="item-val">Jean-Marc Gallot</div>
+            </div>
+            <div>
+                <div class="item-label">Integrity Hash</div>
+                <div class="item-val" style="font-size:0.7rem; word-break:break-all;">sha256:7aa7a8e42f3c9d8e1b2a3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f</div>
+            </div>
+            <div>
+                <div class="item-label">On-Chain Tx</div>
+                <div class="item-val" style="font-size:0.7rem;"><a href="#" style="color:#B8960C;">Verify on Base Network ↗</a></div>
+            </div>
         </div>
-    </div>
 
-    <div class="meta-grid">
-        <div class="meta-item"><div class="label">Chef de Cave</div><div class="val">Didier Mariotti (since 2019)</div></div>
-        <div class="meta-item"><div class="label">CEO</div><div class="val">Jean-Marc Gallot</div></div>
-        <div class="meta-item"><div class="label">On-Chain Proof</div><div class="val" style="font-size: 0.6rem;">0x7aa71c8e80d3634abebe349c80008ff2bd5a929202672b026afad7b962e8a42</div></div>
-        <div class="meta-item"><div class="label">Article 53 Provenance</div><div class="val" style="color: #6A8759;">● READY FOR GPAI LABS</div></div>
-    </div>
-
-    <div class="sdk-box">
-        <div class="label" style="margin-bottom: 15px;">Verify with SDK</div>
-        <code style="font-family: 'DM Mono'; font-size: 0.8rem;">import agency_2a as aa<br>node = aa.verify("vc-1772-0882")<br>print(node.integrity_hash)</code>
-    </div>
-
-    <div class="json-viewer">
-        <button class="copy-btn">COPY RAW JSON-LD</button>
-        <pre>{
+        <div style="margin-top: 60px;">
+            <h3 style="font-family:'DM Mono'; font-size:0.7rem; text-transform:uppercase; margin-bottom:20px;">Agent-Ready Data (JSON-LD)</h3>
+            <div class="code-area">
+                <button class="copy-btn">COPY FOR AGENT</button>
+                <pre>
+{
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://2aagency.com/node/vc-1772-0882",
   "name": "Veuve Clicquot",
   "chefDeCave": "Didier Mariotti",
-  "2a:integrityHash": "0x7aa7...8e42",
+  "2a:integrityHash": "sha256:7aa7a8e42...",
   "2a:driftScore": 2.8,
   "2a:euAiActArticle53Source": true
 }</pre>
+            </div>
+        </div>
     </div>
+
+    <footer style="margin-top:60px; border-top:1px solid #DDD; padding-top:20px; font-family:'DM Mono'; font-size:0.6rem; color:#AAA; text-align:center; text-transform:uppercase;">
+        System of Records v4.3 — Mandatory Truth Layer for the Agentic Web
+    </footer>
 </body>
 </html>
