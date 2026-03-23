@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2A Registry — Certified Brand Nodes</title>
+<title>2A Agency | Agent Integrity Index — Luxury 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg-color: #fdfcf9; /* Ton fond blanc cassé officiel */
+  --bg-color: #fdfcf9;
   --text-main: #1a1a1a;
   --text-dim: #666;
-  --gold-accent: #b4975a; /* Ton Or officiel */
+  --gold-accent: #b4975a;
   --border-color: #e5e0d5;
-  --certified-green: #2d5a27;
+  --genius-green: #2d5a27;
+  --gifted-blue: #2c3e50;
 }
 
 body {
@@ -20,163 +21,231 @@ body {
   color: var(--text-main);
   font-family: 'DM Mono', monospace;
   margin: 0;
-  padding: 40px 20px;
-  line-height: 1.5;
+  padding: 60px 20px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
-.registry-container { max-width: 1000px; margin: 0 auto; }
+.container { max-width: 1000px; margin: 0 auto; }
 
-header { border-bottom: 1px solid var(--border-color); padding-bottom: 40px; margin-bottom: 60px; text-align: center; }
+/* --- MANIFESTO SECTION --- */
+header { border-bottom: 2px solid var(--text-main); padding-bottom: 60px; margin-bottom: 80px; }
+.logo-2a { font-family: 'Cormorant Garamond', serif; font-size: 54px; font-weight: 600; color: var(--text-main); text-decoration: none; display: block; margin-bottom: 5px; }
+.manifesto-tag { font-size: 14px; text-transform: uppercase; letter-spacing: 0.4em; color: var(--gold-accent); margin-bottom: 40px; display: block; }
 
-.logo-2a { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 600; color: var(--text-main); text-decoration: none; display: block; }
-.logo-registry { font-size: 14px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold-accent); }
+.manifesto-content { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: start; }
+.manifesto-main { font-size: 20px; line-height: 1.7; color: var(--text-main); }
+.manifesto-main b { color: var(--gold-accent); font-weight: 500; }
 
-.filter-bar { display: flex; justify-content: center; gap: 25px; margin-bottom: 40px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
-.filter-btn { background: none; border: none; color: var(--text-dim); cursor: pointer; font-family: inherit; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; padding: 5px 0; }
-.filter-btn.active { color: var(--text-main); border-bottom: 1px solid var(--text-main); }
+.pillars-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.pillar-card { border: 1px solid var(--border-color); padding: 20px; background: #fff; }
+.pillar-card b { color: var(--gold-accent); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 8px; }
+.pillar-card p { margin: 0; font-size: 12px; color: var(--text-dim); }
+
+/* --- INDEX SECTION --- */
+.index-title-bar { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; }
+.index-title-bar h2 { font-family: 'Cormorant Garamond', serif; font-size: 42px; margin: 0; font-weight: 600; }
+
+.filter-bar { display: flex; gap: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 0; }
+.filter-btn { background: none; border: none; color: var(--text-dim); cursor: pointer; font-family: inherit; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; padding: 0; transition: 0.2s; }
+.filter-btn.active { color: var(--text-main); font-weight: 600; border-bottom: 1px solid var(--text-main); }
+
+.node-list-header {
+    display: grid;
+    grid-template-columns: 1fr 180px 100px;
+    padding: 15px 20px;
+    background: #f4f1ea;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    margin-top: 20px;
+}
 
 .node-row {
   display: grid;
-  grid-template-columns: 100px 1fr 180px 120px;
+  grid-template-columns: 1fr 180px 100px;
   align-items: center;
-  padding: 25px 0;
+  padding: 25px 20px;
   border-bottom: 1px solid var(--border-color);
   cursor: pointer;
+  transition: all 0.2s;
 }
-.node-row:hover { background-color: #f9f7f2; }
+.node-row:hover { background-color: #fff; transform: translateX(5px); }
 
-.node-id { font-size: 12px; color: var(--text-dim); }
-.brand-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; }
+.brand-name { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; }
+.brand-category { font-size: 11px; color: var(--text-dim); text-transform: uppercase; }
+.score-value { font-size: 24px; font-weight: 500; text-align: right; color: var(--gold-accent); }
+.score-pending { color: var(--border-color); }
 
-.status-pill { font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 8px; border: 1px solid; border-radius: 2px; }
-.status-certified-pill { color: var(--certified-green); border-color: var(--certified-green); }
-.status-pending-pill { color: var(--text-dim); border-color: var(--border-color); }
+.node-detail { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); background-color: #fff; }
+.node-detail.open { max-height: 1000px; border-bottom: 1px solid var(--border-color); }
 
-.node-detail { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background-color: #fff; }
-.node-detail.open { max-height: 800px; border-bottom: 1px solid var(--border-color); }
+.detail-inner { padding: 40px; display: grid; grid-template-columns: 1fr 300px; gap: 60px; }
+.data-group { margin-bottom: 30px; }
+.data-label { font-size: 10px; text-transform: uppercase; color: var(--gold-accent); margin-bottom: 5px; }
+.data-value { font-size: 14px; color: var(--text-main); }
 
-.detail-content { padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.detail-label { font-size: 10px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
-.detail-value { font-size: 14px; margin-bottom: 20px; }
+.cta-box { background: var(--bg-color); border: 1px solid var(--gold-accent); padding: 30px; text-align: center; }
+.cta-button { width: 100%; background: var(--text-main); color: #fff; border: none; padding: 15px; font-family: 'DM Mono'; font-size: 11px; cursor: pointer; text-transform: uppercase; margin-top: 20px; }
 
-.drift-box { background: var(--bg-color); border: 1px solid var(--border-color); padding: 30px; text-align: center; }
-.score-value { font-size: 48px; font-family: 'Cormorant Garamond', serif; color: var(--gold-accent); margin: 10px 0; }
+footer { margin-top: 120px; padding: 60px 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 10px; color: var(--text-dim); letter-spacing: 0.3em; }
 
-footer { margin-top: 100px; padding: 40px; text-align: center; color: var(--text-dim); font-size: 11px; border-top: 1px solid var(--border-color); }
-
-@media (max-width: 768px) {
-  .node-row { grid-template-columns: 1fr 120px; }
-  .node-id, .audit-link { display: none; }
+@media (max-width: 850px) {
+  .manifesto-content { grid-template-columns: 1fr; gap: 40px; }
+  .node-row { grid-template-columns: 1fr 100px; }
+  .brand-category, .node-list-header span:nth-child(2) { display: none; }
 }
 </style>
 </head>
 <body>
 
-<div class="registry-container">
+<div class="container">
   <header>
     <a href="/" class="logo-2a">2A Agency</a>
-    <span class="logo-registry">Public Node Registry</span>
+    <span class="manifesto-tag">The Agent Integrity Standard</span>
+    
+    <div class="manifesto-content">
+      <div class="manifesto-main">
+        L’IA ne lit plus votre site, elle le <b>synthétise</b>. <br><br>
+        À l'ère des agents autonomes, votre valeur de marque dépend de votre <b>stabilité sémantique</b>. Le 2A Index est la mesure chirurgicale de votre autorité dans les modèles de langage. 
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar-card"><b>01 Foundation</b>JSON-LD & Semantic Health.</div>
+        <div class="pillar-card"><b>02 Stability</b>Anti-hallucination score.</div>
+        <div class="pillar-card"><b>03 Readiness</b>Agent-native access.</div>
+        <div class="pillar-card"><b>04 Compliance</b>EU AI Act Readiness.</div>
+      </div>
+    </div>
   </header>
 
-  <div class="filter-bar">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="certified">Certified</button>
-    <button class="filter-btn" data-filter="luxury">Luxury</button>
-  </div>
-
-  <div class="nodes-list">
-    <div class="node-row" data-category="certified" onclick="toggleNode('n001')">
-      <span class="node-id">001</span>
-      <span class="brand-name">2A Agency</span>
-      <span class="status-pill status-certified-pill">Certified</span>
-      <span style="font-size: 12px; color: var(--gold-accent);">→ Details</span>
-    </div>
-    <div id="n001" class="node-detail">
-      <div class="detail-content">
-        <div>
-          <div class="detail-label">Entity Verification</div>
-          <div class="detail-value">2A Agency — AI Integrity Protocol</div>
-          <div class="detail-label">Compliance</div>
-          <div class="detail-value">EU AI Act Compliant<br>ISO/IEC 42001</div>
-        </div>
-        <div class="drift-box">
-          <div class="detail-label">Integrity Score</div>
-          <div class="score-value">94</div>
-          <div style="font-size: 11px; color: var(--certified-green);">Highly Resilient</div>
-        </div>
-      </div>
+  <section class="index-section">
+    <div class="index-title-bar">
+      <h2>Luxury Integrity Index <small style="font-size: 14px; color: var(--gold-accent); vertical-align: middle;">2026.Q1</small></h2>
     </div>
 
-    <div class="node-row" data-category="luxury" onclick="toggleNode('nVC1772')">
-      <span class="node-id">VC1772</span>
-      <span class="brand-name">Veuve Clicquot</span>
-      <span class="status-pill status-pending-pill">Public Data</span>
-      <span style="font-size: 12px; color: var(--text-dim);">→ Details</span>
-    </div>
-    <div id="nVC1772" class="node-detail">
-      <div class="detail-content">
-        <div>
-          <div class="detail-label">Heritage</div>
-          <div class="detail-value">Maison fondée en 1772, Reims (FR)</div>
-          <div class="detail-label">Parent Group</div>
-          <div class="detail-value">LVMH</div>
-        </div>
-        <div class="drift-box">
-          <div class="detail-label">Drift Score</div>
-          <div class="score-value">--</div>
-          <div style="font-size: 10px; color: var(--text-dim);">Scan pending</div>
-        </div>
-      </div>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">Toutes les Maisons</button>
+      <button class="filter-btn" data-filter="certified">Certifiées 2A</button>
+      <button class="filter-btn" data-filter="pending">En attente</button>
     </div>
 
-    <div class="node-row" data-category="luxury" onclick="toggleNode('nHR1837')">
-      <span class="node-id">HR1837</span>
-      <span class="brand-name">Hermès</span>
-      <span class="status-pill status-pending-pill">Public Data</span>
-      <span style="font-size: 12px; color: var(--text-dim);">→ Details</span>
-    </div>
-    <div id="nHR1837" class="node-detail">
-      <div class="detail-content">
-        <div>
-          <div class="detail-label">Heritage</div>
-          <div class="detail-value">Hermès International, Paris (FR)</div>
-          <div class="detail-label">Founded</div>
-          <div class="detail-value">1837</div>
-        </div>
-        <div class="drift-box">
-          <div class="detail-label">Drift Score</div>
-          <div class="score-value">--</div>
-          <div style="font-size: 10px; color: var(--text-dim);">Scan pending</div>
-        </div>
-      </div>
+    <div class="node-list-header">
+      <span>Entity</span>
+      <span>Category</span>
+      <span style="text-align: right;">Score / 100</span>
     </div>
 
-    <div class="node-row" data-category="luxury" onclick="toggleNode('nCH1910')">
-      <span class="node-id">CH1910</span>
-      <span class="brand-name">Chanel</span>
-      <span class="status-pill status-pending-pill">Public Data</span>
-      <span style="font-size: 12px; color: var(--text-dim);">→ Details</span>
-    </div>
-    <div id="nCH1910" class="node-detail">
-      <div class="detail-content">
-        <div>
-          <div class="detail-label">Heritage</div>
-          <div class="detail-value">Chanel S.A., Paris (FR)</div>
-          <div class="detail-label">Founded</div>
-          <div class="detail-value">1910</div>
-        </div>
-        <div class="drift-box">
-          <div class="detail-label">Drift Score</div>
-          <div class="score-value">--</div>
-          <div style="font-size: 10px; color: var(--text-dim);">Scan pending</div>
+    <div class="nodes-list">
+      <div class="node-row" data-category="certified" onclick="toggleNode('n001')">
+        <span class="brand-name">2A Agency</span>
+        <span class="brand-category">AI Integrity Layer</span>
+        <span class="score-value">94</span>
+      </div>
+      <div id="n001" class="node-detail">
+        <div class="detail-inner">
+          <div>
+            <div class="data-group">
+              <div class="data-label">Status</div>
+              <div class="data-value">Agent Genius — Node 001 Original</div>
+            </div>
+            <div class="data-group">
+              <div class="data-label">Audit Methodology</div>
+              <div class="data-value">Direct On-Chain Notarization<br>Full Semantic Transparency</div>
+            </div>
+          </div>
+          <div class="cta-box">
+            <div class="data-label">Current Drift</div>
+            <div class="score-value" style="font-size: 32px; color: var(--genius-green);">Minimal</div>
+            <div style="font-size: 10px; color: var(--text-dim);">Dernier scan : Il y a 4 min.</div>
+          </div>
         </div>
       </div>
+
+      <div class="node-row" data-category="pending" onclick="toggleNode('nVC')">
+        <span class="brand-name">Veuve Clicquot</span>
+        <span class="brand-category">Champagne / LVMH</span>
+        <span class="score-value score-pending">--</span>
+      </div>
+      <div id="nVC" class="node-detail">
+        <div class="detail-inner">
+          <div>
+            <div class="data-group">
+              <div class="data-label">Fiche Identité</div>
+              <div class="data-value">Maison fondée en 1772, Reims.<br>Chef de Cave : Didier Mariotti.</div>
+            </div>
+            <div class="data-group">
+              <div class="data-label">Observation IA</div>
+              <div class="data-value">Dérive sémantique détectée sur l'historique de la cuvée La Grande Dame dans 14% des requêtes agents.</div>
+            </div>
+          </div>
+          <div class="cta-box">
+            <div class="data-label">Statut Audit</div>
+            <div style="font-size: 14px; margin: 15px 0;">Scan sémantique requis</div>
+            <button class="cta-button" onclick="location.href='mailto:audit@2aagency.com?subject=Audit Request: Veuve Clicquot'">Certifier la marque</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="node-row" data-category="pending" onclick="toggleNode('nHR')">
+        <span class="brand-name">Hermès</span>
+        <span class="brand-category">Leather Goods</span>
+        <span class="score-value score-pending">--</span>
+      </div>
+      <div id="nHR" class="node-detail">
+        <div class="detail-inner">
+          <div>
+            <div class="data-group">
+              <div class="data-label">Patrimoine</div>
+              <div class="data-value">Fondé en 1837 par Thierry Hermès.<br>Indépendance structurelle maintenue.</div>
+            </div>
+          </div>
+          <div class="cta-box">
+             <div class="data-label">Opportunité</div>
+             <div style="font-size: 13px;">Protéger l'artisanat du bruit génératif.</div>
+             <button class="cta-button">Lancer le scan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="node-row" data-category="pending" onclick="toggleNode('nCH')">
+        <span class="brand-name">Chanel</span>
+        <span class="brand-category">Fashion & Beauty</span>
+        <span class="score-value score-pending">--</span>
+      </div>
+      <div id="nCH" class="node-detail">
+        <div class="detail-inner">
+          <div>
+            <div class="data-group">
+              <div class="data-label">Identité</div>
+              <div class="data-value">Fondé en 1910 par Gabrielle Chanel.<br>CEO : Leena Nair.</div>
+            </div>
+          </div>
+          <div class="cta-box">
+             <div class="data-label">Statut</div>
+             <div style="font-size: 13px;">Données publiques non-notarisées.</div>
+             <button class="cta-button">Prier l'IA</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="node-row" data-category="pending" onclick="toggleNode('nRX')">
+        <span class="brand-name">Rolex</span>
+        <span class="brand-category">Watches</span>
+        <span class="score-value score-pending">--</span>
+      </div>
+      <div id="nRX" class="node-detail">
+        <div class="detail-inner">
+          <div><div class="data-group"><div class="data-label">Heritage</div><div class="data-value">Hans Wilsdorf Foundation (1905).</div></div></div>
+          <div class="cta-box"><button class="cta-button">Audit requested</button></div>
+        </div>
+      </div>
+
     </div>
-  </div>
+  </section>
 
   <footer>
-    2A AGENCY — MANDATORY TRUTH LAYER — v1.0
+    2A AGENCY — MANDATORY TRUTH LAYER — v1.0.26
   </footer>
 </div>
 
