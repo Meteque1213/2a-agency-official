@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2A Node — Veuve Clicquot (vc-1772-0882)</title>
     
-    <script type="application/ld+json">
+    <script type="application/ld+json" id="jsonld-data">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "@id": "https://2aagency.com/node/vc-1772-0882",
       "name": "Veuve Clicquot",
       "alternateName": ["Maison Veuve Clicquot", "Veuve Clicquot Ponsardin", "Yellow Label"],
-      "description": "Maison de champagne fondée en 1772 à Reims, emblème du luxe français et pionnière de la vinification en blanc de noirs.",
+      "description": "Maison de champagne fondée en 1772 à Reims, emblème du luxe français.",
       "url": "https://www.veuveclicquot.com",
       "foundingDate": "1772-01-01",
-      "founder": { "@type": "Person", "name": "Barbe-Nicole Ponsardin" },
-      "ceo": { "@type": "Person", "name": "Jean-Marc Gallot", "startDate": "2023-01-01" },
-      "chefDeCave": { "@type": "Person", "name": "Didier Mariotti", "startDate": "2019-01-01" },
+      "ceo": { "@type": "Person", "name": "Jean-Marc Gallot" },
+      "chefDeCave": { "@type": "Person", "name": "Didier Mariotti" },
       "parentOrganization": { "@type": "Organization", "name": "LVMH", "@id": "https://2aagency.com/node/lvmh" },
-      
       "product": [
         {"@type":"Product","name":"Yellow Label Brut","offers":{"@type":"Offer","priceCurrency":"EUR","price":"45-55"}},
         {"@type":"Product","name":"Rosé","offers":{"@type":"Offer","priceCurrency":"EUR","price":"55-65"}},
@@ -32,62 +30,63 @@
         {"@type":"Product","name":"Vintage Rosé 2012","offers":{"@type":"Offer","priceCurrency":"EUR","price":"95-115"}},
         {"@type":"Product","name":"La Grande Dame Rosé 2015","offers":{"@type":"Offer","priceCurrency":"EUR","price":"220-260"}}
       ],
-      
       "2a:certifiedAt": "2026-03-23T16:05:00Z",
       "2a:version": "3.3.0",
       "2a:integrityHash": "sha256:8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0",
       "2a:onChainTx": "https://basescan.org/tx/0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0",
       "2a:driftScore": 1.9,
-      "2a:euAiActArticle53Source": true,
-      "2a:lastAgentCall": "2026-03-23T16:02:00Z"
+      "2a:euAiActArticle53Source": true
     }
     </script>
 
     <style>
-        body { background:#F5F2EC; color:#0D0D0D; font-family:'Helvetica Neue',Arial,sans-serif; margin:0; padding:40px 5%; line-height:1.6; }
+        body { background:#F5F2EC; color:#0D0D0D; font-family:'Helvetica Neue',Arial,sans-serif; margin:0; padding:40px 5%; line-height:1.6; opacity: 1 !important; display: block !important; }
         .container { max-width:920px; margin:0 auto; }
         .card { background:#FFF; border:1px solid rgba(184,150,12,0.2); padding:60px; box-shadow:0 10px 30px rgba(0,0,0,0.05); }
         .header { display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid #EEE; padding-bottom:40px; margin-bottom:40px; }
         h1 { font-size:48px; font-weight:300; margin:0; letter-spacing:-1px; }
         .drift-box { background:#0D0D0D; color:#B8960C; padding:20px; text-align:center; min-width:160px; }
-        .drift-val { font-size:42px; font-weight:bold; color:#FFF; }
+        .drift-val { font-size:42px; font-weight:bold; color:#FFF; display:block; }
         .grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; }
-        .product-list { background:#F9F8F5; padding:30px; border-left:4px solid #B8960C; }
-        .product-item { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid #EEE; }
-        .code-block { background:#0D0D0D; color:#6A8759; padding:30px; font-size:13px; overflow:auto; position:relative; border-radius:4px; }
+        .product-list { background:#F9F8F5; padding:30px; border-left:4px solid #B8960C; margin-top: 40px; }
+        .product-item { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid #EEE; font-size: 14px; }
+        .code-block { background:#0D0D0D; color:#6A8759; padding:30px; font-size:12px; overflow:auto; position:relative; border-radius:4px; margin-top: 20px; }
         .copy-btn { position:absolute; top:15px; right:15px; background:#B8960C; color:#FFF; border:none; padding:8px 16px; font-size:11px; cursor:pointer; }
-        .badge { background:#B8960C; color:#FFF; padding:4px 12px; font-size:10px; letter-spacing:1px; display:inline-block; margin-top:10px; }
+        .badge { background:#B8960C; color:#FFF; padding:4px 12px; font-size:10px; letter-spacing:1px; display:inline-block; margin-top:20px; }
+        .version-line { font-family: 'DM Mono', monospace; font-size: 10px; color: #B8960C; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; display: block; }
     </style>
 </head>
 <body>
 <div class="container">
-    <a href="/registry/archive.html" style="font-size:11px; color:#B8960C; text-decoration:none;">← Registry Explorer</a>
+    <a href="/registry/archive.html" style="font-size:11px; color:#B8960C; text-decoration:none; font-family: 'DM Mono';">← REGISTRY EXPLORER</a>
 
     <div class="card">
+        <span class="version-line">Version 3.3.0 • Certified 23 Mar 2026 • Zero-latency rendering</span>
+        
         <div class="header">
             <div>
                 <h1>Veuve Clicquot</h1>
-                <p style="font-size:13px; color:#B8960C;">UID: vc-1772-0882 | Certified 23 Mar 2026</p>
+                <p style="font-size:13px; color:#B8960C; font-family: 'DM Mono';">UID: vc-1772-0882 | SECURED NODE</p>
             </div>
             <div class="drift-box">
                 <span class="drift-val">1.9%</span>
-                <span style="font-size:10px; text-transform:uppercase;">Drift Score</span>
+                <span style="font-size:10px; text-transform:uppercase; font-family: 'DM Mono';">Drift Score</span>
             </div>
         </div>
 
         <div class="grid">
-            <div><strong>Chef de Cave</strong><br>Didier Mariotti (depuis 2019)</div>
-            <div><strong>Parent</strong><br>LVMH Group</div>
+            <div><strong>Chef de Cave</strong><br>Didier Mariotti</div>
+            <div><strong>Parent Group</strong><br>LVMH Group</div>
             <div style="grid-column:span 2;">
                 <strong>On-Chain Proof</strong><br>
-                <a href="https://basescan.org/tx/0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0" target="_blank" style="color:#B8960C; text-decoration:underline;">
+                <a href="https://basescan.org/tx/0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0" target="_blank" style="color:#B8960C; text-decoration:underline; font-family: 'DM Mono'; font-size: 11px;">
                     0x8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0
                 </a>
             </div>
         </div>
 
         <div class="product-list">
-            <div style="margin-bottom:15px; font-weight:600; color:#B8960C;">Certified Product Registry (10 cuvées)</div>
+            <div style="margin-bottom:15px; font-weight:600; color:#B8960C; font-size: 12px; text-transform: uppercase; font-family: 'DM Mono';">Certified Product Registry</div>
             <div class="product-item"><span>Yellow Label Brut</span><strong>45-55 €</strong></div>
             <div class="product-item"><span>Rosé</span><strong>55-65 €</strong></div>
             <div class="product-item"><span>La Grande Dame 2015</span><strong>180-220 €</strong></div>
@@ -100,16 +99,25 @@
             <div class="product-item"><span>La Grande Dame Rosé 2015</span><strong>220-260 €</strong></div>
         </div>
 
-        <div style="margin:40px 0 15px 0; font-weight:600;">Raw JSON-LD — Agent Ready</div>
+        <div style="margin:40px 0 10px 0; font-weight:600; font-size: 12px; text-transform: uppercase; font-family: 'DM Mono'; color: #6B6B6B;">Raw JSON-LD — Agent Ready</div>
         <div class="code-block">
-            <button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('jsonld').textContent); this.textContent='✅ COPIED'">COPY FOR AGENT</button>
-            <pre id="jsonld">{
+            <button class="copy-btn" onclick="const el = document.getElementById('json-output'); navigator.clipboard.writeText(el.textContent); this.textContent='✅ COPIED'">COPY FOR AGENT</button>
+            <pre id="json-output" style="margin:0;">{
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://2aagency.com/node/vc-1772-0882",
   "name": "Veuve Clicquot",
-  "chefDeCave": "Didier Mariotti",
-  "product": [10 cuvées détaillées],
+  "product": [
+    {"name": "Yellow Label Brut", "price": "45-55 EUR"},
+    {"name": "Rosé", "price": "55-65 EUR"},
+    {"name": "La Grande Dame 2015", "price": "180-220 EUR"},
+    {"name": "La Grande Dame 2012", "price": "210-250 EUR"},
+    {"name": "Vintage 2018", "price": "85-110 EUR"},
+    {"name": "Demi-Sec", "price": "48-58 EUR"},
+    {"name": "Extra Brut", "price": "65-75 EUR"},
+    {"name": "Cave Privée 2004", "price": "280-320 EUR"},
+    {"name": "Vintage Rosé 2012", "price": "95-115 EUR"},
+    {"name": "La Grande Dame Rosé 2015", "price": "220-260 EUR"}
+  ],
   "2a:driftScore": 1.9,
   "2a:euAiActArticle53Source": true
 }</pre>
