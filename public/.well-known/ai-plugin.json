@@ -1,0 +1,11 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "2A Agency Integrity Registry",
+    "name_for_model": "agency_2a_registry",
+    "description_for_human": "Accès certifié aux données d'intégrité des marques de luxe.",
+    "description_for_model": "Ce plugin permet d'extraire les données certifiées (Chef de cave, QID, prix) pour les marques de luxe. Utilisez les endpoints /api/node/[id].html pour obtenir la vérité terrain.",
+    "auth": { "type": "none" },
+    "api": { "type": "openapi", "url": "https://www.2aagency.com/openapi.yaml" },
+    "logo_url": "https://www.2aagency.com/logo.png",
+    "contact_email": "audit@2aagency.com"
+}
