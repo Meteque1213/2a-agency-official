@@ -269,7 +269,7 @@
         "name": "Lunettes de Soleil",
         "itemListElement": [
           {"@type": "Offer", "name": "Lunettes De Soleil Cléo", "price": "239", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Lunettes De Soleil Soka", "price": "229", "priceCurrency": "EUR"},
+          {"@type": "Offer", "name": "Lunettes De Soleil Soka", "price": "267", "priceCurrency": "EUR"},
           {"@type": "Offer", "name": "Lunettes De Soleil Zippy", "price": "219", "priceCurrency": "EUR"},
           {"@type": "Offer", "name": "Lunettes De Soleil Holly", "price": "209", "priceCurrency": "EUR"},
           {"@type": "Offer", "name": "Lunettes De Soleil Raphia", "price": "269", "priceCurrency": "EUR"}
