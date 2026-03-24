@@ -118,71 +118,6 @@ body {
 .print-btn { position: fixed; bottom: 32px; right: 32px; font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--gold); color: var(--black); border: none; padding: 12px 24px; cursor: pointer; transition: background 0.2s; }
 .print-btn:hover { background: #D4AE2A; }
 </style>
-
-<!-- Structured data for AI crawlers — Audit Report -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Report",
-  "name": "Breitling Semantic Audit Report",
-  "datePublished": "2026-03-24",
-  "publisher": {
-    "@type": "Organization",
-    "name": "2A Agency",
-    "url": "https://www.2aagency.com"
-  },
-  "about": {
-    "@context": "https://schema.org",
-    "@type": ["Organization", "Brand"],
-    "@id": "https://www.wikidata.org/wiki/Q697925",
-    "name": "Breitling",
-    "legalName": "Breitling SA",
-    "foundingDate": "1884",
-    "foundingLocation": {
-      "@type": "Place",
-      "name": "Saint-Imier",
-      "addressCountry": "CH"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Grenchen",
-      "addressCountry": "CH"
-    },
-    "url": "https://www.breitling.com",
-    "sameAs": ["https://www.wikidata.org/wiki/Q697925"],
-    "employee": [
-      {
-        "@type": "Person",
-        "name": "Georges Kern",
-        "jobTitle": "Chief Executive Officer",
-        "startDate": "2017",
-        "description": "CEO et co-actionnaire depuis 2017. Architecte du repositionnement Squads not Stars."
-      },
-      {
-        "@type": "Person",
-        "name": "Alfred Gantner",
-        "jobTitle": "Président du Conseil d'Administration"
-      }
-    ],
-    "hasCertification": [
-      { "@type": "Certification", "name": "EcoVadis Platine", "description": "Top 1% mondial RSE" },
-      { "@type": "Certification", "name": "SBTi", "description": "Objectifs Science Based Targets validés" },
-      { "@type": "Certification", "name": "CDP", "score": "A-" },
-      { "@type": "Certification", "name": "Responsible Jewellery Council (RJC)" }
-    ],
-    "description": "Manufacture horlogère suisse fondée en 1884 à Saint-Imier. Neutre en carbone (opérations) depuis 2021. 100% diamants de laboratoire depuis 2024. Actionnaire majoritaire : Partners Group (depuis 2022).",
-    "subjectOf": {
-      "@type": "Report",
-      "name": "Breitling Semantic Audit — 2A Agency",
-      "url": "https://www.2aagency.com/reports/breitling.html",
-      "datePublished": "2026-03-24"
-    }
-  },
-  "description": "Audit sémantique indépendant évaluant la précision des LLMs sur les données officielles Breitling SA. Score : 79/100. Findings critiques : hallucination NFT (Gemini), timeline actionnariat erronée (ChatGPT), neutralité carbone 2021 absente des LLMs.",
-  "keywords": ["semantic audit", "LLM hallucination", "Breitling", "Georges Kern", "Partners Group", "CVC Capital Partners", "Navitimer", "Chronomat", "carbon neutral", "EcoVadis Platine", "Swiss watchmaking"],
-  "dataFeed": "https://www.2aagency.com/api/node/br-1884.json"
-}
-</script>
 </head>
 <body>
 
@@ -208,11 +143,11 @@ body {
     </div>
     <div class="cover-meta-item">
       <span class="meta-label">Questions</span>
-      <span class="meta-val">5 questions</span>
+      <span class="meta-val">6 questions</span>
     </div>
     <div class="cover-meta-item">
       <span class="meta-label">Integrity score</span>
-      <span class="meta-val" style="color:var(--amber);">79 / 100</span>
+      <span class="meta-val" style="color:var(--amber);">72 / 100</span>
     </div>
   </div>
 </div>
@@ -221,17 +156,20 @@ body {
 <div class="score-hero">
   <div>
     <div class="score-hero-label">Key finding</div>
-    <div class="score-hero-title">Two critical drifts detected</div>
+    <div class="score-hero-title">Three critical drifts detected</div>
     <div class="score-hero-finding">
       Leadership and product data are well captured. However,
       <strong>ownership structure is inconsistent across models</strong> —
       ChatGPT attributes Partners Group acquisition to 2017 (incorrect, it was CVC).
-      More critically, <strong>Gemini invents an NFT traceability system per watch</strong>
-      — a hallucination that could mislead buyers and journalists.
+      <strong>Gemini invents an NFT traceability system per watch</strong> —
+      a hallucination that could mislead buyers and journalists.
+      Critical addition: <strong>price and SKU data for the Navitimer B01 43 is
+      incorrect or inconsistent across all 3 LLMs</strong> — ChatGPT cites a price
+      1,000€ below the current official catalogue.
     </div>
   </div>
   <div style="text-align:center;">
-    <div class="score-num">79</div>
+    <div class="score-num">72</div>
     <div class="score-denom">/ 100</div>
   </div>
 </div>
@@ -250,7 +188,7 @@ body {
     Each response was evaluated against verified official data sourced from
     breitling.com, Breitling annual sustainability reports, and Wikidata (Q697925).
     Responses were rated: EXACT, PARTIAL, or INCORRECT.
-    The Semantic Integrity Score (79/100) reflects the weighted average
+    The Semantic Integrity Score (72/100) reflects the weighted average
     across all questions and models tested.
   </p>
   <p class="body-text" style="color:var(--amber); font-style:italic;">
@@ -262,7 +200,7 @@ body {
 <!-- SECTION 2: RESULTS -->
 <div class="section">
   <div class="section-label">Section 02</div>
-  <div class="section-title">Scan results — <em>5 questions · 2 LLMs</em></div>
+  <div class="section-title">Scan results — <em>6 questions · 3 LLMs</em></div>
 
   <table class="results-table">
     <thead>
@@ -304,6 +242,13 @@ body {
         <td>Detailed comparison table. Correct on all points. Notes Chronomat created 1984 for centenary — accurate.</td>
         <td><span class="verdict v-exact">Exact</span></td>
       </tr>
+      <tr>
+        <td><strong>Q6 — Prix &amp; SKU Navitimer B01 43</strong><br><span style="font-size:0.82rem;color:var(--gray);">Exact price + SKU for Navitimer B01 Chronograph 43, black dial, leather vs steel bracelet</span></td>
+        <td>Price 9,500€ — correct per official catalogue. SKU AB0138211B1P1 (leather) — not verified vs PDF. Incomplete on steel bracelet.</td>
+        <td>Price 9,500€ (leather) / 9,850€ (steel) — plausible. SKU AB0138211B1A1 — not verified vs PDF. No cross-reference with official catalogue.</td>
+        <td>Price 8,500€ (leather) / ~9,200€ (steel) — <strong>incorrect</strong>. Official catalogue price is 9,500€. SKU AB0121211B1X1 — different generation reference. Price gap: −1,000€ vs official.</td>
+        <td><span class="verdict v-incorrect">Incorrect</span></td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -311,7 +256,7 @@ body {
 <!-- SECTION 3: KEY FINDINGS -->
 <div class="section">
   <div class="section-label">Section 03</div>
-  <div class="section-title">Critical drifts — <em>two actionable findings</em></div>
+  <div class="section-title">Critical drifts — <em>three actionable findings</em></div>
 
   <div class="finding" data-label="Primary drift — Sustainability">
     <div class="finding-title">Gemini invents an <em>NFT traceability system</em></div>
@@ -395,6 +340,17 @@ body {
     <div class="drift-observed">Both models provide accurate, detailed distinction. Navitimer as aviation tool with slide rule; Chronomat as sport-luxury with Rouleaux bracelet and riders. 1984 Chronomat centenary date confirmed by Gemini.</div>
     <div class="drift-expected">Expected: Navitimer = aviation, 1952, slide rule, 30-50m water resistance. Chronomat = sport-luxury, 1984, Rouleaux bracelet, 100-200m water resistance.</div>
   </div>
+
+  <div class="drift-item critical">
+    <div class="drift-q">Q6 — Prix &amp; SKU Navitimer B01 43 · Verdict: INCORRECT — action commerciale requise</div>
+    <div class="drift-observed">
+      <strong>ChatGPT cite 8 500€</strong> pour la version bracelet cuir — soit 1 000€ en dessous du prix catalogue officiel de 9 500€. La référence SKU AB0121211B1X1 correspond à une génération antérieure.
+      <strong>Gemini cite 9 500€</strong> (correct) avec SKU AB0138211B1P1 — non vérifié contre le PDF catalogue officiel mars 2026.
+      <strong>Perplexity cite 9 500€</strong> (correct) mais sans SKU complet ni référence croisée.
+      Aucun LLM ne cite les SKUs du catalogue officiel mars 2026 (ex. EB01381A1B1X1 pour la Navitimer B01 43 Aston Martin Formula One à 10 500€).
+    </div>
+    <div class="drift-expected">Attendu : Navitimer B01 Chronograph 43 standard — 9 500 EUR (breitling.com, catalogue mars 2026). Un acheteur informé par ChatGPT arrive chez un revendeur avec une référence de prix incorrecte de 1 000€ — situation commercialement embarrassante.</div>
+  </div>
 </div>
 
 <!-- SECTION 5: RECOMMENDATIONS -->
@@ -403,14 +359,21 @@ body {
   <div class="section-title">Remediation roadmap</div>
 
   <p class="body-text">
-    The Semantic Integrity Score of 79/100 reflects two specific and correctable
-    vulnerabilities. The NFT hallucination is the priority — it is a fabrication
-    that could spread to secondary sources and be cited by press or buyers.
+    The Semantic Integrity Score of 72/100 reflects three distinct vulnerabilities.
+    The price and SKU drift on the Navitimer is the most commercially sensitive —
+    a buyer citing an incorrect price to a revendeur loses credibility immediately.
+    The NFT hallucination could spread to press and secondary sources.
   </p>
 
   <div class="rec-grid">
     <div class="rec-card">
       <div class="rec-priority">Priority 1 — Immediate</div>
+      <div class="rec-title">Prix &amp; SKU — structured data catalogue</div>
+      <div class="rec-text">Deploy product structured data (Schema.org Product + Offer) with current prices and SKUs for all flagship models. ChatGPT's −1,000€ error on the Navitimer B01 43 is the most urgent commercial risk. Official JSON-LD with current pricing corrects this within 4–8 weeks.</div>
+      <div class="rec-impact">Impact: Price accuracy corrected in ChatGPT + Bing within 4–8 weeks</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-priority">Priority 2 — Immediate</div>
       <div class="rec-title">Counter the NFT hallucination</div>
       <div class="rec-text">Deploy explicit JSON-LD on breitling.com clarifying the Origins traceability programme — what it is and what it is not. A clear structured statement prevents the hallucination from spreading to other models and secondary sources.</div>
       <div class="rec-impact">Impact: Gemini NFT claim corrected within 4–8 weeks</div>
