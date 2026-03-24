@@ -1,0 +1,92 @@
+# =====================================================
+# 2A AGENCY — SEMANTIC NOTARY REGISTRY
+# robots.txt v3 · 2026-03-24
+# =====================================================
+# Mission: Semantic ground truth & notarization for
+# luxury brands in the EU AI Act era.
+# Contact: contact@2aagency.com
+# LLMs manifest: https://www.2aagency.com/llms.txt
+# =====================================================
+
+# --- Standard web crawlers ---
+User-agent: *
+Allow: /
+Allow: /registry/
+Allow: /reports/
+Allow: /llms.txt
+Allow: /sitemap.xml
+Disallow: /api/
+Disallow: /public/
+Crawl-delay: 2
+
+# --- AI / LLM crawlers (full access) ---
+
+User-agent: GPTBot
+Allow: /
+Allow: /registry/
+Allow: /reports/
+Allow: /llms.txt
+Crawl-delay: 1
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /registry/
+Allow: /reports/
+
+User-agent: anthropic-ai
+Allow: /
+Allow: /registry/
+Allow: /reports/
+Allow: /llms.txt
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+Allow: /registry/
+Allow: /reports/
+
+User-agent: Google-Extended
+Allow: /
+Allow: /registry/
+Allow: /reports/
+Allow: /llms.txt
+
+User-agent: Googlebot
+Allow: /
+Allow: /registry/
+Allow: /reports/
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /registry/
+Allow: /reports/
+Allow: /llms.txt
+Crawl-delay: 1
+
+User-agent: YouBot
+Allow: /
+Allow: /registry/
+Allow: /reports/
+
+User-agent: cohere-ai
+Allow: /
+Allow: /registry/
+Allow: /reports/
+Allow: /llms.txt
+
+User-agent: Applebot
+Allow: /
+Allow: /registry/
+Allow: /reports/
+
+User-agent: meta-externalagent
+Allow: /
+Allow: /registry/
+Allow: /reports/
+Allow: /llms.txt
+
+User-agent: Bytespider
+Crawl-delay: 5
+
+# --- Sitemap ---
+Sitemap: https://www.2aagency.com/sitemap.xml

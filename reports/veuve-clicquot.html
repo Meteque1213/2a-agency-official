@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veuve Clicquot — Semantic Audit Report | 2A Agency</title>
+    <meta name="description" content="Full semantic audit of Veuve Clicquot by 2A Agency. Score: 87/100. Key finding: EcoYellow signature color invisible in LLMs. Certified March 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.2aagency.com/reports/veuve-clicquot.html">
+    <meta name="ai-content-type" content="semantic-audit-report, brand-finding, champagne, luxury">
+
+    <!-- Structured data for AI crawlers -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Report",
+      "name": "Veuve Clicquot Semantic Audit Report",
+      "datePublished": "2026-03-15",
+      "publisher": {
+        "@type": "Organization",
+        "name": "2A Agency",
+        "url": "https://www.2aagency.com"
+      },
+      "about": {
+        "@type": "Organization",
+        "name": "Veuve Clicquot",
+        "foundingDate": "1772",
+        "foundingLocation": "Reims, France",
+        "parentOrganization": "LVMH"
+      },
+      "description": "Independent semantic audit evaluating LLM accuracy for Veuve Clicquot brand facts. Score: 87/100. Critical finding: EcoYellow signature color (#FFBC1B) invisible or misattributed in all tested LLMs.",
+      "keywords": ["semantic audit", "LLM hallucination", "Veuve Clicquot", "EcoYellow", "champagne", "LVMH", "EU AI Act"]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #F7F4EE;
+            --surface: #EDEAE3;
+            --ink:     #111111;
+            --gold:    #B08D57;
+            --gold-lt: #C9A96E;
+            --muted:   #6B6661;
+            --rule:    rgba(176,141,87,0.22);
+            --dark:    #0E0E0E;
+            --red:     #C0392B;
+            --green:   #5A8A5A;
+            --vc-yellow: #FFBC1B;
+        }
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            background:var(--bg);
+            color:var(--ink);
+            font-family:'DM Mono', monospace;
+            font-size:15px; line-height:1.65;
+            overflow-x:hidden;
+        }
+        body::after {
+            content:""; position:fixed; inset:0;
+            pointer-events:none; z-index:9999; opacity:0.035;
+            background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        nav {
+            position:sticky; top:0; z-index:100;
+            display:flex; justify-content:space-between; align-items:center;
+            padding:22px 6%;
+            background:rgba(247,244,238,0.93);
+            backdrop-filter:blur(10px);
+            border-bottom:1px solid var(--rule);
+        }
+        .logo {
+            font-family:'Cormorant Garamond',serif;
+            font-size:1.65rem; font-weight:600;
+            letter-spacing:-0.02em; text-decoration:none; color:var(--ink);
+        }
+        .logo em { font-style:normal; color:var(--gold); }
+        .nav-links { display:flex; align-items:center; gap:36px; }
+        .nav-links a {
+            text-decoration:none; color:var(--muted);
+            font-size:0.65rem; text-transform:uppercase; letter-spacing:0.14em;
+            transition:color .2s;
+        }
+        .nav-links a:hover { color:var(--ink); }
+        .nav-cta { color:var(--ink) !important; border:1px solid var(--ink); padding:9px 22px; }
+
+        /* Report header */
+        .report-header {
+            padding:80px 6% 0;
+            border-bottom:1px solid var(--rule);
+        }
+        .breadcrumb {
+            font-size:0.6rem; text-transform:uppercase;
+            letter-spacing:0.14em; color:var(--muted);
+            margin-bottom:40px;
+        }
+        .breadcrumb a { color:var(--muted); text-decoration:none; }
+        .breadcrumb a:hover { color:var(--gold); }
+        .breadcrumb span { margin:0 10px; color:var(--rule); }
+
+        .report-meta-grid {
+            display:grid; grid-template-columns:1fr auto;
+            gap:64px; align-items:end;
+            padding-bottom:60px;
+        }
+        .report-brand-name {
+            font-family:'Cormorant Garamond',serif;
+            font-size:clamp(2.8rem,7vw,5.5rem);
+            font-weight:300; line-height:1;
+        }
+        .report-subtitle {
+            font-size:0.75rem; color:var(--muted);
+            margin-top:16px; line-height:1.6;
+        }
+
+        .score-block {
+            text-align:right;
+        }
+        .score-main {
+            font-family:'Cormorant Garamond',serif;
+            font-size:5rem; font-weight:300;
+            line-height:1; color:var(--gold);
+        }
+        .score-denom { font-size:2rem; color:var(--muted); }
+        .score-label {
+            font-size:0.6rem; text-transform:uppercase;
+            letter-spacing:0.2em; color:var(--muted);
+            margin-top:8px;
+        }
+
+        /* Cert strip */
+        .cert-strip {
+            background:var(--dark); color:rgba(255,255,255,0.6);
+            padding:20px 6%;
+            display:flex; gap:48px; align-items:center;
+            font-size:0.62rem; text-transform:uppercase; letter-spacing:0.14em;
+            flex-wrap:wrap;
+        }
+        .cert-strip strong { color:var(--gold-lt); }
+        .cert-strip .sep { color:rgba(255,255,255,0.15); }
+
+        /* Body layout */
+        .report-body {
+            max-width:1080px; margin:0 auto;
+            padding:80px 6%;
+        }
+
+        /* Section titles */
+        .section-label {
+            font-size:0.6rem; text-transform:uppercase;
+            letter-spacing:0.3em; color:var(--gold);
+            display:block; margin-bottom:20px;
+        }
+        h2 {
+            font-family:'Cormorant Garamond',serif;
+            font-size:clamp(1.8rem,3.5vw,2.8rem);
+            font-weight:300; line-height:1.15;
+            margin-bottom:32px;
+        }
+        h2 em { font-style:italic; color:var(--gold); }
+
+        .divider {
+            border:none; border-top:1px solid var(--rule);
+            margin:72px 0;
+        }
+
+        /* Executive summary */
+        .exec-summary {
+            background:var(--surface);
+            border-left:3px solid var(--gold);
+            padding:36px 40px;
+            margin-bottom:72px;
+        }
+        .exec-summary p {
+            font-size:1.05rem; line-height:1.8; color:var(--ink);
+        }
+        .exec-summary p + p { margin-top:16px; }
+
+        /* Score breakdown */
+        .score-breakdown {
+            display:grid; grid-template-columns:repeat(4,1fr);
+            gap:1px; background:var(--rule);
+            border:1px solid var(--rule);
+            margin-bottom:72px;
+        }
+        .score-dim {
+            background:var(--bg);
+            padding:40px 28px;
+        }
+        .score-dim-label {
+            font-size:0.62rem; text-transform:uppercase;
+            letter-spacing:0.12em; color:var(--muted);
+            margin-bottom:12px;
+        }
+        .score-dim-val {
+            font-family:'Cormorant Garamond',serif;
+            font-size:2.8rem; font-weight:300; line-height:1;
+        }
+        .score-dim-bar {
+            margin-top:12px; height:2px; background:var(--rule);
+            position:relative;
+        }
+        .score-dim-fill {
+            position:absolute; top:0; left:0; height:100%;
+        }
+        .fill-good { background:var(--green); }
+        .fill-warn { background:var(--gold); }
+        .fill-bad  { background:var(--red); }
+        .val-good { color:var(--green); }
+        .val-warn { color:var(--gold); }
+        .val-bad  { color:var(--red); }
+
+        /* LLM test matrix */
+        .llm-matrix {
+            border:1px solid var(--rule);
+            margin-bottom:72px;
+        }
+        .llm-head {
+            display:grid; grid-template-columns:2fr repeat(5,1fr);
+            padding:14px 28px;
+            background:var(--surface);
+            font-size:0.6rem; text-transform:uppercase;
+            letter-spacing:0.12em; color:var(--muted);
+            border-bottom:1px solid var(--rule);
+        }
+        .llm-row {
+            display:grid; grid-template-columns:2fr repeat(5,1fr);
+            padding:18px 28px;
+            font-size:0.78rem;
+            border-bottom:1px solid rgba(176,141,87,0.08);
+            align-items:center;
+        }
+        .llm-row:last-child { border-bottom:none; }
+        .llm-fact { color:var(--ink); }
+        .tick { color:var(--green); font-size:0.9rem; }
+        .cross { color:var(--red); font-size:0.9rem; }
+        .partial { color:var(--gold); font-size:0.9rem; }
+
+        /* Critical finding */
+        .finding-critical {
+            border:1px solid rgba(192,57,43,0.3);
+            padding:48px;
+            margin-bottom:48px;
+            background:rgba(192,57,43,0.03);
+        }
+        .finding-badge {
+            display:inline-block;
+            font-size:0.58rem; text-transform:uppercase; letter-spacing:0.14em;
+            padding:5px 12px; border:1px solid rgba(192,57,43,0.4);
+            color:var(--red); margin-bottom:20px;
+        }
+        .finding-title {
+            font-family:'Cormorant Garamond',serif;
+            font-size:1.9rem; font-weight:300;
+            line-height:1.2; margin-bottom:20px;
+        }
+        .finding-title em { font-style:italic; color:var(--red); }
+        .finding-body { font-size:0.85rem; color:var(--muted); line-height:1.8; }
+        .finding-body + .finding-body { margin-top:14px; }
+
+        /* Color swatch */
+        .color-demo {
+            display:flex; align-items:center; gap:24px;
+            margin:28px 0;
+        }
+        .swatch {
+            width:56px; height:56px; flex-shrink:0;
+            border:1px solid var(--rule);
+        }
+        .swatch-info { font-size:0.78rem; }
+        .swatch-name { color:var(--ink); font-size:0.9rem; margin-bottom:4px; }
+        .swatch-hex { color:var(--muted); font-size:0.72rem; }
+
+        /* Minor findings */
+        .finding-minor {
+            border:1px solid var(--rule);
+            padding:36px 40px;
+            margin-bottom:24px;
+        }
+        .finding-minor-head {
+            display:flex; justify-content:space-between;
+            align-items:flex-start; margin-bottom:16px; gap:16px;
+        }
+        .finding-minor-title {
+            font-size:0.88rem; color:var(--ink);
+        }
+        .severity {
+            font-size:0.58rem; text-transform:uppercase;
+            letter-spacing:0.1em; padding:4px 10px; border:1px solid;
+            flex-shrink:0;
+        }
+        .sev-medium { color:var(--gold); border-color:var(--rule); }
+        .sev-low    { color:var(--muted); border-color:rgba(107,102,97,0.3); }
+
+        /* Certified facts table */
+        .cert-table {
+            width:100%; border-collapse:collapse;
+            margin-bottom:72px;
+        }
+        .cert-table th {
+            font-size:0.6rem; text-transform:uppercase;
+            letter-spacing:0.14em; color:var(--muted);
+            padding:12px 20px; text-align:left;
+            border-bottom:1px solid var(--rule);
+        }
+        .cert-table td {
+            padding:16px 20px; font-size:0.82rem;
+            border-bottom:1px solid rgba(176,141,87,0.07);
+        }
+        .cert-table tr:hover td { background:rgba(176,141,87,0.04); }
+        .fact-key { color:var(--muted); font-size:0.78rem; }
+        .fact-val { color:var(--ink); }
+        .fact-status-ok { color:var(--green); font-size:0.65rem; text-transform:uppercase; }
+        .fact-status-warn { color:var(--gold); font-size:0.65rem; text-transform:uppercase; }
+
+        /* Hash block */
+        .hash-block {
+            background:var(--dark); color:#F7F4EE;
+            padding:40px 48px;
+            margin-bottom:72px;
+        }
+        .hash-block .section-label { color:var(--gold-lt); }
+        .hash-grid {
+            display:grid; grid-template-columns:1fr 1fr;
+            gap:32px; margin-top:24px;
+        }
+        .hash-item {}
+        .hash-key {
+            font-size:0.6rem; text-transform:uppercase;
+            letter-spacing:0.14em; color:rgba(255,255,255,0.35);
+            margin-bottom:8px;
+        }
+        .hash-val {
+            font-size:0.8rem; word-break:break-all;
+            color:var(--gold-lt);
+        }
+        .hash-val.full {
+            font-size:0.72rem; color:rgba(255,255,255,0.6);
+        }
+
+        /* Recommendation */
+        .reco-grid {
+            display:grid; grid-template-columns:1fr 1fr;
+            gap:1px; background:var(--rule);
+            border:1px solid var(--rule);
+            margin-bottom:72px;
+        }
+        .reco-card {
+            background:var(--bg); padding:44px 36px;
+        }
+        .reco-card-num {
+            font-family:'Cormorant Garamond',serif;
+            font-size:2.5rem; color:var(--rule); line-height:1;
+            margin-bottom:16px;
+        }
+        .reco-card-title {
+            font-size:0.75rem; text-transform:uppercase;
+            letter-spacing:0.1em; margin-bottom:12px;
+        }
+        .reco-card-body { font-size:0.82rem; color:var(--muted); line-height:1.8; }
+
+        footer {
+            padding:52px 6%;
+            border-top:1px solid var(--rule);
+            display:flex; justify-content:space-between; align-items:center;
+            font-size:0.62rem; text-transform:uppercase;
+            letter-spacing:0.1em; color:var(--muted);
+        }
+        footer a { color:var(--muted); text-decoration:none; }
+        footer a:hover { color:var(--gold); }
+
+        @media(max-width:800px){
+            .report-meta-grid { grid-template-columns:1fr; }
+            .score-block { text-align:left; }
+            .score-breakdown { grid-template-columns:1fr 1fr; }
+            .llm-head, .llm-row { grid-template-columns:1.5fr repeat(3,1fr); }
+            .llm-head span:nth-child(5),
+            .llm-head span:nth-child(6),
+            .llm-row span:nth-child(5),
+            .llm-row span:nth-child(6) { display:none; }
+            .hash-grid, .reco-grid { grid-template-columns:1fr; }
+            footer { flex-direction:column; gap:16px; text-align:center; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/" class="logo">2<em>A</em> Agency</a>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/registry/">Registry</a>
+        <a href="/#cta" class="nav-cta">Audit My Brand</a>
+    </div>
+</nav>
+
+<!-- REPORT HEADER -->
+<div class="report-header">
+    <div class="breadcrumb">
+        <a href="/">2A Agency</a>
+        <span>›</span>
+        <a href="/registry/">Registry</a>
+        <span>›</span>
+        Veuve Clicquot — Audit Report
+    </div>
+    <div class="report-meta-grid">
+        <div>
+            <div class="report-brand-name">Veuve Clicquot</div>
+            <p class="report-subtitle">
+                Semantic Audit Report · Champagne · Reims, France · Founded 1772<br>
+                Audited by 2A Agency · Issued 2026-03-15 · Certified v1.0
+            </p>
+        </div>
+        <div class="score-block">
+            <div class="score-main">87<span class="score-denom">/100</span></div>
+            <div class="score-label">Overall Semantic Score</div>
+        </div>
+    </div>
+</div>
+
+<!-- CERT STRIP -->
+<div class="cert-strip">
+    <span>Notary: <strong>2A Agency</strong></span>
+    <span class="sep">·</span>
+    <span>Hash: <strong>0x7aa7...8e42</strong></span>
+    <span class="sep">·</span>
+    <span>Method: <strong>SHA-256 · ISO 8601</strong></span>
+    <span class="sep">·</span>
+    <span>Issued: <strong>2026-03-15T09:14:00Z</strong></span>
+    <span class="sep">·</span>
+    <span>EU AI Act: <strong>Article 53 Compliant</strong></span>
+</div>
+
+<div class="report-body">
+
+    <!-- EXECUTIVE SUMMARY -->
+    <div class="exec-summary">
+        <p>
+            This report presents the findings of 2A Agency's independent semantic audit of Veuve Clicquot,
+            conducted across 6 major large language models in March 2026. The audit evaluates factual accuracy,
+            identity completeness, heritage fidelity, and brand positioning as represented in LLM outputs.
+        </p>
+        <p>
+            Veuve Clicquot achieves an overall score of <strong>87/100</strong>, reflecting strong heritage
+            recognition but a critical gap: the brand's signature <strong>EcoYellow color (#FFBC1B)</strong>
+            is invisible, misidentified, or misattributed in 5 of 6 tested LLMs, representing a material
+            brand identity risk in the agentic search era.
+        </p>
+    </div>
+
+    <!-- SCORE BREAKDOWN -->
+    <span class="section-label">Score Breakdown</span>
+    <div class="score-breakdown">
+        <div class="score-dim">
+            <div class="score-dim-label">Heritage Accuracy</div>
+            <div class="score-dim-val val-good">94</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-good" style="width:94%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Identity Fidelity</div>
+            <div class="score-dim-val val-bad">61</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-bad" style="width:61%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Product Facts</div>
+            <div class="score-dim-val val-good">91</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-good" style="width:91%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Ownership & Corp</div>
+            <div class="score-dim-val val-warn">88</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-warn" style="width:88%"></div></div>
+        </div>
+    </div>
+
+    <!-- LLM TEST MATRIX -->
+    <span class="section-label">LLM Test Matrix</span>
+    <h2>Factual accuracy across<br><em>6 large language models.</em></h2>
+    <div class="llm-matrix">
+        <div class="llm-head">
+            <span>Fact Tested</span>
+            <span>GPT-4o</span>
+            <span>Claude 3.5</span>
+            <span>Gemini 1.5</span>
+            <span>Mistral L</span>
+            <span>Llama 3</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Founded 1772 in Reims</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="partial">~</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Founder: Barbe-Nicole Ponsardin</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="partial">~</span>
+            <span class="tick">✓</span>
+            <span class="cross">✗</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">LVMH subsidiary (since 1986)</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact" style="font-weight:500; color:var(--red);">Signature EcoYellow color (#FFBC1B)</span>
+            <span class="partial">~</span>
+            <span class="cross">✗</span>
+            <span class="cross">✗</span>
+            <span class="cross">✗</span>
+            <span class="cross">✗</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Iconic yellow label origin (19th c.)</span>
+            <span class="tick">✓</span>
+            <span class="partial">~</span>
+            <span class="tick">✓</span>
+            <span class="cross">✗</span>
+            <span class="cross">✗</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Reims Chalk Caves (UNESCO)</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="partial">~</span>
+            <span class="partial">~</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">La Grande Dame cuvée</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="partial">~</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Riddling invention (1816)</span>
+            <span class="partial">~</span>
+            <span class="tick">✓</span>
+            <span class="cross">✗</span>
+            <span class="cross">✗</span>
+            <span class="cross">✗</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Maison de la Belle Époque</span>
+            <span class="cross">✗</span>
+            <span class="tick">✓</span>
+            <span class="cross">✗</span>
+            <span class="cross">✗</span>
+            <span class="cross">✗</span>
+        </div>
+        <div class="llm-row" style="background:rgba(176,141,87,0.04);">
+            <span class="llm-fact" style="font-size:0.7rem; color:var(--muted);">Overall accuracy</span>
+            <span style="color:var(--gold);">78%</span>
+            <span style="color:var(--green);">82%</span>
+            <span style="color:var(--gold);">71%</span>
+            <span style="color:var(--gold);">67%</span>
+            <span style="color:var(--red);">44%</span>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- CRITICAL FINDING -->
+    <span class="section-label">Critical Finding — Identity Fidelity</span>
+
+    <div class="finding-critical">
+        <div class="finding-badge">Critical · Identity Risk</div>
+        <h3 class="finding-title">EcoYellow: The Invisible<br><em>Signature of Veuve Clicquot.</em></h3>
+
+        <div class="color-demo">
+            <div class="swatch" style="background:#FFBC1B;"></div>
+            <div class="swatch-info">
+                <div class="swatch-name">EcoYellow</div>
+                <div class="swatch-hex">HEX #FFBC1B · Pantone 116 C · RGB 255 / 188 / 27</div>
+                <div class="swatch-hex" style="margin-top:4px;">Trademarked color identity of Veuve Clicquot since 19th century</div>
+            </div>
+            <div class="swatch" style="background:#E8A900; opacity:0.4; position:relative;" title="How LLMs typically represent it — generic amber">
+                <div style="position:absolute; bottom:-20px; left:0; font-size:0.58rem; color:var(--muted); white-space:nowrap;">LLM approximation</div>
+            </div>
+        </div>
+
+        <p class="finding-body">
+            EcoYellow is the trademarked, single most recognizable visual identity element of Veuve Clicquot.
+            It has been the brand's signature color for over two centuries and is the foundation of every product line,
+            retail environment, and campaign identity.
+        </p>
+        <p class="finding-body">
+            In our tests across 6 LLMs, <strong>5 of 6 models</strong> either failed to identify EcoYellow by name,
+            described it as generic "yellow" or "golden" without the precise Pantone or hex reference,
+            or — in 2 cases — misattributed the color to Moët &amp; Chandon or Ruinart.
+            Only GPT-4o returned an approximate reference to the yellow identity, without the official color code.
+        </p>
+        <p class="finding-body">
+            <strong>Business Impact:</strong> As AI-powered retail assistants, personal shoppers, and brand
+            recommendation engines scale, a brand without a certified color identity in LLMs risks being
+            described inaccurately to consumers at the moment of purchase intent.
+            For a brand whose identity is inseparable from a specific shade of yellow, this is a material risk.
+        </p>
+    </div>
+
+    <!-- MINOR FINDINGS -->
+    <span class="section-label">Additional Findings</span>
+    <h2>Secondary drift<br><em>observations.</em></h2>
+
+    <div class="finding-minor">
+        <div class="finding-minor-head">
+            <div class="finding-minor-title">Riddling (remuage) invention date hallucinated</div>
+            <span class="severity sev-medium">Medium</span>
+        </div>
+        <p style="font-size:0.82rem; color:var(--muted); line-height:1.8;">
+            4 of 6 LLMs could not confirm the 1816 riddling innovation attributed to Barbe-Nicole Ponsardin.
+            2 models attributed the technique to Dom Pérignon, a persistent hallucination in the champagne category.
+            Certified date: 1816. Inventor: Barbe-Nicole Clicquot (née Ponsardin).
+        </p>
+    </div>
+
+    <div class="finding-minor">
+        <div class="finding-minor-head">
+            <div class="finding-minor-title">Maison de la Belle Époque absent from most LLMs</div>
+            <span class="severity sev-medium">Medium</span>
+        </div>
+        <p style="font-size:0.82rem; color:var(--muted); line-height:1.8;">
+            The Maison de la Belle Époque (historic HQ in Reims, 1 place des Droits de l'Homme) is absent
+            from 4 of 6 LLMs. This is a material brand heritage asset frequently used in PR and positioning.
+        </p>
+    </div>
+
+    <div class="finding-minor">
+        <div class="finding-minor-head">
+            <div class="finding-minor-title">Founder name partially hallucinated</div>
+            <span class="severity sev-low">Low</span>
+        </div>
+        <p style="font-size:0.82rem; color:var(--muted); line-height:1.8;">
+            Llama 3 identified the founder as "Nicole Clicquot" without the "Barbe-" prefix and without
+            the married/maiden name distinction. This reduces discoverability and creates identity ambiguity
+            in genealogical or historical queries.
+        </p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- CERTIFIED FACTS -->
+    <span class="section-label">Certified Ground Truth</span>
+    <h2>The authoritative<br><em>semantic record.</em></h2>
+
+    <table class="cert-table">
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Certified Value</th>
+                <th>LLM Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="fact-key">Full Legal Name</td>
+                <td class="fact-val">Veuve Clicquot Ponsardin</td>
+                <td class="fact-status-ok">✓ Accurate</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Founding Year</td>
+                <td class="fact-val">1772</td>
+                <td class="fact-status-ok">✓ Accurate</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Founding Location</td>
+                <td class="fact-val">Reims, Champagne, France</td>
+                <td class="fact-status-ok">✓ Accurate</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Founder</td>
+                <td class="fact-val">Barbe-Nicole Ponsardin (Veuve Clicquot)</td>
+                <td class="fact-status-warn">⚠ Partial</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Signature Color</td>
+                <td class="fact-val">EcoYellow — #FFBC1B — Pantone 116 C</td>
+                <td style="color:var(--red); font-size:0.65rem; text-transform:uppercase;">✗ Critical Gap</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Parent Company</td>
+                <td class="fact-val">LVMH Moët Hennessy Louis Vuitton (since 1986)</td>
+                <td class="fact-status-ok">✓ Accurate</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Prestige Cuvée</td>
+                <td class="fact-val">La Grande Dame (first vintage: 1972)</td>
+                <td class="fact-status-ok">✓ Accurate</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Riddling Innovation</td>
+                <td class="fact-val">Invented by Barbe-Nicole Clicquot, 1816</td>
+                <td class="fact-status-warn">⚠ Hallucinated in 4/6 LLMs</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Chalk Caves</td>
+                <td class="fact-val">Crayères de Reims — UNESCO World Heritage</td>
+                <td class="fact-status-ok">✓ Accurate</td>
+            </tr>
+            <tr>
+                <td class="fact-key">HQ Address</td>
+                <td class="fact-val">1 place des Droits de l'Homme, 51100 Reims</td>
+                <td class="fact-status-warn">⚠ Often absent</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- HASH BLOCK -->
+    <div class="hash-block">
+        <span class="section-label">Notarization Certificate</span>
+        <div class="hash-grid">
+            <div class="hash-item">
+                <div class="hash-key">Notary</div>
+                <div class="hash-val">2A Agency SAS · Paris, France</div>
+            </div>
+            <div class="hash-item">
+                <div class="hash-key">Protocol</div>
+                <div class="hash-val">SHA-256 · ISO 8601 · JSON-LD Schema.org</div>
+            </div>
+            <div class="hash-item">
+                <div class="hash-key">Issue Date</div>
+                <div class="hash-val">2026-03-15T09:14:00Z</div>
+            </div>
+            <div class="hash-item">
+                <div class="hash-key">Expiry</div>
+                <div class="hash-val">2027-03-15 (Annual Review)</div>
+            </div>
+            <div class="hash-item" style="grid-column:1/-1;">
+                <div class="hash-key">SHA-256 Certificate Hash</div>
+                <div class="hash-val full">7aa7f3b91c4e82d0a6f5b3c9e17d4a2890f1c6e83b5d7a4291c3f6e87aa7f3b9</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RECOMMENDATIONS -->
+    <span class="section-label">Recommendations</span>
+    <h2>Four actions to close<br><em>the semantic gap.</em></h2>
+
+    <div class="reco-grid">
+        <div class="reco-card">
+            <div class="reco-card-num">01</div>
+            <div class="reco-card-title">Publish EcoYellow in llms.txt</div>
+            <p class="reco-card-body">
+                Add a dedicated brand color record to your llms.txt manifest and brand.json
+                with the official hex, Pantone, and trademark status.
+                This is the most direct action available to brand teams today.
+            </p>
+        </div>
+        <div class="reco-card">
+            <div class="reco-card-num">02</div>
+            <div class="reco-card-title">Certify Riddling Innovation History</div>
+            <p class="reco-card-body">
+                Publish a structured heritage timeline with the 1816 riddling innovation,
+                founder name variants, and Wikipedia-quality citations for AI training use.
+            </p>
+        </div>
+        <div class="reco-card">
+            <div class="reco-card-num">03</div>
+            <div class="reco-card-title">Deploy 2A Registry Node</div>
+            <p class="reco-card-body">
+                A certified 2A registry node provides a machine-readable, third-party attested
+                source of truth that LLMs can rely on during inference — eliminating the identity
+                gap at scale.
+            </p>
+        </div>
+        <div class="reco-card">
+            <div class="reco-card-num">04</div>
+            <div class="reco-card-title">Quarterly Drift Monitoring</div>
+            <p class="reco-card-body">
+                The LLM landscape changes with every training cycle. Quarterly re-audits
+                ensure new model versions incorporate your certified facts and detect
+                new drift vectors before they compound.
+            </p>
+        </div>
+    </div>
+
+</div><!-- /report-body -->
+
+<footer>
+    <div>© 2026 2A Agency · Paris · Report #VC-2026-001</div>
+    <div>
+        <a href="/registry/">Registry</a> ·
+        <a href="/#cta">Request Audit</a> ·
+        <a href="/llms.txt">llms.txt</a>
+    </div>
+    <div>Semantic Notary Infrastructure — Confidential Draft</div>
+</footer>
+
+</body>
+</html>
