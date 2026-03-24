@@ -15,7 +15,7 @@ Allow: /registry/
 Allow: /reports/
 Allow: /llms.txt
 Allow: /sitemap.xml
-Disallow: /api/
+Allow: /api/node/
 Disallow: /public/
 Crawl-delay: 2
 
