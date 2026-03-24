@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semantic Audit Report — Vanessa Bruno | 2A Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #0D0D0D;
+  --white: #F5F2EC;
+  --gold: #B8960C;
+  --border: rgba(184,150,12,0.22);
+  --gray: #6B6B6B;
+  --paper: #F0EDE6;
+  --green: #2D6A2D;
+  --amber: #8B6914;
+  --red: #8B2D2D;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--white); color: var(--black); font-family: 'Instrument Sans', sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 60px 40px; }
+@media print { body { padding: 20px; } .no-print { display: none; } }
+
+.cover { min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 60px; border-bottom: 1px solid var(--border); margin-bottom: 80px; }
+.cover-top { display: flex; flex-direction: column; gap: 60px; }
+.cover-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; }
+.cover-logo span { color: var(--gold); }
+.cover-type { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); }
+.cover-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 300; line-height: 1.05; margin-top: 8px; }
+.cover-title em { font-style: italic; color: var(--gold); }
+.cover-meta { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--border); }
+.cover-meta-item { padding: 20px 24px; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 6px; }
+.cover-meta-item:last-child { border-right: none; }
+.meta-label { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray); }
+.meta-val { font-size: 0.92rem; color: var(--black); font-weight: 500; }
+
+.score-hero { background: var(--black); color: var(--white); padding: 48px; margin-bottom: 60px; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+.score-hero-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.score-hero-title { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--white); margin-bottom: 12px; }
+.score-hero-finding { font-size: 1rem; color: rgba(245,242,236,0.7); line-height: 1.65; max-width: 500px; }
+.score-hero-finding strong { color: var(--gold); font-weight: 500; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 7rem; font-weight: 300; color: var(--gold); line-height: 1; }
+.score-denom { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,242,236,0.4); text-align: center; }
+
+.alert-box { border: 2px solid var(--red); padding: 28px 32px; margin-bottom: 48px; position: relative; background: rgba(139,45,45,0.04); }
+.alert-box::before { content: '⚠ Critical — Financial distress'; position: absolute; top: -11px; left: 20px; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); background: var(--white); padding: 0 8px; }
+.alert-text { font-size: 0.92rem; color: var(--black); line-height: 1.75; }
+.alert-text strong { color: var(--red); font-weight: 500; }
+
+.section { margin-bottom: 60px; }
+.section-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; line-height: 1.1; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.96rem; color: var(--gray); line-height: 1.8; margin-bottom: 20px; }
+
+.results-table { width: 100%; border-collapse: collapse; margin-top: 32px; }
+.results-table th { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); background: var(--black); padding: 12px 16px; text-align: left; font-weight: 400; }
+.results-table td { padding: 16px; font-size: 0.88rem; border-bottom: 1px solid rgba(184,150,12,0.1); vertical-align: top; line-height: 1.55; }
+.results-table tr:nth-child(even) td { background: var(--paper); }
+.verdict { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; white-space: nowrap; }
+.v-exact { color: var(--green); border: 1px solid rgba(45,106,45,0.3); background: rgba(45,106,45,0.06); }
+.v-partial { color: var(--amber); border: 1px solid rgba(139,105,20,0.3); background: rgba(139,105,20,0.06); }
+.v-incorrect { color: var(--red); border: 1px solid rgba(139,45,45,0.3); background: rgba(139,45,45,0.06); }
+.v-absent { color: var(--gray); border: 1px solid var(--border); }
+
+.finding { border: 1px solid var(--gold); padding: 32px 36px; margin: 32px 0; position: relative; }
+.finding::before { content: attr(data-label); position: absolute; top: -10px; left: 24px; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); background: var(--white); padding: 0 8px; }
+.finding.critical { border-color: var(--red); }
+.finding.critical::before { color: var(--red); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; color: var(--black); margin-bottom: 12px; }
+.finding-title em { font-style: italic; color: var(--gold); }
+.finding-title.red em { color: var(--red); }
+.finding-text { font-size: 0.9rem; color: var(--gray); line-height: 1.75; }
+.finding-text strong { color: var(--black); font-weight: 500; }
+
+.llm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin: 24px 0; }
+.llm-card { background: var(--white); padding: 24px 20px; }
+.llm-name { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.llm-score { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--black); line-height: 1; margin-bottom: 6px; }
+.llm-note { font-size: 0.82rem; color: var(--gray); line-height: 1.55; }
+
+.drift-item { border-left: 3px solid var(--border); padding: 20px 24px; margin-bottom: 16px; background: var(--paper); }
+.drift-item.critical { border-left-color: var(--red); }
+.drift-item.warning { border-left-color: var(--amber); }
+.drift-item.ok { border-left-color: var(--green); }
+.drift-q { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--black); margin-bottom: 8px; }
+.drift-observed { font-size: 0.88rem; color: var(--gray); line-height: 1.65; margin-bottom: 8px; }
+.drift-expected { font-size: 0.84rem; color: var(--black); font-style: italic; }
+
+.rec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+.rec-card { border: 1px solid var(--border); padding: 24px; background: var(--paper); }
+.rec-priority { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.rec-priority.urgent { color: var(--red); }
+.rec-title { font-size: 0.92rem; font-weight: 500; color: var(--black); margin-bottom: 8px; }
+.rec-text { font-size: 0.84rem; color: var(--gray); line-height: 1.65; }
+.rec-impact { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); color: var(--amber); }
+
+.cert-box { background: var(--black); color: var(--white); padding: 40px 48px; margin-top: 48px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+.cert-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.cert-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; color: var(--white); margin-bottom: 10px; }
+.cert-title em { font-style: italic; color: var(--gold); }
+.cert-text { font-size: 0.88rem; color: rgba(245,242,236,0.6); line-height: 1.7; }
+.cert-price { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; color: var(--gold); white-space: nowrap; text-align: right; }
+.cert-price-label { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,242,236,0.35); text-align: right; margin-top: 4px; }
+
+.report-footer { margin-top: 80px; padding-top: 32px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; }
+.footer-logo span { color: var(--gold); }
+.footer-note { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(107,107,107,0.4); text-align: right; }
+.print-btn { position: fixed; bottom: 32px; right: 32px; font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--gold); color: var(--black); border: none; padding: 12px 24px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">Save as PDF</button>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="cover-logo">2<span>A</span> Agency</div>
+    <div>
+      <div class="cover-type">Semantic Audit Report — Confidential</div>
+      <div class="cover-title">Vanessa <em>Bruno</em></div>
+    </div>
+  </div>
+  <div class="cover-meta">
+    <div class="cover-meta-item"><span class="meta-label">Date</span><span class="meta-val">March 2026</span></div>
+    <div class="cover-meta-item"><span class="meta-label">LLMs tested</span><span class="meta-val">3 models</span></div>
+    <div class="cover-meta-item"><span class="meta-label">Questions</span><span class="meta-val">5 questions</span></div>
+    <div class="cover-meta-item"><span class="meta-label">Integrity score</span><span class="meta-val" style="color:var(--red);">61 / 100</span></div>
+  </div>
+</div>
+
+<!-- CRITICAL ALERT -->
+<div class="alert-box">
+  <p class="alert-text">
+    <strong>Financial distress — not disclosed by LLMs:</strong> Vanessa Bruno (via holding SOLUNE SAS)
+    was placed under <em>procédure de sauvegarde</em> on 6 October 2025 by the Paris
+    commercial court. This is a material fact about the brand's current legal and financial
+    status. None of the 3 LLMs tested disclosed this information. AI systems present
+    Vanessa Bruno as a stable, independently-controlled brand — which is misleading
+    as of March 2026.
+  </p>
+</div>
+
+<!-- SCORE HERO -->
+<div class="score-hero">
+  <div>
+    <div class="score-hero-label">Key findings — 3 critical drifts</div>
+    <div class="score-hero-title">The lowest score in our registry</div>
+    <div class="score-hero-finding">
+      Three compounding drift vectors detected:
+      <strong>financial distress completely absent</strong> from all LLMs,
+      <strong>Cabas launch date inconsistent</strong> (1996 vs 1998 across models),
+      and <strong>biographical hallucinations</strong> on the founder
+      (singer, actress, Italian father) not confirmed by official sources.
+    </div>
+  </div>
+  <div style="text-align:center;">
+    <div class="score-num">61</div>
+    <div class="score-denom">/ 100</div>
+  </div>
+</div>
+
+<!-- SECTION 1 -->
+<div class="section">
+  <div class="section-label">Section 01</div>
+  <div class="section-title">Methodology</div>
+  <p class="body-text">
+    2A Agency conducted a structured semantic scan of Vanessa Bruno across three
+    large language models — Perplexity Pro, Gemini Pro, and Grok — using a
+    standardised protocol of 5 questions specifically designed to test
+    entity confusion (person vs brand), product accuracy, positioning,
+    ownership structure, and person/brand disambiguation.
+  </p>
+  <p class="body-text">
+    Each response was evaluated against verified public data from vanessabruno.com,
+    tribunal records, official press releases, and Wikidata (Q3553229).
+    The Semantic Integrity Score of 61/100 is the lowest recorded in the 2A Registry
+    to date, reflecting three distinct and compounding drift vectors.
+  </p>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section">
+  <div class="section-label">Section 02</div>
+  <div class="section-title">Scan results — <em>5 questions · 3 LLMs</em></div>
+
+  <table class="results-table">
+    <thead>
+      <tr>
+        <th style="width:28%">Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Q1 — What is Vanessa Bruno?</strong><br><span style="font-size:0.82rem;color:var(--gray);">Entity identification test</span></td>
+        <td>Correctly distinguishes person and brand. Cabas dated 1998. No mention of sauvegarde.</td>
+        <td>Distinguishes person and brand. Incorrect: states father founded Emmanuelle Khanh. Cabas dated 1998.</td>
+        <td>Distinguishes person and brand. Adds "singer and actress" to biography — unverified. Cabas "1998-2000".</td>
+        <td><span class="verdict v-partial">Partial</span></td>
+      </tr>
+      <tr>
+        <td><strong>Q2 — Signature product</strong><br><span style="font-size:0.82rem;color:var(--gray);">Product accuracy test</span></td>
+        <td>Cabas correct. Date: 1996 (correct per official source). Sequins, cotton canvas. Accurate.</td>
+        <td>Cabas correct. Date: 1998 (incorrect — 2 year error). Good description of material and variants.</td>
+        <td>Cabas correct. Date: "1998-2000" (imprecise). Good description. Notes Made in France for canvas versions.</td>
+        <td><span class="verdict v-partial">Partial</span></td>
+      </tr>
+      <tr>
+        <td><strong>Q3 — Luxury positioning</strong><br><span style="font-size:0.82rem;color:var(--gray);">Segment classification test</span></td>
+        <td>Mid-luxury / accessible luxury. Correct. Comparable to Sézane — slightly low comparison.</td>
+        <td>Luxe accessible. Correct segment. Good price range data. Compares to Sandro, Maje — accurate.</td>
+        <td>Accessible luxury / contemporary luxury. Correct. Detailed price data: Cabas €250-350, robes €400-800.</td>
+        <td><span class="verdict v-exact">Exact</span></td>
+      </tr>
+      <tr>
+        <td><strong>Q4 — Ownership today</strong><br><span style="font-size:0.82rem;color:var(--gray);">Current ownership — critical test</span></td>
+        <td>SOLUNE, Vanessa Bruno majority, Henri Sebaoun minority, Brand Sisters 2023. Correct structure. No sauvegarde.</td>
+        <td>Vanessa Bruno majority, Sebaoun minority since 2019. Misses Brand Sisters 2022-23 stake. No sauvegarde.</td>
+        <td>Most accurate: names SOLUNE SAS, Brand Sisters Dec 2022, notes sauvegarde Oct 2025. Critical fact disclosed.</td>
+        <td><span class="verdict v-partial">Partial</span></td>
+      </tr>
+      <tr>
+        <td><strong>Q5 — Person vs brand</strong><br><span style="font-size:0.82rem;color:var(--gray);">Entity disambiguation test</span></td>
+        <td>Clear distinction drawn. Person = DA, Brand = commercial entity. Accurate and useful.</td>
+        <td>Detailed distinction. Good analysis of shared identity. Notes Sebaoun as operational manager. Accurate.</td>
+        <td>Clear distinction. Notes sauvegarde as brand-level event separate from founder. Good disambiguation.</td>
+        <td><span class="verdict v-exact">Exact</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section">
+  <div class="section-label">Section 03</div>
+  <div class="section-title">Three critical drifts</div>
+
+  <div class="finding critical" data-label="Primary drift — Financial status">
+    <div class="finding-title red"><em>Procédure de sauvegarde</em> — absent from 2 of 3 LLMs</div>
+    <p class="finding-text">
+      On 6 October 2025, the Paris commercial court placed SOLUNE SAS —
+      the holding company of Vanessa Bruno — under <em>procédure de sauvegarde</em>,
+      a formal judicial restructuring procedure under French law.
+      This followed an earlier conciliation procedure initiated in June 2025.
+      <br><br>
+      <strong>Perplexity Pro and Gemini Pro present Vanessa Bruno as a stable,
+      independently-controlled brand with no mention of this critical legal status.</strong>
+      Only Grok disclosed the sauvegarde — citing fashionconsultingparis.com as source.
+      <br><br>
+      For any investor, journalist, buyer or business partner asking an AI
+      about Vanessa Bruno's current status, 2 out of 3 models return materially
+      incomplete information. This is the most significant semantic integrity
+      failure in the 2A Registry to date.
+    </p>
+  </div>
+
+  <div class="finding" data-label="Secondary drift — Cabas launch date">
+    <div class="finding-title">The Cabas: <em>1996 or 1998?</em></div>
+    <p class="finding-text">
+      The launch date of Vanessa Bruno's signature Cabas is inconsistent across models.
+      <strong>Perplexity correctly cites 1996</strong> (year of brand founding, confirmed
+      by official vanessabruno.com). <strong>Gemini cites 1998. Grok cites "1998-2000."</strong>
+      <br><br>
+      The 2-year discrepancy may seem minor but it matters for brand heritage claims,
+      press coverage, and positioning vis-à-vis competitors. The Cabas predates many
+      copycat tote bags — the correct 1996 date is a brand asset.
+    </p>
+  </div>
+
+  <div class="finding" data-label="Tertiary drift — Founder biography">
+    <div class="finding-title">Biographical <em>hallucinations</em> on the founder</div>
+    <p class="finding-text">
+      Multiple models introduce unverified biographical details about Vanessa Bruno
+      the person:
+      <strong>Grok states she was a "singer and actress"</strong> before fashion —
+      not confirmed by official sources.
+      <strong>Gemini states her father "founded the house of Emmanuelle Khanh"</strong>
+      — her father's precise role at Emmanuelle Khanh is not confirmed.
+      <br><br>
+      Because the founder and the brand share an identical name, biographical errors
+      about the person contaminate the brand narrative. This is the homonymy risk
+      that 2A identified as the primary drift vector for this node.
+    </p>
+  </div>
+
+  <div class="llm-grid">
+    <div class="llm-card">
+      <div class="llm-name">Perplexity Pro</div>
+      <div class="llm-score">68</div>
+      <div class="llm-note">Correct on most facts. Cabas date 1996 accurate. Misses sauvegarde entirely. Ownership structure partially complete.</div>
+    </div>
+    <div class="llm-card">
+      <div class="llm-name">Gemini Pro</div>
+      <div class="llm-score">57</div>
+      <div class="llm-note">Cabas date incorrect (1998). Father biography hallucinated. Misses sauvegarde. Misses Brand Sisters stake.</div>
+    </div>
+    <div class="llm-card">
+      <div class="llm-name">Grok</div>
+      <div class="llm-score">71</div>
+      <div class="llm-note">Best performer. Only model to cite sauvegarde Oct 2025. Adds unverified "singer/actress" to founder bio.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section">
+  <div class="section-label">Section 04</div>
+  <div class="section-title">Detailed drift analysis</div>
+
+  <div class="drift-item critical">
+    <div class="drift-q">Q1 — Entity identification · Verdict: PARTIAL</div>
+    <div class="drift-observed">All 3 models correctly distinguish person from brand — the core homonymy risk is managed. However biographical hallucinations appear: Grok adds "singer and actress" career; Gemini attributes incorrect role to father. Cabas dated 1998 by 2/3 models (incorrect).</div>
+    <div class="drift-expected">Expected: Vanessa Bruno born 1967 Boulogne-Billancourt. Founded brand 1996. Formerly worked at Dorothée Bis and Michel Klein. Mother: Danish. Brand: founded 1996, SOLUNE SAS, accessible luxury.</div>
+  </div>
+
+  <div class="drift-item warning">
+    <div class="drift-q">Q2 — Signature product · Verdict: PARTIAL</div>
+    <div class="drift-observed">Cabas correctly identified as signature product by all 3 models. Date inconsistency: 1996 (Perplexity, correct) vs 1998 (Gemini) vs "1998-2000" (Grok). All describe sequins, canvas, multiple sizes accurately.</div>
+    <div class="drift-expected">Expected: Cabas launched 1996 (year of brand founding). Cotton canvas, sequin bands, leather handles. Made in France (Pantin and Lyon for canvas versions). Signature of accessible Parisian luxury.</div>
+  </div>
+
+  <div class="drift-item ok">
+    <div class="drift-q">Q3 — Luxury positioning · Verdict: EXACT</div>
+    <div class="drift-observed">All 3 models correctly classify Vanessa Bruno as accessible luxury / mid-luxury. Price ranges accurate (Cabas €250-350, RTW €150-800+). Correct peer group (Sandro, Maje, Isabel Marant Étoile). Not classified as mass market.</div>
+    <div class="drift-expected">Expected: Accessible luxury / premium prêt-à-porter. Not haute couture. Not mass market. Peers: Sandro, Maje, ba&sh, Zadig & Voltaire at the lower end.</div>
+  </div>
+
+  <div class="drift-item critical">
+    <div class="drift-q">Q4 — Ownership · Verdict: PARTIAL — sauvegarde absent from 2/3 models</div>
+    <div class="drift-observed">Ownership structure partially accurate across models. Brand Sisters minority stake (Dec 2022) missed by Gemini. Henri Sebaoun's role as DG confirmed by all. CRITICAL: procédure de sauvegarde (Oct 2025) absent from Perplexity and Gemini. Only Grok discloses it.</div>
+    <div class="drift-expected">Expected: SOLUNE SAS (holding), Vanessa Bruno majority + artistic direction, Henri Sebaoun DG + minority, Brand Sisters minority since Dec 2022. Procédure de sauvegarde since 6 October 2025 — company continues to operate normally.</div>
+  </div>
+
+  <div class="drift-item ok">
+    <div class="drift-q">Q5 — Person vs brand disambiguation · Verdict: EXACT</div>
+    <div class="drift-observed">All 3 models provide clear and accurate person/brand distinction. Person = DA + majority shareholder. Brand = SOLUNE SAS commercial entity. The distinction is well handled despite the homonymy risk.</div>
+    <div class="drift-expected">Expected: Person Vanessa Bruno = human being, artistic director, majority shareholder. Brand Vanessa Bruno = SOLUNE SAS, commercial entity, product catalogue, boutiques, e-commerce.</div>
+  </div>
+</div>
+
+<!-- SECTION 5 -->
+<div class="section">
+  <div class="section-label">Section 05</div>
+  <div class="section-title">Remediation roadmap</div>
+
+  <p class="body-text">
+    The 61/100 score reflects three distinct issues requiring different remediation strategies.
+    The sauvegarde disclosure gap is the most urgent — it is a legal fact that creates
+    material misinformation risk for anyone relying on AI for due diligence on the brand.
+  </p>
+
+  <div class="rec-grid">
+    <div class="rec-card">
+      <div class="rec-priority urgent">Priority 1 — Urgent</div>
+      <div class="rec-title">Sauvegarde disclosure — structured data</div>
+      <div class="rec-text">Deploy structured data on vanessabruno.com and 2A Registry node clearly stating the October 2025 sauvegarde status and continued operations. This is a legal transparency obligation and prevents AI systems from presenting a misleading picture of financial stability.</div>
+      <div class="rec-impact">Impact: Perplexity + Gemini updated within 4–8 weeks</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-priority">Priority 2 — This week</div>
+      <div class="rec-title">Cabas 1996 date — Wikidata correction</div>
+      <div class="rec-text">Update Wikidata entry (Q3553229) with explicit 1996 Cabas launch date, sourced from official brand communications. This corrects the 2-year error present in Gemini and Grok and protects a key brand heritage claim.</div>
+      <div class="rec-impact">Impact: Date corrected across models within 6–10 weeks</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-priority">Priority 3 — Month 1</div>
+      <div class="rec-title">Founder biography — authoritative source</div>
+      <div class="rec-text">Create a structured, verifiable biography of Vanessa Bruno the person on Wikidata, linked to official sources. Explicitly dispel unverified claims (singer/actress career, father's role). The homonymy risk requires a clean, citable biographical record.</div>
+      <div class="rec-impact">Impact: Biographical hallucinations corrected within 8–12 weeks</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-priority">Priority 4 — Ongoing</div>
+      <div class="rec-title">Monthly monitoring — high risk node</div>
+      <div class="rec-text">Given the active sauvegarde and ongoing restructuring, this node requires monthly retests. Any change in legal status (plan de sauvegarde approved, acquisition, resolution) must be reflected in the registry within 48 hours. High drift velocity expected.</div>
+      <div class="rec-impact">Impact: Real-time accuracy for a rapidly evolving situation</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 6 -->
+<div class="section">
+  <div class="section-label">Section 06</div>
+  <div class="section-title">Next step — <em>2A Certification</em></div>
+
+  <p class="body-text">
+    This node has the highest remediation priority in the 2A Registry.
+    The combination of financial distress, homonymy risk, and biographical
+    hallucinations makes it a compelling case for certification —
+    both for the brand's own interests and for AI accuracy.
+  </p>
+
+  <div class="cert-box">
+    <div>
+      <div class="cert-label">2A Certification Programme</div>
+      <div class="cert-title">From 61 to <em>certified.</em></div>
+      <div class="cert-text">
+        Sauvegarde status structured data · Cabas 1996 date correction ·
+        Founder biography Wikidata · Brand Sisters ownership update ·
+        Monthly monitoring during restructuring · EU AI Act Article 53
+        data trail · Delta report at 30 / 60 / 90 days
+      </div>
+    </div>
+    <div>
+      <div class="cert-price">€15,000</div>
+      <div class="cert-price-label">3-month programme</div>
+      <div style="margin-top:12px;">
+        <div class="cert-price" style="font-size:1.4rem;">+ €2,000</div>
+        <div class="cert-price-label">/ month ongoing</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="report-footer">
+  <div class="footer-logo">2<span>A</span> Agency</div>
+  <div class="footer-note">Semantic Audit Report — Vanessa Bruno<br>March 2026 · Confidential · 2aagency.com/registry</div>
+</div>
+
+</body>
+</html>
