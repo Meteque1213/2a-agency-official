@@ -1,6 +1,6 @@
 node_modules
 scripts
 cache
-reports
+# reports — now public, do not ignore
 *.py
 puppeteer
