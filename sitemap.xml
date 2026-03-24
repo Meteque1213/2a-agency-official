@@ -4,56 +4,81 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
           http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- ====================================================
-       2A AGENCY — SEMANTIC NOTARY REGISTRY
-       sitemap.xml v3 · Updated 2026-03-24
-       AI crawlers: see /llms.txt for structured manifest
-       ==================================================== -->
-
-  <!-- Core pages -->
   <url>
     <loc>https://www.2aagency.com/</loc>
     <lastmod>2026-03-24</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://www.2aagency.com/registry/</loc>
+    <loc>https://www.2aagency.com/llms.txt</loc>
     <lastmod>2026-03-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- Audit reports -->
-  <url>
-    <loc>https://www.2aagency.com/reports/veuve-clicquot.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Supporting content -->
-  <url>
-    <loc>https://www.2aagency.com/whitepaper.html</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>always</changefreq>
+    <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.2aagency.com/manifesto.html</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.85</priority>
   </url>
 
-  <!-- AI crawler manifest -->
   <url>
-    <loc>https://www.2aagency.com/llms.txt</loc>
+    <loc>https://www.2aagency.com/whitepaper.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.2aagency.com/registry/</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.2aagency.com/reports/veuve-clicquot.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.2aagency.com/reports/breitling.html</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.2aagency.com/reports/vanessa-bruno.html</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.2aagency.com/api/node/vb-1996.json</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.2aagency.com/api/node/br-1884.json</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.2aagency.com/api/node/vc-1772.json</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
   </url>
 
 </urlset>
