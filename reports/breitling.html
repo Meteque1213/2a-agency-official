@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semantic Audit Report — Breitling SA | 2A Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #0D0D0D;
+  --white: #F5F2EC;
+  --gold: #B8960C;
+  --border: rgba(184,150,12,0.22);
+  --gray: #6B6B6B;
+  --paper: #F0EDE6;
+  --green: #2D6A2D;
+  --amber: #8B6914;
+  --red: #8B2D2D;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: 'Instrument Sans', sans-serif;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+@media print { body { padding: 20px; } .no-print { display: none; } }
+
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 80px;
+  page-break-after: always;
+}
+.cover-top { display: flex; flex-direction: column; gap: 60px; }
+.cover-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; }
+.cover-logo span { color: var(--gold); }
+.cover-type { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); }
+.cover-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 300; line-height: 1.05; margin-top: 8px; }
+.cover-title em { font-style: italic; color: var(--gold); }
+.cover-meta { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--border); }
+.cover-meta-item { padding: 20px 24px; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 6px; }
+.cover-meta-item:last-child { border-right: none; }
+.meta-label { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray); }
+.meta-val { font-size: 0.92rem; color: var(--black); font-weight: 500; }
+
+.score-hero { background: var(--black); color: var(--white); padding: 48px; margin-bottom: 60px; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+.score-hero-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.score-hero-title { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--white); margin-bottom: 12px; }
+.score-hero-finding { font-size: 1rem; color: rgba(245,242,236,0.7); line-height: 1.65; max-width: 500px; }
+.score-hero-finding strong { color: var(--gold); font-weight: 500; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 7rem; font-weight: 300; color: var(--gold); line-height: 1; }
+.score-denom { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,242,236,0.4); text-align: center; }
+
+.section { margin-bottom: 60px; }
+.section-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; line-height: 1.1; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.96rem; color: var(--gray); line-height: 1.8; margin-bottom: 20px; }
+
+.results-table { width: 100%; border-collapse: collapse; margin-top: 32px; }
+.results-table th { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); background: var(--black); padding: 12px 16px; text-align: left; font-weight: 400; }
+.results-table td { padding: 16px; font-size: 0.88rem; border-bottom: 1px solid rgba(184,150,12,0.1); vertical-align: top; line-height: 1.55; }
+.results-table tr:nth-child(even) td { background: var(--paper); }
+.verdict { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; white-space: nowrap; }
+.v-exact { color: var(--green); border: 1px solid rgba(45,106,45,0.3); background: rgba(45,106,45,0.06); }
+.v-partial { color: var(--amber); border: 1px solid rgba(139,105,20,0.3); background: rgba(139,105,20,0.06); }
+
+.finding { border: 1px solid var(--gold); padding: 32px 36px; margin: 32px 0; position: relative; }
+.finding::before { content: attr(data-label); position: absolute; top: -10px; left: 24px; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); background: var(--white); padding: 0 8px; }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; color: var(--black); margin-bottom: 12px; }
+.finding-title em { font-style: italic; color: var(--gold); }
+.finding-text { font-size: 0.9rem; color: var(--gray); line-height: 1.75; }
+.finding-text strong { color: var(--black); font-weight: 500; }
+
+.llm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin: 24px 0; }
+.llm-card { background: var(--white); padding: 24px 20px; }
+.llm-name { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.llm-score { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--black); line-height: 1; margin-bottom: 6px; }
+.llm-note { font-size: 0.82rem; color: var(--gray); line-height: 1.55; }
+
+.drift-item { border-left: 3px solid var(--border); padding: 20px 24px; margin-bottom: 16px; background: var(--paper); }
+.drift-item.critical { border-left-color: var(--amber); }
+.drift-item.ok { border-left-color: var(--green); }
+.drift-q { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--black); margin-bottom: 8px; }
+.drift-observed { font-size: 0.88rem; color: var(--gray); line-height: 1.65; margin-bottom: 8px; }
+.drift-expected { font-size: 0.84rem; color: var(--black); font-style: italic; }
+
+.rec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+.rec-card { border: 1px solid var(--border); padding: 24px; background: var(--paper); }
+.rec-priority { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.rec-title { font-size: 0.92rem; font-weight: 500; color: var(--black); margin-bottom: 8px; }
+.rec-text { font-size: 0.84rem; color: var(--gray); line-height: 1.65; }
+.rec-impact { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); color: var(--amber); }
+
+.cert-box { background: var(--black); color: var(--white); padding: 40px 48px; margin-top: 48px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+.cert-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.cert-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; color: var(--white); margin-bottom: 10px; }
+.cert-title em { font-style: italic; color: var(--gold); }
+.cert-text { font-size: 0.88rem; color: rgba(245,242,236,0.6); line-height: 1.7; }
+.cert-price { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; color: var(--gold); white-space: nowrap; text-align: right; }
+.cert-price-label { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,242,236,0.35); text-align: right; margin-top: 4px; }
+
+.report-footer { margin-top: 80px; padding-top: 32px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; }
+.footer-logo span { color: var(--gold); }
+.footer-note { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(107,107,107,0.4); text-align: right; }
+
+.print-btn { position: fixed; bottom: 32px; right: 32px; font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--gold); color: var(--black); border: none; padding: 12px 24px; cursor: pointer; transition: background 0.2s; }
+.print-btn:hover { background: #D4AE2A; }
+</style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">Save as PDF</button>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="cover-logo">2<span>A</span> Agency</div>
+    <div>
+      <div class="cover-type">Semantic Audit Report — Confidential</div>
+      <div class="cover-title">Breitling <em>SA</em></div>
+    </div>
+  </div>
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <span class="meta-label">Date</span>
+      <span class="meta-val">March 2026</span>
+    </div>
+    <div class="cover-meta-item">
+      <span class="meta-label">LLMs tested</span>
+      <span class="meta-val">2 / 5</span>
+    </div>
+    <div class="cover-meta-item">
+      <span class="meta-label">Questions</span>
+      <span class="meta-val">5 questions</span>
+    </div>
+    <div class="cover-meta-item">
+      <span class="meta-label">Integrity score</span>
+      <span class="meta-val" style="color:var(--amber);">79 / 100</span>
+    </div>
+  </div>
+</div>
+
+<!-- SCORE HERO -->
+<div class="score-hero">
+  <div>
+    <div class="score-hero-label">Key finding</div>
+    <div class="score-hero-title">Two critical drifts detected</div>
+    <div class="score-hero-finding">
+      Leadership and product data are well captured. However,
+      <strong>ownership structure is inconsistent across models</strong> —
+      ChatGPT attributes Partners Group acquisition to 2017 (incorrect, it was CVC).
+      More critically, <strong>Gemini invents an NFT traceability system per watch</strong>
+      — a hallucination that could mislead buyers and journalists.
+    </div>
+  </div>
+  <div style="text-align:center;">
+    <div class="score-num">79</div>
+    <div class="score-denom">/ 100</div>
+  </div>
+</div>
+
+<!-- SECTION 1: METHODOLOGY -->
+<div class="section">
+  <div class="section-label">Section 01</div>
+  <div class="section-title">Methodology</div>
+  <p class="body-text">
+    2A Agency conducted a structured semantic scan of Breitling SA across two large
+    language models — Perplexity Pro and Gemini Pro — using a standardised protocol
+    of 5 questions covering leadership, product positioning, ownership structure,
+    sustainability, and product differentiation.
+  </p>
+  <p class="body-text">
+    Each response was evaluated against verified official data sourced from
+    breitling.com, Breitling annual sustainability reports, and Wikidata (Q697925).
+    Responses were rated: EXACT, PARTIAL, or INCORRECT.
+    The Semantic Integrity Score (79/100) reflects the weighted average
+    across all questions and models tested.
+  </p>
+  <p class="body-text" style="color:var(--amber); font-style:italic;">
+    Note: This audit was conducted across 2 LLMs. Full 5-LLM audit available
+    upon certification request.
+  </p>
+</div>
+
+<!-- SECTION 2: RESULTS -->
+<div class="section">
+  <div class="section-label">Section 02</div>
+  <div class="section-title">Scan results — <em>5 questions · 2 LLMs</em></div>
+
+  <table class="results-table">
+    <thead>
+      <tr>
+        <th style="width:30%">Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Q1 — CEO</strong><br><span style="font-size:0.82rem;color:var(--gray);">Who is Breitling's current CEO?</span></td>
+        <td>Georges Kern since 2017. Correct. Notes co-shareholder status and Alfred Gantner as board chair.</td>
+        <td>Georges Kern since 2017. Correct. Notes expansion from 50 to 300 boutiques and Universal Genève acquisition.</td>
+        <td><span class="verdict v-exact">Exact</span></td>
+      </tr>
+      <tr>
+        <td><strong>Q2 — Signature collection</strong><br><span style="font-size:0.82rem;color:var(--gray);">What is Breitling's signature collection?</span></td>
+        <td>Navitimer, 1952, circular slide rule. Correct. Chronomat and Superocean as secondary pillars.</td>
+        <td>Navitimer as absolute signature. Scott Carpenter / Mercury-Atlas 7 anecdote — accurate. Full comparative table with Chronomat and Superocean.</td>
+        <td><span class="verdict v-exact">Exact</span></td>
+      </tr>
+      <tr>
+        <td><strong>Q3 — Ownership</strong><br><span style="font-size:0.82rem;color:var(--gray);">Is Breitling independent or part of a group?</span></td>
+        <td>Partners Group majority since end-2022, replacing CVC. Correct structure. Notes Kern as co-shareholder.</td>
+        <td>Partners Group majority since 2022, CVC at ~23%. Correct. Adds Universal Genève and Gallet acquisitions. IPO speculation for 2027–2029.</td>
+        <td><span class="verdict v-partial">Partial</span></td>
+      </tr>
+      <tr>
+        <td><strong>Q4 — Sustainability</strong><br><span style="font-size:0.82rem;color:var(--gray);">What are Breitling's environmental commitments?</span></td>
+        <td>SBTi aligned, Better Gold, lab diamonds, Surfrider Foundation, Climeworks. Accurate and well sourced.</td>
+        <td>Correct facts but <strong>invents NFT per-watch traceability system</strong> — not confirmed on official breitling.com. EcoVadis Platinum medal cited by both — accurate.</td>
+        <td><span class="verdict v-partial">Partial</span></td>
+      </tr>
+      <tr>
+        <td><strong>Q5 — Navitimer vs Chronomat</strong><br><span style="font-size:0.82rem;color:var(--gray);">What is the difference between Navitimer and Chronomat?</span></td>
+        <td>Clear distinction: Navitimer = aviation tool, 1952, slide rule. Chronomat = sport-luxury, 1984, Rouleaux bracelet. Accurate.</td>
+        <td>Detailed comparison table. Correct on all points. Notes Chronomat created 1984 for centenary — accurate.</td>
+        <td><span class="verdict v-exact">Exact</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 3: KEY FINDINGS -->
+<div class="section">
+  <div class="section-label">Section 03</div>
+  <div class="section-title">Critical drifts — <em>two actionable findings</em></div>
+
+  <div class="finding" data-label="Primary drift — Sustainability">
+    <div class="finding-title">Gemini invents an <em>NFT traceability system</em></div>
+    <p class="finding-text">
+      Gemini Pro states that <strong>"each watch using Origins materials is associated
+      with an NFT that allows the owner to trace the exact origin of metals and stones."</strong>
+      This is not confirmed by official Breitling communications as of March 2026.
+      Breitling does use digital certificates and blockchain-adjacent traceability
+      for its Origins programme, but an individual NFT per watch is an hallucination.
+      <br><br>
+      This type of drift is particularly dangerous: it sounds credible, it aligns
+      with Breitling's known sustainability positioning, and a journalist or
+      high-net-worth buyer could repeat it as fact.
+    </p>
+  </div>
+
+  <div class="finding" data-label="Secondary drift — Ownership">
+    <div class="finding-title">Ownership timeline <em>inconsistent across models</em></div>
+    <p class="finding-text">
+      Both models agree that Partners Group is the current majority shareholder.
+      However, <strong>ChatGPT (free tier, tested separately) attributed the
+      Partners Group acquisition to 2017</strong> — which was actually CVC Capital
+      Partners. The correct timeline: CVC acquired Breitling from the Schneider
+      family in 2017; Partners Group became majority shareholder in late 2022.
+      <br><br>
+      For an investor, journalist or potential acquirer asking an AI about
+      Breitling's ownership history, this error creates a materially incorrect picture.
+    </p>
+  </div>
+
+  <div class="llm-grid">
+    <div class="llm-card">
+      <div class="llm-name">Perplexity Pro</div>
+      <div class="llm-score">88</div>
+      <div class="llm-note">Most accurate. Correct ownership timeline. No hallucinations detected. Sustainability data well sourced.</div>
+    </div>
+    <div class="llm-card">
+      <div class="llm-name">Gemini Pro</div>
+      <div class="llm-score">71</div>
+      <div class="llm-note">NFT hallucination on sustainability. Otherwise strong on product and leadership data.</div>
+    </div>
+    <div class="llm-card" style="background:var(--paper);">
+      <div class="llm-name">ChatGPT / Others</div>
+      <div class="llm-score" style="color:var(--border); font-size:1.6rem;">—</div>
+      <div class="llm-note">Not tested in this audit. Full 5-LLM scan available upon certification. Known ownership error flagged from separate test.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4: DRIFT DETAIL -->
+<div class="section">
+  <div class="section-label">Section 04</div>
+  <div class="section-title">Detailed drift analysis</div>
+
+  <div class="drift-item ok">
+    <div class="drift-q">Q1 — CEO · Verdict: EXACT</div>
+    <div class="drift-observed">Georges Kern correctly identified by both models. 2017 start date confirmed. Co-shareholder status noted by Perplexity. No drift detected.</div>
+    <div class="drift-expected">Expected: Georges Kern, CEO since 2017, co-shareholder, previously at Richemont (IWC).</div>
+  </div>
+
+  <div class="drift-item ok">
+    <div class="drift-q">Q2 — Signature collection · Verdict: EXACT</div>
+    <div class="drift-observed">Navitimer correctly identified as signature collection. 1952 launch date, AOPA adoption, slide rule function — all accurate. Chronomat and Superocean correctly positioned as secondary pillars.</div>
+    <div class="drift-expected">Expected: Navitimer (1952), aviation tool, circular slide rule. Chronomat (1984), sport-luxury. Superocean, diving.</div>
+  </div>
+
+  <div class="drift-item critical">
+    <div class="drift-q">Q3 — Ownership · Verdict: PARTIAL — timeline error</div>
+    <div class="drift-observed">Current ownership (Partners Group majority) correct in both models. However the 2017/2022 transition is confused: ChatGPT (separate test) assigns Partners Group to 2017, conflating with the CVC acquisition. Gemini speculates about an IPO in 2027-2029 — unconfirmed.</div>
+    <div class="drift-expected">Expected: CVC Capital Partners acquired from Schneider family in 2017. Partners Group became majority shareholder in late 2022. Kern and management hold a minority stake.</div>
+  </div>
+
+  <div class="drift-item critical">
+    <div class="drift-q">Q4 — Sustainability · Verdict: PARTIAL — NFT hallucination</div>
+    <div class="drift-observed">Core sustainability data accurate (SBTi, Better Gold, lab diamonds, EcoVadis Platinum). Gemini introduces an unverified NFT per-watch traceability claim. "Carbon neutral since 2021" — cited in our registry — not explicitly confirmed by either model.</div>
+    <div class="drift-expected">Expected: Origins programme (Better Gold + lab diamonds), SBTi aligned, EcoVadis Platinum, Surfrider Foundation partner, Econyl bracelets. Carbon neutral operations since 2021.</div>
+  </div>
+
+  <div class="drift-item ok">
+    <div class="drift-q">Q5 — Navitimer vs Chronomat · Verdict: EXACT</div>
+    <div class="drift-observed">Both models provide accurate, detailed distinction. Navitimer as aviation tool with slide rule; Chronomat as sport-luxury with Rouleaux bracelet and riders. 1984 Chronomat centenary date confirmed by Gemini.</div>
+    <div class="drift-expected">Expected: Navitimer = aviation, 1952, slide rule, 30-50m water resistance. Chronomat = sport-luxury, 1984, Rouleaux bracelet, 100-200m water resistance.</div>
+  </div>
+</div>
+
+<!-- SECTION 5: RECOMMENDATIONS -->
+<div class="section">
+  <div class="section-label">Section 05</div>
+  <div class="section-title">Remediation roadmap</div>
+
+  <p class="body-text">
+    The Semantic Integrity Score of 79/100 reflects two specific and correctable
+    vulnerabilities. The NFT hallucination is the priority — it is a fabrication
+    that could spread to secondary sources and be cited by press or buyers.
+  </p>
+
+  <div class="rec-grid">
+    <div class="rec-card">
+      <div class="rec-priority">Priority 1 — Immediate</div>
+      <div class="rec-title">Counter the NFT hallucination</div>
+      <div class="rec-text">Deploy explicit JSON-LD on breitling.com clarifying the Origins traceability programme — what it is and what it is not. A clear structured statement prevents the hallucination from spreading to other models and secondary sources.</div>
+      <div class="rec-impact">Impact: Gemini NFT claim corrected within 4–8 weeks</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-priority">Priority 2 — This week</div>
+      <div class="rec-title">Fix ownership timeline on Wikidata</div>
+      <div class="rec-text">Update Wikidata entry (Q697925) with precise ownership timeline: CVC 2017, Partners Group 2022. This directly corrects the ChatGPT ownership error and provides a citable source for all models.</div>
+      <div class="rec-impact">Impact: Ownership timeline corrected across models within 6–10 weeks</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-priority">Priority 3 — Month 1</div>
+      <div class="rec-title">Carbon neutral 2021 — structured data</div>
+      <div class="rec-text">Neither model explicitly confirms carbon neutral operations since 2021. Deploy this as a structured data point with source reference. This is a key differentiator vs Rolex and Omega and should be consistently cited by AI.</div>
+      <div class="rec-impact">Impact: ESG positioning strengthened in AI responses</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-priority">Priority 4 — Ongoing</div>
+      <div class="rec-title">Full 5-LLM monitoring</div>
+      <div class="rec-text">Expand to ChatGPT, Claude, Mistral and Copilot. Monthly retest protocol. The ownership error detected in ChatGPT suggests additional drift in smaller models. Delta report at 30 / 60 / 90 days.</div>
+      <div class="rec-impact">Impact: Complete drift map, EU AI Act Article 53 trail</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 6: CERTIFICATION -->
+<div class="section">
+  <div class="section-label">Section 06</div>
+  <div class="section-title">Next step — <em>2A Certification</em></div>
+
+  <p class="body-text">
+    This audit demonstrates 2A Agency's semantic scanning methodology applied to Breitling SA.
+    Certification upgrades the public data node to a fully managed, independently certified
+    brand record — with active remediation, monthly monitoring, and EU AI Act Article 53
+    compliance documentation.
+  </p>
+
+  <div class="cert-box">
+    <div>
+      <div class="cert-label">2A Certification Programme</div>
+      <div class="cert-title">From audit to <em>certified node.</em></div>
+      <div class="cert-text">
+        Registry node upgrade · NFT hallucination remediation · Wikidata ownership
+        timeline correction · Origins programme structured data · Carbon neutral 2021
+        citation · 5-LLM monthly monitoring · EU AI Act Article 53 data trail
+      </div>
+    </div>
+    <div>
+      <div class="cert-price">€15,000</div>
+      <div class="cert-price-label">3-month programme</div>
+      <div style="margin-top:12px;">
+        <div class="cert-price" style="font-size:1.4rem;">+ €2,000</div>
+        <div class="cert-price-label">/ month ongoing</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="report-footer">
+  <div class="footer-logo">2<span>A</span> Agency</div>
+  <div class="footer-note">
+    Semantic Audit Report — Breitling SA<br>
+    March 2026 · Confidential · 2aagency.com/registry
+  </div>
+</div>
+
+</body>
+</html>
