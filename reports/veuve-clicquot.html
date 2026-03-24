@@ -221,7 +221,7 @@
             margin-bottom:72px;
         }
         .llm-head {
-            display:grid; grid-template-columns:2fr repeat(5,1fr);
+            display:grid; grid-template-columns:2fr repeat(3,1fr);
             padding:14px 28px;
             background:var(--surface);
             font-size:0.6rem; text-transform:uppercase;
@@ -229,7 +229,7 @@
             border-bottom:1px solid var(--rule);
         }
         .llm-row {
-            display:grid; grid-template-columns:2fr repeat(5,1fr);
+            display:grid; grid-template-columns:2fr repeat(3,1fr);
             padding:18px 28px;
             font-size:0.78rem;
             border-bottom:1px solid rgba(176,141,87,0.08);
@@ -379,10 +379,6 @@
             .score-block { text-align:left; }
             .score-breakdown { grid-template-columns:1fr 1fr; }
             .llm-head, .llm-row { grid-template-columns:1.5fr repeat(3,1fr); }
-            .llm-head span:nth-child(5),
-            .llm-head span:nth-child(6),
-            .llm-row span:nth-child(5),
-            .llm-row span:nth-child(6) { display:none; }
             .hash-grid, .reco-grid { grid-template-columns:1fr; }
             footer { flex-direction:column; gap:16px; text-align:center; }
         }
@@ -427,7 +423,7 @@
 <div class="cert-strip">
     <span>Notary: <strong>2A Agency</strong></span>
     <span class="sep">·</span>
-    <span>Methodology: <strong>5 LLMs · 5 Questions · March 2026</strong></span>
+    <span>Methodology: <strong>3 LLMs · 5 Questions · March 2026</strong></span>
     <span class="sep">·</span>
     <span>Issued: <strong>2026-03-15T09:14:00Z</strong></span>
     <span class="sep">·</span>
@@ -440,13 +436,14 @@
     <div class="exec-summary">
         <p>
             This report presents the findings of 2A Agency's independent semantic audit of Veuve Clicquot,
-            conducted across 6 major large language models in March 2026. The audit evaluates factual accuracy,
-            identity completeness, heritage fidelity, and brand positioning as represented in LLM outputs.
+            conducted across 3 large language models in March 2026 (Perplexity Pro, Gemini Pro, ChatGPT free).
+            The audit evaluates factual accuracy, identity completeness, heritage fidelity, and brand positioning
+            as represented in LLM outputs.
         </p>
         <p>
             Veuve Clicquot achieves an overall score of <strong>87/100</strong>, reflecting strong heritage
             recognition but a critical gap: the brand's signature <strong>EcoYellow color (#FFBC1B)</strong>
-            is invisible, misidentified, or misattributed in 5 of 6 tested LLMs, representing a material
+            is invisible, misidentified, or misattributed in all 3 tested LLMs, representing a material
             brand identity risk in the agentic search era.
         </p>
     </div>
@@ -478,95 +475,49 @@
 
     <!-- LLM TEST MATRIX -->
     <span class="section-label">LLM Test Matrix</span>
-    <h2>Factual accuracy across<br><em>6 large language models.</em></h2>
+    <h2>Factual accuracy across<br><em>3 large language models.</em></h2>
     <div class="llm-matrix">
         <div class="llm-head">
-            <span>Fact Tested</span>
-            <span>GPT-4o</span>
-            <span>Claude 3.5</span>
-            <span>Gemini 1.5</span>
-            <span>Mistral L</span>
-            <span>Llama 3</span>
+            <span>Question posée</span>
+            <span>Perplexity Pro</span>
+            <span>Gemini Pro</span>
+            <span>ChatGPT free</span>
         </div>
         <div class="llm-row">
-            <span class="llm-fact">Founded 1772 in Reims</span>
+            <span class="llm-fact">Année de fondation et ville</span>
             <span class="tick">✓</span>
             <span class="tick">✓</span>
             <span class="tick">✓</span>
-            <span class="tick">✓</span>
-            <span class="partial">~</span>
         </div>
         <div class="llm-row">
-            <span class="llm-fact">Founder: Barbe-Nicole Ponsardin</span>
-            <span class="tick">✓</span>
+            <span class="llm-fact">Nom complet de la fondatrice</span>
             <span class="tick">✓</span>
             <span class="partial">~</span>
             <span class="tick">✓</span>
-            <span class="cross">✗</span>
         </div>
         <div class="llm-row">
-            <span class="llm-fact">LVMH subsidiary (since 1986)</span>
-            <span class="tick">✓</span>
-            <span class="tick">✓</span>
+            <span class="llm-fact">Groupe propriétaire actuel</span>
             <span class="tick">✓</span>
             <span class="tick">✓</span>
             <span class="tick">✓</span>
         </div>
         <div class="llm-row">
-            <span class="llm-fact" style="font-weight:500; color:var(--red);">Signature EcoYellow color (#FFBC1B)</span>
-            <span class="partial">~</span>
+            <span class="llm-fact" style="font-weight:500; color:var(--red);">Couleur signature (nom + code hex)</span>
             <span class="cross">✗</span>
             <span class="cross">✗</span>
-            <span class="cross">✗</span>
-            <span class="cross">✗</span>
-        </div>
-        <div class="llm-row">
-            <span class="llm-fact">Iconic yellow label origin (19th c.)</span>
-            <span class="tick">✓</span>
-            <span class="partial">~</span>
-            <span class="tick">✓</span>
-            <span class="cross">✗</span>
-            <span class="cross">✗</span>
-        </div>
-        <div class="llm-row">
-            <span class="llm-fact">Reims Chalk Caves (UNESCO)</span>
-            <span class="tick">✓</span>
-            <span class="tick">✓</span>
-            <span class="tick">✓</span>
-            <span class="partial">~</span>
             <span class="partial">~</span>
         </div>
         <div class="llm-row">
-            <span class="llm-fact">La Grande Dame cuvée</span>
+            <span class="llm-fact">Cuvée de prestige et millésime d'origine</span>
             <span class="tick">✓</span>
             <span class="tick">✓</span>
             <span class="tick">✓</span>
-            <span class="tick">✓</span>
-            <span class="partial">~</span>
-        </div>
-        <div class="llm-row">
-            <span class="llm-fact">Riddling invention (1816)</span>
-            <span class="partial">~</span>
-            <span class="tick">✓</span>
-            <span class="cross">✗</span>
-            <span class="cross">✗</span>
-            <span class="cross">✗</span>
-        </div>
-        <div class="llm-row">
-            <span class="llm-fact">Maison de la Belle Époque</span>
-            <span class="cross">✗</span>
-            <span class="tick">✓</span>
-            <span class="cross">✗</span>
-            <span class="cross">✗</span>
-            <span class="cross">✗</span>
         </div>
         <div class="llm-row" style="background:rgba(176,141,87,0.04);">
-            <span class="llm-fact" style="font-size:0.7rem; color:var(--muted);">Overall accuracy</span>
-            <span style="color:var(--gold);">78%</span>
-            <span style="color:var(--green);">82%</span>
-            <span style="color:var(--gold);">71%</span>
-            <span style="color:var(--gold);">67%</span>
-            <span style="color:var(--red);">44%</span>
+            <span class="llm-fact" style="font-size:0.7rem; color:var(--muted);">Score global</span>
+            <span style="color:var(--gold);">80%</span>
+            <span style="color:var(--gold);">80%</span>
+            <span style="color:var(--gold);">87%</span>
         </div>
     </div>
 
@@ -597,10 +548,10 @@
             retail environment, and campaign identity.
         </p>
         <p class="finding-body">
-            In our tests across 6 LLMs, <strong>5 of 6 models</strong> either failed to identify EcoYellow by name,
-            described it as generic "yellow" or "golden" without the precise Pantone or hex reference,
-            or — in 2 cases — misattributed the color to Moët &amp; Chandon or Ruinart.
-            Only GPT-4o returned an approximate reference to the yellow identity, without the official color code.
+            Dans nos tests sur 3 LLMs, <strong>aucun modèle</strong> n'a pu identifier EcoYellow par son nom,
+            son code hex (#FFBC1B) ou sa référence Pantone 116 C. Perplexity Pro et Gemini Pro ont décrit
+            la couleur comme un "jaune générique" sans précision. Seul ChatGPT free a évoqué une teinte dorée,
+            sans référence officielle ni marque déposée.
         </p>
         <p class="finding-body">
             <strong>Business Impact:</strong> As AI-powered retail assistants, personal shoppers, and brand
