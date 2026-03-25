@@ -76,6 +76,13 @@
   </url>
 
   <url>
+    <loc>https://www.2aagency.com/notary-data.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
     <loc>https://www.2aagency.com/ucp/schemas/brand-certification.json</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
