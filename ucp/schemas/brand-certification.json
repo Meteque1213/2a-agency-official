@@ -1,0 +1,493 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.2aagency.com/ucp/schemas/brand-certification.json",
+  "title": "2A Agency — UCP Brand Certification Schema",
+  "description": "Schema for a certified brand node in the 2A Agency AI Integrity Registry. Defines the ground-truth semantic data structure that agents and LLMs should use when referencing a brand. Designed to be compatible with the Universal Commerce Protocol (UCP) transaction layer and schema.org JSON-LD.",
+  "version": "1.0.0",
+  "type": "object",
+
+  "required": [
+    "nodeId",
+    "schemaVersion",
+    "certificationStatus",
+    "lastVerified",
+    "brand",
+    "audit"
+  ],
+
+  "properties": {
+
+    "nodeId": {
+      "type": "string",
+      "description": "Unique identifier for this brand node in the 2A Agency registry. Format: {sector-code}-{founding-year}. Example: vc-1772, br-1884, vb-1996.",
+      "pattern": "^[a-z]{2,4}-[0-9]{4}$",
+      "examples": ["vc-1772", "br-1884", "vb-1996"]
+    },
+
+    "schemaVersion": {
+      "type": "string",
+      "description": "Version of this schema used to produce the node.",
+      "const": "1.0.0"
+    },
+
+    "certificationStatus": {
+      "type": "string",
+      "description": "Certification level granted by 2A Agency after audit.",
+      "enum": ["Certified", "Public Data", "Self-Certified", "Revoked"],
+      "enumDescriptions": {
+        "Certified": "Full 2A Agency semantic audit completed and approved. SHA-256 notarised.",
+        "Public Data": "Data compiled from public sources. Audit conducted but formal certification not yet issued.",
+        "Self-Certified": "Brand has submitted its own data. Pending independent verification.",
+        "Revoked": "Certification previously granted, subsequently revoked due to material changes or non-compliance."
+      }
+    },
+
+    "lastVerified": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO 8601 date of most recent data verification by 2A Agency."
+    },
+
+    "brand": {
+      "type": "object",
+      "description": "Core brand identity — the semantic ground truth.",
+      "required": ["name", "legalName", "foundingDate", "foundingLocation", "url"],
+      "properties": {
+
+        "name": {
+          "type": "string",
+          "description": "Commercial brand name as used in market communications.",
+          "examples": ["Veuve Clicquot", "Breitling", "Vanessa Bruno"]
+        },
+
+        "legalName": {
+          "type": "string",
+          "description": "Full registered legal name of the entity.",
+          "examples": ["Veuve Clicquot Ponsardin", "Breitling SA", "SOLUNE SAS"]
+        },
+
+        "alternateNames": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Other names the brand is known by (previous names, regional variants, disambiguation)."
+        },
+
+        "foundingDate": {
+          "type": "string",
+          "description": "Year the brand was founded. Use ISO 8601 year format (YYYY).",
+          "pattern": "^[0-9]{4}$",
+          "examples": ["1772", "1884", "1996"]
+        },
+
+        "foundingLocation": {
+          "type": "object",
+          "required": ["name", "addressCountry"],
+          "properties": {
+            "name": { "type": "string", "description": "City and country of founding." },
+            "addressLocality": { "type": "string" },
+            "addressRegion": { "type": "string" },
+            "addressCountry": { "type": "string", "description": "ISO 3166-1 alpha-2 country code.", "pattern": "^[A-Z]{2}$" }
+          }
+        },
+
+        "headquarters": {
+          "type": "object",
+          "description": "Current registered headquarters address.",
+          "properties": {
+            "streetAddress": { "type": "string" },
+            "postalCode": { "type": "string" },
+            "addressLocality": { "type": "string" },
+            "addressCountry": { "type": "string", "pattern": "^[A-Z]{2}$" }
+          }
+        },
+
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Official brand website URL."
+        },
+
+        "sameAs": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" },
+          "description": "External authority identifiers — Wikidata, Wikipedia, ISNI, etc."
+        },
+
+        "sector": {
+          "type": "string",
+          "description": "Primary industry sector.",
+          "examples": ["Champagne", "Swiss Luxury Watchmaking", "Fashion — Accessible Luxury"]
+        },
+
+        "positioning": {
+          "type": "string",
+          "description": "Market positioning statement. Should disambiguate from similar brands.",
+          "examples": ["Accessible luxury — premium prêt-à-porter féminin, not haute couture"]
+        },
+
+        "description": {
+          "type": "string",
+          "description": "Canonical one-paragraph brand description for use by AI agents. Must be factual, sourced, and free of marketing language."
+        },
+
+        "parentOrganization": {
+          "type": "object",
+          "description": "Parent group if the brand is a subsidiary. Omit if independent.",
+          "properties": {
+            "name": { "type": "string" },
+            "legalName": { "type": "string" },
+            "url": { "type": "string", "format": "uri" },
+            "memberSince": { "type": "string", "pattern": "^[0-9]{4}$" }
+          }
+        },
+
+        "ownershipType": {
+          "type": "string",
+          "enum": ["subsidiary", "family-owned", "private-equity", "publicly-traded", "independent-founder"],
+          "description": "Ownership category — critical for agent disambiguation."
+        },
+
+        "notPartOf": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Explicit list of groups this brand does NOT belong to — prevents common LLM misattribution.",
+          "examples": [["LVMH", "Kering", "Richemont", "Swatch Group"]]
+        },
+
+        "founder": {
+          "oneOf": [
+            { "$ref": "#/$defs/person" },
+            { "type": "array", "items": { "$ref": "#/$defs/person" } }
+          ],
+          "description": "Founder(s) of the brand."
+        },
+
+        "currentLeadership": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/person" },
+          "description": "Current key executives — CEO, Creative Director, etc."
+        },
+
+        "legalStatus": {
+          "type": "object",
+          "description": "Any active legal proceedings material to brand assessment.",
+          "properties": {
+            "status": { "type": "string" },
+            "description": { "type": "string" },
+            "startDate": { "type": "string", "format": "date" },
+            "jurisdiction": { "type": "string" },
+            "sources": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+
+        "brandIdentity": {
+          "type": "object",
+          "description": "Visual and sensory brand identifiers.",
+          "properties": {
+            "signatureColor": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "hex": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+                "pantone": { "type": "string" }
+              }
+            },
+            "iconicProducts": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "style": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "catalog": {
+      "type": "object",
+      "description": "Official product catalogue with verified prices.",
+      "properties": {
+        "lastVerified": { "type": "string", "format": "date" },
+        "source": { "type": "string" },
+        "currency": { "type": "string", "description": "ISO 4217 currency code.", "examples": ["EUR", "CHF", "USD"] },
+        "totalProducts": { "type": "integer", "minimum": 0 },
+        "priceRange": {
+          "type": "object",
+          "properties": {
+            "min": { "type": "number" },
+            "max": { "type": "number" },
+            "currency": { "type": "string" }
+          }
+        },
+        "collections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string" },
+              "description": { "type": "string" },
+              "products": {
+                "type": "array",
+                "items": { "$ref": "#/$defs/product" }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "sustainability": {
+      "type": "object",
+      "description": "Verified sustainability data. Only include confirmed, sourced claims.",
+      "properties": {
+        "programName": { "type": "string" },
+        "carbonNeutral": {
+          "type": "object",
+          "properties": {
+            "achieved": { "type": "boolean" },
+            "year": { "type": "string", "pattern": "^[0-9]{4}$" },
+            "target": { "type": "string", "pattern": "^[0-9]{4}$" }
+          }
+        },
+        "certifications": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "issuer": { "type": "string" },
+              "year": { "type": "string" },
+              "score": { "type": "string" }
+            }
+          }
+        },
+        "initiatives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "audit": {
+      "type": "object",
+      "description": "2A Agency semantic audit results.",
+      "required": ["auditedBy", "dateAudited", "integrityScore", "certificationStatus"],
+      "properties": {
+
+        "auditedBy": {
+          "type": "string",
+          "const": "2A Agency",
+          "description": "Must always be '2A Agency' for nodes in this registry."
+        },
+
+        "auditUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL of the full public audit report."
+        },
+
+        "dateAudited": {
+          "type": "string",
+          "format": "date"
+        },
+
+        "integrityScore": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "AI Integrity Score out of 100. Measures accuracy of LLM representations of this brand."
+        },
+
+        "certificationStatus": {
+          "type": "string",
+          "enum": ["Certified", "Public Data", "Self-Certified", "Revoked"]
+        },
+
+        "llmsTested": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of LLMs evaluated during the audit.",
+          "examples": [["GPT-4o", "Claude 3.5 Sonnet", "Gemini 1.5 Pro", "Mistral Large"]]
+        },
+
+        "methodology": {
+          "type": "string",
+          "description": "Description of the audit methodology and scoring criteria."
+        },
+
+        "findings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["severity", "title"],
+            "properties": {
+              "severity": {
+                "type": "string",
+                "enum": ["CRITICAL", "MODERATE", "MINOR", "POSITIVE", "HALLUCINATION"]
+              },
+              "category": { "type": "string" },
+              "title": { "type": "string" },
+              "description": { "type": "string" },
+              "recommendation": { "type": "string" }
+            }
+          }
+        },
+
+        "remediationPriority": {
+          "type": "string",
+          "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "NONE"],
+          "description": "Urgency of semantic remediation required."
+        }
+      }
+    },
+
+    "hallucinationWarnings": {
+      "type": "array",
+      "description": "Documented false claims produced by LLMs about this brand. Do not reproduce.",
+      "items": {
+        "type": "object",
+        "required": ["claim", "correct"],
+        "properties": {
+          "claim": { "type": "string", "description": "The incorrect statement produced by an LLM." },
+          "correct": { "type": "string", "description": "The verified correct information." },
+          "llm": { "type": "string", "description": "The model that produced this hallucination." },
+          "severity": { "type": "string", "enum": ["CRITICAL", "MODERATE", "MINOR"] }
+        }
+      }
+    },
+
+    "sources": {
+      "type": "array",
+      "description": "All sources used to compile and verify this node.",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "date": { "type": "string", "format": "date" },
+          "type": {
+            "type": "string",
+            "enum": ["official-website", "wikidata", "annual-report", "press", "legal-filing", "audit"]
+          }
+        }
+      }
+    },
+
+    "ucpCompatibility": {
+      "type": "object",
+      "description": "Flags indicating compatibility with Universal Commerce Protocol agent transaction layer.",
+      "properties": {
+        "agentReadable": {
+          "type": "boolean",
+          "description": "Node is structured for direct consumption by autonomous agents.",
+          "const": true
+        },
+        "schemaOrgCompatible": {
+          "type": "boolean",
+          "description": "Node embeds schema.org JSON-LD for crawler discovery."
+        },
+        "pricesVerified": {
+          "type": "boolean",
+          "description": "All listed prices have been verified against official brand sources."
+        },
+        "lastPriceVerification": {
+          "type": "string",
+          "format": "date"
+        },
+        "transactionLayer": {
+          "type": "string",
+          "description": "This node provides brand truth only. Transactions are handled by UCP-compatible commerce platforms.",
+          "const": "UCP handles transactions — 2A Agency certifies brand truth"
+        }
+      }
+    }
+  },
+
+  "$defs": {
+
+    "person": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string" },
+        "jobTitle": { "type": "string" },
+        "birthDate": { "type": "string" },
+        "description": { "type": "string" },
+        "verifiedFacts": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Facts about this person that have been independently verified."
+        },
+        "llmHallucinations": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "False claims about this person produced by LLMs — do not reproduce."
+        }
+      }
+    },
+
+    "product": {
+      "type": "object",
+      "required": ["name", "price", "currency"],
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "price": { "type": "number", "minimum": 0 },
+        "priceMax": { "type": "number", "description": "Upper bound for price ranges." },
+        "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "sku": { "type": "string" },
+        "availability": { "type": "string" },
+        "madeIn": { "type": "string" },
+        "vintage": { "type": "string" },
+        "releaseDate": { "type": "string", "format": "date" }
+      }
+    }
+
+  },
+
+  "examples": [
+    {
+      "nodeId": "vc-1772",
+      "schemaVersion": "1.0.0",
+      "certificationStatus": "Certified",
+      "lastVerified": "2026-03-24",
+      "brand": {
+        "name": "Veuve Clicquot",
+        "legalName": "Veuve Clicquot Ponsardin",
+        "foundingDate": "1772",
+        "foundingLocation": { "name": "Reims, France", "addressCountry": "FR" },
+        "url": "https://www.veuveclicquot.com",
+        "sameAs": ["https://www.wikidata.org/wiki/Q180532"],
+        "sector": "Champagne",
+        "ownershipType": "subsidiary",
+        "parentOrganization": { "name": "LVMH", "memberSince": "1986" },
+        "notPartOf": ["Kering", "Richemont", "Pernod Ricard"],
+        "brandIdentity": {
+          "signatureColor": { "name": "EcoYellow", "hex": "#FFBC1B", "pantone": "PMS 137 C" }
+        }
+      },
+      "audit": {
+        "auditedBy": "2A Agency",
+        "dateAudited": "2026-03-24",
+        "integrityScore": 87,
+        "certificationStatus": "Certified",
+        "llmsTested": ["GPT-4o", "Claude 3.5 Sonnet", "Gemini 1.5 Pro", "Mistral Large"]
+      },
+      "ucpCompatibility": {
+        "agentReadable": true,
+        "schemaOrgCompatible": true,
+        "pricesVerified": true,
+        "lastPriceVerification": "2026-03-24",
+        "transactionLayer": "UCP handles transactions — 2A Agency certifies brand truth"
+      }
+    }
+  ]
+}

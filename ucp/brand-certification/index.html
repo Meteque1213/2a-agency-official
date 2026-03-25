@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCP Brand Certification Schema — 2A Agency</title>
+    <meta name="description" content="Documentation for the 2A Agency UCP Brand Certification Schema v1.0. JSON Schema for certified brand nodes — the semantic ground-truth layer above UCP transaction infrastructure.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.2aagency.com/ucp/brand-certification/">
+    <meta name="ai-content-type" content="schema-documentation, ucp, brand-certification">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #0E0E0E;
+            --surface: #161616;
+            --surface2: #1E1E1E;
+            --ink:     #E8E4DC;
+            --gold:    #B08D57;
+            --gold-lt: #C9A96E;
+            --muted:   #6B6661;
+            --rule:    rgba(176,141,87,0.18);
+            --green:   #4A8A5A;
+            --red:     #A03030;
+        }
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            background:var(--bg);
+            color:var(--ink);
+            font-family:'DM Mono', monospace;
+            font-size:14px; line-height:1.7;
+        }
+
+        nav {
+            position:sticky; top:0; z-index:100;
+            display:flex; justify-content:space-between; align-items:center;
+            padding:20px 6%;
+            background:rgba(14,14,14,0.95);
+            backdrop-filter:blur(10px);
+            border-bottom:1px solid var(--rule);
+        }
+        .logo {
+            font-family:'Cormorant Garamond',serif;
+            font-size:1.5rem; font-weight:600;
+            letter-spacing:-0.02em; text-decoration:none; color:var(--ink);
+        }
+        .logo em { font-style:normal; color:var(--gold); }
+        .nav-links { display:flex; gap:32px; }
+        .nav-links a {
+            font-size:0.62rem; text-transform:uppercase; letter-spacing:0.14em;
+            color:var(--muted); text-decoration:none; transition:color .2s;
+        }
+        .nav-links a:hover { color:var(--gold); }
+
+        /* Layout */
+        .layout {
+            display:grid;
+            grid-template-columns: 240px 1fr;
+            min-height:100vh;
+        }
+
+        /* Sidebar */
+        aside {
+            position:sticky; top:61px; height:calc(100vh - 61px);
+            overflow-y:auto; padding:40px 24px;
+            border-right:1px solid var(--rule);
+            background:var(--surface);
+        }
+        .aside-section { margin-bottom:32px; }
+        .aside-label {
+            font-size:0.55rem; text-transform:uppercase;
+            letter-spacing:0.18em; color:var(--muted);
+            margin-bottom:12px; padding-bottom:8px;
+            border-bottom:1px solid var(--rule);
+        }
+        .aside-link {
+            display:block; font-size:0.72rem; color:var(--muted);
+            text-decoration:none; padding:5px 0;
+            transition:color .15s;
+        }
+        .aside-link:hover, .aside-link.active { color:var(--gold); }
+        .aside-badge {
+            display:inline-block; font-size:0.55rem;
+            padding:2px 6px; background:rgba(176,141,87,0.15);
+            color:var(--gold); margin-left:6px; vertical-align:middle;
+        }
+
+        /* Main content */
+        main { padding:64px 6% 96px; max-width:860px; }
+
+        .page-header { margin-bottom:64px; }
+        .breadcrumb {
+            font-size:0.62rem; color:var(--muted);
+            text-transform:uppercase; letter-spacing:0.1em;
+            margin-bottom:20px;
+        }
+        .breadcrumb a { color:var(--gold); text-decoration:none; }
+        .version-badge {
+            display:inline-block; padding:4px 10px;
+            border:1px solid var(--rule); font-size:0.62rem;
+            color:var(--gold); letter-spacing:0.1em;
+            margin-bottom:16px;
+        }
+        h1 {
+            font-family:'Cormorant Garamond',serif;
+            font-size:clamp(2rem,4vw,3.2rem);
+            font-weight:300; line-height:1.1;
+            margin-bottom:20px;
+        }
+        h1 em { font-style:italic; color:var(--gold); }
+        .page-desc {
+            font-size:0.85rem; color:var(--muted);
+            line-height:1.8; max-width:640px;
+        }
+
+        /* Schema URL bar */
+        .schema-url {
+            display:flex; align-items:center; gap:0;
+            margin-top:24px; border:1px solid var(--rule);
+            background:var(--surface2);
+        }
+        .schema-url-label {
+            padding:12px 16px; font-size:0.6rem;
+            text-transform:uppercase; letter-spacing:0.12em;
+            color:var(--muted); border-right:1px solid var(--rule);
+            white-space:nowrap;
+        }
+        .schema-url-val {
+            padding:12px 16px; font-size:0.78rem;
+            color:var(--gold); word-break:break-all;
+        }
+        .schema-url-val a { color:inherit; text-decoration:none; }
+        .schema-url-val a:hover { text-decoration:underline; }
+
+        /* Sections */
+        .doc-section { margin-bottom:56px; }
+        h2 {
+            font-family:'Cormorant Garamond',serif;
+            font-size:1.65rem; font-weight:300;
+            margin-bottom:24px; padding-bottom:10px;
+            border-bottom:1px solid var(--rule);
+            scroll-margin-top:80px;
+        }
+        h3 {
+            font-size:0.7rem; text-transform:uppercase;
+            letter-spacing:0.14em; color:var(--gold);
+            margin:28px 0 12px;
+        }
+        h3:first-child { margin-top:0; }
+        p { font-size:0.84rem; color:var(--muted); line-height:1.8; margin-bottom:14px; }
+        p:last-child { margin-bottom:0; }
+        a { color:var(--gold); text-decoration:none; }
+        a:hover { text-decoration:underline; }
+
+        /* Field table */
+        .field-table { width:100%; border-collapse:collapse; margin-bottom:24px; }
+        .field-table th {
+            font-size:0.58rem; text-transform:uppercase;
+            letter-spacing:0.12em; color:var(--muted);
+            padding:10px 14px; text-align:left;
+            background:var(--surface2);
+            border-bottom:1px solid var(--rule);
+            border-top:1px solid var(--rule);
+        }
+        .field-table td {
+            padding:12px 14px; font-size:0.78rem;
+            border-bottom:1px solid rgba(176,141,87,0.08);
+            vertical-align:top;
+        }
+        .field-table tr:last-child td { border-bottom:none; }
+        .field-name {
+            color:var(--gold); font-family:'DM Mono',monospace;
+            white-space:nowrap;
+        }
+        .field-type {
+            color:#7AADCC; font-size:0.7rem;
+            white-space:nowrap;
+        }
+        .field-req {
+            font-size:0.6rem; text-transform:uppercase;
+            letter-spacing:0.08em; white-space:nowrap;
+        }
+        .req { color:var(--green); }
+        .opt { color:var(--muted); }
+        .field-desc { color:var(--muted); line-height:1.6; }
+
+        /* Enum pills */
+        .enum-pill {
+            display:inline-block; padding:2px 8px;
+            background:rgba(176,141,87,0.1);
+            border:1px solid rgba(176,141,87,0.2);
+            font-size:0.65rem; color:var(--gold);
+            margin:2px 3px 2px 0;
+        }
+        .enum-pill.green { background:rgba(74,138,90,0.1); border-color:rgba(74,138,90,0.2); color:var(--green); }
+        .enum-pill.red { background:rgba(160,48,48,0.1); border-color:rgba(160,48,48,0.2); color:var(--red); }
+
+        /* Code blocks */
+        pre {
+            background:var(--surface2);
+            border:1px solid var(--rule);
+            padding:24px 28px;
+            overflow-x:auto;
+            font-size:0.75rem;
+            line-height:1.65;
+            margin-bottom:20px;
+        }
+        code { font-family:'DM Mono', monospace; }
+        .tok-key { color:#C9A96E; }
+        .tok-str { color:#A8C09A; }
+        .tok-num { color:#7AADCC; }
+        .tok-bool { color:#CC8F6A; }
+        .tok-null { color:var(--muted); }
+        .tok-comment { color:#4A4A4A; font-style:italic; }
+
+        /* Info blocks */
+        .info-block {
+            padding:18px 22px; margin-bottom:20px;
+            border-left:3px solid;
+        }
+        .info-block.note { border-color:var(--gold); background:rgba(176,141,87,0.05); }
+        .info-block.warning { border-color:var(--red); background:rgba(160,48,48,0.05); }
+        .info-block.tip { border-color:var(--green); background:rgba(74,138,90,0.05); }
+        .info-label {
+            font-size:0.58rem; text-transform:uppercase;
+            letter-spacing:0.12em; margin-bottom:8px;
+        }
+        .info-block.note .info-label { color:var(--gold); }
+        .info-block.warning .info-label { color:var(--red); }
+        .info-block.tip .info-label { color:var(--green); }
+        .info-body { font-size:0.78rem; color:var(--muted); line-height:1.7; }
+
+        /* Cert status grid */
+        .cert-grid {
+            display:grid; grid-template-columns:repeat(2,1fr);
+            gap:1px; background:var(--rule); border:1px solid var(--rule);
+            margin-bottom:20px;
+        }
+        .cert-card { background:var(--surface2); padding:20px 22px; }
+        .cert-name {
+            font-size:0.7rem; text-transform:uppercase;
+            letter-spacing:0.12em; margin-bottom:8px;
+        }
+        .cert-name.certified { color:var(--green); }
+        .cert-name.public { color:var(--gold); }
+        .cert-name.self { color:#7AADCC; }
+        .cert-name.revoked { color:var(--red); }
+        .cert-desc { font-size:0.75rem; color:var(--muted); line-height:1.6; }
+
+        footer {
+            padding:40px 6%; border-top:1px solid var(--rule);
+            font-size:0.7rem; color:var(--muted);
+            display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+        }
+        footer a { color:var(--gold); }
+
+        @media (max-width:768px) {
+            .layout { grid-template-columns:1fr; }
+            aside { display:none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a class="logo" href="https://www.2aagency.com">2<em>A</em></a>
+    <div class="nav-links">
+        <a href="https://www.2aagency.com/registry/">Registry</a>
+        <a href="https://www.2aagency.com/ucp/schemas/brand-certification.json" target="_blank">Raw Schema</a>
+        <a href="https://www.2aagency.com">2A Agency</a>
+    </div>
+</nav>
+
+<div class="layout">
+
+    <aside>
+        <div class="aside-section">
+            <div class="aside-label">Overview</div>
+            <a class="aside-link" href="#overview">Introduction</a>
+            <a class="aside-link" href="#ucp-layer">UCP Layer Model</a>
+            <a class="aside-link" href="#versions">Versions</a>
+        </div>
+        <div class="aside-section">
+            <div class="aside-label">Schema</div>
+            <a class="aside-link" href="#root">Root Object</a>
+            <a class="aside-link" href="#brand">brand <span class="aside-badge">required</span></a>
+            <a class="aside-link" href="#catalog">catalog</a>
+            <a class="aside-link" href="#sustainability">sustainability</a>
+            <a class="aside-link" href="#audit">audit <span class="aside-badge">required</span></a>
+            <a class="aside-link" href="#hallucinations">hallucinationWarnings</a>
+            <a class="aside-link" href="#ucp-compat">ucpCompatibility</a>
+            <a class="aside-link" href="#defs">Shared Definitions</a>
+        </div>
+        <div class="aside-section">
+            <div class="aside-label">Reference</div>
+            <a class="aside-link" href="#cert-statuses">Certification Statuses</a>
+            <a class="aside-link" href="#severity-levels">Severity Levels</a>
+            <a class="aside-link" href="#example">Full Example</a>
+            <a class="aside-link" href="#live-nodes">Live Nodes</a>
+        </div>
+    </aside>
+
+    <main>
+
+        <div class="page-header">
+            <div class="breadcrumb">
+                <a href="https://www.2aagency.com">2A Agency</a> / UCP / Brand Certification
+            </div>
+            <div class="version-badge">Schema v1.0.0</div>
+            <h1>UCP Brand <em>Certification</em> Schema</h1>
+            <p class="page-desc">
+                The semantic ground-truth layer for brands operating in the agentic commerce era. This schema defines the structure of a certified brand node — the verified data that AI agents, LLMs, and commerce platforms should use when representing a brand in autonomous transactions.
+            </p>
+            <div class="schema-url">
+                <div class="schema-url-label">$schema</div>
+                <div class="schema-url-val"><a href="https://www.2aagency.com/ucp/schemas/brand-certification.json" target="_blank">https://www.2aagency.com/ucp/schemas/brand-certification.json</a></div>
+            </div>
+        </div>
+
+        <!-- OVERVIEW -->
+        <section class="doc-section" id="overview">
+            <h2>Introduction</h2>
+            <p>The Universal Commerce Protocol (UCP) standardises how merchants sell through AI agents. It handles the transaction layer — cart, checkout, fulfilment. It does not verify what an agent <em>knows</em> about a brand before or after the transaction.</p>
+            <p>The 2A Agency Brand Certification Schema fills that gap. A certified node is a structured JSON document containing verified brand identity, product data, sustainability claims, and an AI audit trail. Agents that consume certified nodes can reference confirmed facts rather than LLM-generated approximations.</p>
+
+            <div class="info-block note">
+                <div class="info-label">Design principle</div>
+                <div class="info-body">Every field in a certified node must be sourced. If a fact cannot be independently verified, it must not appear in the node — or must be explicitly flagged as unverified. Hallucinations are documented, not silently corrected.</div>
+            </div>
+
+            <div class="info-block warning">
+                <div class="info-label">Not a transaction protocol</div>
+                <div class="info-body">This schema covers brand truth only. Price data in a certified node represents verified retail pricing at the time of audit — not a live commerce feed. For live inventory and checkout, use a UCP-compatible commerce endpoint.</div>
+            </div>
+        </section>
+
+        <!-- UCP LAYER -->
+        <section class="doc-section" id="ucp-layer">
+            <h2>UCP Layer Model</h2>
+            <p>The two layers are complementary and non-overlapping:</p>
+            <pre><code><span class="tok-comment">┌─────────────────────────────────────────────────────────┐</span>
+<span class="tok-comment">│                    AI AGENT / LLM                       │</span>
+<span class="tok-comment">│            (ChatGPT, Gemini, Copilot, etc.)             │</span>
+<span class="tok-comment">└────────────────────┬───────────────┬────────────────────┘</span>
+                     │               │
+         <span class="tok-str">Brand truth</span>  │               │  <span class="tok-str">Transaction</span>
+                     ▼               ▼
+<span class="tok-comment">┌────────────────────┐   ┌──────────────────────────────┐</span>
+<span class="tok-comment">│  2A Agency         │   │  Universal Commerce Protocol  │</span>
+<span class="tok-comment">│  Brand             │   │  (UCP)                        │</span>
+<span class="tok-comment">│  Certification     │   │                               │</span>
+<span class="tok-comment">│  Schema            │   │  Cart · Checkout · Fulfilment │</span>
+<span class="tok-comment">│                    │   │  Shopify · Google · Partners  │</span>
+<span class="tok-comment">│  Who is the brand? │   │                               │</span>
+<span class="tok-comment">│  What do they sell?│   │  How to buy it.               │</span>
+<span class="tok-comment">│  Is it verified?   │   │                               │</span>
+<span class="tok-comment">└────────────────────┘   └──────────────────────────────┘</span></code></pre>
+        </section>
+
+        <!-- VERSIONS -->
+        <section class="doc-section" id="versions">
+            <h2>Versions</h2>
+            <table class="field-table">
+                <thead>
+                    <tr><th>Version</th><th>Date</th><th>Status</th><th>Notes</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="field-name">1.0.0</td>
+                        <td style="color:var(--muted)">2026-03-24</td>
+                        <td><span class="enum-pill green">Current</span></td>
+                        <td style="color:var(--muted)">Initial release. Covers identity, catalog, sustainability, audit, UCP compatibility flags.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ROOT OBJECT -->
+        <section class="doc-section" id="root">
+            <h2>Root Object</h2>
+            <p>The top-level required fields that every certified node must declare.</p>
+            <table class="field-table">
+                <thead>
+                    <tr><th>Field</th><th>Type</th><th>Req.</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="field-name">nodeId</td>
+                        <td class="field-type">string</td>
+                        <td class="field-req req">required</td>
+                        <td class="field-desc">Unique registry identifier. Pattern: <code>{2-4 letter code}-{founding year}</code>. Example: <code>vc-1772</code>, <code>br-1884</code>.</td>
+                    </tr>
+                    <tr>
+                        <td class="field-name">schemaVersion</td>
+                        <td class="field-type">string</td>
+                        <td class="field-req req">required</td>
+                        <td class="field-desc">Must be <code>"1.0.0"</code> for nodes using this schema.</td>
+                    </tr>
+                    <tr>
+                        <td class="field-name">certificationStatus</td>
+                        <td class="field-type">enum</td>
+                        <td class="field-req req">required</td>
+                        <td class="field-desc">Top-level certification level. See <a href="#cert-statuses">Certification Statuses</a>.</td>
+                    </tr>
+                    <tr>
+                        <td class="field-name">lastVerified</td>
+                        <td class="field-type">date</td>
+                        <td class="field-req req">required</td>
+                        <td class="field-desc">ISO 8601 date of most recent data verification. Agents should treat data older than 90 days as potentially stale.</td>
+                    </tr>
+                    <tr>
+                        <td class="field-name">brand</td>
+                        <td class="field-type">object</td>
+                        <td class="field-req req">required</td>
+                        <td class="field-desc">Core brand identity block. See <a href="#brand">brand</a>.</td>
+                    </tr>
+                    <tr>
+                        <td class="field-name">catalog</td>
+                        <td class="field-type">object</td>
+                        <td class="field-req opt">optional</td>
+                        <td class="field-desc">Verified product catalogue with prices. See <a href="#catalog">catalog</a>.</td>
+                    </tr>
+                    <tr>
+                        <td class="field-name">sustainability</td>
+                        <td class="field-type">object</td>
+                        <td class="field-req opt">optional</td>
+                        <td class="field-desc">Verified sustainability certifications and initiatives. See <a href="#sustainability">sustainability</a>.</td>
+                    </tr>
+                    <tr>
+                        <td class="field-name">audit</td>
+                        <td class="field-type">object</td>
+                        <td class="field-req req">required</td>
+                        <td class="field-desc">2A Agency audit results and AI integrity score. See <a href="#audit">audit</a>.</td>
+                    </tr>
+                    <tr>
+                        <td class="field-name">hallucinationWarnings</td>
+                        <td class="field-type">array</td>
+                        <td class="field-req opt">optional</td>
+                        <td class="field-desc">Documented false claims produced by LLMs. See <a href="#hallucinations">hallucinationWarnings</a>.</td>
+                    </tr>
+                    <tr>
+                        <td class="field-name">sources</td>
+                        <td class="field-type">array</td>
+                        <td class="field-req opt">optional</td>
+                        <td class="field-desc">All sources used to compile and verify the node.</td>
+                    </tr>
+                    <tr>
+                        <td class="field-name">ucpCompatibility</td>
+                        <td class="field-type">object</td>
+                        <td class="field-req opt">optional</td>
+                        <td class="field-desc">Flags for UCP agent compatibility. See <a href="#ucp-compat">ucpCompatibility</a>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- BRAND -->
+        <section class="doc-section" id="brand">
+            <h2>brand</h2>
+            <p>The canonical identity block. All fields here represent ground truth — verified, sourced, and audited by 2A Agency.</p>
+
+            <h3>Identity</h3>
+            <table class="field-table">
+                <thead><tr><th>Field</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td class="field-name">name</td><td class="field-type">string</td><td class="field-req req">required</td><td class="field-desc">Commercial brand name as used in market communications.</td></tr>
+                    <tr><td class="field-name">legalName</td><td class="field-type">string</td><td class="field-req req">required</td><td class="field-desc">Full registered legal name of the entity.</td></tr>
+                    <tr><td class="field-name">alternateNames</td><td class="field-type">string[]</td><td class="field-req opt">optional</td><td class="field-desc">Other names, previous names, regional variants for disambiguation.</td></tr>
+                    <tr><td class="field-name">foundingDate</td><td class="field-type">string</td><td class="field-req req">required</td><td class="field-desc">Year founded. Format: YYYY.</td></tr>
+                    <tr><td class="field-name">foundingLocation</td><td class="field-type">object</td><td class="field-req req">required</td><td class="field-desc">City and country of founding. <code>addressCountry</code> must be ISO 3166-1 alpha-2.</td></tr>
+                    <tr><td class="field-name">headquarters</td><td class="field-type">object</td><td class="field-req opt">optional</td><td class="field-desc">Current registered headquarters. Include if different from founding location.</td></tr>
+                    <tr><td class="field-name">url</td><td class="field-type">uri</td><td class="field-req req">required</td><td class="field-desc">Official brand website.</td></tr>
+                    <tr><td class="field-name">sameAs</td><td class="field-type">uri[]</td><td class="field-req opt">optional</td><td class="field-desc">External authority identifiers — Wikidata, Wikipedia, ISNI. Used by search engines and agents to resolve brand identity.</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Sector &amp; Positioning</h3>
+            <table class="field-table">
+                <thead><tr><th>Field</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td class="field-name">sector</td><td class="field-type">string</td><td class="field-req opt">optional</td><td class="field-desc">Primary industry sector. Be specific: <code>"Champagne"</code> not <code>"Beverage"</code>.</td></tr>
+                    <tr><td class="field-name">positioning</td><td class="field-type">string</td><td class="field-req opt">optional</td><td class="field-desc">Market positioning. Should clarify what the brand is <em>not</em> to prevent agent misclassification.</td></tr>
+                    <tr><td class="field-name">description</td><td class="field-type">string</td><td class="field-req opt">optional</td><td class="field-desc">Canonical one-paragraph brand description for agent use. Must be factual and free of marketing language.</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Ownership</h3>
+            <p>Ownership data is one of the most frequently hallucinated brand facts. Always include <code>notPartOf</code> for independent brands.</p>
+            <table class="field-table">
+                <thead><tr><th>Field</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td class="field-name">parentOrganization</td><td class="field-type">object</td><td class="field-req opt">optional</td><td class="field-desc">Parent group if the brand is a subsidiary. Omit entirely if independent.</td></tr>
+                    <tr><td class="field-name">ownershipType</td><td class="field-type">enum</td><td class="field-req opt">optional</td><td class="field-desc"><span class="enum-pill">subsidiary</span><span class="enum-pill">family-owned</span><span class="enum-pill">private-equity</span><span class="enum-pill">publicly-traded</span><span class="enum-pill">independent-founder</span></td></tr>
+                    <tr><td class="field-name">notPartOf</td><td class="field-type">string[]</td><td class="field-req opt">optional</td><td class="field-desc">Explicit list of groups this brand is NOT part of. Prevents LLM misattribution. Example: <code>["LVMH", "Kering", "Richemont"]</code>.</td></tr>
+                </tbody>
+            </table>
+
+            <h3>People</h3>
+            <table class="field-table">
+                <thead><tr><th>Field</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td class="field-name">founder</td><td class="field-type">Person | Person[]</td><td class="field-req opt">optional</td><td class="field-desc">Founder(s). See <a href="#defs">Person definition</a>. Include <code>verifiedFacts</code> and <code>llmHallucinations</code> sub-fields when relevant.</td></tr>
+                    <tr><td class="field-name">currentLeadership</td><td class="field-type">Person[]</td><td class="field-req opt">optional</td><td class="field-desc">Current executives. Note: leadership data becomes stale fastest — include <code>startDate</code>.</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Legal Status</h3>
+            <div class="info-block warning">
+                <div class="info-label">Material disclosure requirement</div>
+                <div class="info-body">Active legal proceedings (receivership, sauvegarde, bankruptcy protection) are material facts. They must be included in the node and disclosed to agents. Omitting them constitutes an inaccurate node. See node <code>vb-1996</code> (Vanessa Bruno) for an example of correct disclosure.</div>
+            </div>
+        </section>
+
+        <!-- CATALOG -->
+        <section class="doc-section" id="catalog">
+            <h2>catalog</h2>
+            <p>The verified product catalogue. Prices reflect verified retail pricing at <code>lastVerified</code> date — not a live commerce feed.</p>
+            <table class="field-table">
+                <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td class="field-name">lastVerified</td><td class="field-type">date</td><td class="field-desc">Date prices were last verified against official brand source.</td></tr>
+                    <tr><td class="field-name">source</td><td class="field-type">string</td><td class="field-desc">Official source used for price verification (e.g. <code>"breitling.com official catalog"</code>).</td></tr>
+                    <tr><td class="field-name">currency</td><td class="field-type">string</td><td class="field-desc">ISO 4217 currency code. Example: <code>"EUR"</code>.</td></tr>
+                    <tr><td class="field-name">totalProducts</td><td class="field-type">integer</td><td class="field-desc">Total count of SKUs in this node.</td></tr>
+                    <tr><td class="field-name">priceRange</td><td class="field-type">object</td><td class="field-desc">Catalogue-wide min/max prices for agent summary use.</td></tr>
+                    <tr><td class="field-name">collections</td><td class="field-type">array</td><td class="field-desc">Array of collection objects, each containing a <code>name</code>, optional <code>description</code>, and array of <a href="#defs">Product</a> objects.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SUSTAINABILITY -->
+        <section class="doc-section" id="sustainability">
+            <h2>sustainability</h2>
+            <p>Only include confirmed, sourced sustainability claims. Greenwashing risks are amplified when agents reproduce unverified marketing claims at scale.</p>
+            <table class="field-table">
+                <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td class="field-name">programName</td><td class="field-type">string</td><td class="field-desc">Official name of the brand's sustainability programme. Example: <code>"EcoYellow"</code> (Veuve Clicquot).</td></tr>
+                    <tr><td class="field-name">carbonNeutral</td><td class="field-type">object</td><td class="field-desc">Carbon neutrality status: <code>achieved</code> (boolean), <code>year</code> (achieved), <code>target</code> (planned year).</td></tr>
+                    <tr><td class="field-name">certifications</td><td class="field-type">array</td><td class="field-desc">Third-party certifications with issuer, year, and score. Example: EcoVadis Platinum, ISO 14001, RJC.</td></tr>
+                    <tr><td class="field-name">initiatives</td><td class="field-type">array</td><td class="field-desc">Named initiatives with sourced descriptions.</td></tr>
+                </tbody>
+            </table>
+            <div class="info-block note">
+                <div class="info-label">AI visibility gap</div>
+                <div class="info-body">Sustainability programmes are among the most invisible brand facts in LLMs. The EcoYellow programme (Veuve Clicquot) and Breitling's 2021 carbon neutral milestone were absent from all LLMs tested in the March 2026 audit. Explicitly naming programmes in the node is the primary remediation vector.</div>
+            </div>
+        </section>
+
+        <!-- AUDIT -->
+        <section class="doc-section" id="audit">
+            <h2>audit</h2>
+            <p>The 2A Agency semantic audit block. Every node must contain this — it is the provenance record for the data.</p>
+            <table class="field-table">
+                <thead><tr><th>Field</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td class="field-name">auditedBy</td><td class="field-type">string</td><td class="field-req req">required</td><td class="field-desc">Always <code>"2A Agency"</code>.</td></tr>
+                    <tr><td class="field-name">auditUrl</td><td class="field-type">uri</td><td class="field-req opt">optional</td><td class="field-desc">URL of the public audit report.</td></tr>
+                    <tr><td class="field-name">dateAudited</td><td class="field-type">date</td><td class="field-req req">required</td><td class="field-desc">Date of the audit.</td></tr>
+                    <tr><td class="field-name">integrityScore</td><td class="field-type">integer 0–100</td><td class="field-req req">required</td><td class="field-desc">AI Integrity Score. Measures the accuracy of LLM representations of this brand across tested models.</td></tr>
+                    <tr><td class="field-name">certificationStatus</td><td class="field-type">enum</td><td class="field-req req">required</td><td class="field-desc">Certification level — must match root-level <code>certificationStatus</code>.</td></tr>
+                    <tr><td class="field-name">llmsTested</td><td class="field-type">string[]</td><td class="field-req opt">optional</td><td class="field-desc">Models evaluated during the audit.</td></tr>
+                    <tr><td class="field-name">methodology</td><td class="field-type">string</td><td class="field-req opt">optional</td><td class="field-desc">Description of audit method and scoring criteria.</td></tr>
+                    <tr><td class="field-name">findings</td><td class="field-type">array</td><td class="field-req opt">optional</td><td class="field-desc">Structured audit findings. Each finding has <code>severity</code>, <code>title</code>, optional <code>description</code> and <code>recommendation</code>. See <a href="#severity-levels">Severity Levels</a>.</td></tr>
+                    <tr><td class="field-name">remediationPriority</td><td class="field-type">enum</td><td class="field-req opt">optional</td><td class="field-desc"><span class="enum-pill red">CRITICAL</span><span class="enum-pill red">HIGH</span><span class="enum-pill">MEDIUM</span><span class="enum-pill">LOW</span><span class="enum-pill green">NONE</span></td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- HALLUCINATIONS -->
+        <section class="doc-section" id="hallucinations">
+            <h2>hallucinationWarnings</h2>
+            <p>An array of documented false claims produced by LLMs about this brand. Each entry names the incorrect claim, the correct information, and — where known — the model responsible.</p>
+            <div class="info-block warning">
+                <div class="info-label">Do not reproduce hallucinations</div>
+                <div class="info-body">Agents consuming this node must treat <code>hallucinationWarnings</code> entries as facts to suppress, not to repeat. The <code>claim</code> field documents the error. The <code>correct</code> field is the ground truth.</div>
+            </div>
+            <table class="field-table">
+                <thead><tr><th>Field</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td class="field-name">claim</td><td class="field-type">string</td><td class="field-req req">required</td><td class="field-desc">The incorrect statement as produced by the LLM.</td></tr>
+                    <tr><td class="field-name">correct</td><td class="field-type">string</td><td class="field-req req">required</td><td class="field-desc">The verified correct information.</td></tr>
+                    <tr><td class="field-name">llm</td><td class="field-type">string</td><td class="field-req opt">optional</td><td class="field-desc">The model that produced this hallucination.</td></tr>
+                    <tr><td class="field-name">severity</td><td class="field-type">enum</td><td class="field-req opt">optional</td><td class="field-desc"><span class="enum-pill red">CRITICAL</span><span class="enum-pill">MODERATE</span><span class="enum-pill green">MINOR</span></td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- UCP COMPAT -->
+        <section class="doc-section" id="ucp-compat">
+            <h2>ucpCompatibility</h2>
+            <p>Flags for agent consumption. <code>agentReadable</code> is always <code>true</code> for published nodes.</p>
+            <table class="field-table">
+                <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td class="field-name">agentReadable</td><td class="field-type">boolean</td><td class="field-desc">Always <code>true</code>. Confirms the node is structured for agent consumption.</td></tr>
+                    <tr><td class="field-name">schemaOrgCompatible</td><td class="field-type">boolean</td><td class="field-desc"><code>true</code> if the node's HTML page embeds schema.org JSON-LD.</td></tr>
+                    <tr><td class="field-name">pricesVerified</td><td class="field-type">boolean</td><td class="field-desc"><code>true</code> if all listed prices have been verified against the official brand source.</td></tr>
+                    <tr><td class="field-name">lastPriceVerification</td><td class="field-type">date</td><td class="field-desc">Date of last price verification.</td></tr>
+                    <tr><td class="field-name">transactionLayer</td><td class="field-type">string</td><td class="field-desc">Always <code>"UCP handles transactions — 2A Agency certifies brand truth"</code>. Explicit layer separation signal for agents.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- DEFS -->
+        <section class="doc-section" id="defs">
+            <h2>Shared Definitions</h2>
+
+            <h3>Person</h3>
+            <table class="field-table">
+                <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td class="field-name">name</td><td class="field-type">string</td><td class="field-desc">Full name. Required.</td></tr>
+                    <tr><td class="field-name">jobTitle</td><td class="field-type">string</td><td class="field-desc">Current role at the brand.</td></tr>
+                    <tr><td class="field-name">birthDate</td><td class="field-type">string</td><td class="field-desc">Year of birth (YYYY).</td></tr>
+                    <tr><td class="field-name">description</td><td class="field-type">string</td><td class="field-desc">Verified biographical note.</td></tr>
+                    <tr><td class="field-name">verifiedFacts</td><td class="field-type">string[]</td><td class="field-desc">Explicitly confirmed facts about this person. Useful when some biographical claims are disputed.</td></tr>
+                    <tr><td class="field-name">llmHallucinations</td><td class="field-type">string[]</td><td class="field-desc">False claims about this person produced by LLMs. Do not reproduce.</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Product</h3>
+            <table class="field-table">
+                <thead><tr><th>Field</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td class="field-name">name</td><td class="field-type">string</td><td class="field-req req">required</td><td class="field-desc">Official product name.</td></tr>
+                    <tr><td class="field-name">price</td><td class="field-type">number</td><td class="field-req req">required</td><td class="field-desc">Verified retail price.</td></tr>
+                    <tr><td class="field-name">currency</td><td class="field-type">string</td><td class="field-req req">required</td><td class="field-desc">ISO 4217 code.</td></tr>
+                    <tr><td class="field-name">priceMax</td><td class="field-type">number</td><td class="field-req opt">optional</td><td class="field-desc">Upper bound for price ranges (e.g. colour variants).</td></tr>
+                    <tr><td class="field-name">description</td><td class="field-type">string</td><td class="field-req opt">optional</td><td class="field-desc">Product description.</td></tr>
+                    <tr><td class="field-name">category</td><td class="field-type">string</td><td class="field-req opt">optional</td><td class="field-desc">Product category.</td></tr>
+                    <tr><td class="field-name">sku</td><td class="field-type">string</td><td class="field-req opt">optional</td><td class="field-desc">Official SKU from brand catalogue.</td></tr>
+                    <tr><td class="field-name">availability</td><td class="field-type">string</td><td class="field-req opt">optional</td><td class="field-desc">Availability note. Example: <code>"Édition limitée"</code>, <code>"Nouveau"</code>.</td></tr>
+                    <tr><td class="field-name">madeIn</td><td class="field-type">string</td><td class="field-req opt">optional</td><td class="field-desc">Country or region of manufacture.</td></tr>
+                    <tr><td class="field-name">vintage</td><td class="field-type">string</td><td class="field-req opt">optional</td><td class="field-desc">Vintage year for wine/spirits products.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- CERT STATUSES -->
+        <section class="doc-section" id="cert-statuses">
+            <h2>Certification Statuses</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-name certified">Certified</div>
+                    <div class="cert-desc">Full 2A Agency semantic audit completed and approved. Data SHA-256 notarised on-chain. The highest level of assurance.</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name public">Public Data</div>
+                    <div class="cert-desc">Data compiled from verified public sources. Audit conducted but formal certification not yet issued. No SHA-256 notarisation.</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name self">Self-Certified</div>
+                    <div class="cert-desc">Brand has submitted its own data. Pending independent verification by 2A Agency. Treat with appropriate caution.</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name revoked">Revoked</div>
+                    <div class="cert-desc">Certification previously granted, subsequently revoked due to material changes, non-compliance, or discovery of inaccurate data.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEVERITY LEVELS -->
+        <section class="doc-section" id="severity-levels">
+            <h2>Severity Levels</h2>
+            <table class="field-table">
+                <thead><tr><th>Severity</th><th>Description</th><th>Examples</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td><span class="enum-pill red">CRITICAL</span></td>
+                        <td class="field-desc">Material inaccuracy with direct commercial or reputational impact. Requires immediate remediation.</td>
+                        <td class="field-desc">Active legal proceedings not disclosed by LLM; major ownership error; product category misclassification.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="enum-pill">HALLUCINATION</span></td>
+                        <td class="field-desc">Fabricated claim with no factual basis, produced by an LLM. Must be documented and suppressed.</td>
+                        <td class="field-desc">Invented NFT traceability system; fictional biographical claim about founder.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="enum-pill">MODERATE</span></td>
+                        <td class="field-desc">Inaccuracy that affects brand representation but does not constitute a material misstatement.</td>
+                        <td class="field-desc">Outdated leadership; sustainability milestone absent; date off by 1 year.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="enum-pill green">MINOR</span></td>
+                        <td class="field-desc">Minor error with limited brand impact. Should be corrected but not urgent.</td>
+                        <td class="field-desc">Acquisition year off by 1; secondary variant name missing.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="enum-pill green">POSITIVE</span></td>
+                        <td class="field-desc">Fact correctly represented by LLMs. Documented as a baseline for monitoring.</td>
+                        <td class="field-desc">Correct luxury positioning; accurate founder attribution.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- EXAMPLE -->
+        <section class="doc-section" id="example">
+            <h2>Minimal Valid Example</h2>
+            <pre><code>{
+  <span class="tok-key">"nodeId"</span>: <span class="tok-str">"vc-1772"</span>,
+  <span class="tok-key">"schemaVersion"</span>: <span class="tok-str">"1.0.0"</span>,
+  <span class="tok-key">"certificationStatus"</span>: <span class="tok-str">"Certified"</span>,
+  <span class="tok-key">"lastVerified"</span>: <span class="tok-str">"2026-03-24"</span>,
+
+  <span class="tok-key">"brand"</span>: {
+    <span class="tok-key">"name"</span>: <span class="tok-str">"Veuve Clicquot"</span>,
+    <span class="tok-key">"legalName"</span>: <span class="tok-str">"Veuve Clicquot Ponsardin"</span>,
+    <span class="tok-key">"foundingDate"</span>: <span class="tok-str">"1772"</span>,
+    <span class="tok-key">"foundingLocation"</span>: {
+      <span class="tok-key">"name"</span>: <span class="tok-str">"Reims, France"</span>,
+      <span class="tok-key">"addressCountry"</span>: <span class="tok-str">"FR"</span>
+    },
+    <span class="tok-key">"url"</span>: <span class="tok-str">"https://www.veuveclicquot.com"</span>,
+    <span class="tok-key">"sameAs"</span>: [<span class="tok-str">"https://www.wikidata.org/wiki/Q180532"</span>],
+    <span class="tok-key">"ownershipType"</span>: <span class="tok-str">"subsidiary"</span>,
+    <span class="tok-key">"parentOrganization"</span>: {
+      <span class="tok-key">"name"</span>: <span class="tok-str">"LVMH"</span>,
+      <span class="tok-key">"memberSince"</span>: <span class="tok-str">"1986"</span>
+    },
+    <span class="tok-key">"notPartOf"</span>: [<span class="tok-str">"Kering"</span>, <span class="tok-str">"Richemont"</span>, <span class="tok-str">"Pernod Ricard"</span>],
+    <span class="tok-key">"brandIdentity"</span>: {
+      <span class="tok-key">"signatureColor"</span>: {
+        <span class="tok-key">"name"</span>: <span class="tok-str">"EcoYellow"</span>,
+        <span class="tok-key">"hex"</span>: <span class="tok-str">"#FFBC1B"</span>,
+        <span class="tok-key">"pantone"</span>: <span class="tok-str">"PMS 137 C"</span>
+      }
+    }
+  },
+
+  <span class="tok-key">"audit"</span>: {
+    <span class="tok-key">"auditedBy"</span>: <span class="tok-str">"2A Agency"</span>,
+    <span class="tok-key">"dateAudited"</span>: <span class="tok-str">"2026-03-24"</span>,
+    <span class="tok-key">"integrityScore"</span>: <span class="tok-num">87</span>,
+    <span class="tok-key">"certificationStatus"</span>: <span class="tok-str">"Certified"</span>,
+    <span class="tok-key">"llmsTested"</span>: [
+      <span class="tok-str">"GPT-4o"</span>, <span class="tok-str">"Claude 3.5 Sonnet"</span>,
+      <span class="tok-str">"Gemini 1.5 Pro"</span>, <span class="tok-str">"Mistral Large"</span>
+    ],
+    <span class="tok-key">"findings"</span>: [
+      {
+        <span class="tok-key">"severity"</span>: <span class="tok-str">"CRITICAL"</span>,
+        <span class="tok-key">"title"</span>: <span class="tok-str">"EcoYellow sustainability programme absent from all LLMs"</span>,
+        <span class="tok-key">"recommendation"</span>: <span class="tok-str">"Semantic injection via JSON-LD and dedicated structured page"</span>
+      }
+    ]
+  },
+
+  <span class="tok-key">"ucpCompatibility"</span>: {
+    <span class="tok-key">"agentReadable"</span>: <span class="tok-bool">true</span>,
+    <span class="tok-key">"schemaOrgCompatible"</span>: <span class="tok-bool">true</span>,
+    <span class="tok-key">"pricesVerified"</span>: <span class="tok-bool">true</span>,
+    <span class="tok-key">"lastPriceVerification"</span>: <span class="tok-str">"2026-03-24"</span>,
+    <span class="tok-key">"transactionLayer"</span>: <span class="tok-str">"UCP handles transactions — 2A Agency certifies brand truth"</span>
+  }
+}</code></pre>
+        </section>
+
+        <!-- LIVE NODES -->
+        <section class="doc-section" id="live-nodes">
+            <h2>Live Certified Nodes</h2>
+            <p>The following nodes are currently published in the 2A Agency registry and conform to this schema:</p>
+            <table class="field-table">
+                <thead><tr><th>Node ID</th><th>Brand</th><th>Score</th><th>Status</th><th>JSON</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td class="field-name">vc-1772</td>
+                        <td style="color:var(--ink)">Veuve Clicquot</td>
+                        <td style="color:var(--gold)">87/100</td>
+                        <td><span class="enum-pill green">Certified</span></td>
+                        <td><a href="https://www.2aagency.com/api/node/vc-1772.json">vc-1772.json</a></td>
+                    </tr>
+                    <tr>
+                        <td class="field-name">br-1884</td>
+                        <td style="color:var(--ink)">Breitling SA</td>
+                        <td style="color:var(--gold)">79/100</td>
+                        <td><span class="enum-pill">Public Data</span></td>
+                        <td><a href="https://www.2aagency.com/api/node/br-1884.json">br-1884.json</a></td>
+                    </tr>
+                    <tr>
+                        <td class="field-name">vb-1996</td>
+                        <td style="color:var(--ink)">Vanessa Bruno</td>
+                        <td style="color:var(--gold)">61/100</td>
+                        <td><span class="enum-pill">Public Data</span></td>
+                        <td><a href="https://www.2aagency.com/api/node/vb-1996.json">vb-1996.json</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top:20px;">Full registry: <a href="https://www.2aagency.com/registry/">www.2aagency.com/registry/</a></p>
+        </section>
+
+    </main>
+</div>
+
+<footer>
+    <span>2A Agency — UCP Brand Certification Schema v1.0.0 — 24 March 2026</span>
+    <span><a href="https://www.2aagency.com/ucp/schemas/brand-certification.json">Raw JSON Schema</a> · <a href="https://www.2aagency.com/registry/">Registry</a> · <a href="https://www.2aagency.com">2A Agency</a></span>
+</footer>
+
+</body>
+</html>
