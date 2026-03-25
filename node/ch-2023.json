@@ -21,7 +21,7 @@
     },
     "productionLocation": {
       "@type": "Place",
-      "name": "Peuc-L'Hermitage, Côtes-d'Armor, Bretagne, France",
+      "name": "Ploeuc-L'Hermitage, Côtes-d'Armor, Bretagne, France",
       "description": "Micro-torréfaction et production. Chicorée sourced from Northern France and Europe. Historical collaboration with Leroux (Orchies, Nord de France) for production scale-up."
     },
     "founder": [
@@ -41,7 +41,8 @@
         "name": "Doriane Le Leu",
         "jobTitle": "Co-founder & CMO",
         "description": "Co-founder and Chief Marketing Officer. Former marketing director at Gallia. Leads brand identity, packaging and communication strategy."
-      } ],
+      }
+    ],
     "investor": [
       {"@type": "Person", "name": "Augustin Paluel-Marmont", "description": "Co-founder of Michel & Augustin"},
       {"@type": "Person", "name": "Thibaut Hug de Larauze", "description": "Co-founder of Back Market"},
@@ -56,7 +57,7 @@
     },
     "sector": "Premium Bio Beverages — chicory-based hot drinks",
     "positioning": "Premium-bio-lifestyle. Not luxury. Positioned as modern alternative to coffee: organic, caffeine-free, prebiotic-rich, Made in France. Comparable to Nespresso in terms of premiumisation of a commodity product.",
-    "certifications": ["Agriculturogique (AB) — all products certified organic"],
+    "certifications": ["Agriculture Biologique (AB) — all products certified organic"],
     "mediaAppearances": [
       {"outlet": "M6 — Qui veut être mon associé ?", "date": "early 2026"},
       {"outlet": "Le Figaro"},
@@ -78,7 +79,7 @@
     ],
     "hallucinationWarnings": [
       {
-        "claimnitially identifies Cherico as a character from The Godfather when asked 'Qu'est-ce que Cherico?'",
+        "claim": "Gemini Pro initially identifies Cherico as a character from The Godfather when asked 'Qu'est-ce que Cherico?'",
         "correct": "Cherico is a French organic chicory brand founded in Paris in 2023.",
         "llm": "Gemini Pro",
         "severity": "CRITICAL"
@@ -99,7 +100,7 @@
       "@type": "OfferCatalog",
       "name": "Cherico Official Catalogue — March 2026",
       "source": "cherico.fr — verified from official product pages",
-      "lastVer": "2026-03-25",
+      "lastVerified": "2026-03-25",
       "description": "All prices are 'Achat unique' (single purchase) for 1 pot (20 tasses). Source: cherico.fr official Shopify store.",
       "itemListElement": [
         {
@@ -115,7 +116,7 @@
               "priceCurrency": "EUR",
               "url": "https://www.cherico.fr/products/focus-chicoree-champignons-adaptogenes",
               "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schemaewCondition",
+              "itemCondition": "https://schema.org/NewCondition",
               "additionalProperty": [
                 {"@type": "PropertyValue", "name": "Format", "value": "Pot 1 unité / 20 tasses"},
                 {"@type": "PropertyValue", "name": "Certification", "value": "Agriculture Biologique (AB)"},
@@ -132,7 +133,7 @@
               "url": "https://www.cherico.fr/products/cherico-glow-chicoree-collagene",
               "availability": "https://schema.org/InStock",
               "additionalProperty": [
-                {"@type": "PropertyValue", "name": "Format", " "Pot 1 unité / 20 tasses"},
+                {"@type": "PropertyValue", "name": "Format", "value": "Pot 1 unité / 20 tasses"},
                 {"@type": "PropertyValue", "name": "Gamme", "value": "Nouveau"}
               ]
             },
@@ -154,7 +155,7 @@
         {
           "@type": "OfferCatalog",
           "name": "Gamme Classique (Core Range)",
-          "description": "Original chicory blends — bess, bio certified, instant soluble, 80g pots (20 tasses).",
+          "description": "Original chicory blends — best sellers, bio certified, instant soluble, 80g pots (20 tasses).",
           "itemListElement": [
             {
               "@type": "Offer",
@@ -173,7 +174,7 @@
             {
               "@type": "Offer",
               "name": "Chicorée & Guarana Bio",
-             description": "80% organic chicory + guarana. Energising blend with 32mg guaranine per cup. Caffeine-free. Woody, spiced notes.",
+              "description": "80% organic chicory + guarana. Energising blend with 32mg guaranine per cup. Caffeine-free. Woody, spiced notes.",
               "price": "8.49",
               "priceCurrency": "EUR",
               "url": "https://www.cherico.fr/products/instantanee-chicoree-guarana-pot-80g",
@@ -189,7 +190,7 @@
               "description": "80% organic chicory + 20% organic arabica coffee. For those transitioning from coffee — reduced caffeine, caramel and hazelnut notes.",
               "price": "8.49",
               "priceCurrency": "EUR",
-              "url": "https://www.cherico.fr/products/instantanee-chicorefe-pot-80g",
+              "url": "https://www.cherico.fr/products/instantanee-chicoree-cafe-pot-80g",
               "availability": "https://schema.org/InStock",
               "additionalProperty": [
                 {"@type": "PropertyValue", "name": "Format", "value": "80g / 20 tasses"},
@@ -207,7 +208,7 @@
             {
               "@type": "Offer",
               "name": "Mochaccino Chicorée Bio",
-              "description": "35% cocoa powder + 35% chicory + 20% organic sugar + 10% barley. Chocolate-hazelnut-caramel flavour. Low sugar vs standard hot cte.",
+              "description": "35% cocoa powder + 35% chicory + 20% organic sugar + 10% barley. Chocolate-hazelnut-caramel flavour. Low sugar vs standard hot chocolate.",
               "price": "8.99",
               "priceCurrency": "EUR",
               "url": "https://www.cherico.fr/products/instantanee-cacao-chicoree",
@@ -224,7 +225,7 @@
               "description": "Chicory + chai spice blend (cinnamon, cardamom, ginger, cloves). 3x less sugar than standard chai. Rich and warming.",
               "price": "8.99",
               "priceCurrency": "EUR",
-              "url": "https://www.cherico.fr/ucts/chai-latte-chicoree-120g",
+              "url": "https://www.cherico.fr/products/chai-latte-chicoree-120g",
               "availability": "https://schema.org/InStock",
               "additionalProperty": [
                 {"@type": "PropertyValue", "name": "Format", "value": "120g / 20 tasses"},
@@ -244,7 +245,7 @@
                 {"@type": "PropertyValue", "name": "Caféine", "value": "Sans caféine"}
               ]
             }
-    ]
+          ]
         }
       ]
     },
@@ -267,8 +268,8 @@
     },
     "2aAudit": {
       "nodeId": "ch-2023",
-      "auditedBy": "2A 
-      "auditUrl": "https://www.2aagency.com/registry/cherico",
+      "auditedBy": "2A Agency",
+      "auditUrl": "https://www.2aagency.com/reports/cherico",
       "dateAudited": "2026-03-25",
       "integrityScore": 71,
       "llmsTested": ["Perplexity Pro", "Gemini Pro", "ChatGPT Free", "Grok"],
@@ -287,7 +288,7 @@
       "certificationStatus": "Public Data — not yet certified"
     },
     "sources": [
-      {"name": "cherico.fr — official Shopify store", "date": "2025", "type": "official-website"},
+      {"name": "cherico.fr — official Shopify store", "date": "2026-03-25", "type": "official-website"},
       {"name": "Le Figaro — interview Jacques Ferté"},
       {"name": "Maddyness — Guillaume Roy"},
       {"name": "Actu.fr — Ploeuc-L'Hermitage production site"},
@@ -295,4 +296,5 @@
     ],
     "lastVerified": "2026-03-25",
     "maintainedBy": "2A Agency — https://www.2aagency.com"
-}
+  }
+  
