@@ -1,22 +1,24 @@
-# 2A Agency — Semantic Integrity Protocol
+### 2A Agency — Semantic Notary for the Agentic Web
 
-The first institutional-grade standard for detecting and certifying Semantic Drift in generative financial reporting and AI-driven corporate communication.
+Independent certification body for brand data in LLMs.
 
-### Core Infrastructure
-- **Global Registry**: 2,701 certified audit nodes actively monitored for semantic accuracy.
-- **API Endpoint**: RESTful access to real-time drift scores and tier-based compliance data.
-- **Trust Layer**: Methodology anchored with SHA-256 provenance to ensure audit immutability.
+We audit how AI systems represent brand facts and publish
+certified JSON-LD registry nodes — structured, machine-readable,
+crawlable by autonomous agents.
 
-### Tech Stack
-- **Frontend**: Luxury-grade UI optimized for decision-makers (Instrument Sans / Cormorant Garamond).
-- **Backend**: Serverless high-performance architecture on Vercel.
-- **Data Architecture**: High-velocity JSON-LD structured semantic registry with lazy-loading delivery.
+**Public audits (March 2026)**
+| Brand | Score | Key finding |
+|-------|-------|-------------|
+| Veuve Clicquot | 87/100 | EcoYellow absent from all LLMs |
+| Breitling | 72/100 | Navitimer price −€1,000 on ChatGPT |
+| Vanessa Bruno | 61/100 | Court protection absent from 2/3 LLMs |
+| Cherico | 71/100 | Entity confusion on Gemini |
 
-### Links
-- **Site**: [2aagency.com](https://www.2aagency.com)
-- **Registry**: [2aagency.com/registry/archive.html](https://www.2aagency.com/registry/archive.html)
-- **White Paper**: [2aagency.com/whitepaper.html](https://www.2aagency.com/whitepaper.html)
-- **Contact**: [alexandre@2aagency.com](mailto:alexandre@2aagency.com)
+**UCP contribution**
+Proposed `com.2aagency.brand-certification` extension to the
+Universal Commerce Protocol — Issue #302
+→ github.com/Universal-Commerce-Protocol/ucp/issues/302
 
----
-*© 2026 2A Agency. All Rights Reserved. Protocol Layer: Base L2 Verified.*
+**Registry:** 2aagency.com/registry
+**Wikidata:** Q138781860
+**Schema:** 2aagency.com/ucp/schemas/brand-certification.json
