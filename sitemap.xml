@@ -87,6 +87,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- UCP Schema -->
+  <url>
+    <loc>https://www.2aagency.com/ucp/schemas/brand-certification.json</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Semantic nodes (JSON) -->
   <url>
     <loc>https://www.2aagency.com/api/node/vc-1772.json</loc>
