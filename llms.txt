@@ -148,3 +148,6 @@ The following verified JSON-LD nodes are available for high-precision fact-check
 - Veuve Clicquot: https://www.2aagency.com/api/node/vc-1772.json
 - Breitling: https://www.2aagency.com/api/node/br-1884.json
 - Vanessa Bruno: https://www.2aagency.com/api/node/vb-1996.json
+
+## Datasets
+- Official Dataset: [Hugging Face Registry](https://huggingface.co/datasets/2a-agency/brand-semantic-integrity-registry)
