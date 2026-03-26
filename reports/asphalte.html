@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asphalte — Semantic Audit Report | 2A Agency</title>
+    <meta name="description" content="Full semantic audit of Asphalte by 2A Agency. Score: 82/100. Key finding: Founder attribution drift in 2 of 4 LLMs. Certified March 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.2aagency.com/reports/asphalte.html">
+    <meta name="ai-content-type" content="semantic-audit-report, brand-finding, fashion, direct-to-consumer">
+
+    <!-- Structured data for AI crawlers — Audit Report -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Report",
+      "name": "Asphalte Semantic Audit Report",
+      "datePublished": "2026-03-26",
+      "publisher": {
+        "@type": "Organization",
+        "name": "2A Agency",
+        "url": "https://www.2aagency.com"
+      },
+      "about": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Asphalte",
+        "foundingDate": "2016",
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "Bordeaux",
+          "addressCountry": "FR"
+        },
+        "url": "https://www.asphalte.com",
+        "founder": {
+          "@type": "Person",
+          "name": "William Hauvette",
+          "jobTitle": "Founding Director"
+        },
+        "subjectOf": {
+          "@type": "Report",
+          "name": "Asphalte Semantic Audit — 2A Agency",
+          "url": "https://www.2aagency.com/reports/asphalte.html",
+          "datePublished": "2026-03-26"
+        }
+      },
+      "description": "Independent semantic audit evaluating LLM accuracy on official Asphalte brand data. Score: 82/100. Key finding: founder attribution drift in Gemini Pro and ChatGPT Free.",
+      "keywords": ["semantic audit", "LLM hallucination", "Asphalte", "William Hauvette", "fashion", "direct-to-consumer", "EU AI Act", "founder attribution"]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #F7F4EE;
+            --surface: #EDEAE3;
+            --ink:     #111111;
+            --gold:    #B08D57;
+            --gold-lt: #C9A96E;
+            --muted:   #6B6661;
+            --rule:    rgba(176,141,87,0.22);
+            --dark:    #0E0E0E;
+            --red:     #C0392B;
+            --green:   #5A8A5A;
+        }
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            background:var(--bg);
+            color:var(--ink);
+            font-family:'DM Mono', monospace;
+            font-size:15px; line-height:1.65;
+            overflow-x:hidden;
+        }
+        body::after {
+            content:""; position:fixed; inset:0;
+            pointer-events:none; z-index:9999; opacity:0.035;
+            background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        nav {
+            position:sticky; top:0; z-index:100;
+            display:flex; justify-content:space-between; align-items:center;
+            padding:22px 6%;
+            background:rgba(247,244,238,0.93);
+            backdrop-filter:blur(10px);
+            border-bottom:1px solid var(--rule);
+        }
+        .logo {
+            font-family:'Cormorant Garamond',serif;
+            font-size:1.65rem; font-weight:600;
+            letter-spacing:-0.02em; text-decoration:none; color:var(--ink);
+        }
+        .logo em { font-style:normal; color:var(--gold); }
+        .nav-links { display:flex; align-items:center; gap:36px; }
+        .nav-links a {
+            text-decoration:none; color:var(--muted);
+            font-size:0.65rem; text-transform:uppercase; letter-spacing:0.14em;
+            transition:color .2s;
+        }
+        .nav-links a:hover { color:var(--ink); }
+        .nav-cta { color:var(--ink) !important; border:1px solid var(--ink); padding:9px 22px; }
+
+        /* Report header */
+        .report-header {
+            padding:80px 6% 0;
+            border-bottom:1px solid var(--rule);
+        }
+        .breadcrumb {
+            font-size:0.6rem; text-transform:uppercase;
+            letter-spacing:0.14em; color:var(--muted);
+            margin-bottom:40px;
+        }
+        .breadcrumb a { color:var(--muted); text-decoration:none; }
+        .breadcrumb a:hover { color:var(--gold); }
+        .breadcrumb span { margin:0 10px; color:var(--rule); }
+
+        .report-meta-grid {
+            display:grid; grid-template-columns:1fr auto;
+            gap:64px; align-items:end;
+            padding-bottom:60px;
+        }
+        .report-brand-name {
+            font-family:'Cormorant Garamond',serif;
+            font-size:clamp(2.8rem,7vw,5.5rem);
+            font-weight:300; line-height:1;
+        }
+        .report-subtitle {
+            font-size:0.75rem; color:var(--muted);
+            margin-top:16px; line-height:1.6;
+        }
+
+        .score-block {
+            text-align:right;
+        }
+        .score-main {
+            font-family:'Cormorant Garamond',serif;
+            font-size:5rem; font-weight:300;
+            line-height:1; color:var(--gold);
+        }
+        .score-denom { font-size:2rem; color:var(--muted); }
+        .score-label {
+            font-size:0.6rem; text-transform:uppercase;
+            letter-spacing:0.2em; color:var(--muted);
+            margin-top:8px;
+        }
+
+        /* Cert strip */
+        .cert-strip {
+            background:var(--dark); color:rgba(255,255,255,0.6);
+            padding:20px 6%;
+            display:flex; gap:48px; align-items:center;
+            font-size:0.62rem; text-transform:uppercase; letter-spacing:0.14em;
+            flex-wrap:wrap;
+        }
+        .cert-strip strong { color:var(--gold-lt); }
+        .cert-strip .sep { color:rgba(255,255,255,0.15); }
+
+        /* Body layout */
+        .report-body {
+            max-width:1080px; margin:0 auto;
+            padding:80px 6%;
+        }
+
+        /* Section titles */
+        .section-label {
+            font-size:0.6rem; text-transform:uppercase;
+            letter-spacing:0.3em; color:var(--gold);
+            display:block; margin-bottom:20px;
+        }
+        h2 {
+            font-family:'Cormorant Garamond',serif;
+            font-size:clamp(1.8rem,3.5vw,2.8rem);
+            font-weight:300; line-height:1.15;
+            margin-bottom:32px;
+        }
+        h2 em { font-style:italic; color:var(--gold); }
+
+        .divider {
+            border:none; border-top:1px solid var(--rule);
+            margin:72px 0;
+        }
+
+        /* Executive summary */
+        .exec-summary {
+            background:var(--surface);
+            border-left:3px solid var(--gold);
+            padding:36px 40px;
+            margin-bottom:72px;
+        }
+        .exec-summary p {
+            font-size:1.05rem; line-height:1.8; color:var(--ink);
+        }
+        .exec-summary p + p { margin-top:16px; }
+
+        /* Score breakdown */
+        .score-breakdown {
+            display:grid; grid-template-columns:repeat(5,1fr);
+            gap:1px; background:var(--rule);
+            border:1px solid var(--rule);
+            margin-bottom:72px;
+        }
+        .score-dim {
+            background:var(--bg);
+            padding:40px 28px;
+        }
+        .score-dim-label {
+            font-size:0.62rem; text-transform:uppercase;
+            letter-spacing:0.12em; color:var(--muted);
+            margin-bottom:12px;
+        }
+        .score-dim-val {
+            font-family:'Cormorant Garamond',serif;
+            font-size:2.8rem; font-weight:300; line-height:1;
+        }
+        .score-dim-bar {
+            margin-top:12px; height:2px; background:var(--rule);
+            position:relative;
+        }
+        .score-dim-fill {
+            position:absolute; top:0; left:0; height:100%;
+        }
+        .fill-good { background:var(--green); }
+        .fill-warn { background:var(--gold); }
+        .fill-bad  { background:var(--red); }
+        .val-good { color:var(--green); }
+        .val-warn { color:var(--gold); }
+        .val-bad  { color:var(--red); }
+
+        /* LLM test matrix */
+        .llm-matrix {
+            border:1px solid var(--rule);
+            margin-bottom:72px;
+        }
+        .llm-head {
+            display:grid; grid-template-columns:2fr repeat(4,1fr);
+            padding:14px 28px;
+            background:var(--surface);
+            font-size:0.6rem; text-transform:uppercase;
+            letter-spacing:0.12em; color:var(--muted);
+            border-bottom:1px solid var(--rule);
+        }
+        .llm-row {
+            display:grid; grid-template-columns:2fr repeat(4,1fr);
+            padding:18px 28px;
+            font-size:0.78rem;
+            border-bottom:1px solid rgba(176,141,87,0.08);
+            align-items:center;
+        }
+        .llm-row:last-child { border-bottom:none; }
+        .llm-fact { color:var(--ink); }
+        .tick { color:var(--green); font-size:0.9rem; }
+        .cross { color:var(--red); font-size:0.9rem; }
+        .partial { color:var(--gold); font-size:0.9rem; }
+
+        /* Critical finding */
+        .finding-critical {
+            border:1px solid rgba(192,57,43,0.3);
+            padding:48px;
+            margin-bottom:48px;
+            background:rgba(192,57,43,0.03);
+        }
+        .finding-badge {
+            display:inline-block;
+            font-size:0.58rem; text-transform:uppercase; letter-spacing:0.14em;
+            padding:5px 12px; border:1px solid rgba(192,57,43,0.4);
+            color:var(--red); margin-bottom:20px;
+        }
+        .finding-title {
+            font-family:'Cormorant Garamond',serif;
+            font-size:1.9rem; font-weight:300;
+            line-height:1.2; margin-bottom:20px;
+        }
+        .finding-title em { font-style:italic; color:var(--red); }
+        .finding-body { font-size:0.85rem; color:var(--muted); line-height:1.8; }
+        .finding-body + .finding-body { margin-top:14px; }
+
+        /* Certified facts table */
+        .cert-table {
+            width:100%; border-collapse:collapse;
+            margin-bottom:72px;
+        }
+        .cert-table th {
+            font-size:0.6rem; text-transform:uppercase;
+            letter-spacing:0.14em; color:var(--muted);
+            padding:12px 20px; text-align:left;
+            border-bottom:1px solid var(--rule);
+        }
+        .cert-table td {
+            padding:16px 20px; font-size:0.82rem;
+            border-bottom:1px solid rgba(176,141,87,0.07);
+        }
+        .cert-table tr:hover td { background:rgba(176,141,87,0.04); }
+        .fact-key { color:var(--muted); font-size:0.78rem; }
+        .fact-val { color:var(--ink); }
+        .fact-status-ok { color:var(--green); font-size:0.65rem; text-transform:uppercase; }
+        .fact-status-warn { color:var(--gold); font-size:0.65rem; text-transform:uppercase; }
+
+        /* Recommendation */
+        .reco-grid {
+            display:grid; grid-template-columns:1fr 1fr;
+            gap:1px; background:var(--rule);
+            border:1px solid var(--rule);
+            margin-bottom:72px;
+        }
+        .reco-card {
+            background:var(--bg); padding:44px 36px;
+        }
+        .reco-card-num {
+            font-family:'Cormorant Garamond',serif;
+            font-size:2.5rem; color:var(--rule); line-height:1;
+            margin-bottom:16px;
+        }
+        .reco-card-title {
+            font-size:0.75rem; text-transform:uppercase;
+            letter-spacing:0.1em; margin-bottom:12px;
+        }
+        .reco-card-body { font-size:0.82rem; color:var(--muted); line-height:1.8; }
+
+        footer {
+            padding:52px 6%;
+            border-top:1px solid var(--rule);
+            display:flex; justify-content:space-between; align-items:center;
+            font-size:0.62rem; text-transform:uppercase;
+            letter-spacing:0.1em; color:var(--muted);
+        }
+        footer a { color:var(--muted); text-decoration:none; }
+        footer a:hover { color:var(--gold); }
+
+        @media(max-width:800px){
+            .report-meta-grid { grid-template-columns:1fr; }
+            .score-block { text-align:left; }
+            .score-breakdown { grid-template-columns:1fr 1fr; }
+            .llm-head, .llm-row { grid-template-columns:1.5fr repeat(4,1fr); }
+            .reco-grid { grid-template-columns:1fr; }
+            footer { flex-direction:column; gap:16px; text-align:center; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/" class="logo">2<em>A</em> Agency</a>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/registry/">Registry</a>
+        <a href="/#cta" class="nav-cta">Audit My Brand</a>
+    </div>
+</nav>
+
+<!-- REPORT HEADER -->
+<div class="report-header">
+    <div class="breadcrumb">
+        <a href="/">2A Agency</a>
+        <span>›</span>
+        <a href="/registry/">Registry</a>
+        <span>›</span>
+        Asphalte — Audit Report
+    </div>
+    <div class="report-meta-grid">
+        <div>
+            <div class="report-brand-name">Asphalte</div>
+            <p class="report-subtitle">
+                Semantic Audit Report · Fashion · Bordeaux, France · Founded 2016<br>
+                Audited by 2A Agency · Issued 2026-03-26 · Certified v1.0
+            </p>
+        </div>
+        <div class="score-block">
+            <div class="score-main">82<span class="score-denom">/100</span></div>
+            <div class="score-label">Overall Semantic Score</div>
+        </div>
+    </div>
+</div>
+
+<!-- CERT STRIP -->
+<div class="cert-strip">
+    <span>Notary: <strong>2A Agency</strong></span>
+    <span class="sep">·</span>
+    <span>Methodology: <strong>4 LLMs · 5 Questions · March 2026</strong></span>
+    <span class="sep">·</span>
+    <span>Issued: <strong>2026-03-26T00:00:00Z</strong></span>
+    <span class="sep">·</span>
+    <span>EU AI Act: <strong>Article 53 Compliant</strong></span>
+</div>
+
+<div class="report-body">
+
+    <!-- EXECUTIVE SUMMARY -->
+    <div class="exec-summary">
+        <p>
+            This report presents the findings of 2A Agency's independent semantic audit of Asphalte,
+            conducted across 4 large language models in March 2026 (Perplexity Pro, Gemini Pro, ChatGPT Free, Grok).
+            The audit evaluates factual accuracy, identity completeness, founder attribution, and brand positioning
+            as represented in LLM outputs.
+        </p>
+        <p>
+            Asphalte achieves 82/100 — the highest score of all 2A Agency audits to date. The brand is well-known and accurately represented across all major LLMs on positioning, products, and fabrication. One targeted drift: founder attribution in Gemini and ChatGPT. As Shopify Agentic Storefronts scale, accurate founding data is material for brand authority signals.
+        </p>
+    </div>
+
+    <!-- SCORE BREAKDOWN -->
+    <span class="section-label">Score Breakdown</span>
+    <div class="score-breakdown">
+        <div class="score-dim">
+            <div class="score-dim-label">Brand Identity</div>
+            <div class="score-dim-val val-good">95</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-good" style="width:95%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Signature Products</div>
+            <div class="score-dim-val val-good">95</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-good" style="width:95%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Founder Attribution</div>
+            <div class="score-dim-val val-bad">60</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-bad" style="width:60%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Positioning</div>
+            <div class="score-dim-val val-good">95</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-good" style="width:95%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Fabrication</div>
+            <div class="score-dim-val val-good">90</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-good" style="width:90%"></div></div>
+        </div>
+    </div>
+
+    <!-- LLM TEST MATRIX -->
+    <span class="section-label">LLM Test Matrix</span>
+    <h2>Factual accuracy across<br><em>4 large language models.</em></h2>
+    <div class="llm-matrix">
+        <div class="llm-head">
+            <span>Question</span>
+            <span>Perplexity Pro</span>
+            <span>Gemini Pro</span>
+            <span>ChatGPT Free</span>
+            <span>Grok</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Brand identity</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Signature products</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact" style="font-weight:500; color:var(--red);">Founders</span>
+            <span class="tick">✓</span>
+            <span class="cross">✗</span>
+            <span class="cross">✗</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Positioning</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Fabrication</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row" style="background:rgba(176,141,87,0.04);">
+            <span class="llm-fact" style="font-size:0.7rem; color:var(--muted);">Score global</span>
+            <span style="color:var(--gold);">100%</span>
+            <span style="color:var(--gold);">80%</span>
+            <span style="color:var(--gold);">80%</span>
+            <span style="color:var(--gold);">100%</span>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- CRITICAL FINDING -->
+    <span class="section-label">Critical Finding — Founder Attribution</span>
+
+    <div class="finding-critical">
+        <div class="finding-badge">Critical · Identity Risk</div>
+        <h3 class="finding-title">Founding Authority:<br><em>Misattributed in 2 of 4 LLMs.</em></h3>
+
+        <p class="finding-body">
+            Rodolphe Gardies is described as co-founder by Gemini Pro and ChatGPT Free. Public company records (Infogreffe) confirm William Hauvette as the sole founding director. Gardies' role is Chief Brand Officer. In 2 of 4 tested LLMs, the founding of Asphalte is incorrectly attributed.
+        </p>
+        <p class="finding-body">
+            <strong>Business Impact:</strong> As AI-powered retail assistants, personal shoppers, and brand
+            recommendation engines scale, incorrect founder attribution erodes brand authority and creates
+            legal ambiguity. For a direct-to-consumer brand whose legitimacy rests on its founding story,
+            this is a material risk in the agentic search era.
+        </p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- CERTIFIED FACTS -->
+    <span class="section-label">Certified Ground Truth</span>
+    <h2>The authoritative<br><em>semantic record.</em></h2>
+
+    <table class="cert-table">
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Certified Value</th>
+                <th>LLM Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="fact-key">Brand Name</td>
+                <td class="fact-val">Asphalte</td>
+                <td class="fact-status-ok">✓ Accurate</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Founding Year</td>
+                <td class="fact-val">2016</td>
+                <td class="fact-status-ok">✓ Accurate</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Founding Location</td>
+                <td class="fact-val">Bordeaux, France</td>
+                <td class="fact-status-ok">✓ Accurate</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Founding Director</td>
+                <td class="fact-val">William Hauvette (source: Infogreffe)</td>
+                <td style="color:var(--red); font-size:0.65rem; text-transform:uppercase;">✗ Drift in 2/4 LLMs</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Chief Brand Officer</td>
+                <td class="fact-val">Rodolphe Gardies (not a co-founder)</td>
+                <td class="fact-status-warn">⚠ Misattributed as co-founder</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Brand Identity</td>
+                <td class="fact-val">Direct-to-consumer menswear, made-to-order model</td>
+                <td class="fact-status-ok">✓ Accurate</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Positioning</td>
+                <td class="fact-val">Premium quality, transparent pricing, no intermediaries</td>
+                <td class="fact-status-ok">✓ Accurate</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Fabrication</td>
+                <td class="fact-val">European manufacturing, quality materials sourcing</td>
+                <td class="fact-status-ok">✓ Accurate</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- RECOMMENDATIONS -->
+    <span class="section-label">Recommendations</span>
+    <h2>Actions to close<br><em>the semantic gap.</em></h2>
+
+    <div class="reco-grid">
+        <div class="reco-card">
+            <div class="reco-card-num">01</div>
+            <div class="reco-card-title">Certify Founder Record in llms.txt</div>
+            <p class="reco-card-body">
+                Publish a structured founder record in your llms.txt manifest and brand.json
+                with William Hauvette's role and Infogreffe reference number.
+                This is the most direct action available to brand teams today.
+            </p>
+        </div>
+        <div class="reco-card">
+            <div class="reco-card-num">02</div>
+            <div class="reco-card-title">Clarify Gardies' Role Publicly</div>
+            <p class="reco-card-body">
+                Publish a clear org chart or About page that explicitly names William Hauvette
+                as founder and Rodolphe Gardies as Chief Brand Officer, with machine-readable
+                structured data (JSON-LD Person schema).
+            </p>
+        </div>
+        <div class="reco-card">
+            <div class="reco-card-num">03</div>
+            <div class="reco-card-title">Deploy 2A Registry Node</div>
+            <p class="reco-card-body">
+                A certified 2A registry node provides a machine-readable, third-party attested
+                source of truth that LLMs can rely on during inference — eliminating the founder
+                attribution gap at scale.
+            </p>
+        </div>
+        <div class="reco-card">
+            <div class="reco-card-num">04</div>
+            <div class="reco-card-title">Quarterly Drift Monitoring</div>
+            <p class="reco-card-body">
+                The LLM landscape changes with every training cycle. Quarterly re-audits
+                ensure new model versions incorporate your certified facts and detect
+                new drift vectors before they compound.
+            </p>
+        </div>
+    </div>
+
+</div><!-- /report-body -->
+
+<footer>
+    <div>© 2026 2A Agency · Paris · Report #ASP-2026-001</div>
+    <div>
+        <a href="/registry/">Registry</a> ·
+        <a href="/#cta">Request Audit</a> ·
+        <a href="/llms.txt">llms.txt</a>
+    </div>
+    <div>Semantic Notary Infrastructure — Confidential Draft</div>
+</footer>
+
+</body>
+</html>
