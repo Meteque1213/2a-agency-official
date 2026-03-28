@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shoootin — Semantic Audit Report | 2A Agency</title>
+<meta name="description" content="2A Agency semantic audit of Shoootin. Score 84/100. Founding date drift detected in Gemini Pro.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/shoootin">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111;
+  --gold: #B08D57; --gold-2: #C9A96E; --border: rgba(176,141,87,0.22);
+  --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+.nav-link:hover { color: var(--gold); }
+
+.breadcrumb { padding: 14px 5%; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gray); border-bottom: 1px solid var(--border); }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.breadcrumb a:hover { color: var(--gold); }
+
+.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
+.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
+.report-meta strong { color: var(--ink); }
+.score-circle { text-align: center; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; color: var(--amber); line-height: 1; }
+.score-label { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+
+.meta-bar { display: flex; gap: 0; border: 1px solid var(--border); margin: 0 5% 0; }
+.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; }
+.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.meta-item-val { font-size: 0.8rem; color: var(--ink); }
+
+section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
+.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+
+.score-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.score-card { background: var(--bg); padding: 24px 20px; }
+.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.sc-green { color: var(--green); }
+.sc-amber { color: var(--amber); }
+.sc-red { color: var(--red); }
+
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.78rem; }
+.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--ink); }
+.matrix-table td { padding: 13px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.matrix-table tr:hover td { background: var(--surface); }
+.verdict-ok { color: var(--green); font-size: 1.1rem; }
+.verdict-p { color: var(--amber); font-size: 1.1rem; }
+.verdict-x { color: var(--red); font-size: 1.1rem; }
+.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
+.tag-critical { color: var(--red); border-color: rgba(139,45,45,0.3); }
+.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
+.tag-ok { color: var(--green); border-color: rgba(45,106,45,0.3); }
+
+.finding-box { border: 1px solid var(--border); padding: 32px; margin-top: 24px; }
+.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
+.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.finding-label.amber { color: var(--amber); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; margin-bottom: 12px; }
+.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; }
+
+.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 140px 1fr; gap: 24px; }
+.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
+.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.rem-text { font-size: 0.78rem; color: var(--gray); line-height: 1.65; }
+.rem-impact { font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); margin-top: 8px; }
+
+footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+.f-logo span { color: var(--gold); }
+.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+
+@media(max-width:768px) {
+  .report-hero { grid-template-columns: 1fr; }
+  .score-grid { grid-template-columns: repeat(2,1fr); }
+  .meta-bar { flex-direction: column; }
+  .meta-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .rem-item { grid-template-columns: 1fr; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"Shoootin Semantic Audit","description":"2A Agency semantic audit of Shoootin — real estate photography platform. Score 84/100. Founding date drift in Gemini Pro.","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"datePublished":"2026-03-26","url":"https://www.2aagency.com/reports/shoootin"}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/registry" class="nav-link">Registry</a>
+    <a href="/#contact" class="nav-link">Audit My Brand</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registry</a> › Shoootin — Audit Report
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Semantic Audit Report · Real Estate Media · Paris & New York</div>
+    <h1 class="report-brand">Shoootin</h1>
+    <p class="report-meta">
+      <strong>Audited by 2A Agency</strong> · Issued 2026-03-26 · Certified v1.0<br>
+      Methodology: <strong>4 LLMs · 5 Questions · March 2026</strong><br>
+      EU AI Act: <strong>Article 53 Compliant</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num">84</div>
+    <div class="score-label">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-item-label">Notary</div><div class="meta-item-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">26 March 2026</div></div>
+  <div class="meta-item"><div class="meta-item-label">LLMs tested</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">5 standardised</div></div>
+</div>
+
+<!-- INTRO -->
+<section>
+  <div class="eyebrow">Overview</div>
+  <h2 class="section-title">Strong brand. One <em>targeted drift.</em></h2>
+  <p class="body-text">This report presents the findings of 2A Agency's independent semantic audit of Shoootin, conducted across 4 large language models in March 2026. The audit evaluates factual accuracy on brand identity, services, pricing, process, sector coverage and competitive differentiation.</p>
+  <p class="body-text">Shoootin achieves an overall score of <strong>84/100</strong>, reflecting strong and accurate brand knowledge across all tested LLMs. One targeted drift: Gemini Pro cites November 2015 as the founding date — the correct and official date is January 2016.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Brand Identity</div><div class="score-card-num sc-amber">75</div></div>
+    <div class="score-card"><div class="score-card-label">Services & Pricing</div><div class="score-card-num sc-green">95</div></div>
+    <div class="score-card"><div class="score-card-label">Process & Delivery</div><div class="score-card-num sc-green">95</div></div>
+    <div class="score-card"><div class="score-card-label">Differentiation</div><div class="score-card-num sc-green">95</div></div>
+  </div>
+</section>
+
+<!-- MATRIX -->
+<section>
+  <div class="eyebrow">LLM Test Matrix</div>
+  <h2 class="section-title">Factual accuracy across <em>4 large language models.</em></h2>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT Free</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Brand identity & founder</td>
+        <td><span class="verdict-ok">✓</span> Jeremy Teper, Jan 2016</td>
+        <td><span class="verdict-p">~</span> <strong>Nov 2015</strong> (incorrect)</td>
+        <td><span class="verdict-ok">✓</span> Jeremy Teper, Jan 2016</td>
+        <td><span class="verdict-ok">✓</span> Jeremy Teper, 2016</td>
+        <td><span class="tag tag-low">Partial</span></td>
+      </tr>
+      <tr>
+        <td>Services & pricing</td>
+        <td><span class="verdict-ok">✓</span> Full range, correct prices</td>
+        <td><span class="verdict-ok">✓</span> Detailed pack breakdown</td>
+        <td><span class="verdict-ok">✓</span> All services accurate</td>
+        <td><span class="verdict-ok">✓</span> All services accurate</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Order process & delivery</td>
+        <td><span class="verdict-ok">✓</span> 24h photos, 72h video</td>
+        <td><span class="verdict-ok">✓</span> 3-click, instant confirm</td>
+        <td><span class="verdict-ok">✓</span> 12-14h average delivery</td>
+        <td><span class="verdict-ok">✓</span> Auto-assignment confirmed</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Sectors covered</td>
+        <td><span class="verdict-ok">✓</span> Real estate primary + hospitality, retail</td>
+        <td><span class="verdict-ok">✓</span> Notes Kretz partnership</td>
+        <td><span class="verdict-ok">✓</span> All sectors accurate</td>
+        <td><span class="verdict-ok">✓</span> All sectors accurate</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Differentiation vs agencies</td>
+        <td><span class="verdict-ok">✓</span> On-demand, 24h, transparent pricing</td>
+        <td><span class="verdict-ok">✓</span> "Uberisation", centralised post-prod</td>
+        <td><span class="verdict-ok">✓</span> Tech platform vs traditional</td>
+        <td><span class="verdict-ok">✓</span> On-demand, scalable</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- FINDING -->
+<section>
+  <div class="eyebrow">Critical Finding — Brand Identity</div>
+  <h2 class="section-title">The founding date <em>Gemini gets wrong.</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label">Primary Drift · Founding Date · Gemini Pro</div>
+    <h3 class="finding-title">November 2015 vs January 2016</h3>
+    <p class="finding-text">When asked "What is Shoootin and who founded it?", Gemini Pro responds with <strong>November 2015</strong> as the founding date. The official and correct launch date is <strong>January 2016</strong>. The legal entity Shoootin France was registered in May 2016.</p>
+    <p class="finding-text" style="margin-top:12px;">This drift likely stems from Gemini conflating early development and prototype work (late 2015) with the official platform launch (January 2016). Perplexity Pro, ChatGPT and Grok all correctly cite 2016.</p>
+    <p class="finding-text" style="margin-top:12px;"><strong>Business impact:</strong> As AI agents increasingly recommend service providers for real estate transactions (via Shopify Agentic Storefronts and UCP), incorrect founding data reduces brand authority signals. A service provider "founded in 2015" ranks differently than "founded in 2016" in terms of AI-assessed credibility and track record.</p>
+  </div>
+
+  <div class="finding-box" style="margin-top:16px;">
+    <div class="finding-label amber">Notable — Positive Signal</div>
+    <h3 class="finding-title">Gemini notes the Kretz × Shoootin partnership</h3>
+    <p class="finding-text">In responding to the sectors question, Gemini Pro specifically mentions: <em>"Shoootin collaborates with clients including the Kretz agency (made famous by L'Agence on Netflix)"</em>. This cross-brand association is a positive brand signal — it demonstrates that the Shoootin–Kretz relationship is visible to AI agents and can reinforce brand authority for both parties.</p>
+  </div>
+</section>
+
+<!-- REMEDIATION -->
+<section>
+  <div class="eyebrow">Remediation Roadmap</div>
+  <h2 class="section-title">Four actions. <em>One priority.</em></h2>
+  <p class="body-text">The 84/100 score reflects strong LLM coverage with one targeted fix. The founding date drift is actionable and fixable within 4–8 weeks.</p>
+
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priority 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Correct founding date — JSON-LD + structured data</div>
+        <p class="rem-text">Deploy JSON-LD Organization schema on shoootin.com with <code>foundingDate: "2016"</code> and explicit founding month. Create a Wikidata entry (currently absent) with correct founding date, founder (Jeremy Teper), and headquarters. This will correct Gemini's drift within 4–8 weeks.</p>
+        <div class="rem-impact">Impact: Founding date drift resolved in Gemini within 4–8 weeks</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priority 2 — This week</div>
+      <div>
+        <div class="rem-title">Wikidata entity creation</div>
+        <p class="rem-text">Shoootin has no Wikidata entry. Creating one with correct founding date (2016), founder (Jeremy Teper), HQ (Paris), and international presence (New York, London, Lisbon) will establish a canonical reference consulted by all LLMs.</p>
+        <div class="rem-impact">Impact: Canonical reference established for ChatGPT and Gemini training</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priority 3 — Month 1</div>
+      <div>
+        <div class="rem-title">2A Registry node + UCP extension</div>
+        <p class="rem-text">Certified 2A Registry node with complete service catalogue (pricing, delivery times, sectors), correct founding data, and geographic footprint. Deploy <code>com.2aagency.brand-certification</code> — Shoootin serves major Shopify merchants and is natively positioned for the Agentic Storefronts ecosystem.</p>
+        <div class="rem-impact">Impact: Certified data source for AI agents recommending real estate media services</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priority 4 — Ongoing</div>
+      <div>
+        <div class="rem-title">Quarterly monitoring</div>
+        <p class="rem-text">As Shoootin expands internationally and adds new services, LLM training cycles may introduce new drift vectors. Quarterly retests flag pricing changes, new city coverage, and service additions before they become material discrepancies.</p>
+        <div class="rem-impact">Impact: Continuous accuracy as Shoootin scales internationally</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Semantic Audit Report — Shoootin · March 2026 · Confidential · 2aagency.com/registry</div>
+</footer>
+
+</body>
+</html>
