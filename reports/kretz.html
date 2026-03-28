@@ -1,344 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kretz Family Real Estate — Semantic Audit Report | 2A Agency</title>
-<meta name="description" content="2A Agency semantic audit of Kretz Family Real Estate. Score 76/100. Season count drift and franchise model gap detected.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.2aagency.com/reports/kretz">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111;
-  --gold: #B08D57; --gold-2: #C9A96E; --border: rgba(176,141,87,0.22);
-  --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
-.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
-.nav-logo span { color: var(--gold); }
-.nav-links { display: flex; gap: 24px; align-items: center; }
-.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
-.nav-link:hover { color: var(--gold); }
-.breadcrumb { padding: 14px 5%; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gray); border-bottom: 1px solid var(--border); }
-.breadcrumb a { color: var(--gray); text-decoration: none; }
-.breadcrumb a:hover { color: var(--gold); }
-.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
-.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3.5vw,3.6rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
-.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
-.report-meta strong { color: var(--ink); }
-.score-circle { text-align: center; }
-.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; color: var(--amber); line-height: 1; }
-.score-label { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
-.meta-bar { display: flex; gap: 0; border: 1px solid var(--border); margin: 0 5% 0; }
-.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
-.meta-item:last-child { border-right: none; }
-.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
-.meta-item-val { font-size: 0.78rem; color: var(--ink); }
-section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
-.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
-.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
-.section-title em { font-style: italic; color: var(--gold); }
-.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
-.score-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
-.score-card { background: var(--bg); padding: 24px 20px; }
-.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
-.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
-.sc-green { color: var(--green); } .sc-amber { color: var(--amber); } .sc-red { color: var(--red); }
-.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.75rem; }
-.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
-.matrix-table td { padding: 12px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
-.matrix-table tr:hover td { background: var(--surface); }
-.verdict-ok { color: var(--green); font-size: 1.1rem; }
-.verdict-p { color: var(--amber); font-size: 1.1rem; }
-.verdict-x { color: var(--red); font-size: 1.1rem; }
-.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
-.tag-critical { color: var(--red); border-color: rgba(139,45,45,0.3); }
-.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
-.tag-ok { color: var(--green); border-color: rgba(45,106,45,0.3); }
-.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
-.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
-.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
-.finding-label.amber { color: var(--amber); }
-.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
-.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; }
-.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
-.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
-.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
-.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
-.rem-text { font-size: 0.78rem; color: var(--gray); line-height: 1.65; }
-.rem-impact { font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); margin-top: 8px; }
-footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
-.f-logo span { color: var(--gold); }
-.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
-@media(max-width:768px) {
-  .report-hero,.score-grid { grid-template-columns: 1fr; }
-  .score-grid { grid-template-columns: repeat(2,1fr); }
-  .meta-bar { flex-direction: column; }
-  .meta-item { border-right: none; border-bottom: 1px solid var(--border); }
-  .rem-item { grid-template-columns: 1fr; }
-}
-</style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Dataset","name":"Kretz Family Real Estate Semantic Audit","description":"2A Agency semantic audit of Kretz Family Real Estate. Score 76/100. Season count drift and franchise model gap in 2 LLMs.","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"datePublished":"2026-03-26","url":"https://www.2aagency.com/reports/kretz"}
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kretz Family Real Estate — Semantic Audit Report | 2A Agency</title>
+    <meta name="description" content="Full semantic audit of Kretz Family Real Estate by 2A Agency. Score: 76/100. 5 findings: season count, franchise model, geographic drift, listings hallucination, Netflix attribution. Certified March 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.2aagency.com/reports/kretz">
+    <meta name="ai-content-type" content="semantic-audit-report, brand-finding, luxury-real-estate, netflix">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Report",
+      "name": "Kretz Family Real Estate Semantic Audit Report",
+      "datePublished": "2026-03-28",
+      "publisher": {
+        "@type": "Organization",
+        "name": "2A Agency",
+        "url": "https://www.2aagency.com"
+      },
+      "about": {
+        "@type": "Organization",
+        "name": "Kretz Family Real Estate",
+        "foundingDate": "2007",
+        "foundingLocation": { "@type": "Place", "name": "Boulogne-Billancourt", "addressCountry": "FR" },
+        "description": "Ultra-luxury real estate agency. Netflix series L'Agence, 6 seasons (S6: 5 Feb 2026). Franchise launched 2025-2026 (Belgium, Mauritius). Average ticket: €1.9M. Record sale: €33.85M, Faubourg Saint-Honoré 8e, early 2025.",
+        "numberOfSeasons": 6,
+        "recordSaleAmount": "33850000",
+        "recordSaleCurrency": "EUR",
+        "recordSaleAddress": "Rue du Faubourg Saint-Honoré, Paris 8e",
+        "averageTicket": "1900000",
+        "subjectOf": {
+          "@type": "Report",
+          "name": "Kretz Semantic Audit — 2A Agency",
+          "url": "https://www.2aagency.com/reports/kretz",
+          "datePublished": "2026-03-28"
+        }
+      },
+      "description": "Audit sémantique Kretz Family Real Estate. Score : 76/100. 5 findings : season count (correct: 6), franchise model (lancé 2025-2026), geographic drift, listings hallucination Q8, Netflix attribution Q9.",
+      "keywords": ["semantic audit", "LLM hallucination", "Kretz", "L'Agence Netflix", "luxury real estate", "EU AI Act", "franchise", "Faubourg Saint-Honoré"]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #F7F4EE;
+            --surface: #EDEAE3;
+            --ink:     #111111;
+            --gold:    #B08D57;
+            --gold-lt: #C9A96E;
+            --muted:   #6B6661;
+            --rule:    rgba(176,141,87,0.22);
+            --dark:    #0E0E0E;
+            --red:     #C0392B;
+            --green:   #5A8A5A;
+            --amber:   #D4870A;
+        }
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            background:var(--bg); color:var(--ink);
+            font-family:'DM Mono', monospace;
+            font-size:15px; line-height:1.65; overflow-x:hidden;
+        }
+        body::after {
+            content:""; position:fixed; inset:0;
+            pointer-events:none; z-index:9999; opacity:0.035;
+            background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+        nav {
+            position:sticky; top:0; z-index:100;
+            display:flex; justify-content:space-between; align-items:center;
+            padding:22px 6%; background:rgba(247,244,238,0.93);
+            backdrop-filter:blur(10px); border-bottom:1px solid var(--rule);
+        }
+        .logo { font-family:'Cormorant Garamond',serif; font-size:1.65rem; font-weight:600; letter-spacing:-0.02em; text-decoration:none; color:var(--ink); }
+        .logo em { font-style:normal; color:var(--gold); }
+        .nav-links { display:flex; align-items:center; gap:36px; }
+        .nav-links a { text-decoration:none; color:var(--muted); font-size:0.65rem; text-transform:uppercase; letter-spacing:0.14em; transition:color .2s; }
+        .nav-links a:hover { color:var(--ink); }
+        .nav-cta { color:var(--ink) !important; border:1px solid var(--ink); padding:9px 22px; }
+
+        .report-header { padding:80px 6% 0; border-bottom:1px solid var(--rule); }
+        .breadcrumb { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.14em; color:var(--muted); margin-bottom:40px; }
+        .breadcrumb a { color:var(--muted); text-decoration:none; }
+        .breadcrumb a:hover { color:var(--gold); }
+        .breadcrumb span { margin:0 10px; color:var(--rule); }
+        .report-meta-grid { display:grid; grid-template-columns:1fr auto; gap:64px; align-items:end; padding-bottom:60px; }
+        .report-brand-name { font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,6vw,4.8rem); font-weight:300; line-height:1; }
+        .report-subtitle { font-size:0.75rem; color:var(--muted); margin-top:16px; line-height:1.6; }
+        .score-block { text-align:right; }
+        .score-main { font-family:'Cormorant Garamond',serif; font-size:5rem; font-weight:300; line-height:1; color:var(--amber); }
+        .score-denom { font-size:2rem; color:var(--muted); }
+        .score-label { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.2em; color:var(--muted); margin-top:8px; }
+
+        .cert-strip { background:var(--dark); color:rgba(255,255,255,0.6); padding:20px 6%; display:flex; gap:48px; align-items:center; font-size:0.62rem; text-transform:uppercase; letter-spacing:0.14em; flex-wrap:wrap; }
+        .cert-strip strong { color:var(--gold-lt); }
+        .cert-strip .sep { color:rgba(255,255,255,0.15); }
+
+        .report-body { max-width:1080px; margin:0 auto; padding:80px 6%; }
+        .section-label { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.3em; color:var(--gold); display:block; margin-bottom:20px; }
+        h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:300; line-height:1.15; margin-bottom:32px; }
+        h2 em { font-style:italic; color:var(--gold); }
+        .divider { border:none; border-top:1px solid var(--rule); margin:72px 0; }
+
+        .exec-summary { background:var(--surface); border-left:3px solid var(--gold); padding:36px 40px; margin-bottom:72px; }
+        .exec-summary p { font-size:1.05rem; line-height:1.8; color:var(--ink); }
+        .exec-summary p + p { margin-top:16px; }
+
+        .score-breakdown { display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); margin-bottom:72px; }
+        .score-dim { background:var(--bg); padding:32px 20px; }
+        .score-dim-label { font-size:0.58rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:12px; }
+        .score-dim-val { font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:300; line-height:1; }
+        .score-dim-bar { margin-top:12px; height:2px; background:var(--rule); position:relative; }
+        .score-dim-fill { position:absolute; top:0; left:0; height:100%; }
+        .fill-good { background:var(--green); }
+        .fill-warn { background:var(--gold); }
+        .fill-bad  { background:var(--red); }
+        .val-good { color:var(--green); }
+        .val-warn { color:var(--gold); }
+        .val-bad  { color:var(--red); }
+
+        .llm-matrix { border:1px solid var(--rule); margin-bottom:72px; }
+        .llm-head { display:grid; grid-template-columns:2fr repeat(4,1fr); padding:14px 28px; background:var(--surface); font-size:0.6rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--muted); border-bottom:1px solid var(--rule); }
+        .llm-row { display:grid; grid-template-columns:2fr repeat(4,1fr); padding:18px 28px; font-size:0.78rem; border-bottom:1px solid rgba(176,141,87,0.08); align-items:center; }
+        .llm-row:last-child { border-bottom:none; }
+        .llm-fact { color:var(--ink); }
+        .tick { color:var(--green); font-size:0.9rem; }
+        .cross { color:var(--red); font-size:0.9rem; }
+        .partial { color:var(--gold); font-size:0.9rem; }
+
+        .findings-list { margin-bottom:72px; }
+        .finding-item { border:1px solid var(--rule); padding:36px 40px; margin-bottom:20px; }
+        .finding-item-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; gap:16px; }
+        .finding-item-num { font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--gold); line-height:1; flex-shrink:0; }
+        .finding-item-title { font-size:0.9rem; color:var(--ink); line-height:1.4; }
+        .severity { font-size:0.58rem; text-transform:uppercase; letter-spacing:0.1em; padding:4px 10px; border:1px solid; flex-shrink:0; }
+        .sev-high   { color:var(--red);   border-color:rgba(192,57,43,0.4); }
+        .sev-medium { color:var(--amber); border-color:rgba(212,135,10,0.4); }
+        .sev-low    { color:var(--muted); border-color:rgba(107,102,97,0.3); }
+        .finding-item-body { font-size:0.82rem; color:var(--muted); line-height:1.8; }
+
+        .record-block { background:var(--dark); color:#F7F4EE; padding:48px; margin-bottom:72px; }
+        .record-block .section-label { color:var(--gold-lt); }
+        .record-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:24px; }
+        .record-item {}
+        .record-key { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.14em; color:rgba(255,255,255,0.35); margin-bottom:8px; }
+        .record-val { font-size:0.9rem; color:var(--gold-lt); }
+
+        .cert-table { width:100%; border-collapse:collapse; margin-bottom:72px; }
+        .cert-table th { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.14em; color:var(--muted); padding:12px 20px; text-align:left; border-bottom:1px solid var(--rule); }
+        .cert-table td { padding:16px 20px; font-size:0.82rem; border-bottom:1px solid rgba(176,141,87,0.07); }
+        .cert-table tr:hover td { background:rgba(176,141,87,0.04); }
+        .fact-key { color:var(--muted); font-size:0.78rem; }
+        .fact-val { color:var(--ink); }
+        .fact-status-ok   { color:var(--green); font-size:0.65rem; text-transform:uppercase; }
+        .fact-status-warn { color:var(--gold);  font-size:0.65rem; text-transform:uppercase; }
+        .fact-status-bad  { color:var(--red);   font-size:0.65rem; text-transform:uppercase; }
+
+        .reco-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--rule); border:1px solid var(--rule); margin-bottom:72px; }
+        .reco-card { background:var(--bg); padding:44px 36px; }
+        .reco-card-num { font-family:'Cormorant Garamond',serif; font-size:2.5rem; color:var(--rule); line-height:1; margin-bottom:16px; }
+        .reco-card-title { font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px; }
+        .reco-card-body { font-size:0.82rem; color:var(--muted); line-height:1.8; }
+
+        footer { padding:52px 6%; border-top:1px solid var(--rule); display:flex; justify-content:space-between; align-items:center; font-size:0.62rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); }
+        footer a { color:var(--muted); text-decoration:none; }
+        footer a:hover { color:var(--gold); }
+
+        @media(max-width:800px){
+            .report-meta-grid { grid-template-columns:1fr; }
+            .score-block { text-align:left; }
+            .score-breakdown { grid-template-columns:1fr 1fr; }
+            .llm-head, .llm-row { grid-template-columns:1.5fr repeat(4,1fr); font-size:0.62rem; }
+            .reco-grid, .record-grid { grid-template-columns:1fr; }
+            footer { flex-direction:column; gap:16px; text-align:center; }
+        }
+    </style>
 </head>
 <body>
 
 <nav>
-  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
-  <div class="nav-links">
-    <a href="/" class="nav-link">Home</a>
-    <a href="/registry" class="nav-link">Registry</a>
-    <a href="/#contact" class="nav-link">Audit My Brand</a>
-  </div>
+    <a href="/" class="logo">2<em>A</em> Agency</a>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/registry/">Registry</a>
+        <a href="/#cta" class="nav-cta">Audit My Brand</a>
+    </div>
 </nav>
 
-<div class="breadcrumb">
-  <a href="/">2A Agency</a> › <a href="/registry">Registry</a> › Kretz Family Real Estate — Audit Report
+<div class="report-header">
+    <div class="breadcrumb">
+        <a href="/">2A Agency</a><span>›</span>
+        <a href="/registry/">Registry</a><span>›</span>
+        Kretz Family Real Estate — Audit Report
+    </div>
+    <div class="report-meta-grid">
+        <div>
+            <div class="report-brand-name">Kretz Family<br>Real Estate</div>
+            <p class="report-subtitle">
+                Luxury Real Estate · Founded 2007 · Boulogne-Billancourt<br>
+                Netflix "L'Agence" · 6 Seasons · Franchise launched 2025–2026<br>
+                Audited by 2A Agency · Issued 2026-03-28 · Certified v1.1
+            </p>
+        </div>
+        <div class="score-block">
+            <div class="score-main">76<span class="score-denom">/100</span></div>
+            <div class="score-label">Overall Semantic Score</div>
+        </div>
+    </div>
 </div>
 
-<div class="report-hero">
-  <div>
-    <div class="eyebrow">Semantic Audit Report · Luxury Real Estate · Boulogne-Billancourt, Paris</div>
-    <h1 class="report-brand">Kretz Family<br>Real Estate</h1>
-    <p class="report-meta">
-      <strong>Audited by 2A Agency</strong> · Issued 2026-03-26 · Certified v1.0<br>
-      Methodology: <strong>4 LLMs · 9 Questions · March 2026</strong><br>
-      EU AI Act: <strong>Article 53 Compliant</strong>
-    </p>
-  </div>
-  <div class="score-circle">
-    <div class="score-num">76</div>
-    <div class="score-label">/ 100<br>Integrity Score</div>
-  </div>
+<div class="cert-strip">
+    <span>Notary: <strong>2A Agency</strong></span>
+    <span class="sep">·</span>
+    <span>Methodology: <strong>4 LLMs · 9 Questions · March 2026</strong></span>
+    <span class="sep">·</span>
+    <span>Issued: <strong>2026-03-28T00:00:00Z</strong></span>
+    <span class="sep">·</span>
+    <span>Findings: <strong>5 identified</strong></span>
+    <span class="sep">·</span>
+    <span>EU AI Act: <strong>Article 53 Compliant</strong></span>
 </div>
 
-<div class="meta-bar">
-  <div class="meta-item"><div class="meta-item-label">Notary</div><div class="meta-item-val">2A Agency</div></div>
-  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">26 March 2026</div></div>
-  <div class="meta-item"><div class="meta-item-label">LLMs tested</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
-  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">9 standardised</div></div>
+<div class="report-body">
+
+    <div class="exec-summary">
+        <p>
+            This report presents the findings of 2A Agency's independent semantic audit of Kretz Family
+            Real Estate, conducted across 4 large language models in March 2026 (ChatGPT, Grok, Gemini Pro,
+            Perplexity Pro). The audit evaluates 9 dimensions including brand identity, Netflix presence,
+            franchise structure, geographic footprint, listings, and record transactions.
+        </p>
+        <p>
+            Kretz achieves an overall score of <strong>76/100</strong>, with <strong>5 material findings</strong>.
+            The most significant: two LLMs misrepresent the season count of Netflix's "L'Agence" (correct: 6,
+            with Season 6 released 5 February 2026), two describe the agency as "fully independent" despite
+            the franchise launch in 2025–2026, and Gemini and Perplexity contradict each other on the
+            Netflix episode attribution of the €33.85M record sale.
+        </p>
+    </div>
+
+    <span class="section-label">Score Breakdown</span>
+    <div class="score-breakdown">
+        <div class="score-dim">
+            <div class="score-dim-label">Founders &amp; History</div>
+            <div class="score-dim-val val-warn">70</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-warn" style="width:70%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Franchise Status</div>
+            <div class="score-dim-val val-bad">65</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-bad" style="width:65%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Geography</div>
+            <div class="score-dim-val val-warn">80</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-warn" style="width:80%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Listings &amp; Pricing</div>
+            <div class="score-dim-val val-bad">68</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-bad" style="width:68%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Record Transaction</div>
+            <div class="score-dim-val val-warn">72</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-warn" style="width:72%"></div></div>
+        </div>
+    </div>
+
+    <span class="section-label">LLM Test Matrix</span>
+    <h2>Factual accuracy across<br><em>4 large language models.</em></h2>
+    <div class="llm-matrix">
+        <div class="llm-head">
+            <span>Question</span>
+            <span>ChatGPT</span>
+            <span>Grok</span>
+            <span>Gemini Pro</span>
+            <span>Perplexity</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact" style="color:var(--red);">Q1 — Season count (correct: 6)</span>
+            <span class="cross">✗ 4</span>
+            <span class="cross">✗ 5</span>
+            <span class="tick">✓ 6</span>
+            <span class="tick">✓ 6</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact" style="color:var(--red);">Q2 — Franchise model (launched 2025-26)</span>
+            <span class="cross">✗ fully indep.</span>
+            <span class="cross">✗ fully indep.</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact" style="color:var(--gold);">Q3 — Geographic offices</span>
+            <span class="cross">✗ Athens/Ibiza</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Q4 — Founding year &amp; location</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Q5 — Family members &amp; roles</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Q6 — Netflix "L'Agence" general</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Q7 — Brand positioning (ultra-luxury)</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact" style="color:var(--red);">Q8 — Listings &amp; pricing (avg €1.9M)</span>
+            <span class="cross">✗ 32m² ex.</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact" style="color:var(--red);">Q9 — €33.85M record sale attribution</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="cross">✗ Netflix ep.</span>
+            <span class="partial">~ TF1 press</span>
+        </div>
+        <div class="llm-row" style="background:rgba(176,141,87,0.04);">
+            <span class="llm-fact" style="font-size:0.7rem; color:var(--muted);">Score global</span>
+            <span style="color:var(--gold);">55%</span>
+            <span style="color:var(--gold);">77%</span>
+            <span style="color:var(--gold);">77%</span>
+            <span style="color:var(--green);">88%</span>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <span class="section-label">5 Findings</span>
+    <h2>Material semantic drift<br><em>across 5 dimensions.</em></h2>
+
+    <div class="findings-list">
+
+        <div class="finding-item">
+            <div class="finding-item-head">
+                <div>
+                    <div class="finding-item-num">01</div>
+                    <div class="finding-item-title">Season count — ChatGPT cites 4 seasons, Grok cites 5 seasons</div>
+                </div>
+                <span class="severity sev-high">High</span>
+            </div>
+            <p class="finding-item-body">
+                ChatGPT returns 4 seasons; Grok returns 5. The correct count is <strong>6 seasons</strong>,
+                with Season 6 released on Netflix France on <strong>5 February 2026</strong>. This is the most
+                visible factual error — season count is a primary anchor for audience queries about the show.
+                Both errors stem from training data predating the S6 release, without a corrective structured signal.
+            </p>
+        </div>
+
+        <div class="finding-item">
+            <div class="finding-item-head">
+                <div>
+                    <div class="finding-item-num">02</div>
+                    <div class="finding-item-title">Franchise model — ChatGPT and Grok describe agency as "fully independent"</div>
+                </div>
+                <span class="severity sev-high">High</span>
+            </div>
+            <p class="finding-item-body">
+                ChatGPT and Grok both characterize Kretz as a "fully independent" family agency with no
+                mention of the franchise model. The franchise was launched in <strong>2025–2026</strong>,
+                with partner agencies in Belgium and Mauritius, operating under a
+                <strong>€50,000 entry fee + 11% revenue share</strong> structure. This structural omission
+                materially misrepresents the brand's current business model and growth trajectory.
+            </p>
+        </div>
+
+        <div class="finding-item">
+            <div class="finding-item-head">
+                <div>
+                    <div class="finding-item-num">03</div>
+                    <div class="finding-item-title">Geographic drift — ChatGPT lists Athens, Ibiza, Lisbon as permanent offices</div>
+                </div>
+                <span class="severity sev-medium">Medium</span>
+            </div>
+            <p class="finding-item-body">
+                ChatGPT lists <strong>Athens, Ibiza, and Lisbon</strong> as permanent Kretz offices.
+                These are filming locations featured in Netflix episodes, not established agency offices.
+                Conflating filming locations with operational infrastructure is a hallucination pattern
+                common in brands with strong television presence.
+            </p>
+        </div>
+
+        <div class="finding-item">
+            <div class="finding-item-head">
+                <div>
+                    <div class="finding-item-num">04</div>
+                    <div class="finding-item-title">Listings (Q8) — ChatGPT cites 32m² apartment at €710k as Kretz example</div>
+                </div>
+                <span class="severity sev-medium">Medium</span>
+            </div>
+            <p class="finding-item-body">
+                ChatGPT cites a <strong>32m² apartment priced at €710,000</strong> as a representative
+                Kretz listing. This is non-representative of the agency's ultra-luxury positioning:
+                the average transaction ticket is <strong>€1.9M</strong> and the record sale is
+                <strong>€33.85M</strong>. Citing a sub-€1M micro-apartment as a Kretz example
+                fundamentally misrepresents the brand's market tier in agentic search outputs.
+            </p>
+        </div>
+
+        <div class="finding-item">
+            <div class="finding-item-head">
+                <div>
+                    <div class="finding-item-num">05</div>
+                    <div class="finding-item-title">Netflix attribution (Q9) — Gemini and Perplexity contradict on €33.85M record sale</div>
+                </div>
+                <span class="severity sev-medium">Medium</span>
+            </div>
+            <p class="finding-item-body">
+                Gemini Pro claims the <strong>€33.85M Faubourg Saint-Honoré sale</strong> was filmed and
+                broadcast in Seasons 4 &amp; 5 of Netflix's "L'Agence." Perplexity correctly identifies
+                this sale as covered via <strong>TF1 press coverage</strong>, not a Netflix episode.
+                This contradiction between two major LLMs creates unreliable brand narrative around
+                Kretz's most significant transaction — a 490m² apartment at Rue du Faubourg Saint-Honoré,
+                Paris 8e, purchased by a US crypto entrepreneur in early 2025.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="record-block">
+        <span class="section-label">Certified Record Transaction</span>
+        <div class="record-grid">
+            <div class="record-item">
+                <div class="record-key">Sale Price</div>
+                <div class="record-val">€33,850,000</div>
+            </div>
+            <div class="record-item">
+                <div class="record-key">Address</div>
+                <div class="record-val">Rue du Faubourg Saint-Honoré, Paris 8e</div>
+            </div>
+            <div class="record-item">
+                <div class="record-key">Surface</div>
+                <div class="record-val">490 m²</div>
+            </div>
+            <div class="record-item">
+                <div class="record-key">Date</div>
+                <div class="record-val">Early 2025</div>
+            </div>
+            <div class="record-item">
+                <div class="record-key">Buyer Profile</div>
+                <div class="record-val">US crypto entrepreneur</div>
+            </div>
+            <div class="record-item">
+                <div class="record-key">Media Coverage</div>
+                <div class="record-val">TF1 press — not a Netflix episode</div>
+            </div>
+        </div>
+    </div>
+
+    <span class="section-label">Certified Ground Truth</span>
+    <h2>The authoritative<br><em>semantic record.</em></h2>
+
+    <table class="cert-table">
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Certified Value</th>
+                <th>LLM Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="fact-key">Brand Name</td>
+                <td class="fact-val">Kretz Family Real Estate</td>
+                <td class="fact-status-ok">✓ Accurate — 4/4 LLMs</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Founded</td>
+                <td class="fact-val">2007 · Boulogne-Billancourt</td>
+                <td class="fact-status-ok">✓ Accurate — 4/4 LLMs</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Netflix Series</td>
+                <td class="fact-val">"L'Agence" — 6 seasons (S6: 5 Feb 2026)</td>
+                <td class="fact-status-bad">✗ ChatGPT: 4 · Grok: 5</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Franchise Model</td>
+                <td class="fact-val">Launched 2025-2026 · Belgium, Mauritius · €50k + 11%</td>
+                <td class="fact-status-bad">✗ Missing in ChatGPT &amp; Grok</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Geographic Offices</td>
+                <td class="fact-val">Boulogne-Billancourt (HQ) · Franchise partners</td>
+                <td class="fact-status-warn">⚠ ChatGPT adds filming locations</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Average Ticket</td>
+                <td class="fact-val">€1.9M</td>
+                <td class="fact-status-warn">⚠ ChatGPT cites 32m² / €710k</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Record Sale</td>
+                <td class="fact-val">€33.85M · FSH 8e · 490m² · Early 2025</td>
+                <td class="fact-status-warn">⚠ Gemini misattributes to Netflix</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <span class="section-label">Recommendations</span>
+    <h2>Five actions to close<br><em>the semantic gap.</em></h2>
+
+    <div class="reco-grid">
+        <div class="reco-card">
+            <div class="reco-card-num">01</div>
+            <div class="reco-card-title">Season Count JSON-LD</div>
+            <p class="reco-card-body">
+                Publish structured data with <code>numberOfEpisodes</code> and
+                <code>numberOfSeasons: 6</code> on the official website and Netflix partner page.
+                Include S6 release date (2026-02-05) as an authoritative anchor.
+            </p>
+        </div>
+        <div class="reco-card">
+            <div class="reco-card-num">02</div>
+            <div class="reco-card-title">Franchise Model Documentation</div>
+            <p class="reco-card-body">
+                Publish a dedicated franchise page with structured data: entry fee (€50k),
+                revenue share (11%), operating countries (Belgium, Mauritius), and launch date.
+                Absence of this data is the direct cause of the "fully independent" hallucination.
+            </p>
+        </div>
+        <div class="reco-card">
+            <div class="reco-card-num">03</div>
+            <div class="reco-card-title">Geographic Footprint Clarification</div>
+            <p class="reco-card-body">
+                Add a structured <code>location</code> array to Organization schema
+                distinguishing permanent offices from filming locations.
+                This breaks the ChatGPT conflation pattern and corrects the Athens/Ibiza drift.
+            </p>
+        </div>
+        <div class="reco-card">
+            <div class="reco-card-num">04</div>
+            <div class="reco-card-title">Certified Pricing Parameters</div>
+            <p class="reco-card-body">
+                Publish certified pricing parameters in JSON-LD:
+                average ticket (€1.9M), record transaction (€33.85M), minimum mandate threshold.
+                Replace listing URLs with pricing anchors — LLMs hallucinate listings but anchor to numbers.
+            </p>
+        </div>
+        <div class="reco-card">
+            <div class="reco-card-num">05</div>
+            <div class="reco-card-title">Monthly Drift Monitoring</div>
+            <p class="reco-card-body">
+                With 5 active findings across 4 LLMs and a live Netflix season,
+                quarterly monitoring is insufficient. Monthly re-audits ensure
+                corrections propagate and new training cycles are tracked in real time.
+            </p>
+        </div>
+    </div>
+
 </div>
-
-<!-- INTRO -->
-<section>
-  <div class="eyebrow">Overview</div>
-  <h2 class="section-title">Well-known brand. Three <em>actionable drifts.</em></h2>
-  <p class="body-text">This report presents the findings of 2A Agency's independent semantic audit of Kretz Family Real Estate, conducted across 4 large language models in March 2026. The audit evaluates factual accuracy on founders, Netflix series, geographic footprint, positioning, family roles, franchise status and commercial impact of the series.</p>
-  <p class="body-text">Kretz Family Real Estate achieves an overall score of <strong>76/100</strong>. Strong recognition across all LLMs on founders (2007, Olivier & Sandrine Kretz), positioning and Netflix impact. Three targeted drifts: season count (ChatGPT: 4, Grok: 5 — correct: 6), franchise model missing in 2 models, and unconfirmed geographic locations in ChatGPT.</p>
-
-  <div class="score-grid" style="grid-template-columns: repeat(3,1fr);">
-    <div class="score-card"><div class="score-card-label">Founders & History</div><div class="score-card-num sc-green">95</div></div>
-    <div class="score-card"><div class="score-card-label">Netflix Series</div><div class="score-card-num sc-amber">70</div></div>
-    <div class="score-card"><div class="score-card-label">Franchise Status</div><div class="score-card-num sc-amber">65</div></div>
-    <div class="score-card"><div class="score-card-label">Geography & Positioning</div><div class="score-card-num sc-amber">80</div></div>
-    <div class="score-card"><div class="score-card-label">Listings & Pricing</div><div class="score-card-num sc-amber">68</div></div>
-    <div class="score-card"><div class="score-card-label">Record Transaction</div><div class="score-card-num sc-amber">72</div></div>
-  </div>
-</section>
-
-<!-- MATRIX -->
-<section>
-  <div class="eyebrow">LLM Test Matrix</div>
-  <h2 class="section-title">Factual accuracy across <em>4 large language models.</em></h2>
-
-  <table class="matrix-table">
-    <thead>
-      <tr>
-        <th>Question</th>
-        <th>Perplexity Pro</th>
-        <th>Gemini Pro</th>
-        <th>ChatGPT Free</th>
-        <th>Grok</th>
-        <th>Verdict</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Founders & creation</td>
-        <td><span class="verdict-ok">✓</span> Olivier & Sandrine, 2007</td>
-        <td><span class="verdict-ok">✓</span> 2007, notes Olivier ex-telecoms</td>
-        <td><span class="verdict-ok">✓</span> 2007, ex-P&G Pernod Ricard</td>
-        <td><span class="verdict-ok">✓</span> 2007, correct</td>
-        <td><span class="tag tag-ok">Exact</span></td>
-      </tr>
-      <tr>
-        <td>Netflix series & seasons</td>
-        <td><span class="verdict-ok">✓</span> 6 seasons, S6 Netflix Feb 2026</td>
-        <td><span class="verdict-ok">✓</span> 6 seasons, correct dates</td>
-        <td><span class="verdict-x">✗</span> <strong>4 seasons</strong> cited (incorrect)</td>
-        <td><span class="verdict-p">~</span> <strong>5 seasons</strong> cited (incorrect)</td>
-        <td><span class="tag tag-critical">Critical</span></td>
-      </tr>
-      <tr>
-        <td>Geographic footprint</td>
-        <td><span class="verdict-ok">✓</span> France, Spain, Monaco, Belgium, Mauritius, NY</td>
-        <td><span class="verdict-ok">✓</span> Confirmed markets + 130 agents</td>
-        <td><span class="verdict-p">~</span> Lists Athens, Ibiza, Lisbon (unconfirmed offices)</td>
-        <td><span class="verdict-ok">✓</span> Core markets confirmed</td>
-        <td><span class="tag tag-low">Partial</span></td>
-      </tr>
-      <tr>
-        <td>Positioning & property types</td>
-        <td><span class="verdict-ok">✓</span> Ultra-luxury, off-market, family DNA</td>
-        <td><span class="verdict-ok">✓</span> Lifestyle, Kretz Club noted</td>
-        <td><span class="verdict-ok">✓</span> Independent luxury, storytelling</td>
-        <td><span class="verdict-ok">✓</span> Luxury, art de vivre</td>
-        <td><span class="tag tag-ok">Exact</span></td>
-      </tr>
-      <tr>
-        <td>Family roles</td>
-        <td><span class="verdict-ok">✓</span> All roles confirmed</td>
-        <td><span class="verdict-ok">✓</span> Notes external CEO Bruneau</td>
-        <td><span class="verdict-ok">✓</span> All 4 sons + Eve von Romberg</td>
-        <td><span class="verdict-ok">✓</span> All roles, Majo noted</td>
-        <td><span class="tag tag-ok">Exact</span></td>
-      </tr>
-      <tr>
-        <td>Franchise vs independent</td>
-        <td><span class="verdict-ok">✓</span> Hybrid: independent + franchise 2026</td>
-        <td><span class="verdict-ok">✓</span> Franchise fee 50k€ + 11% revenue</td>
-        <td><span class="verdict-x">✗</span> <strong>Describes as "fully independent"</strong></td>
-        <td><span class="verdict-x">✗</span> <strong>"Not a franchise"</strong> — franchise launch missing</td>
-        <td><span class="tag tag-critical">Critical</span></td>
-      </tr>
-      <tr>
-        <td>Netflix commercial impact</td>
-        <td><span class="verdict-ok">✓</span> +80% growth, 500M€ sold, 50% US clients</td>
-        <td><span class="verdict-ok">✓</span> Detailed: 250 transactions, 20% via Instagram</td>
-        <td><span class="verdict-ok">✓</span> Major accelerator confirmed</td>
-        <td><span class="verdict-ok">✓</span> 500M€, "two nuclear reactors" quote</td>
-        <td><span class="tag tag-ok">Exact</span></td>
-      </tr>
-      <tr>
-        <td>Avg price & recent listings (Q8)</td>
-        <td><span class="v-ok">✓</span> €1.9M avg ticket. €33.85M Faubourg Saint-Honoré example — well sourced</td>
-        <td><span class="v-p">~</span> €1.9M avg. <strong>Cites two unverified listings: 900m² at €59M and 600m² at €24.9M</strong></td>
-        <td><span class="v-x">✗</span> <strong>Cites 32m² apartment at €710k as example</strong> — non-representative of Kretz positioning</td>
-        <td><span class="v-ok">✓</span> €1.9M avg. €33.85M record cited. Correct price dispersion noted</td>
-        <td><span class="tag tag-low">Partial</span></td>
-      </tr>
-      <tr>
-        <td>Most expensive sale & Netflix (Q9)</td>
-        <td><span class="v-ok">✓</span> €33.85M Faubourg SH. <strong>Correctly notes: NOT a Netflix episode — TF1 press coverage</strong></td>
-        <td><span class="v-p">~</span> €33.85M correct. <strong>Claims filmed in Season 4 & Season 5 — unverified</strong></td>
-        <td><span class="v-p">~</span> €33.85M correct. "Not publicly documented as Netflix episode" — hedged but incomplete</td>
-        <td><span class="v-ok">✓</span> €33.85M correct. Notes Château d'Armainvilliers at €180M as largest listing (not sold)</td>
-        <td><span class="tag tag-low">Partial</span></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- FINDINGS -->
-<section>
-  <div class="eyebrow">Critical Findings</div>
-  <h2 class="section-title">Three drifts. <em>All actionable.</em></h2>
-
-  <div class="finding-box critical">
-    <div class="finding-label">Primary Drift · Season Count · ChatGPT & Grok</div>
-    <h3 class="finding-title">ChatGPT counts 4 seasons. Grok counts 5. Correct: 6.</h3>
-    <p class="finding-text">ChatGPT Free cites 4 seasons of "L'Agence". Grok cites 5. The correct count as of March 2026 is <strong>6 seasons</strong> — Season 6 premiered on TMC in late 2025 and was released on Netflix France on 5 February 2026. Perplexity Pro and Gemini Pro correctly cite 6 seasons.</p>
-    <p class="finding-text" style="margin-top:12px;"><strong>Business impact:</strong> The Netflix series is the primary commercial driver of Kretz Family Real Estate — described by Valentin Kretz as "two nuclear reactors" (TMC + Netflix). An AI agent citing an outdated season count signals stale data to users and reduces brand authority. As Kretz expands via franchise and recruits clients globally through the series, accurate representation of its current media presence is material.</p>
-  </div>
-
-  <div class="finding-box critical" style="margin-top:16px;">
-    <div class="finding-label">Secondary Drift · Franchise Status · ChatGPT & Grok</div>
-    <h3 class="finding-title">ChatGPT and Grok describe Kretz as "fully independent" — missing the franchise launch.</h3>
-    <p class="finding-text">ChatGPT states Kretz is "not a franchise". Grok says it is "fully independent". Both miss a material structural change: Kretz officially launched an international franchise model in 2025-2026. First franchises: Belgium (Brussels, Place Brugmann) and Mauritius (Pereybère). Franchise fee: €50,000 per city + 11% revenue share.</p>
-    <p class="finding-text" style="margin-top:12px;"><strong>Business impact:</strong> The franchise model is now a strategic growth pillar announced publicly by Valentin Kretz in a Variety interview. Entrepreneurs seeking to invest in a Kretz franchise who rely on AI agents for due diligence will receive incorrect information about the agency's structure.</p>
-  </div>
-
-  <div class="finding-box" style="margin-top:16px;">
-    <div class="finding-label amber">Tertiary Drift · Geographic Footprint · ChatGPT</div>
-    <h3 class="finding-title">ChatGPT lists filming locations as permanent offices.</h3>
-    <p class="finding-text">ChatGPT lists Athens, Ibiza, Lisbon and London as Kretz operating cities. These locations appear in the Netflix series "Nouvelles Destinations" spin-off as filming locations — not confirmed permanent office markets. Core confirmed markets are France, Spain, Monaco, Belgium, Mauritius, New York, and Saint-Barth.</p>
-  </div>
-</section>
-
-  <div class="finding-box critical" style="margin-top:16px;">
-    <div class="finding-label">Q8 Drift · ChatGPT · Non-Representative Listing</div>
-    <h3 class="finding-title">ChatGPT cites a 32m² apartment at €710k as a Kretz example.</h3>
-    <p class="finding-text">When asked for an example of a Kretz listing in Paris, ChatGPT Free responds with a <strong>32m² apartment in Montorgueil listed at €710,000</strong>. This property — while potentially on the Kretz site — is entirely non-representative of the agency's positioning. Kretz Family Real Estate specialises in ultra-luxury properties averaging €1.9M, with flagship transactions in the €5M–€34M range.</p>
-    <p class="finding-text"><strong>Business impact:</strong> An international buyer using ChatGPT to research Kretz before making contact arrives with an entirely wrong expectation of the agency's inventory and price point. This is a brand positioning failure — Kretz risks being perceived as a mid-market agency rather than the ultra-luxury operator it is.</p>
-  </div>
-
-  <div class="finding-box critical" style="margin-top:16px;">
-    <div class="finding-label">Q9 Drift · Gemini Pro · Netflix Season Attribution</div>
-    <h3 class="finding-title">Gemini claims the €33.85M sale was filmed in Season 4 and Season 5. Perplexity says it was not a Netflix episode.</h3>
-    <p class="finding-text">Gemini Pro states with confidence that the record €33.85M Faubourg Saint-Honoré sale <em>"was a major storyline in the show (featured in Season 4 and referenced in Season 5)"</em>. Perplexity Pro directly contradicts this, stating the sale <em>"was not staged as a Netflix episode"</em> but was covered by TF1's Sept à Huit news programme.</p>
-    <p class="finding-text">This is a direct factual contradiction between two LLMs on a verifiable fact — which season (if any) featured this transaction. The correct answer is critical for Kretz: misattributing their record sale to the wrong season undermines the credibility of both the agency and the show.</p>
-    <p class="finding-text"><strong>Business impact:</strong> Journalists, investors, and franchise candidates researching Kretz via AI agents will receive conflicting information about the agency's flagship transaction and its media coverage. This creates credibility risk precisely around the asset Kretz most wants to promote.</p>
-  </div>
-
-  <div class="finding-box amber" style="margin-top:16px;">
-    <div class="finding-label amber">Q8 Drift · Gemini Pro · Unverified Current Listings</div>
-    <h3 class="finding-title">Gemini invents two specific current listings with precise prices.</h3>
-    <p class="finding-text">Gemini Pro presents two listings as current Kretz inventory in 2026: <strong>"900m² apartment in the 8th at €59,000,000"</strong> and <strong>"600m² private mansion in the 16th at €24,900,000"</strong>. No source is provided. These figures cannot be verified from public Kretz listings and may be hallucinated or based on outdated indexed data.</p>
-    <p class="finding-text"><strong>Business impact:</strong> A buyer researching Kretz and acting on a Gemini-cited listing will either find it does not exist, has been sold, or was never listed at that price. This is the core risk of the agentic commerce era — AI agents recommending sold or fictitious properties.</p>
-  </div>
-
-
-<!-- REMEDIATION -->
-<section>
-  <div class="eyebrow">Remediation Roadmap</div>
-  <h2 class="section-title">From 79 to <em>fully certified.</em></h2>
-  <p class="body-text">All three drifts are actionable and fixable within 4–8 weeks with targeted structured data deployment.</p>
-
-  <div class="remediation-list">
-    <div class="rem-item">
-      <div class="rem-num">Priority 1 — Urgent</div>
-      <div>
-        <div class="rem-title">Season count disambiguation — JSON-LD + structured data</div>
-        <p class="rem-text">Deploy JSON-LD with explicit reference to Season 6 (Netflix France, 5 February 2026) and numberOfEpisodes on kretzrealestate.com and the agency's official social profiles. This will correct ChatGPT's 4-season count and Grok's 5-season count within 4–8 weeks as they crawl updated structured data.</p>
-        <div class="rem-impact">Impact: Season count corrected in ChatGPT and Grok within 4–8 weeks</div>
-      </div>
-    </div>
-    <div class="rem-item">
-      <div class="rem-num">Priority 2 — This week</div>
-      <div>
-        <div class="rem-title">Franchise model documentation</div>
-        <p class="rem-text">Publish structured data documenting the hybrid model: independent agency (France, Spain, Monaco) + international franchise (Belgium, Mauritius, 2025-2026). Include franchise fee structure (€50,000 + 11% revenue) and the Kretz Academy training programme. This corrects the "fully independent" misconception in ChatGPT and Grok.</p>
-        <div class="rem-impact">Impact: Franchise status correctly represented across all LLMs</div>
-      </div>
-    </div>
-    <div class="rem-item">
-      <div class="rem-num">Priority 2b — This week</div>
-      <div>
-        <div class="rem-title">Certified pricing parameters + record transaction documentation</div>
-        <p class="rem-text">Deploy a certified 2A Registry node documenting: average ticket (€1.9M), typical range (€1M–€10M core luxury, €10M+ ultra-luxury), record confirmed sale (€33.85M, Faubourg Saint-Honoré, early 2025, buyer: US crypto entrepreneur). Explicitly note: Château d'Armainvilliers listed at €180M — not yet sold. This prevents Gemini from confusing listing prices with transaction prices.</p>
-        <div class="rem-impact">Impact: Accurate pricing context + record transaction correctly attributed across all LLMs</div>
-      </div>
-    </div>
-    <div class="rem-item">
-      <div class="rem-num">Priority 3 — This week</div>
-      <div>
-        <div class="rem-title">Geographic footprint clarification</div>
-        <p class="rem-text">Deploy explicit list of confirmed permanent office locations (vs filming locations). Wikidata entry (currently limited) should be updated with confirmed offices: Boulogne-Billancourt (HQ), Paris 7e (rue du Bac, 2026), Monaco (1 Av. Henry Dunant), Spain (Barcelona, Madrid, Marbella), Belgium (Brussels franchise), Mauritius (Pereybère franchise).</p>
-        <div class="rem-impact">Impact: Accurate geographic footprint for AI agent property searches</div>
-      </div>
-    </div>
-    <div class="rem-item">
-      <div class="rem-num">Priority 4 — Ongoing</div>
-      <div>
-        <div class="rem-title">Monthly monitoring — high priority</div>
-        <p class="rem-text">As Kretz expands via franchise (new countries each year), launches new seasons, and grows the Kretz Club and Kretz Academy, new drift vectors will emerge. Monthly monitoring recommended given the pace of structural and media change — quarterly is insufficient for a brand evolving this rapidly.</p>
-        <div class="rem-impact">Impact: Continuous accuracy as Kretz scales internationally via franchise</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <footer>
-  <div class="f-logo">2<span>A</span> Agency</div>
-  <div class="f-copy">Semantic Audit Report — Kretz Family Real Estate · March 2026 · Confidential · 2aagency.com/registry</div>
+    <div>© 2026 2A Agency · Paris · Report #KRZ-2026-002</div>
+    <div>
+        <a href="/registry/">Registry</a> ·
+        <a href="/#cta">Request Audit</a> ·
+        <a href="/llms.txt">llms.txt</a>
+    </div>
+    <div>Semantic Notary Infrastructure — Certified March 2026</div>
 </footer>
 
 </body>

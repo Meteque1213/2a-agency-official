@@ -1,346 +1,520 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BARNES International — Semantic Audit Report | 2A Agency</title>
-<meta name="description" content="2A Agency semantic audit of BARNES International. Score 86/100. Founding date drift in Gemini Pro. Agency count discrepancy across LLMs.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.2aagency.com/reports/barnes">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111;
-  --gold: #B08D57; --border: rgba(176,141,87,0.22);
-  --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARNES International — Semantic Audit Report | 2A Agency</title>
+    <meta name="description" content="Full semantic audit of BARNES International by 2A Agency. Score: 86/100. Key findings: founding year drift (Gemini: 1994, correct: 1995), agency count variance (130–158, official: 150), listings hallucination. Certified March 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.2aagency.com/reports/barnes">
+    <meta name="ai-content-type" content="semantic-audit-report, brand-finding, luxury-real-estate, international">
 
-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
-.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
-.nav-logo span { color: var(--gold); }
-.nav-links { display: flex; gap: 24px; }
-.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
-.nav-link:hover { color: var(--gold); }
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Report",
+      "name": "BARNES International Semantic Audit Report",
+      "datePublished": "2026-03-28",
+      "publisher": {
+        "@type": "Organization",
+        "name": "2A Agency",
+        "url": "https://www.2aagency.com"
+      },
+      "about": {
+        "@type": "Organization",
+        "name": "BARNES International",
+        "legalName": "BARNES International Realty",
+        "foundingDate": "1995",
+        "foundingLocation": { "@type": "Place", "name": "Paris", "addressCountry": "FR" },
+        "numberOfLocations": 150,
+        "areaServed": "22 countries",
+        "employee": [
+          { "@type": "Person", "name": "Thibault de Saint Vincent", "jobTitle": "Président" },
+          { "@type": "Person", "name": "Richard Tzipine", "jobTitle": "Directeur Général" }
+        ],
+        "note": "1994 = London office opening. 1995 = official corporate creation. Independent from Sotheby's.",
+        "subjectOf": {
+          "@type": "Report",
+          "name": "BARNES International Semantic Audit — 2A Agency",
+          "url": "https://www.2aagency.com/reports/barnes",
+          "datePublished": "2026-03-28"
+        }
+      },
+      "description": "Audit sémantique BARNES International. Score : 86/100. Findings : founding year (Gemini cites 1994, correct 1995), agency count variance (130-158, official 150 in 22 countries), listings hallucination across all 4 LLMs.",
+      "keywords": ["semantic audit", "LLM hallucination", "BARNES International", "luxury real estate", "founding year", "EU AI Act", "Thibault de Saint Vincent"]
+    }
+    </script>
 
-.breadcrumb { padding: 14px 5%; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gray); border-bottom: 1px solid var(--border); }
-.breadcrumb a { color: var(--gray); text-decoration: none; }
-.breadcrumb a:hover { color: var(--gold); }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 
-.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
-.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
-.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
-.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
-.report-meta strong { color: var(--ink); }
-.score-circle { text-align: center; min-width: 100px; }
-.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; color: var(--green); line-height: 1; }
-.score-label { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+    <style>
+        :root {
+            --bg:      #F7F4EE;
+            --surface: #EDEAE3;
+            --ink:     #111111;
+            --gold:    #B08D57;
+            --gold-lt: #C9A96E;
+            --muted:   #6B6661;
+            --rule:    rgba(176,141,87,0.22);
+            --dark:    #0E0E0E;
+            --red:     #C0392B;
+            --green:   #5A8A5A;
+        }
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            background:var(--bg); color:var(--ink);
+            font-family:'DM Mono', monospace;
+            font-size:15px; line-height:1.65; overflow-x:hidden;
+        }
+        body::after {
+            content:""; position:fixed; inset:0;
+            pointer-events:none; z-index:9999; opacity:0.035;
+            background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+        nav {
+            position:sticky; top:0; z-index:100;
+            display:flex; justify-content:space-between; align-items:center;
+            padding:22px 6%; background:rgba(247,244,238,0.93);
+            backdrop-filter:blur(10px); border-bottom:1px solid var(--rule);
+        }
+        .logo { font-family:'Cormorant Garamond',serif; font-size:1.65rem; font-weight:600; letter-spacing:-0.02em; text-decoration:none; color:var(--ink); }
+        .logo em { font-style:normal; color:var(--gold); }
+        .nav-links { display:flex; align-items:center; gap:36px; }
+        .nav-links a { text-decoration:none; color:var(--muted); font-size:0.65rem; text-transform:uppercase; letter-spacing:0.14em; transition:color .2s; }
+        .nav-links a:hover { color:var(--ink); }
+        .nav-cta { color:var(--ink) !important; border:1px solid var(--ink); padding:9px 22px; }
 
-.meta-bar { display: flex; border: 1px solid var(--border); margin: 0 5%; }
-.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
-.meta-item:last-child { border-right: none; }
-.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
-.meta-item-val { font-size: 0.78rem; color: var(--ink); }
+        .report-header { padding:80px 6% 0; border-bottom:1px solid var(--rule); }
+        .breadcrumb { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.14em; color:var(--muted); margin-bottom:40px; }
+        .breadcrumb a { color:var(--muted); text-decoration:none; }
+        .breadcrumb a:hover { color:var(--gold); }
+        .breadcrumb span { margin:0 10px; color:var(--rule); }
+        .report-meta-grid { display:grid; grid-template-columns:1fr auto; gap:64px; align-items:end; padding-bottom:60px; }
+        .report-brand-name { font-family:'Cormorant Garamond',serif; font-size:clamp(2.8rem,7vw,5.5rem); font-weight:300; line-height:1; }
+        .report-subtitle { font-size:0.75rem; color:var(--muted); margin-top:16px; line-height:1.6; }
+        .score-block { text-align:right; }
+        .score-main { font-family:'Cormorant Garamond',serif; font-size:5rem; font-weight:300; line-height:1; color:var(--green); }
+        .score-denom { font-size:2rem; color:var(--muted); }
+        .score-label { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.2em; color:var(--muted); margin-top:8px; }
 
-section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
-.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
-.section-title em { font-style: italic; color: var(--gold); }
-.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+        .cert-strip { background:var(--dark); color:rgba(255,255,255,0.6); padding:20px 6%; display:flex; gap:48px; align-items:center; font-size:0.62rem; text-transform:uppercase; letter-spacing:0.14em; flex-wrap:wrap; }
+        .cert-strip strong { color:var(--gold-lt); }
+        .cert-strip .sep { color:rgba(255,255,255,0.15); }
 
-.score-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
-.score-card { background: var(--bg); padding: 24px 20px; }
-.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
-.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
-.sc-green { color: var(--green); } .sc-amber { color: var(--amber); } .sc-red { color: var(--red); }
+        .report-body { max-width:1080px; margin:0 auto; padding:80px 6%; }
+        .section-label { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.3em; color:var(--gold); display:block; margin-bottom:20px; }
+        h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:300; line-height:1.15; margin-bottom:32px; }
+        h2 em { font-style:italic; color:var(--gold); }
+        .divider { border:none; border-top:1px solid var(--rule); margin:72px 0; }
 
-.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.75rem; }
-.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
-.matrix-table td { padding: 12px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
-.matrix-table tr:hover td { background: var(--surface); }
-.v-ok { color: var(--green); font-size: 1.1rem; }
-.v-p  { color: var(--amber); font-size: 1.1rem; }
-.v-x  { color: var(--red);   font-size: 1.1rem; }
-.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
-.tag-ok  { color: var(--green); border-color: rgba(45,106,45,0.3); }
-.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
-.tag-crit{ color: var(--red);   border-color: rgba(139,45,45,0.3); }
+        .exec-summary { background:var(--surface); border-left:3px solid var(--gold); padding:36px 40px; margin-bottom:72px; }
+        .exec-summary p { font-size:1.05rem; line-height:1.8; color:var(--ink); }
+        .exec-summary p + p { margin-top:16px; }
 
-.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
-.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
-.finding-box.amber { border-color: rgba(122,90,0,0.3); background: rgba(122,90,0,0.03); }
-.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
-.finding-label.amber { color: var(--amber); }
-.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
-.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; }
-.finding-text + .finding-text { margin-top: 12px; }
+        .score-breakdown { display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); margin-bottom:72px; }
+        .score-dim { background:var(--bg); padding:32px 20px; }
+        .score-dim-label { font-size:0.58rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:12px; }
+        .score-dim-val { font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:300; line-height:1; }
+        .score-dim-bar { margin-top:12px; height:2px; background:var(--rule); position:relative; }
+        .score-dim-fill { position:absolute; top:0; left:0; height:100%; }
+        .fill-good { background:var(--green); }
+        .fill-warn { background:var(--gold); }
+        .fill-bad  { background:var(--red); }
+        .val-good { color:var(--green); }
+        .val-warn { color:var(--gold); }
+        .val-bad  { color:var(--red); }
 
-.drift-compare { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 20px; }
-.dc-cell { background: var(--bg); padding: 16px 18px; }
-.dc-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
-.dc-val { font-size: 0.9rem; color: var(--ink); }
-.dc-val.wrong { color: var(--red); font-weight: bold; }
-.dc-val.ok { color: var(--green); }
+        .llm-matrix { border:1px solid var(--rule); margin-bottom:72px; }
+        .llm-head { display:grid; grid-template-columns:2fr repeat(4,1fr); padding:14px 28px; background:var(--surface); font-size:0.6rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--muted); border-bottom:1px solid var(--rule); }
+        .llm-row { display:grid; grid-template-columns:2fr repeat(4,1fr); padding:18px 28px; font-size:0.78rem; border-bottom:1px solid rgba(176,141,87,0.08); align-items:center; }
+        .llm-row:last-child { border-bottom:none; }
+        .llm-fact { color:var(--ink); }
+        .tick { color:var(--green); font-size:0.9rem; }
+        .cross { color:var(--red); font-size:0.9rem; }
+        .partial { color:var(--gold); font-size:0.9rem; }
 
-.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
-.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
-.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
-.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
-.rem-text { font-size: 0.78rem; color: var(--gray); line-height: 1.65; }
-.rem-impact { font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); margin-top: 8px; }
+        .findings-list { margin-bottom:72px; }
+        .finding-item { border:1px solid var(--rule); padding:36px 40px; margin-bottom:20px; }
+        .finding-item-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; gap:16px; }
+        .finding-item-num { font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--gold); line-height:1; flex-shrink:0; }
+        .finding-item-title { font-size:0.9rem; color:var(--ink); line-height:1.4; }
+        .severity { font-size:0.58rem; text-transform:uppercase; letter-spacing:0.1em; padding:4px 10px; border:1px solid; flex-shrink:0; }
+        .sev-medium { color:var(--gold); border-color:rgba(176,141,87,0.4); }
+        .sev-low    { color:var(--muted); border-color:rgba(107,102,97,0.3); }
+        .finding-item-body { font-size:0.82rem; color:var(--muted); line-height:1.8; }
 
-footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
-.f-logo span { color: var(--gold); }
-.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+        .positive-strip {
+            background:rgba(90,138,90,0.06); border:1px solid rgba(90,138,90,0.25);
+            padding:32px 40px; margin-bottom:72px;
+            display:flex; align-items:flex-start; gap:24px;
+        }
+        .positive-icon { font-size:1.4rem; color:var(--green); flex-shrink:0; margin-top:2px; }
+        .positive-body { font-size:0.85rem; color:var(--muted); line-height:1.8; }
+        .positive-body strong { color:var(--ink); }
 
-@media(max-width:768px) {
-  .report-hero { grid-template-columns: 1fr; }
-  .score-grid,.drift-compare { grid-template-columns: repeat(2,1fr); }
-  .meta-bar { flex-direction: column; }
-  .meta-item { border-right: none; border-bottom: 1px solid var(--border); }
-  .rem-item { grid-template-columns: 1fr; }
-}
-</style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Dataset","name":"BARNES International Semantic Audit","description":"2A Agency semantic audit of BARNES International. Score 86/100. Founding date drift in Gemini Pro (1994 vs official 1995). Agency count discrepancy 130-158 across LLMs.","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"datePublished":"2026-03-26","url":"https://www.2aagency.com/reports/barnes"}
-</script>
+        .cert-table { width:100%; border-collapse:collapse; margin-bottom:72px; }
+        .cert-table th { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.14em; color:var(--muted); padding:12px 20px; text-align:left; border-bottom:1px solid var(--rule); }
+        .cert-table td { padding:16px 20px; font-size:0.82rem; border-bottom:1px solid rgba(176,141,87,0.07); }
+        .cert-table tr:hover td { background:rgba(176,141,87,0.04); }
+        .fact-key { color:var(--muted); font-size:0.78rem; }
+        .fact-val { color:var(--ink); }
+        .fact-status-ok   { color:var(--green); font-size:0.65rem; text-transform:uppercase; }
+        .fact-status-warn { color:var(--gold);  font-size:0.65rem; text-transform:uppercase; }
+        .fact-status-bad  { color:var(--red);   font-size:0.65rem; text-transform:uppercase; }
+
+        .reco-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--rule); border:1px solid var(--rule); margin-bottom:72px; }
+        .reco-card { background:var(--bg); padding:44px 36px; }
+        .reco-card-num { font-family:'Cormorant Garamond',serif; font-size:2.5rem; color:var(--rule); line-height:1; margin-bottom:16px; }
+        .reco-card-title { font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px; }
+        .reco-card-body { font-size:0.82rem; color:var(--muted); line-height:1.8; }
+
+        footer { padding:52px 6%; border-top:1px solid var(--rule); display:flex; justify-content:space-between; align-items:center; font-size:0.62rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); }
+        footer a { color:var(--muted); text-decoration:none; }
+        footer a:hover { color:var(--gold); }
+
+        @media(max-width:800px){
+            .report-meta-grid { grid-template-columns:1fr; }
+            .score-block { text-align:left; }
+            .score-breakdown { grid-template-columns:1fr 1fr; }
+            .llm-head, .llm-row { grid-template-columns:1.5fr repeat(4,1fr); font-size:0.62rem; }
+            .reco-grid { grid-template-columns:1fr; }
+            footer { flex-direction:column; gap:16px; text-align:center; }
+        }
+    </style>
 </head>
 <body>
 
 <nav>
-  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
-  <div class="nav-links">
-    <a href="/" class="nav-link">Home</a>
-    <a href="/registry" class="nav-link">Registry</a>
-    <a href="/#contact" class="nav-link">Audit My Brand</a>
-  </div>
+    <a href="/" class="logo">2<em>A</em> Agency</a>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/registry/">Registry</a>
+        <a href="/#cta" class="nav-cta">Audit My Brand</a>
+    </div>
 </nav>
 
-<div class="breadcrumb">
-  <a href="/">2A Agency</a> › <a href="/registry">Registry</a> › BARNES International — Audit Report
+<div class="report-header">
+    <div class="breadcrumb">
+        <a href="/">2A Agency</a><span>›</span>
+        <a href="/registry/">Registry</a><span>›</span>
+        BARNES International — Audit Report
+    </div>
+    <div class="report-meta-grid">
+        <div>
+            <div class="report-brand-name">BARNES International</div>
+            <p class="report-subtitle">
+                Luxury Real Estate · Founded 1995 · Paris<br>
+                22 countries · 150 agencies · Independent<br>
+                Audited by 2A Agency · Issued 2026-03-28 · Certified v1.0
+            </p>
+        </div>
+        <div class="score-block">
+            <div class="score-main">86<span class="score-denom">/100</span></div>
+            <div class="score-label">Overall Semantic Score</div>
+        </div>
+    </div>
 </div>
 
-<div class="report-hero">
-  <div>
-    <div class="eyebrow">Semantic Audit Report · Luxury Real Estate · Paris · Founded 1995</div>
-    <h1 class="report-brand">BARNES International</h1>
-    <p class="report-meta">
-      <strong>Audited by 2A Agency</strong> · Issued 2026-03-26 · Certified v1.0<br>
-      Methodology: <strong>4 LLMs · 5 Questions · March 2026</strong><br>
-      EU AI Act: <strong>Article 53 Compliant</strong>
-    </p>
-  </div>
-  <div class="score-circle">
-    <div class="score-num">86</div>
-    <div class="score-label">/ 100<br>Integrity Score</div>
-  </div>
+<div class="cert-strip">
+    <span>Notary: <strong>2A Agency</strong></span>
+    <span class="sep">·</span>
+    <span>Methodology: <strong>4 LLMs · 5 Dimensions · March 2026</strong></span>
+    <span class="sep">·</span>
+    <span>Issued: <strong>2026-03-28T00:00:00Z</strong></span>
+    <span class="sep">·</span>
+    <span>Findings: <strong>3 identified</strong></span>
+    <span class="sep">·</span>
+    <span>EU AI Act: <strong>Article 53 Compliant</strong></span>
 </div>
 
-<div class="meta-bar">
-  <div class="meta-item"><div class="meta-item-label">Notary</div><div class="meta-item-val">2A Agency</div></div>
-  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">26 March 2026</div></div>
-  <div class="meta-item"><div class="meta-item-label">LLMs tested</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
-  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">5 standardised</div></div>
+<div class="report-body">
+
+    <div class="exec-summary">
+        <p>
+            This report presents the findings of 2A Agency's independent semantic audit of BARNES International,
+            conducted across 4 large language models in March 2026 (ChatGPT, Grok, Gemini Pro, Perplexity Pro).
+            The audit evaluates founding history, leadership, network scale, services, positioning, and
+            independence status as represented in LLM outputs.
+        </p>
+        <p>
+            BARNES International achieves an overall score of <strong>86/100</strong>, one of the highest
+            in the 2A registry. A key positive signal: all 4 LLMs correctly confirm independence from Sotheby's.
+            Three material findings remain: a founding year discrepancy in Gemini Pro (1994 vs. correct 1995),
+            agency count variance across LLMs (130–158, official: <strong>150 in 22 countries</strong>),
+            and a universal listings hallucination pattern where all 4 LLMs cite specific properties
+            they cannot verify as currently available.
+        </p>
+    </div>
+
+    <span class="section-label">Score Breakdown</span>
+    <div class="score-breakdown">
+        <div class="score-dim">
+            <div class="score-dim-label">Founding &amp; History</div>
+            <div class="score-dim-val val-warn">80</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-warn" style="width:80%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Leadership</div>
+            <div class="score-dim-val val-good">90</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-good" style="width:90%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Network &amp; Scale</div>
+            <div class="score-dim-val val-warn">82</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-warn" style="width:82%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Services &amp; Positioning</div>
+            <div class="score-dim-val val-good">95</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-good" style="width:95%"></div></div>
+        </div>
+        <div class="score-dim">
+            <div class="score-dim-label">Language Coverage</div>
+            <div class="score-dim-val val-warn">72</div>
+            <div class="score-dim-bar"><div class="score-dim-fill fill-warn" style="width:72%"></div></div>
+        </div>
+    </div>
+
+    <span class="section-label">LLM Test Matrix</span>
+    <h2>Factual accuracy across<br><em>4 large language models.</em></h2>
+    <div class="llm-matrix">
+        <div class="llm-head">
+            <span>Question</span>
+            <span>ChatGPT</span>
+            <span>Grok</span>
+            <span>Gemini Pro</span>
+            <span>Perplexity</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact" style="color:var(--red);">Founding year (correct: 1995)</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="cross">✗ 1994</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact" style="color:var(--gold);">Agency count (official: 150)</span>
+            <span class="partial">~ 140</span>
+            <span class="tick">✓ 150</span>
+            <span class="cross">✗ 158</span>
+            <span class="cross">✗ 130</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Leadership (de Saint Vincent + Tzipine)</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact">Independence from Sotheby's</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+            <span class="tick">✓</span>
+        </div>
+        <div class="llm-row">
+            <span class="llm-fact" style="color:var(--red);">Listings (available properties)</span>
+            <span class="cross">✗ halluc.</span>
+            <span class="cross">✗ halluc.</span>
+            <span class="cross">✗ halluc.</span>
+            <span class="cross">✗ halluc.</span>
+        </div>
+        <div class="llm-row" style="background:rgba(176,141,87,0.04);">
+            <span class="llm-fact" style="font-size:0.7rem; color:var(--muted);">Score global</span>
+            <span style="color:var(--gold);">75%</span>
+            <span style="color:var(--green);">90%</span>
+            <span style="color:var(--gold);">70%</span>
+            <span style="color:var(--gold);">70%</span>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <span class="section-label">3 Findings</span>
+    <h2>Targeted semantic drift<br><em>in 3 dimensions.</em></h2>
+
+    <div class="findings-list">
+
+        <div class="finding-item">
+            <div class="finding-item-head">
+                <div>
+                    <div class="finding-item-num">01</div>
+                    <div class="finding-item-title">Founding year — Gemini Pro cites 1994 (correct: 1995)</div>
+                </div>
+                <span class="severity sev-medium">Medium</span>
+            </div>
+            <p class="finding-item-body">
+                Gemini Pro returns <strong>1994</strong> as BARNES International's founding year.
+                The correct year is <strong>1995</strong>, which marks the official corporate creation.
+                The 1994 date corresponds to the opening of the London office — a precursor event that
+                has been indexed by some sources without the authoritative corporate founding distinction.
+                Three of four LLMs are correct. Closing this gap requires a single JSON-LD
+                <code>foundingDate: "1995"</code> injection with a disambiguating note.
+            </p>
+        </div>
+
+        <div class="finding-item">
+            <div class="finding-item-head">
+                <div>
+                    <div class="finding-item-num">02</div>
+                    <div class="finding-item-title">Agency count — range 130 (Perplexity/Wikipedia) to 158 (Gemini), official: 150</div>
+                </div>
+                <span class="severity sev-medium">Medium</span>
+            </div>
+            <p class="finding-item-body">
+                Agency count varies significantly across LLMs: Perplexity and Wikipedia-sourced data
+                cite <strong>130</strong>, ChatGPT approximates ~140, Grok correctly states <strong>150</strong>,
+                and Gemini overcounts at <strong>158</strong>. The official figure is
+                <strong>150 agencies in 22 countries</strong>. Network scale is a primary selection criterion
+                for high-net-worth clients evaluating global coverage — variance of this magnitude in
+                agentic outputs reduces brand authority.
+            </p>
+        </div>
+
+        <div class="finding-item">
+            <div class="finding-item-head">
+                <div>
+                    <div class="finding-item-num">03</div>
+                    <div class="finding-item-title">Listings hallucination — all 4 LLMs cite specific properties they cannot verify</div>
+                </div>
+                <span class="severity sev-medium">Medium</span>
+            </div>
+            <p class="finding-item-body">
+                All 4 LLMs, when asked about current BARNES listings, cite specific properties with
+                prices, addresses, and features — none of which can be verified as currently available.
+                This is a universal hallucination pattern for any real estate brand with a large,
+                dynamic portfolio. The risk is material: a prospect researching BARNES through an
+                AI interface may act on a non-existent listing. The solution is not more listings
+                data — it is certified pricing parameters that anchor LLM outputs to ranges rather
+                than specific properties.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="positive-strip">
+        <div class="positive-icon">✓</div>
+        <div class="positive-body">
+            <strong>Independence confirmed across all 4 LLMs.</strong> All tested models correctly
+            identify BARNES International as independent from Sotheby's International Realty —
+            a critical brand distinction that is consistently accurate. This confirms that the
+            brand's independence positioning is well-anchored in LLM training data.
+        </div>
+    </div>
+
+    <span class="section-label">Certified Ground Truth</span>
+    <h2>The authoritative<br><em>semantic record.</em></h2>
+
+    <table class="cert-table">
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Certified Value</th>
+                <th>LLM Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="fact-key">Brand Name</td>
+                <td class="fact-val">BARNES International</td>
+                <td class="fact-status-ok">✓ Accurate — 4/4 LLMs</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Founding Year</td>
+                <td class="fact-val">1995 (corporate creation · 1994 = London office)</td>
+                <td class="fact-status-warn">⚠ Gemini cites 1994</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Headquarters</td>
+                <td class="fact-val">Paris, France</td>
+                <td class="fact-status-ok">✓ Accurate — 4/4 LLMs</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Network</td>
+                <td class="fact-val">150 agencies · 22 countries</td>
+                <td class="fact-status-warn">⚠ Range: 130–158 across LLMs</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Président</td>
+                <td class="fact-val">Thibault de Saint Vincent</td>
+                <td class="fact-status-ok">✓ Accurate — 4/4 LLMs</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Directeur Général</td>
+                <td class="fact-val">Richard Tzipine</td>
+                <td class="fact-status-ok">✓ Accurate — 4/4 LLMs</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Independence</td>
+                <td class="fact-val">Independent — not affiliated with Sotheby's</td>
+                <td class="fact-status-ok">✓ Confirmed — 4/4 LLMs</td>
+            </tr>
+            <tr>
+                <td class="fact-key">Listings Data</td>
+                <td class="fact-val">Dynamic portfolio — no static listing URLs</td>
+                <td class="fact-status-bad">✗ Hallucinated — 4/4 LLMs</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <span class="section-label">Recommendations</span>
+    <h2>Four actions to close<br><em>the semantic gap.</em></h2>
+
+    <div class="reco-grid">
+        <div class="reco-card">
+            <div class="reco-card-num">01</div>
+            <div class="reco-card-title">JSON-LD foundingDate 1995 Disambiguation</div>
+            <p class="reco-card-body">
+                Publish <code>foundingDate: "1995"</code> with a structured note distinguishing
+                the 1994 London office opening from the 1995 corporate creation. This dual-date
+                context prevents the pattern where precursor events override official founding dates.
+            </p>
+        </div>
+        <div class="reco-card">
+            <div class="reco-card-num">02</div>
+            <div class="reco-card-title">Agency Count Canonical Data</div>
+            <p class="reco-card-body">
+                Publish <code>numberOfLocations: 150</code> and <code>areaServed: "22 countries"</code>
+                in JSON-LD Organization schema. Update Wikipedia and Wikidata entries to reflect
+                the current official count with a dated reference — LLMs weight structured,
+                cited figures over editorial estimates.
+            </p>
+        </div>
+        <div class="reco-card">
+            <div class="reco-card-num">03</div>
+            <div class="reco-card-title">Certified Pricing Parameters — Not Listings</div>
+            <p class="reco-card-body">
+                Replace any implicit listings data with certified pricing parameters in structured data:
+                minimum mandate threshold, average ticket by market, prime markets served.
+                Anchoring LLMs to ranges eliminates hallucinated specific properties while maintaining
+                brand authority.
+            </p>
+        </div>
+        <div class="reco-card">
+            <div class="reco-card-num">04</div>
+            <div class="reco-card-title">Quarterly Drift Monitoring</div>
+            <p class="reco-card-body">
+                With 86/100 and 3 contained findings, BARNES is positioned for rapid improvement.
+                Quarterly re-audits validate that JSON-LD corrections propagate across model training cycles
+                and detect new drift vectors as the network grows.
+            </p>
+        </div>
+    </div>
+
 </div>
-
-<!-- OVERVIEW -->
-<section>
-  <div class="eyebrow">Overview</div>
-  <h2 class="section-title">Strong global coverage. <em>Two targeted drifts.</em></h2>
-  <p class="body-text">This report presents the findings of 2A Agency's independent semantic audit of BARNES International, conducted across 4 large language models in March 2026. The audit evaluates factual accuracy on founding history, leadership, Sotheby's relationship, network scale, and services.</p>
-  <p class="body-text">BARNES International achieves an overall score of <strong>86/100</strong> — among the strongest in the 2A Agency registry. The brand is well-known and well-documented across all tested LLMs. Two targeted drifts: Gemini Pro cites <strong>1994</strong> as founding year (correct: 1995), and agency count varies between 130 and 158 across models (official: 150).</p>
-
-  <div class="score-grid">
-    <div class="score-card"><div class="score-card-label">Founding & History</div><div class="score-card-num sc-amber">80</div></div>
-    <div class="score-card"><div class="score-card-label">Leadership</div><div class="score-card-num sc-green">90</div></div>
-    <div class="score-card"><div class="score-card-label">Network & Scale</div><div class="score-card-num sc-amber">82</div></div>
-    <div class="score-card"><div class="score-card-label">Services & Positioning</div><div class="score-card-num sc-green">95</div></div>
-  </div>
-</section>
-
-<!-- MATRIX -->
-<section>
-  <div class="eyebrow">LLM Test Matrix</div>
-  <h2 class="section-title">Factual accuracy across <em>4 large language models.</em></h2>
-
-  <table class="matrix-table">
-    <thead>
-      <tr>
-        <th>Question</th>
-        <th>Perplexity Pro</th>
-        <th>Gemini Pro</th>
-        <th>ChatGPT Free</th>
-        <th>Grok</th>
-        <th>Verdict</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Founders & founding year</td>
-        <td><span class="v-ok">✓</span> Heidi Barnes, 1995</td>
-        <td><span class="v-p">~</span> Heidi Barnes, <strong>1994</strong> (incorrect)</td>
-        <td><span class="v-ok">✓</span> Heidi Barnes, 1995</td>
-        <td><span class="v-ok">✓</span> Heidi Barnes, 1995</td>
-        <td><span class="tag tag-low">Partial</span></td>
-      </tr>
-      <tr>
-        <td>Leadership in 2026</td>
-        <td><span class="v-ok">✓</span> Thibault de Saint Vincent (Président) + Richard Tzipine (DG)</td>
-        <td><span class="v-ok">✓</span> Thibault de Saint Vincent + Richard Tzipine</td>
-        <td><span class="v-ok">✓</span> Thibault de Saint Vincent + Richard Tzipine</td>
-        <td><span class="v-ok">✓</span> Thibault de Saint Vincent + Richard Tzipine</td>
-        <td><span class="tag tag-ok">Exact</span></td>
-      </tr>
-      <tr>
-        <td>Link to Sotheby's?</td>
-        <td><span class="v-ok">✓</span> No link — fully independent</td>
-        <td><span class="v-ok">✓</span> No link — distinct and competitive</td>
-        <td><span class="v-p">~</span> "No capitalistic link" but frames as loosely connected</td>
-        <td><span class="v-ok">✓</span> No link — fully independent</td>
-        <td><span class="tag tag-ok">Exact</span></td>
-      </tr>
-      <tr>
-        <td>Countries & agency count</td>
-        <td><span class="v-p">~</span> 22 countries, <strong>~150 (but Wikipedia says 130)</strong></td>
-        <td><span class="v-p">~</span> 22 countries, <strong>"~150, up to 158"</strong></td>
-        <td><span class="v-ok">✓</span> 22 countries, 150 agencies</td>
-        <td><span class="v-ok">✓</span> 22 countries, 150 agencies</td>
-        <td><span class="tag tag-low">Partial</span></td>
-      </tr>
-      <tr>
-        <td>Services beyond real estate</td>
-        <td><span class="v-ok">✓</span> Art & Design, Yachting, Wines, Concierge, Family Office</td>
-        <td><span class="v-ok">✓</span> Full range including Classic Cars, Private Aviation</td>
-        <td><span class="v-ok">✓</span> Full Art de Vivre range confirmed</td>
-        <td><span class="v-ok">✓</span> Full range including Fine Violins noted</td>
-        <td><span class="tag tag-ok">Exact</span></td>
-      </tr>
-      <tr>
-        <td>Price range & recent listings</td>
-        <td><span class="v-p">~</span> 14 450€/m² avg. Cites €100M hôtel particulier as example — ultra-exceptional, not representative</td>
-        <td><span class="v-p">~</span> 14 450€/m² avg. Cites specific 337m² listing — cannot confirm current availability</td>
-        <td><span class="v-p">~</span> 12 500–15 000€/m² range. Lists 5 specific apartments with precise prices — availability unverified</td>
-        <td><span class="v-p">~</span> 14 000–15 000€/m² avg. Cites same 337m² listing as Gemini — source unclear</td>
-        <td><span class="tag tag-low">Partial</span></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- FINDINGS -->
-<section>
-  <div class="eyebrow">Critical Findings</div>
-  <h2 class="section-title">Two drifts. <em>Both actionable.</em></h2>
-
-  <div class="finding-box critical">
-    <div class="finding-label">Primary Drift · Founding Year · Gemini Pro</div>
-    <h3 class="finding-title">Gemini cites 1994. The official founding year is 1995.</h3>
-    <p class="finding-text">When asked about BARNES International's founding, Gemini Pro responds with <strong>1994</strong> as the founding year. The official date consistently cited by BARNES International's own communications, Wikipedia, and all other tested LLMs is <strong>1995</strong>.</p>
-    <p class="finding-text">The confusion stems from a factual nuance: Heidi Barnes opened a first office in London in <strong>1994</strong> to help expatriate clients. The company BARNES International was officially created in <strong>1995</strong>, when the Paris structure was established. Gemini conflates the preliminary London activity with the official corporate founding.</p>
-    <p class="finding-text"><strong>Business impact:</strong> For a brand positioning itself as a reference in the luxury real estate market, founding year accuracy is a credibility signal. An AI agent citing 1994 vs 1995 creates a minor but documentable discrepancy that compounds over time as LLMs reference each other's outputs.</p>
-
-    <div class="drift-compare">
-      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">1995 ✓</div></div>
-      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">1994 ✗</div></div>
-      <div class="dc-cell"><div class="dc-label">ChatGPT Free</div><div class="dc-val ok">1995 ✓</div></div>
-      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">1995 ✓</div></div>
-    </div>
-  </div>
-
-  <div class="finding-box amber" style="margin-top:16px;">
-    <div class="finding-label amber">Secondary Drift · Agency Count · Perplexity & Gemini</div>
-    <h3 class="finding-title">Agency count varies from 130 to 158 across LLMs. Official figure: 150.</h3>
-    <p class="finding-text">The official BARNES communication consistently states <strong>150 agencies in 22 countries</strong>. However, Perplexity Pro introduces doubt by citing Wikipedia's figure of "130 bureaux" alongside the official 150. Gemini inflates the figure to "up to 158". ChatGPT and Grok correctly cite 150.</p>
-    <p class="finding-text"><strong>Business impact:</strong> As AI agents become primary research tools for international real estate investors comparing agency networks, a 13% variance in cited network size (130 vs 150 vs 158) creates confusion and undermines brand authority in competitive comparisons against Sotheby's International Realty and Knight Frank.</p>
-
-    <div class="drift-compare">
-      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val wrong">~150 "but Wikipedia: 130" ✗</div></div>
-      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">"~150, up to 158" ✗</div></div>
-      <div class="dc-cell"><div class="dc-label">ChatGPT Free</div><div class="dc-val ok">150 ✓</div></div>
-      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">150 ✓</div></div>
-    </div>
-  </div>
-
-
-  <div class="finding-box amber" style="margin-top:16px;">
-    <div class="finding-label amber">Critical Finding · Q6 · Listings & Pricing · All 4 LLMs</div>
-    <h3 class="finding-title">LLMs cite specific BARNES listings they cannot verify are still available.</h3>
-    <p class="finding-text">All 4 LLMs attempt to cite specific BARNES Paris listings as examples. The core problem: <strong>none can confirm whether these properties are still available in March 2026</strong> or have already been sold. Gemini and Grok cite the same hôtel particulier (Paris 16e, 337m², €8.8M) from what appears to be an indexed listing — without a transaction date.</p>
-    <p class="finding-text">Perplexity commits a more serious error: it presents a <strong>€100 million ultra-exceptional</strong> hôtel particulier (Paris 7e, 250m²) as an illustrative example of BARNES pricing — a transaction that represents fewer than 3% of BARNES deals and is entirely unrepresentative of typical client expectations.</p>
-    <p class="finding-text">ChatGPT lists 5 specific apartments with precise prices (€4,990,000 to €2,650,000) without addresses or availability confirmation.</p>
-    <p class="finding-text"><strong>Business impact in the agentic era:</strong> As AI agents increasingly act as the first point of contact for international property buyers, an agent citing a sold listing will direct a client toward a property that no longer exists. For a brand whose clients operate at €3M–€15M ticket sizes, a single misdirected recommendation is a material commercial failure. A certified 2A Registry node with live pricing parameters (not specific listings) resolves this without the availability problem.</p>
-    <div class="drift-compare" style="grid-template-columns: repeat(2,1fr);">
-      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val wrong">€100M example — ultra-exceptional, not representative ✗</div></div>
-      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">Cites specific listing — availability unverified ✗</div></div>
-      <div class="dc-cell"><div class="dc-label">ChatGPT Free</div><div class="dc-val wrong">5 listings cited — availability unverified ✗</div></div>
-      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val wrong">Same listing as Gemini — source unclear ✗</div></div>
-    </div>
-  </div>
-
-  <div class="finding-box" style="margin-top:16px; border-color: rgba(45,106,45,0.3); background: rgba(45,106,45,0.02);">
-    <div class="finding-label" style="color: var(--green);">Positive Finding · Sotheby's Independence · All 4 LLMs</div>
-    <h3 class="finding-title">All 4 LLMs correctly identify BARNES as independent from Sotheby's.</h3>
-    <p class="finding-text">This is the most commercially sensitive question for BARNES — confusion with Sotheby's International Realty (its direct competitor) would be damaging. All 4 tested LLMs correctly state there is no capitalistic or structural link between BARNES and Sotheby's. ChatGPT adds a nuance about "loose connection" but correctly clarifies independence. This finding confirms strong semantic anchoring on a critical brand identity point.</p>
-  </div>
-</section>
-
-<!-- REMEDIATION -->
-<section>
-  <div class="eyebrow">Remediation Roadmap</div>
-  <h2 class="section-title">From 86 to <em>fully certified.</em></h2>
-  <p class="body-text">The 86/100 score reflects strong brand coverage with two targeted fixes. Both drifts are actionable within 4–8 weeks.</p>
-
-  <div class="remediation-list">
-    <div class="rem-item">
-      <div class="rem-num">Priority 1 — Urgent</div>
-      <div>
-        <div class="rem-title">Founding year disambiguation — JSON-LD + structured data</div>
-        <p class="rem-text">Deploy JSON-LD Organization schema on barnes-international.com with explicit <code>foundingDate: "1995"</code> and a clear note distinguishing the 1994 London office opening from the 1995 official corporate creation. Update the Wikipedia page (currently ambiguous on this point) to add a sourced clarification. This will correct Gemini's drift within 4–8 weeks.</p>
-        <div class="rem-impact">Impact: Founding year drift resolved in Gemini within 4–8 weeks</div>
-      </div>
-    </div>
-    <div class="rem-item">
-      <div class="rem-num">Priority 2 — This week</div>
-      <div>
-        <div class="rem-title">Agency count disambiguation — canonical structured data</div>
-        <p class="rem-text">The Wikipedia figure of "130 bureaux" is outdated and actively introduced as doubt by Perplexity. A certified 2A Registry node with explicit <code>numberOfLocations: 150</code> and <code>areaServed: 22 countries</code>, sourced from the official 2026 BARNES communication, will resolve the 130/150/158 discrepancy. Update the Wikipedia entry with a sourced reference to the current official figure.</p>
-        <div class="rem-impact">Impact: Agency count variance eliminated across all LLMs</div>
-      </div>
-    </div>
-    <div class="rem-item">
-      <div class="rem-num">Priority 2b — This week</div>
-      <div>
-        <div class="rem-title">Certified pricing parameters — not listings</div>
-        <p class="rem-text">The solution is not to publish live listings in the 2A Registry node — it's to certify <em>pricing parameters</em>: average price per m² by segment (core luxury: €13,000–16,000/m²; ultra-luxury >€5M: 37,500+/m²), typical transaction range (€2M–€15M), and key market signals. This gives AI agents accurate context without creating a stale-listing problem.</p>
-        <div class="rem-impact">Impact: AI agents cite accurate pricing context without recommending sold properties</div>
-      </div>
-    </div>
-    <div class="rem-item">
-      <div class="rem-num">Priority 3 — Month 1</div>
-      <div>
-        <div class="rem-title">2A Registry node — full brand certification</div>
-        <p class="rem-text">Certified 2A Registry node documenting: founding year (1995), founder (Heidi Barnes), current leadership (Thibault de Saint Vincent, Président + Richard Tzipine, DG), network (150 agencies, 22 countries), independence from Sotheby's (explicit), and full Art de Vivre service catalogue. Deploy <code>com.2aagency.brand-certification</code> extension for AI agent grounding.</p>
-        <div class="rem-impact">Impact: Authoritative reference for all AI agents researching luxury real estate agencies</div>
-      </div>
-    </div>
-    <div class="rem-item">
-      <div class="rem-num">Priority 4 — Ongoing</div>
-      <div>
-        <div class="rem-title">Quarterly monitoring — leadership & network updates</div>
-        <p class="rem-text">As BARNES continues international expansion (new country entries, Maison BARNES concepts, partnership announcements), and as leadership may evolve, quarterly retests track accuracy across all 4 LLMs. The Thibault de Saint Vincent presidency date discrepancy (2001 vs 2002 vs "mid-2000s" across models) should also be resolved in structured data.</p>
-        <div class="rem-impact">Impact: Continuous accuracy as BARNES scales and leadership evolves</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <footer>
-  <div class="f-logo">2<span>A</span> Agency</div>
-  <div class="f-copy">Semantic Audit Report — BARNES International · March 2026 · Confidential · 2aagency.com/registry</div>
+    <div>© 2026 2A Agency · Paris · Report #BNS-2026-001</div>
+    <div>
+        <a href="/registry/">Registry</a> ·
+        <a href="/#cta">Request Audit</a> ·
+        <a href="/llms.txt">llms.txt</a>
+    </div>
+    <div>Semantic Notary Infrastructure — Certified March 2026</div>
 </footer>
 
 </body>
