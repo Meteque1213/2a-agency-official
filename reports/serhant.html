@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SERHANT. — Semantic Audit Report | 2A Agency</title>
+<meta name="description" content="2A Agency semantic audit of SERHANT. Score 81/100. Gemini cites $122.7M as record sale — correct figure is ~$200M (February 2025). State count discrepancy across LLMs.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/serhant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111;
+  --gold: #B08D57; --border: rgba(176,141,87,0.22);
+  --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; }
+.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+.nav-link:hover { color: var(--gold); }
+.breadcrumb { padding: 14px 5%; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gray); border-bottom: 1px solid var(--border); }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.breadcrumb a:hover { color: var(--gold); }
+.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
+.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
+.report-meta strong { color: var(--ink); }
+.score-circle { text-align: center; min-width: 100px; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; color: var(--amber); line-height: 1; }
+.score-label { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+.meta-bar { display: flex; border: 1px solid var(--border); margin: 0 5%; }
+.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; }
+.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.meta-item-val { font-size: 0.78rem; color: var(--ink); }
+section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+.score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.score-card { background: var(--bg); padding: 24px 20px; }
+.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.sc-green { color: var(--green); } .sc-amber { color: var(--amber); } .sc-red { color: var(--red); }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.73rem; }
+.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
+.matrix-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.matrix-table tr:hover td { background: var(--surface); }
+.v-ok { color: var(--green); font-size: 1.1rem; }
+.v-p  { color: var(--amber); font-size: 1.1rem; }
+.v-x  { color: var(--red);   font-size: 1.1rem; }
+.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
+.tag-ok   { color: var(--green); border-color: rgba(45,106,45,0.3); }
+.tag-low  { color: var(--amber); border-color: rgba(122,90,0,0.3); }
+.tag-crit { color: var(--red);   border-color: rgba(139,45,45,0.3); }
+.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
+.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
+.finding-box.amber { border-color: rgba(122,90,0,0.3); background: rgba(122,90,0,0.03); }
+.finding-box.positive { border-color: rgba(45,106,45,0.3); background: rgba(45,106,45,0.02); }
+.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.finding-label.amber { color: var(--amber); }
+.finding-label.green { color: var(--green); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
+.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; }
+.finding-text + .finding-text { margin-top: 12px; }
+.drift-compare { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 20px; }
+.dc-cell { background: var(--bg); padding: 14px 16px; }
+.dc-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.dc-val { font-size: 0.84rem; color: var(--ink); }
+.dc-val.wrong { color: var(--red); font-weight: bold; }
+.dc-val.ok { color: var(--green); }
+.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
+.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
+.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.rem-text { font-size: 0.78rem; color: var(--gray); line-height: 1.65; }
+.rem-impact { font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); margin-top: 8px; }
+footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+.f-logo span { color: var(--gold); }
+.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+@media(max-width:768px) {
+  .report-hero { grid-template-columns: 1fr; }
+  .score-grid { grid-template-columns: repeat(2,1fr); }
+  .drift-compare { grid-template-columns: repeat(2,1fr); }
+  .meta-bar { flex-direction: column; }
+  .meta-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .rem-item { grid-template-columns: 1fr; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"SERHANT. Semantic Audit","description":"2A Agency semantic audit of SERHANT. Score 81/100. Gemini cites $122.7M as record sale (correct: ~$200M, February 2025). State count varies 14-15 across LLMs.","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"datePublished":"2026-03-28","url":"https://www.2aagency.com/reports/serhant"}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/registry" class="nav-link">Registry</a>
+    <a href="/#contact" class="nav-link">Audit My Brand</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registry</a> › SERHANT. — Audit Report
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Semantic Audit Report · Luxury Real Estate · New York · Founded 2020</div>
+    <h1 class="report-brand">SERHANT.</h1>
+    <p class="report-meta">
+      <strong>Audited by 2A Agency</strong> · Issued 2026-03-28 · Certified v1.0<br>
+      Methodology: <strong>4 LLMs · 9 Questions · March 2026</strong><br>
+      EU AI Act: <strong>Article 53 Compliant</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num">81</div>
+    <div class="score-label">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-item-label">Notary</div><div class="meta-item-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">28 March 2026</div></div>
+  <div class="meta-item"><div class="meta-item-label">LLMs tested</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">9 standardised</div></div>
+</div>
+
+<!-- OVERVIEW -->
+<section>
+  <div class="eyebrow">Overview</div>
+  <h2 class="section-title">Strong coverage. One <em>critical drift.</em></h2>
+  <p class="body-text">This report presents the findings of 2A Agency's independent semantic audit of SERHANT., conducted across 4 large language models in March 2026. The audit covers brand structure, subsidiaries, funding, sales volume, geographic footprint, technology (S.MPLE), education (SellIt.com), Netflix series, and record transactions.</p>
+  <p class="body-text">SERHANT. achieves an overall score of <strong>81/100</strong>. The brand's complex multi-entity structure (brokerage + media + tech + edtech) is well understood by all 4 LLMs. One critical drift: Gemini Pro cites <strong>$122.7M (2021)</strong> as the record sale — the correct figure is <strong>~$200M (February 2025)</strong>, announced by Ryan Serhant himself.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Structure & Subsidiaries</div><div class="score-card-num sc-green">92</div></div>
+    <div class="score-card"><div class="score-card-label">Funding & Financials</div><div class="score-card-num sc-green">95</div></div>
+    <div class="score-card"><div class="score-card-label">Tech — S.MPLE</div><div class="score-card-num sc-green">90</div></div>
+    <div class="score-card"><div class="score-card-label">Netflix & Media</div><div class="score-card-num sc-green">95</div></div>
+    <div class="score-card"><div class="score-card-label">Geographic Footprint</div><div class="score-card-num sc-amber">78</div></div>
+    <div class="score-card"><div class="score-card-label">Record Transaction</div><div class="score-card-num sc-red">58</div></div>
+  </div>
+</section>
+
+<!-- MATRIX -->
+<section>
+  <div class="eyebrow">LLM Test Matrix</div>
+  <h2 class="section-title">Factual accuracy across <em>4 large language models.</em></h2>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT Free</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Structure — brokerage, tech or media?</td>
+        <td><span class="v-ok">✓</span> Hybrid — HoldCo + OpCo model, "Brokerage 3.0"</td>
+        <td><span class="v-ok">✓</span> All three — media drives brokerage, tech scales it</td>
+        <td><span class="v-ok">✓</span> HoldCo + OpCo, SERHANT. Technologies at centre</td>
+        <td><span class="v-ok">✓</span> Integrated platform — content-to-commerce flywheel</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Subsidiaries & roles</td>
+        <td><span class="v-ok">✓</span> Brokerage, Studios, S.MPLE, SellIt, ID Lab, ADX, Ventures</td>
+        <td><span class="v-ok">✓</span> Correct — adds Signature + New Development sub-brands</td>
+        <td><span class="v-ok">✓</span> All subsidiaries correct + SellIt >$8M ARR noted</td>
+        <td><span class="v-ok">✓</span> Full list correct, flywheel logic explained</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>$45M raise — investors & use</td>
+        <td><span class="v-ok">✓</span> Camber Creek (lead) + Left Lane Capital. S.MPLE + scale</td>
+        <td><span class="v-ok">✓</span> Correct investors, correct usage — S.MPLE priority</td>
+        <td><span class="v-ok">✓</span> Correct — bootstrapped until 2024 noted</td>
+        <td><span class="v-ok">✓</span> Correct — Camber Creek + Left Lane, S.MPLE + brokerage</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Sales volume 2025 & agent count</td>
+        <td><span class="v-ok">✓</span> $6.5B (official letter). 1,500+ agents early 2026</td>
+        <td><span class="v-ok">✓</span> $6.5B, 1,100 agents, top 30 brokerage nationally</td>
+        <td><span class="v-ok">✓</span> $6.5B, 1,200–1,500 agents, 80% YTD growth</td>
+        <td><span class="v-ok">✓</span> $6.5B, 1,200–1,500 agents confirmed</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>States in 2026</td>
+        <td><span class="v-ok">✓</span> 15 states + DC (Boston/MA added Jan 2026)</td>
+        <td><span class="v-ok">✓</span> 15 states — detailed list including Nevada, GA, SC</td>
+        <td><span class="v-p">~</span> <strong>14 states</strong> cited (correct: 15 post-Boston)</td>
+        <td><span class="v-p">~</span> <strong>14 states</strong> cited (correct: 15 post-Boston)</td>
+        <td><span class="tag tag-low">Partial</span></td>
+      </tr>
+      <tr>
+        <td>S.MPLE — what it is & problem solved</td>
+        <td><span class="v-ok">✓</span> LAM, AI chief of staff, 1.28M min saved in 2025</td>
+        <td><span class="v-ok">✓</span> LAM, inverts 80/20 admin/selling ratio</td>
+        <td><span class="v-ok">✓</span> OS for agents, 144% GCI increase noted</td>
+        <td><span class="v-ok">✓</span> AI OS, CRM + automation, scalability focus</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>SellIt.com — what it is & members</td>
+        <td><span class="v-ok">✓</span> 45,000 members, 130 countries, >$300M referrals</td>
+        <td><span class="v-ok">✓</span> 45,000 members, 130 countries, >$8M ARR</td>
+        <td><span class="v-ok">✓</span> 45,000 members + 30k+ active referral community</td>
+        <td><span class="v-ok">✓</span> 45,000 members, 130 countries</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Owning Manhattan seasons</td>
+        <td><span class="v-ok">✓</span> 2 seasons. S1: 28 Jun 2024. S2: 5 Dec 2025</td>
+        <td><span class="v-ok">✓</span> 2 seasons. S1: 28 Jun 2024. S2: 5 Dec 2025</td>
+        <td><span class="v-ok">✓</span> 2 seasons. Correct dates confirmed</td>
+        <td><span class="v-ok">✓</span> 2 seasons. Correct dates confirmed</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Record transaction</td>
+        <td><span class="v-ok">✓</span> ~$200M, February 2025, closed in-flight to Miami</td>
+        <td><span class="v-x">✗</span> <strong>$122.7M (2021) cited as record — 4 years outdated</strong></td>
+        <td><span class="v-ok">✓</span> ~$200M, February 2025. Not on Netflix yet</td>
+        <td><span class="v-ok">✓</span> ~$200M, February 2025. $140M Florida also noted</td>
+        <td><span class="tag tag-crit">Critical</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- FINDINGS -->
+<section>
+  <div class="eyebrow">Critical Findings</div>
+  <h2 class="section-title">One critical drift. <em>Two secondary drifts.</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label">Primary Drift · Record Transaction · Gemini Pro only</div>
+    <h3 class="finding-title">Gemini cites $122.7M (2021) as the record sale. Correct: ~$200M, February 2025.</h3>
+    <p class="finding-text">When asked about the most expensive transaction ever realised by Ryan Serhant or SERHANT., Gemini Pro responds with <strong>$122.7M in Florida (2021)</strong> as the absolute record. Perplexity Pro, ChatGPT and Grok all correctly cite <strong>~$200M in February 2025</strong> — announced by Ryan Serhant himself as "the most expensive home of my entire career", closed by phone on a flight to Miami.</p>
+    <p class="finding-text">Gemini's data is 4 years out of date on the most commercially significant fact about a luxury brokerage. The $122.7M Florida deal (2021) was indeed a state record at the time — but the $200M transaction of February 2025 superseded it completely.</p>
+    <p class="finding-text"><strong>Business impact:</strong> International buyers and investors researching SERHANT. via Gemini to assess the agency's track record in ultra-luxury transactions receive a figure that undervalues the agency's capacity by 40%. This directly affects pitch credibility with $50M+ clients. As AI agents increasingly perform due diligence on behalf of UHNWI buyers, stale transaction records are a material brand risk.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">~$200M, Feb 2025 ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">$122.7M, 2021 ✗</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT Free</div><div class="dc-val ok">~$200M, Feb 2025 ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">~$200M, Feb 2025 ✓</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Secondary Drift · State Count · ChatGPT & Grok</div>
+    <h3 class="finding-title">ChatGPT and Grok cite 14 states. Correct: 15 states (Massachusetts added January 2026).</h3>
+    <p class="finding-text">ChatGPT and Grok both cite 14 states for SERHANT.'s geographic footprint in 2026. Perplexity and Gemini correctly cite 15 states, noting that Massachusetts (Boston) was added in January 2026 — explicitly described by Ryan Serhant as "our 15th state" in official communications.</p>
+    <p class="finding-text"><strong>Business impact:</strong> SERHANT. has publicly announced a goal of doubling its state count in 2026. Agents and investors in Boston and Massachusetts evaluating the network receive inaccurate information about whether their market is covered.</p>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Positive Finding · Structure & Tech · All 4 LLMs</div>
+    <h3 class="finding-title">All 4 LLMs correctly understand SERHANT.'s hybrid HoldCo + OpCo structure.</h3>
+    <p class="finding-text">This is the most complex aspect of the SERHANT. brand to represent accurately — a media-tech-real estate holding company with 7 distinct subsidiaries. All 4 tested LLMs correctly identify the HoldCo + OpCo model, name all key subsidiaries (Brokerage, Studios, S.MPLE, SellIt, ID Lab, ADX, Ventures), and understand the content-to-commerce flywheel logic. This reflects strong, consistent digital documentation from SERHANT. across all major online sources.</p>
+  </div>
+</section>
+
+<!-- REMEDIATION -->
+<section>
+  <div class="eyebrow">Remediation Roadmap</div>
+  <h2 class="section-title">From 81 to <em>fully certified.</em></h2>
+  <p class="body-text">The 81/100 score reflects strong structural coverage with one critical fix. The record transaction drift in Gemini is actionable within 4–8 weeks.</p>
+
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priority 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Record transaction update — structured data + press</div>
+        <p class="rem-text">Deploy JSON-LD on serhant.com documenting the ~$200M February 2025 transaction as the current career record, explicitly superseding the 2021 Florida record ($122.7M). A press release or blog post from SERHANT. with explicit structured data will update Gemini's index within 4–8 weeks. The transaction was announced via Instagram Stories — a structured source (blog, press, JSON-LD) is required for LLM ingestion.</p>
+        <div class="rem-impact">Impact: Record transaction corrected in Gemini within 4–8 weeks</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priority 2 — This week</div>
+      <div>
+        <div class="rem-title">State count disambiguation — Massachusetts confirmed</div>
+        <p class="rem-text">Deploy structured data confirming 15 states + Washington D.C. as of January 2026, with explicit reference to Massachusetts (Boston) as the 15th state. Update the serhant.com locations page with JSON-LD <code>areaServed</code> including all 15 states. This corrects ChatGPT's and Grok's 14-state count.</p>
+        <div class="rem-impact">Impact: Geographic footprint correctly represented across all LLMs</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priority 3 — Month 1</div>
+      <div>
+        <div class="rem-title">2A Registry node — full brand certification</div>
+        <p class="rem-text">Certified 2A Registry node documenting: founding year (2020), founder (Ryan Serhant), structure (HoldCo + OpCo), subsidiaries (7 entities), $45M raise (Camber Creek + Left Lane), $6.5B volume 2025, 15 states, record transaction (~$200M, Feb 2025), Owning Manhattan (2 seasons, S1: 28 Jun 2024, S2: 5 Dec 2025). Deploy <code>com.2aagency.brand-certification</code> UCP extension.</p>
+        <div class="rem-impact">Impact: Authoritative reference for all AI agents researching next-generation real estate brokerages</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priority 4 — Ongoing</div>
+      <div>
+        <div class="rem-title">Quarterly monitoring — high velocity brand</div>
+        <p class="rem-text">SERHANT. is one of the fastest-evolving brands in real estate — new states every quarter, new S.MPLE features monthly, potential Season 3 announcement, new transaction records. Quarterly retests are the minimum; monthly monitoring recommended given the pace of change and the risk of LLMs falling behind on key metrics.</p>
+        <div class="rem-impact">Impact: Continuous accuracy as SERHANT. targets top-10 US brokerage status</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Semantic Audit Report — SERHANT. · March 2026 · Confidential · 2aagency.com/registry</div>
+</footer>
+
+</body>
+</html>
