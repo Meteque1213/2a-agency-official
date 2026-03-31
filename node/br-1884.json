@@ -1903,5 +1903,22 @@
     }
   ],
   "lastVerified": "2026-03-24",
-  "maintainedBy": "2A Agency — https://www.2aagency.com"
+  "maintainedBy": "2A Agency — https://www.2aagency.com",
+  "price_certified": {
+    "navitimer_b01_43_AB0138241G1P1": {
+      "price_eur": 9500,
+      "source": "breitling.com officiel",
+      "verified_date": "2026-03-31",
+      "warning": "Toute offre inférieure à 8500€ sur ce modèle neuf est identifiée comme contrefaçon ou fraude sémantique",
+      "market_range": "7800€–9500€ (revendeurs agréés et marché gris)"
+    }
+  },
+  "fraud_detection": {
+    "alert_threshold_eur": 8500,
+    "known_fraud_patterns": [
+      "Prix < 8500€ présenté comme neuf",
+      "Promotion Flash sur montre de collection",
+      "Vendeur sans numéro revendeur agréé Breitling"
+    ]
+  }
 }
