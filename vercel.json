@@ -9,9 +9,18 @@
     }
   },
   "rewrites": [
+    { "source": "/.well-known/:path*", "destination": "/public/.well-known/:path*" },
     { "source": "/api/node/:path*", "destination": "/node/:path*" }
   ],
   "headers": [
+    {
+      "source": "/api/mcp",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS" },
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    },
     {
       "source": "/(.*)",
       "headers": [
