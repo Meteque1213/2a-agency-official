@@ -8,9 +8,7 @@
       "includeFiles": "node/**,api/node/**"
     }
   },
-  "rewrites": [
-    { "source": "/api/node/:path*", "destination": "/node/:path*" }
-  ],
+  "rewrites": [],
   "headers": [
     {
       "source": "/api/mcp",
