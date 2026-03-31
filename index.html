@@ -145,9 +145,19 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
 .f-link:hover { color: var(--gold); }
 .f-copy { font-size: 0.52rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.35); }
 
+.mcp-tools { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 36px; }
+.mcp-tool { background: var(--bg); padding: 26px 22px; }
+.mcp-tool-name { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--gold); margin-bottom: 8px; letter-spacing: 0.04em; }
+.mcp-tool-desc { font-size: 0.74rem; color: var(--gray); line-height: 1.6; }
+.mcp-endpoints { margin-top: 28px; border: 1px solid var(--border); padding: 20px 22px; background: var(--surface); }
+.mcp-endpoint-row { display: flex; gap: 16px; align-items: baseline; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 0.72rem; }
+.mcp-endpoint-row:last-child { border-bottom: none; padding-bottom: 0; }
+.mcp-endpoint-label { font-size: 0.56rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); min-width: 80px; flex-shrink: 0; }
+.mcp-endpoint-url { color: var(--gold); font-family: 'DM Mono', monospace; word-break: break-all; }
+
 @media(max-width:768px){
   .hero,.ucp-cols,.eu-cols{grid-template-columns:1fr}
-  .problem-grid,.steps{grid-template-columns:1fr}
+  .problem-grid,.steps,.mcp-tools{grid-template-columns:1fr}
   nav .nav-links{gap:14px}
   footer{flex-direction:column;text-align:center}
 }
@@ -454,11 +464,44 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
   </p>
 </section>
 
+<!-- MCP -->
+<section id="mcp">
+  <div class="eyebrow">Model Context Protocol</div>
+  <h2 class="section-title">MCP Server — Données certifiées<br>pour <em>agents IA</em></h2>
+  <p class="body-text">2A Agency expose son registre via le protocole MCP (Model Context Protocol). Les agents IA peuvent interroger directement nos données certifiées pour éviter les hallucinations sur les marques auditées.</p>
+
+  <div class="mcp-tools">
+    <div class="mcp-tool">
+      <div class="mcp-tool-name">get_brand_score</div>
+      <p class="mcp-tool-desc">Score d'intégrité sémantique par marque — indice 0–100 calculé à partir des écarts constatés entre les réponses LLM et les sources officielles.</p>
+    </div>
+    <div class="mcp-tool">
+      <div class="mcp-tool-name">get_certified_data</div>
+      <p class="mcp-tool-desc">Données certifiées par marque — prix officiels, certifications, fondateurs, dates. Source opposable pour agents transactionnels et systèmes RAG.</p>
+    </div>
+    <div class="mcp-tool">
+      <div class="mcp-tool-name">get_hallucination_warnings</div>
+      <p class="mcp-tool-desc">Drifts connus par LLM — liste des écarts documentés, modèle par modèle, avec date de détection et niveau de criticité.</p>
+    </div>
+  </div>
+
+  <div class="mcp-endpoints">
+    <div class="mcp-endpoint-row">
+      <span class="mcp-endpoint-label">Endpoint</span>
+      <span class="mcp-endpoint-url">https://www.2aagency.com/api/mcp</span>
+    </div>
+    <div class="mcp-endpoint-row">
+      <span class="mcp-endpoint-label">Discovery</span>
+      <span class="mcp-endpoint-url">https://www.2aagency.com/.well-known/mcp.json</span>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <div class="cta-wrap" id="contact">
   <h2 class="cta-title">Your brand is already<br>in the <em>LLMs.</em></h2>
   <p class="cta-sub">The question is not whether AI agents talk about you. It's whether what they say is accurate.</p>
-  <a href="mailto:contact@2aagency.com" class="btn-gold">Request a Free Audit</a>
+  <a href="mailto:alexandre@2aagency.com" class="btn-gold">Request a Free Audit</a>
 </div>
 
 <footer>
