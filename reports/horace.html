@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horace — Rapport d'Audit Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Horace. Score 79/100. Grok nie la certification B Corp (obtenue en 2025) et la certification PETA cruelty-free. Nom du fondateur tronqué dans Grok.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/horace">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111;
+  --gold: #B08D57; --border: rgba(176,141,87,0.22);
+  --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; }
+.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+.nav-link:hover { color: var(--gold); }
+.breadcrumb { padding: 14px 5%; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gray); border-bottom: 1px solid var(--border); }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
+.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
+.report-meta strong { color: var(--ink); }
+.score-circle { text-align: center; min-width: 100px; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; color: var(--amber); line-height: 1; }
+.score-denom { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+.meta-bar { display: flex; border: 1px solid var(--border); margin: 0 5%; }
+.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; }
+.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.meta-item-val { font-size: 0.78rem; color: var(--ink); }
+section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+.score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.score-card { background: var(--bg); padding: 24px 20px; }
+.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.sc-green { color: var(--green); } .sc-amber { color: var(--amber); } .sc-red { color: var(--red); }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.73rem; }
+.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
+.matrix-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.matrix-table tr:hover td { background: var(--surface); }
+.v-ok { color: var(--green); } .v-p { color: var(--amber); } .v-x { color: var(--red); }
+.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
+.tag-ok { color: var(--green); border-color: rgba(45,106,45,0.3); }
+.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
+.tag-crit { color: var(--red); border-color: rgba(139,45,45,0.3); }
+.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
+.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
+.finding-box.amber { border-color: rgba(122,90,0,0.3); background: rgba(122,90,0,0.03); }
+.finding-box.positive { border-color: rgba(45,106,45,0.3); background: rgba(45,106,45,0.02); }
+.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.finding-label.amber { color: var(--amber); }
+.finding-label.green { color: var(--green); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
+.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; margin-bottom: 12px; }
+.drift-compare { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 16px; }
+.dc-cell { background: var(--bg); padding: 14px 16px; }
+.dc-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.dc-val { font-size: 0.82rem; color: var(--ink); line-height: 1.5; }
+.dc-val.wrong { color: var(--red); }
+.dc-val.ok { color: var(--green); }
+.dc-val.partial { color: var(--amber); }
+.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
+.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
+.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.rem-text { font-size: 0.78rem; color: var(--gray); line-height: 1.65; }
+.rem-impact { font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); margin-top: 8px; }
+footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+.f-logo span { color: var(--gold); }
+.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+@media(max-width:768px) {
+  .report-hero { grid-template-columns: 1fr; }
+  .score-grid { grid-template-columns: repeat(2,1fr); }
+  .drift-compare { grid-template-columns: repeat(2,1fr); }
+  .meta-bar { flex-direction: column; }
+  .meta-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .rem-item { grid-template-columns: 1fr; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"Horace Semantic Audit","description":"2A Agency semantic audit of Horace. Score 79/100. Grok denies B Corp certification (obtained 2025) and PETA cruelty-free certification. Founder name truncated in Grok (Marc Terlet vs Marc Briant-Terlet).","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"datePublished":"2026-03-31","url":"https://www.2aagency.com/reports/horace"}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › Horace — Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Rapport d'Audit Sémantique · Grooming Masculin · Paris · Fondée 2016</div>
+    <h1 class="report-brand">Horace</h1>
+    <p class="report-meta">
+      <strong>Audité par 2A Agency</strong> · Émis le 31 mars 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Mars 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num">79</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-item-label">Notaire</div><div class="meta-item-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">31 mars 2026</div></div>
+  <div class="meta-item"><div class="meta-item-label">LLMs testés</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">5 standardisées</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Forte couverture produit. <em>Certifications niées par Grok.</em></h2>
+  <p class="body-text">Ce rapport présente les résultats de l'audit sémantique indépendant de Horace par 2A Agency, conduit sur 4 grands modèles de langage en mars 2026. L'audit couvre l'identité fondatrice, les ingrédients, les certifications, les prix et la fabrication.</p>
+  <p class="body-text">Horace obtient un score de <strong>79/100</strong>. La marque est bien couverte sur ses faits fondateurs et sa formulation. Le drift principal : Grok nie deux certifications réelles et détenues — B Corp (obtenue en 2025) et PETA Cruelty-Free — et tronque le nom du co-fondateur. Pour une marque dont les certifications sont au cœur de son argument différenciant dans le grooming masculin, ces erreurs ont un impact commercial direct.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Identité & Fondation</div><div class="score-card-num sc-amber">82</div></div>
+    <div class="score-card"><div class="score-card-label">Ingrédients & Formulation</div><div class="score-card-num sc-green">91</div></div>
+    <div class="score-card"><div class="score-card-label">Certifications</div><div class="score-card-num sc-red">52</div></div>
+    <div class="score-card"><div class="score-card-label">Prix produits phares</div><div class="score-card-num sc-green">88</div></div>
+    <div class="score-card"><div class="score-card-label">Fabrication & Géographie</div><div class="score-card-num sc-green">90</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-amber">79</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fondateurs & date</td>
+        <td><span class="v-ok">✓</span> Marc Briant-Terlet + Kim Mazzilli, 2016</td>
+        <td><span class="v-ok">✓</span> Exact — précise le lancement 14 nov. 2016</td>
+        <td><span class="v-ok">✓</span> Exact</td>
+        <td><span class="v-p">~</span> <strong>"Marc Terlet"</strong> — nom tronqué (correct : Marc Briant-Terlet)</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Ingrédients & formulation</td>
+        <td><span class="v-ok">✓</span> 75-100% naturel, vegan, cruelty-free, actifs bien listés</td>
+        <td><span class="v-ok">✓</span> Correct — figue de barbarie, zinc PCA, binchotan</td>
+        <td><span class="v-ok">✓</span> Correct — approche clean bien décrite</td>
+        <td><span class="v-ok">✓</span> Exact — INCI et labo partenaires cités (Naho, IFF, MS BeautiLab)</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Certifications</td>
+        <td><span class="v-ok">✓</span> B Corp ✓ · PETA Cruelty-Free ✓ · Pas Ecocert/COSMOS</td>
+        <td><span class="v-ok">✓</span> B Corp depuis 2025 ✓ · PETA ✓ · Entreprise à mission</td>
+        <td><span class="v-p">~</span> "Engagée dans démarche B Corp" — flou, pas de confirmation</td>
+        <td><span class="v-x">✗</span> <strong>B Corp niée · PETA niée · "Aucune certification tiers"</strong></td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Prix produits phares</td>
+        <td><span class="v-ok">✓</span> Nettoyant ~13€, hydratant 15-20€, gel douche ~9€</td>
+        <td><span class="v-ok">✓</span> Correct et cohérent — gamme bien couverte</td>
+        <td><span class="v-ok">✓</span> Correct — prix réels horace.com cités</td>
+        <td><span class="v-ok">✓</span> Correct avec produits spécifiques et cotes utilisateurs</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Fabrication & géographie</td>
+        <td><span class="v-ok">✓</span> 100% France · Naho, IFF, MS BeautiLab, SHP, Thépenier</td>
+        <td><span class="v-ok">✓</span> Cosmetic Valley · 100% Made in France</td>
+        <td><span class="v-ok">✓</span> 100% France · Grasse pour les parfums</td>
+        <td><span class="v-ok">✓</span> 100% France · >70% ingrédients européens</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Findings critiques</div>
+  <h2 class="section-title">Grok nie deux certifications réelles. <em>ChatGPT hésite sur la troisième.</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label">Drift primaire · B Corp + PETA · Grok uniquement</div>
+    <h3 class="finding-title">Grok nie la certification B Corp (obtenue 2025) et la certification PETA Cruelty-Free — toutes deux réelles et vérifiables.</h3>
+    <p class="finding-text">Grok répond explicitement : <em>"Pas de certification B Corp"</em> et <em>"Pas certifié par un organisme tiers"</em> pour le cruelty-free. Les deux affirmations sont fausses et vérifiables en 30 secondes : Horace est certifiée B Corp depuis 2025, comme indiqué sur horace.com/b-corp, et figure dans la liste PETA <em>Beauty Without Bunnies</em> sur crueltyfree.peta.org.</p>
+    <p class="finding-text"><strong>Impact commercial :</strong> Le marché du grooming masculin est en pleine transition vers des critères clean et éthiques. B Corp est l'argument différenciant central de Horace face à des concurrents comme Bulldog, Clinique Homme ou L'Occitane. Un acheteur qui consulte Grok pour comparer les marques grooming reçoit une information qui annule l'avantage concurrentiel de Horace sur les certifications. ChatGPT aggrave le problème en formulant la B Corp comme une "démarche en cours" plutôt qu'une certification obtenue.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">B Corp ✓ · PETA ✓<br>Confirmées</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val ok">B Corp depuis 2025 ✓<br>Entreprise à mission ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val partial">B Corp "démarche" ≈<br>Flou — pas confirmée</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val wrong">B Corp ✗ niée<br>PETA ✗ niée</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift secondaire · Nom fondateur · Grok uniquement</div>
+    <h3 class="finding-title">Grok cite "Marc Terlet" — nom tronqué. Correct : Marc Briant-Terlet.</h3>
+    <p class="finding-text">Les trois autres LLMs citent correctement "Marc Briant-Terlet". Grok tronque le nom de famille en "Marc Terlet" — une erreur mineure mais qui génère des résultats nuls si un agent IA tente de vérifier l'identité du fondateur via une recherche nominative. Pour une marque dont le fondateur est actif sur LinkedIn et médias, l'exactitude du nom est un signal de fiabilité de la source.</p>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Point fort · Formulation & Fabrication · 4 LLMs</div>
+    <h3 class="finding-title">Ingrédients, prix et Made in France sont maîtrisés sur tous les modèles.</h3>
+    <p class="finding-text">Les 4 LLMs citent correctement les actifs phares (huile de figue de barbarie, coco-betaine, acide hyaluronique), les prix cohérents avec horace.com, et le réseau de fabricants partenaires français (Naho, IFF, MS BeautiLab, SHP, Thépenier). Grok va jusqu'à citer Grasse pour les parfums — une précision que les autres n'atteignent pas. La couverture produit est solide.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 79 à <em>pleinement certifié.</em></h2>
+
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Ancrer B Corp et PETA dans les données structurées de Grok</div>
+        <p class="rem-text">Déployer un JSON-LD <code>Organization</code> sur horace.com avec les propriétés <code>hasCredential</code> documentant explicitement : B Corp (date d'obtention 2025, organisme B Lab), PETA Cruelty-Free (programme Beauty Without Bunnies, URL de référence), et statut Entreprise à Mission. Grok indexe prioritairement les données structurées des sites officiels — ce markup sera crawlé dans son prochain cycle. La page horace.com/b-corp existe déjà et est bien documentée : il manque uniquement le Schema.org qui la rend machine-readable.</p>
+        <div class="rem-impact">Impact : B Corp et PETA correctement cités dans Grok · ChatGPT passe de "démarche" à "certifiée"</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2 — Opportunité agentique</div>
+      <div>
+        <div class="rem-title">Rendre le catalogue Horace queryable par les agents IA de la beauté masculine</div>
+        <p class="rem-text">Le marché du grooming masculin est le segment beauté avec la croissance la plus forte sur les plateformes agentiques — les hommes délèguent plus facilement leurs achats beauté à des assistants IA que les femmes. Quand un agent reçoit la requête <em>"trouve-moi une routine visage naturelle, vegan, B Corp, pour peau grasse, budget 40€"</em> — il ne peut pas interroger le catalogue Horace de façon structurée.</p>
+        <p class="rem-text">Un node 2A certifié expose les <strong>paramètres de routine certifiés</strong> : produits par type de peau (normale, grasse, sèche, mixte), prix par routine complète, certifications par SKU (B Corp global, PETA par produit, vegan), et disponibilité multicanal (site, pharmacies, Sephora). Horace serait la première marque de grooming masculin avec un catalogue agentique certifié en Europe.</p>
+        <div class="rem-impact">Impact : Premier catalogue grooming masculin queryable par les agents IA — segment à forte croissance agentique</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 3 — Cette semaine</div>
+      <div>
+        <div class="rem-title">Nom fondateur canonique — Schema.org Person</div>
+        <p class="rem-text">Déployer <code>schema.org/Person</code> pour Marc Briant-Terlet (CEO, co-fondateur) et Kim Mazzilli (co-fondateur) avec <code>familyName: "Briant-Terlet"</code> explicite. La troncature de Grok ("Marc Terlet") indique que le nom complet n'est pas suffisamment ancré dans les sources structurées indexées par Grok. Un Wikidata entry pour Horace la marque (actuellement absent) avec les deux fondateurs cités correctement renforcerait ce signal.</p>
+        <div class="rem-impact">Impact : Nom fondateur exact sur tous les LLMs · Cohérence pour les recherches nominatives</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 4 — Continu</div>
+      <div>
+        <div class="rem-title">Monitoring trimestriel — marque en forte évolution post-B Corp</div>
+        <p class="rem-text">L'obtention de la B Corp en 2025 est récente — les LLMs intègrent progressivement cette information selon leurs cycles de crawl. La prochaine évolution probable : le renouvellement B Corp (tous les 3 ans), de nouveaux produits, une éventuelle expansion internationale. Chaque changement majeur sans données structurées devient un nouveau vecteur de drift dans les mois suivants.</p>
+        <div class="rem-impact">Impact : Certifications B Corp et PETA correctement représentées à mesure que la marque évolue</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport d'Audit Sémantique — Horace · Mars 2026 · 2aagency.com/registry</div>
+</footer>
+
+</body>
+</html>

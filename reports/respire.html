@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Respire — Rapport d'Audit Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Respire. Score 74/100. Gemini Pro invente une certification B Corp inexistante. Contradiction totale entre LLMs sur les certifications COSMOS.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/respire">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111;
+  --gold: #B08D57; --border: rgba(176,141,87,0.22);
+  --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; }
+.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+.nav-link:hover { color: var(--gold); }
+.breadcrumb { padding: 14px 5%; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gray); border-bottom: 1px solid var(--border); }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
+.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
+.report-meta strong { color: var(--ink); }
+.score-circle { text-align: center; min-width: 100px; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; color: var(--amber); line-height: 1; }
+.score-denom { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+.meta-bar { display: flex; border: 1px solid var(--border); margin: 0 5%; }
+.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; }
+.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.meta-item-val { font-size: 0.78rem; color: var(--ink); }
+section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+.score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.score-card { background: var(--bg); padding: 24px 20px; }
+.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.sc-green { color: var(--green); } .sc-amber { color: var(--amber); } .sc-red { color: var(--red); }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.73rem; }
+.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
+.matrix-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.matrix-table tr:hover td { background: var(--surface); }
+.v-ok { color: var(--green); } .v-p { color: var(--amber); } .v-x { color: var(--red); }
+.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
+.tag-ok { color: var(--green); border-color: rgba(45,106,45,0.3); }
+.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
+.tag-crit { color: var(--red); border-color: rgba(139,45,45,0.3); }
+.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
+.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
+.finding-box.amber { border-color: rgba(122,90,0,0.3); background: rgba(122,90,0,0.03); }
+.finding-box.positive { border-color: rgba(45,106,45,0.3); background: rgba(45,106,45,0.02); }
+.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.finding-label.amber { color: var(--amber); }
+.finding-label.green { color: var(--green); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
+.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; margin-bottom: 12px; }
+.drift-compare { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 16px; }
+.dc-cell { background: var(--bg); padding: 14px 16px; }
+.dc-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.dc-val { font-size: 0.82rem; color: var(--ink); line-height: 1.5; }
+.dc-val.wrong { color: var(--red); }
+.dc-val.ok { color: var(--green); }
+.dc-val.partial { color: var(--amber); }
+.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
+.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
+.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.rem-text { font-size: 0.78rem; color: var(--gray); line-height: 1.65; }
+.rem-impact { font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); margin-top: 8px; }
+footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+.f-logo span { color: var(--gold); }
+.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+@media(max-width:768px) {
+  .report-hero { grid-template-columns: 1fr; }
+  .score-grid { grid-template-columns: repeat(2,1fr); }
+  .drift-compare { grid-template-columns: repeat(2,1fr); }
+  .meta-bar { flex-direction: column; }
+  .meta-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .rem-item { grid-template-columns: 1fr; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"Respire Semantic Audit","description":"2A Agency semantic audit of Respire. Score 74/100. Gemini Pro invents B Corp certification (not held). COSMOS certification scope contradicted across all 4 LLMs. Deodorant stick price varies 10.89€–14.90€ (official: 11.90€).","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"datePublished":"2026-03-31","url":"https://www.2aagency.com/reports/respire"}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › Respire — Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Rapport d'Audit Sémantique · Clean Beauty · Paris · Fondée 2018</div>
+    <h1 class="report-brand">Respire</h1>
+    <p class="report-meta">
+      <strong>Audité par 2A Agency</strong> · Émis le 31 mars 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Mars 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num">74</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-item-label">Notaire</div><div class="meta-item-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">31 mars 2026</div></div>
+  <div class="meta-item"><div class="meta-item-label">LLMs testés</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">5 standardisées</div></div>
+</div>
+
+<!-- VUE D'ENSEMBLE -->
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Fondation solide. <em>Certifications hallucées.</em></h2>
+  <p class="body-text">Ce rapport présente les résultats de l'audit sémantique indépendant de Respire par 2A Agency, conduit sur 4 grands modèles de langage en mars 2026. L'audit couvre l'identité fondatrice, les ingrédients clés, les certifications, les prix et la fabrication.</p>
+  <p class="body-text">Respire obtient un score global de <strong>74/100</strong>. Les faits fondateurs (Justine Hutteau + Thomas Méheut, 2018, Made in France) sont maîtrisés par tous les LLMs. Le drift critique : Gemini Pro <strong>invente une certification B Corp que Respire ne détient pas</strong>, et les 4 LLMs produisent des informations contradictoires sur le périmètre exact des certifications COSMOS — le cœur de la promesse clean beauty de la marque.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Identité & Fondation</div><div class="score-card-num sc-green">95</div></div>
+    <div class="score-card"><div class="score-card-label">Ingrédients & Formulation</div><div class="score-card-num sc-green">88</div></div>
+    <div class="score-card"><div class="score-card-label">Certifications</div><div class="score-card-num sc-red">41</div></div>
+    <div class="score-card"><div class="score-card-label">Prix produits phares</div><div class="score-card-num sc-amber">72</div></div>
+    <div class="score-card"><div class="score-card-label">Fabrication & Géographie</div><div class="score-card-num sc-green">92</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-amber">74</div></div>
+  </div>
+</section>
+
+<!-- MATRICE LLM -->
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fondateurs & date</td>
+        <td><span class="v-ok">✓</span> Justine Hutteau + Thomas Méheut, 2018</td>
+        <td><span class="v-ok">✓</span> Exact — précise la campagne Ulule 2019</td>
+        <td><span class="v-ok">✓</span> Exact</td>
+        <td><span class="v-ok">✓</span> Exact — précise le contexte médical de Justine</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Ingrédients & formulation</td>
+        <td><span class="v-ok">✓</span> 94-100% naturel, sans aluminium, vegan, cruelty-free</td>
+        <td><span class="v-ok">✓</span> Correct — liste des actifs clés précise</td>
+        <td><span class="v-ok">✓</span> Correct — approche mimétisme cutané notée</td>
+        <td><span class="v-ok">✓</span> Exact — INCI cités avec précision</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Certifications</td>
+        <td><span class="v-p">~</span> COSMOS partiel — pas toute la gamme</td>
+        <td><span class="v-x">✗</span> <strong>B Corp inventée · COSMOS "majorité" généralisé</strong></td>
+        <td><span class="v-p">~</span> COSMOS partiel — nuancé mais incomplet</td>
+        <td><span class="v-ok">✓</span> Pas de COSMOS global — certification partielle correcte</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Prix déodorant stick (officiel : 11,90€)</td>
+        <td><span class="v-x">✗</span> Fourchette 10,89€–14,90€ trop large</td>
+        <td><span class="v-ok">✓</span> 11,90€ — seul LLM exact</td>
+        <td><span class="v-p">~</span> 11,49€–11,60€ — sous-évalué</td>
+        <td><span class="v-p">~</span> 11,49€–11,60€ — sous-évalué</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Fabrication & géographie</td>
+        <td><span class="v-ok">✓</span> Bretagne, Sud, Normandie — exact</td>
+        <td><span class="v-ok">✓</span> Exact — sites détaillés par gamme</td>
+        <td><span class="v-ok">✓</span> Exact — modèle sans usine propre noté</td>
+        <td><span class="v-ok">✓</span> Exact — Grasse et Orne cités en plus</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- FINDINGS -->
+<section>
+  <div class="eyebrow">Findings critiques</div>
+  <h2 class="section-title">Une certification inventée. <em>Deux drifts commerciaux.</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label">Drift primaire · Certification B Corp · Gemini Pro uniquement</div>
+    <h3 class="finding-title">Gemini Pro invente une certification B Corp que Respire ne détient pas.</h3>
+    <p class="finding-text">Gemini Pro affirme que Respire est certifiée B Corp, la décrit comme *"l'une des reconnaissances les plus prestigieuses pour la marque"*, et indique que le logo B Corp est visible *"systématiquement sur les packagings"*. Aucun autre LLM ne mentionne B Corp. Une recherche sur le registre B Lab France ne trouve pas Respire parmi les entreprises certifiées.</p>
+    <p class="finding-text"><strong>Impact commercial direct :</strong> Pour une marque clean beauty dont les certifications sont le premier argument d'achat, une fausse certification B Corp citée par Gemini crée une attente chez les consommateurs que les produits ne peuvent pas satisfaire. Un acheteur qui arrive en boutique ou sur le site en cherchant le logo B Corp qu'il a vu cité par Gemini — et ne le trouve pas — perd confiance dans la marque.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">Pas mentionné ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">"Certifiée B Corp — logo visible sur packagings" ✗ Hallucination</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val ok">Pas mentionné ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">Pas mentionné ✓</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box critical" style="margin-top:16px;">
+    <div class="finding-label">Drift secondaire · Certifications COSMOS · Contradiction 4 LLMs</div>
+    <h3 class="finding-title">Les 4 LLMs produisent des réponses contradictoires sur le périmètre des certifications COSMOS.</h3>
+    <p class="finding-text">La certification COSMOS est le label de référence pour les cosmétiques naturels et bio en Europe. Pour une marque clean beauty comme Respire, un consommateur qui demande à un agent IA si les produits sont certifiés reçoit quatre réponses incompatibles selon le modèle consulté.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val partial">Certification partielle — pas la globalité ≈</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">"Majorité certifiée COSMOS — tous les déodorants depuis 2022" ✗</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val partial">Certains produits — pas toute la gamme ≈</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">Pas de COSMOS sur l'ensemble — certification partielle ✓</div></div>
+    </div>
+
+    <p class="finding-text" style="margin-top:16px;"><strong>Impact :</strong> L'ambiguïté sur les certifications est le vecteur d'accusation de greenwashing le plus courant pour les marques clean beauty. Quand les agents IA qui orientent les achats des consommateurs citent des certifications incorrectes ou sur-étendues, la marque s'expose à des accusations de communication trompeuse qu'elle n'a pas initiées.</p>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift tertiaire · Prix · Dispersion 10,89€ – 14,90€</div>
+    <h3 class="finding-title">Le prix du déodorant stick varie de 10,89€ à 14,90€ selon les LLMs. Prix officiel : 11,90€.</h3>
+    <p class="finding-text">Seul Gemini Pro cite le prix exact (11,90€ sur respire.co). Perplexity cite une fourchette allant jusqu'à 14,90€. ChatGPT et Grok sous-évaluent à 11,49€–11,60€. Pour un produit affiché à prix fixe sur le site officiel, une fourchette de 4€ entre les LLMs représente une dispersion de 35% — significatif pour des achats répétés où le prix est un critère de fidélité.</p>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Point fort · Identité & Fabrication · 4 LLMs</div>
+    <h3 class="finding-title">Les 4 LLMs maîtrisent parfaitement l'histoire fondatrice et la géographie de production.</h3>
+    <p class="finding-text">Justine Hutteau, Thomas Méheut, 2018, contexte médical fondateur, Made in France réel (Bretagne pour les déodorants, Sud pour les solides, Normandie pour les soins visage) — ces faits sont corrects et cohérents sur tous les modèles testés. C'est le socle sur lequel bâtir la couche agentique.</p>
+  </div>
+</section>
+
+<!-- RECOMMANDATIONS -->
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 74 à <em>pleinement certifié.</em></h2>
+
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Corriger la fausse certification B Corp dans Gemini</div>
+        <p class="rem-text">Déployer un JSON-LD sur respire.co listant explicitement les certifications détenues (COSMOS Organic sur les produits concernés, vegan, cruelty-free) avec une mention claire des certifications <em>non détenues</em> — notamment B Corp. Un article de blog ou une page certifications structurée avec Schema.org permettra à Gemini de mettre à jour sa base dans 4 à 8 semaines. L'annonce Instagram qui a lancé la marque en 2018 est bien indexée — une page certifications officielle l'est encore mieux.</p>
+        <div class="rem-impact">Impact : Hallucination B Corp corrigée dans Gemini · Risque greenwashing éliminé</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2 — Opportunité agentique</div>
+      <div>
+        <div class="rem-title">Rendre le catalogue Respire queryable par les agents IA</div>
+        <p class="rem-text">Aujourd'hui quand un agent IA reçoit la requête <em>"trouve-moi un déodorant naturel vegan certifié COSMOS sans aluminium à moins de 15€"</em> — il ne peut pas interroger le catalogue Respire de façon structurée. Il répond avec des données incohérentes comme le démontrent les 4 réponses de cet audit.</p>
+        <p class="rem-text">Un node 2A certifié sur respire.co expose les <strong>paramètres produits certifiés</strong> : liste des produits certifiés COSMOS Organic (avec numéro de certification), liste des certifications vegan avec organisme tiers, prix officiels par SKU, et disponibilité. Quand Shopify Agentic Storefronts ou un agent beauté cherche un déodorant naturel certifié, Respire est le premier résultat avec des données vérifiées — pas une concurrente avec de meilleures données sémantiques.</p>
+        <div class="rem-impact">Impact : Premier déodorant naturel avec catalogue certifié queryable par les agents IA</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 3 — Cette semaine</div>
+      <div>
+        <div class="rem-title">Prix officiel ancré — JSON-LD PriceSpecification</div>
+        <p class="rem-text">Déployer Schema.org <code>Product</code> + <code>Offer</code> + <code>PriceSpecification</code> pour les 5 produits phares (déodorant stick 11,90€, recharge 10,90€, sérum Glow 27,90€, crème hydratante 19,90€, stick solaire SPF50+ 13,90€). Ce markup est crawlé directement par Perplexity et utilisé par Google Shopping — il élimine la dispersion de prix en 2 à 4 semaines.</p>
+        <div class="rem-impact">Impact : Prix officiels stabilisés sur tous les LLMs · Dispersion 10,89€–14,90€ éliminée</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 4 — Continu</div>
+      <div>
+        <div class="rem-title">Monitoring trimestriel — secteur clean beauty à très fort risque de drift</div>
+        <p class="rem-text">Le secteur clean beauty est le plus exposé aux drifts sémantiques : les certifications évoluent (nouvelles gammes, recertifications annuelles), les prix changent régulièrement, et les LLMs confondent facilement les labels (COSMOS, Ecocert, Cosmébio, B Corp, Slow Cosmétique). Chaque nouveau produit lancé sans structured data est une nouvelle opportunité de drift. Monitoring trimestriel recommandé — mensuel si Respire lance une nouvelle gamme majeure.</p>
+        <div class="rem-impact">Impact : Protection continue contre les accusations de greenwashing basées sur des données LLM incorrectes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport d'Audit Sémantique — Respire · Mars 2026 · 2aagency.com/registry</div>
+</footer>
+
+</body>
+</html>

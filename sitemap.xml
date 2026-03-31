@@ -101,6 +101,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url><loc>https://www.2aagency.com/reports/respire</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.2aagency.com/reports/horace</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <url>
     <loc>https://www.2aagency.com/notary-data.html</loc>
