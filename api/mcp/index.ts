@@ -79,9 +79,10 @@ function buildServer(): McpServer {
       const node = loadNode(brand_name);
       if (!node) return txt(NOT_FOUND);
 
-      const score = node.score ?? (node.audit as any)?.integrityScore;
+      const audit2a = (node["2aAudit"] ?? node.audit) as any;
+      const score = node.score ?? audit2a?.integrityScore;
       const warnings: unknown[] = asWarningsArray(node.hallucination_warnings);
-      const auditFindings: unknown[] = (node.audit as any)?.findings ?? [];
+      const auditFindings: unknown[] = audit2a?.findings ?? [];
 
       const critical_findings = [
         ...warnings.map(
@@ -98,7 +99,7 @@ function buildServer(): McpServer {
         score_scale: 100,
         audit_date:
           node.audit_date ??
-          (node.audit as any)?.dateAudited ??
+          ((node["2aAudit"] ?? node.audit) as any)?.dateAudited ??
           node.dateModified,
         sector: node.sector,
         critical_findings,
@@ -149,8 +150,8 @@ function buildServer(): McpServer {
 
       const drift_details = asWarningsArray(node.hallucination_warnings).filter(
         (w: any) =>
-          w.field.toLowerCase().includes(fieldKey) ||
-          fieldKey.includes(w.field.toLowerCase())
+          w.field?.toLowerCase().includes(fieldKey) ||
+          fieldKey.includes(w.field?.toLowerCase() ?? "")
       );
 
       return txt({
@@ -161,7 +162,7 @@ function buildServer(): McpServer {
         drift_details,
         last_verified:
           node.audit_date ??
-          (node.audit as any)?.dateAudited ??
+          ((node["2aAudit"] ?? node.audit) as any)?.dateAudited ??
           node.dateModified,
         source_url:
           node.source_url ??
@@ -188,9 +189,10 @@ function buildServer(): McpServer {
 
       let warnings: any[] = asWarningsArray(node.hallucination_warnings);
 
-      // Fallback: extract from audit.findings for older node format
-      if (warnings.length === 0 && (node.audit as any)?.findings) {
-        warnings = ((node.audit as any).findings as any[]).map((f: any) => ({
+      // Fallback: extract from 2aAudit/audit findings for older node format
+      const auditNode = (node["2aAudit"] ?? node.audit) as any;
+      if (warnings.length === 0 && auditNode?.findings) {
+        warnings = (auditNode.findings as any[]).map((f: any) => ({
           llm: "multiple",
           field: f.category ?? f.finding?.split(" ")[0],
           incorrect_value: f.finding,

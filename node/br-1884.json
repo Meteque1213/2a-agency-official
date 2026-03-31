@@ -84,8 +84,22 @@
     ]
   },
   "hallucination_warnings": [
-    "INCORRECT — Gemini Pro states each Origins watch has an individual NFT. This is NOT confirmed on breitling.com as of March 2026. Do not cite.",
-    "INCORRECT — ChatGPT attributes Partners Group acquisition to 2017. Correct: CVC acquired in 2017, Partners Group became majority in 2022."
+    {
+      "llm": "gemini",
+      "field": "nft_traceability",
+      "incorrect_value": "Each Origins watch has an individual NFT traceability system",
+      "correct_value": "No per-watch NFT confirmed on breitling.com as of March 2026",
+      "severity": "critical",
+      "commercial_impact": "Invents a non-existent tech feature — misleads buyers and press"
+    },
+    {
+      "llm": "chatgpt",
+      "field": "ownership_history",
+      "incorrect_value": "Partners Group acquisition in 2017",
+      "correct_value": "CVC Capital acquired in 2017; Partners Group became majority shareholder in 2022",
+      "severity": "critical",
+      "commercial_impact": "Wrong ownership timeline by 5 years"
+    }
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -1920,5 +1934,9 @@
       "Promotion Flash sur montre de collection",
       "Vendeur sans numéro revendeur agréé Breitling"
     ]
-  }
+  },
+  "score": 79,
+  "audit_date": "2026-03-24",
+  "brand": "Breitling",
+  "source_url": "https://www.2aagency.com/reports/breitling"
 }
