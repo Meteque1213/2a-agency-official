@@ -21,6 +21,10 @@ const BRAND_MAP: Record<string, string> = {
   "asphalte": "as-2015",
   "respire": "re-2018",
   "horace": "ho-2016",
+  "typology": "ty-2019",
+  "veja": "vj-2004",
+  "sezane": "sz-2013",
+  "sézane": "sz-2013",
 };
 
 // ── Node loader — checks api/node/ then node/ ──────────────────────────────
@@ -209,6 +213,19 @@ function buildServer(): McpServer {
   return server;
 }
 
+// ── Body reader for raw IncomingMessage (Vercel does not auto-parse) ──────
+async function readBody(req: IncomingMessage): Promise<unknown> {
+  return new Promise((resolve, reject) => {
+    let data = "";
+    req.on("data", (chunk) => { data += chunk; });
+    req.on("end", () => {
+      try { resolve(data ? JSON.parse(data) : undefined); }
+      catch { resolve(data); }
+    });
+    req.on("error", reject);
+  });
+}
+
 // ── Vercel serverless handler ─────────────────────────────────────────────
 export default async function handler(
   req: IncomingMessage & { body?: unknown },
@@ -244,8 +261,9 @@ export default async function handler(
       sessionIdGenerator: undefined, // stateless — no session management
     });
 
+    const body = req.body ?? await readBody(req);
     await server.connect(transport);
-    await transport.handleRequest(req, res, req.body);
+    await transport.handleRequest(req, res, body);
   } catch (err) {
     if (!res.headersSent) {
       res.writeHead(500, { "Content-Type": "application/json" });
