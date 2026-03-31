@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veja — Rapport d'Audit Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Veja. Score 81/100. ChatGPT cite 2005 comme date de fondation (correct: 2004) et affirme que Veja a levé des fonds auprès d'investisseurs (faux: 100% bootstrapped depuis 2004).">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/veja">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F4EE;--surface:#EDEAE3;--ink:#111111;--gold:#B08D57;--border:rgba(176,141,87,0.22);--gray:#6B6860;--red:#8B2D2D;--green:#2D6A2D;--amber:#7A5A00;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:'DM Mono',monospace;line-height:1.6;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 5%;border-bottom:1px solid var(--border);background:rgba(247,244,238,0.96);backdrop-filter:blur(8px);position:sticky;top:0;z-index:100;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--ink);text-decoration:none;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:24px;}
+.nav-link{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);text-decoration:none;}
+.nav-link:hover{color:var(--gold);}
+.breadcrumb{padding:14px 5%;font-size:0.62rem;letter-spacing:0.1em;color:var(--gray);border-bottom:1px solid var(--border);}
+.breadcrumb a{color:var(--gray);text-decoration:none;}
+.report-hero{padding:56px 5% 40px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start;}
+.eyebrow{font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.report-brand{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,4rem);font-weight:300;line-height:1.05;margin-bottom:10px;}
+.report-meta{font-size:0.7rem;color:var(--gray);line-height:1.8;}
+.report-meta strong{color:var(--ink);}
+.score-circle{text-align:center;min-width:100px;}
+.score-num{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;color:var(--amber);line-height:1;}
+.score-denom{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);}
+.meta-bar{display:flex;border:1px solid var(--border);margin:0 5%;}
+.meta-item{flex:1;padding:14px 18px;border-right:1px solid var(--border);}
+.meta-item:last-child{border-right:none;}
+.meta-label{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.meta-val{font-size:0.78rem;color:var(--ink);}
+section{padding:56px 5%;border-bottom:1px solid var(--border);}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;line-height:1.1;margin-bottom:18px;}
+.section-title em{font-style:italic;color:var(--gold);}
+.body-text{font-size:0.86rem;color:var(--gray);line-height:1.8;max-width:680px;margin-bottom:16px;}
+.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:32px;}
+.score-card{background:var(--bg);padding:24px 20px;}
+.score-card-label{font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);margin-bottom:8px;}
+.score-card-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;line-height:1;}
+.sc-green{color:var(--green);}.sc-amber{color:var(--amber);}.sc-red{color:var(--red);}
+.matrix-table{width:100%;border-collapse:collapse;margin-top:32px;font-size:0.73rem;}
+.matrix-table th{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);padding:10px 12px;text-align:left;border-bottom:2px solid var(--ink);}
+.matrix-table td{padding:11px 12px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.matrix-table tr:hover td{background:var(--surface);}
+.v-ok{color:var(--green);}.v-p{color:var(--amber);}.v-x{color:var(--red);}
+.tag{font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 9px;border:1px solid;display:inline-block;}
+.tag-ok{color:var(--green);border-color:rgba(45,106,45,0.3);}
+.tag-low{color:var(--amber);border-color:rgba(122,90,0,0.3);}
+.tag-crit{color:var(--red);border-color:rgba(139,45,45,0.3);}
+.finding-box{border:1px solid var(--border);padding:28px;margin-top:20px;}
+.finding-box.critical{border-color:rgba(139,45,45,0.4);background:rgba(139,45,45,0.03);}
+.finding-box.amber{border-color:rgba(122,90,0,0.3);background:rgba(122,90,0,0.03);}
+.finding-box.positive{border-color:rgba(45,106,45,0.3);background:rgba(45,106,45,0.02);}
+.finding-label{font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:10px;}
+.finding-label.crit{color:var(--red);}
+.finding-label.amber{color:var(--amber);}
+.finding-label.green{color:var(--green);}
+.finding-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;margin-bottom:12px;}
+.finding-text{font-size:0.84rem;color:var(--gray);line-height:1.75;margin-bottom:12px;}
+.drift-compare{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:16px;}
+.dc-cell{background:var(--bg);padding:14px 16px;}
+.dc-label{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.dc-val{font-size:0.82rem;color:var(--ink);line-height:1.5;}
+.dc-val.wrong{color:var(--red);}
+.dc-val.ok{color:var(--green);}
+.dc-val.partial{color:var(--amber);}
+.remediation-list{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);margin-top:32px;}
+.rem-item{background:var(--bg);padding:24px 28px;display:grid;grid-template-columns:160px 1fr;gap:24px;}
+.rem-num{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);padding-top:4px;}
+.rem-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;margin-bottom:6px;}
+.rem-text{font-size:0.78rem;color:var(--gray);line-height:1.65;}
+.rem-impact{font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);margin-top:8px;}
+footer{padding:24px 5%;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;}
+.f-logo span{color:var(--gold);}
+.f-copy{font-size:0.55rem;letter-spacing:0.07em;text-transform:uppercase;color:rgba(107,104,96,0.4);}
+@media(max-width:768px){.report-hero{grid-template-columns:1fr;}.score-grid{grid-template-columns:repeat(2,1fr);}.drift-compare{grid-template-columns:repeat(2,1fr);}.meta-bar{flex-direction:column;}.meta-item{border-right:none;border-bottom:1px solid var(--border);}.rem-item{grid-template-columns:1fr;}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"Veja Semantic Audit","description":"2A Agency semantic audit of Veja. Score 81/100. ChatGPT cites 2005 as founding year (correct: 2004) and claims Veja raised external funding (false: 100% bootstrapped since 2004, founders own 100%). Price undervalued by 20-25% in ChatGPT.","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"datePublished":"2026-03-31","url":"https://www.2aagency.com/reports/veja"}
+</script>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › Veja — Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Rapport d'Audit Sémantique · Sneakers Éco-responsables · Paris · Fondée 2004</div>
+    <h1 class="report-brand">Veja</h1>
+    <p class="report-meta">
+      <strong>Audité par 2A Agency</strong> · Émis le 31 mars 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Mars 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num">81</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-label">Notaire</div><div class="meta-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-label">Date</div><div class="meta-val">31 mars 2026</div></div>
+  <div class="meta-item"><div class="meta-label">LLMs testés</div><div class="meta-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-label">Questions</div><div class="meta-val">5 standardisées</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Forte couverture RSE. <em>Trois drifts ChatGPT.</em></h2>
+  <p class="body-text">Veja obtient <strong>81/100</strong>. La marque est exceptionnellement bien représentée sur ses fondamentaux RSE — B Corp 2018 (score 92.7), coton biologique, caoutchouc amazonien, projet Aegean Portugal, refus de neutralité carbone de façade. Trois drifts sont concentrés sur ChatGPT : date de fondation erronée (2005 vs 2004), affirmation fausse de levée de fonds externe, et sous-évaluation du prix moyen de 20%.</p>
+  <p class="body-text">Le drift sur les investisseurs est particulièrement grave : <strong>l'indépendance totale de Veja est le cœur de son identité et de son modèle</strong>. ChatGPT détruit ce différenciateur central en affirmant que la marque a ouvert son capital — ce qu'elle a explicitement toujours refusé.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Identité & Fondation</div><div class="score-card-num sc-amber">72</div></div>
+    <div class="score-card"><div class="score-card-label">Fabrication & RSE</div><div class="score-card-num sc-green">94</div></div>
+    <div class="score-card"><div class="score-card-label">Certifications</div><div class="score-card-num sc-green">91</div></div>
+    <div class="score-card"><div class="score-card-label">Prix</div><div class="score-card-num sc-amber">78</div></div>
+    <div class="score-card"><div class="score-card-label">Gouvernance & Capital</div><div class="score-card-num sc-red">62</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-amber">81</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fondateurs & date</td>
+        <td><span class="v-ok">✓</span> Kopp + Morillion, 2004</td>
+        <td><span class="v-ok">✓</span> Kopp + Morillion, 2004 — lancement 2005 noté</td>
+        <td><span class="v-x">✗</span> <strong>Kopp + Morillion, 2005</strong> — date erronée</td>
+        <td><span class="v-ok">✓</span> Kopp + Morillion, 2004</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Fabrication & % France</td>
+        <td><span class="v-ok">✓</span> Brésil majoritaire + Portugal (Aegean 2023) · 0% France</td>
+        <td><span class="v-ok">✓</span> ~90-95% Brésil · Portugal (Aegean) · 0% France</td>
+        <td><span class="v-ok">✓</span> Brésil + Portugal · 0% France</td>
+        <td><span class="v-ok">✓</span> Brésil + Portugal · 0% France</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>RSE & certifications</td>
+        <td><span class="v-ok">✓</span> B Corp 2018 (92.7) ✓ · Pas carbon neutral ✓ · Coton bio, caoutchouc ✓</td>
+        <td><span class="v-ok">✓</span> B Corp 2018 (92.7) ✓ · Philosophie anti-compensation ✓</td>
+        <td><span class="v-ok">✓</span> B Corp 2018 ✓ · Matières responsables ✓</td>
+        <td><span class="v-ok">✓</span> B Corp 2018 ✓ · Coton bio, caoutchouc ✓</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Prix (correct : 140€–170€)</td>
+        <td><span class="v-ok">✓</span> 140€–170€ · V-10 Leather 155€ · Campo 140€</td>
+        <td><span class="v-ok">✓</span> 130€–160€ · Esplar 130€ · V-10/V-12 165€</td>
+        <td><span class="v-p">~</span> <strong>100€–130€</strong> — sous-évalué de 20-25%</td>
+        <td><span class="v-ok">✓</span> 130€–150€ · V-10 155€ · Campo 140€</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Indépendance & capital</td>
+        <td><span class="v-ok">✓</span> 100% indépendante · fondateurs seuls actionnaires · 245M€ CA 2024 bootstrappé</td>
+        <td><span class="v-ok">✓</span> 100% indépendante · jamais ouvert capital · La Nef / Crédit Coopératif</td>
+        <td><span class="v-x">✗</span> <strong>"A levé des financements auprès d'investisseurs"</strong> — faux</td>
+        <td><span class="v-ok">✓</span> 100% indépendante · fondateurs propriétaires exclusifs</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Findings critiques</div>
+  <h2 class="section-title">Deux drifts critiques. <em>Un seul modèle.</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label crit">Drift primaire · Indépendance · ChatGPT uniquement</div>
+    <h3 class="finding-title">ChatGPT affirme que Veja a levé des fonds auprès d'investisseurs. C'est faux — et c'est le cœur de l'identité de la marque.</h3>
+    <p class="finding-text">ChatGPT répond : *"La marque a levé des financements auprès d'investisseurs au fil du temps, mais elle reste indépendante dans sa gouvernance."* C'est une contradiction dans les termes — et un fait faux. Perplexity confirme que Veja a un chiffre d'affaires de 245M€ en 2024, entièrement autofinancé, sans aucun investisseur externe depuis 2004. Les fondateurs détiennent 100% du capital.</p>
+    <p class="finding-text"><strong>Impact :</strong> L'indépendance totale de Veja n'est pas un détail — c'est ce qui justifie l'intégralité de son modèle (payer le coton 2x le prix marché, refuser la publicité, ne jamais brader les collections). Quand ChatGPT dit que des investisseurs sont entrés au capital, il détruit le différenciateur central qui justifie le prix premium aux yeux des consommateurs et justifie les partenariats commerce équitable aux producteurs brésiliens.</p>
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">100% bootstrappée · fondateurs seuls actionnaires ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val ok">Jamais ouvert son capital · "non financée" ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val wrong">"A levé des financements auprès d'investisseurs" ✗</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">100% indépendante · fondateurs propriétaires ✓</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box critical" style="margin-top:16px;">
+    <div class="finding-label crit">Drift secondaire · Date de fondation · ChatGPT uniquement</div>
+    <h3 class="finding-title">ChatGPT cite 2005 comme année de fondation. Correct : 2004.</h3>
+    <p class="finding-text">ChatGPT répond *"La marque Veja a été fondée en 2005"*. Gemini, Perplexity et Grok citent tous 2004 — avec la précision que le premier lancement commercial date de février 2005. La société a été créée et le projet lancé en 2004 ; 2005 est uniquement la date de mise en vente de la première collection.</p>
+    <p class="finding-text"><strong>Pattern :</strong> Ce drift est documenté dans le `memory.md` de 2A Agency — ChatGPT confond systématiquement date de création de l'entreprise et date de lancement commercial (même pattern observé sur Typology : idéation 2017 vs lancement 2019). Sur 20 ans d'existence, une erreur d'1 an sur la date de fondation d'une marque iconique est une inexactitude mesurable.</p>
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">2004 ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val ok">2004 ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val wrong">2005 ✗</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">2004 ✓</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift tertiaire · Prix · ChatGPT</div>
+    <h3 class="finding-title">ChatGPT cite une fourchette 100€–130€ — sous-évaluée de 20-25% par rapport au prix officiel.</h3>
+    <p class="finding-text">ChatGPT cite le Campo à 119€ comme référence de prix moyen. Le prix officiel sur veja-store.com : Campo Leather à 140€, V-10 Leather à 155€. ChatGPT utilise des prix de revendeurs en promotion ou des modèles en toile (entrée de gamme). La fourchette officielle 2026 est 140€–170€ selon Perplexity — confirmée par les prix veja-store.com.</p>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Point fort · RSE & Certifications · 4 LLMs</div>
+    <h3 class="finding-title">Veja est la marque du registre la mieux représentée sur ses engagements RSE — B Corp 92.7, modèle anti-greenwashing.</h3>
+    <p class="finding-text">Les 4 LLMs citent correctement : B Corp depuis décembre 2018 (score 92.7), coton biologique, caoutchouc sauvage amazonien direct, projet Aegean Portugal 2023, refus explicite de la neutralité carbone de compensation, 0% production France, 0% budget publicitaire. C'est le résultat de 20 ans de communication radicalement transparente via project.veja-store.com — un benchmark pour toutes les autres marques du registre.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 81 à <em>pleinement certifié.</em></h2>
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Ancrer l'indépendance totale dans les données structurées</div>
+        <p class="rem-text">Déployer Schema.org <code>Organization</code> avec <code>foundingDate: "2004"</code>, <code>founder</code> (Sébastien Kopp + François-Ghislain Morillion), et une propriété explicite <code>ownershipType: "privately held, 100% founder-owned since 2004, no external investors"</code>. La page project.veja-store.com sur la gouvernance existe — elle manque de balisage Schema.org qui la rend machine-readable par ChatGPT. Ce markup corrige les deux drifts fondateurs (date + investisseurs) en un seul déploiement.</p>
+        <div class="rem-impact">Impact : Date 2004 et indépendance totale correctement représentées dans ChatGPT dans 4-8 semaines</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2 — Opportunité agentique</div>
+      <div>
+        <div class="rem-title">Rendre le catalogue Veja queryable par les agents IA</div>
+        <p class="rem-text">Veja a une communauté mondiale et des boutiques à New York, Londres, Paris, Tokyo. Quand un acheteur demande à un agent IA <em>"find me B Corp certified sneakers, fair trade, no investor pressure, under 160€"</em> — Veja est la réponse parfaite mais ne peut pas être interrogée de façon structurée. Un node 2A certifié expose : prix officiels par modèle (Campo 140€, V-10 155€, V-90 165€), B Corp 2018 score 92.7, matières (coton bio, caoutchouc amazonien), fabrication Brésil + Portugal, indépendance totale. Veja est la marque idéale pour le consommateur qui demande à un agent IA de l'aider à consommer mieux — elle doit être la première sneaker brand avec un catalogue certifié queryable.</p>
+        <div class="rem-impact">Impact : Premier catalogue sneakers éco-responsables queryable par les agents IA — cible le consommateur qui délègue ses achats responsables à l'IA</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 3 — Prix</div>
+      <div>
+        <div class="rem-title">Ancrer les prix officiels — Schema.org PriceSpecification</div>
+        <p class="rem-text">Déployer <code>schema.org/Offer</code> avec <code>price</code> pour les 5 modèles phares : Esplar 130€, Campo Leather 140€, V-10 Leather 155€, V-90 165€, Venturi 180€. ChatGPT utilise des agrégateurs de prix revendeurs où les promotions (-20-30%) dominent le signal. Les prix Schema.org officiels de veja-store.com priment sur ces sources secondaires dans les prochains cycles de crawl.</p>
+        <div class="rem-impact">Impact : Fourchette 100-130€ ChatGPT corrigée vers 140-170€ officiel</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 4 — Monitoring</div>
+      <div>
+        <div class="rem-title">Audit annuel — marque stable mais exposée aux rumeurs de rachat</div>
+        <p class="rem-text">Veja refuse régulièrement des offres de rachat — une information qui circule dans la presse spécialisée et qui peut se retrouver dans les données d'entraînement des LLMs sous forme de bruit. Le drift ChatGPT sur les "investisseurs" pourrait provenir de ces articles de presse sur des offres refusées. Monitoring annuel minimum — semestriel si des rumeurs de rachat circulent dans la presse mode.</p>
+        <div class="rem-impact">Impact : Indépendance totale défendue face aux rumeurs de rachat qui polluent les LLMs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport d'Audit Sémantique — Veja · Mars 2026 · 2aagency.com/registry</div>
+</footer>
+</body>
+</html>
