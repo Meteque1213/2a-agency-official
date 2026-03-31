@@ -3,8 +3,14 @@
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
+  "functions": {
+    "api/mcp/index.ts": {
+      "includeFiles": "node/**,api/node/**"
+    }
+  },
   "rewrites": [
-    { "source": "/api/node/:path*", "destination": "/node/:path*" }
+    { "source": "/api/node/:path*", "destination": "/node/:path*" },
+    { "source": "/api/mcp", "destination": "/api/mcp/index" }
   ],
   "headers": [
     {

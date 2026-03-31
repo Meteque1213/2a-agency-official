@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
-    "axios": "^1.13.6"
+    "@modelcontextprotocol/sdk": "latest",
+    "axios": "^1.13.6",
+    "zod": "latest"
   }
 }
