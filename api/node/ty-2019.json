@@ -3,43 +3,44 @@
   "node_id": "ty-2019",
   "score": 88,
   "audit_date": "2026-03-31",
-  "sector": "Clean Beauty / Skincare / DNVB",
+  "sector": "Clean Beauty / DNVB",
   "founders": ["Ning Li"],
   "founding_year": 2019,
-  "founding_location": "Paris, France",
+  "headquarters": "Paris, France (11e arr.)",
   "certifications": {
     "B_Corp": true,
     "B_Corp_year": 2021,
-    "Ecocert": true,
-    "Cosmos_Organic": false,
-    "PETA": false,
-    "Vegan": true
+    "PETA_Vegan_Cruelty_Free": true,
+    "COSMOS_Organic": "partial — gamme PLANTES uniquement",
+    "RSPO": true,
+    "Ecocert": "partial — via COSMOS sur gamme PLANTES"
   },
-  "positioning": "Skincare minimaliste — 9 à 12 ingrédients maximum par formule, pas de greenwashing, transparence totale sur les INCI.",
+  "manufacturing": "100% France — R&D Paris 11e. Fabrication : Bergerac, Aix-en-Provence, Compiègne. Logistique : Combs-la-Ville (Île-de-France).",
+  "formulation": "Minimaliste — moins de 20 ingrédients. 95%+ d'origine naturelle (ISO 16128). Sans silicones, parabènes, sulfates, huiles minérales, parfums synthétiques.",
   "flagship_price": {
-    "creme_9_ingredients_40ml": 22.50,
-    "serum_niacinamide_10_zinc_1_30ml": 12.90,
-    "huile_visage_9_ingredients_30ml": 16.90,
-    "gel_nettoyant_9_ingredients_100ml": 9.90,
-    "contour_yeux_9_ingredients_15ml": 18.50
+    "creme_9_ingredients_D41_50ml": 22.50,
+    "serum_eclat_vitamine_c_L32": 17.90,
+    "serum_unifiant_niacinamide_L36": 18.50,
+    "gel_nettoyant_exfoliant_L13_150ml": 23.50,
+    "creme_jour_spf50_A51": 39.90,
+    "serum_hydratant_A31": 19.50
   },
-  "manufacturing": "France — Saint-Jean-de-Braye (Loiret). Laboratoires partenaires France.",
   "hallucination_warnings": [
     {
       "llm": "perplexity",
       "field": "certifications",
-      "incorrect_value": "Certification B Corp non mentionnée / absente de la réponse",
-      "correct_value": "B Corp certifiée depuis 2021 — typology.com/fr/pages/b-corp",
-      "severity": "critical",
-      "commercial_impact": "Perplexity efface le principal label de confiance de Typology pour tout acheteur clean beauty qui interroge le modèle sur les certifications de la marque"
+      "incorrect_value": "Pas de certifications globales type B Corp mentionnées spontanément",
+      "correct_value": "Typology est certifiée B Corp depuis 2021 — typology.com/carnet/b-corp-peta-cosmos-rspo",
+      "severity": "medium",
+      "commercial_impact": "Perplexity ne valorise pas la certification la plus différenciante de la marque dans ses réponses sur les certifications"
     },
     {
       "llm": "gemini",
-      "field": "prix",
-      "incorrect_value": "La Crème 9 Ingrédients citée à 17,50 €",
-      "correct_value": "Prix officiel : 22,50 € — typology.com",
-      "severity": "medium",
-      "commercial_impact": "Écart de 5 € sur le produit phare — un agent IA qui compare les prix sur cette base avantage artificiellement Typology vs concurrents, faussant les décisions d'achat"
+      "field": "price",
+      "incorrect_value": "Crème Visage 9 Ingrédients : 17,50€ à 22,50€",
+      "correct_value": "22,50€ — prix unique officiel typology.com",
+      "severity": "low",
+      "commercial_impact": "Sous-évaluation mineure du prix phare — 17,50€ correspond à un ancien format ou promotion"
     }
   ],
   "source_url": "https://www.2aagency.com/reports/typology",
