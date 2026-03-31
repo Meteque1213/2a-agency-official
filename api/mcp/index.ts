@@ -42,6 +42,14 @@ function loadNode(brandName: string): Record<string, unknown> | null {
   return null;
 }
 
+// ── Normalise hallucination_warnings — handles array OR legacy object ──────
+function asWarningsArray(raw: unknown): any[] {
+  if (!raw) return [];
+  if (Array.isArray(raw)) return raw;
+  if (typeof raw === "object") return Object.values(raw as object);
+  return [];
+}
+
 const NOT_FOUND = {
   error: "Brand not in 2A Registry",
   suggestion: "Request an audit at 2aagency.com",
@@ -72,7 +80,7 @@ function buildServer(): McpServer {
       if (!node) return txt(NOT_FOUND);
 
       const score = node.score ?? (node.audit as any)?.integrityScore;
-      const warnings: unknown[] = (node.hallucination_warnings as any[]) ?? [];
+      const warnings: unknown[] = asWarningsArray(node.hallucination_warnings);
       const auditFindings: unknown[] = (node.audit as any)?.findings ?? [];
 
       const critical_findings = [
@@ -139,7 +147,7 @@ function buildServer(): McpServer {
         }
       }
 
-      const drift_details = ((node.hallucination_warnings as any[]) ?? []).filter(
+      const drift_details = asWarningsArray(node.hallucination_warnings).filter(
         (w: any) =>
           w.field.toLowerCase().includes(fieldKey) ||
           fieldKey.includes(w.field.toLowerCase())
@@ -178,7 +186,7 @@ function buildServer(): McpServer {
       const node = loadNode(brand_name);
       if (!node) return txt(NOT_FOUND);
 
-      let warnings: any[] = (node.hallucination_warnings as any[]) ?? [];
+      let warnings: any[] = asWarningsArray(node.hallucination_warnings);
 
       // Fallback: extract from audit.findings for older node format
       if (warnings.length === 0 && (node.audit as any)?.findings) {
