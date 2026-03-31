@@ -1,0 +1,17 @@
+{
+  "name": "2A Agency Brand Integrity Registry",
+  "description": "Certified semantic data for luxury, real estate and DNVB brands. Prevents LLM hallucinations on brand facts: prices, certifications, founders, transactions.",
+  "version": "1.0",
+  "endpoint": "https://www.2aagency.com/api/mcp",
+  "tools": [
+    "get_brand_score",
+    "get_certified_data",
+    "get_hallucination_warnings"
+  ],
+  "brands_covered": 11,
+  "registry_url": "https://www.2aagency.com/registry",
+  "protocol": "MCP — Model Context Protocol",
+  "transport": "Streamable HTTP (stateless)",
+  "eu_ai_act": "Article 53 compliant",
+  "contact": "contact@2aagency.com"
+}
