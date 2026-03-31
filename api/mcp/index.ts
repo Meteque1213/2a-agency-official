@@ -129,7 +129,7 @@ function buildServer(): McpServer {
       const fieldKey = field.toLowerCase();
 
       const fieldAliases: Record<string, string[]> = {
-        price: ["flagship_price", "makesOffer"],
+        price: ["price_certified", "flagship_price", "makesOffer"],
         certifications: ["certifications", "hasCertification"],
         founders: ["founders", "founder"],
         manufacturing: ["manufacturing"],
@@ -137,6 +137,11 @@ function buildServer(): McpServer {
         sector: ["sector"],
         leadership: ["employee"],
         sustainability: ["sustainabilityInitiative"],
+        founding_year: ["founding_year"],
+        ownership: ["ownership"],
+        geographic_footprint: ["geographic_footprint"],
+        record_transaction: ["record_transaction"],
+        ingredients: ["formulation", "ingredients"],
       };
 
       const candidates = fieldAliases[fieldKey] ?? [fieldKey];
