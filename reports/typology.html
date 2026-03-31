@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typology — Rapport d'Audit Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Typology. Score 88/100. Perplexity omet la certification B Corp (obtenue en 2021). Gemini cite la Crème 9 Ingrédients à 17,50€ (prix officiel : 22,50€).">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/typology">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111;
+  --gold: #B08D57; --border: rgba(176,141,87,0.22);
+  --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; }
+.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+.nav-link:hover { color: var(--gold); }
+.breadcrumb { padding: 14px 5%; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gray); border-bottom: 1px solid var(--border); }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
+.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
+.report-meta strong { color: var(--ink); }
+.score-circle { text-align: center; min-width: 100px; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; color: var(--green); line-height: 1; }
+.score-denom { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+.meta-bar { display: flex; border: 1px solid var(--border); margin: 0 5%; }
+.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; }
+.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.meta-item-val { font-size: 0.78rem; color: var(--ink); }
+section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+.score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.score-card { background: var(--bg); padding: 24px 20px; }
+.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.sc-green { color: var(--green); } .sc-amber { color: var(--amber); } .sc-red { color: var(--red); }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.73rem; }
+.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
+.matrix-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.matrix-table tr:hover td { background: var(--surface); }
+.v-ok { color: var(--green); } .v-p { color: var(--amber); } .v-x { color: var(--red); }
+.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
+.tag-ok { color: var(--green); border-color: rgba(45,106,45,0.3); }
+.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
+.tag-crit { color: var(--red); border-color: rgba(139,45,45,0.3); }
+.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
+.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
+.finding-box.amber { border-color: rgba(122,90,0,0.3); background: rgba(122,90,0,0.03); }
+.finding-box.positive { border-color: rgba(45,106,45,0.3); background: rgba(45,106,45,0.02); }
+.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.finding-label.amber { color: var(--amber); }
+.finding-label.green { color: var(--green); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
+.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; margin-bottom: 12px; }
+.drift-compare { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 16px; }
+.dc-cell { background: var(--bg); padding: 14px 16px; }
+.dc-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.dc-val { font-size: 0.82rem; color: var(--ink); line-height: 1.5; }
+.dc-val.wrong { color: var(--red); }
+.dc-val.ok { color: var(--green); }
+.dc-val.partial { color: var(--amber); }
+.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
+.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
+.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.rem-text { font-size: 0.82rem; color: var(--gray); line-height: 1.75; margin-bottom: 10px; }
+.rem-impact { font-size: 0.7rem; color: var(--green); letter-spacing: 0.06em; }
+footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+.f-logo span { color: var(--gold); }
+.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+@media(max-width:768px) {
+  .report-hero { grid-template-columns: 1fr; }
+  .meta-bar { flex-direction: column; }
+  .meta-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .score-grid { grid-template-columns: repeat(2,1fr); }
+  .drift-compare { grid-template-columns: repeat(2,1fr); }
+  .rem-item { grid-template-columns: 1fr; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"Typology Semantic Audit","description":"2A Agency semantic audit of Typology. Score 88/100. Perplexity omits B Corp certification (obtained 2021). Gemini cites La Crème 9 Ingrédients at 17.50€ (official price: 22.50€).","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"datePublished":"2026-03-31","url":"https://www.2aagency.com/reports/typology"}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › Typology — Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Rapport d'Audit Sémantique · Clean Beauty / Skincare · Paris · Fondée 2019</div>
+    <h1 class="report-brand">Typology</h1>
+    <p class="report-meta">
+      <strong>Audité par 2A Agency</strong> · Émis le 31 mars 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Mars 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num">88</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-item-label">Notaire</div><div class="meta-item-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">31 mars 2026</div></div>
+  <div class="meta-item"><div class="meta-item-label">LLMs testés</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">5 standardisées</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Forte identité minimaliste. <em>B Corp effacée par Perplexity. Prix faussé par Gemini.</em></h2>
+  <p class="body-text">Ce rapport présente les résultats de l'audit sémantique indépendant de Typology par 2A Agency, conduit sur 4 grands modèles de langage en mars 2026. L'audit couvre l'identité fondatrice, les ingrédients et la philosophie formulation, les certifications, les prix et la fabrication.</p>
+  <p class="body-text">Typology obtient un score de <strong>88/100</strong> — l'un des scores les plus élevés du registre 2A. La marque est excellemment couverte sur sa philosophie minimaliste, ses formules 9 ingrédients et son positionnement fondateur. Deux drifts pénalisent le score : Perplexity n'inclut pas la certification B Corp (obtenue en 2021, soit l'une des premières dans le clean beauty français) dans sa réponse sur les certifications. Gemini cite la Crème 9 Ingrédients à 17,50 € alors que le prix officiel sur typology.com est 22,50 € — un écart de 5 €.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Identité & Fondation</div><div class="score-card-num sc-green">95</div></div>
+    <div class="score-card"><div class="score-card-label">Ingrédients & Formulation</div><div class="score-card-num sc-green">96</div></div>
+    <div class="score-card"><div class="score-card-label">Certifications</div><div class="score-card-num sc-amber">68</div></div>
+    <div class="score-card"><div class="score-card-label">Prix produits phares</div><div class="score-card-num sc-amber">82</div></div>
+    <div class="score-card"><div class="score-card-label">Fabrication & Géographie</div><div class="score-card-num sc-green">92</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-green">88</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fondatrice & date</td>
+        <td><span class="v-ok">✓</span> Ning Li, 2019, Paris — fondatrice et CEO</td>
+        <td><span class="v-ok">✓</span> Exact — précise le lancement digital-first</td>
+        <td><span class="v-ok">✓</span> Exact</td>
+        <td><span class="v-ok">✓</span> Exact — mentionne le passage Meetic/BlaBlaCar de Ning Li</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Ingrédients & formulation</td>
+        <td><span class="v-ok">✓</span> 9-12 ingrédients max, vegan, formules minimalistes</td>
+        <td><span class="v-ok">✓</span> Correct — philosophy clean, actifs bien cités</td>
+        <td><span class="v-ok">✓</span> Correct — niacinamide, rétinol, AHA/BHA bien décrits</td>
+        <td><span class="v-ok">✓</span> Exact — transparence INCI, lien typology.com/ingredients</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Certifications</td>
+        <td><span class="v-x">✗</span> <strong>B Corp absente de la réponse</strong> — Ecocert cité, B Corp omise</td>
+        <td><span class="v-ok">✓</span> B Corp 2021 ✓ · Ecocert ✓ · Vegan ✓</td>
+        <td><span class="v-ok">✓</span> B Corp 2021 ✓ · approche clean confirmée</td>
+        <td><span class="v-ok">✓</span> B Corp ✓ · Ecocert ✓ · liste complète</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Prix produits phares</td>
+        <td><span class="v-ok">✓</span> Crème ~22€, sérum niacinamide ~13€, gel nettoyant ~10€</td>
+        <td><span class="v-p">~</span> <strong>Crème 9 ingrédients citée à 17,50 €</strong> (officiel : 22,50 €)</td>
+        <td><span class="v-ok">✓</span> Correct et cohérent avec typology.com</td>
+        <td><span class="v-ok">✓</span> Correct — prix cohérents avec site officiel</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Fabrication & géographie</td>
+        <td><span class="v-ok">✓</span> France · Loiret · Saint-Jean-de-Braye</td>
+        <td><span class="v-ok">✓</span> Made in France ✓</td>
+        <td><span class="v-ok">✓</span> France ✓</td>
+        <td><span class="v-ok">✓</span> France ✓ · précise région Centre-Val de Loire</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Findings critiques</div>
+  <h2 class="section-title">Perplexity efface B Corp. <em>Gemini fausse le prix phare de 22%.</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label">Drift primaire · B Corp 2021 · Perplexity uniquement</div>
+    <h3 class="finding-title">Perplexity ne cite pas la certification B Corp de Typology — obtenue en 2021, l'une des premières dans le clean beauty français.</h3>
+    <p class="finding-text">Interrogé sur les certifications de Typology, Perplexity répond correctement sur Ecocert et la philosophie vegan, mais n'inclut pas la B Corp dans sa réponse. La certification est pourtant réelle, obtenue en 2021, et documentée sur typology.com/fr/pages/b-corp. Les trois autres LLMs (Gemini, ChatGPT, Grok) la citent correctement.</p>
+    <p class="finding-text"><strong>Impact commercial :</strong> Le marché du clean beauty est saturé de labels. B Corp est la certification la plus structurante pour la confiance consommateur — elle distingue Typology de marques qui se contentent d'un positionnement "naturel" sans vérification indépendante. Perplexity est utilisé massivement pour des recherches de comparaison produits (typiquement : <em>"marques de skincare B Corp en France"</em> ou <em>"quelles marques cosmétiques sont certifiées B Corp ?"</em>). Typology n'apparaît pas dans ces résultats lorsque Perplexity répond — une perte directe de position dans la considération d'achat clean.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val wrong">B Corp ✗ omise<br>Ecocert cité seul</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val ok">B Corp 2021 ✓<br>Ecocert ✓ · Vegan ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val ok">B Corp 2021 ✓<br>Confirmée</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">B Corp ✓<br>Ecocert ✓</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift secondaire · Prix La Crème 9 Ingrédients · Gemini uniquement</div>
+    <h3 class="finding-title">Gemini cite la Crème 9 Ingrédients à 17,50 € — prix officiel typology.com : 22,50 € (écart de −22%).</h3>
+    <p class="finding-text">Gemini cite le produit phare de Typology avec un prix erroné de 17,50 €, soit 5 € de moins que le prix officiel affiché sur typology.com. L'erreur est significative sur un produit à 22,50 € — elle représente une sous-estimation de 22% du prix réel. Les trois autres LLMs citent des prix cohérents avec le site officiel.</p>
+    <p class="finding-text"><strong>Impact commercial :</strong> Un agent IA qui utilise Gemini pour comparer les crèmes visage par rapport qualité/prix avantage artificiellement Typology sur ce critère, puis le consommateur découvre un prix différent à l'achat. Ce type d'écart génère de la méfiance et dégrade l'expérience d'achat agentique. Il crée également un risque de repricing : si une concurrente demande à Gemini les prix de Typology avant de fixer les siens, elle calibre sur une valeur fausse.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">~22 € ✓<br>Cohérent officiel</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">17,50 € ✗<br>Écart : −5,00 €</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val ok">22,50 € ✓<br>Exact</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">~22 € ✓<br>Cohérent officiel</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Point fort · Identité fondatrice & Formulation · 4 LLMs</div>
+    <h3 class="finding-title">Ning Li, la philosophie des 9 ingrédients et le Made in France sont maîtrisés sur tous les modèles.</h3>
+    <p class="finding-text">Les 4 LLMs citent correctement Ning Li comme fondatrice et CEO, 2019, Paris. La philosophie formulation — 9 à 12 ingrédients maximum par produit, transparence INCI totale, actifs concentrés sans ingrédients de remplissage — est bien décrite par tous les modèles. Grok va jusqu'à mentionner le parcours tech de Ning Li (Meetic, BlaBlaCar) qui explique l'approche data-driven de la marque. La fabrication française est confirmée par tous.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 88 à <em>pleinement certifié.</em></h2>
+
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Ancrer B Corp 2021 dans les données structurées indexées par Perplexity</div>
+        <p class="rem-text">La page typology.com/fr/pages/b-corp existe et est bien documentée. Le problème est l'absence de Schema.org <code>hasCredential</code> lisible par machine sur la page principale. Déployer un JSON-LD <code>Organization</code> sur la homepage avec <code>"hasCredential": [{"@type": "EducationalOccupationalCredential", "name": "B Corp", "dateCreated": "2021", "credentialCategory": "certification", "recognizedBy": {"@type": "Organization", "name": "B Lab"}}]</code> force Perplexity à indexer la certification comme donnée structurée plutôt que contenu éditorial. Perplexity Pro crawle les données Schema.org avec une priorité élevée — ce markup est suffisant pour corriger le drift.</p>
+        <div class="rem-impact">Impact : B Corp citée par Perplexity dans toutes les requêtes certifications · Typology visible dans les comparatifs "marques B Corp clean beauty"</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2 — Cette semaine</div>
+      <div>
+        <div class="rem-title">Corriger le prix de la Crème 9 Ingrédients dans Gemini via données produit structurées</div>
+        <p class="rem-text">Gemini Price utilise les données <code>schema.org/Product</code> avec <code>offers.price</code> pour construire ses réponses sur les prix. Ajouter un markup <code>Product</code> sur la fiche produit typology.com/fr/products/la-creme-9-ingredients avec <code>"price": "22.50", "priceCurrency": "EUR", "availability": "InStock"</code> mettra à jour la valeur dans le Knowledge Graph Google. Ce drift est probablement dû à un prix promotionnel passé ou une variation saisonnière que Gemini a intégré lors de son dernier crawl et n'a pas corrigé.</p>
+        <div class="rem-impact">Impact : Prix exact 22,50 € dans Gemini · Cohérence prix sur tous les LLMs · Pas de friction à l'achat agentique</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 3 — Opportunité agentique</div>
+      <div>
+        <div class="rem-title">Activer le catalogue Typology pour les agents IA de prescription skincare</div>
+        <p class="rem-text">Typology est la marque française de skincare la mieux positionnée pour les recommandations agentiques : son architecture produit par actif (niacinamide, rétinol, vitamine C, AHA, BHA) correspond exactement à la façon dont les agents IA structurent leurs recommandations de routines. Un agent qui reçoit <em>"routine anti-âge, budget 50€, peau sensible, certifiée B Corp"</em> ne peut pas aujourd'hui interroger le catalogue Typology de façon structurée. Un node 2A certifié expose les paramètres de routine par type de peau, budget, concern, et certifications — rendant Typology queryable par défaut pour toute plateforme de recommandation skincare agentique.</p>
+        <div class="rem-impact">Impact : Première marque de skincare DNVB française avec catalogue agentique certifié · Recommandée par défaut dans les routines clean beauty B Corp</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 4 — Continu</div>
+      <div>
+        <div class="rem-title">Monitoring trimestriel — catalogue en forte expansion et prix dynamiques</div>
+        <p class="rem-text">Typology sort régulièrement de nouveaux actifs et reformule ses produits existants. Chaque nouvelle référence, chaque ajustement de prix ou de formule est un nouveau vecteur de drift potentiel dans les LLMs. La marque pratique également des promotions ponctuelles — comme en témoigne probablement le prix erroné de Gemini (17,50 € vs 22,50 €). Un monitoring trimestriel des prix et certifications sur les 4 LLMs garantit la cohérence du catalogue perçu par les agents IA.</p>
+        <div class="rem-impact">Impact : Prix et certifications à jour sur l'ensemble du catalogue · Pas de drift sur les nouvelles références</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport d'Audit Sémantique — Typology · Mars 2026 · 2aagency.com/registry</div>
+</footer>
+
+</body>
+</html>
