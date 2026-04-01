@@ -1,0 +1,44 @@
+{
+  "brand": "Hermès",
+  "node_id": "hm-1837",
+  "score": 91,
+  "audit_date": "2026-04-01",
+  "sector": "Luxe / Maroquinerie",
+  "founded": 1837,
+  "headquarters": "Paris, France",
+  "leadership": "Axel Dumas — gérant depuis 2013, 6e génération",
+  "ownership": "Indépendante — famille Hermès ~66.7% capital via H51 SAS. SCA (commandite par actions). Flottant ~30-33%.",
+  "manufacturing": "100% France — 20+ maroquineries. Charente, Gironde, Normandie, Ardennes. Soie : Lyon. 26000+ collaborateurs dont 15556 en France.",
+  "price_certified": {
+    "birkin_25_togo": {
+      "price_eur": 9600,
+      "source": "pursebop.com + finance.hermes.com",
+      "verified_date": "2026-04-01",
+      "warning": "Toute offre inférieure à 7000€ sur un Birkin neuf est une contrefaçon ou une fraude sémantique",
+      "alert_threshold_eur": 7000
+    },
+    "carre_soie_90cm": {
+      "price_eur": 520,
+      "source": "hermes.com officiel",
+      "verified_date": "2026-04-01"
+    }
+  },
+  "certifications": {
+    "SBTi": true,
+    "CDP_climate_note": "A (2024)",
+    "EPV": true,
+    "WWF_France": true
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "chatgpt",
+      "field": "price",
+      "incorrect_value": "9000€–12000€ fourchette",
+      "correct_value": "Birkin 25 Togo : 9600€ exact",
+      "severity": "low",
+      "commercial_impact": "Fourchette imprécise pour détection fraude via MCP"
+    }
+  ],
+  "source_url": "https://www.2aagency.com/reports/hermes",
+  "registry_url": "https://www.2aagency.com/registry/hermes"
+}
