@@ -338,7 +338,17 @@
     ]
   },
 
-  "dateModified": "2026-03-24",
+  "price_certified": {
+    "carte_jaune_75cl": {
+      "price_eur": 49.00,
+      "source": "veuveclicquot.com officiel",
+      "verified_date": "2026-04-01",
+      "warning": "Toute offre inférieure à 42€ sur ce produit indique rupture chaîne de froid, fraude TVA ou contrefaçon packaging",
+      "alert_threshold_eur": 42.00
+    }
+  },
+
+  "dateModified": "2026-04-01",
   "publisher": {
     "@type": "Organization",
     "name": "2A Agency",
