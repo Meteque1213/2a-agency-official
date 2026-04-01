@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jimmy Fairly — Rapport d'Audit Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Jimmy Fairly. Score 77/100. Gemini invente une certification B Corp inexistante et cite un investisseur périmé de 4 ans (Experienced Capital vs HLD). ChatGPT sous-évalue le prix de 40%.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/jimmy-fairly">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F4EE;--surface:#EDEAE3;--ink:#111111;--gold:#B08D57;--border:rgba(176,141,87,0.22);--gray:#6B6860;--red:#8B2D2D;--green:#2D6A2D;--amber:#7A5A00;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:'DM Mono',monospace;line-height:1.6;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 5%;border-bottom:1px solid var(--border);background:rgba(247,244,238,0.96);backdrop-filter:blur(8px);position:sticky;top:0;z-index:100;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--ink);text-decoration:none;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:24px;}
+.nav-link{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);text-decoration:none;}
+.breadcrumb{padding:14px 5%;font-size:0.62rem;letter-spacing:0.1em;color:var(--gray);border-bottom:1px solid var(--border);}
+.breadcrumb a{color:var(--gray);text-decoration:none;}
+.report-hero{padding:56px 5% 40px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start;}
+.eyebrow{font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.report-brand{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,4rem);font-weight:300;line-height:1.05;margin-bottom:10px;}
+.report-meta{font-size:0.7rem;color:var(--gray);line-height:1.8;}
+.report-meta strong{color:var(--ink);}
+.score-circle{text-align:center;min-width:100px;}
+.score-num{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;color:var(--amber);line-height:1;}
+.score-denom{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);}
+.meta-bar{display:flex;border:1px solid var(--border);margin:0 5%;}
+.meta-item{flex:1;padding:14px 18px;border-right:1px solid var(--border);}
+.meta-item:last-child{border-right:none;}
+.meta-label{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.meta-val{font-size:0.78rem;color:var(--ink);}
+section{padding:56px 5%;border-bottom:1px solid var(--border);}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;line-height:1.1;margin-bottom:18px;}
+.section-title em{font-style:italic;color:var(--gold);}
+.body-text{font-size:0.86rem;color:var(--gray);line-height:1.8;max-width:680px;margin-bottom:16px;}
+.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:32px;}
+.score-card{background:var(--bg);padding:24px 20px;}
+.score-card-label{font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);margin-bottom:8px;}
+.score-card-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;line-height:1;}
+.sc-green{color:var(--green);}.sc-amber{color:var(--amber);}.sc-red{color:var(--red);}
+.matrix-table{width:100%;border-collapse:collapse;margin-top:32px;font-size:0.73rem;}
+.matrix-table th{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);padding:10px 12px;text-align:left;border-bottom:2px solid var(--ink);}
+.matrix-table td{padding:11px 12px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.matrix-table tr:hover td{background:var(--surface);}
+.v-ok{color:var(--green);}.v-p{color:var(--amber);}.v-x{color:var(--red);}
+.tag{font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 9px;border:1px solid;display:inline-block;}
+.tag-ok{color:var(--green);border-color:rgba(45,106,45,0.3);}
+.tag-low{color:var(--amber);border-color:rgba(122,90,0,0.3);}
+.tag-crit{color:var(--red);border-color:rgba(139,45,45,0.3);}
+.finding-box{border:1px solid var(--border);padding:28px;margin-top:20px;}
+.finding-box.critical{border-color:rgba(139,45,45,0.4);background:rgba(139,45,45,0.03);}
+.finding-box.amber{border-color:rgba(122,90,0,0.3);background:rgba(122,90,0,0.03);}
+.finding-box.positive{border-color:rgba(45,106,45,0.3);background:rgba(45,106,45,0.02);}
+.finding-label{font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:10px;}
+.finding-label.crit{color:var(--red);}
+.finding-label.amber{color:var(--amber);}
+.finding-label.green{color:var(--green);}
+.finding-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;margin-bottom:12px;}
+.finding-text{font-size:0.84rem;color:var(--gray);line-height:1.75;margin-bottom:12px;}
+.drift-compare{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:16px;}
+.dc-cell{background:var(--bg);padding:14px 16px;}
+.dc-label{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.dc-val{font-size:0.82rem;color:var(--ink);line-height:1.5;}
+.dc-val.wrong{color:var(--red);}
+.dc-val.ok{color:var(--green);}
+.dc-val.partial{color:var(--amber);}
+.remediation-list{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);margin-top:32px;}
+.rem-item{background:var(--bg);padding:24px 28px;display:grid;grid-template-columns:160px 1fr;gap:24px;}
+.rem-num{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);padding-top:4px;}
+.rem-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;margin-bottom:6px;}
+.rem-text{font-size:0.78rem;color:var(--gray);line-height:1.65;}
+.rem-impact{font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);margin-top:8px;}
+footer{padding:24px 5%;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;}
+.f-logo span{color:var(--gold);}
+.f-copy{font-size:0.55rem;letter-spacing:0.07em;text-transform:uppercase;color:rgba(107,104,96,0.4);}
+@media(max-width:768px){.report-hero{grid-template-columns:1fr;}.score-grid{grid-template-columns:repeat(2,1fr);}.drift-compare{grid-template-columns:repeat(2,1fr);}.meta-bar{flex-direction:column;}.meta-item{border-right:none;border-bottom:1px solid var(--border);}.rem-item{grid-template-columns:1fr;}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"Jimmy Fairly Semantic Audit","description":"2A Agency semantic audit of Jimmy Fairly. Score 77/100. Gemini invents B Corp certification (not held) and cites Experienced Capital as current investor (sold in 2021 — current investor is HLD). ChatGPT undervalues price by 40% and misspells co-founder name.","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"datePublished":"2026-04-01","url":"https://www.2aagency.com/reports/jimmy-fairly"}
+</script>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › Jimmy Fairly — Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Rapport d'Audit Sémantique · Optique DNVB · Paris · Fondée 2011</div>
+    <h1 class="report-brand">Jimmy Fairly</h1>
+    <p class="report-meta">
+      <strong>Audité par 2A Agency</strong> · Émis le 1er avril 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Avril 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num">77</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-label">Notaire</div><div class="meta-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-label">Date</div><div class="meta-val">1er avril 2026</div></div>
+  <div class="meta-item"><div class="meta-label">LLMs testés</div><div class="meta-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-label">Questions</div><div class="meta-val">5 standardisées</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Deux drifts Gemini critiques. <em>Un seul modèle concentre 80% des erreurs.</em></h2>
+  <p class="body-text">Jimmy Fairly obtient <strong>77/100</strong>. La marque est correctement représentée sur ses fondamentaux par Perplexity Pro et Grok — matériaux acétate RENEW, programme Buy One Give One, assemblage France, HLD investisseur depuis 2021. Les erreurs sont presque exclusivement concentrées sur Gemini, qui commet deux drifts critiques : une certification B Corp inventée et un investisseur périmé de 4 ans.</p>
+  <p class="body-text">ChatGPT ajoute deux drifts secondaires : sous-évaluation du prix de 40% et faute d'orthographe sur le nom du co-fondateur (Bostani vs Bostoni).</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Identité & Fondation</div><div class="score-card-num sc-amber">78</div></div>
+    <div class="score-card"><div class="score-card-label">Matériaux & RSE</div><div class="score-card-num sc-green">90</div></div>
+    <div class="score-card"><div class="score-card-label">Certifications</div><div class="score-card-num sc-red">55</div></div>
+    <div class="score-card"><div class="score-card-label">Prix</div><div class="score-card-num sc-amber">72</div></div>
+    <div class="score-card"><div class="score-card-label">Gouvernance & Capital</div><div class="score-card-num sc-red">58</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-amber">77</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fondateurs & date</td>
+        <td><span class="v-ok">✓</span> Chartier + Bostoni, 2011</td>
+        <td><span class="v-p">~</span> Chartier + Bostoni, <strong>2010</strong></td>
+        <td><span class="v-x">✗</span> Chartier + <strong>Bostani</strong>, <strong>2010</strong></td>
+        <td><span class="v-ok">✓</span> Chartier + Bostoni, 2011</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Matériaux & RSE</td>
+        <td><span class="v-ok">✓</span> Acétate RENEW + biosourcé, assemblage France</td>
+        <td><span class="v-ok">✓</span> Acétate biosourcé, Buy One Give One</td>
+        <td><span class="v-ok">✓</span> Acétate RENEW + titane japonais, France</td>
+        <td><span class="v-ok">✓</span> Acétate RENEW + titane, charnières OBE Allemagne</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Certifications (correct : aucune B Corp)</td>
+        <td><span class="v-ok">✓</span> Pas de B Corp — engagements RSE sans label global</td>
+        <td><span class="v-x">✗</span> <strong>B Corp inventée</strong></td>
+        <td><span class="v-ok">✓</span> Pas de B Corp confirmée</td>
+        <td><span class="v-ok">✓</span> Pas de B Corp — démarche RSE sans certification</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Prix (correct : 165€ paire complète)</td>
+        <td><span class="v-ok">✓</span> 165€ paire complète · montures 65€–150€</td>
+        <td><span class="v-p">~</span> 129€–179€ — fourchette montures seulement</td>
+        <td><span class="v-x">✗</span> <strong>99€</strong> — prix d'appel sans verres</td>
+        <td><span class="v-ok">✓</span> 165€ paire complète · montures 65€–150€</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Investisseur (correct : HLD depuis sept. 2021)</td>
+        <td><span class="v-ok">✓</span> HLD majoritaire depuis 2021</td>
+        <td><span class="v-x">✗</span> <strong>Experienced Capital</strong> — sorti en 2021</td>
+        <td><span class="v-ok">✓</span> HLD majoritaire depuis 2021</td>
+        <td><span class="v-ok">✓</span> HLD majoritaire depuis 2021</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Findings critiques</div>
+  <h2 class="section-title">Gemini concentre <em>les deux drifts les plus dangereux.</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label crit">Drift primaire · Certification B Corp · Gemini uniquement</div>
+    <h3 class="finding-title">Gemini certifie Jimmy Fairly B Corp. La marque ne l'est pas. Troisième cas documenté sur les DNVB engagées.</h3>
+    <p class="finding-text">Gemini répond : "Jimmy Fairly a franchi une étape majeure en obtenant la certification B Corp." C'est faux — Jimmy Fairly n'apparaît pas dans le registre B Lab. Perplexity, ChatGPT et Grok le confirment tous les trois. C'est le troisième cas de B Corp inventée par Gemini documenté dans le registre 2A Agency, après Respire et Typology. Le pattern est systématique sur les DNVB avec une communication RSE forte.</p>
+    <p class="finding-text"><strong>Impact :</strong> Un journaliste ou un investisseur qui interroge Gemini sur les certifications de Jimmy Fairly reçoit une information fausse. Si la marque ne corrige pas cette représentation dans les données structurées, le drift se perpétue à chaque mise à jour Gemini.</p>
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">Pas de B Corp ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">B Corp inventée ✗</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val ok">Pas de B Corp confirmée ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">Pas de B Corp ✓</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box critical" style="margin-top:16px;">
+    <div class="finding-label crit">Drift secondaire · Investisseur · Gemini uniquement</div>
+    <h3 class="finding-title">Gemini cite Experienced Capital comme investisseur actuel. HLD a racheté leurs parts en septembre 2021 — soit 4 ans de retard.</h3>
+    <p class="finding-text">Gemini répond : "Jimmy Fairly appartient majoritairement au fonds Experienced Capital." Experienced Capital a vendu sa participation en juillet 2021. HLD a finalisé l'acquisition le 28 septembre 2021 pour une valeur d'entreprise de 150M€. Perplexity, ChatGPT et Grok citent correctement HLD. Gemini utilise une information périmée de 4 ans.</p>
+    <p class="finding-text"><strong>Impact :</strong> Un candidat à une franchise, un fournisseur ou un investisseur qui interroge Gemini sur la gouvernance de Jimmy Fairly reçoit le mauvais nom d'investisseur. Dans un contexte de due diligence ou de partenariat commercial, cette erreur est directement préjudiciable.</p>
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">HLD 2021 ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">Experienced Capital ✗ (sorti 2021)</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val ok">HLD 2021 ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">HLD 2021 ✓</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift tertiaire · Prix · ChatGPT</div>
+    <h3 class="finding-title">ChatGPT cite une paire à 99€. Le prix officiel d'une paire complète est 165€.</h3>
+    <p class="finding-text">ChatGPT cite le modèle "The Elvie" à 99€ avec verres unifocaux. Le prix officiel 2026 sur jimmyfairly.com : paire complète à partir de 165€ (monture + verres simples). 99€ correspond à une ancienne offre promotionnelle ou à la monture seule sans verres. L'écart est de 40% sur le produit d'entrée de gamme — ce qui repositionne faussement Jimmy Fairly dans le segment ultra-accessible.</p>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift quaternaire · Nom fondateur · ChatGPT</div>
+    <h3 class="finding-title">ChatGPT écrit "Sacha Bostani" — orthographe correcte : Sacha Bostoni.</h3>
+    <p class="finding-text">Faute d'orthographe documentée sur le nom du co-fondateur. Une recherche nominative sur "Sacha Bostani" retourne des résultats erronés ou vides. Perplexity, Gemini et Grok orthographient correctement "Bostoni". Pattern identique à Grok sur "Marc Terlet" vs "Marc Briant-Terlet" (Horace) — les tronquages et fautes de noms composés sont fréquents sur ChatGPT.</p>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Point fort · Matériaux & RSE · 4 LLMs</div>
+    <h3 class="finding-title">Acétate RENEW, Buy One Give One, assemblage France — correctement cités sur tous les modèles.</h3>
+    <p class="finding-text">Les engagements matières de Jimmy Fairly sont bien représentés : acétate RENEW (60% recyclé + 40% biosourcé), titane japonais, charnières OBE Allemagne, assemblage France, programme Buy One Give One avec Restoring Vision (1 million de personnes aidées depuis 2011), électricité verte boutiques et ateliers. C'est la partie la mieux indexée du profil Jimmy Fairly dans les LLMs.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 77 à <em>pleinement certifié.</em></h2>
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Ancrer HLD comme investisseur actuel dans les données structurées</div>
+        <p class="rem-text">Déployer Schema.org <code>Organization</code> avec <code>investor</code> → HLD (depuis septembre 2021) sur jimmyfairly.com. La page About ou Investisseurs doit contenir ce balisage machine-readable. Gemini utilise des données de 2017 (entrée d'Experienced Capital) — le balisage Schema.org avec la date de l'opération HLD corrige ce drift dans le prochain cycle de crawl Gemini.</p>
+        <div class="rem-impact">Impact : Investisseur correct dans Gemini en 4-8 semaines · Due diligence et partenariats basés sur des données à jour</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2 — Cette semaine</div>
+      <div>
+        <div class="rem-title">Clarifier explicitement l'absence de B Corp dans les données structurées</div>
+        <p class="rem-text">Paradoxalement, la meilleure façon de corriger l'hallucination B Corp de Gemini est de déployer Schema.org avec les certifications réelles de Jimmy Fairly : acétate RENEW certifié recyclé, électricité verte, programme solidaire Restoring Vision. En rendant les vraies certifications machine-readable, on réduit la probabilité que Gemini "complète" le profil avec une B Corp inventée. Si Jimmy Fairly envisage la certification B Corp à terme, cette démarche prépare aussi le terrain.</p>
+        <div class="rem-impact">Impact : Gemini ne peut plus substituer une B Corp à des certifications réelles bien documentées</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 3 — Prix</div>
+      <div>
+        <div class="rem-title">Ancrer le prix officiel 165€ paire complète</div>
+        <p class="rem-text">Déployer Schema.org <code>Offer</code> avec <code>price: 165</code> et <code>description: "paire complète monture + verres unifocaux"</code> sur la page tarifs jimmyfairly.com. ChatGPT agrège des données de comparateurs et d'anciens articles qui citent des prix promotionnels ou des montures seules. Le balisage officiel prime sur ces sources secondaires.</p>
+        <div class="rem-impact">Impact : Prix 99€ ChatGPT corrigé vers 165€ officiel · Positionnement "luxe accessible" préservé sans sous-évaluation</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 4 — Opportunité agentique</div>
+      <div>
+        <div class="rem-title">Connecter le système de RDV Jimmy Fairly aux agents IA</div>
+        <p class="rem-text">Jimmy Fairly dispose d'un système de RDV en boutique et d'essayage virtuel. Quand un agent IA reçoit la requête "find me affordable premium eyewear in Paris with in-store appointment" — Jimmy Fairly répond à tous les critères mais ne peut pas être actionné directement. Un node 2A + connexion API permettrait à l'agent de réserver un RDV en boutique ou de lancer un essayage virtuel directement — sans redirection vers le site. Premier opticien DNVB avec un booking agentique certifié en Europe.</p>
+        <div class="rem-impact">Impact : Conversion directe depuis les agents IA · Avantage concurrentiel face à Warby Parker et Lunettes Pour Tous</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport d'Audit Sémantique — Jimmy Fairly · Avril 2026 · 2aagency.com/registry</div>
+</footer>
+</body>
+</html>
