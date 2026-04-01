@@ -1,0 +1,57 @@
+{
+  "brand": "BARNES International",
+  "node_id": "ba-1995",
+  "score": 86,
+  "audit_date": "2026-03-26",
+  "sector": "Luxury Real Estate",
+  "founders": ["Heidi Barnes"],
+  "founding_year": 1995,
+  "headquarters": "Paris, France",
+  "ownership": "Independent — fully independent from Sotheby's (confirmed across all 4 LLMs)",
+  "leadership": {
+    "president": "Thibault de Saint Vincent",
+    "dg": "Richard Tzipine"
+  },
+  "network": {
+    "agencies": 150,
+    "countries": 22
+  },
+  "services": [
+    "Real Estate",
+    "Art & Design",
+    "Yachting",
+    "Fine Wines",
+    "Classic Cars",
+    "Private Aviation",
+    "Concierge",
+    "Family Office"
+  ],
+  "hallucination_warnings": [
+    {
+      "llm": "gemini",
+      "field": "founding_year",
+      "incorrect_value": "1994",
+      "correct_value": "1995 — 1994 = London office opening, 1995 = official corporate creation Paris",
+      "severity": "low",
+      "commercial_impact": "Minor but documentable — Gemini systematically conflates earliest activity with official founding"
+    },
+    {
+      "llm": "multiple",
+      "field": "network_size",
+      "incorrect_value": "130 to 158 agencies depending on LLM",
+      "correct_value": "150 agencies in 22 countries (official 2026 BARNES communication)",
+      "severity": "low",
+      "commercial_impact": "Inconsistent network size for investors comparing BARNES with competitors"
+    },
+    {
+      "llm": "multiple",
+      "field": "listings",
+      "incorrect_value": "All 4 LLMs cite specific unverifiable property listings",
+      "correct_value": "Listings change daily — no static listing should be cited as current",
+      "severity": "medium",
+      "commercial_impact": "Buyers contact BARNES for properties that may not exist or have sold"
+    }
+  ],
+  "source_url": "https://www.2aagency.com/reports/barnes",
+  "registry_url": "https://www.2aagency.com/registry/barnes"
+}

@@ -1,0 +1,24 @@
+{
+  "brand": "Asphalte",
+  "node_id": "as-2015",
+  "score": 82,
+  "audit_date": "2026-03-18",
+  "sector": "Mode DNVB",
+  "founders": ["William Hauvette"],
+  "founding_year": 2015,
+  "headquarters": "Paris, France",
+  "ownership": "Independent DNVB — direct-to-consumer only",
+  "model": "Pre-order model — collections produced only after customer orders placed",
+  "hallucination_warnings": [
+    {
+      "llm": "multiple",
+      "field": "founders",
+      "incorrect_value": "William Hauvette and Rodolphe Gardies listed as co-founders",
+      "correct_value": "Asphalte founded by William Hauvette. Rodolphe Gardies is CBO (Chief Business Officer) — not co-founder",
+      "severity": "medium",
+      "commercial_impact": "Misrepresents company structure and founding narrative — relevant for investors and journalists"
+    }
+  ],
+  "source_url": "https://www.2aagency.com/reports/asphalte",
+  "registry_url": "https://www.2aagency.com/registry/asphalte"
+}
