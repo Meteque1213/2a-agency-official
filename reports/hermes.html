@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hermès — Rapport d'Audit Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Hermès. Score 91/100 — meilleur score du registre. Hermès est la référence absolue de la documentation structurée pour les LLMs. Finance.hermes.com domine tous les modèles.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/hermes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F4EE;--surface:#EDEAE3;--ink:#111111;--gold:#B08D57;--border:rgba(176,141,87,0.22);--gray:#6B6860;--red:#8B2D2D;--green:#2D6A2D;--amber:#7A5A00;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:'DM Mono',monospace;line-height:1.6;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 5%;border-bottom:1px solid var(--border);background:rgba(247,244,238,0.96);backdrop-filter:blur(8px);position:sticky;top:0;z-index:100;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--ink);text-decoration:none;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:24px;}
+.nav-link{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);text-decoration:none;}
+.nav-link:hover{color:var(--gold);}
+.breadcrumb{padding:14px 5%;font-size:0.62rem;letter-spacing:0.1em;color:var(--gray);border-bottom:1px solid var(--border);}
+.breadcrumb a{color:var(--gray);text-decoration:none;}
+.report-hero{padding:56px 5% 40px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start;}
+.eyebrow{font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.report-brand{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,4rem);font-weight:300;line-height:1.05;margin-bottom:10px;}
+.report-meta{font-size:0.7rem;color:var(--gray);line-height:1.8;}
+.report-meta strong{color:var(--ink);}
+.score-circle{text-align:center;min-width:100px;}
+.score-num{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;color:var(--green);line-height:1;}
+.score-denom{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);}
+.meta-bar{display:flex;border:1px solid var(--border);margin:0 5%;}
+.meta-item{flex:1;padding:14px 18px;border-right:1px solid var(--border);}
+.meta-item:last-child{border-right:none;}
+.meta-label{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.meta-val{font-size:0.78rem;color:var(--ink);}
+section{padding:56px 5%;border-bottom:1px solid var(--border);}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;line-height:1.1;margin-bottom:18px;}
+.section-title em{font-style:italic;color:var(--gold);}
+.body-text{font-size:0.86rem;color:var(--gray);line-height:1.8;max-width:680px;margin-bottom:16px;}
+.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:32px;}
+.score-card{background:var(--bg);padding:24px 20px;}
+.score-card-label{font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);margin-bottom:8px;}
+.score-card-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;line-height:1;}
+.sc-green{color:var(--green);}.sc-amber{color:var(--amber);}.sc-red{color:var(--red);}
+.matrix-table{width:100%;border-collapse:collapse;margin-top:32px;font-size:0.73rem;}
+.matrix-table th{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);padding:10px 12px;text-align:left;border-bottom:2px solid var(--ink);}
+.matrix-table td{padding:11px 12px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.matrix-table tr:hover td{background:var(--surface);}
+.v-ok{color:var(--green);}.v-p{color:var(--amber);}.v-x{color:var(--red);}
+.tag{font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 9px;border:1px solid;display:inline-block;}
+.tag-ok{color:var(--green);border-color:rgba(45,106,45,0.3);}
+.tag-low{color:var(--amber);border-color:rgba(122,90,0,0.3);}
+.tag-crit{color:var(--red);border-color:rgba(139,45,45,0.3);}
+.finding-box{border:1px solid var(--border);padding:28px;margin-top:20px;}
+.finding-box.positive{border-color:rgba(45,106,45,0.3);background:rgba(45,106,45,0.02);}
+.finding-box.amber{border-color:rgba(122,90,0,0.3);background:rgba(122,90,0,0.03);}
+.finding-label{font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:10px;}
+.finding-label.green{color:var(--green);}
+.finding-label.amber{color:var(--amber);}
+.finding-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;margin-bottom:12px;}
+.finding-text{font-size:0.84rem;color:var(--gray);line-height:1.75;margin-bottom:12px;}
+.context-box{border:1px solid var(--border);padding:24px;margin-top:24px;background:var(--surface);}
+.context-label{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.remediation-list{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);margin-top:32px;}
+.rem-item{background:var(--bg);padding:24px 28px;display:grid;grid-template-columns:160px 1fr;gap:24px;}
+.rem-num{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);padding-top:4px;}
+.rem-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;margin-bottom:6px;}
+.rem-text{font-size:0.78rem;color:var(--gray);line-height:1.65;}
+.rem-impact{font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);margin-top:8px;}
+footer{padding:24px 5%;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;}
+.f-logo span{color:var(--gold);}
+.f-copy{font-size:0.55rem;letter-spacing:0.07em;text-transform:uppercase;color:rgba(107,104,96,0.4);}
+@media(max-width:768px){.report-hero{grid-template-columns:1fr;}.score-grid{grid-template-columns:repeat(2,1fr);}.meta-bar{flex-direction:column;}.meta-item{border-right:none;border-bottom:1px solid var(--border);}.rem-item{grid-template-columns:1fr;}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"Hermès Semantic Audit","description":"2A Agency semantic audit of Hermès International. Score 91/100 — highest in the registry. Hermès is the benchmark for structured data documentation. Finance.hermes.com dominates all LLMs. Minor drifts: artisan count range (4300-7000), ChatGPT Birkin price range vs precise 9600€.","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"datePublished":"2026-04-01","url":"https://www.2aagency.com/reports/hermes","license":"https://creativecommons.org/licenses/by/4.0/"}
+</script>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › Hermès — Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Rapport d'Audit Sémantique · Luxe / Maroquinerie · Paris · Fondée 1837</div>
+    <h1 class="report-brand">Hermès</h1>
+    <p class="report-meta">
+      <strong>Audité par 2A Agency</strong> · Émis le 1er avril 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Avril 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num">91</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-label">Notaire</div><div class="meta-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-label">Date</div><div class="meta-val">1er avril 2026</div></div>
+  <div class="meta-item"><div class="meta-label">LLMs testés</div><div class="meta-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-label">Questions</div><div class="meta-val">5 standardisées</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Meilleur score du registre. <em>La référence absolue.</em></h2>
+  <p class="body-text">Hermès obtient <strong>91/100</strong> — le score le plus élevé du registre 2A Agency, toutes catégories confondues. C'est la première marque du registre où les 4 LLMs convergent sur presque tous les faits clés : direction (Axel Dumas, 6e génération), gouvernance (SCA, H51 ~66.7%), artisanat (un artisan / un sac, 15-20h de travail), fabrication 100% France, indépendance totale.</p>
+  <p class="body-text">La raison est structurelle : Hermès publie des rapports annuels détaillés sur <strong>finance.hermes.com</strong>, un CSR Brief annuel, des données certifiées par des tiers (SBTi, CDP note A). Ces sources dominent tous les LLMs. C'est le benchmark que toutes les autres marques du registre devraient imiter.</p>
+
+  <div class="context-box">
+    <div class="context-label">Pourquoi Hermès domine les LLMs — la leçon pour toutes les marques</div>
+    <p style="font-size:0.82rem;color:var(--gray);line-height:1.75;">Hermès ne fait pas de SEO au sens traditionnel. Elle publie des données structurées de qualité institutionnelle depuis des années : Document d'Enregistrement Universel (DEU), rapports RSE avec chiffres audités, finance.hermes.com avec sections dédiées par métrique. Résultat : les LLMs qui crawlent ces sources trouvent des données cohérentes, précises et récentes. Pas de conjecture, pas d'interpolation. <strong>La documentation structurée est le vrai produit de 2A Agency — Hermès en est la preuve par l'exemple.</strong></p>
+  </div>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Direction & Gouvernance</div><div class="score-card-num sc-green">97</div></div>
+    <div class="score-card"><div class="score-card-label">Fabrication & Artisanat</div><div class="score-card-num sc-green">88</div></div>
+    <div class="score-card"><div class="score-card-label">RSE & Certifications</div><div class="score-card-num sc-green">93</div></div>
+    <div class="score-card"><div class="score-card-label">Prix produits phares</div><div class="score-card-num sc-green">85</div></div>
+    <div class="score-card"><div class="score-card-label">Indépendance & Capital</div><div class="score-card-num sc-green">96</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-green">91</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Convergence exceptionnelle sur <em>4 grands modèles.</em></h2>
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Direction & structure familiale</td>
+        <td><span class="v-ok">✓</span> Axel Dumas, 6e génération, SCA, H51 66.7%</td>
+        <td><span class="v-ok">✓</span> Axel Dumas, SCA, H51, branches Dumas/Guerrand/Puech</td>
+        <td><span class="v-ok">✓</span> Axel Dumas, H51, SCA anti-OPA</td>
+        <td><span class="v-ok">✓</span> Axel Dumas, Pierre-Alexis Dumas DA, Henri-Louis Bauer co-gérant</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Fabrication & artisans</td>
+        <td><span class="v-ok">✓</span> 60-63 sites, 25185 employés 2024, 15556 en France</td>
+        <td><span class="v-ok">✓</span> 24 maroquineries, 7000 artisans, "un homme un sac"</td>
+        <td><span class="v-p">~</span> ~60 sites, ~7000 artisans — chiffres corrects mais moins précis</td>
+        <td><span class="v-p">~</span> 20+ ateliers, 4300-7000 artisans — fourchette large</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>RSE & certifications</td>
+        <td><span class="v-ok">✓</span> SBTi ✓ · CDP note A 2024 ✓ · WWF France ✓</td>
+        <td><span class="v-ok">✓</span> SBTi ✓ · EPV ✓ · 200k réparations/an ✓</td>
+        <td><span class="v-ok">✓</span> SBTi ✓ · SA 8000 · ISO 45001 · traçabilité ✓</td>
+        <td><span class="v-ok">✓</span> EPV ✓ · MOF ✓ · Livelihoods ✓ · SBTi ✓</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Prix Birkin 25 (correct : 9600€)</td>
+        <td><span class="v-ok">✓</span> Birkin 25 : 9600€ / 13500$ ✓ exact</td>
+        <td><span class="v-ok">✓</span> Birkin 25 : 9600€ · Birkin 35 : 11600€ ✓</td>
+        <td><span class="v-p">~</span> 9000€–12000€ — fourchette, pas de prix précis</td>
+        <td><span class="v-ok">✓</span> Birkin 25 : 9600€ · Birkin 30 : 10600€ ✓</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Indépendance & actionnariat</td>
+        <td><span class="v-ok">✓</span> Indépendante · H51 66.7% · BlackRock 1.7% · Vanguard 1.4%</td>
+        <td><span class="v-ok">✓</span> Indépendante · LVMH sorti 2014 · famille 67%</td>
+        <td><span class="v-ok">✓</span> Indépendante · famille majoritaire · SCA protectrice</td>
+        <td><span class="v-ok">✓</span> Indépendante · H51 66.7% · Nicolas Puech ~4-5%</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Findings</div>
+  <h2 class="section-title">Deux drifts mineurs. <em>Une leçon de documentation.</em></h2>
+
+  <div class="finding-box positive">
+    <div class="finding-label green">Point fort majeur · Convergence 4 LLMs · Direction & Indépendance</div>
+    <h3 class="finding-title">Hermès est la seule marque du registre où les 4 LLMs convergent sur la gouvernance, l'actionnariat et l'histoire de l'indépendance face à LVMH.</h3>
+    <p class="finding-text">Axel Dumas (6e génération, depuis 2013), structure SCA, holding H51 (~66.7% du capital, plus de 76% des droits de vote), branches familiales Dumas/Guerrand/Puech, indépendance totale — tous les modèles sont corrects et cohérents. Gemini mentionne même spontanément la tentative de rachat par LVMH et son échec en 2014. C'est la couverture LLM la plus complète et la plus précise du registre.</p>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift mineur 1 · Nombre d'artisans · Fourchette large</div>
+    <h3 class="finding-title">Les 4 LLMs citent des chiffres différents sur les artisans : de 4300 à 7000 selon les modèles.</h3>
+    <p class="finding-text">Perplexity cite 25185 employés dont 15556 en France (données DEU 2024). Gemini cite 7000 artisans. Grok donne une fourchette 4300-7000. ChatGPT dit "plusieurs milliers". La confusion vient de la définition : le chiffre 7000 concerne les artisans selliers-maroquiniers spécifiquement, le chiffre 26000+ concerne tous les collaborateurs Hermès worldwide. Aucun modèle n'est faux — ils mesurent des périmètres différents sans le préciser.</p>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift mineur 2 · Prix Birkin · ChatGPT fourchette vs prix précis</div>
+    <h3 class="finding-title">ChatGPT donne une fourchette 9000€–12000€ — les 3 autres LLMs citent 9600€ précisément pour le Birkin 25 Togo.</h3>
+    <p class="finding-text">9000€–12000€ est une fourchette correcte mais imprécise. Le prix officiel 2026 du Birkin 25 en cuir Togo ou Swift est 9600€ — un prix documenté sur pursebop.com et corroboré par Perplexity, Gemini et Grok. ChatGPT agrège des fourchettes au lieu de citer le prix spécifique. Dans un contexte de fraude sémantique (offre à 6000€ sur une Birkin), une fourchette large est moins efficace qu'un prix certifié précis pour bloquer une transaction suspecte.</p>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Benchmark · Documentation structurée · Le modèle à suivre</div>
+    <h3 class="finding-title">Hermès est la preuve que la documentation structurée de qualité institutionnelle est le seul moyen fiable d'ancrer une marque dans les LLMs.</h3>
+    <p class="finding-text">Finance.hermes.com, Document d'Enregistrement Universel annuel, CSR Brief, rapports SBTi — Hermès publie des données auditées par des tiers, structurées, régulièrement mises à jour. Résultat : 91/100, quasi zéro drift, convergence 4 modèles. C'est exactement ce que 2A Agency réplique pour les marques qui ne disposent pas des ressources d'une maison de 9 milliards d'euros de chiffre d'affaires : un Registry Node certifié qui joue le rôle de finance.hermes.com pour chaque marque auditée.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 91 à <em>100/100.</em></h2>
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1</div>
+      <div>
+        <div class="rem-title">Ancrer le prix Birkin 25 à 9600€ dans Schema.org</div>
+        <p class="rem-text">Déployer Schema.org <code>Product</code> + <code>Offer</code> avec <code>price: 9600</code> et <code>priceCurrency: EUR</code> pour le Birkin 25 Togo sur hermes.com. ChatGPT passerait d'une fourchette imprécise à un prix certifié — critique pour la détection de fraudes sémantiques sur le marché secondaire.</p>
+        <div class="rem-impact">Impact : Prix précis Birkin dans ChatGPT · Seuil anti-fraude activable via MCP 2A Agency</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2 — Agentique</div>
+      <div>
+        <div class="rem-title">Connecter le catalogue Hermès au MCP 2A Agency</div>
+        <p class="rem-text">Hermès est la marque idéale pour déployer le cas d'usage anti-fraude le plus fort du registre. Une offre de Birkin 25 à 3000€ sur un site parallèle — un agent IA connecté au MCP 2A Agency bloque la transaction immédiatement en citant le prix certifié 9600€ et le seuil d'alerte. Même logique que Breitling, avec des montants 5x plus élevés et un marché de la contrefaçon beaucoup plus actif. Premier cas d'usage anti-fraude pour le luxe parisien.</p>
+        <div class="rem-impact">Impact : Protection anti-fraude Birkin · Cas d'usage le plus fort du registre pour le pitch LVMH/Richemont</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 3</div>
+      <div>
+        <div class="rem-title">Clarifier le périmètre artisans — un chiffre canonique</div>
+        <p class="rem-text">Hermès devrait déployer Schema.org avec deux chiffres distincts et explicites : (1) effectif total worldwide (~26000 collaborateurs) et (2) artisans selliers-maroquiniers France (~7000). La confusion actuelle vient de l'absence de distinction dans les communications publiques. Un balisage Schema.org clair élimine la fourchette 4300-7000 qui circule dans les LLMs.</p>
+        <div class="rem-impact">Impact : Chiffre artisans cohérent sur les 4 LLMs · Score 91 → 95+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport d'Audit Sémantique — Hermès · Avril 2026 · 2aagency.com/registry</div>
+</footer>
+</body>
+</html>
