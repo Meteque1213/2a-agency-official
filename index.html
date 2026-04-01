@@ -155,6 +155,21 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
 .mcp-endpoint-label { font-size: 0.56rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); min-width: 80px; flex-shrink: 0; }
 .mcp-endpoint-url { color: var(--gold); font-family: 'DM Mono', monospace; word-break: break-all; }
 
+.offer-levels { margin-top: 40px; border: 1px solid var(--border); }
+.offer-level { display: grid; grid-template-columns: 80px 1fr; align-items: start; border-bottom: 1px solid var(--border); }
+.offer-level:last-child { border-bottom: none; }
+.offer-level-num { padding: 28px 22px; border-right: 1px solid var(--border); }
+.offer-level-n { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; color: var(--border); line-height: 1; }
+.offer-level-body { padding: 28px 28px; }
+.offer-level-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 300; color: var(--ink); margin-bottom: 7px; }
+.offer-level-desc { font-size: 0.76rem; color: var(--gray); line-height: 1.7; }
+.offer-level-new { background: var(--ink); }
+.offer-level-new .offer-level-num { border-right-color: rgba(176,141,87,0.22); }
+.offer-level-new .offer-level-n { color: rgba(176,141,87,0.3); }
+.offer-level-new .offer-level-title { color: var(--gold); }
+.offer-level-new .offer-level-desc { color: rgba(247,244,238,0.55); }
+.offer-new-badge { font-size: 0.5rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 2px 8px; border: 1px solid var(--gold); color: var(--gold); display: inline-block; margin-left: 10px; vertical-align: middle; position: relative; top: -2px; }
+
 @media(max-width:768px){
   .hero,.ucp-cols,.eu-cols{grid-template-columns:1fr}
   .problem-grid,.steps,.mcp-tools{grid-template-columns:1fr}
@@ -517,6 +532,51 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
     <div class="mcp-endpoint-row">
       <span class="mcp-endpoint-label">Discovery</span>
       <span class="mcp-endpoint-url">https://www.2aagency.com/.well-known/mcp.json</span>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER LEVELS -->
+<section id="offer">
+  <div class="eyebrow">Notre offre</div>
+  <h2 class="section-title">Cinq niveaux d'<em>engagement</em></h2>
+  <p class="body-text">De l'audit ponctuel à l'action agentique complète — chaque niveau s'appuie sur le précédent.</p>
+
+  <div class="offer-levels">
+    <div class="offer-level">
+      <div class="offer-level-num"><div class="offer-level-n">01</div></div>
+      <div class="offer-level-body">
+        <div class="offer-level-title">Audit Sémantique</div>
+        <p class="offer-level-desc">Nous documentons ce que les LLMs disent de votre marque et mesurons l'écart avec la réalité.</p>
+      </div>
+    </div>
+    <div class="offer-level">
+      <div class="offer-level-num"><div class="offer-level-n">02</div></div>
+      <div class="offer-level-body">
+        <div class="offer-level-title">Certification du Node</div>
+        <p class="offer-level-desc">Nous certifions vos données officielles dans un Registry Node interrogeable par tous les agents IA.</p>
+      </div>
+    </div>
+    <div class="offer-level">
+      <div class="offer-level-num"><div class="offer-level-n">03</div></div>
+      <div class="offer-level-body">
+        <div class="offer-level-title">Connexion MCP</div>
+        <p class="offer-level-desc">Nous déployons votre node dans notre serveur MCP — le standard adopté par Anthropic, Google et OpenAI.</p>
+      </div>
+    </div>
+    <div class="offer-level offer-level-new">
+      <div class="offer-level-num"><div class="offer-level-n">04</div></div>
+      <div class="offer-level-body">
+        <div class="offer-level-title">Action Agentique <span class="offer-new-badge">Nouveau</span></div>
+        <p class="offer-level-desc">Nous connectons votre API à notre infrastructure. Les agents IA peuvent agir pour vous — réserver, commander, valider — sans intervention humaine.</p>
+      </div>
+    </div>
+    <div class="offer-level">
+      <div class="offer-level-num"><div class="offer-level-n">05</div></div>
+      <div class="offer-level-body">
+        <div class="offer-level-title">Monitoring Continu</div>
+        <p class="offer-level-desc">Nous surveillons chaque mise à jour LLM et alertons dès qu'un drift est détecté sur votre marque.</p>
+      </div>
     </div>
   </div>
 </section>
