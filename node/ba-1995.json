@@ -4,7 +4,9 @@
   "score": 86,
   "audit_date": "2026-03-26",
   "sector": "Luxury Real Estate",
-  "founders": ["Heidi Barnes"],
+  "founders": [
+    "Heidi Barnes"
+  ],
   "founding_year": 1995,
   "headquarters": "Paris, France",
   "ownership": "Independent — fully independent from Sotheby's (confirmed across all 4 LLMs)",
@@ -53,5 +55,12 @@
     }
   ],
   "source_url": "https://www.2aagency.com/reports/barnes",
-  "registry_url": "https://www.2aagency.com/registry/barnes"
+  "registry_url": "https://www.2aagency.com/registry/barnes",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 86,
+    "dateRated": "2026-03-26"
+  }
 }

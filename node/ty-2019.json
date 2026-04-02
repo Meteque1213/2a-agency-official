@@ -4,7 +4,9 @@
   "score": 88,
   "audit_date": "2026-03-31",
   "sector": "Clean Beauty / DNVB",
-  "founders": ["Ning Li"],
+  "founders": [
+    "Ning Li"
+  ],
   "founding_year": 2019,
   "headquarters": "Paris, France (11e arr.)",
   "certifications": {
@@ -18,12 +20,12 @@
   "manufacturing": "100% France — R&D Paris 11e. Fabrication : Bergerac, Aix-en-Provence, Compiègne. Logistique : Combs-la-Ville (Île-de-France).",
   "formulation": "Minimaliste — moins de 20 ingrédients. 95%+ d'origine naturelle (ISO 16128). Sans silicones, parabènes, sulfates, huiles minérales, parfums synthétiques.",
   "flagship_price": {
-    "creme_9_ingredients_D41_50ml": 22.50,
-    "serum_eclat_vitamine_c_L32": 17.90,
-    "serum_unifiant_niacinamide_L36": 18.50,
-    "gel_nettoyant_exfoliant_L13_150ml": 23.50,
-    "creme_jour_spf50_A51": 39.90,
-    "serum_hydratant_A31": 19.50
+    "creme_9_ingredients_D41_50ml": 22.5,
+    "serum_eclat_vitamine_c_L32": 17.9,
+    "serum_unifiant_niacinamide_L36": 18.5,
+    "gel_nettoyant_exfoliant_L13_150ml": 23.5,
+    "creme_jour_spf50_A51": 39.9,
+    "serum_hydratant_A31": 19.5
   },
   "hallucination_warnings": [
     {
@@ -44,5 +46,12 @@
     }
   ],
   "source_url": "https://www.2aagency.com/reports/typology",
-  "registry_url": "https://www.2aagency.com/registry/typology"
+  "registry_url": "https://www.2aagency.com/registry/typology",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 88,
+    "dateRated": "2026-03-31"
+  }
 }

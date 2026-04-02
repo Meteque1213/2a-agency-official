@@ -87,11 +87,14 @@
   "registry_url": "https://www.2aagency.com/registry/hermes",
   "mcp_endpoint": "https://www.2aagency.com/api/mcp",
   "reference_source": "finance.hermes.com — Document d'Enregistrement Universel + CSR Brief annuel",
-  "2aAudit": {
+  "2aRating": {
     "score": 91,
     "date": "2026-04-01",
     "auditor": "2A Agency",
     "methodology": "4 LLMs x 5 questions standardisées",
-    "benchmark_note": "Meilleur score du registre 2A Agency. Hermès est la référence absolue de la documentation structurée — finance.hermes.com domine tous les LLMs."
+    "benchmark_note": "Meilleur score du registre 2A Agency. Hermès est la référence absolue de la documentation structurée — finance.hermes.com domine tous les LLMs.",
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées"
   }
 }

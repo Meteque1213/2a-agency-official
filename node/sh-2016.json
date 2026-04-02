@@ -4,10 +4,16 @@
   "score": 84,
   "audit_date": "2026-03-26",
   "sector": "Real Estate Media / PropTech",
-  "founders": ["Jeremy Teper"],
+  "founders": [
+    "Jeremy Teper"
+  ],
   "founding_year": 2016,
   "headquarters": "Paris, France",
-  "markets": ["France", "USA (New York)", "Europe (London, Lisbon)"],
+  "markets": [
+    "France",
+    "USA (New York)",
+    "Europe (London, Lisbon)"
+  ],
   "services": {
     "photography_ht": 75,
     "video_ht": 280,
@@ -30,5 +36,12 @@
     }
   ],
   "source_url": "https://www.2aagency.com/reports/shoootin",
-  "registry_url": "https://www.2aagency.com/registry/shoootin"
+  "registry_url": "https://www.2aagency.com/registry/shoootin",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 84,
+    "dateRated": "2026-03-26"
+  }
 }

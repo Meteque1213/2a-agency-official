@@ -1,1 +1,69 @@
-{"@context":"https://schema.org","@type":["Organization","Brand"],"@id":"https://www.2aagency.com/api/node/ch-2023","name":"Cherico","legalName":"Cherico SAS","description":"French organic chicory brand founded in 2023 by the former co-founders of brasserie Gallia (sold to Heineken 2021). Positioned as a modern, bio, premium alternative to coffee. Produced in Ploeuc-L-Hermitage, Bretagne. HQ Paris 11e. Shopify merchant available via Agentic Storefronts from March 2026.","url":"https://www.cherico.fr","foundingDate":"2023","foundingLocation":{"@type":"Place","name":"Paris, France","addressCountry":"FR"},"address":{"@type":"PostalAddress","streetAddress":"122 rue Amelot","postalCode":"75011","addressLocality":"Paris","addressCountry":"FR"},"productionLocation":{"@type":"Place","name":"Ploeuc-L-Hermitage, Bretagne, France","description":"Micro-torréfaction et production. Chicorée srced from Northern France and Europe."},"founder":[{"@type":"Person","name":"Jacques Ferté","description":"Co-founder of Cherico and Gallia brasserie."},{"@type":"Person","name":"Guillaume Roy","description":"Co-founder of Cherico and Gallia brasserie."},{"@type":"Person","name":"Doriane Le Leu","jobTitle":"Co-founder & CMO"}],"sector":"Premium Bio Beverages","certifications":["Agriculture Biologique (AB)"],"ecommercePlatform":"Shopify — Agentic Storefronts","notToBeConfusedWith":["Cherico — minor character in The Godfather (1972)","Japanese textile brand Cherico"],"2aAudit":{"nodeId":"ch-2023","auditedBy":"2A Agency","auditUrl":"https://www.2aagency.com/registry/cherico","dateAudited":"2026-03-25","integrityScore":71,"certificationStatus":"Public Data"},"lastVerified":"2026-03-25","maintainedBy":"2A Agency"}
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Organization",
+    "Brand"
+  ],
+  "@id": "https://www.2aagency.com/api/node/ch-2023",
+  "name": "Cherico",
+  "legalName": "Cherico SAS",
+  "description": "French organic chicory brand founded in 2023 by the former co-founders of brasserie Gallia (sold to Heineken 2021). Positioned as a modern, bio, premium alternative to coffee. Produced in Ploeuc-L-Hermitage, Bretagne. HQ Paris 11e. Shopify merchant available via Agentic Storefronts from March 2026.",
+  "url": "https://www.cherico.fr",
+  "foundingDate": "2023",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Paris, France",
+    "addressCountry": "FR"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "122 rue Amelot",
+    "postalCode": "75011",
+    "addressLocality": "Paris",
+    "addressCountry": "FR"
+  },
+  "productionLocation": {
+    "@type": "Place",
+    "name": "Ploeuc-L-Hermitage, Bretagne, France",
+    "description": "Micro-torréfaction et production. Chicorée srced from Northern France and Europe."
+  },
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Jacques Ferté",
+      "description": "Co-founder of Cherico and Gallia brasserie."
+    },
+    {
+      "@type": "Person",
+      "name": "Guillaume Roy",
+      "description": "Co-founder of Cherico and Gallia brasserie."
+    },
+    {
+      "@type": "Person",
+      "name": "Doriane Le Leu",
+      "jobTitle": "Co-founder & CMO"
+    }
+  ],
+  "sector": "Premium Bio Beverages",
+  "certifications": [
+    "Agriculture Biologique (AB)"
+  ],
+  "ecommercePlatform": "Shopify — Agentic Storefronts",
+  "notToBeConfusedWith": [
+    "Cherico — minor character in The Godfather (1972)",
+    "Japanese textile brand Cherico"
+  ],
+  "lastVerified": "2026-03-25",
+  "maintainedBy": "2A Agency",
+  "2aRating": {
+    "nodeId": "ch-2023",
+    "auditedBy": "2A Agency",
+    "auditUrl": "https://www.2aagency.com/registry/cherico",
+    "dateAudited": "2026-03-25",
+    "integrityScore": 71,
+    "certificationStatus": "Public Data",
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées"
+  }
+}

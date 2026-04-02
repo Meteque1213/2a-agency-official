@@ -1,15 +1,23 @@
 {
   "@context": "https://schema.org",
-  "@type": ["Organization", "Brand"],
+  "@type": [
+    "Organization",
+    "Brand"
+  ],
   "@id": "https://www.2aagency.com/api/node/vb-1996",
-
   "name": "Vanessa Bruno",
   "legalName": "SOLUNE SAS",
-  "alternateName": ["Vanessa Bruno Paris", "Groupe Vanessa Bruno"],
+  "alternateName": [
+    "Vanessa Bruno Paris",
+    "Groupe Vanessa Bruno"
+  ],
   "description": "French accessible luxury fashion house founded in Paris in 1996. Known for the iconic Cabas tote bag with sequin bands, launched in 1996. Bohème chic Parisian style. Premium prêt-à-porter féminin.",
   "url": "https://www.vanessabruno.com",
   "foundingDate": "1996",
-  "foundingLocation": { "@type": "Place", "name": "Paris, France" },
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Paris, France"
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "8 rue de la Pierre Levée",
@@ -21,28 +29,40 @@
     "https://www.wikidata.org/wiki/Q3553229",
     "https://www.vanessabruno.com"
   ],
-
   "legalStatus": {
     "name": "Procédure de sauvegarde",
     "description": "SOLUNE SAS placed under procédure de sauvegarde by Tribunal des Affaires Économiques de Paris on 6 October 2025. Preceded by conciliation procedure in June 2025. Company continues to operate normally and present collections.",
     "startDate": "2025-10-06",
     "jurisdiction": "Tribunal des Affaires Économiques de Paris",
-    "sources": ["L'Informé 2025-10-16", "FashionNetwork 2025-10-17"]
+    "sources": [
+      "L'Informé 2025-10-16",
+      "FashionNetwork 2025-10-17"
+    ]
   },
-
   "founder": {
     "@type": "Person",
     "name": "Vanessa Bruno",
     "birthName": "Virginie Vanessa Bruno",
     "birthDate": "1967",
     "birthPlace": "Boulogne-Billancourt, France",
-    "nationality": ["French", "Danish"],
+    "nationality": [
+      "French",
+      "Danish"
+    ],
     "jobTitle": "Directrice Artistique — Présidente SOLUNE SAS",
     "description": "French-Danish fashion designer. Began career as a model. Worked at Dorothée Bis and Michel Klein. Founded her brand in 1996 in Paris.",
-    "verifiedFacts": ["Former model", "Worked at Dorothée Bis", "Worked at Michel Klein", "Founded brand 1996", "Majority shareholder SOLUNE SAS"],
-    "llmHallucinations": ["Singer and actress before fashion — NOT VERIFIED", "Father founded Emmanuelle Khanh — NOT VERIFIED, precise role unconfirmed"]
+    "verifiedFacts": [
+      "Former model",
+      "Worked at Dorothée Bis",
+      "Worked at Michel Klein",
+      "Founded brand 1996",
+      "Majority shareholder SOLUNE SAS"
+    ],
+    "llmHallucinations": [
+      "Singer and actress before fashion — NOT VERIFIED",
+      "Father founded Emmanuelle Khanh — NOT VERIFIED, precise role unconfirmed"
+    ]
   },
-
   "ownershipStructure": {
     "majorityOwner": "Vanessa Bruno — artistic director + majority shareholder via SOLUNE SAS",
     "minorityShareholder1": "Henri Sebaoun — Directeur Général, minority stake since 2019, former PDG Carven",
@@ -50,17 +70,19 @@
     "registrationNumber": "RCS Paris 823863113",
     "legalForm": "SAS",
     "capitalSocial": "3827400 EUR",
-    "notPartOf": ["LVMH", "Kering", "Richemont", "Swatch Group"]
+    "notPartOf": [
+      "LVMH",
+      "Kering",
+      "Richemont",
+      "Swatch Group"
+    ]
   },
-
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Vanessa Bruno — Catalogue complet Mars 2026",
     "lastVerified": "2026-03-24",
     "source": "vanessabruno.com",
-
     "itemListElement": [
-
       {
         "@type": "OfferCatalog",
         "name": "Cabas — Collection Signature",
@@ -68,266 +90,894 @@
         "launchYear": "1996",
         "madeIn": "France",
         "itemListElement": [
-          {"@type": "Offer", "name": "Cabas L Zippé En Toile", "price": "195", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Cabas M Zippé En Toile", "price": "180", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Cabas S Zippé En Toile", "price": "140", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Cabas XS En Toile", "price": "130", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Pochette Zippée En Toile", "price": "115", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Trousse Écolier En Toile", "price": "75", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Trousse En Toile À Sequins", "price": "95", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Porte-Monnaie En Toile", "price": "50", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Cabas L Zippé En Toile",
+            "price": "195",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Cabas M Zippé En Toile",
+            "price": "180",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Cabas S Zippé En Toile",
+            "price": "140",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Cabas XS En Toile",
+            "price": "130",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Pochette Zippée En Toile",
+            "price": "115",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Trousse Écolier En Toile",
+            "price": "75",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Trousse En Toile À Sequins",
+            "price": "95",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Porte-Monnaie En Toile",
+            "price": "50",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Sacs — Collection Moon",
         "description": "Moon is the house's main leather bag family. Available in Grand, Moyen, Petit formats. Multiple materials: cuir lisse, cuir nubuck, cuir tressé, lin, denim, jacquard.",
         "itemListElement": [
-          {"@type": "Offer", "name": "Grand Sac Moon En Cuir", "price": "455", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Moyen Sac Moon En Cuir", "price": "395", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Moon En Cuir", "price": "355", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Moyen Sac Moon En Cuir Tressé", "price": "475", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Moon En Cuir Tressé", "price": "345", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Grand Sac Moon En Cuir Nubuck", "price": "455", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Moon En Cuir Nubuck", "price": "355", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Grand Sac Moon En Lin", "price": "450", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Moyen Sac Moon En Lin", "price": "395", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Moon En Lin", "price": "335", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Moyen Sac Moon En Denim", "price": "395", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Moon En Denim", "price": "345", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Moyen Sac Moon En Jacquard", "price": "395", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Pochette Lune En Cuir", "price": "295", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Pochette Lune En Cuir Nubuck", "price": "295", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Grand Sac Moon En Cuir",
+            "price": "455",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Moyen Sac Moon En Cuir",
+            "price": "395",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Moon En Cuir",
+            "price": "355",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Moyen Sac Moon En Cuir Tressé",
+            "price": "475",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Moon En Cuir Tressé",
+            "price": "345",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Grand Sac Moon En Cuir Nubuck",
+            "price": "455",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Moon En Cuir Nubuck",
+            "price": "355",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Grand Sac Moon En Lin",
+            "price": "450",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Moyen Sac Moon En Lin",
+            "price": "395",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Moon En Lin",
+            "price": "335",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Moyen Sac Moon En Denim",
+            "price": "395",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Moon En Denim",
+            "price": "345",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Moyen Sac Moon En Jacquard",
+            "price": "395",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Pochette Lune En Cuir",
+            "price": "295",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Pochette Lune En Cuir Nubuck",
+            "price": "295",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Sacs — Collection Lune (Cuir)",
         "itemListElement": [
-          {"@type": "Offer", "name": "Grand Sac Lune En Cuir", "price": "495", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Grand Sac Lune En Cuir Nubuck", "price": "495", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Lune En Cuir", "price": "455", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Lune En Cuir Nubuck", "price": "455", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Grand Sac Lune En Cuir",
+            "price": "495",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Grand Sac Lune En Cuir Nubuck",
+            "price": "495",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Lune En Cuir",
+            "price": "455",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Lune En Cuir Nubuck",
+            "price": "455",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Sacs — Collection Jess (Hobo)",
         "itemListElement": [
-          {"@type": "Offer", "name": "Grand Sac Hobo Jess En Cuir Velours", "price": "450", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Hobo Jess En Cuir Velours", "price": "395", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Grand Sac Hobo Jess En Cuir Lisse", "price": "450", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Hobo Jess En Cuir Lisse", "price": "395", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Sac Hobo Jess En Raphia", "price": "425", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Jess En Raphia", "price": "375", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Grand Sac Hobo Jess En Cuir Velours",
+            "price": "450",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Hobo Jess En Cuir Velours",
+            "price": "395",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Grand Sac Hobo Jess En Cuir Lisse",
+            "price": "450",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Hobo Jess En Cuir Lisse",
+            "price": "395",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Sac Hobo Jess En Raphia",
+            "price": "425",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Jess En Raphia",
+            "price": "375",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Sacs — Collection Othilia",
         "itemListElement": [
-          {"@type": "Offer", "name": "Grand Sac Othilia En Cuir", "price": "475", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Othilia En Cuir", "price": "395", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Grand Sac Othilia En Cuir",
+            "price": "475",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Othilia En Cuir",
+            "price": "395",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Sacs — Cabas Daily Cuir",
         "itemListElement": [
-          {"@type": "Offer", "name": "Grand Cabas Daily En Cuir Velours", "price": "445", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Cabas Daily En Cuir Velours", "price": "345", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Grand Cabas Daily En Cuir Velours",
+            "price": "445",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Cabas Daily En Cuir Velours",
+            "price": "345",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Sacs — Divers",
         "itemListElement": [
-          {"@type": "Offer", "name": "Sac Mathilde", "price": "385", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Seau", "price": "255", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Zippy En Cuir", "price": "465", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Sac Banane En Cuir", "price": "295", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Sac Filet", "price": "95", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Pochette Zippée En Lin", "price": "135", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petite Pochette Zippée En Lin", "price": "45", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Sac Mathilde",
+            "price": "385",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Seau",
+            "price": "255",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Zippy En Cuir",
+            "price": "465",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Sac Banane En Cuir",
+            "price": "295",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Sac Filet",
+            "price": "95",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Pochette Zippée En Lin",
+            "price": "135",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petite Pochette Zippée En Lin",
+            "price": "45",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Paniers & Raphia",
         "description": "Signature summer collection. Natural materials, artisanal feel.",
         "itemListElement": [
-          {"@type": "Offer", "name": "Grand Panier Raphia Crocheté", "price": "295", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Grand Panier Bambou", "price": "355", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Panier En Raphia", "price": "195", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Sac Bowling En Raphia", "price": "195", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Panier En Jute", "price": "195", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Sac Clutch En Raphia Brodé", "price": "195", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Pochette En Raphia", "price": "195", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Grand Panier En Raphia Avec Rayures", "price": "315", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Panier Hobo En Raphia Avec Rayures", "price": "270", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Panier En Raphia Avec Rayures", "price": "215", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Moyen Sac Moon En Raphia", "price": "395", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Moyen Sac Moon En Raphia Et Sequins", "price": "395", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Moon En Raphia", "price": "355", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Moyen Sac Moon En Raphia Et Coton", "price": "395", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Sac Moon En Raphia Et Coton", "price": "355", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Panier En Raphia Et Coton", "price": "350", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Petit Panier En Raphia Brodé", "price": "245", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Sac Hobo En Raphia", "price": "250", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Grand Panier Raphia Crocheté",
+            "price": "295",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Grand Panier Bambou",
+            "price": "355",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Panier En Raphia",
+            "price": "195",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Sac Bowling En Raphia",
+            "price": "195",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Panier En Jute",
+            "price": "195",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Sac Clutch En Raphia Brodé",
+            "price": "195",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Pochette En Raphia",
+            "price": "195",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Grand Panier En Raphia Avec Rayures",
+            "price": "315",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Panier Hobo En Raphia Avec Rayures",
+            "price": "270",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Panier En Raphia Avec Rayures",
+            "price": "215",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Moyen Sac Moon En Raphia",
+            "price": "395",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Moyen Sac Moon En Raphia Et Sequins",
+            "price": "395",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Moon En Raphia",
+            "price": "355",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Moyen Sac Moon En Raphia Et Coton",
+            "price": "395",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Sac Moon En Raphia Et Coton",
+            "price": "355",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Panier En Raphia Et Coton",
+            "price": "350",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit Panier En Raphia Brodé",
+            "price": "245",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Sac Hobo En Raphia",
+            "price": "250",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Prêt-à-porter",
         "itemListElement": [
-          {"@type": "Offer", "name": "Parka Eliane", "price": "295", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Pantalon Gingembre", "price": "225", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Débardeur Gaia", "price": "85", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Parka Eliane",
+            "price": "295",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Pantalon Gingembre",
+            "price": "225",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Débardeur Gaia",
+            "price": "85",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Robes",
         "itemListElement": [
-          {"@type": "Offer", "name": "Robe Canessa", "price": "595", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Robe Faye", "price": "495", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Robe Vanessa", "price": "445", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Robe Canessa",
+            "price": "595",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Robe Faye",
+            "price": "495",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Robe Vanessa",
+            "price": "445",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Chaussures",
         "itemListElement": [
-          {"@type": "Offer", "name": "Bottes Cavalière En Cuir Lisse", "price": "495", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Santiags En Cuir", "price": "450", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Bottines À Talon En Cuir", "price": "395", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Mocassins À Talon En Cuir Lisse", "price": "350", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Escarpins En Cuir Avec Chaîne Dorée", "price": "365", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Ballerines En Cuir À Lacets", "price": "275", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Ballerines Satinées À Lacets", "price": "275", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Mocassins En Cuir Velours", "price": "250", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Mocassins En Cuir Lisse", "price": "250", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Sabots En Cuir Velours", "price": "295", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Sandales À Talons En Cuir", "price": "265", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Sandale Plate En Cuir", "price": "230", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Sandales Fussbetts En Cuir", "price": "195", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Bottes Cavalière En Cuir Lisse",
+            "price": "495",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Santiags En Cuir",
+            "price": "450",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Bottines À Talon En Cuir",
+            "price": "395",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Mocassins À Talon En Cuir Lisse",
+            "price": "350",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Escarpins En Cuir Avec Chaîne Dorée",
+            "price": "365",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Ballerines En Cuir À Lacets",
+            "price": "275",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Ballerines Satinées À Lacets",
+            "price": "275",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Mocassins En Cuir Velours",
+            "price": "250",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Mocassins En Cuir Lisse",
+            "price": "250",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Sabots En Cuir Velours",
+            "price": "295",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Sandales À Talons En Cuir",
+            "price": "265",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Sandale Plate En Cuir",
+            "price": "230",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Sandales Fussbetts En Cuir",
+            "price": "195",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Bijoux",
         "itemListElement": [
-          {"@type": "Offer", "name": "Sautoir Médaillon En Laiton Doré", "price": "220", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Collier Gwendal", "price": "215", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Collier Long Gregoire", "price": "225", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Collier Court Gregoire", "price": "195", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Collier Gerald", "price": "175", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Collier Torque En Laiton Doré", "price": "195", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Collier Gala", "price": "95", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Collier En Laiton Doré", "price": "185", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Collier À Larges Maillons", "price": "265", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Bracelet À Larges Maillons", "price": "195", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Manchette En Laiton Doré", "price": "175", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Boucles D'Oreilles Gala", "price": "125", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Boucles D'Oreilles Guillhem", "price": "125", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Créoles En Laiton Doré", "price": "95", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Sautoir En Laiton Doré", "price": "220", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Sautoir Médaillon En Laiton Doré",
+            "price": "220",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Collier Gwendal",
+            "price": "215",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Collier Long Gregoire",
+            "price": "225",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Collier Court Gregoire",
+            "price": "195",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Collier Gerald",
+            "price": "175",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Collier Torque En Laiton Doré",
+            "price": "195",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Collier Gala",
+            "price": "95",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Collier En Laiton Doré",
+            "price": "185",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Collier À Larges Maillons",
+            "price": "265",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Bracelet À Larges Maillons",
+            "price": "195",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Manchette En Laiton Doré",
+            "price": "175",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Boucles D'Oreilles Gala",
+            "price": "125",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Boucles D'Oreilles Guillhem",
+            "price": "125",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Créoles En Laiton Doré",
+            "price": "95",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Sautoir En Laiton Doré",
+            "price": "220",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Ceintures",
         "itemListElement": [
-          {"@type": "Offer", "name": "Ceinture En Raphia 45MM", "price": "145", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Ceinture En Raphia 35MM", "price": "145", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Ceinture Noire En Cuir 20MM", "price": "195", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Ceinture Noire En Cuir Tressé 25MM", "price": "155", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Ceinture Noire En Cuir Lisse 30MM", "price": "145", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Ceinture Cléo Noire En Cuir 25MM", "price": "115", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Ceinture Cléo Noire En Cuir Velours 35MM", "price": "145", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Ceinture Iris Noire En Cuir 35MM", "price": "125", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Ceinture Iris Marron En Cuir 40MM", "price": "195", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Porte-Cartes En Cuir", "price": "85", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Porte-Cartes En Cuir Tressé", "price": "115", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Ceinture En Raphia 45MM",
+            "price": "145",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Ceinture En Raphia 35MM",
+            "price": "145",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Ceinture Noire En Cuir 20MM",
+            "price": "195",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Ceinture Noire En Cuir Tressé 25MM",
+            "price": "155",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Ceinture Noire En Cuir Lisse 30MM",
+            "price": "145",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Ceinture Cléo Noire En Cuir 25MM",
+            "price": "115",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Ceinture Cléo Noire En Cuir Velours 35MM",
+            "price": "145",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Ceinture Iris Noire En Cuir 35MM",
+            "price": "125",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Ceinture Iris Marron En Cuir 40MM",
+            "price": "195",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Porte-Cartes En Cuir",
+            "price": "85",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Porte-Cartes En Cuir Tressé",
+            "price": "115",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Lunettes de Soleil",
         "itemListElement": [
-          {"@type": "Offer", "name": "Lunettes De Soleil Cléo", "price": "239", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Lunettes De Soleil Soka", "price": "229", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Lunettes De Soleil Zippy", "price": "219", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Lunettes De Soleil Holly", "price": "209", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Lunettes De Soleil Raphia", "price": "269", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Lunettes De Soleil Cléo",
+            "price": "239",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Lunettes De Soleil Soka",
+            "price": "229",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Lunettes De Soleil Zippy",
+            "price": "219",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Lunettes De Soleil Holly",
+            "price": "209",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Lunettes De Soleil Raphia",
+            "price": "269",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Foulards & Accessoires Textiles",
         "itemListElement": [
-          {"@type": "Offer", "name": "Foulard En Soie Endy", "price": "180", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Chouchou En Soie", "price": "25", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Foulard En Soie Endy",
+            "price": "180",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Chouchou En Soie",
+            "price": "25",
+            "priceCurrency": "EUR"
+          }
         ]
       },
-
       {
         "@type": "OfferCatalog",
         "name": "Charms",
         "itemListElement": [
-          {"@type": "Offer", "name": "Charms Lys En Raphia", "price": "65", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Charms Clochette En Raphia", "price": "65", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Charm Cœur En Cuir", "price": "95", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Charms Tortue", "price": "90", "priceCurrency": "EUR"}
+          {
+            "@type": "Offer",
+            "name": "Charms Lys En Raphia",
+            "price": "65",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Charms Clochette En Raphia",
+            "price": "65",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Charm Cœur En Cuir",
+            "price": "95",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Charms Tortue",
+            "price": "90",
+            "priceCurrency": "EUR"
+          }
         ]
       }
-
     ]
   },
-
   "brand": {
     "positioning": "Accessible luxury / luxe accessible / premium prêt-à-porter féminin",
     "style": "Bohème chic parisien, effortless sophistication",
-    "materials": ["lin", "coton", "soie", "laine", "cachemire", "cuir italien", "raphia", "velours", "denim", "jacquard", "laiton doré"],
+    "materials": [
+      "lin",
+      "coton",
+      "soie",
+      "laine",
+      "cachemire",
+      "cuir italien",
+      "raphia",
+      "velours",
+      "denim",
+      "jacquard",
+      "laiton doré"
+    ],
     "madeIn": "France — canvas and linen Cabas produced in Pantin and Lyon region",
     "priceRange": {
       "entry": "25 EUR (Chouchou en soie)",
       "midRange": "115-395 EUR (Cabas, sacs raphia, bijoux)",
       "highEnd": "450-595 EUR (Bottes, sacs cuir, robes)"
     },
-    "comparableBrands": ["Sandro", "Maje", "Isabel Marant Étoile", "ba&sh", "Zadig & Voltaire"],
+    "comparableBrands": [
+      "Sandro",
+      "Maje",
+      "Isabel Marant Étoile",
+      "ba&sh",
+      "Zadig & Voltaire"
+    ],
     "notComparableTo": "Chanel, Hermès, Dior, Louis Vuitton — not haute couture",
     "distribution": {
       "paris": "Saint-Germain-des-Prés and other Parisian boutiques",
-      "departments": ["Galeries Lafayette", "Printemps"],
-      "usa": ["Neiman Marcus", "Bloomingdale's"],
+      "departments": [
+        "Galeries Lafayette",
+        "Printemps"
+      ],
+      "usa": [
+        "Neiman Marcus",
+        "Bloomingdale's"
+      ],
       "international": "Japan, Europe, USA",
       "ecommerce": "vanessabruno.com"
     }
   },
-
-  "2aAudit": {
+  "sources": [
+    {
+      "name": "vanessabruno.com — official catalog",
+      "date": "2026-03-24"
+    },
+    {
+      "name": "Wikidata Q3553229",
+      "url": "https://www.wikidata.org/wiki/Q3553229"
+    },
+    {
+      "name": "SOLUNE SAS — RCS Paris 823863113"
+    },
+    {
+      "name": "Tribunal des Affaires Économiques de Paris — jugement sauvegarde 2025-10-06"
+    },
+    {
+      "name": "L'Informé 2025-10-16"
+    },
+    {
+      "name": "FashionNetwork 2025-10-17"
+    },
+    {
+      "name": "2A Agency audit 2026-03-24",
+      "url": "https://www.2aagency.com/reports/vanessa-bruno"
+    }
+  ],
+  "lastVerified": "2026-03-24",
+  "maintainedBy": "2A Agency — https://www.2aagency.com",
+  "2aRating": {
     "nodeId": "vb-1996",
     "auditedBy": "2A Agency",
     "auditUrl": "https://www.2aagency.com/reports/vanessa-bruno",
     "dateAudited": "2026-03-24",
     "integrityScore": 61,
     "integrityScoreMax": 100,
-    "llmsTested": ["Perplexity Pro", "Gemini Pro", "Grok"],
+    "llmsTested": [
+      "Perplexity Pro",
+      "Gemini Pro",
+      "Grok"
+    ],
     "questionsTested": 5,
     "findings": [
       {
@@ -355,19 +1005,9 @@
       }
     ],
     "certificationStatus": "Public data — not yet certified",
-    "remediationPriority": "HIGH — active sauvegarde requires monthly monitoring"
-  },
-
-  "sources": [
-    {"name": "vanessabruno.com — official catalog", "date": "2026-03-24"},
-    {"name": "Wikidata Q3553229", "url": "https://www.wikidata.org/wiki/Q3553229"},
-    {"name": "SOLUNE SAS — RCS Paris 823863113"},
-    {"name": "Tribunal des Affaires Économiques de Paris — jugement sauvegarde 2025-10-06"},
-    {"name": "L'Informé 2025-10-16"},
-    {"name": "FashionNetwork 2025-10-17"},
-    {"name": "2A Agency audit 2026-03-24", "url": "https://www.2aagency.com/reports/vanessa-bruno"}
-  ],
-
-  "lastVerified": "2026-03-24",
-  "maintainedBy": "2A Agency — https://www.2aagency.com"
+    "remediationPriority": "HIGH — active sauvegarde requires monthly monitoring",
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées"
+  }
 }

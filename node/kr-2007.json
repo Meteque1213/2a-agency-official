@@ -4,7 +4,10 @@
   "score": 76,
   "audit_date": "2026-03-26",
   "sector": "Luxury Real Estate",
-  "founders": ["Olivier Kretz", "Sandrine Kretz"],
+  "founders": [
+    "Olivier Kretz",
+    "Sandrine Kretz"
+  ],
   "founding_year": 2007,
   "headquarters": "Boulogne-Billancourt, France",
   "ownership": "Independent — hybrid model: direct offices (France, Spain, Monaco) + franchise international (Belgium, Mauritius 2026)",
@@ -21,7 +24,10 @@
   },
   "franchise": {
     "model": "€50,000 per city + 11% revenue share",
-    "markets": ["Belgium (Brussels)", "Mauritius (Pereybère) 2026"]
+    "markets": [
+      "Belgium (Brussels)",
+      "Mauritius (Pereybère) 2026"
+    ]
   },
   "average_ticket_eur": 1900000,
   "annual_volume_eur": 500000000,
@@ -74,5 +80,12 @@
     }
   ],
   "source_url": "https://www.2aagency.com/reports/kretz",
-  "registry_url": "https://www.2aagency.com/registry/kretz"
+  "registry_url": "https://www.2aagency.com/registry/kretz",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 76,
+    "dateRated": "2026-03-26"
+  }
 }

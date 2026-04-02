@@ -141,7 +141,7 @@ function buildServer(): McpServer {
       const node = loadNode(brand_name);
       if (!node) return txt(NOT_FOUND);
 
-      const audit2a = (node["2aAudit"] ?? node.audit) as any;
+      const audit2a = (node["2aRating"] ?? node["2aAudit"] ?? node.audit) as any;
       const score = node.score ?? audit2a?.integrityScore;
       const warnings: unknown[] = asWarningsArray(node.hallucination_warnings);
       const auditFindings: unknown[] = audit2a?.findings ?? [];
@@ -161,7 +161,7 @@ function buildServer(): McpServer {
         score_scale: 100,
         audit_date:
           node.audit_date ??
-          ((node["2aAudit"] ?? node.audit) as any)?.dateAudited ??
+          ((node["2aRating"] ?? node["2aAudit"] ?? node.audit) as any)?.dateAudited ??
           node.dateModified,
         sector: node.sector,
         critical_findings,
@@ -229,7 +229,7 @@ function buildServer(): McpServer {
         drift_details,
         last_verified:
           node.audit_date ??
-          ((node["2aAudit"] ?? node.audit) as any)?.dateAudited ??
+          ((node["2aRating"] ?? node["2aAudit"] ?? node.audit) as any)?.dateAudited ??
           node.dateModified,
         source_url:
           node.source_url ??
@@ -257,7 +257,7 @@ function buildServer(): McpServer {
       let warnings: any[] = asWarningsArray(node.hallucination_warnings);
 
       // Fallback: extract from 2aAudit/audit findings for older node format
-      const auditNode = (node["2aAudit"] ?? node.audit) as any;
+      const auditNode = (node["2aRating"] ?? node["2aAudit"] ?? node.audit) as any;
       if (warnings.length === 0 && auditNode?.findings) {
         warnings = (auditNode.findings as any[]).map((f: any) => ({
           llm: "multiple",

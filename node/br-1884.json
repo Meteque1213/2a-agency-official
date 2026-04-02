@@ -1868,36 +1868,6 @@
       }
     ]
   },
-  "2aAudit": {
-    "nodeId": "br-1884",
-    "auditedBy": "2A Agency",
-    "auditUrl": "https://www.2aagency.com/reports/breitling",
-    "dateAudited": "2026-03-24",
-    "integrityScore": 79,
-    "llmsTested": [
-      "Perplexity Pro",
-      "Gemini Pro",
-      "ChatGPT"
-    ],
-    "findings": [
-      {
-        "severity": "CRITICAL",
-        "title": "NFT hallucination",
-        "description": "Gemini Pro invents per-watch NFT traceability system. Not confirmed on breitling.com."
-      },
-      {
-        "severity": "CRITICAL",
-        "title": "Ownership timeline error",
-        "description": "ChatGPT attributes Partners Group acquisition to 2017. Correct date: 2022."
-      },
-      {
-        "severity": "MODERATE",
-        "title": "Carbon neutral 2021 absent",
-        "description": "No LLM explicitly cited 2021 carbon neutral milestone."
-      }
-    ],
-    "certificationStatus": "Public data — not yet certified"
-  },
   "sources": [
     {
       "name": "breitling.com official catalog",
@@ -1938,5 +1908,38 @@
   "score": 79,
   "audit_date": "2026-03-24",
   "brand": "Breitling",
-  "source_url": "https://www.2aagency.com/reports/breitling"
+  "source_url": "https://www.2aagency.com/reports/breitling",
+  "2aRating": {
+    "nodeId": "br-1884",
+    "auditedBy": "2A Agency",
+    "auditUrl": "https://www.2aagency.com/reports/breitling",
+    "dateAudited": "2026-03-24",
+    "integrityScore": 79,
+    "llmsTested": [
+      "Perplexity Pro",
+      "Gemini Pro",
+      "ChatGPT"
+    ],
+    "findings": [
+      {
+        "severity": "CRITICAL",
+        "title": "NFT hallucination",
+        "description": "Gemini Pro invents per-watch NFT traceability system. Not confirmed on breitling.com."
+      },
+      {
+        "severity": "CRITICAL",
+        "title": "Ownership timeline error",
+        "description": "ChatGPT attributes Partners Group acquisition to 2017. Correct date: 2022."
+      },
+      {
+        "severity": "MODERATE",
+        "title": "Carbon neutral 2021 absent",
+        "description": "No LLM explicitly cited 2021 carbon neutral milestone."
+      }
+    ],
+    "certificationStatus": "Public data — not yet certified",
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées"
+  }
 }

@@ -4,7 +4,10 @@
   "score": 79,
   "audit_date": "2026-03-31",
   "sector": "Men's Grooming / DNVB",
-  "founders": ["Marc Briant-Terlet", "Kim Mazzilli"],
+  "founders": [
+    "Marc Briant-Terlet",
+    "Kim Mazzilli"
+  ],
   "founding_year": 2016,
   "certifications": {
     "B_Corp": true,
@@ -16,12 +19,12 @@
   },
   "manufacturing": "France — Cosmetic Valley (Naho, IFF, MS BeautiLab, SHP, Thépenier). Parfums à Grasse.",
   "flagship_price": {
-    "nettoyant_visage_200ml": 13.00,
-    "hydratant_matifiant_75ml": 15.00,
-    "hydratant_riche_75ml": 17.00,
-    "gel_douche_250ml": 9.00,
-    "deodorant_50ml": 10.00,
-    "serum_vitamine_c": 21.00
+    "nettoyant_visage_200ml": 13.0,
+    "hydratant_matifiant_75ml": 15.0,
+    "hydratant_riche_75ml": 17.0,
+    "gel_douche_250ml": 9.0,
+    "deodorant_50ml": 10.0,
+    "serum_vitamine_c": 21.0
   },
   "hallucination_warnings": [
     {
@@ -58,5 +61,12 @@
     }
   ],
   "source_url": "https://www.2aagency.com/reports/horace",
-  "registry_url": "https://www.2aagency.com/registry/horace"
+  "registry_url": "https://www.2aagency.com/registry/horace",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 79,
+    "dateRated": "2026-03-31"
+  }
 }

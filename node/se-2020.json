@@ -4,7 +4,9 @@
   "score": 81,
   "audit_date": "2026-03-28",
   "sector": "Luxury Real Estate / PropTech / Media",
-  "founders": ["Ryan Serhant"],
+  "founders": [
+    "Ryan Serhant"
+  ],
   "founding_year": 2020,
   "headquarters": "New York, USA",
   "ownership": "SERHANT. Technologies Inc. (HoldCo + OpCo) — VC backed: $45M raised December 2024 (Camber Creek lead + Left Lane Capital)",
@@ -66,5 +68,12 @@
     }
   ],
   "source_url": "https://www.2aagency.com/reports/serhant",
-  "registry_url": "https://www.2aagency.com/registry/serhant"
+  "registry_url": "https://www.2aagency.com/registry/serhant",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 81,
+    "dateRated": "2026-03-28"
+  }
 }

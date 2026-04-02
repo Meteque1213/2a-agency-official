@@ -4,7 +4,9 @@
   "score": 82,
   "audit_date": "2026-03-18",
   "sector": "Mode DNVB",
-  "founders": ["William Hauvette"],
+  "founders": [
+    "William Hauvette"
+  ],
   "founding_year": 2015,
   "headquarters": "Paris, France",
   "ownership": "Independent DNVB — direct-to-consumer only",
@@ -20,5 +22,12 @@
     }
   ],
   "source_url": "https://www.2aagency.com/reports/asphalte",
-  "registry_url": "https://www.2aagency.com/registry/asphalte"
+  "registry_url": "https://www.2aagency.com/registry/asphalte",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 82,
+    "dateRated": "2026-03-18"
+  }
 }

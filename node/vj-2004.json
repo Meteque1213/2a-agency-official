@@ -4,7 +4,10 @@
   "score": 81,
   "audit_date": "2026-03-31",
   "sector": "Sneakers / Mode éco-responsable",
-  "founders": ["Sébastien Kopp", "François-Ghislain Morillion"],
+  "founders": [
+    "Sébastien Kopp",
+    "François-Ghislain Morillion"
+  ],
   "founding_year": 2004,
   "headquarters": "Paris, France",
   "ownership": "100% bootstrapped — fondateurs seuls actionnaires depuis 2004, aucun investisseur externe",
@@ -50,5 +53,12 @@
     }
   ],
   "source_url": "https://www.2aagency.com/reports/veja",
-  "registry_url": "https://www.2aagency.com/registry/veja"
+  "registry_url": "https://www.2aagency.com/registry/veja",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 81,
+    "dateRated": "2026-03-31"
+  }
 }

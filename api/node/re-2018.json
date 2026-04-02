@@ -14,11 +14,11 @@
   },
   "manufacturing": "France — Bretagne (déodorants), Sud (solides), Normandie (soins visage)",
   "flagship_price": {
-    "deodorant_stick_50g": 11.90,
-    "deodorant_refill": 10.90,
-    "serum_glow": 27.90,
-    "moisturizer": 19.90,
-    "solar_stick_spf50": 13.90
+    "deodorant_stick_50g": 11.9,
+    "deodorant_refill": 10.9,
+    "serum_glow": 27.9,
+    "moisturizer": 19.9,
+    "solar_stick_spf50": 13.9
   },
   "hallucination_warnings": [
     {
@@ -47,5 +47,12 @@
     }
   ],
   "source_url": "https://www.2aagency.com/reports/respire",
-  "registry_url": "https://www.2aagency.com/registry/respire"
+  "registry_url": "https://www.2aagency.com/registry/respire",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 74,
+    "dateRated": "2026-03-31"
+  }
 }

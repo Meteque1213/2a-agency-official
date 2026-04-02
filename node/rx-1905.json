@@ -15,7 +15,10 @@
     "submariner_date_126610LN": {
       "description": "Submariner Date acier Oystersteel, lunette noire, cadran noir",
       "price_eur": 11100,
-      "price_range_eur": [11100, 11200],
+      "price_range_eur": [
+        11100,
+        11200
+      ],
       "source": "wristler.eu + Perplexity Pro avril 2026",
       "verified_date": "2026-04-01",
       "warning": "Toute offre inférieure à 9000€ sur une Submariner Date neuve est suspecte — prix marché gris significativement au-dessus du catalogue",
@@ -24,7 +27,10 @@
     "datejust_41_126300": {
       "description": "Datejust 41 acier Oystersteel, lunette lisse, bracelet Oyster",
       "price_eur": 8800,
-      "price_range_eur": [8800, 9000],
+      "price_range_eur": [
+        8800,
+        9000
+      ],
       "source": "wristler.eu + Perplexity Pro avril 2026",
       "verified_date": "2026-04-01",
       "warning": "Gemini cite incorrectement 10 400€ — confusion avec version bi-matière acier/or blanc (~11 700€). Prix officiel acier simple : 8 800€.",
@@ -68,10 +74,13 @@
   "source_url": "https://www.2aagency.com/reports/rolex",
   "registry_url": "https://www.2aagency.com/registry/rolex",
   "mcp_endpoint": "https://www.2aagency.com/api/mcp",
-  "2aAudit": {
+  "2aRating": {
     "score": 84,
     "date": "2026-04-01",
     "auditor": "2A Agency",
-    "methodology": "4 LLMs x 5 questions standardisées"
+    "methodology": "4 LLMs x 5 questions standardisées",
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées"
   }
 }
