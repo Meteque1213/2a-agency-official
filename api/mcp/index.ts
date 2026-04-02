@@ -25,6 +25,9 @@ const BRAND_MAP: Record<string, string> = {
   "veja": "vj-2004",
   "sezane": "sz-2013",
   "sézane": "sz-2013",
+  "hermès": "hm-1837",
+  "hermes": "hm-1837",
+  "rolex": "rx-1905",
 };
 
 // ── Node loader — checks api/node/ then node/ ──────────────────────────────
