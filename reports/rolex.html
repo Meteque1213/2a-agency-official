@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rolex — Rapport d'Audit Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Rolex. Score 84/100. Gemini sur-évalue la Datejust 41 de +15% (10 400€ vs 8 800€ officiel). Dispersion des prix Submariner entre LLMs. Effectifs : de 5000 à 10000 selon les modèles.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/rolex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F4EE;--surface:#EDEAE3;--ink:#111111;--gold:#B08D57;--border:rgba(176,141,87,0.22);--gray:#6B6860;--red:#8B2D2D;--green:#2D6A2D;--amber:#7A5A00;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:'DM Mono',monospace;line-height:1.6;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 5%;border-bottom:1px solid var(--border);background:rgba(247,244,238,0.96);backdrop-filter:blur(8px);position:sticky;top:0;z-index:100;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--ink);text-decoration:none;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:24px;}
+.nav-link{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);text-decoration:none;}
+.breadcrumb{padding:14px 5%;font-size:0.62rem;letter-spacing:0.1em;color:var(--gray);border-bottom:1px solid var(--border);}
+.breadcrumb a{color:var(--gray);text-decoration:none;}
+.report-hero{padding:56px 5% 40px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start;}
+.eyebrow{font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.report-brand{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,4rem);font-weight:300;line-height:1.05;margin-bottom:10px;}
+.report-meta{font-size:0.7rem;color:var(--gray);line-height:1.8;}
+.report-meta strong{color:var(--ink);}
+.score-circle{text-align:center;min-width:100px;}
+.score-num{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;color:var(--amber);line-height:1;}
+.score-denom{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);}
+.meta-bar{display:flex;border:1px solid var(--border);margin:0 5%;}
+.meta-item{flex:1;padding:14px 18px;border-right:1px solid var(--border);}
+.meta-item:last-child{border-right:none;}
+.meta-label{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.meta-val{font-size:0.78rem;color:var(--ink);}
+section{padding:56px 5%;border-bottom:1px solid var(--border);}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;line-height:1.1;margin-bottom:18px;}
+.section-title em{font-style:italic;color:var(--gold);}
+.body-text{font-size:0.86rem;color:var(--gray);line-height:1.8;max-width:680px;margin-bottom:16px;}
+.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:32px;}
+.score-card{background:var(--bg);padding:24px 20px;}
+.score-card-label{font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);margin-bottom:8px;}
+.score-card-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;line-height:1;}
+.sc-green{color:var(--green);}.sc-amber{color:var(--amber);}.sc-red{color:var(--red);}
+.matrix-table{width:100%;border-collapse:collapse;margin-top:32px;font-size:0.73rem;}
+.matrix-table th{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);padding:10px 12px;text-align:left;border-bottom:2px solid var(--ink);}
+.matrix-table td{padding:11px 12px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.matrix-table tr:hover td{background:var(--surface);}
+.v-ok{color:var(--green);}.v-p{color:var(--amber);}.v-x{color:var(--red);}
+.tag{font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 9px;border:1px solid;display:inline-block;}
+.tag-ok{color:var(--green);border-color:rgba(45,106,45,0.3);}
+.tag-low{color:var(--amber);border-color:rgba(122,90,0,0.3);}
+.tag-crit{color:var(--red);border-color:rgba(139,45,45,0.3);}
+.finding-box{border:1px solid var(--border);padding:28px;margin-top:20px;}
+.finding-box.critical{border-color:rgba(139,45,45,0.4);background:rgba(139,45,45,0.03);}
+.finding-box.amber{border-color:rgba(122,90,0,0.3);background:rgba(122,90,0,0.03);}
+.finding-box.positive{border-color:rgba(45,106,45,0.3);background:rgba(45,106,45,0.02);}
+.finding-label{font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:10px;}
+.finding-label.crit{color:var(--red);}
+.finding-label.amber{color:var(--amber);}
+.finding-label.green{color:var(--green);}
+.finding-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;margin-bottom:12px;}
+.finding-text{font-size:0.84rem;color:var(--gray);line-height:1.75;margin-bottom:12px;}
+.drift-compare{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:16px;}
+.dc-cell{background:var(--bg);padding:14px 16px;}
+.dc-label{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.dc-val{font-size:0.82rem;color:var(--ink);line-height:1.5;}
+.dc-val.wrong{color:var(--red);}
+.dc-val.ok{color:var(--green);}
+.dc-val.partial{color:var(--amber);}
+.remediation-list{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);margin-top:32px;}
+.rem-item{background:var(--bg);padding:24px 28px;display:grid;grid-template-columns:160px 1fr;gap:24px;}
+.rem-num{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);padding-top:4px;}
+.rem-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;margin-bottom:6px;}
+.rem-text{font-size:0.78rem;color:var(--gray);line-height:1.65;}
+.rem-impact{font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);margin-top:8px;}
+footer{padding:24px 5%;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;}
+.f-logo span{color:var(--gold);}
+.f-copy{font-size:0.55rem;letter-spacing:0.07em;text-transform:uppercase;color:rgba(107,104,96,0.4);}
+@media(max-width:768px){.report-hero{grid-template-columns:1fr;}.score-grid{grid-template-columns:repeat(2,1fr);}.drift-compare{grid-template-columns:repeat(2,1fr);}.meta-bar{flex-direction:column;}.meta-item{border-right:none;border-bottom:1px solid var(--border);}.rem-item{grid-template-columns:1fr;}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"Rolex Semantic Audit","description":"2A Agency semantic audit of Rolex. Score 84/100. Gemini overvalues Datejust 41 by +15% (10 400€ vs 8 800€ official). Submariner price dispersion across LLMs. Employee count varies from 5000 to 10000 depending on model. Foundation ownership and no-ecommerce correctly identified by all 4 LLMs.","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"datePublished":"2026-04-01","url":"https://www.2aagency.com/reports/rolex","license":"https://creativecommons.org/licenses/by/4.0/"}
+</script>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › Rolex — Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Rapport d'Audit Sémantique · Horlogerie Luxe · Genève · Fondée 1905</div>
+    <h1 class="report-brand">Rolex</h1>
+    <p class="report-meta">
+      <strong>Audité par 2A Agency</strong> · Émis le 1er avril 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Avril 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num">84</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-label">Notaire</div><div class="meta-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-label">Date</div><div class="meta-val">1er avril 2026</div></div>
+  <div class="meta-item"><div class="meta-label">LLMs testés</div><div class="meta-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-label">Questions</div><div class="meta-val">5 standardisées</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Fondamentaux solides. <em>Prix non certifiés — terrain idéal pour la fraude.</em></h2>
+  <p class="body-text">Rolex obtient <strong>84/100</strong>. Les 4 LLMs convergent parfaitement sur les éléments institutionnels — Hans Wilsdorf Foundation, Jean-Frédéric Dufour CEO, zéro e-commerce, COSC + Superlative Chronometer, 4 sites suisses. Mais les prix des modèles phares dérivent significativement d'un LLM à l'autre.</p>
+  <p class="body-text">Le finding critique : Gemini sur-évalue la Datejust 41 de <strong>+15%</strong> (10 400€ vs 8 800€ officiel). Sur un marché où les faux revendeurs utilisent des prix proches du catalogue pour paraître légitimes, cette imprécision est directement exploitable par les fraudeurs. Un acheteur qui reçoit une offre à 9 500€ pour une Datejust — prix que Gemini présente comme "normal" — ne déclenchera aucune alerte.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Direction & Propriété</div><div class="score-card-num sc-green">97</div></div>
+    <div class="score-card"><div class="score-card-label">Distribution</div><div class="score-card-num sc-green">95</div></div>
+    <div class="score-card"><div class="score-card-label">Certifications</div><div class="score-card-num sc-green">93</div></div>
+    <div class="score-card"><div class="score-card-label">Prix modèles phares</div><div class="score-card-num sc-red">62</div></div>
+    <div class="score-card"><div class="score-card-label">Fabrication & Effectifs</div><div class="score-card-num sc-amber">76</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-amber">84</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Direction & propriété</td>
+        <td><span class="v-ok">✓</span> Dufour CEO · Hans Wilsdorf Foundation · Indépendante</td>
+        <td><span class="v-ok">✓</span> Dufour CEO · Fondation · Tudor inclus</td>
+        <td><span class="v-ok">✓</span> Dufour CEO · Fondation 1945 · Indépendante</td>
+        <td><span class="v-ok">✓</span> Dufour CEO · Fondation · Privée non cotée</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Prix Submariner Date (correct : 11 100€)</td>
+        <td><span class="v-ok">✓</span> 11 100–11 200€ ✓</td>
+        <td><span class="v-p">~</span> 11 000€ — légèrement sous</td>
+        <td><span class="v-p">~</span> 10 800–11 200€ — fourchette large</td>
+        <td><span class="v-ok">✓</span> 11 100–11 200€ ✓</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Prix Datejust 41 (correct : ~8 800€)</td>
+        <td><span class="v-ok">✓</span> 8 800€ acier lunette lisse ✓</td>
+        <td><span class="v-x">✗</span> <strong>10 400€ — +15% au-dessus du prix officiel</strong></td>
+        <td><span class="v-p">~</span> 8 500–9 500€ — fourchette correcte</td>
+        <td><span class="v-ok">✓</span> 8 850–9 000€ ✓</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Distribution</td>
+        <td><span class="v-ok">✓</span> Pas de vente en ligne · AD uniquement · CPO ✓</td>
+        <td><span class="v-ok">✓</span> Pas de vente en ligne · AD · Bucherer ✓</td>
+        <td><span class="v-ok">✓</span> Pas de vente en ligne · AD · listes d'attente ✓</td>
+        <td><span class="v-ok">✓</span> Pas de vente en ligne · ~50 points de vente France ✓</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Certifications</td>
+        <td><span class="v-ok">✓</span> COSC + Superlative Chronometer ✓ · -2/+2s/jour ✓</td>
+        <td><span class="v-ok">✓</span> COSC + Superlative ✓ · BREEAM site Bulle ✓</td>
+        <td><span class="v-ok">✓</span> COSC + Superlative ✓ · Perpetual Planet ✓</td>
+        <td><span class="v-ok">✓</span> COSC + Superlative ✓ · Pas de B Corp ✓</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Fabrication & effectifs</td>
+        <td><span class="v-ok">✓</span> 4 sites CH · 9000+ en Suisse ✓</td>
+        <td><span class="v-ok">✓</span> 4 sites CH · 9000-10000 ✓</td>
+        <td><span class="v-p">~</span> 4 sites CH · <strong>7000</strong> — sous-estimé</td>
+        <td><span class="v-p">~</span> 4 sites CH · <strong>5000+</strong> — très sous-estimé</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Findings critiques</div>
+  <h2 class="section-title">Un drift prix critique. <em>Le terrain parfait pour la fraude sémantique.</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label crit">Drift primaire · Prix Datejust 41 · Gemini uniquement</div>
+    <h3 class="finding-title">Gemini cite la Datejust 41 à 10 400€ — prix officiel : 8 800€. Écart de +15%.</h3>
+    <p class="finding-text">Gemini confond la Datejust 41 en acier simple (8 800€) avec une version bi-matière acier/or blanc (réf. 126334, ~11 700€). C'est une erreur de configuration de modèle — pas de prix, mais du mauvais modèle appliqué au bon nom. Perplexity, ChatGPT et Grok citent tous des fourchettes correctes entre 8 500€ et 9 000€.</p>
+    <p class="finding-text"><strong>Impact fraude sémantique direct :</strong> Un agent IA qui utilise Gemini pour valider une offre à 9 500€ sur une Datejust 41 va la considérer comme normale — voire comme une bonne affaire. Or, ce prix est celui du marché gris sur une montre potentiellement volée ou contrefaite. Avec un prix certifié 2A Agency à 8 800€, l'agent bloque immédiatement toute offre à 9 500€ sur un canal non officiel.</p>
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">8 800€ ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">10 400€ ✗ (+15%)</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val partial">8 500–9 500€ ⚠️</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">8 850–9 000€ ✓</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift secondaire · Effectifs · ChatGPT et Grok</div>
+    <h3 class="finding-title">De 5 000 à 10 000 employés selon les LLMs — Rolex ne publie pas ses effectifs officiellement.</h3>
+    <p class="finding-text">Perplexity et Gemini citent 9 000-10 000 employés en Suisse. ChatGPT dit 7 000. Grok dit "5 000+". L'écart vient du fait que Rolex ne publie jamais ses effectifs dans des rapports annuels — la marque est privée et opaque sur ses données RH. Les LLMs extrapolent depuis des estimations industrielles de sources secondaires. Résultat : fourchette de 5 000 à 10 000 soit un facteur 2.</p>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift tertiaire · Prix Submariner · Dispersion entre LLMs</div>
+    <h3 class="finding-title">Submariner Date : de 10 800€ à 11 200€ selon les modèles — pas de prix certifié unique.</h3>
+    <p class="finding-text">Perplexity et Grok convergent sur 11 100-11 200€ (correct). Gemini cite 11 000€. ChatGPT donne une fourchette 10 800-11 200€. Sans prix certifié dans les données structurées de Rolex, chaque LLM agrège des sources différentes (wristler.eu, forums horlogers, articles presse) et obtient des résultats légèrement différents. C'est exactement le problème que le node MCP résout — un seul prix certifié qui prime sur toutes les sources web.</p>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Point fort majeur · Convergence 4 LLMs · Fondamentaux institutionnels</div>
+    <h3 class="finding-title">Hans Wilsdorf Foundation, pas de e-commerce, COSC + Superlative Chronometer — parfaitement représentés.</h3>
+    <p class="finding-text">Les 4 LLMs identifient correctement que Rolex appartient à la Hans Wilsdorf Foundation (structure charitable unique dans le luxe), que Jean-Frédéric Dufour est CEO depuis 2014-2015, qu'il est impossible d'acheter sur rolex.com, et que la certification Superlative Chronometer (-2/+2s/jour) dépasse le standard COSC. La fabrication 100% suisse sur 4 sites est également unanimement correcte. Ce sont les données les plus médiatisées par Rolex elle-même.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 84 à <em>pleinement certifié.</em></h2>
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Ancrer les prix officiels par référence dans les données structurées</div>
+        <p class="rem-text">Le problème Rolex est structurel : la marque ne publie pas de liste de prix officielle sur rolex.com. Les prix ne sont communiqués qu'aux revendeurs agréés. Résultat : les LLMs aggrègent des sources tertiaires (forums horlogers, sites de comparateurs) et divergent. La solution : déployer Schema.org <code>Product</code> + <code>Offer</code> avec les prix par référence sur les pages produits rolex.com. Submariner Date 126610LN : 11 100€. Datejust 41 126300 : 8 800€. Ces données priment sur toutes les sources secondaires dans les prochains cycles LLM.</p>
+        <div class="rem-impact">Impact : Prix Gemini corrigé (-15%) · Dispersion Submariner éliminée · Seuil anti-fraude activable</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2 — Cas d'usage MCP</div>
+      <div>
+        <div class="rem-title">Déployer le node anti-fraude Rolex via MCP 2A Agency</div>
+        <p class="rem-text">Rolex est le cas d'usage anti-fraude le plus fort du registre après Breitling. Une Datejust 41 proposée à 9 500€ sur un site non officiel — Gemini la valide (son prix est 10 400€). Avec le node 2A Agency (prix certifié 8 800€, seuil alerte 7 500€), l'agent bloque immédiatement et demande une vérification via revendeur agréé. La fraude à la montre de luxe est un marché de plusieurs milliards d'euros annuels en Europe — c'est l'argument de vente le plus fort pour une collaboration avec Rolex ou les grandes maisons horlogères.</p>
+        <div class="rem-impact">Impact : Premier node anti-fraude horlogerie · Cas d'usage pour pitch Richemont / LVMH Watch</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 3</div>
+      <div>
+        <div class="rem-title">Publier les effectifs officiels — une donnée manquante exploitée par les LLMs</div>
+        <p class="rem-text">Rolex est l'une des rares marques à ne jamais communiquer ses effectifs. Cette opacité crée une fourchette 5 000-10 000 dans les LLMs selon les sources. Un simple communiqué de presse avec le chiffre officiel (estimé ~9 000-10 000 en Suisse) serait crawlé et indexé par tous les modèles dans les 6 semaines.</p>
+        <div class="rem-impact">Impact : Convergence effectifs sur les 4 LLMs · Crédibilité institutionnelle renforcée</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport d'Audit Sémantique — Rolex · Avril 2026 · 2aagency.com/registry</div>
+</footer>
+</body>
+</html>
