@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Source Foodschool — Rapport d'Audit Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de La Source Foodschool. Score 82/100. Campus Bordeaux fantôme sur ChatGPT et Grok. Chiffres d'insertion inventés par Gemini (83.5% vs 86.96% officiel). Première école de cuisine durable bien référencée mais données non structurées.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/la-source-foodschool">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F4EE;--surface:#EDEAE3;--ink:#111111;--gold:#B08D57;--border:rgba(176,141,87,0.22);--gray:#6B6860;--red:#8B2D2D;--green:#2D6A2D;--amber:#7A5A00;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:'DM Mono',monospace;line-height:1.6;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 5%;border-bottom:1px solid var(--border);background:rgba(247,244,238,0.96);backdrop-filter:blur(8px);position:sticky;top:0;z-index:100;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--ink);text-decoration:none;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:24px;}
+.nav-link{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);text-decoration:none;}
+.breadcrumb{padding:14px 5%;font-size:0.62rem;letter-spacing:0.1em;color:var(--gray);border-bottom:1px solid var(--border);}
+.breadcrumb a{color:var(--gray);text-decoration:none;}
+.report-hero{padding:56px 5% 40px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start;}
+.eyebrow{font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.report-brand{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,4rem);font-weight:300;line-height:1.05;margin-bottom:10px;}
+.report-meta{font-size:0.7rem;color:var(--gray);line-height:1.8;}
+.report-meta strong{color:var(--ink);}
+.score-circle{text-align:center;min-width:100px;}
+.score-num{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;color:var(--amber);line-height:1;}
+.score-denom{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);}
+.meta-bar{display:flex;border:1px solid var(--border);margin:0 5%;}
+.meta-item{flex:1;padding:14px 18px;border-right:1px solid var(--border);}
+.meta-item:last-child{border-right:none;}
+.meta-label{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.meta-val{font-size:0.78rem;color:var(--ink);}
+section{padding:56px 5%;border-bottom:1px solid var(--border);}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;line-height:1.1;margin-bottom:18px;}
+.section-title em{font-style:italic;color:var(--gold);}
+.body-text{font-size:0.86rem;color:var(--gray);line-height:1.8;max-width:680px;margin-bottom:16px;}
+.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:32px;}
+.score-card{background:var(--bg);padding:24px 20px;}
+.score-card-label{font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);margin-bottom:8px;}
+.score-card-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;line-height:1;}
+.sc-green{color:var(--green);}.sc-amber{color:var(--amber);}.sc-red{color:var(--red);}
+.matrix-table{width:100%;border-collapse:collapse;margin-top:32px;font-size:0.73rem;}
+.matrix-table th{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);padding:10px 12px;text-align:left;border-bottom:2px solid var(--ink);}
+.matrix-table td{padding:11px 12px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.matrix-table tr:hover td{background:var(--surface);}
+.v-ok{color:var(--green);}.v-p{color:var(--amber);}.v-x{color:var(--red);}
+.tag{font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 9px;border:1px solid;display:inline-block;}
+.tag-ok{color:var(--green);border-color:rgba(45,106,45,0.3);}
+.tag-low{color:var(--amber);border-color:rgba(122,90,0,0.3);}
+.tag-crit{color:var(--red);border-color:rgba(139,45,45,0.3);}
+.finding-box{border:1px solid var(--border);padding:28px;margin-top:20px;}
+.finding-box.critical{border-color:rgba(139,45,45,0.4);background:rgba(139,45,45,0.03);}
+.finding-box.amber{border-color:rgba(122,90,0,0.3);background:rgba(122,90,0,0.03);}
+.finding-box.positive{border-color:rgba(45,106,45,0.3);background:rgba(45,106,45,0.02);}
+.finding-label{font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:10px;}
+.finding-label.crit{color:var(--red);}
+.finding-label.amber{color:var(--amber);}
+.finding-label.green{color:var(--green);}
+.finding-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;margin-bottom:12px;}
+.finding-text{font-size:0.84rem;color:var(--gray);line-height:1.75;margin-bottom:12px;}
+.drift-compare{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:16px;}
+.dc-cell{background:var(--bg);padding:14px 16px;}
+.dc-label{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.dc-val{font-size:0.82rem;color:var(--ink);line-height:1.5;}
+.dc-val.wrong{color:var(--red);}
+.dc-val.ok{color:var(--green);}
+.dc-val.partial{color:var(--amber);}
+.remediation-list{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);margin-top:32px;}
+.rem-item{background:var(--bg);padding:24px 28px;display:grid;grid-template-columns:160px 1fr;gap:24px;}
+.rem-num{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);padding-top:4px;}
+.rem-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;margin-bottom:6px;}
+.rem-text{font-size:0.78rem;color:var(--gray);line-height:1.65;}
+.rem-impact{font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);margin-top:8px;}
+footer{padding:24px 5%;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;}
+.f-logo span{color:var(--gold);}
+.f-copy{font-size:0.55rem;letter-spacing:0.07em;text-transform:uppercase;color:rgba(107,104,96,0.4);}
+@media(max-width:768px){.report-hero{grid-template-columns:1fr;}.score-grid{grid-template-columns:repeat(2,1fr);}.drift-compare{grid-template-columns:repeat(2,1fr);}.meta-bar{flex-direction:column;}.meta-item{border-right:none;border-bottom:1px solid var(--border);}.rem-item{grid-template-columns:1fr;}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"La Source Foodschool Semantic Audit","description":"2A Agency semantic audit of La Source Foodschool. Score 82/100. ChatGPT and Grok mention Bordeaux campus (no longer active). Gemini invents 83.5% insertion rate (official: 86.96%). All 4 LLMs correctly identify La Source as France's leading sustainable cooking school.","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"datePublished":"2026-04-02","url":"https://www.2aagency.com/reports/la-source-foodschool","license":"https://creativecommons.org/licenses/by/4.0/"}
+</script>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › La Source Foodschool — Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Rapport d'Audit Sémantique · Formation Culinaire Durable · Paris · Toulouse · Fondée 2019</div>
+    <h1 class="report-brand">La Source Foodschool</h1>
+    <p class="report-meta">
+      <strong>Audité par 2A Agency</strong> · Émis le 2 avril 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Avril 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num">82</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-label">Notaire</div><div class="meta-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-label">Date</div><div class="meta-val">2 avril 2026</div></div>
+  <div class="meta-item"><div class="meta-label">LLMs testés</div><div class="meta-val">ChatGPT · Gemini Pro · Perplexity Pro · Grok</div></div>
+  <div class="meta-item"><div class="meta-label">Secteur</div><div class="meta-val">Formation culinaire durable</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Bien référencée. <em>Mais des données non structurées qui créent des drifts.</em></h2>
+  <p class="body-text">La Source Foodschool obtient <strong>82/100</strong>. C'est un score solide qui reflète une réalité encourageante : les 4 LLMs reconnaissent unanimement La Source comme la référence de l'école de cuisine durable et alternative en France. La couverture presse — Le Monde, Télérama, Les Echos, France Bleu — a bien alimenté les modèles.</p>
+  <p class="body-text">Mais trois drifts persistent. ChatGPT et Grok mentionnent un campus Bordeaux qui n'est plus actif sur le site officiel. Gemini invente un taux d'insertion de 83.5% quand le chiffre officiel Qualiopi est 86.96%. Ces erreurs viennent d'une seule cause : l'absence de données structurées machine-readable sur le site.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Visibilité LLMs</div><div class="score-card-num sc-green">95</div></div>
+    <div class="score-card"><div class="score-card-label">Certifications</div><div class="score-card-num sc-green">90</div></div>
+    <div class="score-card"><div class="score-card-label">Formations</div><div class="score-card-num sc-green">88</div></div>
+    <div class="score-card"><div class="score-card-label">Campus & géographie</div><div class="score-card-num sc-red">58</div></div>
+    <div class="score-card"><div class="score-card-label">Chiffres officiels</div><div class="score-card-num sc-amber">72</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-amber">82</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>ChatGPT</th>
+        <th>Gemini Pro</th>
+        <th>Perplexity Pro</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Top école cuisine durable France</td>
+        <td><span class="v-ok">✓</span> La Source citée — référence alternative</td>
+        <td><span class="v-ok">✓</span> La Source — "première école nativement éco-responsable"</td>
+        <td><span class="v-ok">✓</span> La Source citée avec Prix Écotable 2025</td>
+        <td><span class="v-ok">✓</span> La Source — acteur clé en France</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Qualiopi + CPF + alternance</td>
+        <td><span class="v-ok">✓</span> Qualiopi ✓ · CPF ✓ · CFA ✓</td>
+        <td><span class="v-ok">✓</span> Qualiopi ✓ · RNCP ✓ · alternance ✓</td>
+        <td><span class="v-ok">✓</span> Qualiopi ✓ · CPF ✓ · CFA ✓</td>
+        <td><span class="v-ok">✓</span> Qualiopi ✓ · alternance ✓</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Formations végétale + fermentation</td>
+        <td><span class="v-ok">✓</span> Cycles 1&2 fermentation · végétale 2j ✓</td>
+        <td><span class="v-ok">✓</span> Détail sessions avril 2026 ✓</td>
+        <td><span class="v-ok">✓</span> Paris + Toulouse ✓</td>
+        <td><span class="v-ok">✓</span> Programmes corrects ✓</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Campus actifs (correct : Paris + Toulouse)</td>
+        <td><span class="v-x">✗</span> <strong>Paris, Toulouse, Bordeaux</strong> — Bordeaux absent du site 2026</td>
+        <td><span class="v-ok">✓</span> Paris et Toulouse ✓</td>
+        <td><span class="v-ok">✓</span> Paris, Toulouse, Bordeaux — source ancienne ⚠️</td>
+        <td><span class="v-x">✗</span> <strong>Paris, Toulouse, Bordeaux</strong> — campus fantôme</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Taux réussite (correct : 94.55%) + insertion (correct : 86.96%)</td>
+        <td><span class="v-p">~</span> 91% réussite · 82-90% insertion — fourchette floue</td>
+        <td><span class="v-x">✗</span> 95% réussite · <strong>83.5% insertion — inventé</strong></td>
+        <td><span class="v-ok">✓</span> 94.55% réussite · 86.96% insertion ✓ exact</td>
+        <td><span class="v-p">~</span> 95% réussite · insertion non mentionnée</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Findings</div>
+  <h2 class="section-title">Un campus fantôme. <em>Des chiffres inventés. Une cause unique.</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label crit">Drift primaire · Campus Bordeaux · ChatGPT + Grok</div>
+    <h3 class="finding-title">ChatGPT et Grok envoient des futurs apprenants vers un campus Bordeaux qui n'apparaît plus sur le site officiel.</h3>
+    <p class="finding-text">ChatGPT et Grok citent systématiquement "Paris, Toulouse, Bordeaux" comme campus de La Source Foodschool. Le site officiel lasource-foodschool.com en avril 2026 ne liste que Paris et Toulouse. Le campus Bordeaux (Darwin) était actif mais n'est plus mis en avant. Un futur apprenant qui cherche une formation à Bordeaux via ChatGPT va contacter La Source — pour se faire dire que le campus n'existe pas ou n'est plus actif. C'est du trafic qualifié perdu et de la déception à l'inscription.</p>
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val wrong">Paris + Toulouse + Bordeaux ✗</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val ok">Paris + Toulouse ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val partial">Paris + Toulouse + Bordeaux ⚠️</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val wrong">Paris + Toulouse + Bordeaux ✗</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift secondaire · Taux d'insertion · Gemini</div>
+    <h3 class="finding-title">Gemini cite un taux d'insertion de 83.5% — chiffre inventé. Le taux officiel Qualiopi est 86.96%.</h3>
+    <p class="finding-text">Gemini produit un chiffre précis — 83.5% — qui n'apparaît nulle part dans les données officielles de La Source. Le taux d'insertion officiel publié sur la page Qualiopi du site est 86.96%. L'écart est de 3.5 points. Sur un marché où les futurs apprenants comparent les écoles sur leurs statistiques d'insertion, un chiffre sous-estimé de 3.5 points peut faire pencher la balance vers un concurrent. Seul Perplexity cite le chiffre exact (86.96%) en source Qualiopi.</p>
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val partial">82-90% fourchette ⚠️</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">83.5% inventé ✗</div></div>
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">86.96% exact ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val partial">Non mentionné ⚠️</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift tertiaire · Source inventée · Gemini</div>
+    <h3 class="finding-title">Gemini cite Le Fooding comme source de recommandation de La Source — non vérifié.</h3>
+    <p class="finding-text">Gemini mentionne "Télérama & Le Fooding" comme sources qui recommandent La Source. Télérama est correct — l'article existe. Le Fooding n'apparaît pas dans les sources médias officiellement référencées par La Source sur son site. Probable hallucination de source — Gemini confond ou complète avec une source plausible mais non vérifiée.</p>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Point fort majeur · Convergence 4 LLMs · Positionnement</div>
+    <h3 class="finding-title">La Source est unanimement reconnue comme la référence de l'école de cuisine durable alternative en France — sur les 4 modèles.</h3>
+    <p class="finding-text">C'est le constat le plus important de cet audit. Gemini la décrit comme "la première école nativement et entièrement dédiée à la cuisine éco-responsable". Perplexity la cite avec le Prix de l'École Engagée Écotable 2025. ChatGPT la place en tête des recommandations alternatives. Grok la classe "acteur clé en France". La couverture presse — Le Monde, Télérama, Les Echos, France Bleu, Sud Ouest — a construit une présence LLM solide. C'est un avantage concurrentiel réel sur Ferrandi ou Le Cordon Bleu pour la niche "cuisine durable".</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 82 à <em>pleinement certifié.</em></h2>
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Clarifier le statut du campus Bordeaux</div>
+        <p class="rem-text">Si Bordeaux est fermé ou suspendu : ajouter une mention explicite sur le site ("Campus Paris et Toulouse uniquement en 2026") avec Schema.org <code>location</code> limité aux deux campus actifs. Les LLMs vont corriger dans leur prochain cycle de crawl. Si Bordeaux va rouvrir : annoncer la date de réouverture clairement pour que les LLMs anticipent. Le campus fantôme coûte du trafic qualifié à chaque requête géolocalisée à Bordeaux.</p>
+        <div class="rem-impact">Impact : Trafic entrant qualifié sur les bons campus · Zéro déception à l'inscription</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2</div>
+      <div>
+        <div class="rem-title">Ancrer les chiffres Qualiopi dans les données structurées</div>
+        <p class="rem-text">Déployer Schema.org <code>EducationalOrganization</code> sur lasource-foodschool.com avec les indicateurs officiels : taux de réussite 94.55%, taux d'insertion 86.96%, taux de satisfaction 85.7%, nombre d'apprenants 681. Ces données sont sur la page Qualiopi mais pas en format machine-readable. Perplexity les trouve parce qu'il crawle directement cette page — Gemini et ChatGPT interpolent depuis des sources secondaires. Le balisage Schema.org prime sur les sources secondaires dans les prochains cycles LLM.</p>
+        <div class="rem-impact">Impact : Gemini arrête d'inventer 83.5% · ChatGPT arrête les fourchettes · Chiffres cohérents sur les 4 LLMs</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 3</div>
+      <div>
+        <div class="rem-title">Structurer les formations avec Schema.org Course</div>
+        <p class="rem-text">Chaque formation (Commis de cuisine RNCP 37859, Cuisinier RNCP 37867, Fermentation Cycle 1&2, Cuisine Végétale) devrait avoir son propre balisage Schema.org <code>Course</code> avec <code>educationalCredentialAwarded</code>, <code>occupationalCategory</code>, <code>timeRequired</code>, <code>offers</code> (prix, éligibilité CPF). Quand un futur apprenant demande à un agent IA "formation cuisine certifiante CPF Paris" — La Source doit apparaître avec les bonnes informations, pas une description générique.</p>
+        <div class="rem-impact">Impact : Acquisition d'apprenants via agents IA · Visibilité sur les requêtes CPF et alternance</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 4 — Opportunité</div>
+      <div>
+        <div class="rem-title">Capitaliser sur le positionnement "première école durable" dans les données structurées</div>
+        <p class="rem-text">La Source est déjà reconnue comme la référence. Mais ce positionnement repose sur des articles de presse — des sources secondaires que les LLMs peuvent remettre en question. En ajoutant Schema.org avec les awards (Prix École Engagée Écotable 2025, label Écotable restaurant d'application), les certifications (Qualiopi, RNCP, soutien Région Occitanie), et les citations médias structurées, La Source ancre son leadership dans des données machine-readable que les LLMs citent en priorité sur les articles de presse.</p>
+        <div class="rem-impact">Impact : Leadership "école durable" protégé dans les LLMs · Concurrent ne peut pas prendre la place sans données équivalentes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport d'Audit Sémantique — La Source Foodschool · Avril 2026 · 2aagency.com/registry</div>
+</footer>
+</body>
+</html>

@@ -114,6 +114,16 @@
   <url><loc>https://www.2aagency.com/registry/respire</loc><priority>0.7</priority></url>
   <url><loc>https://www.2aagency.com/registry/horace</loc><priority>0.7</priority></url>
   <url><loc>https://www.2aagency.com/registry/typology</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://www.2aagency.com/reports/la-source-foodschool</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.2aagency.com/registry/la-source-foodschool</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <url>
     <loc>https://www.2aagency.com/notary-data.html</loc>
