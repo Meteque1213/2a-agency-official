@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2A Agency — Conditions d'utilisation</title>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.2aagency.com/terms.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:      #F7F4EE;
+            --surface: #EDEAE3;
+            --ink:     #111111;
+            --gold:    #B08D57;
+            --gold-lt: #C9A96E;
+            --muted:   #6B6661;
+            --rule:    rgba(176, 141, 87, 0.22);
+        }
+
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: 'DM Mono', monospace;
+            font-size: 15px;
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        body::after {
+            content:"";
+            position:fixed; inset:0;
+            pointer-events:none; z-index:9999;
+            opacity:0.035;
+            background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        nav {
+            position: sticky; top:0; z-index:100;
+            display:flex; justify-content:space-between; align-items:center;
+            padding: 22px 6%;
+            background: rgba(247,244,238,0.93);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--rule);
+        }
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.65rem; font-weight:600;
+            letter-spacing:-0.02em; text-decoration:none; color:var(--ink);
+        }
+        .logo em { font-style:normal; color:var(--gold); }
+        .nav-back {
+            text-decoration:none; color:var(--muted);
+            font-size:0.65rem; text-transform:uppercase; letter-spacing:0.14em;
+            transition:color .2s;
+        }
+        .nav-back:hover { color:var(--ink); }
+
+        main {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 80px 6% 120px;
+        }
+
+        .page-label {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .updated {
+            font-size: 0.65rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        section {
+            margin-bottom: 48px;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: var(--ink);
+            margin-bottom: 14px;
+        }
+
+        p {
+            font-size: 0.82rem;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        a { color: var(--gold); text-decoration: none; }
+        a:hover { color: var(--gold-lt); }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--gold);
+            border: 1px solid var(--rule);
+            padding: 4px 10px;
+            margin-bottom: 14px;
+        }
+
+        footer {
+            border-top: 1px solid var(--rule);
+            padding: 40px 6%;
+            display:flex; justify-content:space-between; align-items:center;
+            font-size: 0.6rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+        .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem; font-weight:600;
+            text-decoration:none; color:var(--ink);
+        }
+        .footer-logo em { font-style:normal; color:var(--gold); }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a class="logo" href="index.html">2<em>A</em> Agency</a>
+    <a class="nav-back" href="index.html">← Retour</a>
+</nav>
+
+<main>
+    <p class="page-label">Legal</p>
+    <h1>Conditions d'utilisation</h1>
+    <p class="updated">Dernière mise à jour : avril 2026</p>
+
+    <section>
+        <h2>1. Objet</h2>
+        <p>Le registre 2A Agency est un registre sémantique indépendant destiné à certifier et publier des données de référence sur les marques de luxe à titre purement informatif. L'accès au site et à l'API MCP est soumis aux présentes conditions.</p>
+    </section>
+
+    <section>
+        <h2>2. Licence des données certifiées</h2>
+        <span class="badge">CC BY 4.0</span>
+        <p>Les données certifiées publiées dans le registre sont mises à disposition sous licence <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong>. Toute réutilisation, reproduction ou intégration de ces données dans un système tiers est autorisée à condition de mentionner explicitement la source : <em>« Source : 2A Agency Semantic Registry — 2aagency.com »</em>.</p>
+    </section>
+
+    <section>
+        <h2>3. Usage de l'API MCP</h2>
+        <p>L'API MCP (Model Context Protocol) est mise à disposition dans le cadre d'un usage fair use. Il est interdit d'effectuer du scraping massif, des appels automatisés en volume, ou toute utilisation visant à répliquer intégralement le registre. 2A Agency se réserve le droit de suspendre l'accès en cas d'usage abusif.</p>
+    </section>
+
+    <section>
+        <h2>4. Limitation de responsabilité</h2>
+        <p>Les prix et données certifiés publiés dans le registre sont indicatifs et correspondent à l'état des informations vérifiées à la date d'audit mentionnée sur chaque fiche. 2A Agency ne garantit pas l'exactitude ou l'actualité des données après cette date. Ces informations ne constituent pas un conseil financier, juridique ou commercial.</p>
+    </section>
+
+    <section>
+        <h2>5. Propriété intellectuelle</h2>
+        <p>Les marques, logos et noms de marques référencés dans le registre sont la propriété de leurs titulaires respectifs. Leur mention dans le registre 2A Agency est strictement documentaire et ne constitue aucune affiliation ni partenariat.</p>
+    </section>
+
+    <section>
+        <h2>6. Contact</h2>
+        <p>Pour toute question relative aux présentes conditions : <a href="mailto:alexandre@2aagency.com">alexandre@2aagency.com</a></p>
+    </section>
+
+    <section>
+        <h2>7. Droit applicable & juridiction</h2>
+        <p>Les présentes conditions sont soumises au droit français. En cas de litige, les parties conviennent de la compétence exclusive des tribunaux de Paris.</p>
+    </section>
+</main>
+
+<footer>
+    <a class="footer-logo" href="index.html">2<em>A</em> Agency</a>
+    <span>© 2026 2A Agency — <a href="privacy.html">Politique de confidentialité</a></span>
+</footer>
+
+</body>
+</html>
