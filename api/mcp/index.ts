@@ -5,6 +5,65 @@ import { readFileSync, existsSync } from "fs";
 import { join } from "path";
 import type { IncomingMessage, ServerResponse } from "http";
 
+// ── x402 Payment gate ──────────────────────────────────────────────────────
+const FREE_API_KEYS = [
+  process.env.FREE_API_KEY_DEMO,
+  process.env.FREE_API_KEY_HERMES,
+  process.env.FREE_API_KEY_ROLEX,
+].filter(Boolean) as string[];
+
+function buildX402Payload() {
+  return {
+    version: "1",
+    scheme: "exact",
+    network: "base",
+    maxAmountRequired: "1000", // 0.001 USDC in atomic units (6 decimals)
+    resource: "https://www.2aagency.com/api/mcp",
+    description: "2A Agency Brand Semantic Registry — $0.001 per query",
+    mimeType: "application/json",
+    payTo: process.env.WALLET_ADDRESS ?? "",
+    requiredDeadlineSeconds: 300,
+    asset: "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913", // USDC on Base
+  };
+}
+
+function send402(res: ServerResponse): void {
+  const payload = buildX402Payload();
+  const encoded = Buffer.from(JSON.stringify(payload)).toString("base64");
+  res.writeHead(402, {
+    "Content-Type": "application/json",
+    "X-Payment-Required": encoded,
+    "Access-Control-Expose-Headers": "X-Payment-Required",
+  });
+  res.end(
+    JSON.stringify({
+      error: "Payment required",
+      x402: true,
+      description: payload.description,
+      price: "$0.001 USDC on Base",
+      how: "Include 'x-payment' header with payment proof, or use a free API key via 'x-api-key' header",
+    })
+  );
+}
+
+async function verifyPayment(paymentHeader: string): Promise<boolean> {
+  try {
+    const resp = await fetch("https://services.ampersend.ai/verify", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        payment: paymentHeader,
+        payload: buildX402Payload(),
+      }),
+    });
+    if (!resp.ok) return false;
+    const result = (await resp.json()) as { valid?: boolean; isValid?: boolean };
+    return result.valid === true || result.isValid === true;
+  } catch {
+    return false;
+  }
+}
+
 // ── Brand → node file mapping ──────────────────────────────────────────────
 const BRAND_MAP: Record<string, string> = {
   "veuve clicquot": "vc-1772",
@@ -271,6 +330,25 @@ export default async function handler(
     res.writeHead(405, { "Content-Type": "application/json" });
     res.end(JSON.stringify({ error: "Method not allowed. Use POST for MCP requests." }));
     return;
+  }
+
+  // ── x402 gate ────────────────────────────────────────────────────────────
+  const apiKey = req.headers["x-api-key"] as string | undefined;
+  if (apiKey && FREE_API_KEYS.includes(apiKey)) {
+    // Free API key — bypass payment
+  } else {
+    const paymentHeader = req.headers["x-payment"] as string | undefined;
+    if (paymentHeader) {
+      const valid = await verifyPayment(paymentHeader);
+      if (!valid) {
+        send402(res);
+        return;
+      }
+      // Valid on-chain payment — proceed
+    } else {
+      send402(res);
+      return;
+    }
   }
 
   try {
