@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polène — Rapport de Notation Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Polène. Score 82/100. ChatGPT identifie Pierre Dupuy comme PDG au lieu d'Antonin Dupuy.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/polene">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111;
+  --gold: #B08D57; --border: rgba(176,141,87,0.22);
+  --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; }
+.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+.nav-link:hover { color: var(--gold); }
+.breadcrumb { padding: 14px 5%; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gray); border-bottom: 1px solid var(--border); }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
+.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
+.report-meta strong { color: var(--ink); }
+.score-circle { text-align: center; min-width: 100px; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; line-height: 1; }
+.score-denom { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+.meta-bar { display: flex; border: 1px solid var(--border); margin: 0 5%; }
+.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; }
+.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.meta-item-val { font-size: 0.78rem; color: var(--ink); }
+section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+.score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.score-card { background: var(--bg); padding: 24px 20px; }
+.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.sc-green { color: var(--green); } .sc-amber { color: var(--amber); } .sc-red { color: var(--red); }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.73rem; }
+.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
+.matrix-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.matrix-table tr:hover td { background: var(--surface); }
+.v-ok { color: var(--green); } .v-p { color: var(--amber); } .v-x { color: var(--red); }
+.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
+.tag-ok { color: var(--green); border-color: rgba(45,106,45,0.3); }
+.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
+.tag-crit { color: var(--red); border-color: rgba(139,45,45,0.3); }
+.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
+.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
+.finding-box.amber { border-color: rgba(122,90,0,0.3); background: rgba(122,90,0,0.03); }
+.finding-box.positive { border-color: rgba(45,106,45,0.3); background: rgba(45,106,45,0.02); }
+.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.finding-label.amber { color: var(--amber); }
+.finding-label.green { color: var(--green); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
+.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; margin-bottom: 12px; }
+.drift-compare { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 16px; }
+.dc-cell { background: var(--bg); padding: 14px 16px; }
+.dc-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.dc-val { font-size: 0.82rem; color: var(--ink); line-height: 1.5; }
+.dc-val.wrong { color: var(--red); }
+.dc-val.ok { color: var(--green); }
+.dc-val.partial { color: var(--amber); }
+.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
+.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
+.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.rem-text { font-size: 0.82rem; color: var(--gray); line-height: 1.75; margin-bottom: 10px; }
+.rem-impact { font-size: 0.7rem; color: var(--green); letter-spacing: 0.06em; }
+footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+.f-logo span { color: var(--gold); }
+.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+@media(max-width:768px) {
+  .report-hero { grid-template-columns: 1fr; }
+  .meta-bar { flex-direction: column; }
+  .meta-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .score-grid { grid-template-columns: repeat(2,1fr); }
+  .drift-compare { grid-template-columns: repeat(2,1fr); }
+  .rem-item { grid-template-columns: 1fr; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"Polène Semantic Audit","description":"2A Agency Integrity Score of Polène. Score 82/100. ChatGPT identifies Pierre Dupuy as CEO instead of Antonin Dupuy.","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"about":{"@type":"Organization","name":"Polène","foundingDate":"2016","foundingLocation":"Paris, France"},"datePublished":"2026-04-03","url":"https://www.2aagency.com/reports/polene","license":"https://creativecommons.org/licenses/by/4.0/"}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › Polène — Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Integrity Score · Maroquinerie DNVB · Paris · Fondée 2016</div>
+    <h1 class="report-brand">Polène</h1>
+    <p class="report-meta">
+      <strong>Noté par 2A Agency</strong> · Émis le 3 avril 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Avril 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num" style="color:var(--green)">82</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-item-label">Notaire</div><div class="meta-item-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">3 avril 2026</div></div>
+  <div class="meta-item"><div class="meta-item-label">LLMs testés</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">5 standardisées</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">DNVB maroquinerie exemplaire. <em>ChatGPT confond les frères fondateurs — PDG erroné.</em></h2>
+  <p class="body-text">Ce rapport présente les résultats de l'integrity score indépendant de Polène par 2A Agency, conduit sur 4 grands modèles de langage en avril 2026. L'audit couvre l'identité des fondateurs, la direction exécutive, les prix des sacs phares, la fabrication à Ubrique et le modèle DTC.</p>
+  <p class="body-text">Polène obtient un score de <strong>82/100</strong> — l'une des DNVB maroquinerie les mieux notées du registre 2A. Les prix et le modèle direct-to-consumer sont excellemment couverts par 3 LLMs sur 4. Deux drifts pénalisent le score : ChatGPT confond Pierre Dupuy et Antonin Dupuy et désigne le mauvais frère comme PDG ; Perplexity localise la fabrication en Italie au lieu d'Ubrique, en Espagne.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Identité & Fondateurs</div><div class="score-card-num sc-amber">70</div></div>
+    <div class="score-card"><div class="score-card-label">Produits & Prix</div><div class="score-card-num sc-green">92</div></div>
+    <div class="score-card"><div class="score-card-label">Fabrication</div><div class="score-card-num sc-green">84</div></div>
+    <div class="score-card"><div class="score-card-label">Modèle DTC</div><div class="score-card-num sc-green">90</div></div>
+    <div class="score-card"><div class="score-card-label">Notoriété dirigeant</div><div class="score-card-num sc-amber">72</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-green">82</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fondateurs — trio Dupuy</td>
+        <td><span class="v-ok">✓</span> Antonin, Pierre et Laurent Dupuy — 3 frères, 2016, Paris</td>
+        <td><span class="v-ok">✓</span> Exact — trio fondateur bien identifié</td>
+        <td><span class="v-p">~</span> Les 3 frères cités mais rôles mélangés</td>
+        <td><span class="v-ok">✓</span> Exact — précise le contexte familial et la vision</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>CEO actuel</td>
+        <td><span class="v-ok">✓</span> Antonin Dupuy — CEO confirmé</td>
+        <td><span class="v-ok">✓</span> Antonin Dupuy ✓</td>
+        <td><span class="v-x">✗</span> <strong>Pierre Dupuy désigné comme PDG — erreur factuelle</strong></td>
+        <td><span class="v-ok">✓</span> Antonin Dupuy ✓ — CEO exact</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Prix sac Numéro Un</td>
+        <td><span class="v-ok">✓</span> ~395€, cohérent avec polene-paris.com</td>
+        <td><span class="v-ok">✓</span> Correct — gamme de prix bien maîtrisée</td>
+        <td><span class="v-ok">✓</span> Correct et cohérent avec site officiel</td>
+        <td><span class="v-ok">✓</span> Correct — prix cohérents avec site officiel</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Fabrication — Ubrique, Espagne</td>
+        <td><span class="v-x">✗</span> <strong>Dit fabrication Italie — devrait être Ubrique, Espagne</strong></td>
+        <td><span class="v-ok">✓</span> Ubrique · Espagne ✓ · artisans locaux</td>
+        <td><span class="v-ok">✓</span> Ubrique · Espagne ✓</td>
+        <td><span class="v-ok">✓</span> Ubrique ✓ · précise la tradition maroquinière andalouse</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Modèle DTC — vente directe</td>
+        <td><span class="v-ok">✓</span> DTC Paris · e-commerce · pas de grossistes</td>
+        <td><span class="v-ok">✓</span> Modèle DTC ✓ · boutique Paris + digital</td>
+        <td><span class="v-ok">✓</span> DTC ✓ · prix accessibles via circuit court</td>
+        <td><span class="v-ok">✓</span> DTC ✓ · explique le pricing sans intermédiaire</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Findings critiques</div>
+  <h2 class="section-title">ChatGPT confond le PDG. <em>Perplexity délocalise la fabrication en Italie.</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label">Drift primaire · CEO · ChatGPT uniquement</div>
+    <h3 class="finding-title">ChatGPT désigne Pierre Dupuy comme PDG de Polène — le CEO est Antonin Dupuy.</h3>
+    <p class="finding-text">Polène a été fondée par trois frères Dupuy — Antonin, Pierre et Laurent — en 2016 à Paris. Antonin Dupuy est le CEO de la marque. ChatGPT confond Pierre et Antonin et désigne le mauvais frère à la direction générale. Cette erreur, bien que subtile en apparence, est critique dans un contexte de prise de contact commercial, de presse ou de due diligence.</p>
+    <p class="finding-text"><strong>Impact commercial :</strong> Un journaliste ou un partenaire qui interroge ChatGPT avant de contacter Polène peut adresser sa demande à la mauvaise personne ou introduire une erreur factuelle dans un article. Dans le cadre agentique, un assistant IA qui prépare une présentation de Polène génèrera un profil dirigeant erroné — visible par des investisseurs ou clients potentiels.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">Antonin Dupuy ✓<br>CEO confirmé</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val ok">Antonin Dupuy ✓<br>Exact</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val wrong">Pierre Dupuy ✗<br>PDG erroné</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">Antonin Dupuy ✓<br>CEO exact</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift secondaire · Fabrication · Perplexity uniquement</div>
+    <h3 class="finding-title">Perplexity localise la fabrication en Italie — Polène produit ses sacs à Ubrique, en Andalousie, Espagne.</h3>
+    <p class="finding-text">Ubrique, village d'Andalousie, est la capitale mondiale de la maroquinerie artisanale haut de gamme — elle fabrique pour de nombreuses maisons de luxe. C'est là que Polène fait produire ses sacs. Perplexity cite l'Italie à la place, une erreur qui érode la précision du storytelling de fabrication de la marque et peut dérouter des acheteurs sensibles à l'origine géographique.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val wrong">Italie ✗<br>Origine erronée</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val ok">Ubrique · Espagne ✓<br>Exact</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val ok">Ubrique · Espagne ✓<br>Correct</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">Ubrique ✓<br>Tradition andalouse citée</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Point fort · Prix & Modèle DTC · 3/4 LLMs</div>
+    <h3 class="finding-title">Les prix et le modèle DTC de Polène sont parfaitement maîtrisés par 3 LLMs sur 4.</h3>
+    <p class="finding-text">Les prix des sacs Polène (gamme 250–450€) et le modèle direct-to-consumer sans intermédiaire sont correctement décrits par Perplexity, Gemini et Grok. L'argument fondamental de Polène — la qualité artisanale à prix accessible grâce au circuit court — est bien compris et restitué. C'est un actif sémantique précieux pour une DNVB qui se positionne sur la disruption du luxe accessible.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 82 à <em>pleinement certifié.</em></h2>
+
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Ancrer Antonin Dupuy comme CEO dans les données structurées</div>
+        <p class="rem-text">Déployer un JSON-LD <code>Organization</code> avec <code>"employee": [{"@type": "Person", "name": "Antonin Dupuy", "jobTitle": "CEO", "worksFor": "Polène"}]</code> sur la homepage polene-paris.com. ChatGPT utilise les données structurées des pages "About" et "Team" pour construire ses réponses sur les dirigeants — une balise <code>Person</code> correcte avec le rôle exact corrigera le drift.</p>
+        <div class="rem-impact">Impact : CEO correct dans ChatGPT · Antonin Dupuy identifié précisément dans tous les LLMs · Fiabilité presse et partenaires</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2 — Cette semaine</div>
+      <div>
+        <div class="rem-title">Corriger l'origine fabrication Ubrique dans Perplexity</div>
+        <p class="rem-text">Ajouter sur la page fabrication/about de polene-paris.com un markup <code>Place</code> ou <code>PostalAddress</code> explicite pour Ubrique, Andalousie, Espagne. Renforcer le contenu éditorial sur la page "Notre histoire" avec une mention explicite et structurée d'Ubrique comme lieu de fabrication — Perplexity indexe ces pages en priorité pour les réponses sur l'origine produit.</p>
+        <div class="rem-impact">Impact : Fabrication Ubrique correcte dans Perplexity · Storytelling géographique cohérent sur tous les LLMs</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 3 — Opportunité agentique</div>
+      <div>
+        <div class="rem-title">Activer le catalogue Polène pour les agents IA de recommandation maroquinerie</div>
+        <p class="rem-text">Polène est la DNVB maroquinerie la plus recherchée sur les requêtes "sac qualité luxe budget 400€" ou "alternative Celine/Jacquemus accessible". Un node 2A certifié expose le catalogue structuré par silhouette (tote, hobo, shoulder), matière, coloris et prix — rendant Polène queryable par défaut pour toute plateforme d'achat agentique ou comparateur mode.</p>
+        <div class="rem-impact">Impact : Première DNVB maroquinerie avec catalogue agentique certifié · Recommandée dans les comparatifs luxe accessible</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport de Notation Sémantique — Polène · Avril 2026 · 2aagency.com/registry</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "brand": "Jacquemus",
+  "node_id": "jq-2009",
+  "score": 79,
+  "audit_date": "2026-04-03",
+  "sector": "Mode Contemporaine",
+  "founder": "Simon Jacquemus",
+  "ceo": "Simon Jacquemus",
+  "founding_year": 2009,
+  "headquarters": "Paris, France",
+  "group": "Indépendant — Simon Jacquemus majoritaire · L'Oréal : prise de participation minoritaire (décembre 2022)",
+  "loreal_stake": "minoritaire — pourcentage non divulgué (décembre 2022)",
+  "manufacturing_country": "France, Italie",
+  "manufacturing_region": "France (Provence) · Italie (Toscane, Marches)",
+  "flagship_price": {
+    "le_bambino_bag": 570,
+    "le_chiquito_bag": 530,
+    "le_grand_bambino": 700,
+    "le_bob_chapeau": 95
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "gemini",
+      "field": "loreal_stake",
+      "incorrect_value": "L'Oréal décrit comme actionnaire majoritaire ou 'co-propriétaire'",
+      "correct_value": "L'Oréal est actionnaire minoritaire depuis décembre 2022 — Simon Jacquemus reste majoritaire et directeur créatif. Partenariat stratégique, non prise de contrôle.",
+      "severity": "critical",
+      "commercial_impact": "Qualification erronée de la structure capitalistique — 'actionnaire majoritaire' vs 'minoritaire' change fondamentalement le statut d'indépendance de la marque et peut affecter toute analyse M&A ou partenariat"
+    },
+    {
+      "llm": "grok",
+      "field": "founding_year",
+      "incorrect_value": "2010 cité",
+      "correct_value": "2009 — Simon Jacquemus lance la marque en 2009, à 19 ans, après le décès de sa mère",
+      "severity": "low",
+      "commercial_impact": "Erreur de date de fondation mineure — la genèse 2009 est liée au récit fondateur"
+    }
+  ],
+  "source_url": "https://www.2aagency.com/reports/jacquemus",
+  "registry_url": "https://www.2aagency.com/registry/jacquemus",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 79,
+    "dateRated": "2026-04-03"
+  }
+}

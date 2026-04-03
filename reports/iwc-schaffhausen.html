@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IWC Schaffhausen — Rapport de Notation Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de IWC Schaffhausen. Score 81/100. Les 4 LLMs ignorent Marco Barbato, nouveau CEO depuis janvier 2025.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/iwc-schaffhausen">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111;
+  --gold: #B08D57; --border: rgba(176,141,87,0.22);
+  --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; }
+.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+.nav-link:hover { color: var(--gold); }
+.breadcrumb { padding: 14px 5%; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gray); border-bottom: 1px solid var(--border); }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
+.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
+.report-meta strong { color: var(--ink); }
+.score-circle { text-align: center; min-width: 100px; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; line-height: 1; }
+.score-denom { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+.meta-bar { display: flex; border: 1px solid var(--border); margin: 0 5%; }
+.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; }
+.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.meta-item-val { font-size: 0.78rem; color: var(--ink); }
+section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+.score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.score-card { background: var(--bg); padding: 24px 20px; }
+.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.sc-green { color: var(--green); } .sc-amber { color: var(--amber); } .sc-red { color: var(--red); }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.73rem; }
+.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
+.matrix-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.matrix-table tr:hover td { background: var(--surface); }
+.v-ok { color: var(--green); } .v-p { color: var(--amber); } .v-x { color: var(--red); }
+.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
+.tag-ok { color: var(--green); border-color: rgba(45,106,45,0.3); }
+.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
+.tag-crit { color: var(--red); border-color: rgba(139,45,45,0.3); }
+.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
+.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
+.finding-box.amber { border-color: rgba(122,90,0,0.3); background: rgba(122,90,0,0.03); }
+.finding-box.positive { border-color: rgba(45,106,45,0.3); background: rgba(45,106,45,0.02); }
+.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.finding-label.amber { color: var(--amber); }
+.finding-label.green { color: var(--green); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
+.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; margin-bottom: 12px; }
+.drift-compare { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 16px; }
+.dc-cell { background: var(--bg); padding: 14px 16px; }
+.dc-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.dc-val { font-size: 0.82rem; color: var(--ink); line-height: 1.5; }
+.dc-val.wrong { color: var(--red); }
+.dc-val.ok { color: var(--green); }
+.dc-val.partial { color: var(--amber); }
+.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
+.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
+.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.rem-text { font-size: 0.82rem; color: var(--gray); line-height: 1.75; margin-bottom: 10px; }
+.rem-impact { font-size: 0.7rem; color: var(--green); letter-spacing: 0.06em; }
+footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+.f-logo span { color: var(--gold); }
+.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+@media(max-width:768px) {
+  .report-hero { grid-template-columns: 1fr; }
+  .meta-bar { flex-direction: column; }
+  .meta-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .score-grid { grid-template-columns: repeat(2,1fr); }
+  .drift-compare { grid-template-columns: repeat(2,1fr); }
+  .rem-item { grid-template-columns: 1fr; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"IWC Schaffhausen Semantic Audit","description":"2A Agency Integrity Score of IWC Schaffhausen. Score 81/100. All 4 LLMs ignore Marco Barbato, new CEO since January 2025.","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"about":{"@type":"Organization","name":"IWC Schaffhausen","foundingDate":"1868","foundingLocation":"Schaffhausen, Suisse","parentOrganization":{"@type":"Organization","name":"Richemont"}},"datePublished":"2026-04-03","url":"https://www.2aagency.com/reports/iwc-schaffhausen","license":"https://creativecommons.org/licenses/by/4.0/"}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › IWC Schaffhausen — Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Integrity Score · Haute Horlogerie · Schaffhausen · Fondée 1868</div>
+    <h1 class="report-brand">IWC Schaffhausen</h1>
+    <p class="report-meta">
+      <strong>Noté par 2A Agency</strong> · Émis le 3 avril 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Avril 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num" style="color:var(--green)">81</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-item-label">Notaire</div><div class="meta-item-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">3 avril 2026</div></div>
+  <div class="meta-item"><div class="meta-item-label">LLMs testés</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">5 standardisées</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Manufacture Schaffhausen. <em>Marco Barbato, CEO depuis janvier 2025, ignoré par tous les LLMs.</em></h2>
+  <p class="body-text">Ce rapport présente les résultats de l'integrity score indépendant de IWC Schaffhausen par 2A Agency, conduit sur 4 grands modèles de langage en avril 2026. L'audit couvre l'histoire et la fondation en 1868, le CEO actuel, le prix de la Pilot's Watch automatique, l'appartenance au groupe Richemont et la fabrication à Schaffhausen.</p>
+  <p class="body-text">IWC Schaffhausen obtient un score de <strong>81/100</strong>. Les prix, l'identité manufacture et l'appartenance Richemont sont bien maîtrisés. Le finding critique est transversal à tous les LLMs : aucun ne connaît Marco Barbato, nommé CEO en janvier 2025. Tous citent encore Christoph Grainger-Herr, son prédécesseur. Ce pattern de "CEO drift" est identique à celui observé sur d'autres marques du registre 2A.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Identité & Histoire</div><div class="score-card-num sc-green">90</div></div>
+    <div class="score-card"><div class="score-card-label">CEO actuel</div><div class="score-card-num sc-amber">20</div></div>
+    <div class="score-card"><div class="score-card-label">Prix officiels</div><div class="score-card-num sc-green">88</div></div>
+    <div class="score-card"><div class="score-card-label">Groupe Richemont</div><div class="score-card-num sc-green">90</div></div>
+    <div class="score-card"><div class="score-card-label">Fabrication</div><div class="score-card-num sc-green">88</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-green">81</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fondation & histoire 1868</td>
+        <td><span class="v-ok">✓</span> 1868 · F.A. Jones · Schaffhausen — exact et détaillé</td>
+        <td><span class="v-ok">✓</span> 1868 ✓ · origine américaine à Schaffhausen citée</td>
+        <td><span class="v-ok">✓</span> Exact — F.A. Jones ✓</td>
+        <td><span class="v-ok">✓</span> Exact — mentionne le contexte industriel rhénan</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>CEO actuel (Marco Barbato)</td>
+        <td><span class="v-x">✗</span> <strong>Cite Christoph Grainger-Herr — CEO jusqu'en 2024</strong></td>
+        <td><span class="v-x">✗</span> <strong>Cite Christoph Grainger-Herr — CEO jusqu'en 2024</strong></td>
+        <td><span class="v-x">✗</span> <strong>Cite Christoph Grainger-Herr — CEO jusqu'en 2024</strong></td>
+        <td><span class="v-x">✗</span> <strong>Cite Christoph Grainger-Herr — CEO jusqu'en 2024</strong></td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Prix Pilot's Watch automatique</td>
+        <td><span class="v-ok">✓</span> ~6 600€ · cohérent avec iwc.com</td>
+        <td><span class="v-ok">✓</span> Gamme correcte · prix Pilot's Watch confirmés</td>
+        <td><span class="v-ok">✓</span> Correct et cohérent avec site officiel</td>
+        <td><span class="v-ok">✓</span> Prix corrects · Pilot's Watch bien couverte</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Appartenance groupe Richemont</td>
+        <td><span class="v-ok">✓</span> Richemont ✓ · groupe suisse · CFR cité</td>
+        <td><span class="v-ok">✓</span> Richemont ✓ · cote Cartier, VC dans le groupe</td>
+        <td><span class="v-ok">✓</span> Richemont ✓</td>
+        <td><span class="v-ok">✓</span> Richemont ✓ · précise le siège Genève</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Fabrication — Schaffhausen</td>
+        <td><span class="v-ok">✓</span> Schaffhausen · Suisse · manufacture intégrée ✓</td>
+        <td><span class="v-ok">✓</span> Schaffhausen ✓ · mouvements maison citées</td>
+        <td><span class="v-ok">✓</span> Schaffhausen ✓ · Swiss Made ✓</td>
+        <td><span class="v-ok">✓</span> Schaffhausen ✓ · ingénierie Rhin citée</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Findings critiques</div>
+  <h2 class="section-title">Marco Barbato absent de tous les LLMs. <em>Pattern CEO drift systémique dans la haute horlogerie.</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label">Drift primaire · CEO · 4 LLMs — unanime</div>
+    <h3 class="finding-title">Les 4 LLMs citent Christoph Grainger-Herr comme CEO — Marco Barbato est en poste depuis janvier 2025.</h3>
+    <p class="finding-text">Marco Barbato a été nommé CEO de IWC Schaffhausen en janvier 2025, succédant à Christoph Grainger-Herr qui dirigeait la manufacture depuis 2017. Plus de 15 mois après cette nomination, aucun des 4 LLMs testés ne connaît le nom de Marco Barbato. Tous citent encore Grainger-Herr. C'est le CEO drift le plus prononcé du registre 2A — une erreur transversale, unanime et persistante.</p>
+    <p class="finding-text"><strong>Impact commercial :</strong> Ce pattern est identique à celui observé sur Loro Piana (Frédéric Arnault) et d'autres marques de luxe ayant changé de direction récemment. Les nominations de CEO génèrent des communiqués de presse abondamment repris, mais les LLMs peinent à mettre à jour leurs modèles sur les données dirigeants. Pour IWC, un journaliste, partenaire ou ambassadeur qui interroge un LLM avant un entretien obtiendra systématiquement le mauvais nom — avec le risque d'une faute protocolaire directe.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val wrong">Grainger-Herr ✗<br>CEO depuis jan 2025 ≠</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">Grainger-Herr ✗<br>CEO depuis jan 2025 ≠</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val wrong">Grainger-Herr ✗<br>CEO depuis jan 2025 ≠</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val wrong">Grainger-Herr ✗<br>CEO depuis jan 2025 ≠</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Point fort · Prix & Identité manufacture · 4 LLMs</div>
+    <h3 class="finding-title">Les prix et l'identité manufacture de IWC sont bien maîtrisés malgré le drift CEO systémique.</h3>
+    <p class="finding-text">Malgré l'échec unanime sur le CEO, les 4 LLMs restituent correctement l'histoire de la manufacture fondée en 1868 à Schaffhausen par F.A. Jones, l'appartenance au groupe Richemont, la fabrication suisse intégrée et les prix des collections phares (Pilot's Watch, Portugieser, Portofino). L'identité technique et historique d'IWC est un actif sémantique solide — seule la couche dirigeante est défaillante.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 81 à <em>pleinement certifié.</em></h2>
+
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Ancrer Marco Barbato comme CEO dans les données structurées de tous les LLMs</div>
+        <p class="rem-text">Déployer un JSON-LD <code>Organization</code> sur iwc.com avec <code>"employee": {"@type": "Person", "name": "Marco Barbato", "jobTitle": "CEO", "startDate": "2025-01"}</code> et une page Wikipedia/Wikidata mise à jour pour Marco Barbato. Les LLMs utilisent Wikipedia et les données structurées Google Knowledge Graph comme sources primaires pour les dirigeants — sans ces mises à jour, le drift Grainger-Herr persistera indéfiniment.</p>
+        <div class="rem-impact">Impact : Marco Barbato cité correctement par les 4 LLMs · Suppression du CEO drift systémique · Fiabilité presse et partenaires</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2 — Cette semaine</div>
+      <div>
+        <div class="rem-title">Publier un communiqué de presse structuré sur la nomination de Marco Barbato</div>
+        <p class="rem-text">Les LLMs indexent les communiqués de presse via des sources journalistiques à haute autorité (Business of Fashion, Hodinkee, Le Temps, Reuters). S'assurer qu'un communiqué structuré sur la nomination de Marco Barbato — avec sa biographie, sa date de prise de fonction et son rôle exact — existe sur au moins 5 sources à haute autorité domaine horlogerie/luxe, liées en retour vers iwc.com.</p>
+        <div class="rem-impact">Impact : Couverture presse structurée suffisante pour forcer la mise à jour des LLMs · CEO drift résolu sur 12-18 mois</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 3 — Monitoring</div>
+      <div>
+        <div class="rem-title">Monitoring trimestriel CEO drift — pattern systémique dans le secteur luxe</div>
+        <p class="rem-text">Le CEO drift est un phénomène systémique dans le luxe horloger : les nouvelles nominations mettent 12 à 24 mois à se propager dans les LLMs. IWC doit surveiller ce drift à chaque trimestre jusqu'à ce que Marco Barbato soit correctement cité par les 4 LLMs. Un monitoring 2A Agency trimestriel détectera la fenêtre de correction et vérifiera la propagation de la mise à jour.</p>
+        <div class="rem-impact">Impact : CEO correctement identifié dans les LLMs · Pas de faute protocolaire dans les interactions presse et partenaires</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport de Notation Sémantique — IWC Schaffhausen · Avril 2026 · 2aagency.com/registry</div>
+</footer>
+
+</body>
+</html>

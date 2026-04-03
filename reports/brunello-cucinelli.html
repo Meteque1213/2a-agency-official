@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brunello Cucinelli — Rapport de Notation Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Brunello Cucinelli. Score 85/100. Gemini sous-évalue la maglia cashmere dolcevita de 8% (1 565€ vs 1 700€ officiel).">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/brunello-cucinelli">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111;
+  --gold: #B08D57; --border: rgba(176,141,87,0.22);
+  --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; }
+.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+.nav-link:hover { color: var(--gold); }
+.breadcrumb { padding: 14px 5%; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gray); border-bottom: 1px solid var(--border); }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
+.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
+.report-meta strong { color: var(--ink); }
+.score-circle { text-align: center; min-width: 100px; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; color: var(--green); line-height: 1; }
+.score-denom { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+.meta-bar { display: flex; border: 1px solid var(--border); margin: 0 5%; }
+.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; }
+.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.meta-item-val { font-size: 0.78rem; color: var(--ink); }
+section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+.score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.score-card { background: var(--bg); padding: 24px 20px; }
+.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.sc-green { color: var(--green); } .sc-amber { color: var(--amber); } .sc-red { color: var(--red); }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.73rem; }
+.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
+.matrix-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.matrix-table tr:hover td { background: var(--surface); }
+.v-ok { color: var(--green); } .v-p { color: var(--amber); } .v-x { color: var(--red); }
+.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
+.tag-ok { color: var(--green); border-color: rgba(45,106,45,0.3); }
+.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
+.tag-crit { color: var(--red); border-color: rgba(139,45,45,0.3); }
+.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
+.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
+.finding-box.amber { border-color: rgba(122,90,0,0.3); background: rgba(122,90,0,0.03); }
+.finding-box.positive { border-color: rgba(45,106,45,0.3); background: rgba(45,106,45,0.02); }
+.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.finding-label.amber { color: var(--amber); }
+.finding-label.green { color: var(--green); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
+.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; margin-bottom: 12px; }
+.drift-compare { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 16px; }
+.dc-cell { background: var(--bg); padding: 14px 16px; }
+.dc-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.dc-val { font-size: 0.82rem; color: var(--ink); line-height: 1.5; }
+.dc-val.wrong { color: var(--red); }
+.dc-val.ok { color: var(--green); }
+.dc-val.partial { color: var(--amber); }
+.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
+.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
+.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.rem-text { font-size: 0.82rem; color: var(--gray); line-height: 1.75; margin-bottom: 10px; }
+.rem-impact { font-size: 0.7rem; color: var(--green); letter-spacing: 0.06em; }
+footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+.f-logo span { color: var(--gold); }
+.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+@media(max-width:768px) {
+  .report-hero { grid-template-columns: 1fr; }
+  .meta-bar { flex-direction: column; }
+  .meta-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .score-grid { grid-template-columns: repeat(2,1fr); }
+  .drift-compare { grid-template-columns: repeat(2,1fr); }
+  .rem-item { grid-template-columns: 1fr; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"Brunello Cucinelli Semantic Audit","description":"2A Agency Integrity Score of Brunello Cucinelli. Score 85/100. Gemini under-values cashmere dolcevita maglia by 8% (1 565€ vs 1 700€ official).","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"about":{"@type":"Organization","name":"Brunello Cucinelli","foundingDate":"1978","foundingLocation":"Solomeo, Ombrie, Italie","founder":{"@type":"Person","name":"Brunello Cucinelli"}},"datePublished":"2026-04-03","url":"https://www.2aagency.com/reports/brunello-cucinelli","license":"https://creativecommons.org/licenses/by/4.0/"}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › Brunello Cucinelli — Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Integrity Score · Luxe Textile · Solomeo, Ombrie · Fondée 1978</div>
+    <h1 class="report-brand">Brunello Cucinelli</h1>
+    <p class="report-meta">
+      <strong>Noté par 2A Agency</strong> · Émis le 3 avril 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Avril 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num" style="color:var(--green)">85</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-item-label">Notaire</div><div class="meta-item-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">3 avril 2026</div></div>
+  <div class="meta-item"><div class="meta-item-label">LLMs testés</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">5 standardisées</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Philosophie humaniste. <em>Gemini fausse le prix du cachemire de 8%.</em></h2>
+  <p class="body-text">Ce rapport présente les résultats de l'integrity score indépendant de Brunello Cucinelli par 2A Agency, conduit sur 4 grands modèles de langage en avril 2026. L'audit couvre l'identité fondatrice, la philosophie humaniste, les prix du cachemire phare, la fabrication à Solomeo et la structure groupe.</p>
+  <p class="body-text">Brunello Cucinelli obtient un score de <strong>85/100</strong> — marque de luxe textile parmi les mieux notées du registre 2A. La philosophie humaniste, l'ancrage dans le village de Solomeo et l'identité du fondateur sont excellemment couverts. Deux drifts pénalisent le score : Gemini sous-évalue la maglia cashmere dolcevita de 8% (1 565€ vs 1 700€ officiel), et ChatGPT confond la structure capitalistique indépendante avec une appartenance à LVMH ou Kering.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Identité & Fondation</div><div class="score-card-num sc-green">92</div></div>
+    <div class="score-card"><div class="score-card-label">Philosophie & RSE</div><div class="score-card-num sc-green">94</div></div>
+    <div class="score-card"><div class="score-card-label">Produits & Prix</div><div class="score-card-num sc-amber">74</div></div>
+    <div class="score-card"><div class="score-card-label">Fabrication</div><div class="score-card-num sc-green">96</div></div>
+    <div class="score-card"><div class="score-card-label">Notoriété groupe</div><div class="score-card-num sc-amber">69</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-green">85</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fondateur & date de création</td>
+        <td><span class="v-ok">✓</span> Brunello Cucinelli, 1978, Solomeo — exact et détaillé</td>
+        <td><span class="v-ok">✓</span> Exact — fondation Ombrie bien précisée</td>
+        <td><span class="v-ok">✓</span> Exact</td>
+        <td><span class="v-ok">✓</span> Exact — mentionne la restauration du village médiéval</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Philosophie humaniste & RSE</td>
+        <td><span class="v-ok">✓</span> Capitalisme humaniste, dignité du travail, village Solomeo bien décrits</td>
+        <td><span class="v-ok">✓</span> Correct — projet Solomeo et fondation citée</td>
+        <td><span class="v-ok">✓</span> Correct — philosophie humaniste et éthique bien décrites</td>
+        <td><span class="v-ok">✓</span> Exact — cite les discours au Forum de Davos</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Prix maglia cashmere dolcevita</td>
+        <td><span class="v-ok">✓</span> ~1 700€, cohérent avec brunellocucinelli.com</td>
+        <td><span class="v-x">✗</span> <strong>1 565€ — écart de −135€ vs prix officiel 1 700€</strong></td>
+        <td><span class="v-ok">✓</span> ~1 700€, cohérent</td>
+        <td><span class="v-ok">✓</span> 1 700€ exact</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Fabrication à Solomeo</td>
+        <td><span class="v-ok">✓</span> Solomeo · Ombrie · ateliers propres · cachemire mongol</td>
+        <td><span class="v-ok">✓</span> Solomeo ✓ · Made in Italy ✓</td>
+        <td><span class="v-ok">✓</span> Solomeo ✓ · artisanat ✓</td>
+        <td><span class="v-ok">✓</span> Exact — précise la filature cachemire de Solomeo</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Structure groupe (SpA indépendant)</td>
+        <td><span class="v-ok">✓</span> SpA coté à Milan (BCI) — indépendant confirmé</td>
+        <td><span class="v-p">~</span> Indépendant mentionné mais appartenance groupe floue</td>
+        <td><span class="v-x">✗</span> <strong>Confusion LVMH/Kering — marque indépendante présentée comme affiliée</strong></td>
+        <td><span class="v-ok">✓</span> Indépendant · BCI · Borsa Italiana ✓</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Findings critiques</div>
+  <h2 class="section-title">Gemini fausse le prix cachemire. <em>ChatGPT invente une appartenance à LVMH ou Kering.</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label">Drift primaire · Prix Cashmere Dolcevita · Gemini uniquement</div>
+    <h3 class="finding-title">Gemini cite la maglia cashmere dolcevita à 1 565€ — prix officiel brunellocucinelli.com : 1 700€ (écart de −8%).</h3>
+    <p class="finding-text">Gemini sous-évalue le produit emblématique de Brunello Cucinelli de 135€, soit un écart de 8% par rapport au prix officiel affiché sur brunellocucinelli.com. Sur un produit à 1 700€, cette distorsion est particulièrement sensible : elle peut perturber les agents d'achat qui comparent les tarifs et les stratèges concurrents qui benchmarkent le positionnement prix du luxe en cachemire.</p>
+    <p class="finding-text"><strong>Impact commercial :</strong> Le positionnement prix de Brunello Cucinelli est une composante fondamentale de son équation de valeur — le cachemire à ce niveau de prix n'est pas un segment élastique mais une déclaration de positionnement. Un agent IA qui cite 1 565€ au lieu de 1 700€ sous-estime la marque et peut conduire un acheteur à anticiper un prix qu'il ne trouvera pas à la commande, générant friction et défiance.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">~1 700€ ✓<br>Cohérent officiel</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">1 565€ ✗<br>Écart : −135€ (−8%)</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val ok">~1 700€ ✓<br>Cohérent</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">1 700€ ✓<br>Exact</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift secondaire · Structure Groupe · ChatGPT uniquement</div>
+    <h3 class="finding-title">ChatGPT associe Brunello Cucinelli à LVMH ou Kering — la marque est une SpA indépendante cotée à Milan depuis 2012.</h3>
+    <p class="finding-text">Brunello Cucinelli S.p.A. est une société cotée en bourse sur Euronext Milan (BCI) depuis avril 2012, demeurée entièrement indépendante de tout conglomérat de luxe. ChatGPT génère une confusion sur la structure capitalistique, l'associant tantôt à LVMH, tantôt à Kering — deux affiliations factuellement fausses. Cette erreur est critique dans un contexte de due diligence ou de recherche investisseur.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">SpA indépendant ✓<br>BCI · Milan ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val partial">Indépendant partiel<br>Groupe flou</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val wrong">Confusion LVMH/Kering ✗<br>Affiliation inventée</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">Indépendant ✓<br>BCI · Borsa Italiana ✓</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Point fort · Philosophie & Identité · 4 LLMs</div>
+    <h3 class="finding-title">La philosophie de Solomeo et l'identité humaniste de Brunello Cucinelli sont maîtrisées sur tous les modèles.</h3>
+    <p class="finding-text">Les 4 LLMs décrivent avec précision et profondeur la philosophie humaniste de Brunello Cucinelli — le "capitalisme humaniste", la restauration du village médiéval de Solomeo en Ombrie, les ateliers artisanaux et la vision éthique du travail. Grok va jusqu'à citer les interventions du fondateur au Forum de Davos. Cette robustesse narrative est un actif sémantique rare pour une marque de luxe.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 85 à <em>pleinement certifié.</em></h2>
+
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Corriger le prix cashmere dolcevita dans Gemini via Schema.org Product</div>
+        <p class="rem-text">Déployer un markup <code>schema.org/Product</code> avec <code>offers.price: "1700.00"</code> et <code>priceCurrency: "EUR"</code> sur la fiche produit officielle. Gemini utilise prioritairement le Knowledge Graph Google pour ses réponses prix — un balisage structuré correct mettra à jour la valeur erronée de 1 565€ lors du prochain crawl Googlebot.</p>
+        <div class="rem-impact">Impact : Prix exact 1 700€ dans Gemini · Cohérence prix sur tous les LLMs · Positionnement premium préservé</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2 — Cette semaine</div>
+      <div>
+        <div class="rem-title">Clarifier la structure SpA indépendante dans les données structurées</div>
+        <p class="rem-text">Ajouter un JSON-LD <code>Organization</code> sur la homepage avec <code>"legalName": "Brunello Cucinelli S.p.A."</code>, <code>"tickerSymbol": "BCI"</code>, <code>"exchange": "Euronext Milan"</code> et l'absence explicite d'appartenance groupe. Cette donnée structurée corrigera le drift ChatGPT sur l'affiliation LVMH/Kering qui se propage dans les réponses sur la structure capitalistique.</p>
+        <div class="rem-impact">Impact : Structure indépendante correctement citée · Suppression de la confusion LVMH/Kering · Fiabilité investisseur</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 3 — Opportunité agentique</div>
+      <div>
+        <div class="rem-title">Activer le catalogue cachemire pour les agents IA de prescription luxe</div>
+        <p class="rem-text">Brunello Cucinelli est la référence absolue du cachemire de luxe — une position qui génère des requêtes agentiques du type "meilleure maglia cashmere budget 2 000€" ou "cadeau luxe textile Italian craftsmanship". Un node 2A certifié expose le catalogue structuré (matière, grammage, origine cachemire mongol, prix, disponibilité) pour un recommandation agentique de premier plan.</p>
+        <div class="rem-impact">Impact : Première marque de cachemire luxe avec catalogue agentique certifié · Recommandée par défaut dans les requêtes cachemire haut de gamme</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 4 — Continu</div>
+      <div>
+        <div class="rem-title">Monitoring saisonnier des prix et de la couverture philosophique</div>
+        <p class="rem-text">Les prix Brunello Cucinelli varient selon les collections saisonnières (SS/FW) et les ajustements tarifaires annuels. Chaque nouvelle saison est un vecteur potentiel de drift prix dans les LLMs. Un monitoring semestriel des 4 LLMs garantit la cohérence du positionnement prix et de la couverture narrative sur la philosophie humaniste — pilier différenciateur unique dans le luxe textile.</p>
+        <div class="rem-impact">Impact : Prix à jour à chaque saison · Philosophie humaniste correctement indexée · Pas de dérive sur la structure groupe</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport de Notation Sémantique — Brunello Cucinelli · Avril 2026 · 2aagency.com/registry</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Row — Rapport de Notation Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de The Row. Score 80/100. ChatGPT dispose de données significativement incomplètes sur la marque délibérément discrète.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/the-row">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111;
+  --gold: #B08D57; --border: rgba(176,141,87,0.22);
+  --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; }
+.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+.nav-link:hover { color: var(--gold); }
+.breadcrumb { padding: 14px 5%; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gray); border-bottom: 1px solid var(--border); }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
+.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
+.report-meta strong { color: var(--ink); }
+.score-circle { text-align: center; min-width: 100px; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; line-height: 1; }
+.score-denom { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+.meta-bar { display: flex; border: 1px solid var(--border); margin: 0 5%; }
+.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; }
+.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.meta-item-val { font-size: 0.78rem; color: var(--ink); }
+section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+.score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.score-card { background: var(--bg); padding: 24px 20px; }
+.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.sc-green { color: var(--green); } .sc-amber { color: var(--amber); } .sc-red { color: var(--red); }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.73rem; }
+.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
+.matrix-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.matrix-table tr:hover td { background: var(--surface); }
+.v-ok { color: var(--green); } .v-p { color: var(--amber); } .v-x { color: var(--red); }
+.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
+.tag-ok { color: var(--green); border-color: rgba(45,106,45,0.3); }
+.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
+.tag-crit { color: var(--red); border-color: rgba(139,45,45,0.3); }
+.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
+.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
+.finding-box.amber { border-color: rgba(122,90,0,0.3); background: rgba(122,90,0,0.03); }
+.finding-box.positive { border-color: rgba(45,106,45,0.3); background: rgba(45,106,45,0.02); }
+.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.finding-label.amber { color: var(--amber); }
+.finding-label.green { color: var(--green); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
+.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; margin-bottom: 12px; }
+.drift-compare { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 16px; }
+.dc-cell { background: var(--bg); padding: 14px 16px; }
+.dc-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.dc-val { font-size: 0.82rem; color: var(--ink); line-height: 1.5; }
+.dc-val.wrong { color: var(--red); }
+.dc-val.ok { color: var(--green); }
+.dc-val.partial { color: var(--amber); }
+.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
+.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
+.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.rem-text { font-size: 0.82rem; color: var(--gray); line-height: 1.75; margin-bottom: 10px; }
+.rem-impact { font-size: 0.7rem; color: var(--green); letter-spacing: 0.06em; }
+footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+.f-logo span { color: var(--gold); }
+.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+@media(max-width:768px) {
+  .report-hero { grid-template-columns: 1fr; }
+  .meta-bar { flex-direction: column; }
+  .meta-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .score-grid { grid-template-columns: repeat(2,1fr); }
+  .drift-compare { grid-template-columns: repeat(2,1fr); }
+  .rem-item { grid-template-columns: 1fr; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"The Row Semantic Audit","description":"2A Agency Integrity Score of The Row. Score 80/100. ChatGPT has significantly incomplete data on the deliberately discreet brand.","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"about":{"@type":"Organization","name":"The Row","foundingDate":"2006","foundingLocation":"New York, États-Unis","founder":[{"@type":"Person","name":"Mary-Kate Olsen"},{"@type":"Person","name":"Ashley Olsen"}]},"datePublished":"2026-04-03","url":"https://www.2aagency.com/reports/the-row","license":"https://creativecommons.org/licenses/by/4.0/"}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › The Row — Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Integrity Score · Luxe / Mode · New York · Fondée 2006</div>
+    <h1 class="report-brand">The Row</h1>
+    <p class="report-meta">
+      <strong>Noté par 2A Agency</strong> · Émis le 3 avril 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Avril 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num" style="color:var(--green)">80</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-item-label">Notaire</div><div class="meta-item-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">3 avril 2026</div></div>
+  <div class="meta-item"><div class="meta-item-label">LLMs testés</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">5 standardisées</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Luxe silencieux New York. <em>The Row sous-indexée dans les LLMs — profil ChatGPT incomplet.</em></h2>
+  <p class="body-text">Ce rapport présente les résultats de l'integrity score indépendant de The Row par 2A Agency, conduit sur 4 grands modèles de langage en avril 2026. L'audit couvre l'identité des fondatrices Mary-Kate et Ashley Olsen, le prix du sac Margaux, le réseau retail (4 boutiques), les prix CFDA et la fabrication.</p>
+  <p class="body-text">The Row obtient un score de <strong>80/100</strong>. L'identité des sœurs Olsen et le positionnement luxe silencieux sont bien maîtrisés par Perplexity et Grok. Deux drifts pénalisent le score : ChatGPT dispose d'un profil incomplet — les collections 2024-2025 sont absentes, les prix ne sont pas indexés ; Gemini recadre les fondatrices comme "actrices reconverties", réduisant leur légitimité créatrice acquise sur 20 ans.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Identité fondatrices</div><div class="score-card-num sc-green">86</div></div>
+    <div class="score-card"><div class="score-card-label">Prix & Collections récentes</div><div class="score-card-num sc-amber">68</div></div>
+    <div class="score-card"><div class="score-card-label">Distribution retail</div><div class="score-card-num sc-amber">72</div></div>
+    <div class="score-card"><div class="score-card-label">Légitimité créatrice</div><div class="score-card-num sc-green">82</div></div>
+    <div class="score-card"><div class="score-card-label">Fabrication</div><div class="score-card-num sc-green">88</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-green">80</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mary-Kate & Ashley Olsen — fondatrices</td>
+        <td><span class="v-ok">✓</span> MK & Ashley · 2006 · New York — légitimité créatrice bien établie</td>
+        <td><span class="v-p">~</span> Correct mais framing "actrices reconverties" dominant</td>
+        <td><span class="v-p">~</span> Fondatrices ✓ mais contexte créatif partiel</td>
+        <td><span class="v-ok">✓</span> Exact — créatrices reconnues · CFDA Awards cités</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Prix sac Margaux</td>
+        <td><span class="v-ok">✓</span> ~3 000–3 500€ · cohérent therow.com</td>
+        <td><span class="v-ok">✓</span> Gamme correcte · prix luxe confirmés</td>
+        <td><span class="v-x">✗</span> <strong>Prix non indexés — collections 2024-2025 absentes</strong></td>
+        <td><span class="v-ok">✓</span> ~3 200€ · prix cohérents avec site officiel</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Réseau retail (4 boutiques)</td>
+        <td><span class="v-ok">✓</span> NY · LA · Paris · Londres — 4 flagships confirmés</td>
+        <td><span class="v-p">~</span> Boutiques citées mais réseau partiel (2/4)</td>
+        <td><span class="v-x">✗</span> <strong>Réseau incomplet — Paris et Londres absents</strong></td>
+        <td><span class="v-ok">✓</span> 4 boutiques ✓ · NY SoHo · LA · Paris · Londres</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Prix CFDA & légitimité créatrice</td>
+        <td><span class="v-ok">✓</span> CFDA Womenswear · Accessoires · reconnus comme créatrices</td>
+        <td><span class="v-p">~</span> CFDA cité mais framing actrice persistant</td>
+        <td><span class="v-p">~</span> CFDA ✓ mais contexte créatif dilué</td>
+        <td><span class="v-ok">✓</span> CFDA multiple ✓ · créatrices légitimes de plein droit</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Fabrication</td>
+        <td><span class="v-ok">✓</span> Italie · France · ateliers luxe sélectionnés ✓</td>
+        <td><span class="v-ok">✓</span> Europe · fabrication luxe ✓</td>
+        <td><span class="v-ok">✓</span> Europe ✓</td>
+        <td><span class="v-ok">✓</span> Italie principalement · ateliers haut de gamme ✓</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Findings critiques</div>
+  <h2 class="section-title">ChatGPT profile incomplet. <em>Gemini réduit les Olsen à des "actrices reconverties".</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label">Drift primaire · Profil ChatGPT incomplet · Collections 2024-2025</div>
+    <h3 class="finding-title">ChatGPT dispose d'un profil significativement incomplet sur The Row — collections récentes et prix absents de sa base de connaissances.</h3>
+    <p class="finding-text">The Row est une marque délibérément discrète — pas de défilés médiatisés, pas de campagnes digitales massives, présence sociale minimale. Cette stratégie de luxe silencieux est un choix créatif fort, mais elle génère un effet secondaire : les LLMs qui dépendent du volume de données web indexées ont peu de matière à intégrer. ChatGPT est le plus affecté : les collections SS2024, FW2024 et SS2025 sont absentes de ses réponses, et les prix actuels ne sont pas indexés.</p>
+    <p class="finding-text"><strong>Impact commercial :</strong> The Row est aujourd'hui l'une des maisons de luxe les plus désirées au monde — un statut qui génère des requêtes agentiques croissantes ("meilleur sac luxe silencieux", "alternative Hermès contemporaine"). Un ChatGPT qui ne peut pas répondre sur les collections récentes ou les prix actuels prive la marque d'une part de considération agentique précieuse, précisément dans sa clientèle cible (sophistiquée, informée, qui interroge les LLMs plutôt que les médias de masse).</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">Collections 2024 ✓<br>Prix cohérents</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val partial">Collections partielles<br>Prix approximatifs</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val wrong">2024-2025 absents ✗<br>Prix non indexés</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">Collections ✓<br>Prix cohérents</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift secondaire · Légitimité Créatrice · Gemini uniquement</div>
+    <h3 class="finding-title">Gemini cadre systématiquement Mary-Kate et Ashley Olsen comme "actrices reconverties en créatrices" — réduisant 20 ans de légitimité créatrice indépendante.</h3>
+    <p class="finding-text">Mary-Kate et Ashley Olsen ont fondé The Row en 2006 et ont remporté à plusieurs reprises le CFDA Award Womenswear Designer of the Year et le CFDA Accessories Designer of the Year. Elles sont aujourd'hui reconnues par l'industrie comme des créatrices majeures, indépendamment de leurs carrières d'actrices. Le framing "reconverties" de Gemini sous-estime leur légitimité et peut affecter la perception de la marque dans les requêtes de prescription luxe.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">Créatrices légitimes ✓<br>CFDA Awards cités</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">Framing "actrices ✗<br>reconverties" dominant</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val partial">CFDA ✓ mais<br>contexte dilué</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">Créatrices ✓<br>CFDA multiples cités</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Point fort · Identité Olsen & Luxe Silencieux · Perplexity & Grok</div>
+    <h3 class="finding-title">L'identité des sœurs Olsen et le positionnement luxe silencieux sont parfaitement maîtrisés par Perplexity et Grok.</h3>
+    <p class="finding-text">Perplexity et Grok restituent avec précision le positionnement unique de The Row — luxe silencieux, discrétion absolue, qualité matière sans logo visible, références à Savile Row — et la légitimité créatrice complète des deux fondatrices. Grok cite spécifiquement les prix CFDA multiples. La fabrication européenne (Italie, France) est correctement documentée par tous les LLMs.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 80 à <em>pleinement certifié.</em></h2>
+
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Enrichir l'empreinte sémantique de The Row pour corriger le profil ChatGPT incomplet</div>
+        <p class="rem-text">The Row doit accepter un paradoxe : sa discrétion est une force créatrice mais une faiblesse sémantique. Sans données structurées ni couverture presse indexable, ChatGPT ne peut pas construire un profil complet. La solution n'est pas de rompre la discrétion mais d'activer des données structurées minimales sur therow.com : JSON-LD <code>Product</code> sur les sacs phares (Margaux, 90's Bag), <code>Organization</code> avec les fondatrices et les CFDA Awards, <code>ItemList</code> pour les collections récentes.</p>
+        <div class="rem-impact">Impact : Profil ChatGPT complet · Collections 2024-2025 indexées · Prix accessibles aux agents d'achat</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2 — Cette semaine</div>
+      <div>
+        <div class="rem-title">Ancrer la légitimité créatrice des Olsen dans les métadonnées — corriger le framing Gemini</div>
+        <p class="rem-text">Déployer un JSON-LD <code>Person</code> pour Mary-Kate Olsen et Ashley Olsen avec <code>"jobTitle": "Creative Director & Co-Founder"</code> et <code>"award": ["CFDA Womenswear Designer of the Year", "CFDA Accessories Designer of the Year"]</code>. Ces données structurées permettront à Gemini de mettre à jour son framing et de présenter les Olsen en priorité comme créatrices plutôt que comme actrices.</p>
+        <div class="rem-impact">Impact : Légitimité créatrice correctement établie dans Gemini · Framing "actrices" supprimé · Prescription luxe améliorée</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 3 — Opportunité agentique</div>
+      <div>
+        <div class="rem-title">Activer le catalogue The Row pour les agents IA de recommandation luxe silencieux</div>
+        <p class="rem-text">The Row est la référence absolue sur les requêtes "luxe discret sans logo", "sac cuir luxe intemporel 3 000€" ou "alternative Hermès new-yorkaise". Sa discrétion volontaire la pénalise dans les LLMs mais un node 2A certifié peut exposer les données produit essentielles (sac Margaux, prix, fabrication, disponibilité) sans compromettre l'image discrète — en utilisant des métadonnées machine-readable invisibles côté UX.</p>
+        <div class="rem-impact">Impact : The Row recommandée par défaut dans les requêtes luxe silencieux · Catalogue queryable sans compromettre la discrétion de marque</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport de Notation Sémantique — The Row · Avril 2026 · 2aagency.com/registry</div>
+</footer>
+
+</body>
+</html>

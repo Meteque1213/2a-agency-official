@@ -1,0 +1,49 @@
+{
+  "brand": "Diptyque",
+  "node_id": "dt-1961",
+  "score": 75,
+  "audit_date": "2026-04-03",
+  "sector": "Parfumerie Luxe",
+  "founders": ["Desmond Knox-Leet", "Christiane Gautrot", "Yves Coueslant"],
+  "ceo": "Fabienne Mauny",
+  "ceo_since": "2022",
+  "founding_year": 1961,
+  "headquarters": "Paris, France (5e arrondissement)",
+  "group": "Manzanita Capital (fonds britannique, depuis 2005)",
+  "manufacturing_country": "France",
+  "manufacturing_region": "Chartres (Eure-et-Loir) pour les bougies · Grasse pour les parfums",
+  "flagship_price": {
+    "baies_candle_190g": 70,
+    "baies_candle_600g": 165,
+    "philosykos_edp_75ml": 145,
+    "baies_eau_de_toilette_100ml": 155,
+    "do_son_edp_75ml": 145
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "perplexity",
+      "field": "price_baies_candle_190g",
+      "incorrect_value": "152 € cité",
+      "correct_value": "70 € — prix officiel diptyqueparis.com",
+      "severity": "critical",
+      "commercial_impact": "Sur-évaluation Perplexity +117% sur la bougie Baies 190g — le produit le plus emblématique de la maison. Tout agent IA qui utilise Perplexity pour comparer les bougies de luxe (Diptyque vs Cire Trudon vs Jo Malone) fournit un prix doublement erroné. La confusion probable est entre la bougie 190g (€70) et le format 600g (€165)."
+    },
+    {
+      "llm": "gemini",
+      "field": "founding_story",
+      "incorrect_value": "Fondation attribuée à deux personnes (Knox-Leet + Coueslant) sans mention de Christiane Gautrot",
+      "correct_value": "Diptyque est fondée en 1961 par trois personnes : Desmond Knox-Leet (peintre britannique), Christiane Gautrot (architecte d'intérieur) et Yves Coueslant (acteur). Les trois fondateurs sont d'égale importance.",
+      "severity": "medium",
+      "commercial_impact": "Effacement partiel de l'histoire fondatrice — Christiane Gautrot, la seule femme du trio, systématiquement omise par Gemini"
+    }
+  ],
+  "source_url": "https://www.2aagency.com/reports/diptyque",
+  "registry_url": "https://www.2aagency.com/registry/diptyque",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 75,
+    "dateRated": "2026-04-03"
+  }
+}

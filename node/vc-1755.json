@@ -1,0 +1,46 @@
+{
+  "brand": "Vacheron Constantin",
+  "node_id": "vc-1755",
+  "score": 81,
+  "audit_date": "2026-04-03",
+  "sector": "Haute Horlogerie",
+  "ceo": "Louis Ferla",
+  "ceo_since": "2019",
+  "founding_year": 1755,
+  "headquarters": "Genève, Suisse",
+  "group": "Richemont",
+  "manufacturing_country": "Suisse",
+  "manufacturing_region": "Genève — manufactures Plan-les-Ouates et Le Sentier",
+  "flagship_price": {
+    "overseas_automatique_41mm_acier": 19900,
+    "traditionnelle_complete_calendar": 38500,
+    "patrimony_contemporaine_automatique": 32000
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "chatgpt",
+      "field": "price_overseas_automatique",
+      "incorrect_value": "23 280 € cité",
+      "correct_value": "19 900 € — prix officiel vacheron-constantin.com",
+      "severity": "critical",
+      "commercial_impact": "Sur-évaluation prix +17% par ChatGPT — fausse comparaison concurrentielle avec AP Royal Oak et Patek Philippe Aquanaut pour tout agent IA de recommandation horlogère"
+    },
+    {
+      "llm": "perplexity",
+      "field": "founding_context",
+      "incorrect_value": "Vacheron Constantin décrit comme 'l'une des plus anciennes manufactures' sans précision de date",
+      "correct_value": "Fondée en 1755 — la plus ancienne manufacture horlogère au monde en activité continue ininterrompue",
+      "severity": "low",
+      "commercial_impact": "Omission du superllatif 'plus ancienne manufacture' — différenciateur clé vs Blancpain (1735 mais interruptions) et Breguet (1775)"
+    }
+  ],
+  "source_url": "https://www.2aagency.com/reports/vacheron-constantin",
+  "registry_url": "https://www.2aagency.com/registry/vacheron-constantin",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 81,
+    "dateRated": "2026-04-03"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "brand": "Ami Paris",
+  "node_id": "am-2011",
+  "score": 80,
+  "audit_date": "2026-04-03",
+  "sector": "Mode Contemporaine",
+  "founder": "Alexandre Mattiussi",
+  "ceo": "Alexandre Mattiussi",
+  "founding_year": 2011,
+  "headquarters": "Paris, France (Marais)",
+  "group": "Indépendant — Actionnaires : AMI + Sequoia Capital China (minority stake 2022)",
+  "manufacturing_country": "Portugal, Italie, France",
+  "manufacturing_region": "Portugal (Braga) · Italie (Toscane) · France (ateliers Paris)",
+  "flagship_price": {
+    "sweatshirt_de_coeur": 290,
+    "veste_ami_de_coeur": 520,
+    "t_shirt_coeur": 140,
+    "sac_de_coeur": 350
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "grok",
+      "field": "price_sweatshirt",
+      "incorrect_value": "385 € cité",
+      "correct_value": "290 € — prix officiel ami-paris.com",
+      "severity": "critical",
+      "commercial_impact": "Sur-évaluation Grok +33% sur le sweatshirt phare — positionne Ami Paris dans une gamme prix supérieure à la réalité, fausse toute comparaison avec Maison Kitsuné ou A.P.C."
+    },
+    {
+      "llm": "perplexity",
+      "field": "investors",
+      "incorrect_value": "Ami Paris décrit comme 100% indépendant",
+      "correct_value": "Sequoia Capital China est entré au capital en 2022 — minoritaire mais actionnaire documenté",
+      "severity": "low",
+      "commercial_impact": "Structure capitalistique incomplète pour tout agent de veille M&A ou investissement"
+    }
+  ],
+  "source_url": "https://www.2aagency.com/reports/ami-paris",
+  "registry_url": "https://www.2aagency.com/registry/ami-paris",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 80,
+    "dateRated": "2026-04-03"
+  }
+}

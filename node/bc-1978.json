@@ -1,0 +1,47 @@
+{
+  "brand": "Brunello Cucinelli",
+  "node_id": "bc-1978",
+  "score": 85,
+  "audit_date": "2026-04-03",
+  "sector": "Luxe Textile",
+  "founder": "Brunello Cucinelli",
+  "ceo": "Brunello Cucinelli",
+  "ceo_since": "1978",
+  "founding_year": 1978,
+  "headquarters": "Solomeo, Ombrie, Italie",
+  "group": "Brunello Cucinelli SpA (coté Borsa Italiana, BCUCY)",
+  "manufacturing_country": "Italie",
+  "manufacturing_region": "Solomeo (Pérouse, Ombrie)",
+  "flagship_price": {
+    "maglia_cashmere_dolcevita": 1700,
+    "pantalon_cashmere": 1350,
+    "veste_cashmere": 2400
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "gemini",
+      "field": "price_cashmere_sweater",
+      "incorrect_value": "1 565 €",
+      "correct_value": "1 700 € — prix officiel brunellocucinelli.com",
+      "severity": "medium",
+      "commercial_impact": "Sous-évaluation Gemini de 8% sur le produit phare — fausse la perception prix haut de gamme"
+    },
+    {
+      "llm": "chatgpt",
+      "field": "group_structure",
+      "incorrect_value": "Groupe LVMH ou Kering mentionné par confusion",
+      "correct_value": "Brunello Cucinelli SpA — société indépendante cotée, fondateur actionnaire majoritaire",
+      "severity": "low",
+      "commercial_impact": "Confusion groupe dilue le positionnement 'entrepreneur humaniste' indépendant de la marque"
+    }
+  ],
+  "source_url": "https://www.2aagency.com/reports/brunello-cucinelli",
+  "registry_url": "https://www.2aagency.com/registry/brunello-cucinelli",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 85,
+    "dateRated": "2026-04-03"
+  }
+}

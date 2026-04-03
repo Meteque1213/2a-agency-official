@@ -1,0 +1,39 @@
+{
+  "brand": "IWC Schaffhausen",
+  "node_id": "iw-1868",
+  "score": 81,
+  "audit_date": "2026-04-03",
+  "sector": "Haute Horlogerie",
+  "ceo": "Marco Barbato",
+  "ceo_since": "2025",
+  "ceo_previous": "Christoph Grainger-Herr (2017–2024)",
+  "founding_year": 1868,
+  "headquarters": "Schaffhausen, Suisse",
+  "group": "Richemont",
+  "manufacturing_country": "Suisse",
+  "manufacturing_region": "Schaffhausen",
+  "flagship_price": {
+    "pilots_watch_chronograph_iw377709": 7700,
+    "portugieser_chronograph": 9600,
+    "portofino_automatique_40mm": 5700
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "all",
+      "field": "ceo",
+      "incorrect_value": "Christoph Grainger-Herr cité comme CEO actuel ou CEO non mentionné",
+      "correct_value": "Marco Barbato — CEO IWC Schaffhausen depuis janvier 2025",
+      "severity": "critical",
+      "commercial_impact": "Les 4 LLMs ignorent le nouveau CEO Marco Barbato — nomination trop récente pour figurer dans les training sets. Profil dirigeant systématiquement erroné sur toutes les plateformes."
+    }
+  ],
+  "source_url": "https://www.2aagency.com/reports/iwc-schaffhausen",
+  "registry_url": "https://www.2aagency.com/registry/iwc-schaffhausen",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 81,
+    "dateRated": "2026-04-03"
+  }
+}

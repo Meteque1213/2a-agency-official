@@ -1,0 +1,47 @@
+{
+  "brand": "The Row",
+  "node_id": "rw-2006",
+  "score": 80,
+  "audit_date": "2026-04-03",
+  "sector": "Luxe / Mode",
+  "founders": ["Mary-Kate Olsen", "Ashley Olsen"],
+  "creative_directors": ["Mary-Kate Olsen", "Ashley Olsen"],
+  "founding_year": 2006,
+  "headquarters": "New York, USA",
+  "group": "Indépendant — Mary-Kate et Ashley Olsen (100%)",
+  "manufacturing_country": "USA, Italie, France",
+  "manufacturing_region": "New York (atelier) · Italie (Toscane) · France (Paris ateliers cuir)",
+  "flagship_price": {
+    "margaux_10_bag": 4490,
+    "half_n_half_bag": 3200,
+    "trousers_cashmere": 1150,
+    "merino_turtleneck": 890
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "chatgpt",
+      "field": "brand_profile_completeness",
+      "incorrect_value": "Données incomplètes : collections récentes absentes, prix 2024–2025 non indexés, réseau retail sous-représenté",
+      "correct_value": "The Row : 4 boutiques propres (NY, LA, Paris, Londres) + présence wholesale sélective (Bergdorf, Net-a-Porter). Prix actuels gamme €350–€6,000+",
+      "severity": "medium",
+      "commercial_impact": "ChatGPT dispose de données significativement incomplètes sur The Row — marque délibérément discrète (zéro communication sociale) dont le profil LLM est notoirement sous-construit"
+    },
+    {
+      "llm": "gemini",
+      "field": "founders_role",
+      "incorrect_value": "Mary-Kate et Ashley Olsen décrites comme 'anciennes actrices reconverties dans la mode'",
+      "correct_value": "Directrices créatives à temps plein depuis 2006 — The Row est leur activité principale depuis 20 ans, reconnues par la profession (CFDA Award 2012, 2015, 2022)",
+      "severity": "low",
+      "commercial_impact": "Réduction de la légitimité créative des fondatrices — framing 'reconverties' diminue la perception d'expertise"
+    }
+  ],
+  "source_url": "https://www.2aagency.com/reports/the-row",
+  "registry_url": "https://www.2aagency.com/registry/the-row",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 80,
+    "dateRated": "2026-04-03"
+  }
+}

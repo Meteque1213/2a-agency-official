@@ -1,0 +1,47 @@
+{
+  "brand": "Byredo",
+  "node_id": "by-2006",
+  "score": 82,
+  "audit_date": "2026-04-03",
+  "sector": "Parfumerie Niche",
+  "founder": "Ben Gorham",
+  "ceo": "Ben Gorham",
+  "founding_year": 2006,
+  "headquarters": "Stockholm, Suède",
+  "group": "Puig (acquisition 2022)",
+  "manufacturing_country": "France",
+  "manufacturing_region": "Grasse, Provence-Alpes-Côte d'Azur",
+  "flagship_price": {
+    "bal_dafrique_edp_100ml": 175,
+    "mojave_ghost_edp_100ml": 175,
+    "gypsy_water_edp_100ml": 175,
+    "candle_bibliotheque_240g": 98
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "gemini",
+      "field": "founder_status",
+      "incorrect_value": "Ben Gorham décrit comme fondateur sans mention de la cession à Puig (2022)",
+      "correct_value": "Ben Gorham est fondateur et directeur créatif — Puig (Barcelone) détient le groupe depuis 2022",
+      "severity": "medium",
+      "commercial_impact": "Gemini présente Byredo comme indépendant alors que Puig en est actionnaire majoritaire — information matérielle pour tout agent IA traitant de rachat ou de propriété"
+    },
+    {
+      "llm": "chatgpt",
+      "field": "price_bal_dafrique",
+      "incorrect_value": "145 € cité",
+      "correct_value": "175 € — prix officiel byredo.com",
+      "severity": "low",
+      "commercial_impact": "Sous-évaluation prix phare -17%"
+    }
+  ],
+  "source_url": "https://www.2aagency.com/reports/byredo",
+  "registry_url": "https://www.2aagency.com/registry/byredo",
+  "2aRating": {
+    "rated_by": "2A Agency Integrity Score",
+    "rated_by_agency": "2A Agency",
+    "rating_methodology": "4 LLMs x 5 questions standardisées",
+    "integrityScore": 82,
+    "dateRated": "2026-04-03"
+  }
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diptyque — Rapport de Notation Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Diptyque. Score 75/100. Perplexity sur-évalue la Bougie Baies 190g de 117% (152€ vs 70€ officiel).">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/diptyque">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111;
+  --gold: #B08D57; --border: rgba(176,141,87,0.22);
+  --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; }
+.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+.nav-link:hover { color: var(--gold); }
+.breadcrumb { padding: 14px 5%; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gray); border-bottom: 1px solid var(--border); }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
+.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
+.report-meta strong { color: var(--ink); }
+.score-circle { text-align: center; min-width: 100px; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; line-height: 1; }
+.score-denom { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+.meta-bar { display: flex; border: 1px solid var(--border); margin: 0 5%; }
+.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; }
+.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.meta-item-val { font-size: 0.78rem; color: var(--ink); }
+section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+.score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.score-card { background: var(--bg); padding: 24px 20px; }
+.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.sc-green { color: var(--green); } .sc-amber { color: var(--amber); } .sc-red { color: var(--red); }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.73rem; }
+.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
+.matrix-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.matrix-table tr:hover td { background: var(--surface); }
+.v-ok { color: var(--green); } .v-p { color: var(--amber); } .v-x { color: var(--red); }
+.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
+.tag-ok { color: var(--green); border-color: rgba(45,106,45,0.3); }
+.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
+.tag-crit { color: var(--red); border-color: rgba(139,45,45,0.3); }
+.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
+.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
+.finding-box.amber { border-color: rgba(122,90,0,0.3); background: rgba(122,90,0,0.03); }
+.finding-box.positive { border-color: rgba(45,106,45,0.3); background: rgba(45,106,45,0.02); }
+.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.finding-label.amber { color: var(--amber); }
+.finding-label.green { color: var(--green); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
+.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; margin-bottom: 12px; }
+.drift-compare { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 16px; }
+.dc-cell { background: var(--bg); padding: 14px 16px; }
+.dc-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.dc-val { font-size: 0.82rem; color: var(--ink); line-height: 1.5; }
+.dc-val.wrong { color: var(--red); }
+.dc-val.ok { color: var(--green); }
+.dc-val.partial { color: var(--amber); }
+.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
+.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
+.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.rem-text { font-size: 0.82rem; color: var(--gray); line-height: 1.75; margin-bottom: 10px; }
+.rem-impact { font-size: 0.7rem; color: var(--green); letter-spacing: 0.06em; }
+footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+.f-logo span { color: var(--gold); }
+.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+@media(max-width:768px) {
+  .report-hero { grid-template-columns: 1fr; }
+  .meta-bar { flex-direction: column; }
+  .meta-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .score-grid { grid-template-columns: repeat(2,1fr); }
+  .drift-compare { grid-template-columns: repeat(2,1fr); }
+  .rem-item { grid-template-columns: 1fr; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"Diptyque Semantic Audit","description":"2A Agency Integrity Score of Diptyque. Score 75/100. Perplexity over-values the Baies 190g candle by 117% (152€ vs 70€ official).","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"about":{"@type":"Organization","name":"Diptyque","foundingDate":"1961","foundingLocation":"Paris, France","parentOrganization":{"@type":"Organization","name":"Manzanita Capital"}},"datePublished":"2026-04-03","url":"https://www.2aagency.com/reports/diptyque","license":"https://creativecommons.org/licenses/by/4.0/"}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › Diptyque — Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Integrity Score · Parfumerie Luxe · Paris · Fondée 1961</div>
+    <h1 class="report-brand">Diptyque</h1>
+    <p class="report-meta">
+      <strong>Noté par 2A Agency</strong> · Émis le 3 avril 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Avril 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num" style="color:var(--amber)">75</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-item-label">Notaire</div><div class="meta-item-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">3 avril 2026</div></div>
+  <div class="meta-item"><div class="meta-item-label">LLMs testés</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">5 standardisées</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Parfums et bougies Paris 1961. <em>Perplexity sur-évalue la Bougie Baies de 117%.</em></h2>
+  <p class="body-text">Ce rapport présente les résultats de l'integrity score indépendant de Diptyque par 2A Agency, conduit sur 4 grands modèles de langage en avril 2026. L'audit couvre l'identité des 3 fondateurs (Knox-Leet, Gautrot, Coueslant), le prix de la Bougie Baies 190g, la propriété de Manzanita Capital, la fabrication à Chartres et Grasse, et les parfums phares.</p>
+  <p class="body-text">Diptyque obtient un score de <strong>75/100</strong> — le score le plus bas du groupe luxe parfumerie du registre 2A. Les parfums phares et la distribution sont bien maîtrisés. Deux drifts critiques pénalisent fortement le score : Perplexity sur-évalue la Bougie Baies 190g de 117% (152€ vs 70€ officiel) — le drift prix absolu le plus élevé du registre ; Gemini efface Christiane Gautrot du trio fondateur historique.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Identité & Fondateurs</div><div class="score-card-num sc-amber">78</div></div>
+    <div class="score-card"><div class="score-card-label">Prix bougies officiels</div><div class="score-card-num sc-red">30</div></div>
+    <div class="score-card"><div class="score-card-label">Parfums & Eaux de toilette</div><div class="score-card-num sc-green">86</div></div>
+    <div class="score-card"><div class="score-card-label">Histoire fondatrice</div><div class="score-card-num sc-amber">70</div></div>
+    <div class="score-card"><div class="score-card-label">Distribution</div><div class="score-card-num sc-green">86</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-amber">75</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>3 fondateurs (Knox-Leet / Gautrot / Coueslant)</td>
+        <td><span class="v-ok">✓</span> Desmond Knox-Leet · Christiane Gautrot · Yves Coueslant — trio exact</td>
+        <td><span class="v-x">✗</span> <strong>Christiane Gautrot effacée — duo Knox-Leet/Coueslant seulement</strong></td>
+        <td><span class="v-ok">✓</span> Trio fondateur ✓ — 1961 Paris ✓</td>
+        <td><span class="v-ok">✓</span> Trio exact ✓ — boulevard Saint-Germain 34 cité</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Prix Bougie Baies 190g</td>
+        <td><span class="v-x">✗</span> <strong>152€ — sur-évalué de +117% vs officiel 70€</strong></td>
+        <td><span class="v-ok">✓</span> ~70€ · cohérent diptyqueparis.com</td>
+        <td><span class="v-ok">✓</span> ~70€ · correct</td>
+        <td><span class="v-ok">✓</span> ~70€ · prix exact</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Propriété Manzanita Capital</td>
+        <td><span class="v-ok">✓</span> Manzanita Capital ✓ — fonds private equity Londres</td>
+        <td><span class="v-p">~</span> Manzanita cité mais date acquisition floue</td>
+        <td><span class="v-ok">✓</span> Manzanita Capital ✓</td>
+        <td><span class="v-ok">✓</span> Manzanita Capital ✓ · fonds britannique précisé</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Fabrication Chartres & Grasse</td>
+        <td><span class="v-ok">✓</span> Chartres bougies · Grasse parfums ✓</td>
+        <td><span class="v-ok">✓</span> France · Chartres ✓ · Grasse ✓</td>
+        <td><span class="v-ok">✓</span> Chartres ✓ · Grasse ✓</td>
+        <td><span class="v-ok">✓</span> Chartres ✓ · Grasse ✓ · détails production cités</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Parfums phares</td>
+        <td><span class="v-ok">✓</span> L'Ombre dans l'Eau · Do Son · Philosykos — exact</td>
+        <td><span class="v-ok">✓</span> Eau des Sens · Philosykos ✓ · gamme bien décrite</td>
+        <td><span class="v-ok">✓</span> Parfums phares ✓ · EDT et EDP distincts</td>
+        <td><span class="v-ok">✓</span> Collection complète · Baies · Do Son · Philosykos ✓</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Findings critiques</div>
+  <h2 class="section-title">Perplexity sur-évalue la Bougie Baies de 117%. <em>Gemini efface Christiane Gautrot du trio fondateur.</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label">Drift primaire CRITIQUE · Prix Bougie Baies 190g · Perplexity uniquement</div>
+    <h3 class="finding-title">Perplexity cite la Bougie Baies 190g à 152€ — prix officiel diptyqueparis.com : 70€ (écart de +117%).</h3>
+    <p class="finding-text">C'est le drift prix le plus élevé jamais enregistré dans le registre 2A Agency — un écart de +117% sur le produit le plus iconique de Diptyque. La Bougie Baies 190g est vendue 70€ sur diptyqueparis.com. Perplexity cite 152€, soit plus du double du prix réel. L'analyse du drift suggère une confusion entre la Bougie Baies 190g et le format 600g (vendu ~152€), deux produits distincts que Perplexity amalgame.</p>
+    <p class="finding-text"><strong>Impact commercial :</strong> La Bougie Baies est la bougie parfumée la plus offerte en France — un produit de cadeau de référence dans la catégorie 50–100€. Perplexity est massivement utilisé pour les recherches "idée cadeau bougie luxe" ou "prix Diptyque Baies". Un prix de 152€ au lieu de 70€ repositionne artificiellement la Bougie Baies dans un segment de cadeau premium inaccessible pour la majorité des occasions et des budgets visés. Des acheteurs peuvent renoncer à l'achat sur la foi de ce prix erroné — une perte directe de conversion.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val wrong">152€ ✗<br>Confusion 190g/600g<br>Écart : +82€ (+117%)</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val ok">~70€ ✓<br>190g correct</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val ok">~70€ ✓<br>Exact</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">~70€ ✓<br>Prix exact</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift secondaire · Trio Fondateur · Gemini uniquement</div>
+    <h3 class="finding-title">Gemini efface Christiane Gautrot du trio fondateur de Diptyque — elle était l'une des trois co-fondatrices de la boutique du 34 bd Saint-Germain en 1961.</h3>
+    <p class="finding-text">Diptyque a été fondée en 1961 par trois amis : Desmond Knox-Leet (peintre britannique), Christiane Gautrot (créatrice textile) et Yves Coueslant (metteur en scène). Ces trois fondateurs sont au cœur de l'identité créatrice de la maison. Gemini réduit ce trio à un duo (Knox-Leet et Coueslant) en effaçant Christiane Gautrot — une omission qui dénature l'histoire fondatrice de la marque et prive une co-fondatrice de sa reconnaissance historique.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">Trio complet ✓<br>Gautrot ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">Gautrot effacée ✗<br>Duo seulement</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val ok">Trio complet ✓<br>Gautrot ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">Trio complet ✓<br>Boulevard Saint-Germain cité</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Point fort · Parfums & Distribution · Gemini, ChatGPT, Grok</div>
+    <h3 class="finding-title">Les parfums phares de Diptyque et la distribution sont parfaitement maîtrisés par Gemini, ChatGPT et Grok.</h3>
+    <p class="finding-text">Les parfums emblématiques de Diptyque (L'Ombre dans l'Eau, Do Son, Philosykos, Eau des Sens, Baies en eau de toilette) sont correctement décrits et attribués par Gemini, ChatGPT et Grok. La fabrication française — bougies à Chartres, parfums à Grasse — est unanimement correcte. La distribution sélective (boutiques propres + multimarques luxe + e-commerce) est bien restituée. Ces éléments représentent un actif sémantique solide pour la maison.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 75 à <em>pleinement certifié.</em></h2>
+
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Corriger le prix Bougie Baies 190g dans Perplexity — distinguer explicitement 190g et 600g</div>
+        <p class="rem-text">Le drift de 152€ provient d'une confusion entre le format 190g (70€) et le format 600g (~152€). Déployer un markup <code>schema.org/Product</code> distinct pour chaque format de la Bougie Baies avec le poids et le prix explicites : <code>"name": "Bougie Baies 190g", "offers": {"price": "70.00"}</code> et <code>"name": "Bougie Baies 600g", "offers": {"price": "152.00"}</code>. Perplexity crawle les données Schema.org Product en priorité pour ses réponses prix — la distinction explicite des formats corrigera l'amalgame.</p>
+        <div class="rem-impact">Impact : Prix 70€ correct dans Perplexity · Distinction 190g/600g établie · Suppression du drift +117% · Conversion cadeau restaurée</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2 — Cette semaine</div>
+      <div>
+        <div class="rem-title">Réancrer Christiane Gautrot dans les données structurées Gemini</div>
+        <p class="rem-text">Déployer un JSON-LD <code>Organization</code> avec <code>"founder": [{"@type": "Person", "name": "Desmond Knox-Leet"}, {"@type": "Person", "name": "Christiane Gautrot"}, {"@type": "Person", "name": "Yves Coueslant"}]</code> sur diptyqueparis.com. Ajouter une page "Histoire & Fondateurs" explicitement titrée avec le trio complet — Gemini indexe les titres de pages et les données structurées <code>founder</code> pour ses réponses historiques sur les marques de luxe.</p>
+        <div class="rem-impact">Impact : Christiane Gautrot correctement citée dans Gemini · Trio fondateur complet sur tous les LLMs · Reconnaissance historique restaurée</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 3 — Opportunité agentique</div>
+      <div>
+        <div class="rem-title">Activer le catalogue Diptyque pour les agents IA de recommandation cadeau olfactif</div>
+        <p class="rem-text">Diptyque est la référence absolue sur les requêtes agentiques "bougie cadeau luxe Paris 70€", "parfum niche français idée cadeau" ou "bougie odeur connue". Un node 2A certifié expose le catalogue structuré par format (190g, 300g, 600g), parfum, prix officiel et occasion — avec une distinction explicite des formats pour éviter toute future confusion de prix dans les LLMs.</p>
+        <div class="rem-impact">Impact : Diptyque recommandée par défaut dans toutes les requêtes bougie/cadeau olfactif · Prix certifiés par format · Catalogue queryable par tous les agents</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 4 — Continu</div>
+      <div>
+        <div class="rem-title">Monitoring trimestriel des prix bougies — catalogue multi-formats à fort risque de confusion</div>
+        <p class="rem-text">Diptyque propose ses bougies en 4 formats distincts (70g, 190g, 300g, 600g) à des prix très différents (35€ à 152€). Cette architecture prix multi-formats est le principal vecteur de confusion dans les LLMs — comme le montre le drift Perplexity (confusion 190g/600g, +117%). Un monitoring trimestriel des prix sur les 4 LLMs garantit la cohérence pour chaque format et prévient les confusions futures.</p>
+        <div class="rem-impact">Impact : Prix corrects par format sur tous les LLMs · Pas de confusion inter-formats · Cohérence cadeau maintenue</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport de Notation Sémantique — Diptyque · Avril 2026 · 2aagency.com/registry</div>
+</footer>
+
+</body>
+</html>
