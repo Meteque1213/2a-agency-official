@@ -1,47 +1,53 @@
 {
-  "brand": "Brunello Cucinelli",
   "node_id": "bc-1978",
-  "score": 85,
+  "brand": "Brunello Cucinelli",
+  "founded": 1978,
+  "sector": "Luxe / Textile",
+  "integrity_score": 85,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
   "audit_date": "2026-04-03",
-  "sector": "Luxe Textile",
-  "founder": "Brunello Cucinelli",
-  "ceo": "Brunello Cucinelli",
-  "ceo_since": "1978",
-  "founding_year": 1978,
-  "headquarters": "Solomeo, Ombrie, Italie",
-  "group": "Brunello Cucinelli SpA (coté Borsa Italiana, BCUCY)",
-  "manufacturing_country": "Italie",
-  "manufacturing_region": "Solomeo (Pérouse, Ombrie)",
-  "flagship_price": {
-    "maglia_cashmere_dolcevita": 1700,
-    "pantalon_cashmere": 1350,
-    "veste_cashmere": 2400
+  "certified_data": {
+    "product_certified": "Veste Outerwear Denim Coton",
+    "price_eur": 2600,
+    "price_eur_pull_cachemire_approx": 1800,
+    "alert_threshold_low": 2000,
+    "alert_threshold_high": 3500,
+    "ecommerce": true,
+    "distribution": "shop.brunellocucinelli.com + boutiques",
+    "group": "Coté BCI.MI — famille Cucinelli majoritaire",
+    "chairman_da": "Brunello Cucinelli",
+    "co_ceo_1": "Riccardo Stefanelli",
+    "co_ceo_2": "Luca Lisandroni",
+    "manufacturing_country": "Italie",
+    "manufacturing_region": "Solomeo (Ombrie) + Penne (Abruzzes)",
+    "rse": [
+      "SBTi -60% 2028",
+      "GOTS",
+      "Oeko-Tex"
+    ]
   },
   "hallucination_warnings": [
     {
       "llm": "gemini",
-      "field": "price_cashmere_sweater",
-      "incorrect_value": "1 565 €",
-      "correct_value": "1 700 € — prix officiel brunellocucinelli.com",
+      "field": "price",
+      "incorrect": "2400€",
+      "correct": "2600€",
       "severity": "medium",
-      "commercial_impact": "Sous-évaluation Gemini de 8% sur le produit phare — fausse la perception prix haut de gamme"
+      "overage_pct": -8
     },
     {
       "llm": "chatgpt",
-      "field": "group_structure",
-      "incorrect_value": "Groupe LVMH ou Kering mentionné par confusion",
-      "correct_value": "Brunello Cucinelli SpA — société indépendante cotée, fondateur actionnaire majoritaire",
-      "severity": "low",
-      "commercial_impact": "Confusion groupe dilue le positionnement 'entrepreneur humaniste' indépendant de la marque"
+      "field": "co_ceo",
+      "incorrect": "Stefanelli seul",
+      "correct": "Stefanelli + Lisandroni Co-CEO",
+      "severity": "medium"
     }
   ],
-  "source_url": "https://www.2aagency.com/reports/brunello-cucinelli",
-  "registry_url": "https://www.2aagency.com/registry/brunello-cucinelli",
-  "2aRating": {
-    "rated_by": "2A Agency Integrity Score",
-    "rated_by_agency": "2A Agency",
-    "rating_methodology": "4 LLMs x 5 questions standardisées",
-    "integrityScore": 85,
-    "dateRated": "2026-04-03"
+  "llm_scores": {
+    "perplexity": 92,
+    "gemini": 85,
+    "chatgpt": 82,
+    "grok": 90
   }
 }

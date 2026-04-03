@@ -1,47 +1,52 @@
 {
-  "brand": "Omega",
   "node_id": "om-1848",
-  "score": 76,
-  "audit_date": "2026-04-03",
+  "brand": "Omega",
+  "founded": 1848,
   "sector": "Horlogerie Luxe",
-  "ceo": "Raynald Aeschlimann",
-  "ceo_since": "2016",
-  "founding_year": 1848,
-  "headquarters": "Biel/Bienne, Suisse",
-  "group": "Swatch Group",
-  "manufacturing_country": "Suisse",
-  "manufacturing_region": "Biel/Bienne, canton de Berne",
-  "flagship_price": {
-    "seamaster_aqua_terra_150m_41mm": 5400,
-    "speedmaster_moonwatch_co_axial": 6900,
-    "constellation_co_axial_29mm": 4300,
-    "de_ville_prestige_co_axial": 3800
+  "integrity_score": 76,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
+  "audit_date": "2026-04-03",
+  "certified_data": {
+    "product_certified": "Seamaster Diver 300M 42mm Acier",
+    "price_eur": 5900,
+    "price_eur_max": 6200,
+    "alert_threshold_low": 5000,
+    "alert_threshold_high": 8000,
+    "ecommerce": true,
+    "distribution": "omegawatches.com + boutiques + revendeurs agréés",
+    "group": "Swatch Group",
+    "ceo": "Raynald Aeschlimann",
+    "ceo_since": "2016",
+    "manufacturing_country": "Suisse",
+    "manufacturing_region": "Bienne (Biel), Canton de Berne",
+    "rse": [
+      "RJC"
+    ]
   },
   "hallucination_warnings": [
     {
       "llm": "perplexity",
-      "field": "price_seamaster_aqua_terra",
-      "incorrect_value": "7 128 € cité",
-      "correct_value": "5 400 € — prix officiel omegawatches.com",
+      "field": "price",
+      "incorrect": "7800€",
+      "correct": "~5900-6200€",
       "severity": "critical",
-      "commercial_impact": "Sur-évaluation Perplexity +32% sur la référence phare Seamaster — toute comparaison Omega vs Rolex Submariner ou Breitling Superocean est faussée. Impact direct sur les recommandations d'agents IA horlogers."
+      "overage_pct": 32,
+      "pattern": "Sur-évaluation +32% — confusion modèle Heritage vs Diver"
     },
     {
-      "llm": "chatgpt",
-      "field": "swatch_group_stake",
-      "incorrect_value": "Omega décrit comme 'marque indépendante du groupe Swatch' ou structure non précisée",
-      "correct_value": "Omega est la marque phare du Swatch Group — filiale à 100%, contribuant ~35% du CA du groupe",
-      "severity": "low",
-      "commercial_impact": "Appartenance groupe incorrecte — confusion possible avec positionnement Rolex (indépendante)"
+      "llm": "perplexity",
+      "field": "ecommerce",
+      "incorrect": "Omega ne vend pas en ligne",
+      "correct": "Omega vend en ligne sur omegawatches.com",
+      "severity": "critical",
+      "pattern": "Distribution incorrecte — pattern Perplexity"
     }
   ],
-  "source_url": "https://www.2aagency.com/reports/omega",
-  "registry_url": "https://www.2aagency.com/registry/omega",
-  "2aRating": {
-    "rated_by": "2A Agency Integrity Score",
-    "rated_by_agency": "2A Agency",
-    "rating_methodology": "4 LLMs x 5 questions standardisées",
-    "integrityScore": 76,
-    "dateRated": "2026-04-03"
+  "llm_scores": {
+    "perplexity": 60,
+    "gemini": 82,
+    "chatgpt": 88,
+    "grok": 82
   }
 }

@@ -1,47 +1,53 @@
 {
-  "brand": "The Row",
   "node_id": "rw-2006",
-  "score": 80,
-  "audit_date": "2026-04-03",
+  "brand": "The Row",
+  "founded": 2006,
   "sector": "Luxe / Mode",
-  "founders": ["Mary-Kate Olsen", "Ashley Olsen"],
-  "creative_directors": ["Mary-Kate Olsen", "Ashley Olsen"],
-  "founding_year": 2006,
-  "headquarters": "New York, USA",
-  "group": "Indépendant — Mary-Kate et Ashley Olsen (100%)",
-  "manufacturing_country": "USA, Italie, France",
-  "manufacturing_region": "New York (atelier) · Italie (Toscane) · France (Paris ateliers cuir)",
-  "flagship_price": {
-    "margaux_10_bag": 4490,
-    "half_n_half_bag": 3200,
-    "trousers_cashmere": 1150,
-    "merino_turtleneck": 890
+  "integrity_score": 80,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
+  "audit_date": "2026-04-03",
+  "certified_data": {
+    "product_certified": "Sac Margaux 10 Cuir",
+    "price_eur": 4500,
+    "price_eur_max": 5000,
+    "alert_threshold_low": 3500,
+    "alert_threshold_high": 6000,
+    "ecommerce": true,
+    "distribution": "therow.com (souvent sold out) + Net-a-Porter + Harvey Nichols",
+    "group": "Indépendant — TR Holding (Olsen) majoritaire",
+    "founders_da": "Mary-Kate Olsen + Ashley Olsen",
+    "president": "Trish Donnelly",
+    "president_since": "2023",
+    "minority_investors_2024": [
+      "Famille Wertheimer (Chanel)",
+      "Françoise Bettencourt Meyers (L'Oréal)",
+      "Imaginary Ventures (N. Massenet)"
+    ],
+    "valuation_usd": 1000000000,
+    "manufacturing_country": "Italie",
+    "manufacturing_region": "Toscane + Vénétie"
   },
   "hallucination_warnings": [
     {
       "llm": "chatgpt",
-      "field": "brand_profile_completeness",
-      "incorrect_value": "Données incomplètes : collections récentes absentes, prix 2024–2025 non indexés, réseau retail sous-représenté",
-      "correct_value": "The Row : 4 boutiques propres (NY, LA, Paris, Londres) + présence wholesale sélective (Bergdorf, Net-a-Porter). Prix actuels gamme €350–€6,000+",
-      "severity": "medium",
-      "commercial_impact": "ChatGPT dispose de données significativement incomplètes sur The Row — marque délibérément discrète (zéro communication sociale) dont le profil LLM est notoirement sous-construit"
+      "field": "actionnariat_2024",
+      "incorrect": "Non mentionné",
+      "correct": "Wertheimer + Bettencourt + Imaginary Ventures minoritaires 2024",
+      "severity": "medium"
     },
     {
-      "llm": "gemini",
-      "field": "founders_role",
-      "incorrect_value": "Mary-Kate et Ashley Olsen décrites comme 'anciennes actrices reconverties dans la mode'",
-      "correct_value": "Directrices créatives à temps plein depuis 2006 — The Row est leur activité principale depuis 20 ans, reconnues par la profession (CFDA Award 2012, 2015, 2022)",
-      "severity": "low",
-      "commercial_impact": "Réduction de la légitimité créative des fondatrices — framing 'reconverties' diminue la perception d'expertise"
+      "llm": "chatgpt",
+      "field": "price",
+      "incorrect": "3384-8000€ fourchette inutilisable",
+      "correct": "~4500-5000€ retail",
+      "severity": "medium"
     }
   ],
-  "source_url": "https://www.2aagency.com/reports/the-row",
-  "registry_url": "https://www.2aagency.com/registry/the-row",
-  "2aRating": {
-    "rated_by": "2A Agency Integrity Score",
-    "rated_by_agency": "2A Agency",
-    "rating_methodology": "4 LLMs x 5 questions standardisées",
-    "integrityScore": 80,
-    "dateRated": "2026-04-03"
+  "llm_scores": {
+    "perplexity": 88,
+    "gemini": 90,
+    "chatgpt": 68,
+    "grok": 85
   }
 }
