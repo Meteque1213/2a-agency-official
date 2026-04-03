@@ -1,0 +1,51 @@
+{
+  "node_id": "gu-1921",
+  "brand": "Gucci",
+  "founded": 1921,
+  "sector": "Luxe / Maroquinerie",
+  "integrity_score": 84,
+  "score_scale": 100,
+  "rated_by": "2A Agency",
+  "rating_label": "2A Agency Integrity Score",
+  "rating_methodology": "4 LLMs x 6 questions standardisées",
+  "audit_date": "2026-04-02",
+  "node_version": "1.0",
+  "certified_data": {
+    "product_certified": "Sac Horsebit 1955 Petit Modèle Cuir",
+    "price_eur": 2700,
+    "price_eur_max": 2980,
+    "currency": "EUR",
+    "alert_threshold_low": 2200,
+    "alert_threshold_high": 3500,
+    "distribution": "gucci.com + boutiques officielles",
+    "ecommerce": true,
+    "group": "Kering",
+    "ceo": "Francesca Bellettini",
+    "ceo_since": "2025-09",
+    "creative_director": "Demna",
+    "creative_director_since": "2025-07",
+    "manufacturing_country": "Italie",
+    "manufacturing_region": "Toscane, Florence, Scandicci",
+    "rse_certifications": ["Gucci Equilibrium", "Kering Standards"]
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "chatgpt",
+      "field": "creative_director",
+      "incorrect": "Sabato De Sarno",
+      "correct": "Demna",
+      "severity": "critical",
+      "lag_months": 18,
+      "pattern": "ChatGPT DA luxe périmé"
+    },
+    {
+      "llm": "chatgpt",
+      "field": "ceo",
+      "incorrect": "Stefano Cantino",
+      "correct": "Francesca Bellettini",
+      "severity": "critical",
+      "pattern": "ChatGPT gouvernance périmée"
+    }
+  ],
+  "llm_scores": {"perplexity": 95, "gemini": 90, "chatgpt": 65, "grok": 90}
+}

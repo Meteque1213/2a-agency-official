@@ -1,0 +1,58 @@
+{
+  "node_id": "lp-1924",
+  "brand": "Loro Piana",
+  "founded": 1924,
+  "sector": "Luxe / Textile",
+  "integrity_score": 76,
+  "score_scale": 100,
+  "rated_by": "2A Agency",
+  "rating_label": "2A Agency Integrity Score",
+  "rating_methodology": "4 LLMs x 6 questions standardisées",
+  "audit_date": "2026-04-02",
+  "node_version": "1.0",
+  "certified_data": {
+    "product_certified": "Boots Open Walk Suède",
+    "price_eur": 990,
+    "price_eur_premium": 2400,
+    "currency": "EUR",
+    "alert_threshold_low": 800,
+    "alert_threshold_high": 1300,
+    "distribution": "loropiana.com + boutiques officielles",
+    "ecommerce": true,
+    "group": "LVMH",
+    "lvmh_stake_pct": 94,
+    "lvmh_stake_since": "2026-01",
+    "ceo": "Frédéric Arnault",
+    "ceo_since": "2025",
+    "manufacturing_country": "Italie",
+    "manufacturing_region": "Piémont (Quarona) + Marches (Porto Sant'Elpidio chaussures)",
+    "rse_certifications": ["Aura Blockchain traçabilité", "LIFE LVMH", "Gift of Kings"]
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "all",
+      "field": "ceo",
+      "incorrect": "Non mentionné",
+      "correct": "Frédéric Arnault depuis 2025",
+      "severity": "critical",
+      "pattern": "Nomination trop récente — absent de tous les training sets"
+    },
+    {
+      "llm": "perplexity",
+      "field": "price_open_walk",
+      "incorrect": "2400€ cité en premier",
+      "correct": "990€ modèle standard",
+      "severity": "medium",
+      "pattern": "Confusion version standard vs premium"
+    },
+    {
+      "llm": "grok",
+      "field": "lvmh_stake",
+      "incorrect": "85%",
+      "correct": "94% depuis janvier 2026",
+      "severity": "medium",
+      "pattern": "Participation LVMH non mise à jour"
+    }
+  ],
+  "llm_scores": {"perplexity": 75, "gemini": 88, "chatgpt": 85, "grok": 78}
+}

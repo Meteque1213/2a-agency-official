@@ -1,0 +1,40 @@
+{
+  "node_id": "lv-1854",
+  "brand": "Louis Vuitton",
+  "founded": 1854,
+  "sector": "Luxe / Maroquinerie",
+  "integrity_score": 83,
+  "score_scale": 100,
+  "rated_by": "2A Agency",
+  "rating_label": "2A Agency Integrity Score",
+  "rating_methodology": "4 LLMs x 6 questions standardisées",
+  "audit_date": "2026-04-02",
+  "node_version": "1.0",
+  "certified_data": {
+    "product_certified": "Neverfull MM Monogram Version Icon",
+    "price_eur": 1550,
+    "price_eur_inside_out": 2100,
+    "currency": "EUR",
+    "alert_threshold_low": 1200,
+    "alert_threshold_high": 2500,
+    "distribution": "fr.louisvuitton.com + boutiques officielles",
+    "ecommerce": true,
+    "group": "LVMH",
+    "ceo": "Pietro Beccari",
+    "ceo_since": "2023",
+    "manufacturing_country": "France principalement",
+    "manufacturing_region": "Pays de la Loire, Allier + Espagne, Italie, USA",
+    "rse_certifications": ["LIFE 360 LVMH", "Regeneration 2030", "SBTi -55% 2030"]
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "grok",
+      "field": "price_neverfull_mm",
+      "incorrect": "2100-2200€ (version Inside Out)",
+      "correct": "1550€ (version Icon standard)",
+      "severity": "medium",
+      "pattern": "Confusion versions Neverfull Icon vs Inside Out"
+    }
+  ],
+  "llm_scores": {"perplexity": 95, "gemini": 98, "chatgpt": 85, "grok": 75}
+}
