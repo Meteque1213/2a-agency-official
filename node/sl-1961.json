@@ -1,0 +1,43 @@
+{
+  "node_id": "sl-1961",
+  "brand": "Saint Laurent",
+  "founded": 1961,
+  "sector": "Luxe Haute Couture",
+  "integrity_score": 85,
+  "rated_by": "2A Agency",
+  "audit_date": "2026-04-04",
+  "certified_data": {
+    "product_certified": "Sac Loulou Medium Matelasse",
+    "price_eur": 2650,
+    "ecommerce": true,
+    "distribution": "ysl.com + boutiques + Mytheresa",
+    "group": "Kering",
+    "da": "Anthony Vaccarello",
+    "da_since": "2016",
+    "manufacturing_country": "Italie",
+    "manufacturing_region": "Toscane — Florence",
+    "rse": [
+      "LWG",
+      "CSRD",
+      "Kering Standards",
+      "EP&L",
+      "Fur-free"
+    ]
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "grok",
+      "field": "price_loulou_medium",
+      "incorrect": "2950-3650 USD",
+      "correct": "2650€ (ysl.com)",
+      "severity": "medium",
+      "overage_pct": 15
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 95,
+    "gemini": 95,
+    "chatgpt": 92,
+    "grok": 82
+  }
+}

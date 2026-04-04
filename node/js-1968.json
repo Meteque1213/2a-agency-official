@@ -1,0 +1,51 @@
+{
+  "node_id": "js-1968",
+  "brand": "Jil Sander",
+  "founded": 1968,
+  "sector": "Luxe Minimalisme",
+  "integrity_score": 82,
+  "rated_by": "2A Agency",
+  "audit_date": "2026-04-04",
+  "certified_data": {
+    "product_certified": "Sac Cannolo Grande Cuir",
+    "price_eur": 1890,
+    "ecommerce": true,
+    "group": "OTB Group (Only The Brave — Renzo Rosso)",
+    "da": "Simone Bellotti",
+    "da_since": "2025-03",
+    "da_previous": "Luke et Lucie Meier (2017-2025)",
+    "manufacturing_country": "Italie",
+    "rse": [
+      "SBTi",
+      "LWG",
+      "Fashion Pact",
+      "Gender Equality",
+      "Aura Blockchain",
+      "Fur Free"
+    ]
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "gemini",
+      "field": "price_cannolo_grande",
+      "incorrect": "1420€",
+      "correct": "1800-1900€",
+      "severity": "critical",
+      "overage_pct": -25,
+      "pattern": "Gemini sous-evalue prix -25%"
+    },
+    {
+      "llm": "gemini",
+      "field": "da",
+      "incorrect": "Studio interne OTB vague",
+      "correct": "Simone Bellotti DA depuis mars 2025",
+      "severity": "medium"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 90,
+    "gemini": 72,
+    "chatgpt": 88,
+    "grok": 88
+  }
+}

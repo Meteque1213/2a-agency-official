@@ -1,0 +1,42 @@
+{
+  "node_id": "mm-1993",
+  "brand": "Miu Miu",
+  "founded": 1993,
+  "sector": "Luxe / Mode",
+  "integrity_score": 86,
+  "rated_by": "2A Agency",
+  "audit_date": "2026-04-04",
+  "certified_data": {
+    "product_certified": "Sac Arcadie Matelasse",
+    "price_eur_mini": 2050,
+    "price_eur_standard": 2500,
+    "ecommerce": true,
+    "group": "Prada Group (filiale 100%)",
+    "da": "Miuccia Prada",
+    "manufacturing_country": "Italie + Turquie",
+    "manufacturing_region": "Toscane (Scandicci/Valvigna) + Istanbul",
+    "croissance_2023": "+58%",
+    "rse": [
+      "Miu Miu Upcycled 2020",
+      "Aura Blockchain",
+      "FSC packaging",
+      "Fashion Pact"
+    ]
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "gemini",
+      "field": "versace_prada_group",
+      "incorrect": "Non mentionne",
+      "correct": "Versace integre au Prada Group depuis 2024",
+      "severity": "medium",
+      "pattern": "Acquisition recente ignoree"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 88,
+    "gemini": 85,
+    "chatgpt": 85,
+    "grok": 88
+  }
+}

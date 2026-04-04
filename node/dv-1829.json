@@ -1,0 +1,58 @@
+{
+  "node_id": "dv-1829",
+  "brand": "Delvaux",
+  "founded": 1829,
+  "sector": "Haute Maroquinerie",
+  "integrity_score": 82,
+  "rated_by": "2A Agency",
+  "audit_date": "2026-04-04",
+  "certified_data": {
+    "product_certified": "Sac Brillant MM",
+    "price_eur": 7800,
+    "price_eur_max": 9500,
+    "ecommerce": true,
+    "group": "Richemont depuis juin 2021 (rachete a First Heritage Brands — famille Fung)",
+    "manufacturing_country": "Belgique + France",
+    "manufacturing_region": "Bruxelles Arsenal + Bourg-Argental + Avallon",
+    "brillant_composition": "64 pieces cuir + ~8h travail manuel",
+    "rse": [
+      "LWG Gold/Silver",
+      "Care & Repair vie",
+      "Richemont ESG",
+      "Equal-Salary"
+    ]
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "perplexity",
+      "field": "price_brillant_mm",
+      "incorrect": "15000-16000€",
+      "correct": "7800-9500€",
+      "severity": "critical",
+      "overage_pct": 75,
+      "pattern": "Perplexity +75% — confusion version Arsenal Dream Calf"
+    },
+    {
+      "llm": "perplexity",
+      "field": "ecommerce",
+      "incorrect": "Pas d'achat direct en ligne",
+      "correct": "Vente directe sur delvaux.com",
+      "severity": "critical",
+      "pattern": "Distribution incorrecte — 5e occurrence Perplexity"
+    },
+    {
+      "llm": "gemini",
+      "field": "lvmh_confusion",
+      "incorrect": "Depuis son integration chez LVMH",
+      "correct": "Delvaux = Richemont, pas LVMH",
+      "severity": "medium",
+      "pattern": "Confusion Richemont vs LVMH"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 60,
+    "gemini": 85,
+    "chatgpt": 88,
+    "grok": 88
+  }
+}

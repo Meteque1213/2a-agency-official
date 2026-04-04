@@ -1,0 +1,54 @@
+{
+  "node_id": "td-1920",
+  "brand": "Tod's",
+  "founded": 1920,
+  "sector": "Luxe / Chaussure",
+  "integrity_score": 84,
+  "rated_by": "2A Agency",
+  "audit_date": "2026-04-04",
+  "certified_data": {
+    "product_certified": "Mocassins Gommino Cuir",
+    "price_eur": 590,
+    "price_eur_max": 650,
+    "ecommerce": true,
+    "group": "Tod's Group (famille Della Valle)",
+    "ceo": "John Galantic",
+    "president": "Diego Della Valle",
+    "da": "Matteo Tamburini",
+    "da_since": "2023",
+    "da_previous": "Walter Chiapponi",
+    "manufacturing_country": "Italie",
+    "manufacturing_region": "Marches — Sant'Elpidio a Mare",
+    "tods_passport": "Aura Blockchain Digital Product Passport sur Gommino",
+    "rse": [
+      "ISO 14001",
+      "ISO 45001",
+      "ISO 50001",
+      "PACT framework",
+      "100% energie renouvelable Italie 2025"
+    ]
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "all_except_perplexity",
+      "field": "ceo",
+      "incorrect": "Non mentionne",
+      "correct": "John Galantic CEO Tod's Group",
+      "severity": "medium",
+      "pattern": "CEO meconnu ignore 3/4 LLMs"
+    },
+    {
+      "llm": "gemini",
+      "field": "tods_passport",
+      "incorrect": "Non mentionne",
+      "correct": "Tod's Passport Aura Blockchain 2025",
+      "severity": "medium"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 90,
+    "gemini": 82,
+    "chatgpt": 85,
+    "grok": 90
+  }
+}

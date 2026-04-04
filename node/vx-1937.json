@@ -1,0 +1,42 @@
+{
+  "node_id": "vx-1937",
+  "brand": "Valextra",
+  "founded": 1937,
+  "sector": "Haute Maroquinerie",
+  "integrity_score": 87,
+  "rated_by": "2A Agency",
+  "audit_date": "2026-04-04",
+  "certified_data": {
+    "product_certified": "Sac Iside Top Handle Mini",
+    "price_eur": 4200,
+    "ecommerce": true,
+    "group": "Independant — Neo Capital majoritaire (~60%) + Emanuele Carminati Molina",
+    "ceo": "Xavier Rougeaux",
+    "ceo_since": "2021",
+    "manufacturing_country": "Italie",
+    "manufacturing_region": "Rho (Milan) + Lombardie + Toscane + Venetie",
+    "hallmark": "100% Made in Italy — numero artisan unique",
+    "rse": [
+      "Butterfly Mark Positive Luxury",
+      "LWG",
+      "SBTi -46% 2030",
+      "Reparation locale"
+    ]
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "perplexity",
+      "field": "ceo",
+      "incorrect": "Alessandra Bettari",
+      "correct": "Xavier Rougeaux CEO depuis 2021",
+      "severity": "medium",
+      "pattern": "CEO incorrect"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 85,
+    "gemini": 92,
+    "chatgpt": 90,
+    "grok": 90
+  }
+}
