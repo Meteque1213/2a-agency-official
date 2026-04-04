@@ -1,0 +1,69 @@
+{
+  "node_id": "be-1895",
+  "brand": "Berluti",
+  "founded": 1895,
+  "sector": "Luxe / Chaussure",
+  "integrity_score": 82,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
+  "audit_date": "2026-04-04",
+  "certified_data": {
+    "product_certified": "Oxford Alessandro Venezia",
+    "price_eur": 2100,
+    "price_eur_max": 2200,
+    "alert_threshold_low": 1800,
+    "alert_threshold_high": 2800,
+    "ecommerce": true,
+    "distribution": "berluti.com + MR Porter + Mytheresa + boutiques",
+    "group": "LVMH depuis 1993",
+    "ceo": "Jean-Marc Mansvelt",
+    "ceo_since": "2024",
+    "da_current": "Vacant — pas de successeur nommé",
+    "da_previous_1": "Haider Ackermann (2023-2024)",
+    "da_previous_2": "Kris Van Assche (2018-2021)",
+    "manufacturing_country": "Italie + France",
+    "manufacturing_region": "Gaibanella, Ferrara, Emilie-Romagne (Manifattura Berluti) + Paris (bespoke)",
+    "cuir_venezia": "Veau pleine fleur double tannage mineral + vegetal — non pigmente — patine Olga Berluti",
+    "rse": [
+      "LWG via LVMH",
+      "LIFE 360 LVMH",
+      "Fur-free"
+    ]
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "grok",
+      "field": "price_oxford_venezia",
+      "incorrect_value": "2500-3500€",
+      "correct_value": "2100-2200€ (source berluti.com)",
+      "severity": "critical",
+      "category": "pricing_drift",
+      "error_magnitude": "+50%",
+      "pattern": "Grok confond Alessandro classique avec Alessandro 1895 (version haute gamme)"
+    },
+    {
+      "llm": "all_except_grok",
+      "field": "ceo",
+      "incorrect_value": "Non mentionne ou Antoine Arnault (Gemini)",
+      "correct_value": "Jean-Marc Mansvelt CEO depuis 2024",
+      "severity": "medium",
+      "category": "governance_drift",
+      "pattern": "CEO recent ignore par 3/4 LLMs — meme pattern que Tod's (Galantic)"
+    },
+    {
+      "llm": "gemini",
+      "field": "da_direction",
+      "incorrect_value": "Supervision Antoine Arnault DG",
+      "correct_value": "DA vacant depuis fin 2024 — pas de successeur nommé — studio interne",
+      "severity": "medium",
+      "category": "governance_drift",
+      "pattern": "Gemini imprecis sur direction creative vacante"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 88,
+    "gemini": 80,
+    "chatgpt": 85,
+    "grok": 72
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "node_id": "rv-1937",
+  "brand": "Roger Vivier",
+  "founded": 1937,
+  "sector": "Luxe / Chaussure",
+  "integrity_score": 84,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
+  "audit_date": "2026-04-04",
+  "certified_data": {
+    "product_certified": "Escarpins Virgule Satin",
+    "price_eur": 990,
+    "price_eur_max": 1200,
+    "price_eur_ornements": 2500,
+    "alert_threshold_low": 800,
+    "alert_threshold_high": 1800,
+    "ecommerce": true,
+    "distribution": "rogervivier.com + Mytheresa + Net-a-Porter + 24S",
+    "group": "Tod's Group (famille Della Valle)",
+    "da": "Gherardo Felloni",
+    "da_since": "2018",
+    "headquarters_design": "Paris, rue Royale",
+    "manufacturing_country": "Italie",
+    "manufacturing_region": "Brancadoro, Marches + coordination Paris",
+    "rse": [
+      "PACT Tod's Group",
+      "Production italienne artisanale",
+      "Longévité produit"
+    ]
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "perplexity",
+      "field": "price_virgule_satin",
+      "incorrect_value": "950€",
+      "correct_value": "990-1200€ boutique officielle",
+      "severity": "medium",
+      "category": "pricing_drift",
+      "pattern": "Perplexity cite prix promotionnel revendeur plutot que prix boutique officiel"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 82,
+    "gemini": 88,
+    "chatgpt": 85,
+    "grok": 85
+  }
+}
