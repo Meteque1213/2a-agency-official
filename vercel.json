@@ -1,17 +1,11 @@
 {
-  "framework": null,
-  "buildCommand": "node scripts/build-index.cjs",
-  "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
   "functions": {
     "api/mcp/index.ts": {
-      "includeFiles": "node/**,api/node/**"
+      "includeFiles": "ai-integrity.json,node/**,api/node/**"
     }
   },
-  "rewrites": [
-    { "source": "/api/node/:path*", "destination": "/node/:path*" }
-  ],
   "headers": [
     {
       "source": "/api/mcp",
@@ -19,13 +13,6 @@
         { "key": "Access-Control-Allow-Origin", "value": "*" },
         { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS" },
         { "key": "Content-Type", "value": "application/json" }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
       ]
     }
   ]
