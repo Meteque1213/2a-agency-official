@@ -1,292 +1,227 @@
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
-import { z } from "zod";
-import { BRAND_INDEX } from "./brand-data.js";
 import type { IncomingMessage, ServerResponse } from "http";
+import { BRAND_INDEX } from "./brand-data.js";
 
-// ── x402 Payment gate ──────────────────────────────────────────────────────
 const FREE_API_KEYS = [
   process.env.FREE_API_KEY_DEMO,
   process.env.FREE_API_KEY_HERMES,
   process.env.FREE_API_KEY_ROLEX,
-].filter(Boolean) as string[];
+].filter(Boolean);
 
-function buildX402Payload() {
-  return {
-    version: "1",
-    scheme: "exact",
-    network: "base",
-    maxAmountRequired: "1000", // 0.001 USDC in atomic units (6 decimals)
-    resource: "https://www.2aagency.com/api/mcp",
-    description: "2A Agency Brand Semantic Registry — $0.001 per query",
-    mimeType: "application/json",
-    payTo: process.env.WALLET_ADDRESS ?? "",
-    requiredDeadlineSeconds: 300,
-    asset: "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913", // USDC on Base
-  };
-}
-
-function send402(res: ServerResponse): void {
-  const payload = buildX402Payload();
-  const encoded = Buffer.from(JSON.stringify(payload)).toString("base64");
-  res.writeHead(402, {
-    "Content-Type": "application/json",
-    "X-Payment-Required": encoded,
-    "Access-Control-Expose-Headers": "X-Payment-Required",
-  });
-  res.end(
-    JSON.stringify({
-      error: "Payment required",
-      x402: true,
-      description: payload.description,
-      price: "$0.001 USDC on Base",
-      how: "Include 'x-payment' header with payment proof, or use a free API key via 'x-api-key' header",
-    })
-  );
-}
-
-async function verifyPayment(paymentHeader: string): Promise<boolean> {
-  try {
-    const resp = await fetch("https://services.ampersend.ai/verify", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        payment: paymentHeader,
-        payload: buildX402Payload(),
-      }),
-    });
-    if (!resp.ok) return false;
-    const result = (await resp.json()) as { valid?: boolean; isValid?: boolean };
-    return result.valid === true || result.isValid === true;
-  } catch {
-    return false;
+const TOOLS = [
+  {
+    name: "get_brand_score",
+    description: "Get the semantic integrity score (0-100) for a brand audited by 2A Agency",
+    inputSchema: {
+      type: "object",
+      properties: {
+        brand_name: { type: "string", description: "Brand name — e.g. 'Hermès', 'Delvaux'" }
+      },
+      required: ["brand_name"]
+    }
+  },
+  {
+    name: "get_certified_data",
+    description: "Get 2A-verified factual data for a brand: price, group, manufacturing, RSE",
+    inputSchema: {
+      type: "object",
+      properties: {
+        brand_name: { type: "string", description: "Brand name" }
+      },
+      required: ["brand_name"]
+    }
+  },
+  {
+    name: "get_hallucination_warnings",
+    description: "Get documented LLM hallucinations for a brand",
+    inputSchema: {
+      type: "object",
+      properties: {
+        brand_name: { type: "string", description: "Brand name" },
+        llm: {
+          type: "string",
+          enum: ["gemini", "chatgpt", "grok", "perplexity"],
+          description: "Filter by LLM (optional)"
+        }
+      },
+      required: ["brand_name"]
+    }
   }
-}
+];
 
-// ── Static brand index — pre-built at deploy time by scripts/build-index.cjs ─
-// All node data is embedded — zero runtime I/O on tools/call
-const brandIndex = BRAND_INDEX;
-
-function loadNode(brandName: string): Record<string, unknown> | null {
-  const key = brandName.toLowerCase().trim();
-  return brandIndex[key] ?? null;
-}
-
-// ── Helpers ────────────────────────────────────────────────────────────────
 const NOT_FOUND = {
   error: "Brand not in 2A Registry",
-  suggestion: "Request an audit at 2aagency.com",
+  suggestion: "Request an audit at 2aagency.com"
 };
 
+function loadNode(brandName: string) {
+  const key = brandName.toLowerCase().trim();
+  return (BRAND_INDEX as any)[key] ?? null;
+}
+
 function txt(obj: unknown) {
-  return {
-    content: [{ type: "text" as const, text: JSON.stringify(obj, null, 2) }],
-  };
+  return { content: [{ type: "text", text: JSON.stringify(obj, null, 2) }] };
 }
 
-// ── MCP server factory ─────────────────────────────────────────────────────
-function buildServer(): McpServer {
-  const server = new McpServer({
-    name: "2A Agency Brand Integrity Registry",
-    version: "1.0.0",
-  });
+function callTool(name: string, args: any) {
+  if (name === "get_brand_score") {
+    const node = loadNode(args.brand_name);
+    if (!node) return txt(NOT_FOUND);
+    const warnings = Array.isArray(node.hallucination_warnings)
+      ? node.hallucination_warnings.filter((w: any) => w.severity === "critical")
+      : [];
+    return txt({
+      brand: node.brand,
+      integrity_score: node.integrity_score,
+      sector: node.sector,
+      audit_date: node.audit_date,
+      rated_by: node.rated_by,
+      llm_scores: node.llm_scores,
+      critical_findings: warnings.map((w: any) =>
+        `[${w.llm}] ${w.field}: "${w.incorrect}" → correct: "${w.correct}"`
+      ),
+      source_url: `https://www.2aagency.com/reports/${args.brand_name.toLowerCase().replace(/ /g, "-")}`
+    });
+  }
 
-  // ── Tool 1: get_brand_score ──────────────────────────────────────────────
-  server.tool(
-    "get_brand_score",
-    "Get the semantic integrity score (0-100) for a brand audited by 2A Agency",
-    {
-      brand_name: z
-        .string()
-        .describe("Brand name — e.g. 'Hermès', 'Rolex', 'Delvaux'"),
-    },
-    async ({ brand_name }) => {
-      const node = loadNode(brand_name);
-      if (!node) return txt(NOT_FOUND);
+  if (name === "get_certified_data") {
+    const node = loadNode(args.brand_name);
+    if (!node) return txt(NOT_FOUND);
+    return txt({
+      brand: node.brand,
+      sector: node.sector,
+      founded: node.founded,
+      integrity_score: node.integrity_score,
+      audit_date: node.audit_date,
+      certified_data: node.certified_data
+    });
+  }
 
-      const warnings = Array.isArray(node.hallucination_warnings)
-        ? (node.hallucination_warnings as any[])
-        : [];
+  if (name === "get_hallucination_warnings") {
+    const node = loadNode(args.brand_name);
+    if (!node) return txt(NOT_FOUND);
+    let warnings = Array.isArray(node.hallucination_warnings)
+      ? node.hallucination_warnings
+      : [];
+    if (args.llm) warnings = warnings.filter((w: any) => w.llm === args.llm);
+    return txt({
+      brand: node.brand,
+      integrity_score: node.integrity_score,
+      total_warnings: warnings.length,
+      llm_filter: args.llm ?? "all",
+      warnings
+    });
+  }
 
-      const critical_findings = warnings
-        .filter((w) => w.severity === "critical")
-        .map(
-          (w) =>
-            `[${w.llm}] ${w.field}: "${w.incorrect}" → correct: "${w.correct}"`
-        );
-
-      const label = (node.brand ?? node.name) as string;
-      return txt({
-        brand: label,
-        integrity_score: node.integrity_score,
-        score_scale: 100,
-        sector: node.sector,
-        audit_date: node.audit_date,
-        rated_by: node.rated_by,
-        llm_scores: node.llm_scores,
-        critical_findings,
-        source_url: `https://www.2aagency.com/reports/${(brand_name as string)
-          .toLowerCase()
-          .replace(/ /g, "-")}`,
-      });
-    }
-  );
-
-  // ── Tool 2: get_certified_data ───────────────────────────────────────────
-  server.tool(
-    "get_certified_data",
-    "Get 2A-verified factual data for a brand: price, group, manufacturing country, e-commerce, RSE certifications",
-    {
-      brand_name: z.string().describe("Brand name — e.g. 'Delvaux', 'Chanel'"),
-    },
-    async ({ brand_name }) => {
-      const node = loadNode(brand_name);
-      if (!node) return txt(NOT_FOUND);
-
-      return txt({
-        brand: node.brand ?? node.name,
-        sector: node.sector,
-        founded: node.founded,
-        integrity_score: node.integrity_score,
-        audit_date: node.audit_date,
-        certified_data: node.certified_data,
-      });
-    }
-  );
-
-  // ── Tool 3: get_hallucination_warnings ───────────────────────────────────
-  server.tool(
-    "get_hallucination_warnings",
-    "Get documented LLM hallucinations for a brand — optionally filtered by LLM (gemini, chatgpt, grok, perplexity)",
-    {
-      brand_name: z.string().describe("Brand name"),
-      llm: z
-        .enum(["gemini", "chatgpt", "grok", "perplexity"])
-        .optional()
-        .describe("Filter by LLM (optional). Omit to get all warnings."),
-    },
-    async ({ brand_name, llm }) => {
-      const node = loadNode(brand_name);
-      if (!node) return txt(NOT_FOUND);
-
-      let warnings: any[] = Array.isArray(node.hallucination_warnings)
-        ? (node.hallucination_warnings as any[])
-        : [];
-
-      if (llm) warnings = warnings.filter((w) => w.llm === llm);
-
-      return txt({
-        brand: node.brand ?? node.name,
-        integrity_score: node.integrity_score,
-        total_warnings: warnings.length,
-        llm_filter: llm ?? "all",
-        warnings,
-      });
-    }
-  );
-
-  return server;
+  return { content: [{ type: "text", text: `Unknown tool: ${name}` }], isError: true };
 }
 
-// ── Body reader for raw IncomingMessage (Vercel does not auto-parse) ───────
-async function readBody(req: IncomingMessage): Promise<unknown> {
+async function readBody(req: IncomingMessage): Promise<any> {
   return new Promise((resolve, reject) => {
     let data = "";
-    req.on("data", (chunk) => {
-      data += chunk;
-    });
+    req.on("data", chunk => { data += chunk; });
     req.on("end", () => {
-      try {
-        resolve(data ? JSON.parse(data) : undefined);
-      } catch {
-        resolve(data);
-      }
+      try { resolve(data ? JSON.parse(data) : {}); }
+      catch { resolve({}); }
     });
     req.on("error", reject);
   });
 }
 
-// ── Vercel serverless handler ──────────────────────────────────────────────
-export default async function handler(
-  req: IncomingMessage & { body?: unknown },
-  res: ServerResponse
-) {
-  // Health check — also exposes the full dynamic brand list
+function jsonResponse(res: ServerResponse, status: number, body: unknown) {
+  const json = JSON.stringify(body);
+  res.writeHead(status, {
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type, x-api-key, x-payment"
+  });
+  res.end(json);
+}
+
+export default async function handler(req: IncomingMessage, res: ServerResponse) {
+  // CORS preflight
+  if (req.method === "OPTIONS") {
+    res.writeHead(204, {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, x-api-key, x-payment"
+    });
+    res.end();
+    return;
+  }
+
+  // Health check
   if (req.method === "GET") {
-    const brands = Object.keys(brandIndex).sort();
-    res.writeHead(200, { "Content-Type": "application/json" });
-    res.end(
-      JSON.stringify({
-        name: "2A Agency MCP Server",
-        version: "1.0.0",
-        tools: [
-          "get_brand_score",
-          "get_certified_data",
-          "get_hallucination_warnings",
-        ],
-        brands_count: brands.length,
-        brands,
-        mcp_endpoint: "https://www.2aagency.com/api/mcp",
-        registry: "https://www.2aagency.com/registry",
-      })
-    );
+    const brands = Object.keys(BRAND_INDEX as any).sort();
+    jsonResponse(res, 200, {
+      name: "2A Agency MCP Server",
+      version: "1.0.0",
+      tools: TOOLS.map(t => t.name),
+      brands_count: brands.length,
+      brands,
+      mcp_endpoint: "https://www.2aagency.com/api/mcp",
+      registry: "https://www.2aagency.com/registry"
+    });
     return;
   }
 
   if (req.method !== "POST") {
-    res.writeHead(405, { "Content-Type": "application/json" });
-    res.end(
-      JSON.stringify({ error: "Method not allowed. Use POST for MCP requests." })
-    );
+    jsonResponse(res, 405, { error: "Method not allowed" });
     return;
   }
 
-  // ── Read body first to inspect the MCP method ─────────────────────────────
-  const body = req.body ?? (await readBody(req));
-  const mcpMethod = (body as any)?.method as string | undefined;
+  const body = await readBody(req);
+  const { method, params, id } = body;
 
-  // ── x402 gate — free for handshake methods, paid for tools/call ───────────
-  const FREE_METHODS = ["initialize", "notifications/initialized", "tools/list", "ping"];
+  // JSON-RPC helpers
+  const reply = (result: unknown) =>
+    jsonResponse(res, 200, { jsonrpc: "2.0", id, result });
+  const error = (code: number, message: string) =>
+    jsonResponse(res, 200, { jsonrpc: "2.0", id, error: { code, message } });
 
-  if (!FREE_METHODS.includes(mcpMethod ?? "")) {
-    const apiKey = req.headers["x-api-key"] as string | undefined;
-    if (apiKey && FREE_API_KEYS.includes(apiKey)) {
-      // Free API key — bypass payment
-    } else {
-      const paymentHeader = req.headers["x-payment"] as string | undefined;
-      if (paymentHeader) {
-        const valid = await verifyPayment(paymentHeader);
-        if (!valid) {
-          send402(res);
-          return;
-        }
-      } else {
-        send402(res);
-        return;
-      }
-    }
-  }
-
-  try {
-    const server = buildServer();
-    const transport = new StreamableHTTPServerTransport({
-      sessionIdGenerator: undefined, // stateless — no session management
+  // MCP handshake — no auth required
+  if (method === "initialize") {
+    return reply({
+      protocolVersion: "2025-03-26",
+      capabilities: { tools: { listChanged: false } },
+      serverInfo: { name: "2A Agency Brand Integrity Registry", version: "1.0.0" }
     });
-    await server.connect(transport);
-
-    // Force-close the response after 8s to stay under Vercel's 10s serverless limit
-    const forceClose = setTimeout(() => {
-      if (!res.writableEnded) res.end();
-    }, 8000);
-
-    await transport.handleRequest(req, res, body);
-    clearTimeout(forceClose);
-  } catch (err) {
-    if (!res.headersSent) {
-      res.writeHead(500, { "Content-Type": "application/json" });
-      res.end(
-        JSON.stringify({ error: "Internal server error", detail: String(err) })
-      );
-    }
   }
+
+  if (method === "notifications/initialized") {
+    res.writeHead(204); res.end(); return;
+  }
+
+  if (method === "tools/list") {
+    return reply({ tools: TOOLS });
+  }
+
+  if (method === "ping") {
+    return reply({});
+  }
+
+  // tools/call — requires auth
+  if (method === "tools/call") {
+    const apiKey = req.headers["x-api-key"] as string;
+    if (!FREE_API_KEYS.includes(apiKey)) {
+      jsonResponse(res, 402, {
+        error: "Payment required",
+        x402: true,
+        description: "2A Agency Brand Semantic Registry — $0.001 per query",
+        price: "$0.001 USDC on Base",
+        how: "Include 'x-api-key' header with a free API key or 'x-payment' with payment proof"
+      });
+      return;
+    }
+
+    const toolName = params?.name;
+    const toolArgs = params?.arguments ?? {};
+
+    if (!toolName) return error(-32602, "Missing tool name");
+
+    const result = callTool(toolName, toolArgs);
+    return reply(result);
+  }
+
+  return error(-32601, `Method not found: ${method}`);
 }
