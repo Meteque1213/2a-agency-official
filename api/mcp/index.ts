@@ -89,9 +89,15 @@ function getBrandIndex(): Map<string, string> {
         const filePath = join(dirPath, file);
         const content = JSON.parse(readFileSync(filePath, "utf-8")) as {
           brand?: string;
+          name?: string;
         };
-        if (content.brand) {
-          brandIndex.set(content.brand.toLowerCase(), filePath);
+        const label = typeof content.brand === "string"
+          ? content.brand
+          : typeof content.name === "string"
+          ? content.name
+          : null;
+        if (label) {
+          brandIndex.set(label.toLowerCase(), filePath);
         }
       } catch {
         // skip malformed file
@@ -157,8 +163,9 @@ function buildServer(): McpServer {
             `[${w.llm}] ${w.field}: "${w.incorrect}" → correct: "${w.correct}"`
         );
 
+      const label = (node.brand ?? node.name) as string;
       return txt({
-        brand: node.brand,
+        brand: label,
         integrity_score: node.integrity_score,
         score_scale: 100,
         sector: node.sector,
@@ -185,7 +192,7 @@ function buildServer(): McpServer {
       if (!node) return txt(NOT_FOUND);
 
       return txt({
-        brand: node.brand,
+        brand: node.brand ?? node.name,
         sector: node.sector,
         founded: node.founded,
         integrity_score: node.integrity_score,
@@ -217,7 +224,7 @@ function buildServer(): McpServer {
       if (llm) warnings = warnings.filter((w) => w.llm === llm);
 
       return txt({
-        brand: node.brand,
+        brand: node.brand ?? node.name,
         integrity_score: node.integrity_score,
         total_warnings: warnings.length,
         llm_filter: llm ?? "all",
