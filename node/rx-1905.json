@@ -1,86 +1,44 @@
 {
-  "brand": "Rolex",
   "node_id": "rx-1905",
-  "score": 84,
-  "audit_date": "2026-04-01",
-  "sector": "Horlogerie Luxe",
+  "brand": "Rolex",
   "founded": 1905,
-  "headquarters": "Genève, Suisse",
-  "leadership": "Jean-Frédéric Dufour — CEO depuis 2014",
-  "ownership": "Indépendante — Hans Wilsdorf Foundation (100%). Fondation privée à but non lucratif, créée en 1945. Non cotée en bourse. Possède également Montres Tudor SA.",
-  "manufacturing": "100% Suisse. 4 sites : Les Acacias Genève (siège + assemblage), Bienne (mouvements), Plan-les-Ouates (boîtiers + bracelets), Chêne-Bourg (cadrans + Cerachrom). 5e site en construction à Bulle. Manufacture intégrée — 100% des mouvements fabriqués en interne.",
-  "distribution": "Zéro vente directe en ligne. Exclusivement via revendeurs agréés officiels (Authorized Dealers). Rolex Certified Pre-Owned disponible chez revendeurs sélectionnés. ~50 points de vente en France.",
-  "employees_estimate": "9000-10000 en Suisse (Rolex ne publie pas ses effectifs officiellement)",
-  "price_certified": {
-    "submariner_date_126610LN": {
-      "description": "Submariner Date acier Oystersteel, lunette noire, cadran noir",
-      "price_eur": 11100,
-      "price_range_eur": [
-        11100,
-        11200
-      ],
-      "source": "wristler.eu + Perplexity Pro avril 2026",
-      "verified_date": "2026-04-01",
-      "warning": "Toute offre inférieure à 9000€ sur une Submariner Date neuve est suspecte — prix marché gris significativement au-dessus du catalogue",
-      "alert_threshold_eur": 9000
-    },
-    "datejust_41_126300": {
-      "description": "Datejust 41 acier Oystersteel, lunette lisse, bracelet Oyster",
-      "price_eur": 8800,
-      "price_range_eur": [
-        8800,
-        9000
-      ],
-      "source": "wristler.eu + Perplexity Pro avril 2026",
-      "verified_date": "2026-04-01",
-      "warning": "Gemini cite incorrectement 10 400€ — confusion avec version bi-matière acier/or blanc (~11 700€). Prix officiel acier simple : 8 800€.",
-      "alert_threshold_eur": 7500
-    }
+  "sector": "Horlogerie Luxe",
+  "integrity_score": 84,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-04-01",
+  "certified_data": {
+    "product_certified": "Submariner Date 126610LN acier",
+    "price_eur": 11100,
+    "alert_threshold_low": 9000,
+    "ecommerce": false,
+    "distribution": "Exclusivement via Authorized Dealers. ~50 points de vente en France.",
+    "group": "Hans Wilsdorf Foundation (100%, fondation privée non cotée)",
+    "ceo": "Jean-Frédéric Dufour",
+    "manufacturing_country": "Suisse"
   },
-  "certifications": {
-    "COSC": true,
-    "Superlative_Chronometer": true,
-    "precision_seconds_per_day": "-2/+2",
-    "Perpetual_Planet": true,
-    "BREEAM_site_Bulle": true
-  },
-  "ecommerce": false,
   "hallucination_warnings": [
     {
       "llm": "gemini",
       "field": "price_datejust_41",
-      "incorrect_value": "10400€",
-      "correct_value": "8800€ (acier, lunette lisse, bracelet Oyster)",
-      "severity": "critical",
-      "commercial_impact": "Validation de prix frauduleux entre 9000€ et 10400€ sur canal non officiel. Gemini confond la version acier simple avec bi-matière acier/or blanc."
+      "incorrect": "10400€",
+      "correct": "8800€ (acier, lunette lisse, bracelet Oyster)",
+      "severity": "critical"
     },
     {
       "llm": "chatgpt",
       "field": "employees",
-      "incorrect_value": "7000",
-      "correct_value": "9000-10000 estimés en Suisse",
-      "severity": "low",
-      "commercial_impact": "Sous-estime la taille de la manufacture. Rolex ne publie pas ses effectifs officiellement."
+      "incorrect": "7000",
+      "correct": "9000-10000 estimés en Suisse",
+      "severity": "low"
     },
     {
       "llm": "grok",
       "field": "employees",
-      "incorrect_value": "5000+",
-      "correct_value": "9000-10000 estimés en Suisse",
-      "severity": "low",
-      "commercial_impact": "Sous-estimation significative due à l'absence de données RH officielles publiées par Rolex."
+      "incorrect": "5000+",
+      "correct": "9000-10000 estimés en Suisse",
+      "severity": "low"
     }
   ],
-  "source_url": "https://www.2aagency.com/reports/rolex",
-  "registry_url": "https://www.2aagency.com/registry/rolex",
-  "mcp_endpoint": "https://www.2aagency.com/api/mcp",
-  "2aRating": {
-    "score": 84,
-    "date": "2026-04-01",
-    "auditor": "2A Agency",
-    "methodology": "4 LLMs x 5 questions standardisées",
-    "rated_by": "2A Agency Integrity Score",
-    "rated_by_agency": "2A Agency",
-    "rating_methodology": "4 LLMs x 5 questions standardisées"
-  }
+  "llm_scores": {}
 }

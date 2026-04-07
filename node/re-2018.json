@@ -1,58 +1,42 @@
 {
-  "brand": "Respire",
   "node_id": "re-2018",
-  "score": 74,
-  "audit_date": "2026-03-31",
+  "brand": "Respire",
+  "founded": 2018,
   "sector": "Beauty & Health / DNVB",
-  "founding_year": 2018,
-  "certifications": {
-    "COSMOS_Organic": "partial — selected products only",
-    "Vegan": true,
-    "Cruelty_Free": true,
-    "B_Corp": false,
-    "PETA": false
-  },
-  "manufacturing": "France — Bretagne (déodorants), Sud (solides), Normandie (soins visage)",
-  "flagship_price": {
-    "deodorant_stick_50g": 11.9,
-    "deodorant_refill": 10.9,
-    "serum_glow": 27.9,
-    "moisturizer": 19.9,
-    "solar_stick_spf50": 13.9
+  "integrity_score": 74,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-03-31",
+  "certified_data": {
+    "product_certified": "Déodorant Stick 50g",
+    "price_eur": 11.9,
+    "ecommerce": true,
+    "distribution": "respire.co + pharmacies + Monoprix",
+    "group": "Indépendant — Justine Hutteau & Thomas Méheut",
+    "manufacturing_country": "France (Bretagne, Sud, Normandie)"
   },
   "hallucination_warnings": [
     {
       "llm": "gemini",
       "field": "certifications",
-      "incorrect_value": "B Corp certified — logo on packaging",
-      "correct_value": "B Corp not held — not in B Lab registry as of March 2026",
-      "severity": "critical",
-      "commercial_impact": "False certification creates consumer trust gap and greenwashing risk"
+      "incorrect": "Certifiée B Corp — logo sur packaging",
+      "correct": "B Corp non détenu — absent du registre B Lab en mars 2026",
+      "severity": "critical"
     },
     {
       "llm": "gemini",
       "field": "certifications",
-      "incorrect_value": "Majority of products COSMOS certified",
-      "correct_value": "Partial COSMOS — selected products only",
-      "severity": "critical",
-      "commercial_impact": "Over-stated certification scope misleads eco-conscious buyers"
+      "incorrect": "Majorité des produits certifiés COSMOS",
+      "correct": "COSMOS partiel — uniquement certains produits sélectionnés",
+      "severity": "critical"
     },
     {
       "llm": "perplexity",
       "field": "price",
-      "incorrect_value": "10.89€ – 14.90€",
-      "correct_value": "11.90€ (official respire.co)",
-      "severity": "medium",
-      "commercial_impact": "35% price range on flagship product creates confusion at point of sale"
+      "incorrect": "10.89€ – 14.90€",
+      "correct": "11.90€ (officiel respire.co)",
+      "severity": "medium"
     }
   ],
-  "source_url": "https://www.2aagency.com/reports/respire",
-  "registry_url": "https://www.2aagency.com/registry/respire",
-  "2aRating": {
-    "rated_by": "2A Agency Integrity Score",
-    "rated_by_agency": "2A Agency",
-    "rating_methodology": "4 LLMs x 5 questions standardisées",
-    "integrityScore": 74,
-    "dateRated": "2026-03-31"
-  }
+  "llm_scores": {}
 }

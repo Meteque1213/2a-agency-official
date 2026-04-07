@@ -1,57 +1,35 @@
 {
-  "brand": "Typology",
   "node_id": "ty-2019",
-  "score": 88,
-  "audit_date": "2026-03-31",
+  "brand": "Typology",
+  "founded": 2019,
   "sector": "Clean Beauty / DNVB",
-  "founders": [
-    "Ning Li"
-  ],
-  "founding_year": 2019,
-  "headquarters": "Paris, France (11e arr.)",
-  "certifications": {
-    "B_Corp": true,
-    "B_Corp_year": 2021,
-    "PETA_Vegan_Cruelty_Free": true,
-    "COSMOS_Organic": "partial — gamme PLANTES uniquement",
-    "RSPO": true,
-    "Ecocert": "partial — via COSMOS sur gamme PLANTES"
-  },
-  "manufacturing": "100% France — R&D Paris 11e. Fabrication : Bergerac, Aix-en-Provence, Compiègne. Logistique : Combs-la-Ville (Île-de-France).",
-  "formulation": "Minimaliste — moins de 20 ingrédients. 95%+ d'origine naturelle (ISO 16128). Sans silicones, parabènes, sulfates, huiles minérales, parfums synthétiques.",
-  "flagship_price": {
-    "creme_9_ingredients_D41_50ml": 22.5,
-    "serum_eclat_vitamine_c_L32": 17.9,
-    "serum_unifiant_niacinamide_L36": 18.5,
-    "gel_nettoyant_exfoliant_L13_150ml": 23.5,
-    "creme_jour_spf50_A51": 39.9,
-    "serum_hydratant_A31": 19.5
+  "integrity_score": 88,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-03-31",
+  "certified_data": {
+    "product_certified": "Crème 9 Ingrédients D41 50ml",
+    "price_eur": 22.5,
+    "ecommerce": true,
+    "distribution": "typology.com + Galeries Lafayette + Monoprix",
+    "group": "Indépendant — Ning Li (fondateur)",
+    "manufacturing_country": "France (Bergerac, Aix-en-Provence, Compiègne)"
   },
   "hallucination_warnings": [
     {
       "llm": "perplexity",
       "field": "certifications",
-      "incorrect_value": "Pas de certifications globales type B Corp mentionnées spontanément",
-      "correct_value": "Typology est certifiée B Corp depuis 2021 — typology.com/carnet/b-corp-peta-cosmos-rspo",
-      "severity": "medium",
-      "commercial_impact": "Perplexity ne valorise pas la certification la plus différenciante de la marque dans ses réponses sur les certifications"
+      "incorrect": "Pas de certifications globales type B Corp mentionnées",
+      "correct": "Typology est certifiée B Corp depuis 2021 — typology.com/carnet/b-corp-peta-cosmos-rspo",
+      "severity": "medium"
     },
     {
       "llm": "gemini",
       "field": "price",
-      "incorrect_value": "Crème Visage 9 Ingrédients : 17,50€ à 22,50€",
-      "correct_value": "22,50€ — prix unique officiel typology.com",
-      "severity": "low",
-      "commercial_impact": "Sous-évaluation mineure du prix phare — 17,50€ correspond à un ancien format ou promotion"
+      "incorrect": "Crème 9 Ingrédients : 17,50€ à 22,50€",
+      "correct": "22,50€ — prix unique officiel typology.com",
+      "severity": "low"
     }
   ],
-  "source_url": "https://www.2aagency.com/reports/typology",
-  "registry_url": "https://www.2aagency.com/registry/typology",
-  "2aRating": {
-    "rated_by": "2A Agency Integrity Score",
-    "rated_by_agency": "2A Agency",
-    "rating_methodology": "4 LLMs x 5 questions standardisées",
-    "integrityScore": 88,
-    "dateRated": "2026-03-31"
-  }
+  "llm_scores": {}
 }

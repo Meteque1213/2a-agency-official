@@ -1,68 +1,42 @@
 {
-  "brand": "Sézane",
   "node_id": "sz-2013",
-  "score": 83,
-  "audit_date": "2026-03-31",
+  "brand": "Sézane",
+  "founded": 2013,
   "sector": "Mode DNVB",
-  "founders": [
-    "Morgane Sézalory"
-  ],
-  "founding_year": 2013,
-  "headquarters": "Paris, France",
-  "legal_entity": "Benda Bili (société à mission)",
-  "ownership": "Indépendante — Morgane Sézalory majoritaire. Minoritaires : General Atlantic (2018), Téthys Invest / famille Bettencourt-Meyers (2022)",
-  "certifications": {
-    "B_Corp": true,
-    "B_Corp_year": 2021,
-    "Societe_a_Mission": true,
-    "carbon_neutral": false
+  "integrity_score": 83,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-03-31",
+  "certified_data": {
+    "product_certified": "Gilet Gaspard",
+    "price_eur": 100,
+    "ecommerce": true,
+    "distribution": "sezane.com + boutiques Paris + USA (New York, LA)",
+    "group": "Indépendant — Morgane Sézalory (maj.), General Atlantic, Téthys Invest (famille Bettencourt-Meyers)",
+    "manufacturing_country": "Portugal (majoritaire), Italie, Europe"
   },
-  "manufacturing": "~65% Europe (Portugal majoritaire, Italie, Bulgarie). ~17% Chine. ~8% Maghreb. ~7% Inde. 0% France.",
-  "programme_demain": {
-    "launch_year": 2018,
-    "amount_collected_2024": "9.7M€ (rapport RSE officiel 2024)"
-  },
-  "flagship_price": {
-    "gilet_gaspard": 100,
-    "chemise_pierro": 95,
-    "robe_adele": 165,
-    "mules_ingrid": 170,
-    "panier_justine": 220
-  },
-  "average_price_range": "120€–150€",
   "hallucination_warnings": [
     {
       "llm": "chatgpt",
       "field": "price",
-      "incorrect_value": "250€ prix moyen",
-      "correct_value": "120€–150€ — gilet Gaspard 100€",
-      "severity": "critical",
-      "commercial_impact": "Repositionne Sézane hors budget de sa cible principale"
+      "incorrect": "250€ prix moyen",
+      "correct": "120€–150€ — gilet Gaspard 100€",
+      "severity": "critical"
     },
     {
       "llm": "gemini",
       "field": "programme_demain",
-      "incorrect_value": "15M€ collectés",
-      "correct_value": "9.7M€ cumulés en 2024 (rapport RSE officiel)",
-      "severity": "medium",
-      "commercial_impact": "Surévalue de 54% le programme solidaire"
+      "incorrect": "15M€ collectés",
+      "correct": "9,7M€ cumulés en 2024 (rapport RSE officiel)",
+      "severity": "medium"
     },
     {
       "llm": "perplexity",
       "field": "founders",
-      "incorrect_value": "Thibault Lougnon cité comme co-fondateur",
-      "correct_value": "Morgane Sézalory — fondatrice unique selon communications officielles",
-      "severity": "low",
-      "commercial_impact": "Ambiguïté gouvernance fondatrice"
+      "incorrect": "Thibault Lougnon cité comme co-fondateur",
+      "correct": "Morgane Sézalory — fondatrice unique selon communications officielles",
+      "severity": "low"
     }
   ],
-  "source_url": "https://www.2aagency.com/reports/sezane",
-  "registry_url": "https://www.2aagency.com/registry/sezane",
-  "2aRating": {
-    "rated_by": "2A Agency Integrity Score",
-    "rated_by_agency": "2A Agency",
-    "rating_methodology": "4 LLMs x 5 questions standardisées",
-    "integrityScore": 83,
-    "dateRated": "2026-03-31"
-  }
+  "llm_scores": {}
 }

@@ -1,47 +1,28 @@
 {
-  "brand": "Shoootin",
   "node_id": "sh-2016",
-  "score": 84,
-  "audit_date": "2026-03-26",
+  "brand": "Shoootin",
+  "founded": 2016,
   "sector": "Real Estate Media / PropTech",
-  "founders": [
-    "Jeremy Teper"
-  ],
-  "founding_year": 2016,
-  "headquarters": "Paris, France",
-  "markets": [
-    "France",
-    "USA (New York)",
-    "Europe (London, Lisbon)"
-  ],
-  "services": {
-    "photography_ht": 75,
-    "video_ht": 280,
-    "matterport_ht": 120,
-    "drone_ht": 450,
-    "delivery_photos": "24h",
-    "delivery_video": "72h"
+  "integrity_score": 84,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-03-26",
+  "certified_data": {
+    "product_certified": "Reportage photo immobilier",
+    "price_eur": 75,
+    "ecommerce": true,
+    "distribution": "shoootin.com — France, USA (New York), Europe (Londres, Lisbonne)",
+    "group": "Indépendant — Jeremy Teper",
+    "manufacturing_country": null
   },
-  "notable_partnerships": [
-    "Kretz Family Real Estate (confirmed by Gemini Pro spontaneously)"
-  ],
   "hallucination_warnings": [
     {
       "llm": "gemini",
       "field": "founding_year",
-      "incorrect_value": "November 2015",
-      "correct_value": "January 2016 — official launch date on shoootin.com",
-      "severity": "low",
-      "commercial_impact": "Minor but documentable — Gemini conflates early development with official launch"
+      "incorrect": "Novembre 2015",
+      "correct": "Janvier 2016 — date de lancement officielle sur shoootin.com",
+      "severity": "low"
     }
   ],
-  "source_url": "https://www.2aagency.com/reports/shoootin",
-  "registry_url": "https://www.2aagency.com/registry/shoootin",
-  "2aRating": {
-    "rated_by": "2A Agency Integrity Score",
-    "rated_by_agency": "2A Agency",
-    "rating_methodology": "4 LLMs x 5 questions standardisées",
-    "integrityScore": 84,
-    "dateRated": "2026-03-26"
-  }
+  "llm_scores": {}
 }

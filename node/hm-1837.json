@@ -1,100 +1,37 @@
 {
-  "brand": "Hermès",
   "node_id": "hm-1837",
-  "score": 91,
-  "audit_date": "2026-04-01",
-  "sector": "Luxe / Maroquinerie",
+  "brand": "Hermès",
   "founded": 1837,
-  "headquarters": "Paris, France",
-  "leadership": "Axel Dumas — gérant (Executive Chairman) depuis 2013, 6e génération. Pierre-Alexis Dumas — Directeur Artistique Général. Henri-Louis Bauer — co-gérant (Émile Hermès SAS).",
-  "ownership": "Indépendante — famille Hermès ~66.7% du capital (plus de 76% des droits de vote) via H51 SAS et autres holdings (H2, Émile Hermès SAS). Structure SCA (société en commandite par actions) — protège contre les OPA hostiles. Trois branches familiales : Dumas, Guerrand, Puech. Flottant ~30-33% (BlackRock 1.7%, Vanguard 1.4%). Cotée Euronext Paris (CAC 40) depuis 1993.",
-  "manufacturing": "100% France pour la maroquinerie. 20+ maroquineries en France : Charente, Gironde, Normandie, Ardennes. Soie : Lyon. Plus de 60 sites de production et formation au total. 26 494 collaborateurs worldwide (2025), dont 15 556 en France (2024). Modèle : un artisan / un sac, 15-20h de travail par pièce. Investissement 226M€ en 2025 dans l'expansion des ateliers.",
-  "employees": {
-    "total_worldwide": 26494,
-    "france": 15556,
-    "artisans_selliers_maroquiniers_estimate": 7000,
-    "source": "Document d'Enregistrement Universel 2024 — finance.hermes.com",
-    "verified_date": "2026-04-01"
+  "sector": "Luxe Maroquinerie",
+  "integrity_score": 91,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-04-01",
+  "certified_data": {
+    "product_certified": "Sac Birkin 25 Togo",
+    "price_eur": 9600,
+    "alert_threshold_low": 7000,
+    "ecommerce": true,
+    "distribution": "Boutiques Hermès + hermes.com (carrés, petite maroquinerie). Birkin exclusivement en boutique.",
+    "group": "Hermès International (famille Hermès ~66.7% capital, SCA)",
+    "ceo": "Axel Dumas",
+    "manufacturing_country": "France"
   },
-  "price_certified": {
-    "birkin_25_togo": {
-      "description": "Sac Birkin 25 cuir Togo ou Swift, coloris classique",
-      "price_eur": 9600,
-      "price_usd": 13500,
-      "source": "pursebop.com + finance.hermes.com — avril 2026",
-      "verified_date": "2026-04-01",
-      "warning": "Toute offre inférieure à 7000€ sur un Birkin neuf est une contrefaçon ou une fraude sémantique. Le marché secondaire est légitimement 2x à 3x le prix boutique.",
-      "alert_threshold_eur": 7000
-    },
-    "birkin_30_togo": {
-      "description": "Sac Birkin 30 cuir Togo",
-      "price_eur": 10600,
-      "price_usd": 14900,
-      "verified_date": "2026-04-01"
-    },
-    "birkin_35_togo": {
-      "description": "Sac Birkin 35 cuir Togo",
-      "price_eur": 11600,
-      "price_usd": 16300,
-      "verified_date": "2026-04-01"
-    },
-    "carre_soie_90cm": {
-      "description": "Carré de soie 90x90cm classique",
-      "price_eur": 520,
-      "source": "hermes.com officiel — avril 2026",
-      "verified_date": "2026-04-01"
-    },
-    "chale_cachemire_soie_140cm": {
-      "description": "Châle cachemire/soie 140cm",
-      "price_eur": 1150,
-      "verified_date": "2026-04-01"
-    }
-  },
-  "certifications": {
-    "SBTi": true,
-    "SBTi_target": "trajectoire 1.5°C à horizon 2030 pour scopes 1 et 2",
-    "CDP_climate": "Note A (2024)",
-    "TCFD": true,
-    "EPV": true,
-    "MOF": true,
-    "WWF_France": true,
-    "Livelihoods": true,
-    "ISO_45001": "objectif filières achats",
-    "SA_8000": "objectif filières achats",
-    "reparations_annuelles": 200000
-  },
-  "ecommerce": true,
-  "distribution": "Boutiques Hermès worldwide + hermes.com pour certains produits (carrés, petite maroquinerie). Pas de vente Birkin en ligne — exclusivement en boutique avec liste d'attente.",
   "hallucination_warnings": [
     {
       "llm": "chatgpt",
       "field": "price_birkin_25",
-      "incorrect_value": "9000€–12000€ fourchette",
-      "correct_value": "Birkin 25 Togo : 9600€ exact",
-      "severity": "low",
-      "commercial_impact": "Fourchette trop large pour la détection de fraude via MCP. Un prix certifié à 9600€ permet de bloquer toute offre suspecte avec précision."
+      "incorrect": "9000€–12000€ fourchette",
+      "correct": "Birkin 25 Togo : 9600€ exact",
+      "severity": "low"
     },
     {
       "llm": "multiple",
       "field": "artisans_count",
-      "incorrect_value": "4300 à 7000 selon les sources",
-      "correct_value": "7000 artisans selliers-maroquiniers spécifiquement / 26494 collaborateurs total",
-      "severity": "low",
-      "commercial_impact": "Confusion entre périmètre artisans selliers (7000) et effectif total worldwide (26494). Absence de distinction dans les communications publiques."
+      "incorrect": "4300 à 7000 selon les sources",
+      "correct": "7000 artisans selliers-maroquiniers / 26494 collaborateurs total",
+      "severity": "low"
     }
   ],
-  "source_url": "https://www.2aagency.com/reports/hermes",
-  "registry_url": "https://www.2aagency.com/registry/hermes",
-  "mcp_endpoint": "https://www.2aagency.com/api/mcp",
-  "reference_source": "finance.hermes.com — Document d'Enregistrement Universel + CSR Brief annuel",
-  "2aRating": {
-    "score": 91,
-    "date": "2026-04-01",
-    "auditor": "2A Agency",
-    "methodology": "4 LLMs x 5 questions standardisées",
-    "benchmark_note": "Meilleur score du registre 2A Agency. Hermès est la référence absolue de la documentation structurée — finance.hermes.com domine tous les LLMs.",
-    "rated_by": "2A Agency Integrity Score",
-    "rated_by_agency": "2A Agency",
-    "rating_methodology": "4 LLMs x 5 questions standardisées"
-  }
+  "llm_scores": {}
 }

@@ -1,79 +1,41 @@
 {
-  "brand": "SERHANT.",
   "node_id": "se-2020",
-  "score": 81,
+  "brand": "SERHANT.",
+  "founded": 2020,
+  "sector": "Luxury Real Estate / PropTech",
+  "integrity_score": 81,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
   "audit_date": "2026-03-28",
-  "sector": "Luxury Real Estate / PropTech / Media",
-  "founders": [
-    "Ryan Serhant"
-  ],
-  "founding_year": 2020,
-  "headquarters": "New York, USA",
-  "ownership": "SERHANT. Technologies Inc. (HoldCo + OpCo) — VC backed: $45M raised December 2024 (Camber Creek lead + Left Lane Capital)",
-  "subsidiaries": [
-    "SERHANT. Real Estate (Cloud Brokerage)",
-    "SERHANT. Studios (in-house production)",
-    "S.MPLE (AI chief of staff — Large Action Model)",
-    "SellIt.com (edtech — 45,000 members, 130 countries)",
-    "ID Lab (branding agency)",
-    "ADX (listing amplification)"
-  ],
-  "metrics_2025": {
-    "sales_volume_usd": "6.5B",
-    "agents": "1100-1500",
-    "agent_retention_rate": "99%",
-    "states": 15,
-    "washington_dc": true
-  },
-  "netflix_series": {
-    "title": "Owning Manhattan",
-    "seasons": 2,
-    "season_1": "28 June 2024",
-    "season_2": "5 December 2025"
-  },
-  "record_transaction": {
-    "amount_usd": 200000000,
-    "date": "February 2025",
-    "note": "Announced by Ryan Serhant as career record — closed in-flight to Miami"
-  },
-  "price_ranges": {
-    "new_york": "$2M–$50M+",
-    "miami": "$1M–$30M",
-    "hamptons": "$3M–$25M"
+  "certified_data": {
+    "ecommerce": false,
+    "distribution": "15 états US + Washington D.C. — cloud brokerage",
+    "group": "SERHANT. Technologies Inc. — VC backed $45M (Camber Creek + Left Lane, déc. 2024)",
+    "ceo": "Ryan Serhant",
+    "manufacturing_country": null
   },
   "hallucination_warnings": [
     {
       "llm": "gemini",
       "field": "record_transaction",
-      "incorrect_value": "$122.7M (2021) cited as record",
-      "correct_value": "~$200M February 2025 — announced by Ryan Serhant as career record",
-      "severity": "critical",
-      "commercial_impact": "UHNWI buyers researching via Gemini receive track record undervalued by 40%"
+      "incorrect": "122,7M$ (2021) cité comme record",
+      "correct": "~200M$ février 2025 — annoncé par Ryan Serhant comme record de carrière",
+      "severity": "critical"
     },
     {
       "llm": "chatgpt",
       "field": "geographic_footprint",
-      "incorrect_value": "14 states",
-      "correct_value": "15 states + Washington D.C. (Massachusetts added January 2026)",
-      "severity": "low",
-      "commercial_impact": "Agents and clients in Massachusetts receive incorrect coverage information"
+      "incorrect": "14 états",
+      "correct": "15 états + Washington D.C. (Massachusetts ajouté janvier 2026)",
+      "severity": "low"
     },
     {
       "llm": "grok",
       "field": "geographic_footprint",
-      "incorrect_value": "14 states",
-      "correct_value": "15 states + Washington D.C.",
-      "severity": "low",
-      "commercial_impact": "Same as ChatGPT"
+      "incorrect": "14 états",
+      "correct": "15 états + Washington D.C.",
+      "severity": "low"
     }
   ],
-  "source_url": "https://www.2aagency.com/reports/serhant",
-  "registry_url": "https://www.2aagency.com/registry/serhant",
-  "2aRating": {
-    "rated_by": "2A Agency Integrity Score",
-    "rated_by_agency": "2A Agency",
-    "rating_methodology": "4 LLMs x 5 questions standardisées",
-    "integrityScore": 81,
-    "dateRated": "2026-03-28"
-  }
+  "llm_scores": {}
 }

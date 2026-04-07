@@ -1,66 +1,41 @@
 {
-  "brand": "BARNES International",
   "node_id": "ba-1995",
-  "score": 86,
-  "audit_date": "2026-03-26",
+  "brand": "BARNES International",
+  "founded": 1995,
   "sector": "Luxury Real Estate",
-  "founders": [
-    "Heidi Barnes"
-  ],
-  "founding_year": 1995,
-  "headquarters": "Paris, France",
-  "ownership": "Independent — fully independent from Sotheby's (confirmed across all 4 LLMs)",
-  "leadership": {
-    "president": "Thibault de Saint Vincent",
-    "dg": "Richard Tzipine"
+  "integrity_score": 86,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-03-26",
+  "certified_data": {
+    "ecommerce": false,
+    "distribution": "150 agences dans 22 pays",
+    "group": "Indépendant — Heidi Barnes (fondatrice)",
+    "ceo": "Thibault de Saint Vincent (Président)",
+    "manufacturing_country": null
   },
-  "network": {
-    "agencies": 150,
-    "countries": 22
-  },
-  "services": [
-    "Real Estate",
-    "Art & Design",
-    "Yachting",
-    "Fine Wines",
-    "Classic Cars",
-    "Private Aviation",
-    "Concierge",
-    "Family Office"
-  ],
   "hallucination_warnings": [
     {
       "llm": "gemini",
       "field": "founding_year",
-      "incorrect_value": "1994",
-      "correct_value": "1995 — 1994 = London office opening, 1995 = official corporate creation Paris",
-      "severity": "low",
-      "commercial_impact": "Minor but documentable — Gemini systematically conflates earliest activity with official founding"
+      "incorrect": "1994",
+      "correct": "1995 — 1994 = ouverture bureau Londres, 1995 = création société Paris",
+      "severity": "low"
     },
     {
       "llm": "multiple",
       "field": "network_size",
-      "incorrect_value": "130 to 158 agencies depending on LLM",
-      "correct_value": "150 agencies in 22 countries (official 2026 BARNES communication)",
-      "severity": "low",
-      "commercial_impact": "Inconsistent network size for investors comparing BARNES with competitors"
+      "incorrect": "130 à 158 agences selon le LLM",
+      "correct": "150 agences dans 22 pays (communication officielle BARNES 2026)",
+      "severity": "low"
     },
     {
       "llm": "multiple",
       "field": "listings",
-      "incorrect_value": "All 4 LLMs cite specific unverifiable property listings",
-      "correct_value": "Listings change daily — no static listing should be cited as current",
-      "severity": "medium",
-      "commercial_impact": "Buyers contact BARNES for properties that may not exist or have sold"
+      "incorrect": "Biens spécifiques non vérifiables cités comme actuels",
+      "correct": "Les annonces changent quotidiennement — aucun bien statique ne doit être cité",
+      "severity": "medium"
     }
   ],
-  "source_url": "https://www.2aagency.com/reports/barnes",
-  "registry_url": "https://www.2aagency.com/registry/barnes",
-  "2aRating": {
-    "rated_by": "2A Agency Integrity Score",
-    "rated_by_agency": "2A Agency",
-    "rating_methodology": "4 LLMs x 5 questions standardisées",
-    "integrityScore": 86,
-    "dateRated": "2026-03-26"
-  }
+  "llm_scores": {}
 }

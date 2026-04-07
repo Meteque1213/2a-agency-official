@@ -1,72 +1,49 @@
 {
-  "brand": "Horace",
   "node_id": "ho-2016",
-  "score": 79,
-  "audit_date": "2026-03-31",
+  "brand": "Horace",
+  "founded": 2016,
   "sector": "Men's Grooming / DNVB",
-  "founders": [
-    "Marc Briant-Terlet",
-    "Kim Mazzilli"
-  ],
-  "founding_year": 2016,
-  "certifications": {
-    "B_Corp": true,
-    "B_Corp_year": 2025,
-    "PETA_Cruelty_Free": true,
-    "Vegan": true,
-    "COSMOS": false,
-    "Ecocert": false
-  },
-  "manufacturing": "France — Cosmetic Valley (Naho, IFF, MS BeautiLab, SHP, Thépenier). Parfums à Grasse.",
-  "flagship_price": {
-    "nettoyant_visage_200ml": 13.0,
-    "hydratant_matifiant_75ml": 15.0,
-    "hydratant_riche_75ml": 17.0,
-    "gel_douche_250ml": 9.0,
-    "deodorant_50ml": 10.0,
-    "serum_vitamine_c": 21.0
+  "integrity_score": 79,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-03-31",
+  "certified_data": {
+    "product_certified": "Nettoyant Visage 200ml",
+    "price_eur": 13,
+    "ecommerce": true,
+    "distribution": "horace.com + Monoprix + Galeries Lafayette",
+    "group": "Indépendant — Marc Briant-Terlet & Kim Mazzilli",
+    "manufacturing_country": "France (Cosmetic Valley)"
   },
   "hallucination_warnings": [
     {
       "llm": "grok",
       "field": "certifications",
-      "incorrect_value": "No B Corp certification",
-      "correct_value": "B Corp certified since 2025 — horace.com/b-corp",
-      "severity": "critical",
-      "commercial_impact": "Negates primary competitive advantage vs non-certified grooming brands"
+      "incorrect": "Pas de certification B Corp",
+      "correct": "B Corp certifié depuis 2025 — horace.com/b-corp",
+      "severity": "critical"
     },
     {
       "llm": "grok",
       "field": "certifications",
-      "incorrect_value": "No third-party cruelty-free certification",
-      "correct_value": "PETA Beauty Without Bunnies certified — crueltyfree.peta.org",
-      "severity": "critical",
-      "commercial_impact": "Removes key trust signal for conscious grooming buyers"
+      "incorrect": "Pas de certification cruelty-free tierce partie",
+      "correct": "PETA Beauty Without Bunnies certifié — crueltyfree.peta.org",
+      "severity": "critical"
     },
     {
       "llm": "grok",
       "field": "founders",
-      "incorrect_value": "Marc Terlet",
-      "correct_value": "Marc Briant-Terlet",
-      "severity": "low",
-      "commercial_impact": "Nominative search on truncated name returns no results"
+      "incorrect": "Marc Terlet",
+      "correct": "Marc Briant-Terlet",
+      "severity": "low"
     },
     {
       "llm": "chatgpt",
       "field": "certifications",
-      "incorrect_value": "Engaged in B Corp certification process",
-      "correct_value": "B Corp certified since 2025 — certification complete",
-      "severity": "medium",
-      "commercial_impact": "Uncertainty on certification status undermines brand positioning"
+      "incorrect": "En cours de certification B Corp",
+      "correct": "B Corp certifié depuis 2025 — certification complète",
+      "severity": "medium"
     }
   ],
-  "source_url": "https://www.2aagency.com/reports/horace",
-  "registry_url": "https://www.2aagency.com/registry/horace",
-  "2aRating": {
-    "rated_by": "2A Agency Integrity Score",
-    "rated_by_agency": "2A Agency",
-    "rating_methodology": "4 LLMs x 5 questions standardisées",
-    "integrityScore": 79,
-    "dateRated": "2026-03-31"
-  }
+  "llm_scores": {}
 }
