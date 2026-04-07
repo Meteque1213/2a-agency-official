@@ -2,11 +2,12 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node", // Essentiel pour trouver @types/node
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
+    "types": ["node"], // Force le chargement des types Node (process, Buffer)
     "outDir": ".vercel/output"
   },
   "include": ["api/**/*.ts"]
