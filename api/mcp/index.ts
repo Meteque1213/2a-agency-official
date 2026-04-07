@@ -1,11 +1,6 @@
 import type { IncomingMessage, ServerResponse } from "http";
 import { BRAND_INDEX } from "./brand-data.js";
 
-const FREE_API_KEYS = [
-  process.env.FREE_API_KEY_DEMO,
-  process.env.FREE_API_KEY_HERMES,
-  process.env.FREE_API_KEY_ROLEX,
-].filter(Boolean);
 
 const TOOLS = [
   {
@@ -200,25 +195,10 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
     return reply({});
   }
 
-  // tools/call — requires auth
   if (method === "tools/call") {
-    const apiKey = req.headers["x-api-key"] as string;
-    if (!FREE_API_KEYS.includes(apiKey)) {
-      jsonResponse(res, 402, {
-        error: "Payment required",
-        x402: true,
-        description: "2A Agency Brand Semantic Registry — $0.001 per query",
-        price: "$0.001 USDC on Base",
-        how: "Include 'x-api-key' header with a free API key or 'x-payment' with payment proof"
-      });
-      return;
-    }
-
     const toolName = params?.name;
     const toolArgs = params?.arguments ?? {};
-
     if (!toolName) return error(-32602, "Missing tool name");
-
     const result = callTool(toolName, toolArgs);
     return reply(result);
   }
