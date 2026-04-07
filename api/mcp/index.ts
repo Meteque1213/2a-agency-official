@@ -273,7 +273,14 @@ export default async function handler(
       sessionIdGenerator: undefined, // stateless — no session management
     });
     await server.connect(transport);
+
+    // Force-close the response after 8s to stay under Vercel's 10s serverless limit
+    const forceClose = setTimeout(() => {
+      if (!res.writableEnded) res.end();
+    }, 8000);
+
     await transport.handleRequest(req, res, body);
+    clearTimeout(forceClose);
   } catch (err) {
     if (!res.headersSent) {
       res.writeHead(500, { "Content-Type": "application/json" });
