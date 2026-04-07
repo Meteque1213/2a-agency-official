@@ -4,3 +4,15 @@ node_modules
 research-claude
 mcp-server
 *.py
+archive
+artifacts
+audits
+data_archives
+data_storage
+huggingface
+knowledge
+registry
+skills
+ucp
+*.jsonl
+*.sol
