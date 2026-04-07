@@ -10,18 +10,16 @@ for (const file of files) {
     const content = JSON.parse(
       fs.readFileSync(path.join(nodeDir, file), 'utf-8')
     );
-    if (typeof content.brand === 'string') {
-      index[content.brand.toLowerCase()] = file.replace('.json', '');
-    } else if (typeof content.name === 'string') {
-      // fallback for Schema.org nodes
-      index[content.name.toLowerCase()] = file.replace('.json', '');
+    const label = content.brand || content.name;
+    if (label) {
+      index[label.toLowerCase()] = content;
     }
   } catch {}
 }
 
 fs.writeFileSync(
   path.join(__dirname, '../api/mcp/brand-index.json'),
-  JSON.stringify(index, null, 2)
+  JSON.stringify(index)
 );
 
 console.log(`Built index: ${Object.keys(index).length} brands`);

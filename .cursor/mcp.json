@@ -1,8 +1,11 @@
 {
   "mcpServers": {
-    "2a-agency": {
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://www.2aagency.com/api/mcp"]
+    "2a-agency-local": {
+      "command": "node",
+      "args": ["/Users/alex/2a-audit/mcp-server/index.js"],
+      "env": {
+        "NOTARY_REGISTRY_PATH": "/Users/alex/Documents/2A-AUDIT/registry"
+      }
     }
   }
 }

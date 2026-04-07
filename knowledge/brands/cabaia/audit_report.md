@@ -143,4 +143,4 @@ Résultat attendu : un dispositif **vivant**, où les LLMs sont traités comme u
 ### Conclusion
 
 En 30 jours, Cabaïa peut passer d’une posture passive (“les LLMs parlent de nous comme ils veulent”) à une posture de **pilotage stratégique de son empreinte sémantique**.  
-Le levier clé n’est pas de “corriger un modèle” en particulier, mais de **structurer, diffuser et monitorer la vérité de marque** via le MCP — en commençant par les trois zones où la valeur à risque est la plus élevée : B Corp, prix Adventurer Medium, et chiffres d’affaires 2025.***
+Le levier clé n’est pas de “corriger un modèle” en particulier, mais de **structurer, diffuser et monitorer la vérité de marque** via le MCP — en commençant par les trois zones où la valeur à risque est la plus élevée : B Corp, prix Adventurer Medium, et chiffres d’affaires 2025.

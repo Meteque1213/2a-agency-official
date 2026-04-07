@@ -8,3 +8,4 @@ node_modules/
 
 # ON NE BLOQUE PAS LES JSON (Besoin pour registry.json et package.json)
 # *.json <--- Cette ligne doit rester supprimée ou commentée
+.vercel
