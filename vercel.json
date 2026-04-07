@@ -1,24 +1,21 @@
 {
-  "version": 2,
-  "name": "2a-agency-official",
-  "headers": [
-    {
-      "source": "/api/mcp",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS" },
-        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, x-api-key, x-payment" }
-      ]
-    }
-  ],
-  "functions": {
-    "api/mcp/index.ts": {
-      "memory": 1024,
-      "maxDuration": 10,
-      "includeFiles": "ai-integrity.json,node/**,api/node/**"
-    }
-  },
+  "framework": null,
+  "buildCommand": "node scripts/build-index.cjs",
+  "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
-  "outputDirectory": "."
+  "functions": {
+    "api/mcp/index.ts": {
+      "includeFiles": "node/**,api/node/**"
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS" }
+      ]
+    }
+  ]
 }
