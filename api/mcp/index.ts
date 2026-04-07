@@ -1,7 +1,8 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { z } from "zod";
-import { readFileSync, existsSync, readdirSync } from "fs";
+import { readFileSync, existsSync } from "fs";
+import brandIndexData from "./brand-index.json";
 import { join } from "path";
 import type { IncomingMessage, ServerResponse } from "http";
 
@@ -64,60 +65,25 @@ async function verifyPayment(paymentHeader: string): Promise<boolean> {
   }
 }
 
-// ── Dynamic brand index built from node/*.json ─────────────────────────────
-// Cached at module level — reused across warm invocations in Vercel
-let brandIndex: Map<string, string> | null = null;
+// ── Static brand index — pre-built at deploy time by scripts/build-index.cjs ─
+const brandIndex = brandIndexData as Record<string, string>;
 
-function getBrandIndex(): Map<string, string> {
-  if (brandIndex) return brandIndex;
-
-  brandIndex = new Map();
+function loadNode(brandName: string): Record<string, unknown> | null {
+  const key = brandName.toLowerCase().trim();
+  const nodeId = brandIndex[key];
+  if (!nodeId) return null;
 
   for (const dir of ["node", "api/node"]) {
-    const dirPath = join(process.cwd(), dir);
-    if (!existsSync(dirPath)) continue;
-
-    let files: string[];
-    try {
-      files = readdirSync(dirPath).filter((f) => f.endsWith(".json"));
-    } catch {
-      continue;
-    }
-
-    for (const file of files) {
+    const filePath = join(process.cwd(), dir, `${nodeId}.json`);
+    if (existsSync(filePath)) {
       try {
-        const filePath = join(dirPath, file);
-        const content = JSON.parse(readFileSync(filePath, "utf-8")) as {
-          brand?: string;
-          name?: string;
-        };
-        const label = typeof content.brand === "string"
-          ? content.brand
-          : typeof content.name === "string"
-          ? content.name
-          : null;
-        if (label) {
-          brandIndex.set(label.toLowerCase(), filePath);
-        }
+        return JSON.parse(readFileSync(filePath, "utf-8"));
       } catch {
-        // skip malformed file
+        return null;
       }
     }
   }
-
-  return brandIndex;
-}
-
-function loadNode(brandName: string): Record<string, unknown> | null {
-  const index = getBrandIndex();
-  const key = brandName.toLowerCase().trim();
-  const filePath = index.get(key);
-  if (!filePath) return null;
-  try {
-    return JSON.parse(readFileSync(filePath, "utf-8"));
-  } catch {
-    return null;
-  }
+  return null;
 }
 
 // ── Helpers ────────────────────────────────────────────────────────────────
@@ -261,7 +227,7 @@ export default async function handler(
 ) {
   // Health check — also exposes the full dynamic brand list
   if (req.method === "GET") {
-    const index = getBrandIndex();
+    const brands = Object.keys(brandIndex).sort();
     res.writeHead(200, { "Content-Type": "application/json" });
     res.end(
       JSON.stringify({
@@ -272,8 +238,8 @@ export default async function handler(
           "get_certified_data",
           "get_hallucination_warnings",
         ],
-        brands_count: index.size,
-        brands: Array.from(index.keys()).sort(),
+        brands_count: brands.length,
+        brands,
         mcp_endpoint: "https://www.2aagency.com/api/mcp",
         registry: "https://www.2aagency.com/registry",
       })
