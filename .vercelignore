@@ -28,3 +28,4 @@ ucp
 !node/**
 !vercel.json
 !.well-known/**
+!ai-integrity.json
