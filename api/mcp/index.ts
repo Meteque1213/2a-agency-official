@@ -1,8 +1,15 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { z } from "zod";
-import brandIndexData from "./brand-index.json";
+import { readFileSync } from "fs";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 import type { IncomingMessage, ServerResponse } from "http";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const brandIndexData: Record<string, Record<string, unknown>> = JSON.parse(
+  readFileSync(join(__dirname, "brand-index.json"), "utf-8")
+);
 
 // ── x402 Payment gate ──────────────────────────────────────────────────────
 const FREE_API_KEYS = [
@@ -65,7 +72,7 @@ async function verifyPayment(paymentHeader: string): Promise<boolean> {
 
 // ── Static brand index — pre-built at deploy time by scripts/build-index.cjs ─
 // All node data is embedded — zero runtime I/O on tools/call
-const brandIndex = brandIndexData as Record<string, Record<string, unknown>>;
+const brandIndex = brandIndexData;
 
 function loadNode(brandName: string): Record<string, unknown> | null {
   const key = brandName.toLowerCase().trim();

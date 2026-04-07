@@ -6,7 +6,7 @@
   "trailingSlash": false,
   "functions": {
     "api/mcp/index.ts": {
-      "includeFiles": "node/**,api/node/**"
+      "includeFiles": "api/mcp/brand-index.json,node/**,api/node/**"
     }
   },
   "headers": [
