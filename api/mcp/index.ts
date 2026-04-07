@@ -289,21 +289,29 @@ export default async function handler(
     return;
   }
 
-  // ── x402 gate ─────────────────────────────────────────────────────────────
-  const apiKey = req.headers["x-api-key"] as string | undefined;
-  if (apiKey && FREE_API_KEYS.includes(apiKey)) {
-    // Free API key — bypass payment
-  } else {
-    const paymentHeader = req.headers["x-payment"] as string | undefined;
-    if (paymentHeader) {
-      const valid = await verifyPayment(paymentHeader);
-      if (!valid) {
+  // ── Read body first to inspect the MCP method ─────────────────────────────
+  const body = req.body ?? (await readBody(req));
+  const mcpMethod = (body as any)?.method as string | undefined;
+
+  // ── x402 gate — free for handshake methods, paid for tools/call ───────────
+  const FREE_METHODS = ["initialize", "notifications/initialized", "tools/list", "ping"];
+
+  if (!FREE_METHODS.includes(mcpMethod ?? "")) {
+    const apiKey = req.headers["x-api-key"] as string | undefined;
+    if (apiKey && FREE_API_KEYS.includes(apiKey)) {
+      // Free API key — bypass payment
+    } else {
+      const paymentHeader = req.headers["x-payment"] as string | undefined;
+      if (paymentHeader) {
+        const valid = await verifyPayment(paymentHeader);
+        if (!valid) {
+          send402(res);
+          return;
+        }
+      } else {
         send402(res);
         return;
       }
-    } else {
-      send402(res);
-      return;
     }
   }
 
@@ -312,8 +320,6 @@ export default async function handler(
     const transport = new StreamableHTTPServerTransport({
       sessionIdGenerator: undefined, // stateless — no session management
     });
-
-    const body = req.body ?? (await readBody(req));
     await server.connect(transport);
     await transport.handleRequest(req, res, body);
   } catch (err) {
