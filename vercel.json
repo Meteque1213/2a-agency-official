@@ -1,9 +1,6 @@
 {
   "version": 2,
   "name": "2a-agency-official",
-  "rewrites": [
-    { "source": "/api/mcp", "destination": "/api/mcp/index.ts" }
-  ],
   "headers": [
     {
       "source": "/api/mcp",
