@@ -1,12 +1,6 @@
 {
   "version": 2,
   "name": "2a-agency-official",
-  "builds": [
-    {
-      "src": "api/mcp/index.ts",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
       "src": "/api/mcp",
