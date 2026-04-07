@@ -21,7 +21,6 @@ ucp
 *.txt
 *.js
 *.sol
-*.html
 *.xml
 *.json
 !api/**
