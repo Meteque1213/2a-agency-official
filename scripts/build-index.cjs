@@ -13,6 +13,13 @@ for (const file of files) {
     const label = content.brand || content.name;
     if (label) {
       index[label.toLowerCase()] = content;
+      // Alias sans accents pour compatibilité
+      const normalized = label.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+      if (normalized !== label.toLowerCase()) {
+        index[normalized] = content;
+      }
     }
   } catch {}
 }
