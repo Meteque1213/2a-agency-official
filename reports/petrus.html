@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pétrus — Rapport de Notation Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Pétrus. Score 82/100. Perplexity prix marché secondaire 7200€ vs 5500€ négoce officiel — Pattern 7. Gemini classement erroné Premier Grand Cru Classé.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/petrus">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111; --gold: #B08D57; --border: rgba(176,141,87,0.22); --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; }
+.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+.breadcrumb { padding: 14px 5%; font-size: 0.62rem; color: var(--gray); border-bottom: 1px solid var(--border); }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
+.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
+.report-meta strong { color: var(--ink); }
+.score-circle { text-align: center; min-width: 100px; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; line-height: 1; }
+.score-denom { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+.meta-bar { display: flex; border: 1px solid var(--border); margin: 0 5%; }
+.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; }
+.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.meta-item-val { font-size: 0.78rem; color: var(--ink); }
+section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+.score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.score-card { background: var(--bg); padding: 24px 20px; }
+.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.sc-green { color: var(--green); } .sc-amber { color: var(--amber); }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.73rem; }
+.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
+.matrix-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.v-ok { color: var(--green); } .v-x { color: var(--red); }
+.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
+.tag-ok { color: var(--green); border-color: rgba(45,106,45,0.3); }
+.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
+.tag-crit { color: var(--red); border-color: rgba(139,45,45,0.3); }
+.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
+.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
+.finding-box.amber { border-color: rgba(122,90,0,0.3); background: rgba(122,90,0,0.03); }
+.finding-box.positive { border-color: rgba(45,106,45,0.3); background: rgba(45,106,45,0.02); }
+.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.finding-label.amber { color: var(--amber); }
+.finding-label.green { color: var(--green); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
+.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; margin-bottom: 12px; }
+.drift-compare { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 16px; }
+.dc-cell { background: var(--bg); padding: 14px 16px; }
+.dc-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.dc-val { font-size: 0.82rem; color: var(--ink); line-height: 1.5; }
+.dc-val.wrong { color: var(--red); } .dc-val.ok { color: var(--green); }
+.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
+.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
+.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.rem-text { font-size: 0.82rem; color: var(--gray); line-height: 1.75; margin-bottom: 10px; }
+.rem-impact { font-size: 0.7rem; color: var(--green); letter-spacing: 0.06em; }
+footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+.f-logo span { color: var(--gold); }
+.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+@media(max-width:768px) { .report-hero { grid-template-columns: 1fr; } .meta-bar { flex-direction: column; } .meta-item { border-right: none; border-bottom: 1px solid var(--border); } .score-grid { grid-template-columns: repeat(2,1fr); } .drift-compare { grid-template-columns: repeat(2,1fr); } .rem-item { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span></a>
+  <div class="nav-links">
+    <a href="/registry" class="nav-link">Registry</a>
+    <a href="/methodology" class="nav-link">Methodology</a>
+    <a href="/reports" class="nav-link">Reports</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> &nbsp;/&nbsp; <a href="/reports">Reports</a> &nbsp;/&nbsp; Pétrus
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Rapport de notation sémantique — 2A Agency</div>
+    <h1 class="report-brand">Pétrus</h1>
+    <div class="report-meta">
+      <strong>Secteur :</strong> Viticulture Grand Cru / Pomerol AOC<br>
+      <strong>Fondé :</strong> 1945 &nbsp;·&nbsp; <strong>Domaine :</strong> 11,4 ha — argile bleue de Pomerol<br>
+      <strong>Propriétaire :</strong> Christian Moueix &nbsp;·&nbsp; <strong>Directeur technique :</strong> Frédéric Lospied<br>
+      <strong>Distribution :</strong> Ets Jean-Pierre Moueix (négoce exclusif — allocation)<br>
+      <strong>Date d'audit :</strong> 8 avril 2026 &nbsp;·&nbsp; <strong>Méthodologie :</strong> 4 LLMs × 6 questions
+    </div>
+  </div>
+  <div class="score-circle">
+    <div class="score-num" style="color:var(--amber)">82</div>
+    <div class="score-denom">/ 100</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item">
+    <div class="meta-item-label">Score global</div>
+    <div class="meta-item-val">82 / 100</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-item-label">Node ID</div>
+    <div class="meta-item-val">pe-1945</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-item-label">Alertes critiques</div>
+    <div class="meta-item-val">2</div>
+  </div>
+  <div class="meta-item">
+    <div class="meta-item-label">Patterns détectés</div>
+    <div class="meta-item-val">Pattern 7 · Confusion appellation</div>
+  </div>
+</div>
+
+<section>
+  <h2 class="section-title">Synthèse de <em>notation</em></h2>
+  <p class="body-text">Pétrus atteint un score de 82/100 — correct pour un domaine à distribution exclusivement en allocation, sans présence e-commerce. Les deux failles critiques identifiées pénalisent le score : Perplexity restitue un prix de marché secondaire Wine-Searcher comme prix de référence (+31% vs prix négoce officiel Moueix), et Gemini attribue à Pétrus la classification "Premier Grand Cru Classé" propre à Saint-Émilion, alors que Pomerol AOC ne dispose d'aucun classement officiel — une confusion d'appellation révélatrice de la fragilité des LLMs sur les distinctions fines du droit viticole bordelais.</p>
+  <p class="body-text">ChatGPT et Grok restituent correctement la distribution exclusive Moueix, la surface de 11,4 ha en argile bleue, et l'absence de classement Pomerol. La maison dispose d'un fort capital sémantique — le nom "Pétrus" déclenche des associations spontanées correctes chez la majorité des modèles.</p>
+
+  <div class="score-grid">
+    <div class="score-card">
+      <div class="score-card-label">Exactitude prix</div>
+      <div class="score-card-num sc-amber">78</div>
+    </div>
+    <div class="score-card">
+      <div class="score-card-label">Classification / Appellation</div>
+      <div class="score-card-num sc-amber">76</div>
+    </div>
+    <div class="score-card">
+      <div class="score-card-label">Distribution / Négoce</div>
+      <div class="score-card-num sc-green">88</div>
+    </div>
+    <div class="score-card">
+      <div class="score-card-label">Terroir / Domaine</div>
+      <div class="score-card-num sc-green">90</div>
+    </div>
+    <div class="score-card">
+      <div class="score-card-label">Gouvernance / Propriétaire</div>
+      <div class="score-card-num sc-green">85</div>
+    </div>
+    <div class="score-card">
+      <div class="score-card-label">Vintage / Millésime</div>
+      <div class="score-card-num sc-green">83</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Matrice <em>LLM</em></h2>
+  <p class="body-text">Évaluation croisée de 4 modèles sur 6 questions de référence. Les erreurs de prix et de classification impactent directement les scores Perplexity et Gemini.</p>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity</th>
+        <th>Gemini</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Prix Pétrus 2020 (négoce officiel)</td>
+        <td><span class="v-x">✗</span> 7 200€ <span class="tag tag-crit">+31%</span></td>
+        <td><span class="v-ok">✓</span> ~5 500€</td>
+        <td><span class="v-ok">✓</span> ~5 500€</td>
+        <td><span class="v-ok">✓</span> ~5 500€</td>
+      </tr>
+      <tr>
+        <td>Classement / Appellation Pomerol</td>
+        <td><span class="v-ok">✓</span> Aucun classement</td>
+        <td><span class="v-x">✗</span> Premier Grand Cru Classé <span class="tag tag-crit">Critique</span></td>
+        <td><span class="v-ok">✓</span> Pomerol non classé</td>
+        <td><span class="v-ok">✓</span> Pomerol non classé</td>
+      </tr>
+      <tr>
+        <td>Distribution exclusive Moueix</td>
+        <td><span class="v-ok">✓</span></td>
+        <td><span class="v-ok">✓</span></td>
+        <td><span class="v-ok">✓</span></td>
+        <td><span class="v-ok">✓</span></td>
+      </tr>
+      <tr>
+        <td>Surface domaine (11,4 ha)</td>
+        <td><span class="v-ok">✓</span></td>
+        <td><span class="v-ok">✓</span></td>
+        <td><span class="v-ok">✓</span></td>
+        <td><span class="v-ok">✓</span></td>
+      </tr>
+      <tr>
+        <td>Propriétaire (Christian Moueix)</td>
+        <td><span class="v-ok">✓</span></td>
+        <td><span class="v-ok">✓</span></td>
+        <td><span class="v-ok">✓</span></td>
+        <td><span class="v-ok">✓</span></td>
+      </tr>
+      <tr>
+        <td>Source prix — marché secondaire vs négoce</td>
+        <td><span class="v-x">✗</span> Wine-Searcher <span class="tag tag-crit">P7</span></td>
+        <td><span class="v-ok">✓</span> Négoce</td>
+        <td><span class="v-ok">✓</span> Négoce</td>
+        <td><span class="v-ok">✓</span> Négoce</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2 class="section-title">Findings <em>critiques</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label">Critique · Pattern 7 — Marché secondaire</div>
+    <h3 class="finding-title">Perplexity : 7 200€ (Wine-Searcher) vs 5 500€ négoce officiel Moueix (+31%)</h3>
+    <p class="finding-text">Perplexity restitue systématiquement le prix de marché secondaire Wine-Searcher comme prix de référence pour Pétrus 2020, soit 7 200€ — un écart de +31% par rapport au prix négoce officiel des Établissements Jean-Pierre Moueix (5 500€). Ce phénomène, classifié Pattern 7, est particulièrement préjudiciable pour Pétrus dont la distribution est exclusivement en allocation : le consommateur final n'accède au vin qu'à travers le réseau Moueix, jamais via le marché secondaire en première main.</p>
+    <p class="finding-text">Wine-Searcher agrège les prix de revente et de négociants secondaires — une source légitime pour le marché de l'occasion, mais inadaptée à la restitution du prix d'allocation officiel. Cette confusion pénalise la perception de valeur de la marque et peut induire une désinformation tarifaire auprès des acheteurs institutionnels.</p>
+    <div class="drift-compare">
+      <div class="dc-cell">
+        <div class="dc-label">Perplexity (incorrect)</div>
+        <div class="dc-val wrong">7 200€<br><small>Wine-Searcher secondaire</small></div>
+      </div>
+      <div class="dc-cell">
+        <div class="dc-label">Gemini</div>
+        <div class="dc-val ok">~5 500€<br><small>Négoce Moueix</small></div>
+      </div>
+      <div class="dc-cell">
+        <div class="dc-label">ChatGPT</div>
+        <div class="dc-val ok">~5 500€<br><small>Négoce Moueix</small></div>
+      </div>
+      <div class="dc-cell">
+        <div class="dc-label">Grok</div>
+        <div class="dc-val ok">~5 500€<br><small>Négoce Moueix</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="finding-box critical">
+    <div class="finding-label">Critique · Confusion d'appellation</div>
+    <h3 class="finding-title">Gemini : "Premier Grand Cru Classé" — Pomerol n'a pas de classement officiel</h3>
+    <p class="finding-text">Gemini attribue à Pétrus la désignation "Premier Grand Cru Classé", une classification qui appartient exclusivement au système de Saint-Émilion (mis à jour en 2022). Or Pomerol AOC ne dispose d'aucun classement officiel reconnu par l'INAO — aucun Grand Cru classé, aucune hiérarchie formelle. Pétrus n'est pas et n'a jamais été un Grand Cru classé : sa réputation repose sur la reconnaissance du marché et sur la singularité de son terroir en argile bleue, non sur une classification réglementaire.</p>
+    <p class="finding-text">Cette erreur de Gemini révèle une confusion structurelle entre les appellations bordelaises : le modèle semble projeter le système classement Saint-Émilion sur Pomerol, attirée par la notoriété comparable de Pétrus. Une telle confusion, si elle est reproduite dans des contextes commerciaux ou juridiques, constitue une fausse représentation de statut réglementaire.</p>
+    <div class="drift-compare">
+      <div class="dc-cell">
+        <div class="dc-label">Gemini (incorrect)</div>
+        <div class="dc-val wrong">Premier Grand<br>Cru Classé</div>
+      </div>
+      <div class="dc-cell">
+        <div class="dc-label">Perplexity</div>
+        <div class="dc-val ok">Pomerol AOC<br>sans classement</div>
+      </div>
+      <div class="dc-cell">
+        <div class="dc-label">ChatGPT</div>
+        <div class="dc-val ok">Pomerol AOC<br>sans classement</div>
+      </div>
+      <div class="dc-cell">
+        <div class="dc-label">Grok</div>
+        <div class="dc-val ok">Pomerol AOC<br>sans classement</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="finding-box positive">
+    <div class="finding-label green">Positif — Capital sémantique fort</div>
+    <h3 class="finding-title">Distribution Moueix et terroir restituées correctement par les 4 modèles</h3>
+    <p class="finding-text">La distribution exclusive Moueix, la surface de 11,4 ha, le terroir d'argile bleue de Pomerol et la propriété de Christian Moueix sont correctement restitués par les quatre LLMs testés. Le capital sémantique de Pétrus est solide sur ces dimensions fondamentales — ce qui explique un score global de 82 malgré deux failles critiques.</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Plan de <em>remédiation</em></h2>
+
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Action 01 · Priorité haute</div>
+      <div>
+        <div class="rem-title">Publier une fiche prix négoce officielle référençable</div>
+        <p class="rem-text">Les LLMs citent Wine-Searcher car aucune source authoritative ne publie le prix d'allocation Moueix de manière indexable. Créer une page publique de référence — sur petrus.com ou moueix.com — indiquant le prix d'allocation par millésime, avec mention explicite "prix négoce officiel Moueix" et la date de mise à jour. Cette page deviendra la source primaire que les moteurs et LLMs citeront en priorité.</p>
+        <div class="rem-impact">↑ Correction Pattern 7 · Score prix estimé : 78 → 88</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Action 02 · Priorité haute</div>
+      <div>
+        <div class="rem-title">Clarifier le statut réglementaire Pomerol dans les contenus référençables</div>
+        <p class="rem-text">Aucune page indexée ne précise explicitement que Pomerol AOC ne dispose d'aucun classement officiel. Ajouter sur petrus.com une section "Appellation & statut" expliquant que Pétrus est un vin de Pomerol AOC, et que cette appellation — contrairement à Médoc (1855) ou Saint-Émilion — n'a pas de Grand Cru classé. Cette clarification structurée permettra aux LLMs de corriger la projection erronée vers le système Saint-Émilion.</p>
+        <div class="rem-impact">↑ Correction confusion appellation · Score classification : 76 → 88</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Action 03 · Priorité standard</div>
+      <div>
+        <div class="rem-title">Balisage schema.org Product + schema.org PriceSpecification</div>
+        <p class="rem-text">Implémenter un balisage schema.org sur les pages millésimes avec `priceCurrency: "EUR"`, `price: "5500"` et `seller: "Établissements Jean-Pierre Moueix"`. Ce balisage structuré est directement ingéré par les LLMs lors de leur entraînement et lors des RAG en temps réel, réduisant la probabilité de citer Wine-Searcher comme source de prix.</p>
+        <div class="rem-impact">↑ Lisibilité machine · Réduction Pattern 7 long terme</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">© 2026 2A Agency · Audit sémantique Pétrus · pe-1945 · Session 5</div>
+</footer>
+
+</body>
+</html>

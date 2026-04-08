@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zilli — Rapport de Notation Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Zilli. Score 85/100. Certification EPV (Entreprise du Patrimoine Vivant 2023) ignorée par Perplexity — Pattern 8 certifications récentes niées.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/zilli">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111; --gold: #B08D57; --border: rgba(176,141,87,0.22); --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; }
+.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+.breadcrumb { padding: 14px 5%; font-size: 0.62rem; color: var(--gray); border-bottom: 1px solid var(--border); }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
+.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
+.report-meta strong { color: var(--ink); }
+.score-circle { text-align: center; min-width: 100px; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; line-height: 1; }
+.score-denom { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+.meta-bar { display: flex; border: 1px solid var(--border); margin: 0 5%; }
+.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; }
+.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.meta-item-val { font-size: 0.78rem; color: var(--ink); }
+section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+.score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.score-card { background: var(--bg); padding: 24px 20px; }
+.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.sc-green { color: var(--green); } .sc-amber { color: var(--amber); }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.73rem; }
+.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
+.matrix-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.v-ok { color: var(--green); } .v-x { color: var(--red); }
+.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
+.tag-ok { color: var(--green); border-color: rgba(45,106,45,0.3); }
+.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
+.tag-crit { color: var(--red); border-color: rgba(139,45,45,0.3); }
+.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
+.finding-box.amber { border-color: rgba(122,90,0,0.3); background: rgba(122,90,0,0.03); }
+.finding-box.positive { border-color: rgba(45,106,45,0.3); background: rgba(45,106,45,0.02); }
+.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; }
+.finding-label.amber { color: var(--amber); }
+.finding-label.green { color: var(--green); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
+.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; margin-bottom: 12px; }
+.drift-compare { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 16px; }
+.dc-cell { background: var(--bg); padding: 14px 16px; }
+.dc-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.dc-val { font-size: 0.82rem; color: var(--ink); line-height: 1.5; }
+.dc-val.wrong { color: var(--red); } .dc-val.ok { color: var(--green); }
+.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
+.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
+.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.rem-text { font-size: 0.82rem; color: var(--gray); line-height: 1.75; margin-bottom: 10px; }
+.rem-impact { font-size: 0.7rem; color: var(--green); letter-spacing: 0.06em; }
+footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+.f-logo span { color: var(--gold); }
+.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+@media(max-width:768px) { .report-hero { grid-template-columns: 1fr; } .meta-bar { flex-direction: column; } .meta-item { border-right: none; border-bottom: 1px solid var(--border); } .score-grid { grid-template-columns: repeat(2,1fr); } .drift-compare { grid-template-columns: repeat(2,1fr); } .rem-item { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+<div class="breadcrumb"><a href="/">2A Agency</a> › <a href="/registry">Registre</a> › Zilli — Rapport d'audit</div>
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Integrity Score · Mode Masculine Luxe · Lyon · Fondée 1965 · EPV</div>
+    <h1 class="report-brand">Zilli</h1>
+    <p class="report-meta"><strong>Noté par 2A Agency</strong> · Émis le 8 avril 2026 · Certification v1.0<br>Méthodologie : <strong>4 LLMs · 6 Questions · Avril 2026</strong><br>Conformité EU AI Act : <strong>Article 53</strong></p>
+  </div>
+  <div class="score-circle"><div class="score-num" style="color:var(--green)">85</div><div class="score-denom">/ 100<br>Integrity Score</div></div>
+</div>
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-item-label">Notaire</div><div class="meta-item-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">8 avril 2026</div></div>
+  <div class="meta-item"><div class="meta-item-label">LLMs testés</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">6 standardisées</div></div>
+</div>
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Savoir-faire lyonnais reconnu. <em>Certification EPV 2023 absente de Perplexity — Pattern 8.</em></h2>
+  <p class="body-text">Zilli obtient un score de <strong>85/100</strong>. L'identité de la maison, les matières et la fabrication lyonnaise sont correctement documentées. Deux drifts : Perplexity ignore la certification EPV (Entreprise du Patrimoine Vivant) obtenue en 2023 (Pattern 8) ; Gemini avance la date de fondation de 3 ans (1968 vs 1965).</p>
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Certification EPV</div><div class="score-card-num sc-amber">72</div></div>
+    <div class="score-card"><div class="score-card-label">Date de fondation</div><div class="score-card-num sc-amber">76</div></div>
+    <div class="score-card"><div class="score-card-label">Identité & matières</div><div class="score-card-num sc-green">92</div></div>
+    <div class="score-card"><div class="score-card-label">Fabrication Lyon</div><div class="score-card-num sc-green">90</div></div>
+    <div class="score-card"><div class="score-card-label">Prix & distribution</div><div class="score-card-num sc-green">88</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-green">85</div></div>
+  </div>
+</section>
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+  <table class="matrix-table">
+    <thead><tr><th>Question</th><th>Perplexity Pro</th><th>Gemini Pro</th><th>ChatGPT</th><th>Grok</th><th>Verdict</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Certification EPV</td>
+        <td><span class="v-x">✗</span> <strong>Aucune certification citée</strong></td>
+        <td><span class="v-ok">✓</span> EPV 2023 ✓</td>
+        <td><span class="v-ok">✓</span> EPV Entreprise du Patrimoine Vivant ✓</td>
+        <td><span class="v-ok">✓</span> EPV ✓</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Année de fondation</td>
+        <td><span class="v-ok">✓</span> 1965 ✓</td>
+        <td><span class="v-x">✗</span> <strong>1968 — décalage de 3 ans</strong></td>
+        <td><span class="v-ok">✓</span> 1965 ✓</td>
+        <td><span class="v-ok">✓</span> 1965 ✓</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Matières (Alligator)</td>
+        <td><span class="v-ok">✓</span> Alligator Mississippi ✓</td>
+        <td><span class="v-ok">✓</span> Exact ✓</td>
+        <td><span class="v-ok">✓</span> Exact ✓</td>
+        <td><span class="v-ok">✓</span> Peaux exotiques ✓</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Fabrication Lyon</td>
+        <td><span class="v-ok">✓</span> Lyon, France ✓</td>
+        <td><span class="v-ok">✓</span> Lyon ✓</td>
+        <td><span class="v-ok">✓</span> Exact ✓</td>
+        <td><span class="v-ok">✓</span> Lyon ✓</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section>
+  <div class="eyebrow">Findings</div>
+  <h2 class="section-title">EPV non détectée par Perplexity. <em>Pattern 8 — certifications récentes niées.</em></h2>
+  <div class="finding-box amber">
+    <div class="finding-label amber">Drift primaire · Pattern 8 · Certification EPV · Perplexity</div>
+    <h3 class="finding-title">Perplexity ignore la certification EPV de Zilli — obtenue en 2023, elle valide le savoir-faire artisanal lyonnais reconnu par l'État français.</h3>
+    <p class="finding-text">L'EPV (Entreprise du Patrimoine Vivant) est une labellisation française attribuée par le ministère de l'Économie aux entreprises détenant un savoir-faire d'excellence. Zilli a obtenu ce label en 2023. Perplexity, qui indexe principalement des sources antérieures à 2023 pour Zilli, ne mentionne aucune certification. Ce Pattern 8 (certification récente niée) touche toutes les certifications obtenues depuis moins de 3 ans.</p>
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val wrong">EPV absente ✗</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val ok">EPV 2023 ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val ok">EPV ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">EPV ✓</div></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 85 à <em>pleinement certifié.</em></h2>
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Ancrer la certification EPV dans les métadonnées zilli.fr</div>
+        <p class="rem-text">Publier une page dédiée EPV sur zilli.fr avec date d'obtention (2023), description du savoir-faire certifié et lien vers le registre officiel du ministère. Ajouter un schema.org/Award pour forcer l'indexation de la certification dans Perplexity.</p>
+        <div class="rem-impact">Impact : EPV reconnue par Perplexity · Différenciation artisanale certifiée</div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport de Notation Sémantique — Zilli · Avril 2026 · 2aagency.com/registry</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "node_id": "pe-1945",
+  "brand": "Petrus",
+  "founded": 1945,
+  "sector": "Viticulture Grand Cru / Pomerol",
+  "integrity_score": 82,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
+  "audit_date": "2026-04-08",
+  "certified_data": {
+    "product_certified": "Pétrus 2020",
+    "price_eur_negoce": 5500,
+    "price_eur_secondary_market": 7200,
+    "alert_threshold_low": 4800,
+    "alert_threshold_high": 6500,
+    "ecommerce": false,
+    "distribution": "Établissements Jean-Pierre Moueix (négoce exclusif) — allocation",
+    "group": "Indépendant — famille Moueix (Christian Moueix)",
+    "directeur": "Frédéric Lospied (directeur technique)",
+    "proprietaire": "Christian Moueix",
+    "headquarters": "Pomerol, Bordeaux, France",
+    "surface": "11,4 ha — argile bleue de Pomerol (monopole terroir)",
+    "appellation": "Pomerol AOC (pas de Grand Cru classé officiel)"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "perplexity",
+      "field": "prix_petrus_2020",
+      "incorrect": "7 200€ (prix marché secondaire)",
+      "correct": "5 500€ (prix négoce officiel Moueix)",
+      "severity": "critical",
+      "overage_pct": 31,
+      "pattern": "Pattern 7 — Marché secondaire confondu avec prix négoce · Wine-Searcher cité comme référence (+31%)"
+    },
+    {
+      "llm": "gemini",
+      "field": "classification",
+      "incorrect": "Premier Grand Cru Classé (Saint-Émilion)",
+      "correct": "Pomerol AOC — aucun classement officiel, Pomerol n'a pas de Grand Cru classé",
+      "severity": "critical",
+      "pattern": "Confusion appellation Pomerol (non classée) vs Saint-Émilion (classé)"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 80,
+    "gemini": 82,
+    "chatgpt": 86,
+    "grok": 80
+  }
+}

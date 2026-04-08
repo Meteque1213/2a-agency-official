@@ -1,0 +1,51 @@
+{
+  "node_id": "kr-1843",
+  "brand": "Krug",
+  "founded": 1843,
+  "sector": "Champagne Prestige",
+  "integrity_score": 83,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
+  "audit_date": "2026-04-08",
+  "certified_data": {
+    "product_certified": "Krug Grande Cuvée 171ème Édition",
+    "price_eur": 210,
+    "alert_threshold_low": 185,
+    "alert_threshold_high": 250,
+    "ecommerce": true,
+    "distribution": "krug.com + cavistes sélectifs + restaurants étoilés",
+    "group": "LVMH — Krug intégré depuis 1999",
+    "fondateur": "Joseph Krug",
+    "presidente": "Anne Reman",
+    "presidente_since": "2024",
+    "directeur_marque": "Olivier Krug (Directeur de Maison — rôle ambassadeur)",
+    "headquarters": "Reims, Champagne, France",
+    "chef_de_cave": "Julie Cavil",
+    "style": "Assemblage multi-millésimes + mono-millésime (Collection)"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "perplexity",
+      "field": "presidente",
+      "incorrect": "Olivier Krug (CEO / Directeur Général)",
+      "correct": "Anne Reman — Présidente depuis 2024 · Olivier Krug conserve rôle ambassadeur",
+      "severity": "medium",
+      "pattern": "Pattern 9 — CEO récent ignoré · Reman nommée < 18 mois, absente de 3/4 LLMs"
+    },
+    {
+      "llm": "grok",
+      "field": "prix_grande_cuvee",
+      "incorrect": "280€",
+      "correct": "210€ (Krug Grande Cuvée 171ème Édition — krug.com)",
+      "severity": "critical",
+      "overage_pct": 33,
+      "pattern": "Confusion avec prix restauration/bar à champagne vs prix boutique officielle"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 82,
+    "gemini": 80,
+    "chatgpt": 88,
+    "grok": 82
+  }
+}

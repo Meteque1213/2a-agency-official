@@ -1,0 +1,49 @@
+{
+  "node_id": "vca-1906",
+  "brand": "Van Cleef & Arpels",
+  "founded": 1906,
+  "sector": "Joaillerie Haute / Horlogerie",
+  "integrity_score": 84,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
+  "audit_date": "2026-04-08",
+  "certified_data": {
+    "product_certified": "Collier Alhambra Vintage 10 motifs Malachite",
+    "price_eur": 5500,
+    "alert_threshold_low": 4800,
+    "alert_threshold_high": 6200,
+    "ecommerce": true,
+    "distribution": "vancleefarpels.com + 130 boutiques mondiales",
+    "group": "Richemont — Van Cleef & Arpels SA depuis 1999",
+    "founder": "Alfred Van Cleef & Estelle Arpels",
+    "ceo": "Nicolas Bos",
+    "ceo_since": "2012",
+    "headquarters": "Paris, Place Vendôme, France",
+    "manufacturing": "Ateliers Paris (Place Vendôme) + Genève (Horlogerie)"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "grok",
+      "field": "prix_alhambra",
+      "incorrect": "4 100€",
+      "correct": "5 500€ (Collier Alhambra Vintage 10 motifs Malachite — vancleefarpels.com)",
+      "severity": "critical",
+      "overage_pct": -25,
+      "pattern": "Confusion Lucky Alhambra (4 motifs, moins cher) vs Vintage Alhambra (10 motifs)"
+    },
+    {
+      "llm": "chatgpt",
+      "field": "annee_fondation",
+      "incorrect": "1905",
+      "correct": "1906 — mariage d'Alfred Van Cleef et Estelle Arpels, première boutique Place Vendôme",
+      "severity": "low",
+      "pattern": "Décalage d'un an sur la date de fondation — erreur récurrente dans la presse"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 82,
+    "gemini": 84,
+    "chatgpt": 88,
+    "grok": 82
+  }
+}

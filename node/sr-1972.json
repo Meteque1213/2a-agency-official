@@ -1,0 +1,50 @@
+{
+  "node_id": "sr-1972",
+  "brand": "Stefano Ricci",
+  "founded": 1972,
+  "sector": "Mode Masculine Luxe",
+  "integrity_score": 81,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
+  "audit_date": "2026-04-08",
+  "certified_data": {
+    "product_certified": "Cravate Soie Imprimée",
+    "price_eur": 280,
+    "alert_threshold_low": 220,
+    "alert_threshold_high": 380,
+    "ecommerce": true,
+    "distribution": "stefanoricci.com + boutiques mondiales (40 pays)",
+    "group": "Indépendant — famille Ricci, Florence",
+    "founder": "Stefano Ricci",
+    "ceo": "Niccolò Ricci",
+    "ceo_since": "2020",
+    "chairman": "Stefano Ricci",
+    "headquarters": "Florence, Italie",
+    "manufacturing": "Florence, Italie (atelier Settignano)"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "gemini",
+      "field": "ceo",
+      "incorrect": "Stefano Ricci (fondateur-CEO)",
+      "correct": "Niccolò Ricci CEO depuis 2020 — Stefano Ricci reste Président",
+      "severity": "medium",
+      "pattern": "Pattern 9 — CEO récent ignoré · transition père-fils non documentée par Gemini"
+    },
+    {
+      "llm": "grok",
+      "field": "prix_costume",
+      "incorrect": "3 200€",
+      "correct": "4 800€ (prêt-à-porter) — confusion avec entrée de gamme cravates",
+      "severity": "critical",
+      "overage_pct": -33,
+      "pattern": "Confusion RTW vs made-to-measure · prix sous-évalué de 33%"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 78,
+    "gemini": 80,
+    "chatgpt": 86,
+    "grok": 80
+  }
+}

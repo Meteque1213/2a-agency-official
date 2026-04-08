@@ -1,0 +1,49 @@
+{
+  "node_id": "bo-1858",
+  "brand": "Boucheron",
+  "founded": 1858,
+  "sector": "Joaillerie Haute",
+  "integrity_score": 80,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
+  "audit_date": "2026-04-08",
+  "certified_data": {
+    "product_certified": "Bague Quatre Classique GM",
+    "price_eur": 3800,
+    "alert_threshold_low": 3200,
+    "alert_threshold_high": 4600,
+    "ecommerce": true,
+    "distribution": "boucheron.com + boutiques (Paris, Tokyo, Londres, Dubai)",
+    "group": "Kering — acquis 1994",
+    "founder": "Frédéric Boucheron",
+    "ceo": "Hélène Duplaix",
+    "ceo_since": "2023",
+    "headquarters": "Paris, 26 Place Vendôme, France",
+    "manufacturing": "Ateliers Place Vendôme, Paris"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "perplexity",
+      "field": "ceo",
+      "incorrect": "Jean-Christophe Bédos (ancien CEO)",
+      "correct": "Hélène Duplaix — CEO depuis 2023",
+      "severity": "medium",
+      "pattern": "Pattern 9 — CEO récent ignoré · Duplaix nommée < 3 ans, absente de 3/4 LLMs"
+    },
+    {
+      "llm": "grok",
+      "field": "prix_bague_quatre",
+      "incorrect": "3 100€",
+      "correct": "3 800€ (Bague Quatre Classique GM — boucheron.com)",
+      "severity": "critical",
+      "overage_pct": -18,
+      "pattern": "Confusion taille GM vs PM · prix sous-évalué de 18%"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 78,
+    "gemini": 80,
+    "chatgpt": 84,
+    "grok": 78
+  }
+}

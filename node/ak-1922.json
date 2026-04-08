@@ -1,0 +1,48 @@
+{
+  "node_id": "ak-1922",
+  "brand": "Akris",
+  "founded": 1922,
+  "sector": "Mode Haute Couture",
+  "integrity_score": 83,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
+  "audit_date": "2026-04-08",
+  "certified_data": {
+    "product_certified": "Tailleur Crêpe A-Line",
+    "price_eur": 4500,
+    "alert_threshold_low": 3800,
+    "alert_threshold_high": 5500,
+    "ecommerce": true,
+    "distribution": "akris.com + boutiques + grands magasins sélectifs",
+    "group": "Indépendant — famille Kriemler (Saint-Gall, Suisse)",
+    "founder": "Alice Kriemler-Schoch",
+    "da_ceo": "Albert Kriemler",
+    "da_since": "1980",
+    "headquarters": "Saint-Gall, Suisse",
+    "manufacturing": "Suisse + Italie (ateliers Arlesheim)"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "grok",
+      "field": "ville_fondation",
+      "incorrect": "Zurich",
+      "correct": "Saint-Gall (St. Gallen), Suisse",
+      "severity": "critical",
+      "pattern": "Confusion ville suisse — Zurich est la capitale financière, non le berceau d'Akris"
+    },
+    {
+      "llm": "perplexity",
+      "field": "structure_capital",
+      "incorrect": "Participation minoritaire extérieure non précisée",
+      "correct": "Marque familiale 100% indépendante — famille Kriemler",
+      "severity": "medium",
+      "pattern": "Perplexity suggère une ouverture du capital non confirmée"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 80,
+    "gemini": 82,
+    "chatgpt": 88,
+    "grok": 82
+  }
+}

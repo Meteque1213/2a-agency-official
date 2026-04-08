@@ -1,0 +1,50 @@
+{
+  "node_id": "fe-1947",
+  "brand": "Ferrari",
+  "founded": 1947,
+  "sector": "Automobile Luxe / Sport",
+  "integrity_score": 88,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
+  "audit_date": "2026-04-08",
+  "certified_data": {
+    "product_certified": "Ferrari 296 GTB",
+    "price_eur": 338000,
+    "alert_threshold_low": 310000,
+    "alert_threshold_high": 380000,
+    "ecommerce": false,
+    "distribution": "Réseau concessionnaires agréés Ferrari — 180 pays",
+    "group": "Ferrari N.V. — cotée Borsa Italiana + NYSE (RACE) · actionnaire majoritaire : Exor (famille Agnelli)",
+    "founder": "Enzo Ferrari",
+    "ceo": "Benedetto Vigna",
+    "ceo_since": "2021",
+    "headquarters": "Maranello, Émilie-Romagne, Italie",
+    "manufacturing": "Maranello (100%) — Made in Italy intégral",
+    "motorisation_296gtb": "Hybride V6 turbo + moteur électrique — 830 ch système complet"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "gemini",
+      "field": "prix_296gtb",
+      "incorrect": "296 000€",
+      "correct": "338 000€ (Ferrari 296 GTB — prix de base officiel réseau agréé)",
+      "severity": "critical",
+      "overage_pct": -12,
+      "pattern": "Confusion numérique — 296 GTB (nom du modèle = 296) induit un prix de 296 000€ par homonymie"
+    },
+    {
+      "llm": "chatgpt",
+      "field": "puissance_296gtb",
+      "incorrect": "620 ch (moteur thermique seul)",
+      "correct": "830 ch (système hybride complet — V6 biturbo 663 ch + moteur électrique 167 ch)",
+      "severity": "medium",
+      "pattern": "Information partielle — puissance thermique seule citée sans le système hybride complet"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 86,
+    "gemini": 88,
+    "chatgpt": 92,
+    "grok": 86
+  }
+}

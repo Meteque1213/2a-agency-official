@@ -1,0 +1,51 @@
+{
+  "node_id": "drc-1869",
+  "brand": "Domaine de la Romanée-Conti",
+  "founded": 1869,
+  "sector": "Viticulture Grand Cru / Bourgogne",
+  "integrity_score": 76,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
+  "audit_date": "2026-04-08",
+  "certified_data": {
+    "product_certified": "Romanée-Conti Grand Cru 2022",
+    "price_eur_allocation": 3200,
+    "price_eur_secondary_market": 16000,
+    "alert_threshold_low": 2800,
+    "alert_threshold_high": 4000,
+    "ecommerce": false,
+    "distribution": "Allocation négociants agréés — pas de vente directe grand public",
+    "group": "Indépendant — SCI du Domaine de la Romanée-Conti · familles de Villaine et Leroy",
+    "co_gerant": "Bertrand de Villaine",
+    "predecesseur": "Aubert de Villaine (retraité 2023)",
+    "headquarters": "Vosne-Romanée, Côte d'Or, Bourgogne",
+    "surface_romanee_conti": "1,81 ha (monopole)",
+    "production_annuelle": "~5 000 à 6 000 bouteilles"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "grok",
+      "field": "prix_romanee_conti_2022",
+      "incorrect": "16 000€ (prix marché secondaire Wine-Searcher)",
+      "correct": "3 200€ (prix allocation domaine / négoce agréé)",
+      "severity": "critical",
+      "overage_pct": 400,
+      "pattern": "Pattern 7 — Marché secondaire confondu avec prix domaine · Wine-Searcher agrégé comme référence officielle (écart x5)"
+    },
+    {
+      "llm": "perplexity",
+      "field": "prix_romanee_conti_2022",
+      "incorrect": "12 000€ (prix marché secondaire)",
+      "correct": "3 200€ (prix allocation domaine)",
+      "severity": "critical",
+      "overage_pct": 275,
+      "pattern": "Pattern 7 — Même confusion marché secondaire vs allocation · Perplexity agrège sources secondaires"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 72,
+    "gemini": 74,
+    "chatgpt": 82,
+    "grok": 76
+  }
+}

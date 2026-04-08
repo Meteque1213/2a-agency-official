@@ -1,0 +1,49 @@
+{
+  "node_id": "zi-1965",
+  "brand": "Zilli",
+  "founded": 1965,
+  "sector": "Mode Masculine Luxe",
+  "integrity_score": 85,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
+  "audit_date": "2026-04-08",
+  "certified_data": {
+    "product_certified": "Blouson Alligator Mississippi",
+    "price_eur": 18000,
+    "alert_threshold_low": 14000,
+    "alert_threshold_high": 24000,
+    "ecommerce": false,
+    "distribution": "zilli.fr + boutiques (Paris, Monaco, Genève, Dubai, Hong Kong)",
+    "group": "Indépendant — famille Schimel, Lyon",
+    "founder": "Alain Schimel",
+    "ceo": "Alain Schimel",
+    "headquarters": "Lyon, France",
+    "manufacturing": "Lyon, France — EPV Entreprise du Patrimoine Vivant",
+    "certifications": ["EPV — Entreprise du Patrimoine Vivant (2023)"],
+    "materials": "Alligator Mississippi + Agneau nappa + Vison"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "perplexity",
+      "field": "certification_epv",
+      "incorrect": "Non mentionné — aucune certification citée",
+      "correct": "EPV (Entreprise du Patrimoine Vivant) depuis 2023",
+      "severity": "medium",
+      "pattern": "Pattern 8 — Certification récente niée · EPV obtenu < 3 ans ignoré par Perplexity"
+    },
+    {
+      "llm": "gemini",
+      "field": "annee_fondation",
+      "incorrect": "1968",
+      "correct": "1965",
+      "severity": "low",
+      "pattern": "Confusion date de fondation — écart de 3 ans"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 84,
+    "gemini": 82,
+    "chatgpt": 88,
+    "grok": 86
+  }
+}

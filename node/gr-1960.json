@@ -1,0 +1,49 @@
+{
+  "node_id": "gr-1960",
+  "brand": "Graff",
+  "founded": 1960,
+  "sector": "Joaillerie Haute",
+  "integrity_score": 79,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions",
+  "audit_date": "2026-04-08",
+  "certified_data": {
+    "product_certified": "Bague Solitaire Diamant 1ct D IF",
+    "price_eur": 120000,
+    "alert_threshold_low": 95000,
+    "alert_threshold_high": 145000,
+    "ecommerce": false,
+    "distribution": "graff.com + boutiques (Londres, Paris, New York, Hong Kong, Dubai)",
+    "group": "Indépendant — Laurence Graff OBE, fondateur",
+    "founder": "Laurence Graff OBE",
+    "ceo": "François Graff",
+    "ceo_since": "2013",
+    "headquarters": "Londres, Royaume-Uni",
+    "manufacturing": "Atelier Graff — Genève + Londres"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "perplexity",
+      "field": "annee_fondation",
+      "incorrect": "1966",
+      "correct": "1960 — première boutique Grafton Street, Londres",
+      "severity": "medium",
+      "pattern": "Erreur de date — Graff a démarré en 1960 comme bijoutier ambulant avant d'ouvrir boutique"
+    },
+    {
+      "llm": "grok",
+      "field": "prix_solitaire",
+      "incorrect": "170 000€ (source : marché secondaire Christie's)",
+      "correct": "120 000€ (prix boutique officielle Graff)",
+      "severity": "critical",
+      "overage_pct": 42,
+      "pattern": "Pattern 7 — Marché secondaire confondu avec prix domaine · Christie's/Sotheby's agrégés comme référence officielle"
+    }
+  ],
+  "llm_scores": {
+    "perplexity": 76,
+    "gemini": 78,
+    "chatgpt": 84,
+    "grok": 78
+  }
+}
