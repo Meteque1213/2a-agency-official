@@ -1,0 +1,1 @@
+export const skills = [{ name: 'list_files', description: 'List files in the current directory', execute: async () => { const { execSync } = require('child_process'); return execSync('ls -F').toString(); } }];

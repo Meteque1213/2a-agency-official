@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pétrus — Rapport de Notation Sémantique | 2A Agency</title>
-<meta name="description" content="Audit sémantique 2A Agency de Pétrus. Score 82/100. Perplexity prix marché secondaire 7200€ vs 5500€ négoce officiel — Pattern 7. Gemini classement erroné Premier Grand Cru Classé.">
+<title>Pétrus — Report de Notation Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Pétrus. Score 82/100. Perplexity prix secondary market 7200€ vs 5500€ négoce officiel — Pattern 7. Gemini classement erroné Premier Grand Cru Classé.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.2aagency.com/reports/petrus">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,10 +99,10 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
     <h1 class="report-brand">Pétrus</h1>
     <div class="report-meta">
       <strong>Secteur :</strong> Viticulture Grand Cru / Pomerol AOC<br>
-      <strong>Fondé :</strong> 1945 &nbsp;·&nbsp; <strong>Domaine :</strong> 11,4 ha — argile bleue de Pomerol<br>
+      <strong>Founded :</strong> 1945 &nbsp;·&nbsp; <strong>Domaine :</strong> 11,4 ha — argile bleue de Pomerol<br>
       <strong>Propriétaire :</strong> Christian Moueix &nbsp;·&nbsp; <strong>Directeur technique :</strong> Frédéric Lospied<br>
       <strong>Distribution :</strong> Ets Jean-Pierre Moueix (négoce exclusif — allocation)<br>
-      <strong>Date d'audit :</strong> 8 avril 2026 &nbsp;·&nbsp; <strong>Méthodologie :</strong> 4 LLMs × 6 questions
+      <strong>Date d'audit :</strong> 8 April 2026 &nbsp;·&nbsp; <strong>Methodology:</strong> 4 LLMs × 6 questions
     </div>
   </div>
   <div class="score-circle">
@@ -132,7 +132,7 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
 
 <section>
   <h2 class="section-title">Synthèse de <em>notation</em></h2>
-  <p class="body-text">Pétrus atteint un score de 82/100 — correct pour un domaine à distribution exclusivement en allocation, sans présence e-commerce. Les deux failles critiques identifiées pénalisent le score : Perplexity restitue un prix de marché secondaire Wine-Searcher comme prix de référence (+31% vs prix négoce officiel Moueix), et Gemini attribue à Pétrus la classification "Premier Grand Cru Classé" propre à Saint-Émilion, alors que Pomerol AOC ne dispose d'aucun classement officiel — une confusion d'appellation révélatrice de la fragilité des LLMs sur les distinctions fines du droit viticole bordelais.</p>
+  <p class="body-text">Pétrus atteint un score de 82/100 — correct pour un domaine à distribution exclusivement en allocation, sans présence e-commerce. Les deux failles critiques identifiées pénalisent le score : Perplexity restitue un prix de secondary market Wine-Searcher comme prix de référence (+31% vs prix négoce officiel Moueix), et Gemini attribue à Pétrus la classification "Premier Grand Cru Classé" propre à Saint-Émilion, alors que Pomerol AOC ne dispose d'aucun classement officiel — une confusion d'appellation révélatrice de la fragilité des LLMs sur les distinctions fines du droit viticole bordelais.</p>
   <p class="body-text">ChatGPT et Grok restituent correctement la distribution exclusive Moueix, la surface de 11,4 ha en argile bleue, et l'absence de classement Pomerol. La maison dispose d'un fort capital sémantique — le nom "Pétrus" déclenche des associations spontanées correctes chez la majorité des modèles.</p>
 
   <div class="score-grid">
@@ -188,7 +188,7 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
       <tr>
         <td>Classement / Appellation Pomerol</td>
         <td><span class="v-ok">✓</span> Aucun classement</td>
-        <td><span class="v-x">✗</span> Premier Grand Cru Classé <span class="tag tag-crit">Critique</span></td>
+        <td><span class="v-x">✗</span> Premier Grand Cru Classé <span class="tag tag-crit">Critical</span></td>
         <td><span class="v-ok">✓</span> Pomerol non classé</td>
         <td><span class="v-ok">✓</span> Pomerol non classé</td>
       </tr>
@@ -214,7 +214,7 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
         <td><span class="v-ok">✓</span></td>
       </tr>
       <tr>
-        <td>Source prix — marché secondaire vs négoce</td>
+        <td>Source prix — secondary market vs négoce</td>
         <td><span class="v-x">✗</span> Wine-Searcher <span class="tag tag-crit">P7</span></td>
         <td><span class="v-ok">✓</span> Négoce</td>
         <td><span class="v-ok">✓</span> Négoce</td>
@@ -230,7 +230,7 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
   <div class="finding-box critical">
     <div class="finding-label">Critique · Pattern 7 — Marché secondaire</div>
     <h3 class="finding-title">Perplexity : 7 200€ (Wine-Searcher) vs 5 500€ négoce officiel Moueix (+31%)</h3>
-    <p class="finding-text">Perplexity restitue systématiquement le prix de marché secondaire Wine-Searcher comme prix de référence pour Pétrus 2020, soit 7 200€ — un écart de +31% par rapport au prix négoce officiel des Établissements Jean-Pierre Moueix (5 500€). Ce phénomène, classifié Pattern 7, est particulièrement préjudiciable pour Pétrus dont la distribution est exclusivement en allocation : le consommateur final n'accède au vin qu'à travers le réseau Moueix, jamais via le marché secondaire en première main.</p>
+    <p class="finding-text">Perplexity restitue systématiquement le prix de secondary market Wine-Searcher comme prix de référence pour Pétrus 2020, soit 7 200€ — un écart de +31% par rapport au prix négoce officiel des Établissements Jean-Pierre Moueix (5 500€). Ce phénomène, classifié Pattern 7, est particulièrement préjudiciable pour Pétrus dont la distribution est exclusivement en allocation : le consommateur final n'accède au vin qu'à travers le réseau Moueix, jamais via le secondary market en première main.</p>
     <p class="finding-text">Wine-Searcher agrège les prix de revente et de négociants secondaires — une source légitime pour le marché de l'occasion, mais inadaptée à la restitution du prix d'allocation officiel. Cette confusion pénalise la perception de valeur de la marque et peut induire une désinformation tarifaire auprès des acheteurs institutionnels.</p>
     <div class="drift-compare">
       <div class="dc-cell">
@@ -280,7 +280,7 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
   <div class="finding-box positive">
     <div class="finding-label green">Positif — Capital sémantique fort</div>
     <h3 class="finding-title">Distribution Moueix et terroir restituées correctement par les 4 modèles</h3>
-    <p class="finding-text">La distribution exclusive Moueix, la surface de 11,4 ha, le terroir d'argile bleue de Pomerol et la propriété de Christian Moueix sont correctement restitués par les quatre LLMs testés. Le capital sémantique de Pétrus est solide sur ces dimensions fondamentales — ce qui explique un score global de 82 malgré deux failles critiques.</p>
+    <p class="finding-text">La distribution exclusive Moueix, la surface de 11,4 ha, le terroir d'argile bleue de Pomerol et la propriété de Christian Moueix sont correctement restitués par les quatre LLMs tested. Le capital sémantique de Pétrus est solide sur ces dimensions fondamentales — ce qui explique un score global de 82 malgré deux failles critiques.</p>
   </div>
 </section>
 
@@ -316,14 +316,14 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
 </section>
 
 <section style="border:1px solid var(--gold);background:rgba(176,141,87,0.04);padding:28px;margin:0 5% 40px;">
-  <div style="font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Recommandation — MCP Brand Server</div>
-  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:300;margin-bottom:20px;">Déployez votre Node MCP certifié 2A</h2>
-  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:20px;">Les agents IA (Claude, GPT, Gemini) interrogent désormais des serveurs MCP pour obtenir des données de marque en temps réel. Sans votre propre MCP certifié, ces agents utilisent leurs données d'entraînement — et hallucinent.</p>
+  <div style="font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Recommendation — MCP Brand Server</div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:300;margin-bottom:20px;">Deploy your 2A certified MCP Node</h2>
+  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:20px;">AI agents (Claude, GPT, Gemini) now query MCP servers to obtain brand data in real time. Without your own certified MCP, these agents fall back on training data — and hallucinate.</p>
   <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:8px;"><strong>2A Agency propose deux niveaux de service :</strong></p>
-  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:8px;"><strong>1. CERTIFICATION</strong> — Votre marque est auditée, un Node certifié est publié dans le registre 2A. Les agents qui interrogent le MCP 2A obtiennent vos données exactes.</p>
-  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:8px;"><strong>2. BRAND MCP SERVER</strong> — 2A Agency déploie un serveur MCP dédié à votre marque, certifié et validé par le registre 2A. Vos données sont directement accessibles aux agents IA sans passer par 2A comme intermédiaire.</p>
-  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:24px;font-style:italic;">Analogie : 2A Agency est le DNS — votre MCP est votre adresse IP certifiée.</p>
-  <a href="mailto:alexandre@2aagency.com" style="display:inline-block;border:1px solid var(--gold);color:var(--gold);text-decoration:none;padding:10px 28px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;">Contacter 2A Agency</a>
+  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:8px;"><strong>1. CERTIFICATION</strong> — Your brand is audited, a certified Node is published in the 2A registry. Agents querying the 2A MCP receive your exact data.</p>
+  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:8px;"><strong>2. BRAND MCP SERVER</strong> — 2A Agency deploys a dedicated MCP server for your brand, certified and validated by the 2A registry. Your data is directly accessible to AI agents without 2A as intermediary.</p>
+  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:24px;font-style:italic;">Analogy: 2A Agency is the DNS — your MCP is your certified IP address.</p>
+  <a href="mailto:alexandre@2aagency.com" style="display:inline-block;border:1px solid var(--gold);color:var(--gold);text-decoration:none;padding:10px 28px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;">Contact 2A Agency</a>
 </section>
 <footer>
   <div class="f-logo">2<span>A</span> Agency</div>
