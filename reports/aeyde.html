@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aeyde — Rapport de Notation Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Aeyde. Score 86/100. Perplexity et ChatGPT omettent les co-fondateurs Max Schleicher et Andrea Lenczner. Fabrication Espagne/Alicante correctement citée.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/aeyde">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111;
+  --gold: #B08D57; --border: rgba(176,141,87,0.22);
+  --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; }
+.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+.nav-link:hover { color: var(--gold); }
+.breadcrumb { padding: 14px 5%; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gray); border-bottom: 1px solid var(--border); }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
+.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
+.report-meta strong { color: var(--ink); }
+.score-circle { text-align: center; min-width: 100px; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; color: var(--green); line-height: 1; }
+.score-denom { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+.meta-bar { display: flex; border: 1px solid var(--border); margin: 0 5%; }
+.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; }
+.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.meta-item-val { font-size: 0.78rem; color: var(--ink); }
+section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+.score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.score-card { background: var(--bg); padding: 24px 20px; }
+.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.sc-green { color: var(--green); } .sc-amber { color: var(--amber); } .sc-red { color: var(--red); }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.73rem; }
+.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
+.matrix-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.matrix-table tr:hover td { background: var(--surface); }
+.v-ok { color: var(--green); } .v-p { color: var(--amber); } .v-x { color: var(--red); }
+.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
+.tag-ok { color: var(--green); border-color: rgba(45,106,45,0.3); }
+.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
+.tag-crit { color: var(--red); border-color: rgba(139,45,45,0.3); }
+.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
+.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
+.finding-box.amber { border-color: rgba(122,90,0,0.3); background: rgba(122,90,0,0.03); }
+.finding-box.positive { border-color: rgba(45,106,45,0.3); background: rgba(45,106,45,0.02); }
+.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.finding-label.amber { color: var(--amber); }
+.finding-label.green { color: var(--green); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
+.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; margin-bottom: 12px; }
+.drift-compare { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 16px; }
+.dc-cell { background: var(--bg); padding: 14px 16px; }
+.dc-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.dc-val { font-size: 0.82rem; color: var(--ink); line-height: 1.5; }
+.dc-val.wrong { color: var(--red); }
+.dc-val.ok { color: var(--green); }
+.dc-val.partial { color: var(--amber); }
+.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
+.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
+.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.rem-text { font-size: 0.82rem; color: var(--gray); line-height: 1.75; margin-bottom: 10px; }
+.rem-impact { font-size: 0.7rem; color: var(--green); letter-spacing: 0.06em; }
+footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+.f-logo span { color: var(--gold); }
+.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+@media(max-width:768px) {
+  .report-hero { grid-template-columns: 1fr; }
+  .meta-bar { flex-direction: column; }
+  .meta-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .score-grid { grid-template-columns: repeat(2,1fr); }
+  .drift-compare { grid-template-columns: repeat(2,1fr); }
+  .rem-item { grid-template-columns: 1fr; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"Aeyde Semantic Audit","description":"2A Agency Integrity Score of Aeyde. Score 86/100. Perplexity and ChatGPT omit co-founders Max Schleicher and Andrea Lenczner. Manufacturing in Spain/Alicante correctly cited.","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"datePublished":"2026-04-09","url":"https://www.2aagency.com/reports/aeyde","license":"https://creativecommons.org/licenses/by/4.0/"}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › <a href="/registry/aeyde">Aeyde</a> › Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Integrity Score · Chaussures Quiet Luxury · Berlin · Fondée 2015</div>
+    <h1 class="report-brand">Aeyde</h1>
+    <p class="report-meta">
+      <strong>Noté par 2A Agency</strong> · Émis le 9 avril 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Avril 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num">86</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-item-label">Notaire</div><div class="meta-item-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">9 avril 2026</div></div>
+  <div class="meta-item"><div class="meta-item-label">LLMs testés</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">5 standardisées</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Chaussures berlinoises bien présentes dans les données LLM. <em>Co-fondateurs invisibles sur deux modèles.</em></h2>
+  <p class="body-text">Ce rapport présente les résultats de l'integrity score indépendant de Aeyde par 2A Agency, conduit sur 4 grands modèles de langage en avril 2026. L'audit couvre l'identité des fondateurs, le pays de fabrication, la distribution multicanal, les prix et l'identité de marque chaussures quiet luxury.</p>
+  <p class="body-text">Aeyde obtient un score de <strong>86/100</strong> — solide performance pour une marque berlinoise fondée en 2015 par Max Schleicher et Andrea Lenczner. La marque est bien reconnue pour ses escarpins Ada en cuir lisse à 260 € et sa présence chez Mytheresa, SSENSE, NET-A-PORTER et Selfridges. Un drift récurrent affecte l'identité fondatrice : Perplexity omet les co-fondateurs en ne mentionnant qu'un designer berlinois non nommé, et ChatGPT ne cite qu'une fondatrice unique non identifiée — deux erreurs d'attribution dans le segment de marché où la légitimité créative est centrale.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Identité & Fondation</div><div class="score-card-num sc-amber">72</div></div>
+    <div class="score-card"><div class="score-card-label">Fabrication & Géographie</div><div class="score-card-num sc-green">90</div></div>
+    <div class="score-card"><div class="score-card-label">Distribution</div><div class="score-card-num sc-green">90</div></div>
+    <div class="score-card"><div class="score-card-label">Prix</div><div class="score-card-num sc-green">92</div></div>
+    <div class="score-card"><div class="score-card-label">Identité de marque</div><div class="score-card-num sc-green">88</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-green">86</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fondateurs & fondation</td>
+        <td><span class="v-x">✗</span> <strong>Designer berlinois — co-fondateurs non nommés</strong></td>
+        <td><span class="v-ok">✓</span> Max Schleicher & Andrea Lenczner, Berlin 2015 — exact</td>
+        <td><span class="v-x">✗</span> <strong>Fondatrice unique non nommée</strong></td>
+        <td><span class="v-ok">✓</span> Max Schleicher & Andrea Lenczner, 2015 — exact</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Fabrication</td>
+        <td><span class="v-ok">✓</span> Espagne, Alicante — exact</td>
+        <td><span class="v-ok">✓</span> Espagne — manufactures certifiées</td>
+        <td><span class="v-ok">✓</span> Espagne, Alicante — correct</td>
+        <td><span class="v-ok">✓</span> Alicante, Espagne — exact</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Distribution</td>
+        <td><span class="v-ok">✓</span> aeyde.com · Mytheresa · SSENSE · NET-A-PORTER</td>
+        <td><span class="v-ok">✓</span> Mytheresa · SSENSE · Selfridges · NET-A-PORTER</td>
+        <td><span class="v-ok">✓</span> Distribution multicanal premium correct</td>
+        <td><span class="v-ok">✓</span> Distribution complète citée</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Prix phare</td>
+        <td><span class="v-ok">✓</span> Escarpins Ada ~260 € — cohérent</td>
+        <td><span class="v-ok">✓</span> Gamme 220–320 € — cohérent</td>
+        <td><span class="v-ok">✓</span> Prix cohérents avec aeyde.com</td>
+        <td><span class="v-ok">✓</span> 260 € escarpins Ada — exact</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Identité marque</td>
+        <td><span class="v-ok">✓</span> Chaussures quiet luxury · esthétique berlinoise minimaliste</td>
+        <td><span class="v-ok">✓</span> Positionnement quiet luxury bien décrit</td>
+        <td><span class="v-ok">✓</span> ADN berlinois minimaliste confirmé</td>
+        <td><span class="v-ok">✓</span> Chaussures sculptées · cuir de qualité · Berlin</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Findings</div>
+  <h2 class="section-title">Deux LLMs effacent les co-fondateurs. <em>Fabrication espagnole unanimement reconnue.</em></h2>
+
+  <div class="finding-box amber">
+    <div class="finding-label amber">Drift principal · Identité fondatrice · Perplexity & ChatGPT</div>
+    <h3 class="finding-title">Perplexity et ChatGPT omettent les co-fondateurs Max Schleicher et Andrea Lenczner — l'un des duos fondateurs les plus documentés de la scène chaussures Berlin.</h3>
+    <p class="finding-text">Interrogés sur les fondateurs d'Aeyde, Perplexity ne cite qu'un "designer berlinois" sans nommer quiconque, et ChatGPT évoque une fondatrice unique non identifiée. Les deux co-fondateurs — Max Schleicher (CEO) et Andrea Lenczner (Directrice Créative) — sont pourtant explicitement documentés sur aeyde.com/about ainsi que dans l'ensemble des présentations marque, interviews presse et profils LinkedIn. Gemini et Grok les citent correctement tous les deux.</p>
+    <p class="finding-text"><strong>Impact commercial :</strong> Dans le segment des chaussures quiet luxury, la légitimité créative est un argument de conversion. Un agent IA qui interroge ChatGPT ou Perplexity avant de recommander Aeyde à un acheteur premium génère une description floue de la gouvernance créative de la marque — affectant la confiance dans la cohérence du positionnement. Pour les journalistes et stylistes qui sourcent des informations fondatrices, l'invisibilité des co-fondateurs peut entraîner des attributions erronées ou des silences éditoriaux.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val wrong">Designer berlinois ✗<br>Co-fondateurs omis</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val ok">Max Schleicher &<br>Andrea Lenczner ✓</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val wrong">Fondatrice unique ✗<br>Non nommée</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">Max Schleicher &<br>Andrea Lenczner ✓</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box positive" style="margin-top:16px;">
+    <div class="finding-label green">Point fort · Fabrication & Distribution & Prix · 4 LLMs</div>
+    <h3 class="finding-title">La fabrication en Espagne/Alicante, la distribution premium multicanal et les prix sont unanimement corrects sur les 4 modèles.</h3>
+    <p class="finding-text">Les 4 LLMs identifient correctement la fabrication d'Aeyde en Espagne, avec Alicante cité par Perplexity, ChatGPT et Grok. La présence chez Mytheresa, SSENSE, NET-A-PORTER et Selfridges est bien restituée. Le prix des escarpins Ada à 260 € est cité de façon cohérente. Ces résultats indiquent une couverture médiatique solide sur l'ancrage géographique de la production et la distribution — les deux arguments de vente les plus importants pour une marque de chaussures quiet luxury à ce positionnement prix.</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 86 à <em>pleinement certifié.</em></h2>
+
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Ancrer les deux co-fondateurs dans les données structurées pour corriger Perplexity et ChatGPT</div>
+        <p class="rem-text">Le drift sur l'identité fondatrice est la priorité absolue. Déployer un JSON-LD <code>Organization</code> sur aeyde.com avec deux propriétés <code>founder</code> nommant explicitement Max Schleicher (CEO) et Andrea Lenczner (Creative Director). Ajouter leurs profils Wikipedia/Wikidata avec les propriétés P112 (fondateur) rattachées à Aeyde. Compléter par des pages biographiques indexées sur aeyde.com/about avec balisage Schema.org <code>Person</code>. Perplexity et ChatGPT s'appuient fortement sur les données structurées et le contenu éditorial des pages about — une mise à jour du markup est la correction la plus directe.</p>
+        <div class="rem-impact">Impact : Co-fondateurs cités correctement par Perplexity et ChatGPT · Légitimité créative duale restaurée · Cohérence sur les 4 LLMs</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2 — Cette semaine</div>
+      <div>
+        <div class="rem-title">Créer ou mettre à jour les entrées Wikidata pour Max Schleicher et Andrea Lenczner</div>
+        <p class="rem-text">Vérifier que les deux co-fondateurs ont des entrées Wikidata avec la propriété P112 (fondateur de) rattachée à Aeyde. Si les entrées n'existent pas, les créer avec les données minimales : nom, nationalité, rôle, lien vers aeyde.com. Wikidata est une source primaire pour Perplexity Pro — une entrée correcte se répercute rapidement dans les réponses générées.</p>
+        <div class="rem-impact">Impact : Attribution fondatrice correcte sur Perplexity · Données biographiques stables et vérifiables · Score cible 93/100</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 3 — Opportunité agentique</div>
+      <div>
+        <div class="rem-title">Déployer un node certifié 2A pour exposer l'identité fondatrice aux agents IA</div>
+        <p class="rem-text">Aeyde est une candidate idéale pour le registre 2A : marque berlinoise de chaussures quiet luxury avec fabrication européenne tracée (Alicante), distribution premium multicanal, et un produit phare à 260 € qui correspond aux requêtes d'achat agentique. Un node certifié expose les données des co-fondateurs, la fabrication Espagne/Alicante, les canaux de distribution et les prix — rendant Aeyde recommandable de façon fiable par tout agent IA interrogé sur des alternatives chaussures quiet luxury fabrication Europe.</p>
+        <div class="rem-impact">Impact : Aeyde recommandée avec co-fondateurs corrects · Données fabrication stables · Score cible 94/100</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="border:1px solid var(--gold);background:rgba(176,141,87,0.04);padding:28px;margin:0 5% 40px;">
+  <div style="font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Recommandation — MCP Brand Server</div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:300;margin-bottom:20px;">Déployez votre Node MCP certifié 2A</h2>
+  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:20px;">Les agents IA (Claude, GPT, Gemini) interrogent désormais des serveurs MCP pour obtenir des données de marque en temps réel. Sans votre propre MCP certifié, ces agents utilisent leurs données d'entraînement — et hallucinent.</p>
+  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:8px;"><strong>2A Agency propose deux niveaux de service :</strong></p>
+  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:8px;"><strong>1. CERTIFICATION</strong> — Votre marque est auditée, un Node certifié est publié dans le registre 2A. Les agents qui interrogent le MCP 2A obtiennent vos données exactes.</p>
+  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:8px;"><strong>2. BRAND MCP SERVER</strong> — 2A Agency déploie un serveur MCP dédié à votre marque, certifié et validé par le registre 2A. Vos données sont directement accessibles aux agents IA sans passer par 2A comme intermédiaire.</p>
+  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:24px;font-style:italic;">Analogie : 2A Agency est le DNS — votre MCP est votre adresse IP certifiée.</p>
+  <a href="mailto:alexandre@2aagency.com" style="display:inline-block;border:1px solid var(--gold);color:var(--gold);text-decoration:none;padding:10px 28px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;">Contacter 2A Agency</a>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport de Notation Sémantique — Aeyde · Avril 2026 · 2aagency.com/registry</div>
+</footer>
+
+</body>
+</html>

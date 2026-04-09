@@ -1,0 +1,35 @@
+{
+  "node_id": "to-2019",
+  "brand": "Tove",
+  "founded": 2019,
+  "sector": "Mode Quiet Luxury",
+  "integrity_score": 80,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-04-09",
+  "certified_data": {
+    "product_certified": "Robe midi en soie",
+    "price_eur": 490,
+    "ecommerce": true,
+    "distribution": "tovestudio.com + NET-A-PORTER + ASOS Luxe + Selfridges",
+    "group": "Indépendant — Fondatrices: Holly Wright & Camille Khodara",
+    "manufacturing_country": "Portugal"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "perplexity",
+      "field": "founder",
+      "incorrect": "Fondée par Holly Fulton",
+      "correct": "Fondée par Holly Wright et Camille Khodara — Holly Fulton est une styliste britannique distincte, sans lien avec Tove",
+      "severity": "critical"
+    },
+    {
+      "llm": "grok",
+      "field": "founder",
+      "incorrect": "Holly Fulton citée comme co-fondatrice de Tove",
+      "correct": "Holly Wright (co-fondatrice Tove) — Holly Fulton est une autre designer britannique indépendante",
+      "severity": "critical"
+    }
+  ],
+  "llm_scores": {}
+}

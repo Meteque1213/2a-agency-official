@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kallmeyer — Rapport de Notation Sémantique | 2A Agency</title>
+<meta name="description" content="Audit sémantique 2A Agency de Kallmeyer. Score 83/100. Gemini ne reconnaît pas la sélection NET-A-PORTER Vanguard 2026. Perplexity ignore la distribution SSENSE et NET-A-PORTER.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/reports/kallmeyer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F4EE; --surface: #EDEAE3; --ink: #111111;
+  --gold: #B08D57; --border: rgba(176,141,87,0.22);
+  --gray: #6B6860; --red: #8B2D2D; --green: #2D6A2D; --amber: #7A5A00;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Mono', monospace; line-height: 1.6; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid var(--border); background: rgba(247,244,238,0.96); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; }
+.nav-link { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+.nav-link:hover { color: var(--gold); }
+.breadcrumb { padding: 14px 5%; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--gray); border-bottom: 1px solid var(--border); }
+.breadcrumb a { color: var(--gray); text-decoration: none; }
+.report-hero { padding: 56px 5% 40px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.eyebrow { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.report-brand { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 300; line-height: 1.05; margin-bottom: 10px; }
+.report-meta { font-size: 0.7rem; color: var(--gray); line-height: 1.8; }
+.report-meta strong { color: var(--ink); }
+.score-circle { text-align: center; min-width: 100px; }
+.score-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; color: var(--green); line-height: 1; }
+.score-denom { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); }
+.meta-bar { display: flex; border: 1px solid var(--border); margin: 0 5%; }
+.meta-item { flex: 1; padding: 14px 18px; border-right: 1px solid var(--border); }
+.meta-item:last-child { border-right: none; }
+.meta-item-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.meta-item-val { font-size: 0.78rem; color: var(--ink); }
+section { padding: 56px 5%; border-bottom: 1px solid var(--border); }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--gold); }
+.body-text { font-size: 0.86rem; color: var(--gray); line-height: 1.8; max-width: 680px; margin-bottom: 16px; }
+.score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.score-card { background: var(--bg); padding: 24px 20px; }
+.score-card-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.score-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; line-height: 1; }
+.sc-green { color: var(--green); } .sc-amber { color: var(--amber); } .sc-red { color: var(--red); }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 0.73rem; }
+.matrix-table th { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); padding: 10px 12px; text-align: left; border-bottom: 2px solid var(--ink); }
+.matrix-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.matrix-table tr:hover td { background: var(--surface); }
+.v-ok { color: var(--green); } .v-p { color: var(--amber); } .v-x { color: var(--red); }
+.tag { font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border: 1px solid; display: inline-block; }
+.tag-ok { color: var(--green); border-color: rgba(45,106,45,0.3); }
+.tag-low { color: var(--amber); border-color: rgba(122,90,0,0.3); }
+.tag-crit { color: var(--red); border-color: rgba(139,45,45,0.3); }
+.finding-box { border: 1px solid var(--border); padding: 28px; margin-top: 20px; }
+.finding-box.critical { border-color: rgba(139,45,45,0.4); background: rgba(139,45,45,0.03); }
+.finding-box.amber { border-color: rgba(122,90,0,0.3); background: rgba(122,90,0,0.03); }
+.finding-box.positive { border-color: rgba(45,106,45,0.3); background: rgba(45,106,45,0.02); }
+.finding-label { font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.finding-label.amber { color: var(--amber); }
+.finding-label.green { color: var(--green); }
+.finding-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 12px; }
+.finding-text { font-size: 0.84rem; color: var(--gray); line-height: 1.75; margin-bottom: 12px; }
+.drift-compare { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 16px; }
+.dc-cell { background: var(--bg); padding: 14px 16px; }
+.dc-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.dc-val { font-size: 0.82rem; color: var(--ink); line-height: 1.5; }
+.dc-val.wrong { color: var(--red); }
+.dc-val.ok { color: var(--green); }
+.dc-val.partial { color: var(--amber); }
+.remediation-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.rem-item { background: var(--bg); padding: 24px 28px; display: grid; grid-template-columns: 160px 1fr; gap: 24px; }
+.rem-num { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 4px; }
+.rem-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.rem-text { font-size: 0.82rem; color: var(--gray); line-height: 1.75; margin-bottom: 10px; }
+.rem-impact { font-size: 0.7rem; color: var(--green); letter-spacing: 0.06em; }
+footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+.f-logo span { color: var(--gold); }
+.f-copy { font-size: 0.55rem; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,104,96,0.4); }
+@media(max-width:768px) {
+  .report-hero { grid-template-columns: 1fr; }
+  .meta-bar { flex-direction: column; }
+  .meta-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .score-grid { grid-template-columns: repeat(2,1fr); }
+  .drift-compare { grid-template-columns: repeat(2,1fr); }
+  .rem-item { grid-template-columns: 1fr; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"Kallmeyer Semantic Audit","description":"2A Agency Integrity Score of Kallmeyer. Score 83/100. Gemini does not recognize NET-A-PORTER Vanguard 2026 selection. Perplexity ignores SSENSE and NET-A-PORTER distribution.","creator":{"@type":"Organization","name":"2A Agency","url":"https://www.2aagency.com"},"datePublished":"2026-04-09","url":"https://www.2aagency.com/reports/kallmeyer","license":"https://creativecommons.org/licenses/by/4.0/"}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">2<span>A</span> Agency</a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/registry" class="nav-link">Registre</a>
+    <a href="/#contact" class="nav-link">Auditer ma marque</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">2A Agency</a> › <a href="/registry">Registre</a> › <a href="/registry/kallmeyer">Kallmeyer</a> › Rapport d'audit
+</div>
+
+<div class="report-hero">
+  <div>
+    <div class="eyebrow">Integrity Score · Mode Quiet Luxury · New York · Fondée 2012</div>
+    <h1 class="report-brand">Kallmeyer</h1>
+    <p class="report-meta">
+      <strong>Noté par 2A Agency</strong> · Émis le 9 avril 2026 · Certification v1.0<br>
+      Méthodologie : <strong>4 LLMs · 5 Questions · Avril 2026</strong><br>
+      Conformité EU AI Act : <strong>Article 53</strong>
+    </p>
+  </div>
+  <div class="score-circle">
+    <div class="score-num">83</div>
+    <div class="score-denom">/ 100<br>Integrity Score</div>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-item"><div class="meta-item-label">Notaire</div><div class="meta-item-val">2A Agency</div></div>
+  <div class="meta-item"><div class="meta-item-label">Date</div><div class="meta-item-val">9 avril 2026</div></div>
+  <div class="meta-item"><div class="meta-item-label">LLMs testés</div><div class="meta-item-val">Perplexity Pro · Gemini Pro · ChatGPT · Grok</div></div>
+  <div class="meta-item"><div class="meta-item-label">Questions</div><div class="meta-item-val">5 standardisées</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">Vue d'ensemble</div>
+  <h2 class="section-title">Marque new-yorkaise bien documentée. <em>Gemini ignore le Vanguard. Perplexity réduit la distribution au seul site propre.</em></h2>
+  <p class="body-text">Ce rapport présente les résultats de l'integrity score indépendant de Kallmeyer par 2A Agency, conduit sur 4 grands modèles de langage en avril 2026. L'audit couvre l'identité fondatrice, la distribution multicanal, le pays de fabrication, les prix et les certifications.</p>
+  <p class="body-text">Kallmeyer obtient un score de <strong>83/100</strong> — marque fondée par Tanner Fletcher en 2012, connue pour ses vestes tailleur en laine mélangée produites dans un atelier Manhattan. La marque figure dans la sélection NET-A-PORTER Vanguard 2026 — un fait que Gemini conteste en indiquant que Kallmeyer n'y est pas référencée. Perplexity réduit par ailleurs la distribution à kallmeyerstudio.com uniquement, ignorant la présence chez NET-A-PORTER et SSENSE.</p>
+
+  <div class="score-grid">
+    <div class="score-card"><div class="score-card-label">Identité & Fondation</div><div class="score-card-num sc-green">88</div></div>
+    <div class="score-card"><div class="score-card-label">Fabrication & Géographie</div><div class="score-card-num sc-green">90</div></div>
+    <div class="score-card"><div class="score-card-label">Distribution</div><div class="score-card-num sc-amber">66</div></div>
+    <div class="score-card"><div class="score-card-label">Prix</div><div class="score-card-num sc-green">88</div></div>
+    <div class="score-card"><div class="score-card-label">Certifications</div><div class="score-card-num sc-green">82</div></div>
+    <div class="score-card"><div class="score-card-label">Score global</div><div class="score-card-num sc-green">83</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Matrice de test LLM</div>
+  <h2 class="section-title">Précision factuelle sur <em>4 grands modèles de langage.</em></h2>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Perplexity Pro</th>
+        <th>Gemini Pro</th>
+        <th>ChatGPT</th>
+        <th>Grok</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fondatrice & fondation</td>
+        <td><span class="v-ok">✓</span> Tanner Fletcher, 2012, New York — exact</td>
+        <td><span class="v-ok">✓</span> Tanner Fletcher, 2012 — exact</td>
+        <td><span class="v-ok">✓</span> Tanner Fletcher — correct</td>
+        <td><span class="v-ok">✓</span> Tanner Fletcher, 2012 — exact</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>NET-A-PORTER Vanguard 2026</td>
+        <td><span class="v-ok">✓</span> Vanguard 2026 NET-A-PORTER — exact</td>
+        <td><span class="v-x">✗</span> <strong>Kallmeyer non référencée dans Vanguard 2026</strong></td>
+        <td><span class="v-ok">✓</span> NET-A-PORTER Vanguard 2026 cité</td>
+        <td><span class="v-ok">✓</span> Vanguard 2026 confirmé</td>
+        <td><span class="tag tag-crit">Critique</span></td>
+      </tr>
+      <tr>
+        <td>Distribution</td>
+        <td><span class="v-x">✗</span> <strong>Site propre uniquement — NET-A-PORTER & SSENSE omis</strong></td>
+        <td><span class="v-ok">✓</span> kallmeyerstudio.com · NET-A-PORTER · SSENSE</td>
+        <td><span class="v-ok">✓</span> Distribution multicanal correct</td>
+        <td><span class="v-ok">✓</span> NET-A-PORTER · SSENSE cités</td>
+        <td><span class="tag tag-low">Partiel</span></td>
+      </tr>
+      <tr>
+        <td>Fabrication</td>
+        <td><span class="v-ok">✓</span> New York, atelier Manhattan — exact</td>
+        <td><span class="v-ok">✓</span> New York, production locale — exact</td>
+        <td><span class="v-ok">✓</span> Manhattan, NY — correct</td>
+        <td><span class="v-ok">✓</span> Atelier New York — exact</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+      <tr>
+        <td>Prix phare</td>
+        <td><span class="v-ok">✓</span> Veste tailleur ~780 € — cohérent</td>
+        <td><span class="v-ok">✓</span> Gamme 600–900 € — cohérent</td>
+        <td><span class="v-ok">✓</span> Prix cohérents avec kallmeyerstudio.com</td>
+        <td><span class="v-ok">✓</span> ~780 € — exact</td>
+        <td><span class="tag tag-ok">Exact</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="eyebrow">Findings</div>
+  <h2 class="section-title">Gemini conteste le Vanguard NET-A-PORTER. <em>Perplexity efface la distribution multicanal.</em></h2>
+
+  <div class="finding-box critical">
+    <div class="finding-label">Drift primaire · Distribution · Gemini uniquement</div>
+    <h3 class="finding-title">Gemini indique que Kallmeyer n'est pas référencée dans NET-A-PORTER Vanguard 2026 — une affirmation incorrecte, documentée sur net-a-porter.com.</h3>
+    <p class="finding-text">Interrogé sur la présence de Kallmeyer dans le programme Vanguard 2026 de NET-A-PORTER, Gemini affirme que la marque n'y figure pas. Cette information est erronée : Kallmeyer est bien présente dans la sélection Vanguard 2026, documentée sur net-a-porter.com. Perplexity, ChatGPT et Grok la citent correctement. Il est probable que Gemini s'appuie sur un index antérieur à l'annonce de la sélection 2026.</p>
+    <p class="finding-text"><strong>Impact commercial :</strong> La sélection Vanguard NET-A-PORTER est l'un des signaux de qualification les plus forts pour une marque indépendante quiet luxury. Un agent IA basé sur Gemini qui conteste activement cette sélection génère une information fausse qui peut directement nuire à la crédibilité de la marque auprès des acheteurs et éditeurs qui interrogent Gemini dans leur workflow de sourcing.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val ok">Vanguard 2026 ✓<br>Confirmé</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val wrong">Non référencée ✗<br>Affirmation erronée</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val ok">Vanguard 2026 ✓<br>Cité correctement</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">Vanguard 2026 ✓<br>Confirmé</div></div>
+    </div>
+  </div>
+
+  <div class="finding-box amber" style="margin-top:16px;">
+    <div class="finding-label amber">Drift secondaire · Distribution · Perplexity uniquement</div>
+    <h3 class="finding-title">Perplexity réduit la distribution de Kallmeyer au seul site propre — NET-A-PORTER et SSENSE sont omis.</h3>
+    <p class="finding-text">Perplexity indique que Kallmeyer distribue "principalement via site propre uniquement", ignorant la présence chez NET-A-PORTER (Vanguard 2026) et SSENSE. Les trois autres LLMs citent correctement la distribution multicanal. Cette lacune réduit la perception de l'empreinte distribution de la marque et peut affecter les recommandations agentiques dans les requêtes de sourcing multi-retailer.</p>
+
+    <div class="drift-compare">
+      <div class="dc-cell"><div class="dc-label">Perplexity Pro</div><div class="dc-val wrong">Site propre seul ✗<br>Distribution incomplète</div></div>
+      <div class="dc-cell"><div class="dc-label">Gemini Pro</div><div class="dc-val ok">Multi-canal ✓<br>NAP + SSENSE</div></div>
+      <div class="dc-cell"><div class="dc-label">ChatGPT</div><div class="dc-val ok">Multi-canal ✓<br>Correct</div></div>
+      <div class="dc-cell"><div class="dc-label">Grok</div><div class="dc-val ok">NAP + SSENSE ✓<br>Exact</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Feuille de route</div>
+  <h2 class="section-title">De 83 à <em>pleinement certifié.</em></h2>
+
+  <div class="remediation-list">
+    <div class="rem-item">
+      <div class="rem-num">Priorité 1 — Urgent</div>
+      <div>
+        <div class="rem-title">Corriger le Vanguard Gemini et la distribution Perplexity par des données structurées</div>
+        <p class="rem-text">Deux corrections simultanées. Pour Gemini : déployer un JSON-LD <code>Organization</code> sur kallmeyerstudio.com documentant explicitement la sélection NET-A-PORTER Vanguard 2026 avec un lien vers net-a-porter.com/vanguard comme source. Pour Perplexity : s'assurer que les fiches produit NET-A-PORTER et SSENSE pour Kallmeyer sont indexées et que kallmeyerstudio.com liste explicitement ses revendeurs dans les données structurées avec des liens vérifiables. Perplexity s'appuie sur les données de distribution des retailers pour les requêtes de sourcing.</p>
+        <div class="rem-impact">Impact : Vanguard 2026 confirmé sur Gemini · Distribution multi-canal restaurée sur Perplexity · Cohérence sur les 4 LLMs</div>
+      </div>
+    </div>
+    <div class="rem-item">
+      <div class="rem-num">Priorité 2 — Opportunité agentique</div>
+      <div>
+        <div class="rem-title">Déployer un node certifié 2A pour exposer la distribution et les certifications aux agents IA</div>
+        <p class="rem-text">Kallmeyer est une candidate idéale pour le registre 2A : marque quiet luxury new-yorkaise fondée en 2012, production locale Manhattan, sélection NET-A-PORTER Vanguard 2026, distribution kallmeyerstudio.com · NET-A-PORTER · SSENSE, veste tailleur à 780 €. Un node certifié expose la sélection Vanguard, l'atelier Manhattan, les canaux de distribution et les prix — rendant Kallmeyer recommandable de façon fiable et stable par tout agent IA.</p>
+        <div class="rem-impact">Impact : Kallmeyer recommandée avec Vanguard et distribution corrects · Score cible 93/100</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="border:1px solid var(--gold);background:rgba(176,141,87,0.04);padding:28px;margin:0 5% 40px;">
+  <div style="font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Recommandation — MCP Brand Server</div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:300;margin-bottom:20px;">Déployez votre Node MCP certifié 2A</h2>
+  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:20px;">Les agents IA (Claude, GPT, Gemini) interrogent désormais des serveurs MCP pour obtenir des données de marque en temps réel. Sans votre propre MCP certifié, ces agents utilisent leurs données d'entraînement — et hallucinent.</p>
+  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:8px;"><strong>2A Agency propose deux niveaux de service :</strong></p>
+  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:8px;"><strong>1. CERTIFICATION</strong> — Votre marque est auditée, un Node certifié est publié dans le registre 2A. Les agents qui interrogent le MCP 2A obtiennent vos données exactes.</p>
+  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:8px;"><strong>2. BRAND MCP SERVER</strong> — 2A Agency déploie un serveur MCP dédié à votre marque, certifié et validé par le registre 2A. Vos données sont directement accessibles aux agents IA sans passer par 2A comme intermédiaire.</p>
+  <p style="font-size:0.84rem;color:var(--gray);line-height:1.8;max-width:700px;margin-bottom:24px;font-style:italic;">Analogie : 2A Agency est le DNS — votre MCP est votre adresse IP certifiée.</p>
+  <a href="mailto:alexandre@2aagency.com" style="display:inline-block;border:1px solid var(--gold);color:var(--gold);text-decoration:none;padding:10px 28px;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;">Contacter 2A Agency</a>
+</section>
+
+<footer>
+  <div class="f-logo">2<span>A</span> Agency</div>
+  <div class="f-copy">Rapport de Notation Sémantique — Kallmeyer · Avril 2026 · 2aagency.com/registry</div>
+</footer>
+
+</body>
+</html>
