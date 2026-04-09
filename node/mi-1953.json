@@ -1,0 +1,20 @@
+{
+  "node_id": "mi-1953",
+  "brand": "Missoni",
+  "founded": 1953,
+  "sector": "Mode Italienne — Tricot de Luxe",
+  "integrity_score": 83,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-04-09",
+  "certified_data": {
+    "product_certified": "Cardigan zigzag en laine mérinos",
+    "price_eur": 1450,
+    "ecommerce": true,
+    "distribution": "missoni.com + boutiques propres + Mytheresa + Net-a-Porter",
+    "group": "Missoni SpA — famille Missoni (actionnaire majoritaire) + FSI Sgr (Fondo Strategico Italiano, 41,2% depuis 2018)",
+    "manufacturing_country": "Italie (Varese, Lombardie)"
+  },
+  "hallucination_warnings": [],
+  "llm_scores": {}
+}

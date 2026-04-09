@@ -1,0 +1,42 @@
+{
+  "node_id": "rc-1970",
+  "brand": "Roberto Cavalli",
+  "founded": 1970,
+  "sector": "Mode Italienne de Luxe",
+  "integrity_score": 74,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-04-09",
+  "certified_data": {
+    "product_certified": "Robe maxi imprimée en soie stretch",
+    "price_eur": 1200,
+    "ecommerce": true,
+    "distribution": "robertocavalli.com + boutiques propres + Mytheresa + Farfetch",
+    "group": "DAMAC Properties (Dubaï) — acquis en 2019 après dépôt de bilan de la maison",
+    "manufacturing_country": "Italie (Florence)"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "chatgpt",
+      "field": "statut_independant",
+      "incorrect": "Roberto Cavalli est une marque indépendante, propriété des héritiers Cavalli",
+      "correct": "Roberto Cavalli acquis par DAMAC Properties (Dubaï) en 2019 après dépôt de bilan — famille Cavalli non actionnaire",
+      "severity": "critical"
+    },
+    {
+      "llm": "gemini",
+      "field": "founding_year",
+      "incorrect": "Roberto Cavalli fondé en 1972",
+      "correct": "Roberto Cavalli fondé en 1970 à Florence — première collection présentée à Florence en 1970",
+      "severity": "medium"
+    },
+    {
+      "llm": "perplexity",
+      "field": "directeur_artistique",
+      "incorrect": "Direction artistique assurée par les héritiers de la famille Cavalli",
+      "correct": "Fausto Puglisi nommé directeur artistique en 2020 — famille Cavalli sans rôle opérationnel depuis le rachat DAMAC",
+      "severity": "critical"
+    }
+  ],
+  "llm_scores": {}
+}

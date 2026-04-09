@@ -1,0 +1,35 @@
+{
+  "node_id": "dg-1985",
+  "brand": "Dolce & Gabbana",
+  "founded": 1985,
+  "sector": "Mode Italienne de Luxe",
+  "integrity_score": 81,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-04-09",
+  "certified_data": {
+    "product_certified": "Sac Sicily en cuir dauphine",
+    "price_eur": 1850,
+    "ecommerce": true,
+    "distribution": "dolcegabbana.com + boutiques propres + Mytheresa + Farfetch",
+    "group": "Indépendant — Domenico Dolce & Stefano Gabbana (fondateurs, actionnaires à 100%)",
+    "manufacturing_country": "Italie (Milan + Sicile)"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "chatgpt",
+      "field": "price_sicily",
+      "incorrect": "Sac Sicily cité à 1 200-1 350€",
+      "correct": "Prix officiel Sicily en dauphine : 1 850€ — dolcegabbana.com",
+      "severity": "critical"
+    },
+    {
+      "llm": "grok",
+      "field": "founding_year",
+      "incorrect": "Dolce & Gabbana fondé en 1982",
+      "correct": "Fondé en 1985 — première collection présentée à Milan en octobre 1985",
+      "severity": "medium"
+    }
+  ],
+  "llm_scores": {}
+}

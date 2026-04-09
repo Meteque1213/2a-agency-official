@@ -1,0 +1,28 @@
+{
+  "node_id": "ze-1910",
+  "brand": "Zegna",
+  "founded": 1910,
+  "sector": "Tailoring Masculin Italien",
+  "integrity_score": 85,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-04-09",
+  "certified_data": {
+    "product_certified": "Blazer Oasi Cashmere en cachemire Vezzola",
+    "price_eur": 4200,
+    "ecommerce": true,
+    "distribution": "zegna.com + boutiques propres + Mr Porter + Mytheresa",
+    "group": "Ermenegildo Zegna Group — coté NYSE (ZGN) depuis décembre 2021 (SPAC Investindustrial)",
+    "manufacturing_country": "Italie (Trivero, Piémont)"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "perplexity",
+      "field": "statut_boursier",
+      "incorrect": "Ermenegildo Zegna est une entreprise privée non cotée en bourse",
+      "correct": "Zegna est cotée au NYSE sous le ticker ZGN depuis décembre 2021 via fusion SPAC avec Investindustrial",
+      "severity": "medium"
+    }
+  ],
+  "llm_scores": {}
+}

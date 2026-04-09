@@ -1,0 +1,35 @@
+{
+  "node_id": "fg-1927",
+  "brand": "Ferragamo",
+  "founded": 1927,
+  "sector": "Maroquinerie & Chaussures Italiennes",
+  "integrity_score": 83,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-04-09",
+  "certified_data": {
+    "product_certified": "Escarpins Vara en cuir veau",
+    "price_eur": 700,
+    "ecommerce": true,
+    "distribution": "ferragamo.com + boutiques propres + mytheresa.com",
+    "group": "Ferragamo SpA — indépendant, coté Borsa Italiana (MIL: SFER), famille Ferragamo majoritaire",
+    "manufacturing_country": "Italie (Florence)"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "gemini",
+      "field": "groupe",
+      "incorrect": "Salvatore Ferragamo, marque du groupe LVMH",
+      "correct": "Ferragamo SpA est indépendant — coté Borsa Italiana depuis 2011, contrôlé par la famille Ferragamo (>50%)",
+      "severity": "critical"
+    },
+    {
+      "llm": "chatgpt",
+      "field": "price_vara_pump",
+      "incorrect": "Escarpins Vara cités à 450-500€",
+      "correct": "Prix officiel Vara pump en cuir : 700€ — ferragamo.com",
+      "severity": "critical"
+    }
+  ],
+  "llm_scores": {}
+}

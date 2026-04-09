@@ -1,0 +1,35 @@
+{
+  "node_id": "fn-1925",
+  "brand": "Fendi",
+  "founded": 1925,
+  "sector": "Mode Italienne de Luxe",
+  "integrity_score": 83,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-04-09",
+  "certified_data": {
+    "product_certified": "Sac Baguette en cuir selleria",
+    "price_eur": 3900,
+    "ecommerce": true,
+    "distribution": "fendi.com + boutiques propres + Mytheresa + NET-A-PORTER",
+    "group": "LVMH (acquis 2001, filiale à 100%)",
+    "manufacturing_country": "Italie (Rome)"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "gemini",
+      "field": "karl_lagerfeld_year",
+      "incorrect": "Karl Lagerfeld rejoint Fendi en 1966",
+      "correct": "Karl Lagerfeld collabore avec Fendi depuis 1965 — relation documentée dans toutes les archives officielles Fendi",
+      "severity": "medium"
+    },
+    {
+      "llm": "chatgpt",
+      "field": "price_baguette",
+      "incorrect": "Baguette en cuir estimée 2 500-2 800€",
+      "correct": "Prix officiel Baguette selleria : 3 900€ — fendi.com",
+      "severity": "critical"
+    }
+  ],
+  "llm_scores": {}
+}

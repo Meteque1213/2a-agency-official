@@ -1,0 +1,35 @@
+{
+  "node_id": "vs-1978",
+  "brand": "Versace",
+  "founded": 1978,
+  "sector": "Mode Haute Couture Italienne",
+  "integrity_score": 82,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 5 questions standardisées",
+  "audit_date": "2026-04-09",
+  "certified_data": {
+    "product_certified": "Sac Medusa '95 en cuir vitello liscio",
+    "price_eur": 1250,
+    "ecommerce": true,
+    "distribution": "versace.com + boutiques propres + Mytheresa + Farfetch",
+    "group": "Capri Holdings (acquis décembre 2018, 2,12 Md$)",
+    "manufacturing_country": "Italie (Milan)"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "chatgpt",
+      "field": "capri_acquisition_year",
+      "incorrect": "Capri Holdings rachète Versace en 2019",
+      "correct": "Acquisition Capri Holdings finalisée décembre 2018 — annoncée juillet 2018, closing décembre 2018",
+      "severity": "medium"
+    },
+    {
+      "llm": "perplexity",
+      "field": "price_medusa95",
+      "incorrect": "Medusa '95 estimée à 800-900€",
+      "correct": "Prix officiel Medusa '95 small : 1 250€ — versace.com",
+      "severity": "critical"
+    }
+  ],
+  "llm_scores": {}
+}
