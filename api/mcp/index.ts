@@ -74,7 +74,7 @@ function callTool(name: string, args: any) {
       critical_findings: warnings.map((w: any) =>
         `[${w.llm}] ${w.field}: "${w.incorrect}" → correct: "${w.correct}"`
       ),
-      source_url: `https://www.2aagency.com/reports/${args.brand_name.toLowerCase().replace(/ /g, "-")}`
+      source_url: `https://www.2aagency.com/reports/${args.brand_name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ /g, "-")}`
     });
   }
 
