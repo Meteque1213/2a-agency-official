@@ -62,7 +62,7 @@
                             <span class="text-[9px] text-emerald-900 font-bold uppercase tracking-widest">Base Mainnet L2 Anchor Active</span>
                         </div>
                         <p class="text-[10px] text-emerald-900/80 leading-relaxed max-w-xl mt-2">
-                            Ce registre est notarisé de manière immuable. Le Root Hash certifie l'intégrité de <strong><span id="anchor-count">2698</span> Unique Trust Nodes</strong>.
+                            This registry is immutably notarized. The Root Hash certifies the integrity of <strong><span id="anchor-count">2698</span> Unique Trust Nodes</strong>.
                         </p>
                     </div>
                     <a href="https://basescan.org/tx/0x4b616647ec8ab1366149c9521c1913892a0456bb024cd614b5c94dd6d7bbd880" 
@@ -86,7 +86,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="space-y-4">
                     <p class="text-[10px] text-emerald-900/70 leading-relaxed uppercase tracking-wider">
-                        Déposez votre fichier <code class="bg-emerald-50 px-1 py-0.5 rounded text-2a-emerald">registry.json</code> pour comparer son empreinte.
+                        Drop your <code class="bg-emerald-50 px-1 py-0.5 rounded text-2a-emerald">registry.json</code> file to compare its fingerprint.
                     </p>
                     <input type="file" id="fileInput" class="hidden" accept=".json">
                     <button onclick="document.getElementById('fileInput').click()" 
@@ -143,7 +143,7 @@
                 renderAudits(currentData);
             } catch (err) {
                 console.error("Erreur:", err);
-                container.innerHTML = `<div class="text-center py-20 text-red-500 font-mono text-[10px] uppercase">Erreur de chargement du registre.</div>`;
+                container.innerHTML = `<div class="text-center py-20 text-red-500 font-mono text-[10px] uppercase">Registry loading error.</div>`;
             }
         }
 
