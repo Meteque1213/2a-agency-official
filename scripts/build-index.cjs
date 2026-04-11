@@ -12,14 +12,17 @@ for (const file of files) {
     );
     const label = content.brand || content.name;
     if (label) {
-      index[label.toLowerCase()] = content;
-      // Alias sans accents pour compatibilité
-      const normalized = label.toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
-      if (normalized !== label.toLowerCase()) {
-        index[normalized] = content;
-      }
+      const lower = label.toLowerCase();
+      index[lower] = content;
+      // Alias sans accents
+      const normalized = lower.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      if (normalized !== lower) index[normalized] = content;
+      // Alias avec tirets (espaces → tirets) pour URLs slug-style
+      const slugged = normalized.replace(/\s+/g, "-").replace(/[&]/g, "").replace(/-+/g, "-");
+      if (slugged !== normalized && slugged !== lower) index[slugged] = content;
+      // Alias avec espaces depuis slug (tirets → espaces)
+      const spaced = normalized.replace(/-/g, " ");
+      if (spaced !== normalized && spaced !== lower) index[spaced] = content;
     }
   } catch {}
 }
