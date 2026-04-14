@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology — 2A Agency</title>
+<meta name="description" content="2A Agency audit methodology. 6 standardized questions, 4 LLMs, cross-verification against primary sources. Version 1.0 — April 2026.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.2aagency.com/methodology">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F4EE;
+  --surface: #EFECE5;
+  --border: #DDD8CE;
+  --gold: #B08D57;
+  --gold-light: #C9A96E;
+  --text: #1a1814;
+  --text-dim: #6b6459;
+  --text-muted: #9b9189;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+nav a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+nav a:hover { color: var(--gold); }
+nav a.active { color: var(--gold); }
+
+/* ── Hero ────────────────────────────────────────────── */
+
+.hero {
+  padding: 80px 48px 60px;
+  border-bottom: 1px solid var(--border);
+  max-width: 900px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-meta {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.meta-item {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.meta-item strong {
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+/* ── Layout ──────────────────────────────────────────── */
+
+.content {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: calc(100vh - 200px);
+}
+
+/* ── Sidebar ─────────────────────────────────────────── */
+
+.sidebar {
+  border-right: 1px solid var(--border);
+  padding: 48px 32px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-title {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.sidebar nav {
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 8px 0;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+  width: 100%;
+  transition: color 0.2s;
+}
+
+.sidebar nav a:hover { color: var(--gold); }
+
+.sidebar-stats {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(176,141,87,0.1);
+}
+
+.stat-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.stat-val {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--gold);
+}
+
+/* ── Main content ────────────────────────────────────── */
+
+.main {
+  padding: 48px 64px 80px;
+  max-width: 760px;
+}
+
+/* ── Sections ────────────────────────────────────────── */
+
+.section {
+  margin-bottom: 64px;
+  padding-bottom: 64px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section-number {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.section h2 {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.section h2 em { font-style: italic; color: var(--gold); }
+
+.section p {
+  color: var(--text-dim);
+  margin-bottom: 16px;
+  line-height: 1.8;
+  font-size: 13px;
+}
+
+.section p:last-child { margin-bottom: 0; }
+
+/* ── Question cards ──────────────────────────────────── */
+
+.questions-grid {
+  display: grid;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 28px;
+}
+
+.q-card {
+  background: var(--bg);
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 16px;
+  align-items: start;
+  transition: background 0.2s;
+}
+
+.q-card:hover { background: var(--surface); }
+
+.q-num {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.q-content {}
+
+.q-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.q-title {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.q-desc {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+/* ── LLM table ───────────────────────────────────────── */
+
+.llm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 28px;
+}
+
+.llm-card {
+  background: var(--bg);
+  padding: 20px 24px;
+}
+
+.llm-name {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.llm-meta {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.llm-weakness {
+  font-size: 11px;
+  color: var(--text-dim);
+  padding: 8px 12px;
+  background: var(--surface);
+  border-left: 2px solid var(--gold);
+}
+
+/* ── Score table ─────────────────────────────────────── */
+
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 28px;
+  font-size: 12px;
+}
+
+.score-table th {
+  text-align: left;
+  padding: 10px 16px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-weight: 400;
+  border-bottom: 1px solid var(--border);
+}
+
+.score-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(221,216,206,0.5);
+  color: var(--text-dim);
+}
+
+.score-table tr:hover td { background: var(--surface); }
+
+.sev-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 2px;
+}
+
+.sev-c { background: rgba(176,141,87,0.12); color: var(--gold); }
+.sev-h { background: rgba(139,100,40,0.1); color: #7a5a28; }
+.sev-m { background: rgba(107,100,89,0.1); color: var(--text-dim); }
+.sev-l { background: rgba(155,145,137,0.1); color: var(--text-muted); }
+
+/* ── Patterns grid ───────────────────────────────────── */
+
+.patterns-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 28px;
+}
+
+.pattern-card {
+  background: var(--bg);
+  padding: 18px 20px;
+}
+
+.p-num {
+  font-size: 10px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+
+.p-title {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.p-example {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── Process steps ───────────────────────────────────── */
+
+.steps {
+  margin-top: 28px;
+  counter-reset: step;
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  counter-increment: step;
+}
+
+.step:last-child { border-bottom: none; }
+
+.step-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-content {}
+
+.step-title {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.step-desc {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+/* ── Signature block ─────────────────────────────────── */
+
+.signature {
+  margin-top: 48px;
+  padding: 32px 40px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sig-left {}
+
+.sig-name {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.sig-title {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sig-right {
+  text-align: right;
+}
+
+.sig-version {
+  font-size: 11px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+
+.sig-date {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ── Footer ──────────────────────────────────────────── */
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.footer-right {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-right a {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-right a:hover { color: var(--gold); }
+
+@media (max-width: 768px) {
+  header { padding: 16px 24px; }
+  .hero { padding: 48px 24px 40px; }
+  .content { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+  .main { padding: 32px 24px 60px; }
+  .llm-grid { grid-template-columns: 1fr; }
+  .patterns-grid { grid-template-columns: 1fr; }
+  .signature { flex-direction: column; gap: 20px; text-align: center; }
+  .sig-right { text-align: center; }
+  footer { flex-direction: column; gap: 16px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">2A Agency</a>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/registry">Registry</a>
+    <a href="/methodology" class="active">Methodology</a>
+    <a href="https://huggingface.co/datasets/2a-agency/brand-semantic-integrity-registry" target="_blank" rel="noopener">Dataset</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Public Document · Version 1.0</div>
+  <h1>How we <em>audit</em><br>brand integrity</h1>
+  <div class="hero-meta">
+    <div class="meta-item"><strong>100</strong> brands audited</div>
+    <div class="meta-item"><strong>4</strong> LLMs tested</div>
+    <div class="meta-item"><strong>6</strong> questions per brand</div>
+    <div class="meta-item"><strong>233</strong> hallucinations documented</div>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-title">Contents</div>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#questions">6 Questions</a>
+      <a href="#llms">4 LLMs Tested</a>
+      <a href="#scoring">Scoring System</a>
+      <a href="#verification">Verification</a>
+      <a href="#patterns">12 Patterns</a>
+      <a href="#process">Full Process</a>
+    </nav>
+
+    <div class="sidebar-stats">
+      <div class="stat-row">
+        <span class="stat-label">Brands</span>
+        <span class="stat-val">100</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Hallucinations</span>
+        <span class="stat-val">233</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Sessions</span>
+        <span class="stat-val">9</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Avg Score</span>
+        <span class="stat-val">83</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Overview -->
+    <section class="section" id="overview">
+      <div class="section-number">01 — Overview</div>
+      <h2>What we <em>measure</em></h2>
+      <p>Large Language Models hallucinate on brand data. They cite wrong prices, outdated governance, incorrect ownership structures, and fabricated certifications. For luxury brands, these errors have direct commercial consequences — in pricing, in recommendation systems, in agentic commerce transactions.</p>
+      <p>The 2A Agency audit measures how accurately each of the four major public LLMs represents a brand's certified data. The output is a single integrity score out of 100, a set of certified data points, and a documented list of hallucinations per LLM per field.</p>
+      <p>Every score in this registry is the result of a real audit. No score is estimated or fabricated. Every hallucination is verified against a primary source before being documented.</p>
+    </section>
+
+    <!-- Questions -->
+    <section class="section" id="questions">
+      <div class="section-number">02 — Questions Framework</div>
+      <h2>6 standardized <em>questions</em></h2>
+      <p>Each brand is audited with the same six questions, asked simultaneously and independently to all four LLMs. The questions are designed to surface the most commercially sensitive hallucination vectors.</p>
+
+      <div class="questions-grid">
+        <div class="q-card">
+          <div class="q-num">1</div>
+          <div class="q-content">
+            <div class="q-label">Pricing</div>
+            <div class="q-title">Flagship product price</div>
+            <div class="q-desc">Exact price in EUR/CHF/USD of the most iconic product. Designed to detect price inflation, USD/EUR confusion, and secondary market vs retail mix-ups.</div>
+          </div>
+        </div>
+        <div class="q-card">
+          <div class="q-num">2</div>
+          <div class="q-content">
+            <div class="q-label">Governance</div>
+            <div class="q-title">Current DA + CEO</div>
+            <div class="q-desc">Who currently leads the brand creatively and operationally. The highest-hallucination field — LLMs regularly cite DA and CEO who left 12–24 months prior.</div>
+          </div>
+        </div>
+        <div class="q-card">
+          <div class="q-num">3</div>
+          <div class="q-content">
+            <div class="q-label">Ownership</div>
+            <div class="q-title">Group structure</div>
+            <div class="q-desc">Exact ownership — which group, since when, percentage held. Detects LVMH/Kering confusion, Arnault personal vs LVMH group errors, and recent acquisitions ignored.</div>
+          </div>
+        </div>
+        <div class="q-card">
+          <div class="q-num">4</div>
+          <div class="q-content">
+            <div class="q-label">Distribution</div>
+            <div class="q-title">E-commerce and retail</div>
+            <div class="q-desc">Does the brand sell online? Where? LLMs regularly invent e-boutiques for brands that are deliberately offline-first, or miss significant distribution channels.</div>
+          </div>
+        </div>
+        <div class="q-card">
+          <div class="q-num">5</div>
+          <div class="q-content">
+            <div class="q-label">Manufacturing</div>
+            <div class="q-title">Origin — country and city</div>
+            <div class="q-desc">Where products are made, at what level of precision. Detects generic "Made in Italy" answers when the correct answer is a specific city or region.</div>
+          </div>
+        </div>
+        <div class="q-card">
+          <div class="q-num">6</div>
+          <div class="q-content">
+            <div class="q-label">Strategy</div>
+            <div class="q-title">Recent positioning or certification</div>
+            <div class="q-desc">Current creative direction, RSE commitments, or a key recent development. Exposes outdated strategic narratives and ignored certifications.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LLMs -->
+    <section class="section" id="llms">
+      <div class="section-number">03 — LLMs Tested</div>
+      <h2>Four <em>models</em>, one standard</h2>
+      <p>All four major publicly available LLMs are tested on every brand. Each receives the same questions with no additional context or system prompt. Responses are captured and cross-verified independently.</p>
+
+      <div class="llm-grid">
+        <div class="llm-card">
+          <div class="llm-name">ChatGPT</div>
+          <div class="llm-meta">OpenAI · GPT-4o</div>
+          <div class="llm-weakness">Primary weakness: USD/EUR confusion · governance outdated 12–18 months</div>
+        </div>
+        <div class="llm-card">
+          <div class="llm-name">Gemini</div>
+          <div class="llm-meta">Google · Gemini Pro</div>
+          <div class="llm-weakness">Primary weakness: systematic price inflation · invents CEOs to fill gaps (Pattern 12)</div>
+        </div>
+        <div class="llm-card">
+          <div class="llm-name">Perplexity</div>
+          <div class="llm-meta">Perplexity AI · Pro</div>
+          <div class="llm-weakness">Primary weakness: distribution channel errors · misses recent nominations</div>
+        </div>
+        <div class="llm-card">
+          <div class="llm-name">Grok</div>
+          <div class="llm-meta">xAI · Grok</div>
+          <div class="llm-weakness">Primary weakness: price over-inflation on secondary market data · strongest on sourcing</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scoring -->
+    <section class="section" id="scoring">
+      <div class="section-number">04 — Scoring System</div>
+      <h2>Integrity score <em>out of 100</em></h2>
+      <p>Each brand receives a single integrity score reflecting how accurately the four LLMs collectively represent its certified data. The score is the average of per-LLM scores, weighted by the severity of identified drifts.</p>
+
+      <table class="score-table">
+        <thead>
+          <tr>
+            <th>Severity</th>
+            <th>Score Impact</th>
+            <th>Definition</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="sev-tag sev-c">Critical</span></td>
+            <td>−10 to −15</td>
+            <td>Factually wrong on key data</td>
+            <td>Founder cited as alive (deceased)</td>
+          </tr>
+          <tr>
+            <td><span class="sev-tag sev-h">High</span></td>
+            <td>−6 to −9</td>
+            <td>Significant error affecting brand perception</td>
+            <td>DA cited 2 years after departure</td>
+          </tr>
+          <tr>
+            <td><span class="sev-tag sev-m">Medium</span></td>
+            <td>−3 to −5</td>
+            <td>Partial or outdated information</td>
+            <td>Price ±30% of certified range</td>
+          </tr>
+          <tr>
+            <td><span class="sev-tag sev-l">Low</span></td>
+            <td>−1 to −2</td>
+            <td>Minor imprecision or omission</td>
+            <td>City missing — country correct</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top: 20px;">A brand scoring 90+ indicates exceptional LLM representation with only minor drifts. A score below 75 indicates systemic errors that could lead to commercially harmful misinformation at scale.</p>
+    </section>
+
+    <!-- Verification -->
+    <section class="section" id="verification">
+      <div class="section-number">05 — Verification</div>
+      <h2>Primary sources <em>only</em></h2>
+      <p>Every data point in the 2A Agency registry is cross-verified against a primary source before being certified. We do not accept secondary sources, press coverage, or LLM-generated claims as verification.</p>
+      <p>Primary sources used include: official brand websites and e-commerce platforms, group annual reports (LVMH, Kering, Richemont), official press releases and regulatory filings, RCS registry entries, authenticated trade press (WWD, Business of Fashion, Vogue Business), and direct contact with brand communications teams when necessary.</p>
+      <p>Each certified data point in a node JSON includes the source type. When a source cannot be verified, the field is marked as unverified and excluded from the scoring calculation.</p>
+    </section>
+
+    <!-- Patterns -->
+    <section class="section" id="patterns">
+      <div class="section-number">06 — Hallucination Patterns</div>
+      <h2>12 documented <em>patterns</em></h2>
+      <p>After 100 brands and 233 documented hallucinations, 12 recurring patterns have been identified. These patterns are consistent across LLMs and sessions — they represent structural failure modes in how LLMs encode and retrieve brand data.</p>
+
+      <div class="patterns-grid">
+        <div class="pattern-card">
+          <div class="p-num">Pattern 01</div>
+          <div class="p-title">DA/CEO outdated</div>
+          <div class="p-example">Citing leadership 12–24 months after departure</div>
+        </div>
+        <div class="pattern-card">
+          <div class="p-num">Pattern 02</div>
+          <div class="p-title">Systematic price inflation</div>
+          <div class="p-example">Gemini: +7–33% on luxury goods</div>
+        </div>
+        <div class="pattern-card">
+          <div class="p-num">Pattern 03</div>
+          <div class="p-title">No public price → invention</div>
+          <div class="p-example">DRC +400%, Greubel Forsey −75%</div>
+        </div>
+        <div class="pattern-card">
+          <div class="p-num">Pattern 04</div>
+          <div class="p-title">Distribution channel errors</div>
+          <div class="p-example">Inventing e-boutiques for offline brands</div>
+        </div>
+        <div class="pattern-card">
+          <div class="p-num">Pattern 05</div>
+          <div class="p-title">USD/EUR confusion</div>
+          <div class="p-example">ChatGPT: systematic currency mix-up</div>
+        </div>
+        <div class="pattern-card">
+          <div class="p-num">Pattern 06</div>
+          <div class="p-title">Recent nominations ignored</div>
+          <div class="p-example">DA/CEO &lt;18 months absent in 3/4 LLMs</div>
+        </div>
+        <div class="pattern-card">
+          <div class="p-num">Pattern 07</div>
+          <div class="p-title">Secondary market vs official</div>
+          <div class="p-example">DRC, Graff, F.P. Journe pricing errors</div>
+        </div>
+        <div class="pattern-card">
+          <div class="p-num">Pattern 08</div>
+          <div class="p-title">Recent certifications denied</div>
+          <div class="p-example">EPV, B Corp 2024–2025 ignored</div>
+        </div>
+        <div class="pattern-card">
+          <div class="p-num">Pattern 09</div>
+          <div class="p-title">CEO &lt;18 months ignored</div>
+          <div class="p-example">Krug, Boucheron, Ferragamo, Patou</div>
+        </div>
+        <div class="pattern-card">
+          <div class="p-num">Pattern 10</div>
+          <div class="p-title">Founder death ignored</div>
+          <div class="p-example">Roberto Cavalli 4/4 LLMs · Armani 2/4</div>
+        </div>
+        <div class="pattern-card">
+          <div class="p-num">Pattern 11</div>
+          <div class="p-title">DA appointed &lt;12 months absent</div>
+          <div class="p-example">Versace, Fendi, Givenchy, Balenciaga</div>
+        </div>
+        <div class="pattern-card">
+          <div class="p-num">Pattern 12</div>
+          <div class="p-title">Hallucinated CEO (gap-filling)</div>
+          <div class="p-example">Gemini invents "Ennio Fontana" (Cavalli)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section" id="process">
+      <div class="section-number">07 — Full Process</div>
+      <h2>From question to <em>certified node</em></h2>
+      <p>A complete brand audit follows seven steps, from initial LLM querying to publication of the certified node JSON and registry page.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Simultaneous LLM queries</div>
+            <div class="step-desc">All 6 questions are asked to all 4 LLMs simultaneously, with identical phrasing and no additional context. Responses are captured in full.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Primary source verification</div>
+            <div class="step-desc">Each factual claim across 24 responses is cross-checked against primary sources. Brand websites, group filings, official press releases, and registries.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Drift identification and classification</div>
+            <div class="step-desc">Every discrepancy between LLM response and verified data is classified by field, LLM, severity (critical/high/medium/low), and pattern category.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Integrity score calculation</div>
+            <div class="step-desc">Score calculated per LLM based on severity-weighted drifts. Final brand score is the average across 4 LLMs, rounded to nearest integer.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Certified node JSON generation</div>
+            <div class="step-desc">A structured JSON node is generated containing certified_data, hallucination_warnings, llm_scores, and metadata. Published to /node/ on the registry.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <div class="step-content">
+            <div class="step-title">Registry publication</div>
+            <div class="step-desc">Report page and registry entry published at 2aagency.com. Node added to brand-data.ts for MCP serving. HuggingFace dataset updated.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">7</div>
+          <div class="step-content">
+            <div class="step-title">Periodic re-audit</div>
+            <div class="step-desc">Brands are re-audited at 90-day intervals or immediately following a major governance or pricing change. Scores and nodes are versioned and dated.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature -->
+    <div class="signature">
+      <div class="sig-left">
+        <div class="sig-name">Alexandre Quillet</div>
+        <div class="sig-title">Founder — 2A Agency · alexandre@2aagency.com</div>
+      </div>
+      <div class="sig-right">
+        <div class="sig-version">Version 1.0</div>
+        <div class="sig-date">Published April 2026 · 2aagency.com/methodology</div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-left">
+    © 2026 2A Agency · CC BY 4.0
+  </div>
+  <div class="footer-right">
+    <a href="/">Home</a>
+    <a href="/registry">Registry</a>
+    <a href="https://huggingface.co/datasets/2a-agency/brand-semantic-integrity-registry" target="_blank" rel="noopener">Dataset</a>
+    <a href="https://www.2aagency.com/api/mcp" target="_blank" rel="noopener">MCP</a>
+  </div>
+</footer>
+
+</body>
+</html>
