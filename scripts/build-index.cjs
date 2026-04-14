@@ -20,9 +20,15 @@ for (const file of files) {
       // Alias avec tirets (espaces → tirets) pour URLs slug-style
       const slugged = normalized.replace(/\s+/g, "-").replace(/[&]/g, "").replace(/-+/g, "-");
       if (slugged !== normalized && slugged !== lower) index[slugged] = content;
+      // Alias sans points (f.p.-journe → fp-journe)
+      const noDots = slugged.replace(/\./g, "");
+      if (noDots !== slugged && noDots !== normalized && noDots !== lower) index[noDots] = content;
       // Alias avec espaces depuis slug (tirets → espaces)
       const spaced = normalized.replace(/-/g, " ");
       if (spaced !== normalized && spaced !== lower) index[spaced] = content;
+      // Alias mb-and-f style (&→-and-)
+      const andSlug = normalized.replace(/\s*&\s*/g, "-and-").replace(/\s+/g, "-").replace(/-+/g, "-");
+      if (andSlug !== slugged && andSlug !== normalized && andSlug !== lower) index[andSlug] = content;
     }
   } catch {}
 }

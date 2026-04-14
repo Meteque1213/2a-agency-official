@@ -1,21 +1,21 @@
 {
   "name": "2A Agency Brand Integrity Registry",
-  "description": "Certified semantic data for luxury, fashion, real estate and DNVB brands. Prevents LLM hallucinations on brand facts: prices, certifications, founders, governance, distribution. 80 brands audited across 7 sessions.",
-  "version": "2.0",
+  "description": "Certified semantic data for luxury, fashion, real estate, DNVB and independent watchmaking brands. Prevents LLM hallucinations on brand facts: prices, certifications, founders, governance, distribution. 91 brands audited across 8 sessions.",
+  "version": "2.1",
   "endpoint": "https://www.2aagency.com/api/mcp",
   "tools": [
     "get_brand_score",
     "get_certified_data",
     "get_hallucination_warnings"
   ],
-  "brands_covered": 80,
-  "hallucinations_documented": 161,
-  "average_score": 82,
-  "sessions_completed": 7,
+  "brands_covered": 91,
+  "hallucinations_documented": 189,
+  "average_score": 83,
+  "sessions_completed": 8,
   "sectors_covered": [
     "Luxe / Mode",
     "Haute Joaillerie",
-    "Horlogerie",
+    "Horlogerie Indépendante",
     "Maroquinerie",
     "Vins & Spiritueux",
     "Automobile",
@@ -23,13 +23,15 @@
     "Immobilier",
     "DNVB",
     "Quiet Luxury",
-    "Mode Italienne"
+    "Mode Italienne",
+    "Horlogerie Niche Indépendante"
   ],
   "registry_url": "https://www.2aagency.com/registry",
   "dataset_url": "https://huggingface.co/datasets/2a-agency/brand-semantic-integrity-registry",
   "protocol": "MCP — Model Context Protocol",
   "transport": "Streamable HTTP (stateless)",
+  "ucp_compliant": "Shopify Universal Commerce Protocol April 2026",
   "eu_ai_act": "Article 53 compliant",
   "contact": "alexandre@2aagency.com",
-  "last_updated": "2026-04-09"
+  "last_updated": "2026-04-14"
 }
