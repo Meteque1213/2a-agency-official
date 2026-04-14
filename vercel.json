@@ -9,7 +9,18 @@
       "includeFiles": "api/mcp/brand-index.json,node/**,api/node/**"
     }
   },
+  "rewrites": [
+    { "source": "/api/node/:file.json", "destination": "/node/:file.json" }
+  ],
   "headers": [
+    {
+      "source": "/node/(.*).json",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
     {
       "source": "/api/(.*)",
       "headers": [
