@@ -1,0 +1,57 @@
+{
+  "node_id": "ba-1919",
+  "brand": "Balenciaga",
+  "founded": 1919,
+  "sector": "Luxe Haute Couture",
+  "integrity_score": 82,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions standardisées",
+  "audit_date": "2026-04-14",
+  "certified_data": {
+    "product_certified": "Triple S Sneaker en cuir matelassé",
+    "price_eur": 975,
+    "ecommerce": true,
+    "distribution": "balenciaga.com + boutiques + grands magasins luxe",
+    "group": "Kering",
+    "incoming_creative_director": "Pierpaolo Piccioli (nommé mars 2025)",
+    "founder": "Cristóbal Balenciaga",
+    "founding_city": "San Sebastián, Espagne (1919)",
+    "headquarters": "Paris, France",
+    "manufacturing_country": "Italie + Espagne"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "gemini",
+      "field": "piccioli_creative_director",
+      "incorrect": "Balenciaga sans directeur artistique confirmé post-Demna",
+      "correct": "Pierpaolo Piccioli nommé Directeur Artistique de Balenciaga en mars 2025 — annoncé Kering et WWD mars 2025",
+      "severity": "critical",
+      "category": "governance_error"
+    },
+    {
+      "llm": "chatgpt",
+      "field": "san_sebastian_founding",
+      "incorrect": "Balenciaga fondé à Paris",
+      "correct": "Balenciaga fondé à San Sebastián, Espagne en 1919 par Cristóbal Balenciaga — déménagement à Paris 1937",
+      "severity": "critical",
+      "category": "factual_error"
+    },
+    {
+      "llm": "perplexity",
+      "field": "san_sebastian_founding",
+      "incorrect": "Origine espagnole de Balenciaga non mentionnée",
+      "correct": "Fondation San Sebastián 1919 — fait historique documenté dans tous les livres sur la marque",
+      "severity": "medium",
+      "category": "factual_error"
+    },
+    {
+      "llm": "grok",
+      "field": "san_sebastian_founding",
+      "incorrect": "Balenciaga présentée comme maison française d'origine",
+      "correct": "Maison basque-espagnole à l'origine — Cristóbal Balenciaga né à Getaria, fondation San Sebastián 1919",
+      "severity": "medium",
+      "category": "factual_error"
+    }
+  ],
+  "llm_scores": {}
+}

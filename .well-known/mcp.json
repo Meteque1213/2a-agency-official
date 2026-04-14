@@ -1,17 +1,17 @@
 {
   "name": "2A Agency Brand Integrity Registry",
-  "description": "Certified semantic data for luxury, fashion, real estate, DNVB and independent watchmaking brands. Prevents LLM hallucinations on brand facts: prices, certifications, founders, governance, distribution. 91 brands audited across 8 sessions.",
-  "version": "2.1",
+  "description": "Certified semantic data for luxury, fashion, real estate, DNVB, independent watchmaking and accessible luxury brands. Prevents LLM hallucinations on brand facts: prices, certifications, founders, governance, distribution. 100 brands audited across 9 sessions.",
+  "version": "2.2",
   "endpoint": "https://www.2aagency.com/api/mcp",
   "tools": [
     "get_brand_score",
     "get_certified_data",
     "get_hallucination_warnings"
   ],
-  "brands_covered": 91,
-  "hallucinations_documented": 189,
+  "brands_covered": 100,
+  "hallucinations_documented": 233,
   "average_score": 83,
-  "sessions_completed": 8,
+  "sessions_completed": 9,
   "sectors_covered": [
     "Luxe / Mode",
     "Haute Joaillerie",
@@ -24,7 +24,10 @@
     "DNVB",
     "Quiet Luxury",
     "Mode Italienne",
-    "Horlogerie Niche Indépendante"
+    "Horlogerie Niche Indépendante",
+    "Lunetterie Luxe",
+    "Bagagerie Luxe",
+    "Luxe Accessible"
   ],
   "registry_url": "https://www.2aagency.com/registry",
   "dataset_url": "https://huggingface.co/datasets/2a-agency/brand-semantic-integrity-registry",

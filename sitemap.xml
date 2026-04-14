@@ -49,7 +49,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.2aagency.com/reports/balenciaga</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.2aagency.com/reports/barnes</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.2aagency.com/reports/barton-perreira</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -199,6 +211,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.2aagency.com/reports/givenchy</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.2aagency.com/reports/goyard</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -277,6 +295,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.2aagency.com/reports/kenzo</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.2aagency.com/reports/kretz</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -325,6 +349,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.2aagency.com/reports/marc-jacobs</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.2aagency.com/reports/max-mara</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -349,6 +379,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.2aagency.com/reports/moynat</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.2aagency.com/reports/omega</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -356,6 +392,12 @@
   </url>
   <url>
     <loc>https://www.2aagency.com/reports/patek-philippe</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.2aagency.com/reports/patou</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -391,6 +433,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.2aagency.com/reports/pucci</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.2aagency.com/reports/ralph-lauren</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -404,6 +452,12 @@
   </url>
   <url>
     <loc>https://www.2aagency.com/reports/respire</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.2aagency.com/reports/rimowa</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -589,7 +643,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.2aagency.com/registry/balenciaga</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.2aagency.com/registry/barnes</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.2aagency.com/registry/barton-perreira</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -745,6 +811,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.2aagency.com/registry/givenchy</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.2aagency.com/registry/goyard</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -823,6 +895,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.2aagency.com/registry/kenzo</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.2aagency.com/registry/kretz</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -871,6 +949,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.2aagency.com/registry/marc-jacobs</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.2aagency.com/registry/max-mara</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -895,6 +979,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.2aagency.com/registry/moynat</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.2aagency.com/registry/omega</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -902,6 +992,12 @@
   </url>
   <url>
     <loc>https://www.2aagency.com/registry/patek-philippe</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.2aagency.com/registry/patou</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -937,6 +1033,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.2aagency.com/registry/pucci</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.2aagency.com/registry/ralph-lauren</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -950,6 +1052,12 @@
   </url>
   <url>
     <loc>https://www.2aagency.com/registry/respire</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.2aagency.com/registry/rimowa</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

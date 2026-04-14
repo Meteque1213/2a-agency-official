@@ -1,0 +1,30 @@
+{
+  "node_id": "ri-1950",
+  "brand": "Rimowa",
+  "founded": 1950,
+  "sector": "Bagagerie Luxe",
+  "integrity_score": 86,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions standardisées",
+  "audit_date": "2026-04-14",
+  "certified_data": {
+    "product_certified": "Original Cabin aluminium 36L",
+    "price_eur": 995,
+    "ecommerce": true,
+    "distribution": "rimowa.com + boutiques propres + boutiques LVMH",
+    "group": "LVMH (acquisition 2017) — CEO: Hugues Pietrini",
+    "headquarters": "Cologne, Allemagne",
+    "manufacturing_country": "Allemagne (Cologne) + République Tchèque (Roudnice nad Labem) + Canada"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "perplexity",
+      "field": "production_sites",
+      "incorrect": "Rimowa fabriqué uniquement en Allemagne",
+      "correct": "Rimowa produit en Allemagne (Cologne), République Tchèque (Roudnice nad Labem) et Canada — trois sites documentés rimowa.com/en/made-by-rimowa",
+      "severity": "medium",
+      "category": "factual_error"
+    }
+  ],
+  "llm_scores": {}
+}

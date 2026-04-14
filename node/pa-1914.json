@@ -1,0 +1,39 @@
+{
+  "node_id": "pa-1914",
+  "brand": "Patou",
+  "founded": 1914,
+  "sector": "Mode Luxe Accessible",
+  "integrity_score": 82,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions standardisées",
+  "audit_date": "2026-04-14",
+  "certified_data": {
+    "product_certified": "Blazer houndstooth laine vierge",
+    "price_eur": 650,
+    "ecommerce": true,
+    "distribution": "jeanpatou.com + Net-A-Porter + Selfridges + boutique Paris",
+    "group": "LVMH (relancé 2019)",
+    "former_da": "Guillaume Henry (DA 2019–février 2026, quitté)",
+    "headquarters": "Paris, France",
+    "manufacturing_country": "France + Portugal"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "gemini",
+      "field": "directeur_artistique_henry",
+      "incorrect": "Guillaume Henry est le Directeur Artistique actuel de Patou",
+      "correct": "Guillaume Henry a quitté Patou en février 2026 — post de DA vacant ou nouveau DA non annoncé à la date d'audit",
+      "severity": "critical",
+      "category": "temporal_error"
+    },
+    {
+      "llm": "chatgpt",
+      "field": "directeur_artistique_henry",
+      "incorrect": "Guillaume Henry DA Patou — pas de départ documenté",
+      "correct": "Guillaume Henry a quitté Patou en février 2026 — confirmé par WWD et communiqué LVMH",
+      "severity": "medium",
+      "category": "temporal_error"
+    }
+  ],
+  "llm_scores": {}
+}

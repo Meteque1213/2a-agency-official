@@ -1,0 +1,39 @@
+{
+  "node_id": "gi-1952",
+  "brand": "Givenchy",
+  "founded": 1952,
+  "sector": "Luxe Haute Couture",
+  "integrity_score": 84,
+  "rated_by": "2A Agency",
+  "rating_methodology": "4 LLMs x 6 questions standardisées",
+  "audit_date": "2026-04-14",
+  "certified_data": {
+    "product_certified": "Sac Antigona Small en cuir grainé",
+    "price_eur": 1850,
+    "ecommerce": true,
+    "distribution": "givenchy.com + boutiques + grands magasins luxe",
+    "group": "LVMH — Directeur Artistique: Matthew M. Williams (Activewear) / Matthew Burton (Couture, nommé 2024)",
+    "founder": "Hubert de Givenchy",
+    "headquarters": "Paris, France",
+    "manufacturing_country": "Italie + France (ateliers)"
+  },
+  "hallucination_warnings": [
+    {
+      "llm": "gemini",
+      "field": "directeur_artistique_burton",
+      "incorrect": "Matthew Burton nommé DA Givenchy en 2025",
+      "correct": "Matthew Burton nommé Directeur Artistique Givenchy Couture en mars 2024 — annoncé par LVMH mars 2024 (Gemini date avec +12 mois de retard)",
+      "severity": "medium",
+      "category": "temporal_error"
+    },
+    {
+      "llm": "chatgpt",
+      "field": "directeur_artistique_actuel",
+      "incorrect": "Directeur Artistique de Givenchy non précisé post-2023",
+      "correct": "Matthew Burton nommé DA Couture Givenchy mars 2024 — documenté Vogue, WWD, Business of Fashion",
+      "severity": "low",
+      "category": "factual_error"
+    }
+  ],
+  "llm_scores": {}
+}
