@@ -26,7 +26,10 @@
     "creative_director_since": "2025-07",
     "manufacturing_country": "Italie",
     "manufacturing_region": "Toscane, Florence, Scandicci",
-    "rse_certifications": ["Gucci Equilibrium", "Kering Standards"]
+    "rse_certifications": [
+      "Gucci Equilibrium",
+      "Kering Standards"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -47,5 +50,18 @@
       "pattern": "ChatGPT gouvernance périmée"
     }
   ],
-  "llm_scores": {"perplexity": 95, "gemini": 90, "chatgpt": 65, "grok": 90}
+  "llm_scores": {
+    "perplexity": 95,
+    "gemini": 90,
+    "chatgpt": 65,
+    "grok": 90
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-02",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

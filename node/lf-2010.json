@@ -24,7 +24,9 @@
     "manufacturing_country": "Suisse",
     "manufacturing_region": "Plan-les-Ouates, Grand-Genève",
     "production_annual": "300-500 pièces",
-    "rse_certifications": ["AHCI"]
+    "rse_certifications": [
+      "AHCI"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -53,5 +55,18 @@
       "pattern": "Confusion fondateur / CEO opérationnel — structure familiale mal documentée"
     }
   ],
-  "llm_scores": {"perplexity": 75, "gemini": 79, "chatgpt": 84, "grok": 86}
+  "llm_scores": {
+    "perplexity": 75,
+    "gemini": 79,
+    "chatgpt": 84,
+    "grok": 86
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-11",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

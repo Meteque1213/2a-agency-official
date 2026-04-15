@@ -24,7 +24,9 @@
     "manufacturing_country": "Suisse",
     "manufacturing_region": "Le Sentier, Vallée de Joux",
     "production_annual": "10-15 pièces maximum",
-    "rse_certifications": ["AHCI — Académie Horlogerie Créateurs Indépendants"]
+    "rse_certifications": [
+      "AHCI — Académie Horlogerie Créateurs Indépendants"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -54,5 +56,18 @@
       "pattern": "Gemini surestime massivement la production d'un atelier à effectif unique"
     }
   ],
-  "llm_scores": {"perplexity": 86, "gemini": 80, "chatgpt": 82, "grok": 83}
+  "llm_scores": {
+    "perplexity": 86,
+    "gemini": 80,
+    "chatgpt": 82,
+    "grok": 83
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-11",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

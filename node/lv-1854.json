@@ -24,7 +24,11 @@
     "ceo_since": "2023",
     "manufacturing_country": "France principalement",
     "manufacturing_region": "Pays de la Loire, Allier + Espagne, Italie, USA",
-    "rse_certifications": ["LIFE 360 LVMH", "Regeneration 2030", "SBTi -55% 2030"]
+    "rse_certifications": [
+      "LIFE 360 LVMH",
+      "Regeneration 2030",
+      "SBTi -55% 2030"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -36,5 +40,18 @@
       "pattern": "Confusion versions Neverfull Icon vs Inside Out"
     }
   ],
-  "llm_scores": {"perplexity": 95, "gemini": 98, "chatgpt": 85, "grok": 75}
+  "llm_scores": {
+    "perplexity": 95,
+    "gemini": 98,
+    "chatgpt": 85,
+    "grok": 75
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-02",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

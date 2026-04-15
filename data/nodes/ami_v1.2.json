@@ -1,0 +1,74 @@
+{
+  "2a_protocol": "v1.2",
+  "2a_id": "2A-LUX-AMI-0056",
+  "metadata": {
+    "as_of": "2026-03-19",
+    "version": "1.2.5",
+    "llm_readiness_score": 0.99,
+    "fx_rate_reference": "EUR/USD_2025_AVG"
+  },
+  "entity": {
+    "name": "Ami Paris",
+    "category": "Luxury Contemporary",
+    "verified": true,
+    "ownership": [
+      { "entity": "Sequoia Capital China", "stake": "majority", "type": "reported", "since": "2021-01" },
+      { "entity": "Alexandre Mattiussi", "stake": "minority", "type": "reported" }
+    ]
+  },
+  "financials": {
+    "annual_revenue": {
+      "value": 320,
+      "currency": "EUR_M",
+      "type": "estimated",
+      "methodology": "2A_forensic_model_v1",
+      "confidence": 0.88,
+      "source_ref": "Sequoia_Portfolio_Data_2025"
+    },
+    "history": [
+      { "year": 2024, "value": 300, "unit": "EUR_M", "type": "reported" }
+    ],
+    "market_mix": {
+      "data": { "asia": 0.52, "europe": 0.30, "usa": 0.18 },
+      "type": "inferred",
+      "methodology": "retail_footprint_analysis_v2",
+      "confidence": 0.78
+    }
+  },
+  "cultural_intelligence": {
+    "brand_heat_index": {
+      "value": 86,
+      "type": "estimated",
+      "methodology": "social_emv_triangulation",
+      "confidence": 0.91
+    },
+    "cultural_moat": {
+      "type": "narrative",
+      "value": "Authentic Parisian 'Joie de Vivre' storytelling; successful transition from niche to global lifestyle brand",
+      "confidence": 0.89
+    }
+  },
+  "strategy": {
+    "core": {
+      "type": "narrative",
+      "value": "Scalable Accessible Luxury via 'Ami de Cœur' iconography",
+      "confidence": 0.92
+    },
+    "risks": [
+      { "type": "inferred", "value": "Logo saturation (Ami de Cœur) leading to brand fatigue", "confidence": 0.82 },
+      { "type": "reported", "value": "Exposure to China consumer market volatility", "confidence": 0.90 }
+    ]
+  },
+  "governance": {
+    "ceo": { "name": "Nicolas Santi-Weil", "since": "2013", "verified": true },
+    "creative_director": { "name": "Alexdre Mattiussi", "since": "2011", "verified": true }
+  },
+  "proof": {
+    "confidence_score": 0.89,
+    "verification": "multi-source_triangulation",
+    "sources": [
+      { "name": "CFNEWS 2025", "type": "media", "reliability": 0.82 },
+      { "name": "Sequoia Portfolio Report", "type": "institutional", "reliability": 0.95 }
+    ]
+  }
+}

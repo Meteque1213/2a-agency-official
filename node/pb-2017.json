@@ -19,7 +19,10 @@
     "distribution": "ADs sélectifs + vente directe — pas de vente en ligne grand public",
     "ecommerce": false,
     "group": "Indépendant — Marc Petermann & Gauthier Bédat, cofondateurs",
-    "founders": ["Marc Petermann", "Gauthier Bédat"],
+    "founders": [
+      "Marc Petermann",
+      "Gauthier Bédat"
+    ],
     "movement_supplier": "Renaud & Papi (APRP) — ébauches haute horlogerie",
     "manufacturing_country": "Suisse",
     "manufacturing_region": "Le Brassus / Vallée de Joux + Genève",
@@ -59,5 +62,18 @@
       "pattern": "Troisième LLM ignorant Renaud & Papi — pattern collectif 3 LLMs confirmé"
     }
   ],
-  "llm_scores": {"perplexity": 80, "gemini": 84, "chatgpt": 78, "grok": 82}
+  "llm_scores": {
+    "perplexity": 80,
+    "gemini": 84,
+    "chatgpt": 78,
+    "grok": 82
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-11",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

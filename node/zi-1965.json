@@ -19,7 +19,9 @@
     "ceo": "Alain Schimel",
     "headquarters": "Lyon, France",
     "manufacturing": "Lyon, France — EPV Entreprise du Patrimoine Vivant",
-    "certifications": ["EPV — Entreprise du Patrimoine Vivant (2023)"],
+    "certifications": [
+      "EPV — Entreprise du Patrimoine Vivant (2023)"
+    ],
     "materials": "Alligator Mississippi + Agneau nappa + Vison"
   },
   "hallucination_warnings": [
@@ -45,5 +47,13 @@
     "gemini": 82,
     "chatgpt": 88,
     "grok": 86
-  }
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-08",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

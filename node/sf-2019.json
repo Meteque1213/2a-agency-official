@@ -52,5 +52,13 @@
     "gemini": 20,
     "chatgpt": 20,
     "grok": 75
-  }
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-07",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

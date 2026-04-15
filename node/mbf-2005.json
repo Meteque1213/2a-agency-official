@@ -27,7 +27,9 @@
     "manufacturing_region": "Genève",
     "production_annual": "200-250 pièces",
     "equity_structure": "100% Maximilian Büsser — aucune participation externe",
-    "rse_certifications": ["Poinçon de Genève (sur certaines références)"]
+    "rse_certifications": [
+      "Poinçon de Genève (sur certaines références)"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -56,5 +58,18 @@
       "pattern": "Perplexity double la production réelle MB&F"
     }
   ],
-  "llm_scores": {"perplexity": 81, "gemini": 79, "chatgpt": 83, "grok": 88}
+  "llm_scores": {
+    "perplexity": 81,
+    "gemini": 79,
+    "chatgpt": 83,
+    "grok": 88
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-11",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

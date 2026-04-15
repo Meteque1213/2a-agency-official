@@ -25,7 +25,9 @@
     "manufacturing_country": "Suisse",
     "manufacturing_region": "Vallée de Joux, Vaud",
     "production_annual": "20-30 pièces",
-    "rse_certifications": ["AHCI"]
+    "rse_certifications": [
+      "AHCI"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -54,5 +56,18 @@
       "pattern": "ChatGPT omet aussi la collaboration MB&F — deuxième LLM"
     }
   ],
-  "llm_scores": {"perplexity": 80, "gemini": 78, "chatgpt": 83, "grok": 86}
+  "llm_scores": {
+    "perplexity": 80,
+    "gemini": 78,
+    "chatgpt": 83,
+    "grok": 86
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-11",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

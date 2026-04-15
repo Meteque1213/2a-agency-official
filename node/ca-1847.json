@@ -24,7 +24,12 @@
     "ceo_since": "2024-09",
     "manufacturing_country": "France + Suisse",
     "manufacturing_region": "Paris (joaillerie) + La Chaux-de-Fonds (horlogerie)",
-    "rse_certifications": ["RJC", "SBTi -46% 2030", "LEED boutiques", "RE100"]
+    "rse_certifications": [
+      "RJC",
+      "SBTi -46% 2030",
+      "LEED boutiques",
+      "RE100"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -44,5 +49,18 @@
       "pattern": "ChatGPT gouvernance en transition"
     }
   ],
-  "llm_scores": {"perplexity": 90, "gemini": 82, "chatgpt": 80, "grok": 92}
+  "llm_scores": {
+    "perplexity": 90,
+    "gemini": 82,
+    "chatgpt": 80,
+    "grok": 92
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-02",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

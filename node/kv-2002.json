@@ -26,7 +26,9 @@
     "manufacturing_region": "Môtiers, Val-de-Travers, Neuchâtel",
     "production_annual": "50-70 pièces",
     "key_reference": "KV21 — Tourbillon de Kari Voutilainen",
-    "rse_certifications": ["AHCI"]
+    "rse_certifications": [
+      "AHCI"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -63,5 +65,18 @@
       "pattern": "Troisième LLM à ignorer le KV21 — gap documentaire collectif sur horlogerie niche"
     }
   ],
-  "llm_scores": {"perplexity": 78, "gemini": 88, "chatgpt": 85, "grok": 88}
+  "llm_scores": {
+    "perplexity": 78,
+    "gemini": 88,
+    "chatgpt": 85,
+    "grok": 88
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-11",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

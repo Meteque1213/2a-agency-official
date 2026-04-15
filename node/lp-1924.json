@@ -26,7 +26,11 @@
     "ceo_since": "2025",
     "manufacturing_country": "Italie",
     "manufacturing_region": "Piémont (Quarona) + Marches (Porto Sant'Elpidio chaussures)",
-    "rse_certifications": ["Aura Blockchain traçabilité", "LIFE LVMH", "Gift of Kings"]
+    "rse_certifications": [
+      "Aura Blockchain traçabilité",
+      "LIFE LVMH",
+      "Gift of Kings"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -54,5 +58,18 @@
       "pattern": "Participation LVMH non mise à jour"
     }
   ],
-  "llm_scores": {"perplexity": 75, "gemini": 88, "chatgpt": 85, "grok": 78}
+  "llm_scores": {
+    "perplexity": 75,
+    "gemini": 88,
+    "chatgpt": 85,
+    "grok": 78
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-02",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

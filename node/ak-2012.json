@@ -26,7 +26,10 @@
     "manufacturing_country": "Suisse",
     "manufacturing_region": "Genève — Plan-les-Ouates",
     "production_annual": "50-80 pièces",
-    "rse_certifications": ["Poinçon de Genève", "AHCI"]
+    "rse_certifications": [
+      "Poinçon de Genève",
+      "AHCI"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -63,5 +66,18 @@
       "pattern": "Troisième LLM ignorant Hagmann — pattern collectif 3 LLMs confirmé"
     }
   ],
-  "llm_scores": {"perplexity": 80, "gemini": 83, "chatgpt": 77, "grok": 83}
+  "llm_scores": {
+    "perplexity": 80,
+    "gemini": 83,
+    "chatgpt": 77,
+    "grok": 83
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-11",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

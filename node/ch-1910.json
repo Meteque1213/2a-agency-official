@@ -26,7 +26,11 @@
     "creative_director_since": "2025",
     "manufacturing_country": "France",
     "manufacturing_region": "Verneuil-en-Halatte (Oise)",
-    "rse_certifications": ["RJC", "SBTi net-zero 2040", "Mission 1.5°"]
+    "rse_certifications": [
+      "RJC",
+      "SBTi net-zero 2040",
+      "Mission 1.5°"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -62,5 +66,18 @@
       "pattern": "ChatGPT DA luxe incomplet"
     }
   ],
-  "llm_scores": {"perplexity": 72, "gemini": 78, "chatgpt": 80, "grok": 78}
+  "llm_scores": {
+    "perplexity": 72,
+    "gemini": 78,
+    "chatgpt": 80,
+    "grok": 78
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-02",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

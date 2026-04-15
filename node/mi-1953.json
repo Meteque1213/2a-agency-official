@@ -16,5 +16,13 @@
     "manufacturing_country": "Italie (Varese, Lombardie)"
   },
   "hallucination_warnings": [],
-  "llm_scores": {}
+  "llm_scores": {},
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-09",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

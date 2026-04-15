@@ -19,12 +19,17 @@
     "distribution": "Réseau ADs sélectif — pas de vente en ligne",
     "ecommerce": false,
     "group": "Indépendant — Denis Flageollet (fondateur technique) + Pierre Jacques (direction)",
-    "founders": ["Denis Flageollet", "David Zanetta"],
+    "founders": [
+      "Denis Flageollet",
+      "David Zanetta"
+    ],
     "ceo": "Pierre Jacques",
     "manufacturing_country": "Suisse",
     "manufacturing_region": "L'Auberson, district de Grandson, Vaud",
     "production_annual": "200-250 pièces",
-    "rse_certifications": ["AHCI"]
+    "rse_certifications": [
+      "AHCI"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -52,5 +57,18 @@
       "pattern": "Deuxième LLM (Grok) à ignorer Pierre Jacques comme CEO De Bethune"
     }
   ],
-  "llm_scores": {"perplexity": 80, "gemini": 86, "chatgpt": 79, "grok": 81}
+  "llm_scores": {
+    "perplexity": 80,
+    "gemini": 86,
+    "chatgpt": 79,
+    "grok": 81
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-11",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

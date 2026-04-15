@@ -25,7 +25,11 @@
     "ceo_since": "2024-01",
     "manufacturing_country": "Suisse",
     "manufacturing_region": "Le Brassus, Vallée de Joux + Meyrin (Genève)",
-    "rse_certifications": ["RJC", "Minergie-ECO Le Brassus", "SBTi -42% 2030"]
+    "rse_certifications": [
+      "RJC",
+      "Minergie-ECO Le Brassus",
+      "SBTi -42% 2030"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -64,5 +68,18 @@
       "pattern": "Sur-évaluation Grok +8 à +14%"
     }
   ],
-  "llm_scores": {"perplexity": 62, "gemini": 78, "chatgpt": 80, "grok": 78}
+  "llm_scores": {
+    "perplexity": 62,
+    "gemini": 78,
+    "chatgpt": 80,
+    "grok": 78
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-02",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

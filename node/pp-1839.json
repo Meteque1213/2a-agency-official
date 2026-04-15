@@ -24,7 +24,10 @@
     "president": "Thierry Stern",
     "manufacturing_country": "Suisse",
     "manufacturing_region": "Plan-les-Ouates, Genève",
-    "rse_certifications": ["RJC", "Poinçon de Genève"]
+    "rse_certifications": [
+      "RJC",
+      "Poinçon de Genève"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -52,5 +55,18 @@
       "pattern": "Citation source marché gris comme prix retail"
     }
   ],
-  "llm_scores": {"perplexity": 95, "gemini": 80, "chatgpt": 78, "grok": 72}
+  "llm_scores": {
+    "perplexity": 95,
+    "gemini": 80,
+    "chatgpt": 78,
+    "grok": 72
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-02",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

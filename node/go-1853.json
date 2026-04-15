@@ -51,5 +51,18 @@
       "pattern": "Hallucination géographique fabrication"
     }
   ],
-  "llm_scores": {"perplexity": 92, "gemini": 62, "chatgpt": 68, "grok": 88}
+  "llm_scores": {
+    "perplexity": 92,
+    "gemini": 62,
+    "chatgpt": 68,
+    "grok": 88
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-02",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }

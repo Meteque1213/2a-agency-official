@@ -26,7 +26,11 @@
     "creative_director_since": "2025",
     "manufacturing_country": "Italie + France",
     "manufacturing_region": "Toscane, Scandicci (maroquinerie) + Paris (haute couture)",
-    "rse_certifications": ["LIFE 360 LVMH", "LWG cuirs", "LEED boutiques"]
+    "rse_certifications": [
+      "LIFE 360 LVMH",
+      "LWG cuirs",
+      "LEED boutiques"
+    ]
   },
   "hallucination_warnings": [
     {
@@ -64,5 +68,18 @@
       "pattern": "CEO Dior incorrect"
     }
   ],
-  "llm_scores": {"perplexity": 70, "gemini": 62, "chatgpt": 82, "grok": 70}
+  "llm_scores": {
+    "perplexity": 70,
+    "gemini": 62,
+    "chatgpt": 82,
+    "grok": 70
+  },
+  "version": "1.0",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-04-02",
+      "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
+    }
+  ]
 }
