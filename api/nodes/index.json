@@ -1,0 +1,605 @@
+{
+  "total": 100,
+  "nodes": [
+    {
+      "node_id": "ae-2015",
+      "brand": "Aeyde",
+      "score": 86,
+      "url": "https://www.2aagency.com/api/node/ae-2015.json"
+    },
+    {
+      "node_id": "ak-1922",
+      "brand": "Akris",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/ak-1922.json"
+    },
+    {
+      "node_id": "ak-2012",
+      "brand": "Akrivia",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/ak-2012.json"
+    },
+    {
+      "node_id": "am-2011",
+      "brand": "Ami Paris",
+      "score": 80,
+      "url": "https://www.2aagency.com/api/node/am-2011.json"
+    },
+    {
+      "node_id": "ap-1875",
+      "brand": "Audemars Piguet",
+      "score": 74,
+      "url": "https://www.2aagency.com/api/node/ap-1875.json"
+    },
+    {
+      "node_id": "as-2015",
+      "brand": "Asphalte",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/as-2015.json"
+    },
+    {
+      "node_id": "ba-1919",
+      "brand": "Balenciaga",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/ba-1919.json"
+    },
+    {
+      "node_id": "ba-1995",
+      "brand": "BARNES International",
+      "score": 86,
+      "url": "https://www.2aagency.com/api/node/ba-1995.json"
+    },
+    {
+      "node_id": "bc-1978",
+      "brand": "Brunello Cucinelli",
+      "score": 85,
+      "url": "https://www.2aagency.com/api/node/bc-1978.json"
+    },
+    {
+      "node_id": "be-1895",
+      "brand": "Berluti",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/be-1895.json"
+    },
+    {
+      "node_id": "bo-1858",
+      "brand": "Boucheron",
+      "score": 80,
+      "url": "https://www.2aagency.com/api/node/bo-1858.json"
+    },
+    {
+      "node_id": "bp-2007",
+      "brand": "Barton Perreira",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/bp-2007.json"
+    },
+    {
+      "node_id": "br-1884",
+      "brand": "Breitling",
+      "score": 79,
+      "url": "https://www.2aagency.com/api/node/br-1884.json"
+    },
+    {
+      "node_id": "bv-1966",
+      "brand": "Bottega Veneta",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/bv-1966.json"
+    },
+    {
+      "node_id": "by-2006",
+      "brand": "Byredo",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/by-2006.json"
+    },
+    {
+      "node_id": "ca-1847",
+      "brand": "Cartier",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/ca-1847.json"
+    },
+    {
+      "node_id": "ca-2024",
+      "brand": "Colleen Allen",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/ca-2024.json"
+    },
+    {
+      "node_id": "ce-1945",
+      "brand": "Celine",
+      "score": 81,
+      "url": "https://www.2aagency.com/api/node/ce-1945.json"
+    },
+    {
+      "node_id": "ch-1910",
+      "brand": "Chanel",
+      "score": 76,
+      "url": "https://www.2aagency.com/api/node/ch-1910.json"
+    },
+    {
+      "node_id": "ch-2023",
+      "brand": "Cherico",
+      "score": 71,
+      "url": "https://www.2aagency.com/api/node/ch-2023.json"
+    },
+    {
+      "node_id": "db-2002",
+      "brand": "De Bethune",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/db-2002.json"
+    },
+    {
+      "node_id": "dc-2017",
+      "brand": "David Candaux",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/dc-2017.json"
+    },
+    {
+      "node_id": "dg-1985",
+      "brand": "Dolce & Gabbana",
+      "score": 81,
+      "url": "https://www.2aagency.com/api/node/dg-1985.json"
+    },
+    {
+      "node_id": "di-1946",
+      "brand": "Dior",
+      "score": 72,
+      "url": "https://www.2aagency.com/api/node/di-1946.json"
+    },
+    {
+      "node_id": "di-2021",
+      "brand": "Diotima",
+      "score": 80,
+      "url": "https://www.2aagency.com/api/node/di-2021.json"
+    },
+    {
+      "node_id": "drc-1869",
+      "brand": "Domaine de la Romanée-Conti",
+      "score": 76,
+      "url": "https://www.2aagency.com/api/node/drc-1869.json"
+    },
+    {
+      "node_id": "dt-1961",
+      "brand": "Diptyque",
+      "score": 75,
+      "url": "https://www.2aagency.com/api/node/dt-1961.json"
+    },
+    {
+      "node_id": "dv-1829",
+      "brand": "Delvaux",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/dv-1829.json"
+    },
+    {
+      "node_id": "fe-1947",
+      "brand": "Ferrari",
+      "score": 88,
+      "url": "https://www.2aagency.com/api/node/fe-1947.json"
+    },
+    {
+      "node_id": "ff-2021",
+      "brand": "Fforme",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/ff-2021.json"
+    },
+    {
+      "node_id": "fg-1927",
+      "brand": "Ferragamo",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/fg-1927.json"
+    },
+    {
+      "node_id": "fn-1925",
+      "brand": "Fendi",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/fn-1925.json"
+    },
+    {
+      "node_id": "fpj-1999",
+      "brand": "F.P. Journe",
+      "score": 85,
+      "url": "https://www.2aagency.com/api/node/fpj-1999.json"
+    },
+    {
+      "node_id": "ga-1975",
+      "brand": "Giorgio Armani",
+      "score": 78,
+      "url": "https://www.2aagency.com/api/node/ga-1975.json"
+    },
+    {
+      "node_id": "gf-2004",
+      "brand": "Greubel Forsey",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/gf-2004.json"
+    },
+    {
+      "node_id": "gi-1952",
+      "brand": "Givenchy",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/gi-1952.json"
+    },
+    {
+      "node_id": "go-1853",
+      "brand": "Goyard",
+      "score": 77,
+      "url": "https://www.2aagency.com/api/node/go-1853.json"
+    },
+    {
+      "node_id": "gr-1960",
+      "brand": "Graff",
+      "score": 79,
+      "url": "https://www.2aagency.com/api/node/gr-1960.json"
+    },
+    {
+      "node_id": "gu-1921",
+      "brand": "Gucci",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/gu-1921.json"
+    },
+    {
+      "node_id": "he-2022",
+      "brand": "Heirlome",
+      "score": 81,
+      "url": "https://www.2aagency.com/api/node/he-2022.json"
+    },
+    {
+      "node_id": "hm-1837",
+      "brand": "Hermès",
+      "score": 91,
+      "url": "https://www.2aagency.com/api/node/hm-1837.json"
+    },
+    {
+      "node_id": "ho-2016",
+      "brand": "Horace",
+      "score": 79,
+      "url": "https://www.2aagency.com/api/node/ho-2016.json"
+    },
+    {
+      "node_id": "iw-1868",
+      "brand": "IWC Schaffhausen",
+      "score": 81,
+      "url": "https://www.2aagency.com/api/node/iw-1868.json"
+    },
+    {
+      "node_id": "jf-2011",
+      "brand": "Jimmy Fairly",
+      "score": 80,
+      "url": "https://www.2aagency.com/api/node/jf-2011.json"
+    },
+    {
+      "node_id": "jq-2009",
+      "brand": "Jacquemus",
+      "score": 79,
+      "url": "https://www.2aagency.com/api/node/jq-2009.json"
+    },
+    {
+      "node_id": "js-1968",
+      "brand": "Jil Sander",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/js-1968.json"
+    },
+    {
+      "node_id": "ka-2012",
+      "brand": "Kallmeyer",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/ka-2012.json"
+    },
+    {
+      "node_id": "ke-1970",
+      "brand": "Kenzo",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/ke-1970.json"
+    },
+    {
+      "node_id": "kr-1843",
+      "brand": "Krug",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/kr-1843.json"
+    },
+    {
+      "node_id": "kr-2007",
+      "brand": "Kretz Family Real Estate",
+      "score": 76,
+      "url": "https://www.2aagency.com/api/node/kr-2007.json"
+    },
+    {
+      "node_id": "kv-2002",
+      "brand": "Kari Voutilainen",
+      "score": 86,
+      "url": "https://www.2aagency.com/api/node/kv-2002.json"
+    },
+    {
+      "node_id": "lf-2010",
+      "brand": "Laurent Ferrier",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/lf-2010.json"
+    },
+    {
+      "node_id": "lo-1846",
+      "brand": "Loewe",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/lo-1846.json"
+    },
+    {
+      "node_id": "lp-1924",
+      "brand": "Loro Piana",
+      "score": 76,
+      "url": "https://www.2aagency.com/api/node/lp-1924.json"
+    },
+    {
+      "node_id": "lv-1854",
+      "brand": "Louis Vuitton",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/lv-1854.json"
+    },
+    {
+      "node_id": "ly-2014",
+      "brand": "Lisa Yang",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/ly-2014.json"
+    },
+    {
+      "node_id": "mbf-2005",
+      "brand": "MB&F",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/mbf-2005.json"
+    },
+    {
+      "node_id": "mi-1953",
+      "brand": "Missoni",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/mi-1953.json"
+    },
+    {
+      "node_id": "mj-1984",
+      "brand": "Marc Jacobs",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/mj-1984.json"
+    },
+    {
+      "node_id": "mm-1993",
+      "brand": "Miu Miu",
+      "score": 86,
+      "url": "https://www.2aagency.com/api/node/mm-1993.json"
+    },
+    {
+      "node_id": "mo-1849",
+      "brand": "Moynat",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/mo-1849.json"
+    },
+    {
+      "node_id": "mx-1951",
+      "brand": "Max Mara",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/mx-1951.json"
+    },
+    {
+      "node_id": "om-1848",
+      "brand": "Omega",
+      "score": 76,
+      "url": "https://www.2aagency.com/api/node/om-1848.json"
+    },
+    {
+      "node_id": "pa-1914",
+      "brand": "Patou",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/pa-1914.json"
+    },
+    {
+      "node_id": "pb-2017",
+      "brand": "Petermann Bédat",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/pb-2017.json"
+    },
+    {
+      "node_id": "pd-1948",
+      "brand": "Philippe Dufour",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/pd-1948.json"
+    },
+    {
+      "node_id": "pe-1945",
+      "brand": "Petrus",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/pe-1945.json"
+    },
+    {
+      "node_id": "po-2016",
+      "brand": "Polène",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/po-2016.json"
+    },
+    {
+      "node_id": "pp-1839",
+      "brand": "Patek Philippe",
+      "score": 79,
+      "url": "https://www.2aagency.com/api/node/pp-1839.json"
+    },
+    {
+      "node_id": "pr-1913",
+      "brand": "Prada",
+      "score": 79,
+      "url": "https://www.2aagency.com/api/node/pr-1913.json"
+    },
+    {
+      "node_id": "pu-1947",
+      "brand": "Pucci",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/pu-1947.json"
+    },
+    {
+      "node_id": "rc-1970",
+      "brand": "Roberto Cavalli",
+      "score": 74,
+      "url": "https://www.2aagency.com/api/node/rc-1970.json"
+    },
+    {
+      "node_id": "re-2018",
+      "brand": "Respire",
+      "score": 74,
+      "url": "https://www.2aagency.com/api/node/re-2018.json"
+    },
+    {
+      "node_id": "ri-1950",
+      "brand": "Rimowa",
+      "score": 86,
+      "url": "https://www.2aagency.com/api/node/ri-1950.json"
+    },
+    {
+      "node_id": "rl-1967",
+      "brand": "Ralph Lauren",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/rl-1967.json"
+    },
+    {
+      "node_id": "ro-2021",
+      "brand": "Róhe",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/ro-2021.json"
+    },
+    {
+      "node_id": "rp-2012",
+      "brand": "Raúl Pagès",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/rp-2012.json"
+    },
+    {
+      "node_id": "rv-1937",
+      "brand": "Roger Vivier",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/rv-1937.json"
+    },
+    {
+      "node_id": "rw-2006",
+      "brand": "The Row",
+      "score": 80,
+      "url": "https://www.2aagency.com/api/node/rw-2006.json"
+    },
+    {
+      "node_id": "rx-1905",
+      "brand": "Rolex",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/rx-1905.json"
+    },
+    {
+      "node_id": "sa-2014",
+      "brand": "St. Agni",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/sa-2014.json"
+    },
+    {
+      "node_id": "se-2020",
+      "brand": "SERHANT.",
+      "score": 81,
+      "url": "https://www.2aagency.com/api/node/se-2020.json"
+    },
+    {
+      "node_id": "sf-2019",
+      "brand": "La Source Foodschool",
+      "score": 76,
+      "url": "https://www.2aagency.com/api/node/sf-2019.json"
+    },
+    {
+      "node_id": "sh-2016",
+      "brand": "Shoootin",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/sh-2016.json"
+    },
+    {
+      "node_id": "sl-1961",
+      "brand": "Saint Laurent",
+      "score": 85,
+      "url": "https://www.2aagency.com/api/node/sl-1961.json"
+    },
+    {
+      "node_id": "sr-1972",
+      "brand": "Stefano Ricci",
+      "score": 81,
+      "url": "https://www.2aagency.com/api/node/sr-1972.json"
+    },
+    {
+      "node_id": "sz-2013",
+      "brand": "Sézane",
+      "score": 83,
+      "url": "https://www.2aagency.com/api/node/sz-2013.json"
+    },
+    {
+      "node_id": "td-1920",
+      "brand": "Tod's",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/td-1920.json"
+    },
+    {
+      "node_id": "to-2019",
+      "brand": "Tove",
+      "score": 80,
+      "url": "https://www.2aagency.com/api/node/to-2019.json"
+    },
+    {
+      "node_id": "ty-2019",
+      "brand": "Typology",
+      "score": 88,
+      "url": "https://www.2aagency.com/api/node/ty-2019.json"
+    },
+    {
+      "node_id": "vb-1996",
+      "brand": "Vanessa Bruno",
+      "score": 61,
+      "url": "https://www.2aagency.com/api/node/vb-1996.json"
+    },
+    {
+      "node_id": "vc-1755",
+      "brand": "Vacheron Constantin",
+      "score": 81,
+      "url": "https://www.2aagency.com/api/node/vc-1755.json"
+    },
+    {
+      "node_id": "vc-1772",
+      "brand": "Veuve Clicquot",
+      "score": 87,
+      "url": "https://www.2aagency.com/api/node/vc-1772.json"
+    },
+    {
+      "node_id": "vca-1906",
+      "brand": "Van Cleef & Arpels",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/vca-1906.json"
+    },
+    {
+      "node_id": "vj-2004",
+      "brand": "Veja",
+      "score": 81,
+      "url": "https://www.2aagency.com/api/node/vj-2004.json"
+    },
+    {
+      "node_id": "vs-1978",
+      "brand": "Versace",
+      "score": 82,
+      "url": "https://www.2aagency.com/api/node/vs-1978.json"
+    },
+    {
+      "node_id": "vt-1960",
+      "brand": "Valentino",
+      "score": 84,
+      "url": "https://www.2aagency.com/api/node/vt-1960.json"
+    },
+    {
+      "node_id": "vx-1937",
+      "brand": "Valextra",
+      "score": 87,
+      "url": "https://www.2aagency.com/api/node/vx-1937.json"
+    },
+    {
+      "node_id": "ze-1910",
+      "brand": "Zegna",
+      "score": 85,
+      "url": "https://www.2aagency.com/api/node/ze-1910.json"
+    },
+    {
+      "node_id": "zi-1965",
+      "brand": "Zilli",
+      "score": 85,
+      "url": "https://www.2aagency.com/api/node/zi-1965.json"
+    }
+  ]
+}
