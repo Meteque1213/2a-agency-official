@@ -1,11 +1,9 @@
-# Sécurité
+venv/
+__pycache__/
+*.pyc
+*.db
+*.sqlite
 .env
 .DS_Store
-
-# Dépendances
+data/nodes/
 node_modules/
-.vercel/
-
-# ON NE BLOQUE PAS LES JSON (Besoin pour registry.json et package.json)
-# *.json <--- Cette ligne doit rester supprimée ou commentée
-.vercel
