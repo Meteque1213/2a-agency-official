@@ -582,6 +582,7 @@ footer {
       <a href="#scoring">Scoring System</a>
       <a href="#verification">Verification</a>
       <a href="#patterns">12 Patterns</a>
+      <a href="#ecgt">ECGT Compliance</a>
       <a href="#process">Full Process</a>
     </nav>
 
@@ -831,6 +832,83 @@ footer {
     </section>
 
     <!-- Process -->
+
+    <!-- ECGT Section -->
+    <section class="section" id="ecgt">
+      <div class="section-number">06b — EU ECGT Compliance</div>
+      <h2>ECGT <em>compliance</em> assessment</h2>
+      <p>Every brand in the 2A Agency registry is assessed against the EU Directive 2024/825 — Empowering Consumers for the Green Transition (ECGT) — entering enforcement on 27 September 2026. The assessment evaluates whether LLM hallucinations on a brand create specific legal exposure under the directive.</p>
+      <p style="margin-top:16px;">The ECGT prohibits three categories of environmental claims in B2C communication: generic unsubstantiated claims ("sustainable", "eco-responsible"), carbon neutrality claims based on offsets, and future performance promises without verifiable plans. When LLMs attribute such claims to a brand — accurately or not — they create exposure that requires documented, certified correction.</p>
+
+      <div class="questions-grid" style="margin-top:28px;">
+        <div class="q-card">
+          <div class="q-num" style="color:#2d7a3a;">✓</div>
+          <div class="q-content">
+            <div class="q-label" style="color:#2d7a3a;">ECGT Compliant</div>
+            <div class="q-title">No ECGT exposure detected</div>
+            <div class="q-desc">No LLM hallucinations on sustainability claims. Certified data covers manufacturing origin, certifications and RSE commitments accurately. No generic claims fabricated by LLMs.</div>
+          </div>
+        </div>
+        <div class="q-card">
+          <div class="q-num" style="color:#b08d57;">⚠</div>
+          <div class="q-content">
+            <div class="q-label" style="color:#b08d57;">ECGT At Risk</div>
+            <div class="q-title">Moderate exposure — correction recommended</div>
+            <div class="q-desc">LLMs produce partially incorrect sustainability data — manufacturing origin confused, certifications simplified or outdated. Legal exposure under ECGT if uncorrected before September 2026.</div>
+          </div>
+        </div>
+        <div class="q-card">
+          <div class="q-num" style="color:#c0392b;">✗</div>
+          <div class="q-content">
+            <div class="q-label" style="color:#c0392b;">ECGT Critical</div>
+            <div class="q-title">High exposure — immediate action required</div>
+            <div class="q-desc">LLMs fabricate certifications the brand does not hold (Bio, Organic, Carbon Neutral). Every hallucinated certification constitutes a potential ECGT violation attributable to the brand in the consumer journey.</div>
+          </div>
+        </div>
+        <div class="q-card">
+          <div class="q-num" style="color:#9b9189;">—</div>
+          <div class="q-content">
+            <div class="q-label">ECGT Pending</div>
+            <div class="q-title">Insufficient certified data</div>
+            <div class="q-desc">The node lacks sufficient certified RSE and sustainability data to assess ECGT exposure. A full audit including sustainability claims is required before the September 2026 deadline.</div>
+          </div>
+        </div>
+      </div>
+
+      <table class="score-table" style="margin-top:32px;">
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Count</th>
+            <th>ECGT Exposure</th>
+            <th>Recommended Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="sev-tag" style="background:rgba(45,122,58,0.12);color:#2d7a3a;">Compliant</span></td>
+            <td>83</td>
+            <td>None detected</td>
+            <td>Monitor via SENTINEL every 48h</td>
+          </tr>
+          <tr>
+            <td><span class="sev-tag sev-c">At Risk</span></td>
+            <td>14</td>
+            <td>Moderate — certification or origin drift</td>
+            <td>Certify sustainability data before Sept 2026</td>
+          </tr>
+          <tr>
+            <td><span class="sev-tag" style="background:rgba(192,57,43,0.12);color:#c0392b;">Critical</span></td>
+            <td>3</td>
+            <td>High — fabricated certifications in LLM responses</td>
+            <td>Immediate correction + legal documentation required</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top:24px;">The ECGT compliance field is embedded in every certified node JSON at <code style="font-family:var(--font-mono);font-size:11px;color:var(--gold);">ecgt_compliance.status</code> and accessible via the public API at <a href="/api/nodes/index.json" style="color:var(--gold);">2aagency.com/api/nodes/index.json</a>.</p>
+    </section>
+
     <section class="section" id="process">
       <div class="section-number">07 — Full Process</div>
       <h2>From question to <em>certified node</em></h2>
