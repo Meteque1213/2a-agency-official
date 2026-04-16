@@ -45,5 +45,19 @@
       "date": "2026-03-26",
       "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
     }
-  ]
+  ],
+  "ecgt_compliance": {
+    "status": "compliant",
+    "directive": "EU ECGT 2024/825",
+    "enforcement_date": "2026-09-27",
+    "last_reviewed": "2026-04-16",
+    "reviewed_by": "2A Agency",
+    "flags": [
+      {
+        "type": "sector_exposure",
+        "risk": "High-risk sector for ECGT — sustainability claims closely scrutinised"
+      }
+    ],
+    "note": "ECGT compliance assessed on LLM drift patterns and certified data coverage"
+  }
 }

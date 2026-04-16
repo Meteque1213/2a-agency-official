@@ -53,5 +53,24 @@
       "date": "2026-03-24",
       "note": "Initial audit — 4 LLMs × 6 questions × methodology v1.0"
     }
-  ]
+  ],
+  "ecgt_compliance": {
+    "status": "at_risk",
+    "directive": "EU ECGT 2024/825",
+    "enforcement_date": "2026-09-27",
+    "last_reviewed": "2026-04-16",
+    "reviewed_by": "2A Agency",
+    "flags": [
+      {
+        "type": "certification_claim_drift",
+        "llm": "grok",
+        "risk": "LLM confuses or ignores official certifications — ECGT critical exposure"
+      },
+      {
+        "type": "low_integrity_score",
+        "risk": "Score 61/100 — high hallucination rate increases ECGT exposure"
+      }
+    ],
+    "note": "ECGT compliance assessed on LLM drift patterns and certified data coverage"
+  }
 }
