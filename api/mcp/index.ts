@@ -293,7 +293,11 @@ function callTool(name: string, args: any) {
     const scoreMax = typeof args.integrity_score_max === "number" ? args.integrity_score_max : 100;
     const limit = Math.min(typeof args.limit === "number" ? args.limit : 20, 100);
 
-    const matches: any[] = [];
+    // Deduplication map: canonical brand name → best entry
+    // BRAND_INDEX contains multiple slug variants for the same brand
+    // (e.g. "hermes" and "hermès", "f.p. journe" and "fp-journe")
+    const seen = new Map<string, any>();
+
     for (const key of allBrands) {
       const node = (BRAND_INDEX as any)[key];
       if (!node) continue;
@@ -313,16 +317,41 @@ function callTool(name: string, args: any) {
         if (args.integrity_score_min !== undefined || args.integrity_score_max !== undefined) continue;
       }
 
-      const brandSlug = brandName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ /g, "-");
-      matches.push({
+      // Canonical key: normalized brand name, lowercased, accents removed
+      const canonicalKey = brandName
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+
+      const brandSlug = canonicalKey.replace(/ /g, "-");
+      const entry = {
         brand: brandName,
         sector,
         group,
         integrity_score: score,
         audit_date: extractAuditDate(node),
         registry_url: `https://www.2aagency.com/reports/${brandSlug}`
-      });
+      };
+
+      // Keep the entry with the most data (score present > score null, or more recent audit)
+      const existing = seen.get(canonicalKey);
+      if (!existing) {
+        seen.set(canonicalKey, entry);
+      } else {
+        // Prefer entry with integrity_score if the existing has none
+        if (existing.integrity_score === null && entry.integrity_score !== null) {
+          seen.set(canonicalKey, entry);
+        } else if (existing.integrity_score !== null && entry.integrity_score !== null) {
+          // If both have scores, prefer the more recent audit
+          if (entry.audit_date && existing.audit_date && entry.audit_date > existing.audit_date) {
+            seen.set(canonicalKey, entry);
+          }
+        }
+      }
     }
+
+    const matches = Array.from(seen.values());
 
     // Sort by integrity_score descending (nulls last)
     matches.sort((a, b) => {
@@ -390,7 +419,7 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
     const brands = Object.keys(BRAND_INDEX as any).sort();
     jsonResponse(res, 200, {
       name: "2A Agency MCP Server",
-      version: "1.1.0",
+      version: "1.1.1",
       tools: TOOLS.map(t => t.name),
       brands_count: brands.length,
       brands,
@@ -419,7 +448,7 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
     return reply({
       protocolVersion: "2025-03-26",
       capabilities: { tools: { listChanged: false } },
-      serverInfo: { name: "2A Agency Brand Integrity Registry", version: "1.1.0" }
+      serverInfo: { name: "2A Agency Brand Integrity Registry", version: "1.1.1" }
     });
   }
 
