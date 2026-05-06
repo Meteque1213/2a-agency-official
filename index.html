@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2A Agency — The Mandatory System of Records for the Agentic Web</title>
+<title>2A Agency — The Certification Authority for Brand Truth in the Agentic Era</title>
 <meta name="description" content="2A Agency is the independent infrastructure that certifies your brand facts and identity for the agentic web. Audit, registry and certification for every entity.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.2aagency.com/">
@@ -105,12 +105,22 @@ section { padding: 72px 5%; border-bottom: 1px solid var(--border); }
 .code-block { background: rgba(255,255,255,0.04); border: 1px solid rgba(176,141,87,0.18); padding: 18px; font-size: 0.68rem; color: var(--gold-2); line-height: 1.75; margin-top: 20px; overflow-x: auto; font-family: 'DM Mono', monospace; }
 .code-comment { color: rgba(247,244,238,0.25); }
 
-.eu-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px; }
+.eu-cols { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 36px; }
 .eu-box { border: 1px solid var(--border); padding: 26px; background: var(--surface); }
 .eu-label { font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
 .eu-num { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 300; color: var(--red); margin-bottom: 4px; }
 .eu-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; margin-bottom: 8px; }
 .eu-text { font-size: 0.76rem; color: var(--gray); line-height: 1.7; }
+.eu-risk { font-size: 0.7rem; color: var(--red); margin-top: 12px; font-family: 'DM Mono', monospace; }
+
+.modes-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px; }
+.mode-card { border: 1px solid var(--border); padding: 28px; background: var(--surface); }
+.mode-card-label { font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.mode-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 300; margin-bottom: 12px; }
+.mode-card-text { font-size: 0.76rem; color: var(--gray); line-height: 1.75; }
+.mode-card-best { font-size: 0.68rem; color: var(--ink); margin-top: 14px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6; }
+.mode-card-best strong { color: var(--gold); }
+.modes-bottom { margin-top: 28px; border: 1px solid var(--border); padding: 22px 26px; background: var(--surface); font-size: 0.78rem; color: var(--gray); line-height: 1.75; text-align: center; }
 
 .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 36px; }
 .step { background: var(--bg); padding: 26px 22px; }
@@ -171,7 +181,7 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
 .offer-new-badge { font-size: 0.5rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 2px 8px; border: 1px solid var(--gold); color: var(--gold); display: inline-block; margin-left: 10px; vertical-align: middle; position: relative; top: -2px; }
 
 @media(max-width:768px){
-  .hero,.ucp-cols,.eu-cols{grid-template-columns:1fr}
+  .hero,.ucp-cols,.eu-cols,.modes-cols{grid-template-columns:1fr}
   .problem-grid,.steps,.mcp-tools{grid-template-columns:1fr}
   nav .nav-links{gap:14px}
   footer{flex-direction:column;text-align:center}
@@ -200,37 +210,31 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
 
 <div class="ticker">
   <div class="ticker-inner">
-    <span>Brands audited&nbsp;: <strong>15</strong></span>
-    <span>EU AI Act Article 53&nbsp;: <strong>Ready</strong></span>
-    <span>Average score&nbsp;: <strong>82/100</strong></span>
-    <span>LLMs tested&nbsp;: <strong>Perplexity · Gemini · ChatGPT · Grok</strong></span>
-    <span>UCP Extension&nbsp;: <strong>com.2aagency.brand-certification</strong></span>
-    <span>Wikidata&nbsp;: <strong>Q138781860</strong></span>
-    <span>Status&nbsp;: <strong>Operational</strong></span>
-    <span>Brands audited&nbsp;: <strong>15</strong></span>
-    <span>EU AI Act Article 53&nbsp;: <strong>Ready</strong></span>
-    <span>Average score&nbsp;: <strong>82/100</strong></span>
-    <span>LLMs tested&nbsp;: <strong>Perplexity · Gemini · ChatGPT · Grok</strong></span>
-    <span>UCP Extension&nbsp;: <strong>com.2aagency.brand-certification</strong></span>
-    <span>Wikidata&nbsp;: <strong>Q138781860</strong></span>
-    <span>Status&nbsp;: <strong>Operational</strong></span>
+    <span>Brands audited&nbsp;: <strong>100+</strong></span>
+    <span>Operational since&nbsp;: <strong>March 2026</strong></span>
+    <span>Compliance ready&nbsp;: <strong>EU AI Act · ECGT</strong></span>
+    <span>MCP server&nbsp;: <strong>Live</strong></span>
+    <span>Brands audited&nbsp;: <strong>100+</strong></span>
+    <span>Operational since&nbsp;: <strong>March 2026</strong></span>
+    <span>Compliance ready&nbsp;: <strong>EU AI Act · ECGT</strong></span>
+    <span>MCP server&nbsp;: <strong>Live</strong></span>
   </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <div>
-    <div class="hero-eyebrow">The Mandatory System of Records for the Agentic Web</div>
+    <div class="hero-eyebrow">The Certification Authority for Brand Truth in the Agentic Era</div>
     <h1 class="hero-title">
-      The Ground Truth Layer<br>for <em>Every Entity</em><br>on the Web.
+      We authenticate how your<br>brand is <em>represented</em><br>to AI agents.
     </h1>
     <p class="hero-sub">
-      For every brand, every company, every entity on the agentic web.
-      As autonomous agents take over navigation and decision-making,
-      2A Agency is the independent infrastructure that certifies
-      your facts and identity.
+      As AI agents take over navigation and decision-making, brands need
+      an independent third party to certify their identity, claims, and
+      data — making them legally defensible across every conversational
+      channel.
     </p>
-    <a href="#contact" class="btn-primary">Claim & Certify Your Entity</a>
+    <a href="#contact" class="btn-primary">Certify Your Brand</a>
   </div>
   <div class="hero-right">
     <div class="hero-stat">
@@ -294,7 +298,7 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
       <div class="ucp-card">
         <div class="ucp-card-label">What 2A Agency does</div>
         <div class="ucp-card-title">The truth layer</div>
-        <p class="ucp-card-text">When a ChatGPT agent searches your brand before recommending your products, it consults its training data — not your website. 2A certifies that data is accurate. We proposed extension <code>com.2aagency.brand-certification</code> to the UCP standard — Issue #302.</p>
+        <p class="ucp-card-text">When an AI agent describes your brand, recommends your products, or answers a customer question about your sustainability program, it relies on its training data — not your website. 2A certifies an official source that AI agents can query, ensuring accurate, dated, and legally defensible representation. Independent of the transactional channel.</p>
       </div>
     </div>
     <div>
@@ -320,24 +324,58 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
   </div>
 </section>
 
-<!-- EU AI ACT -->
+<!-- TWO ENGAGEMENT MODES -->
+<section id="modes">
+  <div class="eyebrow">Two Engagement Modes</div>
+  <h2 class="section-title">Every brand keeps its data,<br>its sovereignty, its <em>systems.</em></h2>
+
+  <div class="modes-cols">
+    <div class="mode-card">
+      <div class="mode-card-label">Mode 01</div>
+      <div class="mode-card-title">Certified MCP</div>
+      <p class="mode-card-text">For brands that host their own infrastructure.<br><br>Your tech team builds and maintains your MCP server following our public specification. We audit, certify, and validate your inclusion in the 2A Registry.</p>
+      <div class="mode-card-best"><strong>Best for:</strong> groups with internal tech capabilities (CIO, CDO teams) who require full data sovereignty.</div>
+    </div>
+    <div class="mode-card">
+      <div class="mode-card-label">Mode 02</div>
+      <div class="mode-card-title">Managed MCP</div>
+      <p class="mode-card-text">For brands that prefer turnkey deployment.<br><br>We build, host, and operate your MCP server. You provide the brand data and validation; we handle the technical infrastructure and ongoing maintenance.</p>
+      <div class="mode-card-best"><strong>Best for:</strong> brands without dedicated AI/data engineering teams who want to go live quickly.</div>
+    </div>
+  </div>
+
+  <div class="modes-bottom">
+    In both modes, your brand appears in the 2A Registry of certified MCPs, with a status, a trust score, and a transparent revocation mechanism.
+  </div>
+</section>
+
+<!-- REGULATION -->
 <section id="eu-ai-act">
   <div class="eyebrow">Regulation</div>
-  <h2 class="section-title">EU AI Act — Article 53<br><em>in force</em> since August 2025</h2>
-  <p class="body-text">The EU AI Act requires GPAI providers to document their training data sources. Brands whose data is incorrect in these systems face reputational and commercial harm with no recourse — unless they hold an independent certified source.</p>
+  <h2 class="section-title">Three EU regulations are converging on<br><em>AI brand representation</em></h2>
+  <p class="body-text">The regulatory landscape is shifting fast. Three directives — already in force or entering enforcement within 18 months — create direct exposure for brands whose AI representation is inaccurate or unsubstantiated.</p>
 
   <div class="eu-cols">
     <div class="eu-box">
-      <div class="eu-label">Enforcement</div>
+      <div class="eu-label">EU AI Act — Article 53</div>
       <div class="eu-num">August 2025</div>
-      <div class="eu-title">GPAI transparency obligations</div>
-      <p class="eu-text">Article 53 requires GPAI model providers to document their training data. A certified 2A registry constitutes an opposable reference — the brand can prove what LLMs should have known, and demonstrate good-faith corrective action.</p>
+      <div class="eu-title">In force since August 2025</div>
+      <p class="eu-text">GPAI providers must document training data sources. A certified 2A registry provides an opposable reference — your brand can prove what LLMs should have known.</p>
+      <p class="eu-risk">Risk: €15M or 3% of global annual turnover</p>
     </div>
     <div class="eu-box">
-      <div class="eu-label">Risk without certification</div>
-      <div class="eu-num">€15M</div>
-      <div class="eu-title">or 3% of global annual turnover</div>
-      <p class="eu-text">Maximum fine for EU AI Act non-compliance. A brand whose data is hallucinated in a GPAI system without correction documentation is exposed — and cannot prove it took action.</p>
+      <div class="eu-label">ECGT — Empowering Consumers Green Transition</div>
+      <div class="eu-num">Sept 2026</div>
+      <div class="eu-title">In force from September 27, 2026</div>
+      <p class="eu-text">Every environmental claim must be substantiated or removed. AI-propagated false sustainability claims about your brand expose you to enforcement, even when you didn't make the claim yourself.</p>
+      <p class="eu-risk">Risk: Up to 4% of global annual turnover</p>
+    </div>
+    <div class="eu-box">
+      <div class="eu-label">Revised Product Liability Directive</div>
+      <div class="eu-num">Dec 2026</div>
+      <div class="eu-title">Applicable from December 9, 2026</div>
+      <p class="eu-text">Software and AI systems are now considered products. Burden of proof is partially reversed: when technical complexity is invoked, the defendant must prove their AI representation is not defective. 2A creates the auditable evidence of due diligence.</p>
+      <p class="eu-risk">Risk: Unlimited civil damages + mandatory disclosure of evidence</p>
     </div>
   </div>
 </section>
@@ -1257,7 +1295,7 @@ footer { padding: 24px 5%; border-top: 1px solid var(--border); display: flex; j
       <div class="offer-level-num"><div class="offer-level-n">04</div></div>
       <div class="offer-level-body">
         <div class="offer-level-title">Agentic Action <span class="offer-new-badge">New</span></div>
-        <p class="offer-level-desc">We connect your API to our infrastructure. AI agents can act on your behalf — book, order, validate — without human intervention.</p>
+        <p class="offer-level-desc">Optional. For brands ready for supervised autonomous interactions. We connect your API to our infrastructure under your brand's defined supervision rules. AI agents can complete specific tasks — booking, ordering, validation — within boundaries you control.</p>
       </div>
     </div>
     <div class="offer-level">
